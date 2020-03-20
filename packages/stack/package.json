@@ -1,0 +1,46 @@
+{
+  "name": "@bedrock-layout/stack",
+  "version": "0.0.1",
+  "description": "bedrock-layout spacing constants",
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "spacing",
+    "constants"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "homepage": "https://github.com/Bedrock-Layouts/Bedrock",
+  "license": "MIT",
+  "unpkg": "lib/index.umd.js",
+  "main": "lib/index.js",
+  "umd:main": "lib/index.umd.js",
+  "module": "lib/index.m.js",
+  "source": "src/index.tsx",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@bedrock-layout/spacing-constants": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean:build": "rimraf lib",
+    "build": "microbundle build"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
+  },
+  "gitHead": "f34c5586b1e739f4b0c9e2acb4c3ebe0c0a602ee"
+}
