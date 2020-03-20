@@ -14,17 +14,23 @@ export const spacing = {
   xxl,
 };
 
-//Based on Foundations Break points
+//Based on Foundations break points
 const smallOnly = '39.9375rem';
 const mediumOnly = ['40rem', '63.9375rem'];
 const largeOnly = ['64rem', '74.9375rem'];
+const xlargeOnly = ['75rem', '89.9375rem'];
 const medium = '40rem';
 const large = '64rem';
+const xlarge = '75rem';
+const xxlarge = '90rem';
 
 const breakPoints = {
   smallOnly,
   mediumOnly,
   largeOnly,
+  xlargeOnly,
   medium,
   large,
+  xlarge,
+  xxlarge,
 };
