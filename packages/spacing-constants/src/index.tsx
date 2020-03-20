@@ -1,4 +1,4 @@
-const xs = '0.25rem';
+const xs = '0.125rem';
 const sm = '0.25rem';
 const med = '0.5rem';
 const lg = '1rem';
@@ -12,4 +12,19 @@ export const spacing = {
   lg,
   xl,
   xxl,
+};
+
+//Based on Foundations Break points
+const smallOnly = '39.9375rem';
+const mediumOnly = ['40rem', '63.9375rem'];
+const largeOnly = ['64rem', '74.9375rem'];
+const medium = '40rem';
+const large = '64rem';
+
+const breakPoints = {
+  smallOnly,
+  mediumOnly,
+  largeOnly,
+  medium,
+  large,
 };
