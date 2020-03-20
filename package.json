@@ -5,6 +5,7 @@
     "bootstrap": "lerna bootstrap",
     "create": "lerna create",
     "build": "lerna run clean:build && lerna run build",
+    "prepublish": "npm run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package"
   },
