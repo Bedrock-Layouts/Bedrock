@@ -1,0 +1,31 @@
+{
+  "name": "@bedrock/spacing-constants",
+  "version": "0.0.1",
+  "description": "bedrock spacing constants",
+  "keywords": [
+    "spacing",
+    "constants"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "homepage": "https://github.com/Bedrock-Layouts/Bedrock",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean:build": "rimraf lib"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
+  }
+}

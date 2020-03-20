@@ -3,9 +3,12 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "create": "lerna create"
+    "create": "lerna create",
+    "build": " lerna run clean:build && lerna run build"
   },
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "microbundle": "^0.11.0",
+    "rimraf": "^3.0.2"
   }
 }
