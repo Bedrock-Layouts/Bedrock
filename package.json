@@ -1,11 +1,12 @@
 {
   "name": "root",
-  "private": true,
+  "private": false,
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "create": "lerna create",
     "build": "lerna run clean:build && lerna run build",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "publish:fix": "lerna publish from-package"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
