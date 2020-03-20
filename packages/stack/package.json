@@ -27,8 +27,12 @@
   "files": [
     "lib"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@bedrock-layout/spacing-constants": "^0.1.1"
+  },
+  "peerDependencies": {
+    "styled-components": ">=5",
+    "react": ">=16.8"
   },
   "repository": {
     "type": "git",

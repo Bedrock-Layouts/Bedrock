@@ -1,14 +1,18 @@
+const none = '0px';
 const xs = '0.125rem';
 const sm = '0.25rem';
-const med = '0.5rem';
+const md = '0.5rem';
 const lg = '1rem';
 const xl = '2rem';
 const xxl = '4rem';
 
+export type SpacingTypes = 'none' | 'xs' | 'sm' | 'ms' | 'lg' | 'xl' | 'xxl';
+
 export const spacing = {
+  none,
   xs,
   sm,
-  med,
+  md,
   lg,
   xl,
   xxl,
@@ -24,7 +28,7 @@ const large = '64rem';
 const xlarge = '75rem';
 const xxlarge = '90rem';
 
-const breakPoints = {
+export const breakPoints = {
   smallOnly,
   mediumOnly,
   largeOnly,

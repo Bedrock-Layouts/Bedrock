@@ -2,7 +2,7 @@
   "name": "root",
   "private": false,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "create": "lerna create",
     "build": "lerna run clean:build && lerna run build",
     "prepublish": "npm run build",
@@ -12,6 +12,9 @@
   "devDependencies": {
     "lerna": "^3.20.2",
     "microbundle": "^0.11.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.1"
   }
 }
