@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@bedrock-layout/spacing-constants": ["packages/spacing-constants/src"],
+      "@bedrock-layout/stack": ["packages/stack/src"],
+      "$test/*": ["test/*"]
+    }
+  }
+}
