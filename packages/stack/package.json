@@ -1,6 +1,6 @@
 {
   "name": "@bedrock-layout/stack",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "bedrock-layout spacing constants",
   "sideEffects": false,
   "private": false,
@@ -28,11 +28,11 @@
     "lib"
   ],
   "dependencies": {
-    "@bedrock-layout/spacing-constants": "^0.1.1"
+    "@bedrock-layout/spacing-constants": "^0.1.2"
   },
   "peerDependencies": {
-    "styled-components": ">=5",
-    "react": ">=16.8"
+    "react": ">=16.8",
+    "styled-components": ">=5"
   },
   "repository": {
     "type": "git",
