@@ -5,6 +5,7 @@
     "start": "start-storybook -p 9001 -c .storybook",
     "bootstrap": "lerna bootstrap --hoist",
     "create": "lerna create",
+    "clean": "lerna clean",
     "build": "lerna run clean:build && lerna run build",
     "prepublish": "npm run build",
     "publish": "lerna publish",
