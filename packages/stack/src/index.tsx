@@ -16,11 +16,9 @@ const Stack = styled.div<StackProps>`
     gutter ? spacing[gutter] : spacing.md};
 `;
 
-if (__DEV__) {
-  Stack.displayName = 'Stack';
-  Stack.propTypes = {
-    gutter: PropTypes.oneOf(['none', 'xs', 'sm', 'ms', 'lg', 'xl', 'xxl']),
-  };
-}
+Stack.displayName = 'Stack';
+Stack.propTypes = {
+  gutter: PropTypes.oneOf(['none', 'xs', 'sm', 'ms', 'lg', 'xl', 'xxl']),
+};
 
 export default Stack;

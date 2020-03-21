@@ -1,0 +1,19 @@
+{
+  "name": "bedrock-layout-website",
+  "private": true,
+  "version": "2.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "docz dev",
+    "build:site": "docz build",
+    "serve": "docz serve"
+  },
+  "dependencies": {
+    "docz": "latest",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.1",
+    "@bedrock-layout/stack": "^0.1.0"
+  }
+}
