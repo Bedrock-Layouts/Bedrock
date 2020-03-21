@@ -10,6 +10,7 @@ export interface StackProps {
 }
 
 const Stack = styled.div<StackProps>`
+  box-sizing: border-box;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: ${({ gutter, theme: { spacing = spacingMap } }) =>
@@ -19,7 +20,7 @@ const Stack = styled.div<StackProps>`
 Stack.displayName = 'Stack';
 
 Stack.propTypes = {
-  gutter: PropTypes.oneOf(['none', 'xs', 'sm', 'ms', 'lg', 'xl', 'xxl']),
+  gutter: PropTypes.oneOf(Object.keys(spacingMap) as SpacingTypes[]),
 };
 
 export default Stack;

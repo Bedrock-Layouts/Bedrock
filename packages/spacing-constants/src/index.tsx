@@ -6,9 +6,19 @@ const lg = '1rem';
 const xl = '2rem';
 const xxl = '4rem';
 
-export type SpacingTypes = 'none' | 'xs' | 'sm' | 'ms' | 'lg' | 'xl' | 'xxl';
+export interface Spacing {
+  none: string;
+  xs: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+  xxl: string;
+}
 
-export const spacing = {
+export type SpacingTypes = keyof Spacing;
+
+export const spacing: Spacing = {
   none,
   xs,
   sm,
@@ -27,6 +37,19 @@ const medium = '40rem';
 const large = '64rem';
 const xlarge = '75rem';
 const xxlarge = '90rem';
+
+export interface BreakPoints {
+  smallOnly: string;
+  mediumOnly: string;
+  largeOnly: string;
+  xlargeOnly: string;
+  medium: string;
+  large: string;
+  xlarge: string;
+  xxlarge: string;
+}
+
+export type BreakPointTypes = keyof BreakPoints;
 
 export const breakPoints = {
   smallOnly,
