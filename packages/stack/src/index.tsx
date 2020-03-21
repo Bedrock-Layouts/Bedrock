@@ -17,6 +17,7 @@ const Stack = styled.div<StackProps>`
 `;
 
 Stack.displayName = 'Stack';
+
 Stack.propTypes = {
   gutter: PropTypes.oneOf(['none', 'xs', 'sm', 'ms', 'lg', 'xl', 'xxl']),
 };
