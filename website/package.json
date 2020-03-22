@@ -9,7 +9,7 @@
     "serve": "docz serve"
   },
   "dependencies": {
-    "@bedrock-layout/stack": "^0.1.2",
+    "@bedrock-layout/stack": "file:../packages/stack",
     "docz": "latest",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
