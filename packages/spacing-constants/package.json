@@ -17,7 +17,7 @@
   "unpkg": "lib/index.umd.js",
   "main": "lib/index.js",
   "umd:main": "lib/index.umd.js",
-  "module": "lib/index.modern.module.js",
+  "module": "lib/index.js",
   "source": "src/index.tsx",
   "types": "lib/index.d.ts",
   "directories": {
@@ -34,7 +34,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "clean:build": "rimraf lib",
-    "build": "microbundle build --jsx react --target node"
+    "build": "microbundle build --jsx react && rimraf ./.rts2_cache*"
   },
   "bugs": {
     "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
