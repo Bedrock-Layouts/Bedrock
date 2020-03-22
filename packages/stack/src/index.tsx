@@ -11,10 +11,21 @@ export interface StackProps {
 
 const Stack = styled.div<StackProps>`
   box-sizing: border-box;
+
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: ${({ gutter, theme: { spacing = spacingMap } }) =>
-    gutter ? spacing[gutter] : spacing.md};
+    gutter && spacing[gutter] ? spacing[gutter] : spacing.md};
+
+  @supports not (grid-gap: 1rem) {
+    display: flex;
+    flex-flow: column;
+
+    * + * {
+      margin-top: ${({ gutter, theme: { spacing = spacingMap } }) =>
+        gutter && spacing[gutter] ? spacing[gutter] : spacing.md};
+    }
+  }
 `;
 
 Stack.displayName = 'Stack';
