@@ -1,6 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 import { spacing } from '@bedrock-layout/spacing-constants';
+import { ThemeProvider } from 'styled-components';
 import Stack from '../src';
 
 const Lorem = () => (
@@ -44,6 +45,17 @@ describe('Stack', () => {
         );
         expect(stack.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it('renders with theme overrides', () => {
+      const stack = create(
+        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+          <Stack>
+            <Lorem />
+          </Stack>
+        </ThemeProvider>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
     });
   });
 
