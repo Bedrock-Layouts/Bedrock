@@ -3,6 +3,9 @@
   "private": false,
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
+    "dev": "docz dev",
+    "build:site": "docz build",
+    "serve": "docz serve",
     "bootstrap": "lerna bootstrap --hoist",
     "create": "lerna create",
     "clean": "lerna clean",
@@ -36,6 +39,8 @@
     "react-docgen-typescript-loader": "^3.7.1",
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "@bedrock-layout/stack": "file:./packages/stack",
+    "docz": "latest"
   }
 }
