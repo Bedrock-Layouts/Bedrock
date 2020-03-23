@@ -21,25 +21,55 @@ const Lorem = () => (
 );
 
 describe('Stack', () => {
-  test('Stack is not null', () => {
-    expect(Stack).toBeTruthy();
-  });
-  it('renders default gutters', () => {
-    const stack = create(
-      <Stack>
-        <Lorem />
-      </Stack>
-    );
-    expect(stack.toJSON()).toMatchSnapshot();
-  });
-  it('renders all the gutter options', () => {
-    Object.keys(spacing).forEach(gutter => {
+  describe('correct usage', () => {
+    test('Stack is not null', () => {
+      expect(Stack).toBeTruthy();
+    });
+
+    it('renders default gutters', () => {
       const stack = create(
-        <Stack gutter={gutter}>
+        <Stack>
           <Lorem />
         </Stack>
       );
       expect(stack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders all the gutter options', () => {
+      Object.keys(spacing).forEach(gutter => {
+        const stack = create(
+          <Stack gutter={gutter}>
+            <Lorem />
+          </Stack>
+        );
+        expect(stack.toJSON()).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
+    afterEach(() => {
+      console.error = originalError;
+    });
+
+    it('renders default with console error with wrong input', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Stack gutter='incorrect'>
+          <Lorem />
+        </Stack>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
 });
