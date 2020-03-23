@@ -1,5 +1,6 @@
 import { addDecorator, configure } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs';
 import 'pepjs';
 import './styles.css';
 
@@ -34,3 +35,4 @@ configure(() => {
 }, module);
 
 addDecorator(withInfo);
+addDecorator(withKnobs);

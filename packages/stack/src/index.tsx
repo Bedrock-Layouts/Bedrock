@@ -11,19 +11,19 @@ export interface StackProps {
 
 const Stack = styled.div<StackProps>`
   box-sizing: border-box;
+  --gutter: ${({ gutter, theme: { spacing = spacingMap } }) =>
+    gutter && spacing[gutter] ? spacing[gutter] : spacing.md};
 
   display: grid;
   grid-auto-columns: 100%;
-  grid-gap: ${({ gutter, theme: { spacing = spacingMap } }) =>
-    gutter && spacing[gutter] ? spacing[gutter] : spacing.md};
+  grid-gap: var(--gutter);
 
-  @supports not (grid-gap: 1rem) {
+  @supports not (grid-gap: var(--gutter)) {
     display: flex;
     flex-flow: column;
 
     * + * {
-      margin-top: ${({ gutter, theme: { spacing = spacingMap } }) =>
-        gutter && spacing[gutter] ? spacing[gutter] : spacing.md};
+      margin-top: var(--gutter);
     }
   }
 `;

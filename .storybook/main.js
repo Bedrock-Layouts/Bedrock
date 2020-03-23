@@ -1,16 +1,14 @@
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
-const fs = require('fs');
-const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
   // stories: ["../packages/**/examples/*.example.(js|ts|tsx)"],
   addons: [
+    '@storybook/addon-knobs/register',
     '@storybook/addon-actions/register',
+    '@storybook/addon-a11y/register',
     '@storybook/addon-docs/register',
     '@storybook/addon-links/register',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-a11y/register',
   ],
   webpackFinal: async config => {
     config.module.rules = [
