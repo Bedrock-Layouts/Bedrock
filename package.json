@@ -3,6 +3,8 @@
   "private": false,
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
+    "test": "jest",
+    "test:watch": "jest --watch --notify",
     "dev": "docz dev",
     "build:site": "docz build",
     "serve": "docz serve",
@@ -17,6 +19,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "@babel/preset-typescript": "^7.9.0",
+    "@bedrock-layout/stack": "file:./packages/stack",
     "@storybook/addon-a11y": "^5.3.14",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-docs": "^5.3.9",
@@ -29,8 +36,12 @@
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^5.0.1",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.1.0",
+    "docz": "latest",
     "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "jest-styled-components": "^7.0.0",
     "lerna": "^3.20.2",
     "microbundle": "^0.11.0",
     "pepjs": "^0.5.2",
@@ -38,9 +49,8 @@
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
-    "styled-components": "^5.0.1",
-    "@bedrock-layout/stack": "file:./packages/stack",
-    "docz": "latest"
+    "styled-components": "^5.0.1"
   }
 }
