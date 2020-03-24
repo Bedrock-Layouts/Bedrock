@@ -18,8 +18,9 @@
     "publish:fix": "lerna publish from-package"
   },
   "dependencies": {
-    "@bedrock-layout/stack": "file:./packages/stack",
     "@bedrock-layout/spacing-constants": "file:./packages/spacing-constants",
+    "@bedrock-layout/stack": "file:./packages/stack",
+    "@reach/visually-hidden": "^0.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.0.1"

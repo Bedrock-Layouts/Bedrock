@@ -24,7 +24,7 @@ const Stack = styled.div<StackProps>`
     display: flex;
     flex-flow: column;
 
-    * + * {
+    & > * + * {
       margin-top: var(--gutter);
     }
   }

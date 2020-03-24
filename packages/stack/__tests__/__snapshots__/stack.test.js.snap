@@ -20,7 +20,7 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -67,7 +67,7 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -118,7 +118,7 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -173,7 +173,7 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -232,7 +232,7 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -295,7 +295,7 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -362,7 +362,7 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -405,7 +405,7 @@ exports[`Stack correct usage renders default gutters 1`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -448,7 +448,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
@@ -491,7 +491,7 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
     flex-flow: column;
   }
 
-  .c0 * + * {
+  .c0 > * + * {
     margin-top: var(--gutter);
   }
 }
