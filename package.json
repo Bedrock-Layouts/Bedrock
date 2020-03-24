@@ -17,14 +17,19 @@
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package"
   },
+  "dependencies": {
+    "@bedrock-layout/stack": "file:./packages/stack",
+    "@bedrock-layout/spacing-constants": "file:./packages/spacing-constants",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.1",
     "@babel/preset-typescript": "^7.9.0",
-    "@bedrock-layout/stack": "file:./packages/stack",
-    "@bedrock-layout/spacing-constants": "file:./packages/spacing-constants",
     "@storybook/addon-a11y": "^5.3.14",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-docs": "^5.3.9",
@@ -48,12 +53,9 @@
     "microbundle": "^0.11.0",
     "pepjs": "^0.5.2",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.1",
-    "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "rimraf": "^3.0.2",
-    "styled-components": "^5.0.1"
+    "rimraf": "^3.0.2"
   },
   "husky": {
     "hooks": {
