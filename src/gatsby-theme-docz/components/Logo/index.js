@@ -11,8 +11,11 @@ const Split = styled.div`
 
 const Title = styled.span`
   white-space: nowrap;
-  font-size: 32px;
+  font-size: 24px;
   text-transform: uppercase;
+  @media (max-width: 640px) {
+    white-space: normal;
+  }
 `;
 
 export const Logo = () => {
