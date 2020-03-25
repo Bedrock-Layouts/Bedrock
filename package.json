@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
@@ -9,7 +13,7 @@
     "build:site": "docz build",
     "serve": "docz serve",
     "bootstrap": "lerna bootstrap --hoist",
-    "changes": "lerna-changelog",
+    "changes": "dotenv lerna-changelog",
     "clean": "lerna clean",
     "build": "lerna run clean:build && lerna run build",
     "initialize": "npm i && npm run bootstrap && npm run build",
@@ -46,6 +50,8 @@
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.1.0",
     "docz": "latest",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^3.1.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
