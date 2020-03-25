@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stack correct usage renders all the gutter options 1`] = `
+exports[`Grid correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0px;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -43,17 +50,28 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 2`] = `
+exports[`Grid correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.125rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -90,21 +108,36 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 3`] = `
+exports[`Grid correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.25rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -141,16 +174,17 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 4`] = `
+exports[`Grid correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -158,8 +192,26 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
 
 }
 
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -196,16 +248,17 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 5`] = `
+exports[`Grid correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -213,12 +266,34 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -255,16 +330,17 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 6`] = `
+exports[`Grid correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 2rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -272,7 +348,7 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -280,8 +356,34 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 
 }
 
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -318,16 +420,17 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 7`] = `
+exports[`Grid correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 4rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -335,7 +438,7 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -343,12 +446,42 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports not (grid-gap:var(--gutter)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -385,13 +518,20 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders default gutters 1`] = `
+exports[`Grid correct usage renders custom minItemWidth 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
+  --minItemWidth: 320px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -428,13 +568,70 @@ exports[`Stack correct usage renders default gutters 1`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders with theme overrides 1`] = `
+exports[`Grid correct usage renders default gutters 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --minItemWidth: 1px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
+  grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 200px;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -471,13 +668,70 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
 </div>
 `;
 
-exports[`Stack incorrect usage renders default with console error with wrong input 1`] = `
+exports[`Grid incorrect usage renders default with console error with minItemWidth input 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
+  --minItemWidth: 1px;
   display: grid;
-  grid-auto-columns: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid incorrect usage renders default with console error with wrong gutter input 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --minItemWidth: 1px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
+  grid-gap: var(--gutter);
+}
+
+@supports (width:min(var(--minItemWidth),100%)) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
