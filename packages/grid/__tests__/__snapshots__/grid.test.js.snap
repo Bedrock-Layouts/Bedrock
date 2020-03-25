@@ -6,18 +6,30 @@ exports[`Grid correct usage renders all the gutter options 1`] = `
   --gutter: 0px;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0px;
+  }
 }
 
 <div
@@ -44,11 +56,11 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
   --gutter: 0.125rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -56,14 +68,26 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.125rem;
+  }
 }
 
 <div
@@ -90,11 +114,11 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
   --gutter: 0.25rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -102,7 +126,7 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -110,14 +134,26 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.25rem;
+  }
 }
 
 <div
@@ -144,11 +180,11 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
   --gutter: 0.5rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -156,7 +192,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -164,7 +200,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -172,14 +208,26 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
 }
 
 <div
@@ -206,11 +254,11 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
   --gutter: 1rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -218,7 +266,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -226,7 +274,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -234,7 +282,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -242,14 +290,26 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 1rem;
+  }
 }
 
 <div
@@ -276,11 +336,11 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
   --gutter: 2rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -288,7 +348,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -296,7 +356,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -304,7 +364,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -312,7 +372,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -320,14 +380,26 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 2rem;
+  }
 }
 
 <div
@@ -354,11 +426,11 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
   --gutter: 4rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -366,7 +438,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -374,7 +446,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -382,7 +454,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -390,7 +462,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -398,7 +470,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
 
 }
 
@@ -406,14 +478,26 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 4rem;
+  }
 }
 
 <div
@@ -440,18 +524,30 @@ exports[`Grid correct usage renders custom minItemWidth 1`] = `
   --gutter: 0.5rem;
   --minItemWidth: 320px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(320px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
 }
 
 <div
@@ -478,18 +574,30 @@ exports[`Grid correct usage renders default gutters 1`] = `
   --gutter: 0.5rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
 }
 
 <div
@@ -516,18 +624,30 @@ exports[`Grid correct usage renders with theme overrides 1`] = `
   --gutter: 200px;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 200px;
+  }
 }
 
 <div
@@ -554,18 +674,30 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
   --gutter: 0.5rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(incorrectpx,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
 }
 
 <div
@@ -592,18 +724,30 @@ exports[`Grid incorrect usage renders default with console error with wrong gutt
   --gutter: 0.5rem;
   --minItemWidth: 1px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(var(--minItemWidth),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(1px,100%)) {
+@supports (width:min(var(--minItemWidth),100%)) {
   .c0 {
-    grid-template-columns: repeat(auto-fit,minmax(min(var(--minItemWidth),100%),1fr));
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
 }
 
 @supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
 
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
 }
 
 <div

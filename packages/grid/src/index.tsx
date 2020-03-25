@@ -18,28 +18,33 @@ const Grid = styled.div<GridProps>`
     return gutter && spacingMap[gutter] ? spacingMap[gutter] : spacingMap.md;
   }};
 
---minItemWidth:${props =>
-  typeof props.minItemWidth === 'number' ? props.minItemWidth : 1}px;
+  --minItemWidth: ${props =>
+    typeof props.minItemWidth === 'number' ? props.minItemWidth : 1}px;
 
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--minItemWidth), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
   grid-gap: var(--gutter);
 
-  @supports (width: min(${props => props.minItemWidth}px, 100%)) {
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--minItemWidth), 100%), 1fr));
+  @supports (width: min(var(--minItemWidth), 100%)) {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--minItemWidth), 100%), 1fr)
+    );
   }
 
   @supports not (grid-gap: var(--gutter)) {
-    /* display: flex;
+    display: flex;
     flex-flow: column;
 
-    & > * + * {
-      margin-top: var(--gutter);
+    > * + * {
+      margin-top: ${({ gutter, theme: { spacing = {} } }) => {
+        const spacingMap = { ...defaultSpacings, ...spacing };
+        return gutter && spacingMap[gutter]
+          ? spacingMap[gutter]
+          : spacingMap.md;
+      }};
     }
-  } */
+  }
 `;
 
 Grid.displayName = 'Grid';
