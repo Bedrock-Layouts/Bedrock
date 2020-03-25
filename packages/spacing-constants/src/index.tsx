@@ -28,7 +28,7 @@ export const spacing: Spacing = {
   xxl,
 };
 
-//Based on Foundations break points
+/* Based on Foundations Break Points */
 const smallOnly = '39.9375rem';
 const mediumOnly = ['40rem', '63.9375rem'];
 const largeOnly = ['64rem', '74.9375rem'];
