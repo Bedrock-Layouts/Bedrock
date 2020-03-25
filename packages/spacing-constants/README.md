@@ -1,4 +1,4 @@
-# `spacing-constants`
+# `@bedrock-layout/spacing-constants`
 
 Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these in to your App Directly since the Layout Primitives already implement them, but these do exist incase you ever need the raw values.
 
@@ -9,14 +9,14 @@ For the breakpoints, we are adopting the foundation breakpoint values. All value
 ## Usage
 
 ```javascript
-import { spacing, breakpoints } from '@bedrock/spacing-constants';
+import { spacing, breakpoints } from '@bedrock-layout/spacing-constants';
 
 spacing.sm; //0.25rem
 
 breakpoints.large; //64rem
 ```
 
-## Overriding these values
+## Overriding the values
 
 All of the Bedrock Layout Primitives are built using `styled-components`. In order to override the values of any or all of the constants, you can use the `ThemeProvider` to change the values. The `ThemeProvider` can be rendered at any level of the tree and will override the values at that point. [Check out the docs for `styled-components`](https://styled-components.com/docs/advanced#theming) for more details on how it works
 
