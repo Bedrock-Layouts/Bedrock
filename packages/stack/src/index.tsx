@@ -33,7 +33,13 @@ const Stack = styled.div<StackProps>`
 Stack.displayName = 'Stack';
 
 Stack.propTypes = {
-  gutter: PropTypes.oneOf(Object.keys(defaultSpacings) as SpacingTypes[]),
+  gutter: PropTypes.oneOf<SpacingTypes>(
+    Object.keys(defaultSpacings) as SpacingTypes[]
+  ),
+};
+
+Stack.defaultProps = {
+  gutter: 'md',
 };
 
 export default Stack;

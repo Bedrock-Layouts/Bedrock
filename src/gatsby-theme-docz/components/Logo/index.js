@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import VisuallyHidden from '@reach/visually-hidden';
+import { Link } from 'docz';
 
-const Link = styled.a`
+const HomeLink = styled(Link)`
   color: inherit;
 `;
 
@@ -26,8 +27,8 @@ const Brand = () => {
 
 export const Logo = () => {
   return (
-    <Link href='/'>
+    <HomeLink to='/'>
       <Brand alt='Bedrock Layout Primitives Logo' />
-    </Link>
+    </HomeLink>
   );
 };
