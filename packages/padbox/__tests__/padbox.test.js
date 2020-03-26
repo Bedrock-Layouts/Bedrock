@@ -47,6 +47,22 @@ describe('PadBox', () => {
       });
     });
 
+    it('use 1, 2, 3, 4 items arrays', () => {
+      [
+        ['md'],
+        ['md', 'lg'],
+        ['md', 'lg', 'xs'],
+        ['md', 'lg', 'xs', 'sm'],
+      ].forEach(padding => {
+        const padbox = create(
+          <PadBox padding={padding}>
+            <Lorem />
+          </PadBox>
+        );
+        expect(padbox.toJSON()).toMatchSnapshot();
+      });
+    });
+
     //   it('renders with theme overrides', () => {
     //     const stack = create(
     //       <ThemeProvider theme={{ spacing: { md: '200px' } }}>
@@ -59,29 +75,56 @@ describe('PadBox', () => {
     //   });
   });
 
-  // describe('incorrect usage', () => {
-  //   let originalError;
-  //   let spy;
-  //   beforeEach(() => {
-  //     originalError = console.error;
-  //     spy = jest.fn();
-  //     console.error = spy;
-  //   });
-  //   afterEach(() => {
-  //     console.error = originalError;
-  //   });
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
 
-  //   it('renders default with console error with wrong input', () => {
-  //     expect(spy.mock.calls.length).toBe(0);
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
 
-  //     const errorStack = create(
-  //       <Stack gutter='incorrect'>
-  //         <Lorem />
-  //       </Stack>
-  //     );
+    afterEach(() => {
+      console.error = originalError;
+    });
 
-  //     expect(spy.mock.calls.length).toBe(1);
-  //     expect(errorStack.toJSON()).toMatchSnapshot();
-  //   });
-  // });
+    it('renders default with console error with wrong input', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <PadBox padding='incorrect'>
+          <Lorem />
+        </PadBox>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders with console error with wrong input in array', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <PadBox padding={['incorrect', 'incorrect']}>
+          <Lorem />
+        </PadBox>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('throws if more than 4 items in array', () => {
+      const padding = ['xs', 'xs', 'xs', 'xs', 'xs'];
+
+      expect(() =>
+        create(
+          <PadBox padding={padding}>
+            <Lorem />
+          </PadBox>
+        )
+      ).toThrow();
+    });
+  });
 });

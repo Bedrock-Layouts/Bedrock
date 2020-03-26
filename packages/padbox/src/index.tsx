@@ -96,11 +96,48 @@ const PadBox = styled.div<PadBoxProps>`
 
 PadBox.displayName = 'PadBox';
 
-// PadBox.propTypes = {
-//   padding: PropTypes.oneOf<SpacingTypes>(
-//     Object.keys(defaultSpacings) as SpacingTypes[]
-//   ),
-// };
+const spacingOptionsTypes = PropTypes.oneOf<SpacingTypes>(
+  Object.keys(defaultSpacings) as SpacingTypes[]
+);
+
+const spacingShape = PropTypes.shape({
+  left: spacingOptionsTypes,
+  right: spacingOptionsTypes,
+  top: spacingOptionsTypes,
+  bottom: spacingOptionsTypes,
+  inlineStart: spacingOptionsTypes,
+  inlineEnd: spacingOptionsTypes,
+  blockStart: spacingOptionsTypes,
+  blockEnd: spacingOptionsTypes,
+});
+
+const validator = (propValue = [], componentName = '', propFullName = '') => {
+  const spacings = Object.keys(defaultSpacings);
+
+  if (
+    propValue.length < 5 &&
+    propValue.every(item => spacings.includes(item))
+  ) {
+    return;
+  }
+  const error = new Error(
+    'Invalid prop `' +
+      propFullName +
+      '` supplied to' +
+      ' `' +
+      componentName +
+      '`. Validation failed.'
+  );
+  console.error(error);
+  return error;
+};
+
+PadBox.propTypes = {
+  padding: PropTypes.oneOfType<any>([
+    spacingOptionsTypes,
+    PropTypes.arrayOf(validator as any),
+  ]),
+};
 
 PadBox.defaultProps = {
   padding: 'md',
