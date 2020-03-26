@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
+  Spacing,
 } from '@bedrock-layout/spacing-constants';
+
+type MergeSpacings = (spacing: object) => Spacing;
+const mergeSpacings: MergeSpacings = (spacing = {}) => ({
+  ...defaultSpacings,
+  ...spacing,
+});
 
 export interface StackProps {
   gutter?: SpacingTypes;
@@ -11,10 +18,10 @@ export interface StackProps {
 
 const Stack = styled.div<StackProps>`
   box-sizing: border-box;
-  --gutter: ${({ gutter, theme: { spacing = {} } }) => {
-    const spacingMap = { ...defaultSpacings, ...spacing };
-    return gutter && spacingMap[gutter] ? spacingMap[gutter] : spacingMap.md;
-  }};
+  --gutter:  ${({ gutter, theme: { spacing = {} } }) =>
+    gutter && mergeSpacings(spacing)[gutter]
+      ? mergeSpacings(spacing)[gutter]
+      : mergeSpacings(spacing).md};
 
   display: grid;
   grid-auto-columns: 100%;
@@ -25,11 +32,10 @@ const Stack = styled.div<StackProps>`
     flex-flow: column;
 
     & > * + * {
-      margin-top: ${({ gutter, theme: { spacing = {} } }) => {
-        const spacingMap = { ...defaultSpacings, ...spacing };
-        return gutter && spacingMap[gutter]
-          ? spacingMap[gutter]
-          : spacingMap.md;
+      margin-top:  ${({ gutter, theme: { spacing = {} } }) =>
+        gutter && mergeSpacings(spacing)[gutter]
+          ? mergeSpacings(spacing)[gutter]
+          : mergeSpacings(spacing).md};
       }};
     }
   }

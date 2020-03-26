@@ -27,7 +27,7 @@ import Stack from '@bedrock-layout/stack';
 
 ## API
 
-| Property     | Description                       | Type                                                       | Default |
-| ------------ | --------------------------------- | ---------------------------------------------------------- | ------- |
-| gutter       | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`    |
-| minItemWidth | min width in px of each grid item | number                                                     | 1       |
+| Property     | Description                       | Type                                                       | Default                               |
+| ------------ | --------------------------------- | ---------------------------------------------------------- | ------------------------------------- |
+| gutter       | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`                                  |
+| minItemWidth | min width in px of each grid item | number                                                     | breakPoints.smallOnly or '39.9375rem' |

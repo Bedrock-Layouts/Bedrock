@@ -28,21 +28,22 @@ export const spacing: Spacing = {
   xxl,
 };
 
+type StringTuple = [string, string];
 /* Based on Foundations Break Points */
-const smallOnly = '39.9375rem';
-const mediumOnly = ['40rem', '63.9375rem'];
-const largeOnly = ['64rem', '74.9375rem'];
-const xlargeOnly = ['75rem', '89.9375rem'];
-const medium = '40rem';
-const large = '64rem';
-const xlarge = '75rem';
-const xxlarge = '90rem';
+const smallOnly: string = '39.9375rem';
+const mediumOnly: StringTuple = ['40rem', '63.9375rem'];
+const largeOnly: StringTuple = ['64rem', '74.9375rem'];
+const xlargeOnly: StringTuple = ['75rem', '89.9375rem'];
+const medium: string = '40rem';
+const large: string = '64rem';
+const xlarge: string = '75rem';
+const xxlarge: string = '90rem';
 
 export interface BreakPoints {
   smallOnly: string;
-  mediumOnly: string;
-  largeOnly: string;
-  xlargeOnly: string;
+  mediumOnly: StringTuple;
+  largeOnly: StringTuple;
+  xlargeOnly: StringTuple;
   medium: string;
   large: string;
   xlarge: string;
@@ -51,7 +52,7 @@ export interface BreakPoints {
 
 export type BreakPointTypes = keyof BreakPoints;
 
-export const breakPoints = {
+export const breakPoints: BreakPoints = {
   smallOnly,
   mediumOnly,
   largeOnly,
