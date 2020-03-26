@@ -1,5 +1,5 @@
 import React from 'react';
-import Stack from '@bedrock-layout/stack';
+import PadBox from '@bedrock-layout/padbox';
 import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
 import styled from 'styled-components';
 import { select } from '@storybook/addon-knobs';
@@ -9,13 +9,13 @@ const BorderedBox = styled.div`
 `;
 BorderedBox.displayName = 'BorderedBox';
 
-let title = 'Stack';
+let title = 'PadBox';
 let name = 'Basic';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const padding = select('padding', Object.keys(spacing), 'md');
   return (
-    <Stack gutter={gutter as SpacingTypes}>
+    <PadBox padding={padding as SpacingTypes}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -40,7 +40,7 @@ function Example() {
         architecto doloribus aperiam sapiente, incidunt nihil suscipit
         voluptatibus tempore est dolor! Iusto, vero.
       </BorderedBox>
-    </Stack>
+    </PadBox>
   );
 }
 

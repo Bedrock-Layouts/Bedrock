@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { spacing } from '@bedrock-layout/spacing-constants';
 import { ThemeProvider } from 'styled-components';
-import Stack from '../src';
+import PadBox from '../src';
 
 const Lorem = () => (
   <>
@@ -24,28 +24,28 @@ const Lorem = () => (
 describe('PadBox', () => {
   describe('correct usage', () => {
     test('Stack is not null', () => {
-      expect(Stack).toBeTruthy();
+      expect(PadBox).toBeTruthy();
     });
 
-    //   it('renders default gutters', () => {
-    //     const stack = create(
-    //       <Stack>
-    //         <Lorem />
-    //       </Stack>
-    //     );
-    //     expect(stack.toJSON()).toMatchSnapshot();
-    //   });
+    it('renders default padding', () => {
+      const padbox = create(
+        <PadBox>
+          <Lorem />
+        </PadBox>
+      );
+      expect(padbox.toJSON()).toMatchSnapshot();
+    });
 
-    //   it('renders all the gutter options', () => {
-    //     Object.keys(spacing).forEach(gutter => {
-    //       const stack = create(
-    //         <Stack gutter={gutter}>
-    //           <Lorem />
-    //         </Stack>
-    //       );
-    //       expect(stack.toJSON()).toMatchSnapshot();
-    //     });
-    //   });
+    it('renders all the padding options', () => {
+      Object.keys(spacing).forEach(padding => {
+        const padbox = create(
+          <PadBox padding={padding}>
+            <Lorem />
+          </PadBox>
+        );
+        expect(padbox.toJSON()).toMatchSnapshot();
+      });
+    });
 
     //   it('renders with theme overrides', () => {
     //     const stack = create(
