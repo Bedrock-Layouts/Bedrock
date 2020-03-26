@@ -672,7 +672,7 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
-  --minItemWidth: 1px;
+  --minItemWidth: 39.9375rem;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);

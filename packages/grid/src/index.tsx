@@ -3,7 +3,22 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
+  Spacing,
+  breakPoints as defaultBreakpoints,
+  BreakPoints,
 } from '@bedrock-layout/spacing-constants';
+
+type MergeSpacings = (spacing: object) => Spacing;
+const mergeSpacings: MergeSpacings = (spacing = {}) => ({
+  ...defaultSpacings,
+  ...spacing,
+});
+
+type MergeBreakpoints = (breakPoints: object) => BreakPoints;
+const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
+  ...defaultBreakpoints,
+  ...breakPoints,
+});
 
 export interface GridProps {
   gutter?: SpacingTypes;
@@ -13,13 +28,15 @@ export interface GridProps {
 const Grid = styled.div<GridProps>`
   box-sizing: border-box;
 
-  --gutter: ${({ gutter, theme: { spacing = {} } }) => {
-    const spacingMap = { ...defaultSpacings, ...spacing };
-    return gutter && spacingMap[gutter] ? spacingMap[gutter] : spacingMap.md;
-  }};
+  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
+    gutter && mergeSpacings(spacing)[gutter]
+      ? mergeSpacings(spacing)[gutter]
+      : mergeSpacings(spacing).md};
 
   --minItemWidth: ${props =>
-    typeof props.minItemWidth === 'number' ? props.minItemWidth : 1}px;
+    typeof props.minItemWidth === 'number'
+      ? `${props.minItemWidth}px`
+      : mergeBreakpoints(props.theme.breakPoints).smallOnly};
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
@@ -37,12 +54,10 @@ const Grid = styled.div<GridProps>`
     flex-flow: column;
 
     > * + * {
-      margin-top: ${({ gutter, theme: { spacing = {} } }) => {
-        const spacingMap = { ...defaultSpacings, ...spacing };
-        return gutter && spacingMap[gutter]
-          ? spacingMap[gutter]
-          : spacingMap.md;
-      }};
+      margin-top: ${({ gutter, theme: { spacing = {} } }) =>
+        gutter && mergeSpacings(spacing)[gutter]
+          ? mergeSpacings(spacing)[gutter]
+          : mergeSpacings(spacing).md};
     }
   }
 `;
