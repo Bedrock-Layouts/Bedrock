@@ -73,7 +73,6 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   gutter: 'md',
-  minItemWidth: 1,
 };
 
 export default Grid;

@@ -15,31 +15,11 @@ let name = 'Basic';
 function Example() {
   const padding = select('padding', Object.keys(spacing), 'md');
   return (
-    <PadBox padding={padding as SpacingTypes}>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
+    <PadBox as={BorderedBox} padding={padding as SpacingTypes}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
     </PadBox>
   );
 }
