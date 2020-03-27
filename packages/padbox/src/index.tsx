@@ -47,6 +47,19 @@ type PaddingTypes =
 
 type PaddingToString = (spacing: object) => (padding?: PaddingTypes) => string;
 
+const validKeys = new Set([
+  'left',
+  'right',
+  'top',
+  'bottom',
+  'inlineStart',
+  'inlineEnd',
+  'blockStart',
+  'blockEnd',
+]);
+
+const validSpacings = new Set(Object.keys(defaultSpacings));
+
 const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error('padding arrays can only be 4 or less in length');
@@ -59,6 +72,10 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
     : paddingArrToString(padding);
 
   function paddingArrToString(padArr: SpacingTypes | SpacingTypes[]) {
+    if (Array.isArray(padArr) && !padArr.every(val => validSpacings.has(val))) {
+      console.error('Invalid padding Type');
+    }
+
     return `padding: ${Array()
       .concat(padArr)
       .map((pad: SpacingTypes) => spacingMap[pad])
@@ -66,16 +83,16 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
   }
 
   function paddingObjToString(padObj: PaddingObj) {
-    const validKeys = new Set([
-      'left',
-      'right',
-      'top',
-      'bottom',
-      'inlineStart',
-      'inlineEnd',
-      'blockStart',
-      'blockEnd',
-    ]);
+    const padObjKeys = Object.keys(padObj);
+    const padObjVals = Object.values(padObj);
+
+    if (
+      !padObjKeys.every(key => validKeys.has(key)) ||
+      !padObjVals.every(val => validSpacings.has(val))
+    ) {
+      console.error('Invalid padding Type');
+    }
+
     return Object.entries(padObj).reduce(
       (acc, [key, val]) =>
         validKeys.has(key)
@@ -96,46 +113,13 @@ const PadBox = styled.div<PadBoxProps>`
 
 PadBox.displayName = 'PadBox';
 
-const spacingOptionsTypes = PropTypes.oneOf<SpacingTypes>(
-  Object.keys(defaultSpacings) as SpacingTypes[]
-);
-
-const spacingShape = PropTypes.shape({
-  left: spacingOptionsTypes,
-  right: spacingOptionsTypes,
-  top: spacingOptionsTypes,
-  bottom: spacingOptionsTypes,
-  inlineStart: spacingOptionsTypes,
-  inlineEnd: spacingOptionsTypes,
-  blockStart: spacingOptionsTypes,
-  blockEnd: spacingOptionsTypes,
-});
-
-const validator = (propValue = [], componentName = '', propFullName = '') => {
-  const spacings = Object.keys(defaultSpacings);
-
-  if (
-    propValue.length < 5 &&
-    propValue.every(item => spacings.includes(item))
-  ) {
-    return;
-  }
-  const error = new Error(
-    'Invalid prop `' +
-      propFullName +
-      '` supplied to' +
-      ' `' +
-      componentName +
-      '`. Validation failed.'
-  );
-  console.error(error);
-  return error;
-};
+const spacingOptionsTypes = PropTypes.oneOf(Object.keys(defaultSpacings));
 
 PadBox.propTypes = {
   padding: PropTypes.oneOfType<any>([
     spacingOptionsTypes,
-    PropTypes.arrayOf(validator as any),
+    PropTypes.objectOf(spacingOptionsTypes),
+    PropTypes.arrayOf(spacingOptionsTypes),
   ]),
 };
 

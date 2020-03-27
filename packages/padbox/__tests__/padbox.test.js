@@ -63,16 +63,36 @@ describe('PadBox', () => {
       });
     });
 
-    //   it('renders with theme overrides', () => {
-    //     const stack = create(
-    //       <ThemeProvider theme={{ spacing: { md: '200px' } }}>
-    //         <Stack>
-    //           <Lorem />
-    //         </Stack>
-    //       </ThemeProvider>
-    //     );
-    //     expect(stack.toJSON()).toMatchSnapshot();
-    //   });
+    it('use padding object', () => {
+      [
+        { left: 'md' },
+        { right: 'md' },
+        { top: 'md' },
+        { bottom: 'md' },
+        { inlineStart: 'md' },
+        { inlineEnd: 'md' },
+        { blockStart: 'md' },
+        { blockEnd: 'md' },
+      ].forEach(padding => {
+        const padbox = create(
+          <PadBox padding={padding}>
+            <Lorem />
+          </PadBox>
+        );
+        expect(padbox.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it('renders with theme overrides', () => {
+      const stack = create(
+        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+          <PadBox>
+            <Lorem />
+          </PadBox>
+        </ThemeProvider>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
   });
 
   describe('incorrect usage', () => {
@@ -107,6 +127,19 @@ describe('PadBox', () => {
 
       const errorStack = create(
         <PadBox padding={['incorrect', 'incorrect']}>
+          <Lorem />
+        </PadBox>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders with console error with wrong input in object', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <PadBox padding={{ incorrect: 'incorrect' }}>
           <Lorem />
         </PadBox>
       );
