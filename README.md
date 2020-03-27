@@ -10,12 +10,12 @@ Road Map
 | Status | Name         |
 | ------ | ------------ |
 | ✅     | Stack        |
-| 🛠      | Grid         |
+| ✅     | Grid         |
 |        | Split        |
 |        | App Boundary |
-|        | Columns      |
+| 🛠      | Columns      |
 |        | Cluster      |
-|        | PadBox       |
+| 🛠      | PadBox       |
 |        | Center       |
 
 More to come

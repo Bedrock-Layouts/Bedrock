@@ -108,6 +108,7 @@ export interface PadBoxProps {
 }
 
 const PadBox = styled.div<PadBoxProps>`
+  box-sizing: border-box;
   ${props => paddingToString(props.theme.spacing)(props.padding)}
 `;
 

@@ -2,6 +2,7 @@
 
 exports[`PadBox correct usage renders all the padding options 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0px;
 }
 
@@ -25,6 +26,7 @@ exports[`PadBox correct usage renders all the padding options 1`] = `
 
 exports[`PadBox correct usage renders all the padding options 2`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.125rem;
 }
 
@@ -48,6 +50,7 @@ exports[`PadBox correct usage renders all the padding options 2`] = `
 
 exports[`PadBox correct usage renders all the padding options 3`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.25rem;
 }
 
@@ -71,6 +74,7 @@ exports[`PadBox correct usage renders all the padding options 3`] = `
 
 exports[`PadBox correct usage renders all the padding options 4`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem;
 }
 
@@ -94,6 +98,7 @@ exports[`PadBox correct usage renders all the padding options 4`] = `
 
 exports[`PadBox correct usage renders all the padding options 5`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 1rem;
 }
 
@@ -117,6 +122,7 @@ exports[`PadBox correct usage renders all the padding options 5`] = `
 
 exports[`PadBox correct usage renders all the padding options 6`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 2rem;
 }
 
@@ -140,6 +146,7 @@ exports[`PadBox correct usage renders all the padding options 6`] = `
 
 exports[`PadBox correct usage renders all the padding options 7`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 4rem;
 }
 
@@ -163,6 +170,7 @@ exports[`PadBox correct usage renders all the padding options 7`] = `
 
 exports[`PadBox correct usage renders default padding 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem;
 }
 
@@ -186,6 +194,7 @@ exports[`PadBox correct usage renders default padding 1`] = `
 
 exports[`PadBox correct usage renders with theme overrides 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 200px;
 }
 
@@ -209,6 +218,7 @@ exports[`PadBox correct usage renders with theme overrides 1`] = `
 
 exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem;
 }
 
@@ -232,6 +242,7 @@ exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 1`] = `
 
 exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 2`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem 1rem;
 }
 
@@ -255,6 +266,7 @@ exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 2`] = `
 
 exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 3`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem 1rem 0.125rem;
 }
 
@@ -278,6 +290,7 @@ exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 3`] = `
 
 exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 4`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 0.5rem 1rem 0.125rem 0.25rem;
 }
 
@@ -301,6 +314,7 @@ exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 4`] = `
 
 exports[`PadBox correct usage use padding object 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding-inline-start: 0.5rem;
 }
 
@@ -324,6 +338,7 @@ exports[`PadBox correct usage use padding object 1`] = `
 
 exports[`PadBox correct usage use padding object 2`] = `
 .c0 {
+  box-sizing: border-box;
   padding-inline-end: 0.5rem;
 }
 
@@ -347,6 +362,7 @@ exports[`PadBox correct usage use padding object 2`] = `
 
 exports[`PadBox correct usage use padding object 3`] = `
 .c0 {
+  box-sizing: border-box;
   padding-block-start: 0.5rem;
 }
 
@@ -370,6 +386,7 @@ exports[`PadBox correct usage use padding object 3`] = `
 
 exports[`PadBox correct usage use padding object 4`] = `
 .c0 {
+  box-sizing: border-box;
   padding-block-end: 0.5rem;
 }
 
@@ -393,6 +410,7 @@ exports[`PadBox correct usage use padding object 4`] = `
 
 exports[`PadBox correct usage use padding object 5`] = `
 .c0 {
+  box-sizing: border-box;
   padding-inline-start: 0.5rem;
 }
 
@@ -416,6 +434,7 @@ exports[`PadBox correct usage use padding object 5`] = `
 
 exports[`PadBox correct usage use padding object 6`] = `
 .c0 {
+  box-sizing: border-box;
   padding-inline-end: 0.5rem;
 }
 
@@ -439,6 +458,7 @@ exports[`PadBox correct usage use padding object 6`] = `
 
 exports[`PadBox correct usage use padding object 7`] = `
 .c0 {
+  box-sizing: border-box;
   padding-block-start: 0.5rem;
 }
 
@@ -462,6 +482,7 @@ exports[`PadBox correct usage use padding object 7`] = `
 
 exports[`PadBox correct usage use padding object 8`] = `
 .c0 {
+  box-sizing: border-box;
   padding-block-end: 0.5rem;
 }
 
@@ -484,8 +505,12 @@ exports[`PadBox correct usage use padding object 8`] = `
 `;
 
 exports[`PadBox incorrect usage renders default with console error with wrong input 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
 <div
-  className=""
+  className="c0"
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -503,8 +528,12 @@ exports[`PadBox incorrect usage renders default with console error with wrong in
 `;
 
 exports[`PadBox incorrect usage renders with console error with wrong input in array 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
 <div
-  className=""
+  className="c0"
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -522,8 +551,12 @@ exports[`PadBox incorrect usage renders with console error with wrong input in a
 `;
 
 exports[`PadBox incorrect usage renders with console error with wrong input in object 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
 <div
-  className=""
+  className="c0"
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
