@@ -11,20 +11,36 @@ const mergeSpacings: MergeSpacings = (spacing = {}) => ({
   ...defaultSpacings,
   ...spacing,
 });
-const camelToKebab = (str: string) => {
+
+const keyToProperty = (key: string) => {
   type map = { [s: string]: string };
-  const classicToModern: map = {
+  const modernMap: map = {
     left: 'inline-start',
     right: 'inline-end',
     top: 'block-start',
     bottom: 'block-end',
+    inlineStart: 'inline-start',
+    inlineEnd: 'inline-end',
+    blockStart: 'block-start',
+    blockEnd: 'block-end',
   };
 
-  if (str in classicToModern) {
-    return classicToModern[str];
+  const classicMap: map = {
+    left: 'left',
+    right: 'right',
+    top: 'top',
+    bottom: 'bottom',
+    inlineStart: 'left',
+    inlineEnd: 'right',
+    blockStart: 'top',
+    blockEnd: 'bottom',
+  };
+
+  if (CSS !== undefined && !CSS.supports('padding-inline-start', '100px')) {
+    return classicMap[key];
   }
 
-  return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
+  return modernMap[key];
 };
 
 type PaddingObj =
@@ -96,7 +112,7 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
     return Object.entries(padObj).reduce(
       (acc, [key, val]) =>
         validKeys.has(key)
-          ? acc + `padding-${camelToKebab(key)}: ${spacingMap[val]};`
+          ? acc + `padding-${keyToProperty(key)}: ${spacingMap[val]};`
           : acc,
       ''
     );
