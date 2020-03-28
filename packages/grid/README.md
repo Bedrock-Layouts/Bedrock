@@ -4,7 +4,7 @@ Layout helper that creates Grid of items
 
 ## When to Use
 
-Used to create a stacked layouts
+Used to create a grid layouts
 
 ## How to install
 
@@ -13,7 +13,7 @@ Used to create a stacked layouts
 ## Usage
 
 ```javascript
-import Stack from '@bedrock-layout/stack';
+import Grid from '@bedrock-layout/grid';
 
 <Grid minItemWidth={300}>
   <div>1</div>
