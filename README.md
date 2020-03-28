@@ -12,8 +12,8 @@ Road Map
 | ✅     | Stack        |
 | ✅     | Grid         |
 | 🛠      | Split        |
-|        | App Boundary |
-| 🛠      | Columns      |
+| 🛠      | App Boundary |
+| ✅     | Columns      |
 |        | Cluster      |
 | ✅     | PadBox       |
 |        | Center       |
