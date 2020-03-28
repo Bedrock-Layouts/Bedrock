@@ -45,7 +45,7 @@ import Columns, { Column } from '@bedrock-layout/columns';
   <Column span={3}>
     <div>4</div>
   </Column>
-  <Column>
+  <Column span={2}>
     <div>5</div>
   </Column>
   <Column>
@@ -63,3 +63,9 @@ import Columns, { Column } from '@bedrock-layout/columns';
 | gutter   | sets space inbetween each element         | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`    |
 | columns  | number of columns                         | number                                                     | 1       |
 | dense    | used with `Column` to have a dense layout | boolean                                                    | false   |
+
+### Column
+
+| Property | Description               | Type   | Default |
+| -------- | ------------------------- | ------ | ------- |
+| span     | number of columns to span | number | 1       |
