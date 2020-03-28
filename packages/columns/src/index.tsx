@@ -64,8 +64,14 @@ Columns.defaultProps = {
 export interface ColumnProps {
   span?: number;
 }
+
+type SafeSpan = (span: any) => number;
+const safeSpan: SafeSpan = span => {
+  return Number.isInteger(span) ? span : 1;
+};
+
 export const Column = styled.div<ColumnProps>`
-  grid-column: span ${({ span = 1 }) => (span > 0 ? span : 1)};
+  grid-column: span ${({ span = 1 }) => Math.max(safeSpan(span), 1)} / auto;
 `;
 
 Column.propTypes = {

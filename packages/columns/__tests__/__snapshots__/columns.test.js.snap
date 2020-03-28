@@ -12,7 +12,7 @@ exports[`Column correct usage renders custom span 1`] = `
 }
 
 .c1 {
-  grid-column: span 2;
+  grid-column: span 2 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -66,7 +66,7 @@ exports[`Column correct usage renders default gutters 1`] = `
 }
 
 .c1 {
-  grid-column: span 1;
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -120,7 +120,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 }
 
 .c1 {
-  grid-column: span 1;
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -174,7 +174,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 }
 
 .c1 {
-  grid-column: span 1;
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -228,7 +228,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 }
 
 .c1 {
-  grid-column: span 1;
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
