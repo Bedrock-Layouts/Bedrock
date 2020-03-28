@@ -56,16 +56,25 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    // it('renders with theme overrides', () => {
-    //   const Columns = create(
-    //     <ThemeProvider theme={{ spacing: { md: '200px' } }}>
-    //       <Columns>
-    //         <Lorem />
-    //       </Columns>
-    //     </ThemeProvider>
-    //   );
-    //   expect(Columns.toJSON()).toMatchSnapshot();
-    // });
+    it('renders dense mode', () => {
+      const columns = create(
+        <Columns dense>
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders with theme overrides', () => {
+      const columns = create(
+        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+          <Columns>
+            <Lorem />
+          </Columns>
+        </ThemeProvider>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
   });
 
   describe('incorrect usage', () => {
