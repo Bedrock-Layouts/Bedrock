@@ -6,7 +6,7 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
   --gutter: 0px;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -51,7 +51,7 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
   --gutter: 0.125rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -100,7 +100,7 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
   --gutter: 0.25rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -153,7 +153,7 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
   --gutter: 0.5rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -210,7 +210,7 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
   --gutter: 1rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -271,7 +271,7 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
   --gutter: 2rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -336,7 +336,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
   --gutter: 4rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -405,7 +405,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
   --gutter: 0.5rem;
   --columns: 5;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -450,7 +450,7 @@ exports[`Columns correct usage renders default gutters 1`] = `
   --gutter: 0.5rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -495,7 +495,7 @@ exports[`Columns correct usage renders dense mode 1`] = `
   --gutter: 0.5rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row dense;
 }
@@ -540,7 +540,7 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
   --gutter: 200px;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }
@@ -579,13 +579,193 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
 </div>
 `;
 
+exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  grid-gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Columns incorrect usage renders 1 columns if given negative number 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  grid-gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Columns incorrect usage renders default with console error with incorrect column type 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  grid-gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Columns incorrect usage renders default with console error with incorrect dense type 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 0.5rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  grid-gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
 exports[`Columns incorrect usage renders default with console error with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
   --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--gutter),1fr);
+  grid-template-columns: repeat(var(--columns),1fr);
   grid-gap: var(--gutter);
   grid-auto-flow: row;
 }

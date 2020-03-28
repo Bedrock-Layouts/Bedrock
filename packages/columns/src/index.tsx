@@ -28,9 +28,9 @@ const Columns = styled.div<ColumnsProps>`
   --columns: ${({ columns = 1 }) => (columns > 0 ? columns : 1)};
 
   display: grid;
-  grid-template-columns: repeat(var(--gutter), 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: var(--gutter);
-  grid-auto-flow: row ${props => props.dense && 'dense'};
+  grid-auto-flow: row ${props => props.dense === true && 'dense'};
 
   @supports not (grid-gap: var(--gutter)) {
     display: flex;

@@ -102,17 +102,48 @@ describe('Columns', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    // it('renders default with console error with minItemWidth input', () => {
-    //   expect(spy.mock.calls.length).toBe(0);
+    it('renders 1 columns if given 0', () => {
+      const columns = create(
+        <Columns columns={0}>
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
 
-    //   const errorStack = create(
-    //     <Columns minItemWidth='incorrect'>
-    //       <Lorem />
-    //     </Columns>
-    //   );
+    it('renders 1 columns if given negative number', () => {
+      const columns = create(
+        <Columns columns={-1}>
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
 
-    //   expect(spy.mock.calls.length).toBe(1);
-    //   expect(errorStack.toJSON()).toMatchSnapshot();
-    // });
+    it('renders default with console error with incorrect column type', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Columns columns='incorrect'>
+          <Lorem />
+        </Columns>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders default with console error with incorrect dense type', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Columns dense='incorrect'>
+          <Lorem />
+        </Columns>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
   });
 });
