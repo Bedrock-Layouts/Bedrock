@@ -10,11 +10,11 @@ import Columns, { Column } from '@bedrock-layout/columns';
 
 ## Use case
 
-The Columns component is designed to create a grid of items that will automatically wrap based on the minItemWidth
+The Columns component is designed to create a column layout
 
 ## How to install
 
-If you haven't already install `styled-components`:
+If you haven't already, install `styled-components`:
 
 ```bash
   npm install styled-components
@@ -104,10 +104,19 @@ Then install the stack component
 
 ## Properties
 
-| Property     | Type                                    | Default                             |
-| ------------ | --------------------------------------- | ----------------------------------- |
-| gutter       | One of: `none, xs, sm, md, lg, xl, xxl` | `md`                                |
-| minItemWidth | number                                  | smallOnly breakPoint ('39.9375rem') |
+### Columns
+
+| Property | Type                                    | Default |
+| -------- | --------------------------------------- | ------- |
+| gutter   | One of: `none, xs, sm, md, lg, xl, xxl` | `md`    |
+| columns  | number                                  | 1       |
+| dense    | boolean                                 | false   |
+
+### Column
+
+| Property | Type   | Default |
+| -------- | ------ | ------- |
+| span     | number | 1       |
 
 ## IE11 Fallback
 
