@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { spacing } from '@bedrock-layout/spacing-constants';
 import { ThemeProvider } from 'styled-components';
-import Columns from '../src';
+import Columns, { Column } from '../src';
 
 const Lorem = () => (
   <>
@@ -20,6 +20,86 @@ const Lorem = () => (
     ))}
   </>
 );
+
+describe('Column', () => {
+  describe('correct usage', () => {
+    test('Column is not null', () => {
+      expect(Column).toBeTruthy();
+    });
+
+    it('renders default gutters', () => {
+      const columns = create(
+        <Columns>
+          <Column>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders custom span', () => {
+      const columns = create(
+        <Columns>
+          <Column span={2}>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+  });
+
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
+    afterEach(() => {
+      console.error = originalError;
+    });
+
+    it('renders default with console error with wrong span input', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Columns>
+          <Column span='incorrect'>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders a span of 1 if given 0', () => {
+      const columns = create(
+        <Columns>
+          <Column span={0}>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders a span of 1 if given negative number', () => {
+      const columns = create(
+        <Columns>
+          <Column span={-1}>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+  });
+});
 
 describe('Columns', () => {
   describe('correct usage', () => {
