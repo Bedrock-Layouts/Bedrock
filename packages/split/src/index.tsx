@@ -49,7 +49,8 @@ const Split = styled.div<SplitProps>`
       : mergeSpacings(spacing).md};
 
   display: grid;
-  grid-template-columns: ${({ fraction = '1/2' }) => `${fractions[fraction]}`};
+  grid-template-columns: ${({ fraction = '1/2' }) =>
+    fractions[fraction] || fractions['1/2']}};
   grid-gap: var(--gutter);
 
   @supports (width: min(var(--minItemWidth), 100%)) {

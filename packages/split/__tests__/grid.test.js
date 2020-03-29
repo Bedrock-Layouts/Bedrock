@@ -72,42 +72,42 @@ describe('Split', () => {
     });
   });
 
-  // describe('incorrect usage', () => {
-  //   let originalError;
-  //   let spy;
-  //   beforeEach(() => {
-  //     originalError = console.error;
-  //     spy = jest.fn();
-  //     console.error = spy;
-  //   });
-  //   afterEach(() => {
-  //     console.error = originalError;
-  //   });
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
+    afterEach(() => {
+      console.error = originalError;
+    });
 
-  //   it('renders default with console error with wrong gutter input', () => {
-  //     expect(spy.mock.calls.length).toBe(0);
+    it('renders default with console error with wrong gutter input', () => {
+      expect(spy.mock.calls.length).toBe(0);
 
-  //     const errorStack = create(
-  //       <Split gutter='incorrect'>
-  //         <Lorem />
-  //       </Split>
-  //     );
+      const errorStack = create(
+        <Split gutter='incorrect'>
+          <Lorem />
+        </Split>
+      );
 
-  //     expect(spy.mock.calls.length).toBe(1);
-  //     expect(errorStack.toJSON()).toMatchSnapshot();
-  //   });
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
 
-  //   it('renders default with console error with minItemWidth input', () => {
-  //     expect(spy.mock.calls.length).toBe(0);
+    it('renders default with console error with fraction input', () => {
+      expect(spy.mock.calls.length).toBe(0);
 
-  //     const errorStack = create(
-  //       <Split minItemWidth='incorrect'>
-  //         <Lorem />
-  //       </Split>
-  //     );
+      const errorStack = create(
+        <Split fraction='incorrect'>
+          <Lorem />
+        </Split>
+      );
 
-  //     expect(spy.mock.calls.length).toBe(1);
-  //     expect(errorStack.toJSON()).toMatchSnapshot();
-  //   });
-  // });
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+  });
 });
