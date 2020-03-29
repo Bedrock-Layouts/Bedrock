@@ -2,20 +2,26 @@
 
 Foundational Layout Primitives for your React App
 
-Road Map
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
+## Road Map
 
 ✅ - Released
 🛠 - Building
 
-| Status | Name         |
-| ------ | ------------ |
-| ✅     | Stack        |
-| ✅     | Grid         |
-| 🛠      | Split        |
-| 🛠      | App Boundary |
-| ✅     | Columns      |
-|        | Cluster      |
-| ✅     | PadBox       |
-|        | Center       |
+| Status | Name              |
+| ------ | ----------------- |
+| ✅     | Stack             |
+| ✅     | Grid              |
+| ✅     | Split             |
+| 🛠      | AppBoundary       |
+| ✅     | Columns           |
+| 🛠      | InlineCluster     |
+| ✅     | PadBox            |
+|        | useMediaQuery     |
+|        | useContainerQuery |
+|        | useForwardRef     |
 
 More to come
