@@ -1,0 +1,61 @@
+---
+name: Split
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Split from '@bedrock-layout/split';
+
+# Split
+
+## Use case
+
+The Split component is designed to create a split layout based on fraction
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the stack component
+
+```bash
+  npm install @bedrock-layout/split
+```
+
+## Basic usage
+
+<Playground>
+  <Split gutter='lg' fraction='1/2'>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </div>
+    <div>
+      Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum elementum
+      enim in pharetra. Curabitur eget urna cursus, imperdiet leo eu, elementum
+      leo. Proin laoreet eleifend nisl ut iaculis. Ut dictum est vitae rutrum
+      elementum. Donec dictum ex ac nibh auctor semper. Phasellus sed rhoncus
+      arcu, eu consectetur ipsum. Ut dictum a elit at sollicitudin. Quisque sed
+      augue molestie, auctor purus quis, luctus ipsum. Donec ultrices vel nisi
+      vehicula facilisis. Vestibulum cursus nisi tellus, sit amet sagittis nisl
+      luctus ut.
+    </div>
+  </Split>
+</Playground>
+
+## Properties
+
+| Property  | Type                                                    | Default |
+| --------- | ------------------------------------------------------- | ------- |
+| gutter    | One of: `none, xs, sm, md, lg, xl, xxl`                 | `md`    |
+| fractions | One of: `auto-start, auto-end, 1/4, 1/3, 1/2, 2/3, 3/4` | `1/2`   |
+
+## IE11 Fallback
+
+For browsers that do no support CSS Grid, it will fall back to a flex column.
