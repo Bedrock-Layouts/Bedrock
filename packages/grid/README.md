@@ -8,7 +8,7 @@ Used to create a grid layouts
 
 ## How to install
 
-`npm install @bedrock-layout/stack`
+`npm install @bedrock-layout/grid`
 
 ## Usage
 
