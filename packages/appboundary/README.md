@@ -1,10 +1,10 @@
 # `@bedrock-layout/appboundary`
 
-Layout helper that creates Grid of items
+Layout helper that clamps that app at the xxlarge breakpoint
 
 ## When to Use
 
-Used to create a grid layouts
+Used to control the width of the app on xlarge screens
 
 ## How to install
 
@@ -13,7 +13,7 @@ Used to create a grid layouts
 ## Usage
 
 ```javascript
-import Grid from '@bedrock-layout/appboundary';
+import AppBoundary from '@bedrock-layout/appboundary';
 
 <AppBoundary>
   <div>1</div>
@@ -29,4 +29,4 @@ import Grid from '@bedrock-layout/appboundary';
 
 | Property | Description | Type      | Default |
 | -------- | ----------- | --------- | ------- |
-| children | App         | ReactNode | -       |
+| children |             | ReactNode | -       |
