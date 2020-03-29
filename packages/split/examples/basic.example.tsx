@@ -14,8 +14,13 @@ let name = 'Basic';
 
 function Example() {
   const gutter = select('gutter', Object.keys(spacing), 'md');
+  const fraction = select(
+    'fraction',
+    ['auto-start', 'auto-end', '1/4', '1/3', '1/2', '2/3', '3/4'],
+    '1/2'
+  );
   return (
-    <Split gutter={gutter as SpacingTypes}>
+    <Split gutter={gutter as SpacingTypes} fraction={fraction}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident

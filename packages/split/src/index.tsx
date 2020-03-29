@@ -53,13 +53,6 @@ const Split = styled.div<SplitProps>`
     fractions[fraction] || fractions['1/2']}};
   grid-gap: var(--gutter);
 
-  @supports (width: min(var(--minItemWidth), 100%)) {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--minItemWidth), 100%), 1fr)
-    );
-  }
-
   @supports not (grid-gap: var(--gutter)) {
     display: flex;
     flex-flow: column;

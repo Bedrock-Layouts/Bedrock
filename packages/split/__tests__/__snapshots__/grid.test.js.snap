@@ -9,12 +9,6 @@ exports[`Split correct usage renders all the fraction options 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -58,18 +52,8 @@ exports[`Split correct usage renders all the fraction options 2`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -115,26 +99,12 @@ exports[`Split correct usage renders all the fraction options 3`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -180,7 +150,7 @@ exports[`Split correct usage renders all the fraction options 4`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -188,26 +158,8 @@ exports[`Split correct usage renders all the fraction options 4`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -253,7 +205,7 @@ exports[`Split correct usage renders all the fraction options 5`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -261,34 +213,12 @@ exports[`Split correct usage renders all the fraction options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -334,7 +264,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -342,7 +272,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -350,34 +280,8 @@ exports[`Split correct usage renders all the fraction options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -423,7 +327,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -431,7 +335,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -439,42 +343,12 @@ exports[`Split correct usage renders all the fraction options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -520,12 +394,6 @@ exports[`Split correct usage renders all the gutter options 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -569,18 +437,8 @@ exports[`Split correct usage renders all the gutter options 2`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -626,26 +484,12 @@ exports[`Split correct usage renders all the gutter options 3`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -691,7 +535,7 @@ exports[`Split correct usage renders all the gutter options 4`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -699,26 +543,8 @@ exports[`Split correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -764,7 +590,7 @@ exports[`Split correct usage renders all the gutter options 5`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -772,34 +598,12 @@ exports[`Split correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -845,7 +649,7 @@ exports[`Split correct usage renders all the gutter options 6`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -853,7 +657,7 @@ exports[`Split correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -861,34 +665,8 @@ exports[`Split correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -934,7 +712,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -942,7 +720,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
@@ -950,42 +728,12 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports not (grid-gap:var(--gutter)) {
 
 }
 
 @supports not (grid-gap:var(--gutter)) {
 
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -1031,12 +779,6 @@ exports[`Split correct usage renders default gutters 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -1078,12 +820,6 @@ exports[`Split correct usage renders with theme overrides 1`] = `
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -1129,12 +865,6 @@ exports[`Split incorrect usage renders default with console error with fraction 
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -1176,12 +906,6 @@ exports[`Split incorrect usage renders default with console error with wrong gut
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
-}
-
-@supports (width:min(var(--minItemWidth),100%)) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
 }
 
 @supports not (grid-gap:var(--gutter)) {
