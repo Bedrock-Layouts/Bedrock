@@ -1,80 +1,91 @@
-// import styled from 'styled-components';
-// import PropTypes from 'prop-types';
-// import {
-//   spacing as defaultSpacings,
-//   SpacingTypes,
-//   Spacing,
-//   breakPoints as defaultBreakpoints,
-//   BreakPoints,
-// } from '@bedrock-layout/spacing-constants';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import {
+  spacing as defaultSpacings,
+  SpacingTypes,
+  Spacing,
+} from '@bedrock-layout/spacing-constants';
 
-// type MergeSpacings = (spacing: object) => Spacing;
-// const mergeSpacings: MergeSpacings = (spacing = {}) => ({
-//   ...defaultSpacings,
-//   ...spacing,
-// });
+type FractionTypes =
+  | 'auto-start'
+  | 'auto-end'
+  | '1/4'
+  | '1/3'
+  | '1/2'
+  | '2/3'
+  | '3/4';
 
-// type MergeBreakpoints = (breakPoints: object) => BreakPoints;
-// const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
-//   ...defaultBreakpoints,
-//   ...breakPoints,
-// });
+type Fractions = {
+  [key in FractionTypes]: string;
+};
 
-// export interface GridProps {
-//   gutter?: SpacingTypes;
-//   minItemWidth?: number;
-// }
+const fractions: Fractions = {
+  '1/4': '1fr 3fr',
+  '1/3': '1fr 2fr',
+  '1/2': '1fr 1fr',
+  '2/3': '2fr 1fr',
+  '3/4': '3fr 1fr',
+  'auto-start': `auto 1fr`,
+  'auto-end': `1fr auto`,
+};
 
-// const Grid = styled.div<GridProps>`
-//   box-sizing: border-box;
+type MergeSpacings = (spacing: object) => Spacing;
+const mergeSpacings: MergeSpacings = (spacing = {}) => ({
+  ...defaultSpacings,
+  ...spacing,
+});
 
-//   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-//     gutter && mergeSpacings(spacing)[gutter]
-//       ? mergeSpacings(spacing)[gutter]
-//       : mergeSpacings(spacing).md};
+export interface SplitProps {
+  gutter?: SpacingTypes;
+  fraction?: FractionTypes;
+}
 
-//   --minItemWidth: ${props =>
-//     typeof props.minItemWidth === 'number'
-//       ? `${props.minItemWidth}px`
-//       : mergeBreakpoints(props.theme.breakPoints).smallOnly};
+const Split = styled.div<SplitProps>`
+  box-sizing: border-box;
 
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
-//   grid-gap: var(--gutter);
+  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
+    gutter && mergeSpacings(spacing)[gutter]
+      ? mergeSpacings(spacing)[gutter]
+      : mergeSpacings(spacing).md};
 
-//   @supports (width: min(var(--minItemWidth), 100%)) {
-//     grid-template-columns: repeat(
-//       auto-fit,
-//       minmax(min(var(--minItemWidth), 100%), 1fr)
-//     );
-//   }
+  display: grid;
+  grid-template-columns: ${({ fraction = '1/2' }) => `${fractions[fraction]}`};
+  grid-gap: var(--gutter);
 
-//   @supports not (grid-gap: var(--gutter)) {
-//     display: flex;
-//     flex-flow: column;
+  @supports (width: min(var(--minItemWidth), 100%)) {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--minItemWidth), 100%), 1fr)
+    );
+  }
 
-//     > * + * {
-//       margin-top: ${({ gutter, theme: { spacing = {} } }) =>
-//         gutter && mergeSpacings(spacing)[gutter]
-//           ? mergeSpacings(spacing)[gutter]
-//           : mergeSpacings(spacing).md};
-//     }
-//   }
-// `;
+  @supports not (grid-gap: var(--gutter)) {
+    display: flex;
+    flex-flow: column;
 
-// Grid.displayName = 'Grid';
+    > * + * {
+      margin-top: ${({ gutter, theme: { spacing = {} } }) =>
+        gutter && mergeSpacings(spacing)[gutter]
+          ? mergeSpacings(spacing)[gutter]
+          : mergeSpacings(spacing).md};
+    }
+  }
+`;
 
-// Grid.propTypes = {
-//   gutter: PropTypes.oneOf<SpacingTypes>(
-//     Object.keys(defaultSpacings) as SpacingTypes[]
-//   ),
-//   minItemWidth: PropTypes.number,
-// };
+Split.displayName = 'Split';
 
-// Grid.defaultProps = {
-//   gutter: 'md',
-// };
+Split.propTypes = {
+  gutter: PropTypes.oneOf<SpacingTypes>(
+    Object.keys(defaultSpacings) as SpacingTypes[]
+  ),
+  fraction: PropTypes.oneOf<FractionTypes>(
+    Object.keys(fractions) as FractionTypes[]
+  ),
+};
 
-// export default Grid;
+Split.defaultProps = {
+  gutter: 'md',
+  fraction: '1/2',
+};
 
-export default () => null;
+export default Split;
