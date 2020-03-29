@@ -19,6 +19,7 @@
     "changes": "dotenv lerna-changelog",
     "clean": "lerna clean",
     "build": "lerna run clean:build && lerna run build",
+    "build:storybook": "build-storybook",
     "initialize": "npm i && npm run bootstrap && npm run build",
     "prepublish": "npm run build",
     "publish": "lerna publish",
