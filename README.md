@@ -16,11 +16,11 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Stack             |
 | ✅     | Grid              |
 | ✅     | Split             |
-| 🛠      | AppBoundary       |
+| ✅     | AppBoundary       |
 | ✅     | Columns           |
 | 🛠      | Center            |
 | ✅     | PadBox            |
-|        | InlineCluster     |
+| 🛠      | InlineCluster     |
 |        | Cover             |
 |        | Frame             |
 |        | useMediaQuery     |
