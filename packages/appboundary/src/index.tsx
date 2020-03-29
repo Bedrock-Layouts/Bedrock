@@ -1,80 +1,44 @@
-// import styled from 'styled-components';
-// import PropTypes from 'prop-types';
-// import {
-//   spacing as defaultSpacings,
-//   SpacingTypes,
-//   Spacing,
-//   breakPoints as defaultBreakpoints,
-//   BreakPoints,
-// } from '@bedrock-layout/spacing-constants';
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import {
+  breakPoints as defaultBreakpoints,
+  BreakPoints,
+} from '@bedrock-layout/spacing-constants';
 
-// type MergeSpacings = (spacing: object) => Spacing;
-// const mergeSpacings: MergeSpacings = (spacing = {}) => ({
-//   ...defaultSpacings,
-//   ...spacing,
-// });
+type MergeBreakpoints = (breakPoints: object) => BreakPoints;
+const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
+  ...defaultBreakpoints,
+  ...breakPoints,
+});
 
-// type MergeBreakpoints = (breakPoints: object) => BreakPoints;
-// const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
-//   ...defaultBreakpoints,
-//   ...breakPoints,
-// });
+const Outer = styled.div`
+  padding: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100%;
+`;
 
-// export interface GridProps {
-//   gutter?: SpacingTypes;
-//   minItemWidth?: number;
-// }
+const Inner = styled.div`
+  margin: 0 auto;
+  padding: 0 0;
+  max-width: ${props => mergeBreakpoints(props.theme.breakPoints).xlargeOnly};
+`;
 
-// const Grid = styled.div<GridProps>`
-//   box-sizing: border-box;
+export interface AppBoundaryProps {
+  children: React.ReactNode;
+}
 
-//   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-//     gutter && mergeSpacings(spacing)[gutter]
-//       ? mergeSpacings(spacing)[gutter]
-//       : mergeSpacings(spacing).md};
+const AppBoundary = ({ children }: AppBoundaryProps) => (
+  <Outer>
+    <Inner>{children}</Inner>
+  </Outer>
+);
 
-//   --minItemWidth: ${props =>
-//     typeof props.minItemWidth === 'number'
-//       ? `${props.minItemWidth}px`
-//       : mergeBreakpoints(props.theme.breakPoints).smallOnly};
+AppBoundary.displayName = 'AppBoundary';
 
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
-//   grid-gap: var(--gutter);
+AppBoundary.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
-//   @supports (width: min(var(--minItemWidth), 100%)) {
-//     grid-template-columns: repeat(
-//       auto-fit,
-//       minmax(min(var(--minItemWidth), 100%), 1fr)
-//     );
-//   }
-
-//   @supports not (grid-gap: var(--gutter)) {
-//     display: flex;
-//     flex-flow: column;
-
-//     > * + * {
-//       margin-top: ${({ gutter, theme: { spacing = {} } }) =>
-//         gutter && mergeSpacings(spacing)[gutter]
-//           ? mergeSpacings(spacing)[gutter]
-//           : mergeSpacings(spacing).md};
-//     }
-//   }
-// `;
-
-// Grid.displayName = 'Grid';
-
-// Grid.propTypes = {
-//   gutter: PropTypes.oneOf<SpacingTypes>(
-//     Object.keys(defaultSpacings) as SpacingTypes[]
-//   ),
-//   minItemWidth: PropTypes.number,
-// };
-
-// Grid.defaultProps = {
-//   gutter: 'md',
-// };
-
-// export default Grid;
-
-export default () => null;
+export default AppBoundary;
