@@ -36,7 +36,7 @@ const keyToProperty = (key: string) => {
     blockEnd: 'bottom',
   };
 
-  if (CSS !== undefined && !CSS.supports('padding-inline-start', '100px')) {
+  if (window && !CSS.supports('padding-inline-start', '100px')) {
     return classicMap[key];
   }
 
