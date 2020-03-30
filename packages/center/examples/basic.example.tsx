@@ -1,6 +1,7 @@
 import React from 'react';
 import Center from '@bedrock-layout/center';
 import styled from 'styled-components';
+import { number } from '@storybook/addon-knobs';
 
 const BorderedBox = styled.div`
   border: 1px solid black;
@@ -11,8 +12,9 @@ let title = 'Center';
 let name = 'Basic';
 
 function Example() {
+  const maxWidth = number('maxWidth', 640);
   return (
-    <Center>
+    <Center maxWidth={maxWidth}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
