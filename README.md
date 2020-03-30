@@ -18,11 +18,11 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Split             |
 | ✅     | AppBoundary       |
 | ✅     | Columns           |
-| 🛠      | Center            |
+| ✅     | Center            |
 | ✅     | PadBox            |
 | 🛠      | InlineCluster     |
 |        | Cover             |
-|        | Frame             |
+| 🛠      | Frame             |
 |        | useMediaQuery     |
 |        | useContainerQuery |
 |        | useForwardRef     |
