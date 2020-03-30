@@ -1,0 +1,51 @@
+{
+  "name": "@bedrock-layout/center",
+  "version": "1.0.4",
+  "description": "bedrock-layout center",
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "center",
+    "layout",
+    "react",
+    "styled-components"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "homepage": "https://bedrock-layout.dev/",
+  "license": "MIT",
+  "unpkg": "lib/index.umd.js",
+  "main": "lib/index.js",
+  "umd:main": "lib/index.umd.js",
+  "module": "lib/index.m.js",
+  "source": "src/index.tsx",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@bedrock-layout/spacing-constants": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "styled-components": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean:build": "rimraf lib",
+    "build": "microbundle build --jsx react && rimraf ./.rts2_cache*"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
+  }
+}
