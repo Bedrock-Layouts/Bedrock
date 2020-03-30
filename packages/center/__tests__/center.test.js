@@ -46,7 +46,7 @@ describe('Center', () => {
 
     it('renders with theme overrides', () => {
       const center = create(
-        <ThemeProvider theme={{ breakPoints: { medium: '1600px' } }}>
+        <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
           <Center>
             <Lorem />
           </Center>

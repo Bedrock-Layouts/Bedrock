@@ -58,7 +58,9 @@ describe('Grid', () => {
 
     it('renders with theme overrides', () => {
       const grid = create(
-        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+        <ThemeProvider
+          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: '200px' } }}
+        >
           <Grid>
             <Lorem />
           </Grid>

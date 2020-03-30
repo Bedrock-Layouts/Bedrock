@@ -23,7 +23,7 @@ const Grid = styled.div<GridProps>`
   --minItemWidth: ${props =>
     typeof props.minItemWidth === 'number'
       ? `${props.minItemWidth}px`
-      : mergeBreakpoints(props.theme.breakPoints).smallOnly};
+      : mergeBreakpoints(props.theme.breakPoints).smallOnly + 'px'};
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));

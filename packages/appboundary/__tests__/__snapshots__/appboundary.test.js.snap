@@ -11,7 +11,7 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
 .c1 {
   margin: 0 auto;
   padding: 0 0;
-  max-width: 90rem;
+  max-width: 1440px;
 }
 
 <div
@@ -47,7 +47,7 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
 .c1 {
   margin: 0 auto;
   padding: 0 0;
-  max-width: 90rem;
+  max-width: 1440px;
 }
 
 <div
@@ -83,7 +83,7 @@ exports[`AppBoundary incorrect usage renders default with console error with no 
 .c1 {
   margin: 0 auto;
   padding: 0 0;
-  max-width: 90rem;
+  max-width: 1440px;
 }
 
 <div

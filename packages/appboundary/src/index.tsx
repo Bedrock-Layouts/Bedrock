@@ -13,7 +13,8 @@ const Outer = styled.div`
 const Inner = styled.div`
   margin: 0 auto;
   padding: 0 0;
-  max-width: ${props => mergeBreakpoints(props.theme.breakPoints).xxlarge};
+  max-width: ${props =>
+    mergeBreakpoints(props.theme.breakPoints).xxlarge + 'px'};
 `;
 
 export interface AppBoundaryProps {
