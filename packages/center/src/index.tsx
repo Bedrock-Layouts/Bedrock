@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {
-  breakPoints as defaultBreakpoints,
-  BreakPoints,
-} from '@bedrock-layout/spacing-constants';
-
-type MergeBreakpoints = (breakPoints: object) => BreakPoints;
-const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
-  ...defaultBreakpoints,
-  ...breakPoints,
-});
+import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
 
 export interface CenterProps {
   maxWidth?: number;
