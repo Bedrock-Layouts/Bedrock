@@ -28,6 +28,12 @@ export const spacing: Spacing = {
   xxl,
 };
 
+type MergeSpacings = (spacing: object) => Spacing;
+export const mergeSpacings: MergeSpacings = (newSpacings = {}) => ({
+  ...spacing,
+  ...newSpacings,
+});
+
 type StringTuple = [string, string];
 /* Based on Foundations Break Points */
 const smallOnly: string = '39.9375rem';
@@ -62,3 +68,9 @@ export const breakPoints: BreakPoints = {
   xlarge,
   xxlarge,
 };
+
+type MergeBreakpoints = (breakPoints: object) => BreakPoints;
+export const mergeBreakpoints: MergeBreakpoints = (newBreakPoints = {}) => ({
+  ...breakPoints,
+  ...newBreakPoints,
+});
