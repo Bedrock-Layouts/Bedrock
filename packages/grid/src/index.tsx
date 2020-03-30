@@ -3,22 +3,9 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
-  Spacing,
-  breakPoints as defaultBreakpoints,
-  BreakPoints,
+  mergeSpacings,
+  mergeBreakpoints,
 } from '@bedrock-layout/spacing-constants';
-
-type MergeSpacings = (spacing: object) => Spacing;
-const mergeSpacings: MergeSpacings = (spacing = {}) => ({
-  ...defaultSpacings,
-  ...spacing,
-});
-
-type MergeBreakpoints = (breakPoints: object) => BreakPoints;
-const mergeBreakpoints: MergeBreakpoints = (breakPoints = {}) => ({
-  ...defaultBreakpoints,
-  ...breakPoints,
-});
 
 export interface GridProps {
   gutter?: SpacingTypes;
@@ -36,7 +23,7 @@ const Grid = styled.div<GridProps>`
   --minItemWidth: ${props =>
     typeof props.minItemWidth === 'number'
       ? `${props.minItemWidth}px`
-      : mergeBreakpoints(props.theme.breakPoints).smallOnly};
+      : mergeBreakpoints(props.theme.breakPoints).smallOnly + 'px'};
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));

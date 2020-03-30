@@ -31,7 +31,7 @@ exports[`Center correct usage renders custom width 1`] = `
 
 exports[`Center correct usage renders default width 1`] = `
 .c0 {
-  --maxWidth: 40rem;
+  --maxWidth: 640px;
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
@@ -89,7 +89,7 @@ exports[`Center correct usage renders with theme overrides 1`] = `
 
 exports[`Center incorrect usage renders default with console error with no children 1`] = `
 .c0 {
-  --maxWidth: 40rem;
+  --maxWidth: 640px;
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;

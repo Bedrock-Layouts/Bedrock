@@ -3,24 +3,26 @@
 exports[`Spacing Constants constant snampshot 1`] = `
 Object {
   "breakPoints": Object {
-    "large": "64rem",
+    "large": 1024,
     "largeOnly": Array [
-      "64rem",
-      "74.9375rem",
+      1024,
+      1199,
     ],
-    "medium": "40rem",
+    "medium": 640,
     "mediumOnly": Array [
-      "40rem",
-      "63.9375rem",
+      640,
+      1023,
     ],
-    "smallOnly": "39.9375rem",
-    "xlarge": "75rem",
+    "smallOnly": 639,
+    "xlarge": 1200,
     "xlargeOnly": Array [
-      "75rem",
-      "89.9375rem",
+      1200,
+      1439,
     ],
-    "xxlarge": "90rem",
+    "xxlarge": 1440,
   },
+  "mergeBreakpoints": [Function],
+  "mergeSpacings": [Function],
   "spacing": Object {
     "lg": "1rem",
     "md": "0.5rem",
@@ -30,5 +32,39 @@ Object {
     "xs": "0.125rem",
     "xxl": "4rem",
   },
+}
+`;
+
+exports[`Spacing Constants merges breakpoints 1`] = `
+Object {
+  "large": 1024,
+  "largeOnly": Array [
+    1024,
+    1199,
+  ],
+  "medium": 640,
+  "mediumOnly": Array [
+    640,
+    1023,
+  ],
+  "smallOnly": 639,
+  "xlarge": "1300px",
+  "xlargeOnly": Array [
+    1200,
+    1439,
+  ],
+  "xxlarge": 1440,
+}
+`;
+
+exports[`Spacing Constants merges spacing 1`] = `
+Object {
+  "lg": "1rem",
+  "md": "0.5rem",
+  "none": "0px",
+  "sm": "0.25rem",
+  "xl": "8rem",
+  "xs": "0.125rem",
+  "xxl": "4rem",
 }
 `;

@@ -28,26 +28,32 @@ export const spacing: Spacing = {
   xxl,
 };
 
-type StringTuple = [string, string];
+type MergeSpacings = (spacing: object) => Spacing;
+export const mergeSpacings: MergeSpacings = (newSpacings = {}) => ({
+  ...spacing,
+  ...newSpacings,
+});
+
+type NumberTuple = [number, number];
 /* Based on Foundations Break Points */
-const smallOnly: string = '39.9375rem';
-const mediumOnly: StringTuple = ['40rem', '63.9375rem'];
-const largeOnly: StringTuple = ['64rem', '74.9375rem'];
-const xlargeOnly: StringTuple = ['75rem', '89.9375rem'];
-const medium: string = '40rem';
-const large: string = '64rem';
-const xlarge: string = '75rem';
-const xxlarge: string = '90rem';
+const smallOnly: number = 639;
+const mediumOnly: NumberTuple = [640, 1023];
+const largeOnly: NumberTuple = [1024, 1199];
+const xlargeOnly: NumberTuple = [1200, 1439];
+const medium: number = 640;
+const large: number = 1024;
+const xlarge: number = 1200;
+const xxlarge: number = 1440;
 
 export interface BreakPoints {
-  smallOnly: string;
-  mediumOnly: StringTuple;
-  largeOnly: StringTuple;
-  xlargeOnly: StringTuple;
-  medium: string;
-  large: string;
-  xlarge: string;
-  xxlarge: string;
+  smallOnly: number;
+  mediumOnly: NumberTuple;
+  largeOnly: NumberTuple;
+  xlargeOnly: NumberTuple;
+  medium: number;
+  large: number;
+  xlarge: number;
+  xxlarge: number;
 }
 
 export type BreakPointTypes = keyof BreakPoints;
@@ -62,3 +68,9 @@ export const breakPoints: BreakPoints = {
   xlarge,
   xxlarge,
 };
+
+type MergeBreakpoints = (breakPoints: object) => BreakPoints;
+export const mergeBreakpoints: MergeBreakpoints = (newBreakPoints = {}) => ({
+  ...breakPoints,
+  ...newBreakPoints,
+});

@@ -3,14 +3,8 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
-  Spacing,
+  mergeSpacings,
 } from '@bedrock-layout/spacing-constants';
-
-type MergeSpacings = (spacing: object) => Spacing;
-const mergeSpacings: MergeSpacings = (spacing = {}) => ({
-  ...defaultSpacings,
-  ...spacing,
-});
 
 export interface ColumnsProps {
   gutter?: SpacingTypes;

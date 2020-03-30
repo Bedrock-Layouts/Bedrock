@@ -4,7 +4,7 @@ exports[`Grid correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0px;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -54,7 +54,7 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.125rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -112,7 +112,7 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.25rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -178,7 +178,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -252,7 +252,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -334,7 +334,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 2rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -424,7 +424,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 4rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -572,7 +572,7 @@ exports[`Grid correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -622,7 +622,7 @@ exports[`Grid correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 200px;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 320px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -672,7 +672,7 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
@@ -722,7 +722,7 @@ exports[`Grid incorrect usage renders default with console error with wrong gutt
 .c0 {
   box-sizing: border-box;
   --gutter: 0.5rem;
-  --minItemWidth: 39.9375rem;
+  --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
   grid-gap: var(--gutter);
