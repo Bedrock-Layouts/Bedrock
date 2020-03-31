@@ -15,13 +15,6 @@ const Outer = styled.div`
   height: 100%;
 `;
 
-// const Inner = styled.div`
-//   margin: 0 auto;
-//   padding: 0;
-//   max-width: ${props =>
-//     mergeBreakpoints(props.theme.breakPoints).xxlarge + 'px'};
-// `;
-
 const safeTheme = { breakPoints: {} };
 
 const AppBoundary = ({ children }: AppBoundaryProps) => {
