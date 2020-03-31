@@ -12,7 +12,7 @@ export default function useForwardedRef<T>(forwardedRef: React.Ref<T>) {
       (forwardedRef as React.MutableRefObject<T | null>).current =
         innerRef.current;
     }
-  }, [forwardedRef]);
+  });
 
   return innerRef;
 }
