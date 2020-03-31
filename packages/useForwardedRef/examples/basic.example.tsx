@@ -28,6 +28,8 @@ const RefBox = React.forwardRef<HTMLElement, { children?: React.ReactNode }>(
   }
 );
 
+RefBox.displayName = 'RefBox';
+
 let title = 'useForwardedRef';
 let name = 'Basic';
 
@@ -39,12 +41,7 @@ function Example() {
       setType(outerRef.current.clientHeight);
     }
   }, [outerRef]);
-  return (
-    <div>
-      This is still experimental
-      <RefBox ref={outerRef}>OuterRef clientHeight: {type}</RefBox>
-    </div>
-  );
+  return <RefBox ref={outerRef}>OuterRef clientHeight: {type}</RefBox>;
 }
 
 Example.story = { name };
