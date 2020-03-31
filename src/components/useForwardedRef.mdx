@@ -1,8 +1,21 @@
-# `@bedrock-layout/use-forwarded-ref`
+---
+name: useForwardedRef
+menu: Components
+---
 
-When you need to use a ref and use are useing for
+# Stack
 
-## Usage
+## Use case
+
+The Stack is designed to literally 'stack' items on top of eachother while maintaining a consistent gap/gutter in between each item.
+
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-forwarded-ref
+```
+
+## Basic usage
 
 ```javascript
 import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
@@ -23,3 +36,7 @@ const App = () => {
   return <ForwardedRefDiv ref={ref}>{...content}</ForwardedRefDiv>;
 };
 ```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/useforwardedref--basic) for more details.
