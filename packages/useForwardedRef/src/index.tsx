@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default function useForwardedRef<T>(
-  forwardedRef: (e: T | null) => void | React.MutableRefObject<T | null>
-) {
-  const innerRef = React.useRef<T | null>(null);
+export default function useForwardedRef<T>(forwardedRef: React.Ref<T>) {
+  const innerRef = React.useRef<T>(null);
 
   React.useEffect(() => {
     if (!forwardedRef) return;
