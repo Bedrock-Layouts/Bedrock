@@ -37,7 +37,7 @@ describe('AppBoundary', () => {
 
     it('renders with theme overrides', () => {
       const appboundary = create(
-        <ThemeProvider theme={{ breakPoints: { xlargeOnly: '1600px' } }}>
+        <ThemeProvider theme={{ breakPoints: { xxlarge: 1600 } }}>
           <AppBoundary>
             <Lorem />
           </AppBoundary>
