@@ -1,5 +1,5 @@
 import React from 'react';
-import useForwardedRef from '@bedrock-layout/useForwardedRef';
+import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
 import styled from 'styled-components';
 
 const BorderedBox = styled.div`

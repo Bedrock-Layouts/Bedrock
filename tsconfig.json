@@ -11,7 +11,10 @@
       "@bedrock-layout/split": ["packages/split/src"],
       "@bedrock-layout/appboundary": ["packages/appboundary/src"],
       "@bedrock-layout/center": ["packages/center/src"],
-      "@bedrock-layout/useForwardedRef": ["packages/useForwardedRef/src"],
+      "@bedrock-layout/use-forwarded-ref": ["packages/use-forwarded-ref/src"],
+      "@bedrock-layout/use-container-query": [
+        "packages/use-container-query/src"
+      ],
       "$test/*": ["test/*"]
     }
   }
