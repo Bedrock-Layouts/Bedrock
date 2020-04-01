@@ -1,29 +1,6 @@
 import { useState, useEffect } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
-interface DOMBoxSizeReadOnly {
-  readonly blockSize: number;
-  readonly inlineSize: number;
-}
-
-interface DOMRectReadOnly {
-  readonly x: number;
-  readonly y: number;
-  readonly width: number;
-  readonly height: number;
-  readonly top: number;
-  readonly right: number;
-  readonly bottom: number;
-  readonly left: number;
-}
-
-interface ResizeObserverEntry {
-  readonly target: Element;
-  readonly contentRect: DOMRectReadOnly;
-  readonly borderBoxSize: DOMBoxSizeReadOnly;
-  readonly contentBoxSize: DOMBoxSizeReadOnly;
-}
-
 export default function useNodeQuery(node: Element, width = 1) {
   const [matches, setMatch] = useState(false);
 
@@ -31,6 +8,7 @@ export default function useNodeQuery(node: Element, width = 1) {
     let observer: ResizeObserver;
     if (node) {
       observer = new ResizeObserver(([entry]) => {
+        // using any as this is future forward, but the Types have not yet exist
         const nodeWidth = (entry as any).borderBox
           ? (entry as any).borderBox.inlineSize
           : entry.contentRect.width;

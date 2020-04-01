@@ -12,10 +12,13 @@ let title = 'useContainerQuery';
 let name = 'Basic';
 
 function Example() {
-  const matches = useContainerQuery(320);
+  const [node, ref] = React.useState(null);
+  const matches = useContainerQuery(node, 320);
 
   return (
-    <BorderedBox>My Bordered Box is {matches ? '<=' : '>'} 320px</BorderedBox>
+    <BorderedBox style={{ margin: 'auto', width: '50vw' }} ref={ref}>
+      My Bordered Box is {matches ? '<=' : '>'} 320px
+    </BorderedBox>
   );
 }
 
