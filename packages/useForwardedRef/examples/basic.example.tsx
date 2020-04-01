@@ -10,7 +10,7 @@ BorderedBox.displayName = 'BorderedBox';
 
 const RefBox = React.forwardRef<HTMLElement, { children?: React.ReactNode }>(
   ({ children }, ref) => {
-    const innerRef = useForwardedRef(ref);
+    const innerRef = useForwardedRef<HTMLElement>(ref);
     const [rect, setRect] = React.useState({});
     React.useEffect(() => {
       if (innerRef.current) {
