@@ -3,23 +3,23 @@
 exports[`Spacing Constants constant snampshot 1`] = `
 Object {
   "breakPoints": Object {
-    "large": 1024,
+    "large": 1199,
     "largeOnly": Array [
       1024,
       1199,
     ],
-    "medium": 640,
+    "medium": 1023,
     "mediumOnly": Array [
       640,
       1023,
     ],
     "smallOnly": 639,
-    "xlarge": 1200,
+    "xlarge": 1439,
     "xlargeOnly": Array [
       1200,
       1439,
     ],
-    "xxlarge": 1440,
+    "xxlarge": 1920,
   },
   "mergeBreakpoints": [Function],
   "mergeSpacings": [Function],
@@ -37,12 +37,12 @@ Object {
 
 exports[`Spacing Constants merges breakpoints 1`] = `
 Object {
-  "large": 1024,
+  "large": 1199,
   "largeOnly": Array [
     1024,
     1199,
   ],
-  "medium": 640,
+  "medium": 1023,
   "mediumOnly": Array [
     640,
     1023,
@@ -53,7 +53,7 @@ Object {
     1200,
     1439,
   ],
-  "xxlarge": 1440,
+  "xxlarge": 1920,
 }
 `;
 

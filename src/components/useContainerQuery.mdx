@@ -1,0 +1,63 @@
+---
+name: useContainerQuery
+menu: Components
+---
+
+# useContainerQuery
+
+## Use case
+
+Used to verify the actual width of a DOM node, allowing you to do logic based on that. Alternatively, you can export `useMatchContainerSizes` which takes a node and returns an object
+of breakpoint, corresponding to the breakpoints in the `spacing-constants` and if the container matches that break point.
+
+**The node provided to these hooks needs to be stateful or in other words should not come from `React.useRef`. Instead you can use `React.useState` and**
+**the `@bedrock-layout/use-forwarded-ref` is also stateful**
+
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-container-query
+```
+
+## Basic usage
+
+```javascript
+import useContainerQuery from '@bedrock-layout/use-container-query';
+
+const Div = React.forwardRef(props,ref)=>{
+  const [node,setRef] = React.useState(null)
+    const matches = useContainerQuery(node,320)
+    // do something with matches
+    return <div ref={setRef} {...props}>
+}
+```
+
+Or you can provide a range
+
+```javascript
+import useContainerQuery from '@bedrock-layout/use-container-query';
+
+const Div = React.forwardRef(props,ref)=>{
+  const [node,setRef] = React.useState(null)
+    const matches = useContainerQuery(node, 320, 640)
+    // do something with matches
+    return <div ref={setRef} {...props}>
+}
+```
+
+Or you choose to use the `useMatchContainerSizes` like this:
+
+```javascript
+import { useMatchContainerSizes } from '@bedrock-layout/use-container-query';
+
+const Div = React.forwardRef(props,ref)=>{
+  const [node,setRef] = React.useState(null)
+    const matchesObj = useMatchContainerSizes(node)
+    // do something with matchesObj
+    return <div ref={setRef} {...props}>
+}
+```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/usecontainerquery--basic) for more details.
