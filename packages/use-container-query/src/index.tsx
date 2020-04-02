@@ -9,6 +9,12 @@ type UseContainterQuery = (
 ) => boolean;
 
 const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
+  if (typeof maxWidth !== 'undefined' && maxWidth <= width) {
+    throw new Error(
+      `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`
+    );
+  }
+
   const [matches, setMatch] = useState(false);
 
   useEffect(() => {

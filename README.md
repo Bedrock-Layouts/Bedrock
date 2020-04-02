@@ -23,7 +23,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | 🛠      | Switcher            |
 | ✅     | useForwardedRef     |
 | 🛠      | useMatchBreakpoints |
-| 🛠      | useContainerQuery   |
+| ✅     | useContainerQuery   |
 |        | InlineCluster       |
 |        | Cover               |
 |        | Frame               |

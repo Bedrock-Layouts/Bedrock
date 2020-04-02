@@ -1,8 +1,25 @@
-# `@bedrock-layout/use-container-query`
+---
+name: useContainerQuery
+menu: Components
+---
 
-When you need to do logic based on the size of an element. Uses the ResizeObserver API. It takes a value and will return if that value is less than or equal to it.
+# useContainerQuery
 
-## Usage
+## Use case
+
+Used to verify the actual width of a DOM node, allowing you to do logic based on that. Alternatively, you can export `useMatchContainerSizes` which takes a node and returns an object
+of breakpoint, corresponding to the breakpoints in the `spacing-constants` and if the container matches that break point.
+
+**The node provided to these hooks needs to be stateful or in other words should not come from `React.useRef`. Instead you can use `React.useState` and**
+**the `@bedrock-layout/use-forwarded-ref` is also stateful**
+
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-container-query
+```
+
+## Basic usage
 
 ```javascript
 import useContainerQuery from '@bedrock-layout/use-container-query';
@@ -40,3 +57,7 @@ const Div = React.forwardRef(props,ref)=>{
     return <div ref={setRef} {...props}>
 }
 ```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/usecontainerquery--basic) for more details.
