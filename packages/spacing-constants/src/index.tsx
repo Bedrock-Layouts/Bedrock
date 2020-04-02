@@ -40,10 +40,10 @@ const smallOnly: number = 639;
 const mediumOnly: NumberTuple = [640, 1023];
 const largeOnly: NumberTuple = [1024, 1199];
 const xlargeOnly: NumberTuple = [1200, 1439];
-const medium: number = 640;
-const large: number = 1024;
-const xlarge: number = 1200;
-const xxlarge: number = 1440;
+const medium: number = 1023;
+const large: number = 1199;
+const xlarge: number = 1439;
+const xxlarge: number = 1920;
 
 export interface BreakPoints {
   smallOnly: number;
