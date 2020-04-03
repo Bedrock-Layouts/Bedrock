@@ -27,7 +27,7 @@ import Split from '@bedrock-layout/split';
 
 ## API
 
-| Property | Description                       | Type                                                       | Default                               |
-| -------- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------- |
-| gutter   | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`                                  |
-| fraction | sets the fractional split         | number                                                     | breakPoints.smallOnly or '39.9375rem' |
+| Property | Description                       | Type                                                                | Default |
+| -------- | --------------------------------- | ------------------------------------------------------------------- | ------- |
+| gutter   | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"`          | `md`    |
+| fraction | sets the fractional split         | `'auto-start' | 'auto-end' | '1/4' | '1/3' | '1/2' | '2/3' | '3/4'` | `1/2`   |
