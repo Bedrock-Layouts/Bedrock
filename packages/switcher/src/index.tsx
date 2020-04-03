@@ -9,6 +9,7 @@ import useContainerQuery from '@bedrock-layout/use-container-query';
 
 export interface SplitSwitcherProps extends StackProps, SplitProps {
   switchAt?: number;
+  children?: React.ReactNode;
 }
 
 const safeTheme = { breakPoints: {} };
@@ -19,7 +20,10 @@ export const SplitSwitcher = React.forwardRef<
 >(({ fraction, switchAt, ...props }, ref) => {
   const safeRef = useForwardedRef(ref);
   const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
-  const widthToSwitchAt = switchAt || mergeBreakpoints(breakPoints).smallOnly;
+  const widthToSwitchAt =
+    switchAt && switchAt > -1
+      ? switchAt
+      : mergeBreakpoints(breakPoints).smallOnly;
 
   const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
@@ -32,12 +36,4 @@ export const SplitSwitcher = React.forwardRef<
 
 SplitSwitcher.displayName = 'SplitSwitcher';
 
-// SplitSwitcher.propTypes = {
-//   gutter: PropTypes.oneOf<SpacingTypes>(
-//     Object.keys(defaultSpacings) as SpacingTypes[]
-//   ),
-// };
-
-// SplitSwitcher.defaultProps = {
-//   gutter: 'md',
-// };
+SplitSwitcher.propTypes = { ...Split.propTypes, switchAt: PropTypes.number };

@@ -93,7 +93,33 @@ describe('Switcher', () => {
           </SplitSwitcher>
         );
 
-        expect(spy.mock.calls.length).toBe(1);
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+
+      it('renders default with console error with wrong fraction input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+
+        const errorStack = create(
+          <SplitSwitcher fraction='incorrect'>
+            <Lorem />
+          </SplitSwitcher>
+        );
+
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+
+      it('renders default with console error with wrong switchAt input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+
+        const errorStack = create(
+          <SplitSwitcher switchAt='incorrect'>
+            <Lorem />
+          </SplitSwitcher>
+        );
+
+        expect(spy).toBeCalled();
         expect(errorStack.toJSON()).toMatchSnapshot();
       });
     });
