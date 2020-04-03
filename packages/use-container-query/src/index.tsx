@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { breakPoints } from '@bedrock-layout/spacing-constants';
 import ResizeObserver from 'resize-observer-polyfill';
 
 type UseContainterQuery = (
@@ -43,15 +42,4 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
   return matches;
 };
 
-type ContainerMatchMap = { [s: string]: boolean };
-type UseMatchContainerSizes = (node: Element) => ContainerMatchMap;
-
-export const useMatchContainerSizes: UseMatchContainerSizes = node => {
-  return Object.entries(breakPoints).reduce((acc, [key, value]) => {
-    const [width, maxWidth]: number[] = [].concat(value);
-    /* eslint-disable */
-    acc[key] = useContainterQuery(node, width, maxWidth);
-    return acc;
-  }, {} as { [s: string]: boolean });
-};
 export default useContainterQuery;
