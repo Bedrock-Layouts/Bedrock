@@ -11,20 +11,24 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 ✅ - Released
 🛠 - Building
 
-| Status | Name                |
-| ------ | ------------------- |
-| ✅     | Stack               |
-| ✅     | Grid                |
-| ✅     | Split               |
-| ✅     | AppBoundary         |
-| ✅     | Columns             |
-| ✅     | Center              |
-| ✅     | PadBox              |
-| 🛠      | Switcher            |
-| ✅     | useForwardedRef     |
-| 🛠      | useMatchBreakpoints |
-| ✅     | useContainerQuery   |
-|        | InlineCluster       |
-|        | Cover               |
-|        | Frame               |
-|        | MasonaryGrid        |
+| Status | Name                   |
+| ------ | ---------------------- |
+| ✅     | Stack                  |
+| ✅     | Grid                   |
+| ✅     | Split                  |
+| ✅     | AppBoundary            |
+| ✅     | Columns                |
+| ✅     | Center                 |
+| ✅     | PadBox                 |
+| ✅     | SplitSwitcher          |
+| 🛠      | ColumnSwitcher         |
+| ✅     | useForwardedRef        |
+| ✅     | useStatefulRef         |
+| ✅     | useMatchContainerSizes |
+| 🛠      | useMatchMedia          |
+| 🛠      | useMatchBreakpoints    |
+| ✅     | useContainerQuery      |
+|        | InlineCluster          |
+|        | Cover                  |
+|        | Frame                  |
+|        | MasonaryGrid           |
