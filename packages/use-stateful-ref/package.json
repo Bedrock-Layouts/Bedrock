@@ -1,14 +1,14 @@
 {
-  "name": "@bedrock-layout/use-forwarded-ref",
-  "version": "1.0.4",
-  "description": "bedrock-layout useForwardedRef",
+  "name": "@bedrock-layout/use-stateful-ref",
+  "version": "1.0.0",
+  "description": "bedrock-layout useStatefulRef",
   "sideEffects": false,
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "useForwardedRef",
+    "useStatefulRef",
     "react",
     "hook",
     "useRef"
@@ -44,9 +44,5 @@
   },
   "peerDependencies": {
     "react": ">=16.8"
-  },
-  "dependencies": {
-    "@bedrock-layout/use-stateful-ref": "^1.0.0"
-  },
-  "gitHead": "1ac6f1bbee09a2fae8ca4fd3b3a2b1086b3b64ec"
+  }
 }

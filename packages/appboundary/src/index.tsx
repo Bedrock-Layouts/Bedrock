@@ -30,7 +30,10 @@ const AppBoundary = ({ children }: AppBoundaryProps) => {
 AppBoundary.displayName = 'AppBoundary';
 
 AppBoundary.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };
 
 export default AppBoundary;
