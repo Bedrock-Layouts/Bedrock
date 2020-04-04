@@ -1,5 +1,5 @@
 import React from 'react';
-import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
+import useStatefulRef from '@bedrock-layout/use-stateful-ref';
 import styled from 'styled-components';
 
 const BorderedBox = styled.div`
@@ -8,40 +8,15 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = 'BorderedBox';
 
-const RefBox = React.forwardRef<HTMLElement, { children?: React.ReactNode }>(
-  ({ children }, ref) => {
-    const innerRef = useForwardedRef<HTMLElement>(ref);
-    const [rect, setRect] = React.useState({});
-    React.useEffect(() => {
-      if (innerRef.current) {
-        setRect(innerRef.current.getBoundingClientRect());
-      }
-    }, [innerRef]);
-    return (
-      <BorderedBox ref={innerRef}>
-        {innerRef && (
-          <p>innerRef clientBoundingRect:{JSON.stringify(rect, null, 3)}</p>
-        )}
-        {children}
-      </BorderedBox>
-    );
-  }
-);
-
-RefBox.displayName = 'RefBox';
-
-let title = 'useForwardedRef';
+let title = 'useStatefulRef';
 let name = 'Basic';
 
 function Example() {
-  const outerRef = React.useRef<HTMLElement>(null);
-  const [type, setType] = React.useState(null);
-  React.useEffect(() => {
-    if (outerRef.current) {
-      setType(outerRef.current.clientHeight);
-    }
-  }, [outerRef]);
-  return <RefBox ref={outerRef}>OuterRef clientHeight: {type}</RefBox>;
+  const ref = useStatefulRef<HTMLDivElement>(null);
+  const width = ref.current && ref.current.getBoundingClientRect().width;
+  return (
+    <BorderedBox ref={ref}>My Width initial width is: {width}px</BorderedBox>
+  );
 }
 
 Example.story = { name };

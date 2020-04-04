@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function useStatefulRef<T>(initialVal = null) {
+function useStatefulRef<T>(initialVal = null) {
   let [cur, setCur] = React.useState<T | null>(initialVal);
 
   const [ref] = React.useState({
@@ -25,3 +25,5 @@ export default function useStatefulRef<T>(initialVal = null) {
 
   return ref as React.MutableRefObject<T>;
 }
+
+export default useStatefulRef;

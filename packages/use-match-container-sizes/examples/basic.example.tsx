@@ -12,8 +12,8 @@ let title = 'useMatchContainerSizes';
 let name = 'Basic';
 
 function Example() {
-  const [node, ref] = React.useState(null);
-  const matches = useMatchContainerSizes(node);
+  const [node, ref] = React.useState<HTMLDivElement | null>(null);
+  const matches = useMatchContainerSizes(node as HTMLDivElement);
 
   return (
     <BorderedBox style={{ margin: 'auto', width: '50vw' }} ref={ref}>
