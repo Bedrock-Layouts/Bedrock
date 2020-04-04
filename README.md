@@ -25,8 +25,8 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | useForwardedRef        |
 | ✅     | useStatefulRef         |
 | ✅     | useMatchContainerSizes |
+| ✅     | useMediaQuery          |
 | 🛠      | useMatchMedia          |
-| 🛠      | useMatchBreakpoints    |
 | ✅     | useContainerQuery      |
 |        | InlineCluster          |
 |        | Cover                  |

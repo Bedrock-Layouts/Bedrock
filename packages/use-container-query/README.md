@@ -27,16 +27,3 @@ const Div = React.forwardRef(props,ref)=>{
     return <div ref={setRef} {...props}>
 }
 ```
-
-Or you choose to use the `useMatchContainerSizes` like this:
-
-```javascript
-import { useMatchContainerSizes } from '@bedrock-layout/use-container-query';
-
-const Div = React.forwardRef(props,ref)=>{
-  const [node,setRef] = React.useState(null)
-    const matchesObj = useMatchContainerSizes(node)
-    // do something with matchesObj
-    return <div ref={setRef} {...props}>
-}
-```

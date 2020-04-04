@@ -1,8 +1,21 @@
-# `@bedrock-layout/use-media-query`
+---
+name: useMediaQuery
+menu: Components
+---
+
+# useMediaQuery
+
+## Use case
 
 When you need to do logic based on the size of the viewport. It uses the matchMedia API, it takes a value and will return if that value is less than or equal to it.
 
-## Usage
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-media-query
+```
+
+## Basic usage
 
 ```javascript
 import useMediaQuery from '@bedrock-layout/use-media-query';
@@ -13,3 +26,7 @@ const App = () => {
     return <div ref={setRef} {...props}>
 }
 ```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/usemediaquery--basic) for more details.
