@@ -1,0 +1,36 @@
+---
+name: useMatchContainerSizes
+menu: Components
+---
+
+# useMatchContainerSizes
+
+## Use case
+
+Used to verify certain breakpoints match the actual width of a DOM node. It corresponds to the breakpoints in the `spacing-constants`.
+
+**The node provided to this hooks needs to be stateful or in other words should not come from `React.useRef`. Instead you can use `React.useState` and**
+**the `@bedrock-layout/use-forwarded-ref` is also stateful**
+
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-match-container-sizes
+```
+
+## Basic usage
+
+```javascript
+import  useMatchContainerSizes  from '@bedrock-layout/use-match-container-sizes';
+
+const Div = React.forwardRef(props,ref)=>{
+  const [node,setRef] = React.useState(null)
+    const matchesObj = useMatchContainerSizes(node)
+    // do something with matchesObj
+    return <div ref={setRef} {...props}>
+}
+```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/usematchcontainersizes--basic) for more details.
