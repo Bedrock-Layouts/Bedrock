@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMatchContainerSizes } from '@bedrock-layout/use-container-query';
+import useMatchContainerSizes from '@bedrock-layout/use-match-container-sizes';
 import styled from 'styled-components';
 
 const BorderedBox = styled.div`
@@ -8,8 +8,8 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = 'BorderedBox';
 
-let title = 'useContainerQuery';
-let name = 'useMatchContainerSizes';
+let title = 'useMatchContainerSizes';
+let name = 'Basic';
 
 function Example() {
   const [node, ref] = React.useState(null);

@@ -1,0 +1,69 @@
+---
+name: Switcher
+menu: Components
+---
+
+import { Playground } from 'docz';
+import { SplitSwitcher } from '@bedrock-layout/switcher';
+
+# Switcher
+
+## Use case
+
+The SplitSwitcher component is designed to create a split layout based on fraction, but will switch to a Stack layout at a switchAt size (default is the smallOnly breakpoint).
+The SplitSwitcher has the same API as the Split Component, plus a `switchAt` prop. when the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the stack component
+
+```bash
+npm install @bedrock-layout/switcher
+
+import { SplitSwitcher } from '@bedrock-layout/switcher';
+```
+
+## Basic usage
+
+<Playground>
+  <SplitSwitcher gutter='lg' fraction='1/2' switchAt={700}>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </div>
+    <div>
+      Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum elementum
+      enim in pharetra. Curabitur eget urna cursus, imperdiet leo eu, elementum
+      leo. Proin laoreet eleifend nisl ut iaculis. Ut dictum est vitae rutrum
+      elementum. Donec dictum ex ac nibh auctor semper. Phasellus sed rhoncus
+      arcu, eu consectetur ipsum. Ut dictum a elit at sollicitudin. Quisque sed
+      augue molestie, auctor purus quis, luctus ipsum. Donec ultrices vel nisi
+      vehicula facilisis. Vestibulum cursus nisi tellus, sit amet sagittis nisl
+      luctus ut.
+    </div>
+  </SplitSwitcher>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/switcher--split-switcher) for more details.
+
+## Properties
+
+It has the same API has the [`Split` component](/src-components-split) plus:
+
+| Property | Type   | Default              |
+| -------- | ------ | -------------------- |
+| switchAt | number | smallOnly breakPoint |
+
+## IE11 Fallback
+
+For browsers that do no support CSS Grid, it will fall back to a flex column.

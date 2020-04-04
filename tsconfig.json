@@ -9,11 +9,15 @@
       "@bedrock-layout/padbox": ["packages/padbox/src"],
       "@bedrock-layout/columns": ["packages/columns/src"],
       "@bedrock-layout/split": ["packages/split/src"],
+      "@bedrock-layout/switcher": ["packages/switcher/src"],
       "@bedrock-layout/appboundary": ["packages/appboundary/src"],
       "@bedrock-layout/center": ["packages/center/src"],
       "@bedrock-layout/use-forwarded-ref": ["packages/use-forwarded-ref/src"],
       "@bedrock-layout/use-container-query": [
         "packages/use-container-query/src"
+      ],
+      "@bedrock-layout/use-match-container-sizes": [
+        "packages/use-match-container-sizes/src"
       ],
       "$test/*": ["test/*"]
     }
