@@ -1,0 +1,32 @@
+---
+name: useMatchMedia
+menu: Components
+---
+
+# useMatchMedia
+
+## Use case
+
+Used to verify certain breakpoints match the actual width of a DOM node. It corresponds to the breakpoints in the `spacing-constants`.
+
+## How to install
+
+```bash
+  npm install @bedrock-layout/use-match-media
+```
+
+## Basic usage
+
+```javascript
+import  useMatchMedia  from '@bedrock-layout/use-match-media';
+
+const Div = React.forwardRef(props,ref)=>{
+    const matchesObj = useMatchMedia()
+    // do something with matchesObj
+    return <div  {...props}>
+}
+```
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/usematchmedia--basic) for more details.
