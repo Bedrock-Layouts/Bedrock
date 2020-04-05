@@ -10,7 +10,7 @@ const Center = styled.div<CenterProps>`
   --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
     typeof maxWidth === 'number'
       ? `${maxWidth}px`
-      : mergeBreakpoints(breakPoints) + 'px'};
+      : mergeBreakpoints(breakPoints).medium + 'px'};
 
   box-sizing: content-box;
   margin-left: auto;
