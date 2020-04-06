@@ -1,0 +1,54 @@
+---
+name: Why Styled Components?
+route: /why-styled-components
+---
+
+# Why `styled-components`
+
+The topic of CSS tooling is a controversial topic, at best. Pointless twitter battles have been fought over why one should choose preprossesor like, Sass, Less, or PostCSS or CSS-in-JS
+like styled-components or emotion. Others debate the need for these tools at all, debating that one should "just use the platform".
+
+Ultimately, the debate is useless. Any and all these tools are useful and serve a specifc purpose. So it begs the question, why styled-components?
+
+Besides the [basic motivations](https://styled-components.com/docs/basics#motivation) that inspired the creation of the library itself, here are a few I find important:
+
+## Zero Config
+
+`style-components` just works. There are no build steps that you need to set up nor css files you need to add. Everything to do with the component is truly encapsulated, including the styles.
+[Server side rendering](https://styled-components.com/docs/advanced#server-side-rendering) is also very easy to setup and well documented.
+
+## Composable by default
+
+Components already can be composed in the obvious way:
+
+```javascript
+const App = () => {
+  return (
+    <Stack gutter='md'>
+      <PadBox padding='lg'>{/*  Content goes here */}</PadBox>
+    </Stack>
+  );
+};
+```
+
+In addition to this, styled-components exposes an "`as`" prop that takes either a native element as a string, like "div" or "button" or a component that exposes the `className` prop.
+This means we can rewrite the above like this:
+
+```javascript
+const App = () => {
+  return (
+    <Stack as={PadBox} gutter='md' padding='lg'>
+      {/*  Content goes here */}
+    </Stack>
+  );
+};
+```
+
+## Overriding default values with Themeing
+
+`styled-components` has a [powerful themeing capability](https://styled-components.com/docs/advanced#theming) that allows the default constants of the Bedrock Layout Components
+to be overridden easily and universally in one location.
+
+## Universally extensible via `className` and `style` props
+
+`styled-components` exposes both the `className` prop and `style` prop, making them universally extensible no matter the system you are using to style your app.
