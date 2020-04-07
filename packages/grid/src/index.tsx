@@ -29,7 +29,7 @@ const Grid = styled.div<GridProps>`
   grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
   grid-gap: var(--gutter);
 
-  @supports (width: min(var(--minItemWidth), 100%)) {
+  @supports (min(var(--minItemWidth), 100%)) {
     grid-template-columns: repeat(
       auto-fit,
       minmax(min(var(--minItemWidth), 100%), 1fr)

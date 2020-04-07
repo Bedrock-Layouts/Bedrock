@@ -10,7 +10,7 @@ exports[`Grid correct usage renders all the gutter options 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -60,7 +60,7 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -68,7 +68,7 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -118,7 +118,7 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -126,7 +126,7 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -134,7 +134,7 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -184,7 +184,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -192,7 +192,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -200,7 +200,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -208,7 +208,7 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -258,7 +258,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -266,7 +266,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -274,7 +274,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -282,7 +282,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -290,7 +290,7 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -340,7 +340,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -348,7 +348,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -356,7 +356,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -364,7 +364,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -372,7 +372,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -380,7 +380,7 @@ exports[`Grid correct usage renders all the gutter options 6`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -430,7 +430,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -438,7 +438,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -446,7 +446,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -454,7 +454,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -462,7 +462,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -470,7 +470,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
 
 }
 
@@ -478,7 +478,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -528,7 +528,7 @@ exports[`Grid correct usage renders custom minItemWidth 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -578,7 +578,7 @@ exports[`Grid correct usage renders default gutters 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -628,7 +628,7 @@ exports[`Grid correct usage renders with theme overrides 1`] = `
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -678,7 +678,7 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
@@ -728,7 +728,7 @@ exports[`Grid incorrect usage renders default with console error with wrong gutt
   grid-gap: var(--gutter);
 }
 
-@supports (width:min(var(--minItemWidth),100%)) {
+@supports (min(var(--minItemWidth),100%)) {
   .c0 {
     grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
   }
