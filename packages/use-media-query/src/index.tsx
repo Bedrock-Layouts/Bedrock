@@ -10,10 +10,12 @@ const useMediaQuery = (query: string) => {
   React.useEffect(() => {
     let shouldUpdate = true;
 
-    mqlRef.current = window.matchMedia(query);
+    if (window && window.matchMedia) {
+      mqlRef.current = window.matchMedia(query);
+    }
     const { current: mql } = mqlRef;
 
-    if (match !== mql.matches) {
+    if (mql && match !== mql.matches) {
       setMatch(mql.matches);
     }
 
