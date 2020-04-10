@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
-  mergeSpacings,
-  mergeBreakpoints,
+  mergeSpacings
 } from '@bedrock-layout/spacing-constants';
 import { forwardRefWithAs } from '@bedrock-layout/type-utils';
 
@@ -31,17 +30,21 @@ type JustifyAlignMap = { [key in JustifyAlignOptions]: string };
 const justifyAlignMap: JustifyAlignMap = {
   start: 'flex-start',
   end: 'flex-end',
-  center: 'center',
+  center: 'center'
 };
 
 const InnerWrapper = styled.div<InnerWrapperProps>`
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: ${(props) =>
-    props.justify ? justifyAlignMap[props.justify] : justifyAlignMap.start};
-  align-items: ${(props) =>
-    props.justify ? justifyAlignMap[props.justify] : justifyAlignMap.start};
+  justify-content: ${props =>
+    typeof props.justify !== 'undefined' && justifyAlignMap[props.justify]
+      ? justifyAlignMap[props.justify]
+      : justifyAlignMap.start};
+  align-items: ${props =>
+    typeof props.align !== 'undefined' && justifyAlignMap[props.align]
+      ? justifyAlignMap[props.align]
+      : justifyAlignMap.start};
   margin: calc(var(--gutter) / 2 * -1);
   & > * {
     margin: calc(var(--gutter) / 2);
@@ -64,5 +67,13 @@ const InlineCluster = forwardRefWithAs<InlineClusterProps, 'div'>(
   }
 );
 InlineCluster.displayName = 'InlineCluster';
+
+InlineCluster.propTypes = {
+  gutter: PropTypes.oneOf<SpacingTypes>(
+    Object.keys(defaultSpacings) as SpacingTypes[]
+  ),
+  justify: PropTypes.oneOf<JustifyAlignOptions>(['start', 'center', 'end']),
+  align: PropTypes.oneOf<JustifyAlignOptions>(['start', 'center', 'end'])
+};
 
 export default InlineCluster;
