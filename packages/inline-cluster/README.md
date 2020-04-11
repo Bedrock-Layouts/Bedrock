@@ -1,33 +1,31 @@
-# `@bedrock-layout/grid`
+# `@bedrock-layout/inline-cluster`
 
-Layout helper that creates Grid of items
+Layout helper that creates inline-cluster of items
 
 ## When to Use
 
-Used to create a grid layouts
+Used to create a inline-cluster layouts
 
 ## How to install
 
-`npm install @bedrock-layout/grid`
+`npm install @bedrock-layout/inline-cluster`
 
 ## Usage
 
 ```javascript
-import Grid from '@bedrock-layout/grid';
+import InlineCluster from '@bedrock-layout/inline-cluster';
 
-<Grid minItemWidth={300}>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-</Grid>;
+<InlineCLuster gutter='lg' justify='start' align='start'>
+  <span>Lorem ipsum dolor</span>
+  <span>sit amet consectetur</span>
+  <span>adipisicing elit.</span>
+</InlineCLuster>;
 ```
 
 ## API
 
-| Property     | Description                       | Type                                                       | Default                               |
-| ------------ | --------------------------------- | ---------------------------------------------------------- | ------------------------------------- |
-| gutter       | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`                                  |
-| minItemWidth | min width in px of each grid item | number                                                     | breakPoints.smallOnly or '39.9375rem' |
+| Property | Type                                    | Default |
+| -------- | --------------------------------------- | ------- |
+| gutter   | One of: `none, xs, sm, md, lg, xl, xxl` | `md`    |
+| justify  | One of: `start, end, center`            | `start` |
+| align    | One of: `start, end, center`            | `start` |

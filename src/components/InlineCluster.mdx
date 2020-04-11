@@ -1,0 +1,53 @@
+---
+name: InlineCluster
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import InlineCLuster from '@bedrock-layout/inline-cluster';
+
+# InlineCLuster
+
+## Use case
+
+The InlineCLuster component is designed constistent spacing around inline elements of variable width
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the stack component
+
+```bash
+  npm install @bedrock-layout/inline-cluster
+```
+
+## Basic usage
+
+<Playground>
+  <InlineCLuster gutter='lg' justify='start' align='start'>
+    <span>Lorem ipsum dolor</span>
+    <span>sit amet consectetur</span>
+    <span>adipisicing elit.</span>
+  </InlineCLuster>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/inlinecluster--basic) for more details.
+
+## Properties
+
+| Property | Type                                    | Default |
+| -------- | --------------------------------------- | ------- |
+| gutter   | One of: `none, xs, sm, md, lg, xl, xxl` | `md`    |
+| justify  | One of: `start, end, center`            | `start` |
+| align    | One of: `start, end, center`            | `start` |
+
+## IE11 Fallback
+
+No need for a fallback. This will work on IE11
