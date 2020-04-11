@@ -1,14 +1,14 @@
 {
-  "name": "@bedrock-layout/switcher",
-  "version": "1.0.9",
-  "description": "bedrock-layout switcher layout primitive",
+  "name": "@bedrock-layout/inline-cluster",
+  "version": "1.0.8",
+  "description": "bedrock-layout inline-cluster",
   "sideEffects": false,
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "switcher",
+    "inline-cluster",
     "layout",
     "react"
   ],
@@ -30,10 +30,6 @@
   ],
   "dependencies": {
     "@bedrock-layout/spacing-constants": "^1.0.5",
-    "@bedrock-layout/split": "^1.0.5",
-    "@bedrock-layout/stack": "^1.0.7",
-    "@bedrock-layout/use-container-query": "^1.0.6",
-    "@bedrock-layout/use-forwarded-ref": "^1.0.5",
     "@bedrock-layout/type-utils": "^0.0.1"
   },
   "peerDependencies": {
@@ -52,5 +48,6 @@
   },
   "bugs": {
     "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
-  }
+  },
+  "gitHead": "1ac6f1bbee09a2fae8ca4fd3b3a2b1086b3b64ec"
 }
