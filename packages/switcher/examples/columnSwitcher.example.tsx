@@ -29,12 +29,14 @@ function Example() {
       switchAt={switchAt}
       dense={dense}
     >
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
+      <>
+        <BorderedBox>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+          consequuntur corrupti beatae commodi vitae, perspiciatis totam
+          provident architecto doloribus aperiam sapiente, incidunt nihil
+          suscipit voluptatibus tempore est dolor! Iusto, vero.
+        </BorderedBox>
+      </>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident

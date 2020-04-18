@@ -45,7 +45,7 @@ export interface ColumnSwitcherProps extends StackProps, ColumnsProps {
 }
 
 export const ColumnSwitcher = forwardRefWithAs<ColumnSwitcherProps, 'div'>(
-  ({ columns, dense, switchAt, as, children, ...props }, ref) => {
+  ({ columns, dense, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
     const widthToSwitchAt =
@@ -56,17 +56,19 @@ export const ColumnSwitcher = forwardRefWithAs<ColumnSwitcherProps, 'div'>(
     const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
     return shouldSwitch ? (
-      <Stack as={as} ref={safeRef} {...props}>
-        {React.Children.map(children, (child) =>
-          React.cloneElement(child as ReactElement, {
-            style: { gridColumn: 'span 1/auto' },
-          })
-        )}
-      </Stack>
+      <Stack as={as} ref={safeRef} {...props} />
     ) : (
-      <Columns as={as} ref={safeRef} columns={columns} dense={dense} {...props}>
-        {children}
-      </Columns>
+      <Columns
+        as={as}
+        ref={safeRef}
+        columns={columns}
+        dense={dense}
+        {...props}
+      />
     );
   }
 );
+
+ColumnSwitcher.displayName = 'ColumnSwitcher';
+
+ColumnSwitcher.propTypes = { ...Columns.propTypes, switchAt: PropTypes.number };

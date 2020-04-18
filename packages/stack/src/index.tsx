@@ -21,6 +21,10 @@ const Stack = styled.div<StackProps>`
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
 
+  *[data-bedrock-layout-column]{
+    grid-column: span 1 / auto;
+  }
+
   @supports not (grid-gap: var(--gutter)) {
     display: flex;
     flex-flow: column;

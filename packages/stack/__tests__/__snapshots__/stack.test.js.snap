@@ -9,6 +9,10 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
   grid-gap: var(--gutter);
 }
 
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -50,6 +54,10 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -97,6 +105,10 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -148,6 +160,10 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -203,6 +219,10 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -262,6 +282,10 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -325,6 +349,10 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -394,6 +422,10 @@ exports[`Stack correct usage renders default gutters 1`] = `
   grid-gap: var(--gutter);
 }
 
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -437,6 +469,10 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   grid-gap: var(--gutter);
 }
 
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
 @supports not (grid-gap:var(--gutter)) {
   .c0 {
     display: -webkit-box;
@@ -478,6 +514,10 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
 }
 
 @supports not (grid-gap:var(--gutter)) {
