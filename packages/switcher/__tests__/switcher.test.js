@@ -140,91 +140,110 @@ describe('Switcher', () => {
         expect(stack.toJSON()).toMatchSnapshot();
       });
 
-      // it('renders all the gutter options', () => {
-      //   Object.keys(spacing).forEach((gutter) => {
-      //     const stack = create(
-      //       <ColumnsSwitcher gutter={gutter}>
-      //         <Lorem />
-      //       </ColumnsSwitcher>
-      //     );
-      //     expect(stack.toJSON()).toMatchSnapshot();
-      //   });
-      // });
+      it('renders all the gutter options', () => {
+        Object.keys(spacing).forEach((gutter) => {
+          const stack = create(
+            <ColumnsSwitcher gutter={gutter}>
+              <Lorem />
+            </ColumnsSwitcher>
+          );
+          expect(stack.toJSON()).toMatchSnapshot();
+        });
+      });
 
-      // it('renders with theme overrides', () => {
-      //   const stack = create(
-      //     <ThemeProvider theme={{ spacing: { md: '200px' } }}>
-      //       <ColumnsSwitcher>
-      //         <Lorem />
-      //       </ColumnsSwitcher>
-      //     </ThemeProvider>
-      //   );
-      //   expect(stack.toJSON()).toMatchSnapshot();
-      // });
+      it('renders custom columns', () => {
+        const columns = create(
+          <ColumnsSwitcher columns={5}>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(columns.toJSON()).toMatchSnapshot();
+      });
 
-      // it('forwards the ref', () => {
-      //   const spy = jest.fn();
-      //   act(() => {
-      //     create(
-      //       <ColumnsSwitcher ref={spy}>
-      //         <Lorem />
-      //       </ColumnsSwitcher>
-      //     );
-      //   });
-      //   expect(spy).toBeCalled();
-      // });
+      it('renders dense mode', () => {
+        const columns = create(
+          <ColumnsSwitcher dense>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(columns.toJSON()).toMatchSnapshot();
+      });
+
+      it('renders with theme overrides', () => {
+        const stack = create(
+          <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+            <ColumnsSwitcher>
+              <Lorem />
+            </ColumnsSwitcher>
+          </ThemeProvider>
+        );
+        expect(stack.toJSON()).toMatchSnapshot();
+      });
+
+      it('forwards the ref', () => {
+        const spy = jest.fn();
+        act(() => {
+          create(
+            <ColumnsSwitcher ref={spy}>
+              <Lorem />
+            </ColumnsSwitcher>
+          );
+        });
+        expect(spy).toBeCalled();
+      });
     });
 
-    // describe('incorrect usage', () => {
-    //   let originalError;
-    //   let spy;
-    //   beforeEach(() => {
-    //     originalError = console.error;
-    //     spy = jest.fn();
-    //     console.error = spy;
-    //   });
-    //   afterEach(() => {
-    //     console.error = originalError;
-    //   });
-
-    //   it('renders default with console error with wrong input', () => {
-    //     expect(spy.mock.calls.length).toBe(0);
-
-    //     const errorStack = create(
-    //       <ColumnsSwitcher gutter='incorrect'>
-    //         <Lorem />
-    //       </ColumnsSwitcher>
-    //     );
-
-    //     expect(spy).toBeCalled();
-    //     expect(errorStack.toJSON()).toMatchSnapshot();
-    //   });
-
-    //   it('renders default with console error with wrong fraction input', () => {
-    //     expect(spy.mock.calls.length).toBe(0);
-
-    //     const errorStack = create(
-    //       <ColumnsSwitcher fraction='incorrect'>
-    //         <Lorem />
-    //       </ColumnsSwitcher>
-    //     );
-
-    //     expect(spy).toBeCalled();
-    //     expect(errorStack.toJSON()).toMatchSnapshot();
-    //   });
-
-    //   it('renders default with console error with wrong switchAt input', () => {
-    //     expect(spy.mock.calls.length).toBe(0);
-
-    //     const errorStack = create(
-    //       <ColumnsSwitcher switchAt='incorrect'>
-    //         <Lorem />
-    //       </ColumnsSwitcher>
-    //     );
-
-    //     expect(spy).toBeCalled();
-    //     expect(errorStack.toJSON()).toMatchSnapshot();
-    //   });
-    // });
+    describe('incorrect usage', () => {
+      let originalError;
+      let spy;
+      beforeEach(() => {
+        originalError = console.error;
+        spy = jest.fn();
+        console.error = spy;
+      });
+      afterEach(() => {
+        console.error = originalError;
+      });
+      it('renders default with console error with wrong input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+        const errorStack = create(
+          <ColumnsSwitcher gutter='incorrect'>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+      it('renders default with console error with wrong columns input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+        const errorStack = create(
+          <ColumnsSwitcher columns='incorrect'>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+      it('renders default with console error with wrong dense input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+        const errorStack = create(
+          <ColumnsSwitcher dense='incorrect'>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+      it('renders default with console error with wrong switchAt input', () => {
+        expect(spy.mock.calls.length).toBe(0);
+        const errorStack = create(
+          <ColumnsSwitcher switchAt='incorrect'>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(spy).toBeCalled();
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+    });
   });
 });
