@@ -4,14 +4,17 @@ menu: Components
 ---
 
 import { Playground } from 'docz';
-import { SplitSwitcher } from '@bedrock-layout/switcher';
+import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 
 # Switcher
 
 ## Use case
 
-The SplitSwitcher component is designed to create a split layout based on fraction, but will switch to a Stack layout at a switchAt size (default is the smallOnly breakpoint).
+The SplitSwitcher component is designed to create a split layout based on fraction, but will switch to a Stack layout at a `switchAt` size (default is the smallOnly breakpoint).
 The SplitSwitcher has the same API as the Split Component, plus a `switchAt` prop. when the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
+
+The ColumnsSwitcher component is designed to create a column layout, but will switch to a Stack layout at a `switchAt` size (default is the smallOnly breakpoint).
+The ColumnsSwitcher has the same API as the ColumnsSwitcher Component, plus a `switchAt` prop. when the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
 
 ## How to install
 
@@ -26,7 +29,7 @@ Then install the stack component
 ```bash
 npm install @bedrock-layout/switcher
 
-import { SplitSwitcher } from '@bedrock-layout/switcher';
+import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 ```
 
 ## Basic usage
@@ -51,6 +54,38 @@ import { SplitSwitcher } from '@bedrock-layout/switcher';
     </div>
   </SplitSwitcher>
 </Playground>
+<Playground>
+  <ColumnsSwitcher gutter='lg' columns={2} switchAt={700}>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </div>
+    <div>
+      Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum elementum
+      enim in pharetra. Curabitur eget urna cursus, imperdiet leo eu, elementum
+      leo. Proin laoreet eleifend nisl ut iaculis. Ut dictum est vitae rutrum
+      elementum. Donec dictum ex ac nibh auctor semper. Phasellus sed rhoncus
+      arcu, eu consectetur ipsum. Ut dictum a elit at sollicitudin. Quisque sed
+      augue molestie, auctor purus quis, luctus ipsum. Donec ultrices vel nisi
+      vehicula facilisis. Vestibulum cursus nisi tellus, sit amet sagittis nisl
+      luctus ut.
+    </div>
+    <div>
+      Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+      porttitor magna id metus lacinia, quis posuere est ultrices. Cras et massa
+      eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a molestie
+      vitae, mattis et lectus. Aenean hendrerit bibendum turpis. Ut auctor in
+      nulla non dapibus. Pellentesque velit arcu, molestie sed consectetur
+      euismod, semper nec elit. Pellentesque quis ullamcorper felis. Donec quis
+      ex euismod, malesuada ex et, hendrerit lectus. Integer accumsan
+      sollicitudin accumsan. Aliquam nec ante viverra, congue ipsum tincidunt,
+      auctor eros. Morbi tempor eget dolor et hendrerit. Donec eget placerat
+      lorem. Phasellus a accumsan odio.
+    </div>
+  </ColumnsSwitcher>
+</Playground>
 
 ## Storybook
 
@@ -58,7 +93,17 @@ import { SplitSwitcher } from '@bedrock-layout/switcher';
 
 ## Properties
 
+### SplitSwitcher
+
 It has the same API has the [`Split` component](/src-components-split) plus:
+
+| Property | Type   | Default              |
+| -------- | ------ | -------------------- |
+| switchAt | number | smallOnly breakPoint |
+
+### ColumnsSwitcher
+
+It has the same API has the [`Columns` component](/src-components-columns) plus:
 
 | Property | Type   | Default              |
 | -------- | ------ | -------------------- |

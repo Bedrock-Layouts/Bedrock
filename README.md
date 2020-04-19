@@ -21,14 +21,14 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Center                 |
 | ✅     | PadBox                 |
 | ✅     | SplitSwitcher          |
-| 🛠      | ColumnSwitcher         |
+| ✅     | ColumnSwitcher         |
 | ✅     | useForwardedRef        |
 | ✅     | useStatefulRef         |
 | ✅     | useMatchContainerSizes |
 | ✅     | useMediaQuery          |
 | ✅     | useMatchMedia          |
 | ✅     | useContainerQuery      |
-| 🛠      | InlineCluster          |
-|        | Cover                  |
+| ✅     | InlineCluster          |
+| 🛠      | Cover                  |
 |        | Frame                  |
 |        | MasonaryGrid           |

@@ -24,7 +24,7 @@ const Columns = styled.div<ColumnsProps>`
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: var(--gutter);
-  grid-auto-flow: row ${props => props.dense === true && 'dense'};
+  grid-auto-flow: row ${(props) => props.dense === true && 'dense'};
 
   @supports not (grid-gap: var(--gutter)) {
     display: flex;
@@ -60,11 +60,14 @@ export interface ColumnProps {
 }
 
 type SafeSpan = (span: any) => number;
-const safeSpan: SafeSpan = span => {
+const safeSpan: SafeSpan = (span) => {
   return Number.isInteger(span) ? span : 1;
 };
 
-export const Column = styled.div<ColumnProps>`
+export const Column = styled.div.attrs((props) => ({
+  /* eslint-disable */
+  ['data-bedrock-layout-column']: '',
+}))<ColumnProps>`
   grid-column: span ${({ span = 1 }) => Math.max(safeSpan(span), 1)} / auto;
 `;
 
@@ -76,4 +79,7 @@ Column.defaultProps = {
   span: 1,
 };
 
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
 export default Columns;
