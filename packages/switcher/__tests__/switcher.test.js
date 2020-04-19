@@ -128,7 +128,6 @@ describe('Switcher', () => {
   describe('ColumnsSwitcher', () => {
     describe('correct usage', () => {
       test('ColumnsSwitcher is not null', () => {
-        console.log(ColumnsSwitcher);
         expect(ColumnsSwitcher).toBeTruthy();
       });
 
