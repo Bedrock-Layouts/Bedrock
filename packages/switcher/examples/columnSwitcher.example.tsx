@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColumnSwitcher } from '@bedrock-layout/switcher';
+import { ColumnsSwitcher } from '@bedrock-layout/switcher';
 import {
   spacing,
   breakPoints,
@@ -23,7 +23,7 @@ function Example() {
   const columns = number('columns', 3);
   const switchAt = number('switchAt', breakPoints.smallOnly);
   return (
-    <ColumnSwitcher
+    <ColumnsSwitcher
       gutter={gutter as SpacingTypes}
       columns={columns}
       switchAt={switchAt}
@@ -57,7 +57,7 @@ function Example() {
           suscipit voluptatibus tempore est dolor! Iusto, vero.
         </BorderedBox>
       </Column>
-    </ColumnSwitcher>
+    </ColumnsSwitcher>
   );
 }
 

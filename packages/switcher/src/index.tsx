@@ -44,7 +44,7 @@ export interface ColumnSwitcherProps extends StackProps, ColumnsProps {
   children?: React.ReactNode;
 }
 
-export const ColumnSwitcher = forwardRefWithAs<ColumnSwitcherProps, 'div'>(
+export const ColumnsSwitcher = forwardRefWithAs<ColumnSwitcherProps, 'div'>(
   ({ columns, dense, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
@@ -69,6 +69,11 @@ export const ColumnSwitcher = forwardRefWithAs<ColumnSwitcherProps, 'div'>(
   }
 );
 
-ColumnSwitcher.displayName = 'ColumnSwitcher';
+ColumnsSwitcher.displayName = 'ColumnsSwitcher';
 
-ColumnSwitcher.propTypes = { ...Columns.propTypes, switchAt: PropTypes.number };
+//console.log(Columns);
+
+ColumnsSwitcher.propTypes = {
+  ...Columns.propTypes,
+  switchAt: PropTypes.number,
+};

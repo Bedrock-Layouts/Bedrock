@@ -2,7 +2,7 @@ import React from 'react';
 import { create, act } from 'react-test-renderer';
 import { spacing } from '@bedrock-layout/spacing-constants';
 import { ThemeProvider } from 'styled-components';
-import { SplitSwitcher, ColumnSwitcher } from '../src';
+import { SplitSwitcher, ColumnsSwitcher } from '../src';
 
 const Lorem = () => (
   <>
@@ -125,27 +125,28 @@ describe('Switcher', () => {
     });
   });
 
-  describe('ColumnSwitcher', () => {
+  describe('ColumnsSwitcher', () => {
     describe('correct usage', () => {
-      test('ColumnSwitcher is not null', () => {
-        expect(ColumnSwitcher).toBeTruthy();
+      test('ColumnsSwitcher is not null', () => {
+        console.log(ColumnsSwitcher);
+        expect(ColumnsSwitcher).toBeTruthy();
       });
 
-      // it('renders default gutters', () => {
-      //   const stack = create(
-      //     <ColumnSwitcher>
-      //       <Lorem />
-      //     </ColumnSwitcher>
-      //   );
-      //   expect(stack.toJSON()).toMatchSnapshot();
-      // });
+      it('renders default gutters', () => {
+        const stack = create(
+          <ColumnsSwitcher>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+        expect(stack.toJSON()).toMatchSnapshot();
+      });
 
       // it('renders all the gutter options', () => {
       //   Object.keys(spacing).forEach((gutter) => {
       //     const stack = create(
-      //       <ColumnSwitcher gutter={gutter}>
+      //       <ColumnsSwitcher gutter={gutter}>
       //         <Lorem />
-      //       </ColumnSwitcher>
+      //       </ColumnsSwitcher>
       //     );
       //     expect(stack.toJSON()).toMatchSnapshot();
       //   });
@@ -154,9 +155,9 @@ describe('Switcher', () => {
       // it('renders with theme overrides', () => {
       //   const stack = create(
       //     <ThemeProvider theme={{ spacing: { md: '200px' } }}>
-      //       <ColumnSwitcher>
+      //       <ColumnsSwitcher>
       //         <Lorem />
-      //       </ColumnSwitcher>
+      //       </ColumnsSwitcher>
       //     </ThemeProvider>
       //   );
       //   expect(stack.toJSON()).toMatchSnapshot();
@@ -166,9 +167,9 @@ describe('Switcher', () => {
       //   const spy = jest.fn();
       //   act(() => {
       //     create(
-      //       <ColumnSwitcher ref={spy}>
+      //       <ColumnsSwitcher ref={spy}>
       //         <Lorem />
-      //       </ColumnSwitcher>
+      //       </ColumnsSwitcher>
       //     );
       //   });
       //   expect(spy).toBeCalled();
@@ -191,9 +192,9 @@ describe('Switcher', () => {
     //     expect(spy.mock.calls.length).toBe(0);
 
     //     const errorStack = create(
-    //       <ColumnSwitcher gutter='incorrect'>
+    //       <ColumnsSwitcher gutter='incorrect'>
     //         <Lorem />
-    //       </ColumnSwitcher>
+    //       </ColumnsSwitcher>
     //     );
 
     //     expect(spy).toBeCalled();
@@ -204,9 +205,9 @@ describe('Switcher', () => {
     //     expect(spy.mock.calls.length).toBe(0);
 
     //     const errorStack = create(
-    //       <ColumnSwitcher fraction='incorrect'>
+    //       <ColumnsSwitcher fraction='incorrect'>
     //         <Lorem />
-    //       </ColumnSwitcher>
+    //       </ColumnsSwitcher>
     //     );
 
     //     expect(spy).toBeCalled();
@@ -217,9 +218,9 @@ describe('Switcher', () => {
     //     expect(spy.mock.calls.length).toBe(0);
 
     //     const errorStack = create(
-    //       <ColumnSwitcher switchAt='incorrect'>
+    //       <ColumnsSwitcher switchAt='incorrect'>
     //         <Lorem />
-    //       </ColumnSwitcher>
+    //       </ColumnsSwitcher>
     //     );
 
     //     expect(spy).toBeCalled();
