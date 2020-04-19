@@ -79,7 +79,9 @@ Column.defaultProps = {
   span: 1,
 };
 
-Object.defineProperty(exports, '__esModule', {
-  value: true,
-});
+if (typeof exports !== 'undefined') {
+  Object.defineProperty(exports, '__esModule', {
+    value: true,
+  });
+}
 export default Columns;
