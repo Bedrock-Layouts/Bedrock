@@ -2545,3 +2545,103 @@ exports[`Cover correct usage use padding object 8`] = `
   </div>
 </div>
 `;
+
+exports[`Cover incorrect usage renders default with console error with wrong gutter 1`] = `
+.c2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  --gutter: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.c0 > *:not(.c1) {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  margin-block-start: var(--gutter);
+  margin-block-end: var(--gutter);
+}
+
+.c0 > :first-child:not(.c1) {
+  margin-top: 0;
+}
+
+.c0 > :last-child:not(.c1) {
+  margin-bottom: 0;
+}
+
+<div
+  className="sc-AxjAm c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover incorrect usage renders with min-height incorrect with invalid minHeight 1`] = `
+.c2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  --gutter: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: incorrect;
+}
+
+.c0 > *:not(.c1) {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  margin-block-start: var(--gutter);
+  margin-block-end: var(--gutter);
+}
+
+.c0 > :first-child:not(.c1) {
+  margin-top: 0;
+}
+
+.c0 > :last-child:not(.c1) {
+  margin-bottom: 0;
+}
+
+<div
+  className="sc-AxjAm c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;

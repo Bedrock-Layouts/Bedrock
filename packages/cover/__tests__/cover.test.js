@@ -128,29 +128,62 @@ describe('Cover', () => {
     });
   });
 
-  // describe('incorrect usage', () => {
-  //   let originalError;
-  //   let spy;
-  //   beforeEach(() => {
-  //     originalError = console.error;
-  //     spy = jest.fn();
-  //     console.error = spy;
-  //   });
-  //   afterEach(() => {
-  //     console.error = originalError;
-  //   });
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
+    afterEach(() => {
+      console.error = originalError;
+    });
 
-  //   it('renders default with console error with no children', () => {
-  //     expect(spy.mock.calls.length).toBe(0);
+    it('renders default with console error with wrong gutter', () => {
+      expect(spy.mock.calls.length).toBe(0);
 
-  //     const errorStack = create(
-  //       <Cover maxWidth='incorrect'>
-  //         <Lorem />
-  //       </Cover>
-  //     );
+      const errorStack = create(
+        <Cover gutter='incorrect'>
+          <Lorem />
+        </Cover>
+      );
 
-  //     expect(spy.mock.calls.length).toBe(1);
-  //     expect(errorStack.toJSON()).toMatchSnapshot();
-  //   });
-  // });
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+    it('renders with min-height incorrect with invalid minHeight', () => {
+      const errorStack = create(
+        <Cover minHeight='incorrect'>
+          <Lorem />
+        </Cover>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders throws with more than one child', () => {
+      expect(spy.mock.calls.length).toBe(0);
+      class CatchError extends React.Component {
+        state = { isError: false };
+        componentDidCatch() {
+          this.setState({ isError: true });
+        }
+        render() {
+          return this.state.isError ? null : this.props.children;
+        }
+      }
+
+      create(
+        <CatchError>
+          <Cover>
+            <Lorem />
+            <Lorem />
+          </Cover>
+        </CatchError>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+    });
+  });
 });

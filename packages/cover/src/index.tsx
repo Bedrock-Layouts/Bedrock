@@ -69,6 +69,8 @@ Cover.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
     Object.keys(defaultSpacings) as SpacingTypes[]
   ),
+  minHeight: PropTypes.string,
+  top: PropTypes.element,
 };
 
 export default Cover;

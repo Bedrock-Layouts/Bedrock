@@ -10,7 +10,7 @@ const BorderedBox = styled.div`
 BorderedBox.displayName = 'BorderedBox';
 
 let title = 'Cover';
-let name = 'Basic';
+let name = 'With Top';
 
 function Example() {
   const minHeight = text('minHeight', '100vh');
@@ -21,6 +21,7 @@ function Example() {
       minHeight={minHeight}
       padding={padding as SpacingTypes}
       gutter={gutter as SpacingTypes}
+      top={<div>I am on Top</div>}
     >
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
