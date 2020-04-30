@@ -1,6 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-//import { ThemeProvider } from 'styled-components';
+import { spacing } from '@bedrock-layout/spacing-constants';
+import { ThemeProvider } from 'styled-components';
 import Cover from '../src';
 
 const Lorem = () => (
@@ -22,7 +23,7 @@ describe('Cover', () => {
       expect(Cover).toBeTruthy();
     });
 
-    it('renders default width', () => {
+    it('renders default', () => {
       const cover = create(
         <Cover>
           <Lorem />
@@ -31,25 +32,100 @@ describe('Cover', () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    // it('renders custom width', () => {
-    //   const cover = create(
-    //     <Cover maxWidth={320}>
-    //       <Lorem />
-    //     </Cover>
-    //   );
-    //   expect(cover.toJSON()).toMatchSnapshot();
-    // });
+    it('renders custom height', () => {
+      const cover = create(
+        <Cover minHeight='500px'>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+    it('renders with top', () => {
+      const cover = create(
+        <Cover top={<Lorem />}>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
 
-    // it('renders with theme overrides', () => {
-    //   const cover = create(
-    //     <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
-    //       <Cover>
-    //         <Lorem />
-    //       </Cover>
-    //     </ThemeProvider>
-    //   );
-    //   expect(cover.toJSON()).toMatchSnapshot();
-    // });
+    it('renders with bottom', () => {
+      const cover = create(
+        <Cover bottom={<Lorem />}>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders all the gutter options', () => {
+      Object.keys(spacing).forEach((gutter) => {
+        const cover = create(
+          <Cover gutter={gutter}>
+            <Lorem />
+          </Cover>
+        );
+        expect(cover.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it('renders all the padding options', () => {
+      Object.keys(spacing).forEach((padding) => {
+        const cover = create(
+          <Cover padding={padding}>
+            <Lorem />
+          </Cover>
+        );
+        expect(cover.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it('use 1, 2, 3, 4 items arrays', () => {
+      [
+        ['md'],
+        ['md', 'lg'],
+        ['md', 'lg', 'xs'],
+        ['md', 'lg', 'xs', 'sm'],
+      ].forEach((padding) => {
+        const cover = create(
+          <Cover padding={padding}>
+            <Lorem />
+          </Cover>
+        );
+        expect(cover.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it('use padding object', () => {
+      [
+        { left: 'md' },
+        { right: 'md' },
+        { top: 'md' },
+        { bottom: 'md' },
+        { inlineStart: 'md' },
+        { inlineEnd: 'md' },
+        { blockStart: 'md' },
+        { blockEnd: 'md' },
+      ].forEach((padding) => {
+        const cover = create(
+          <Cover padding={padding}>
+            <Lorem />
+          </Cover>
+        );
+        expect(cover.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it('renders with theme overrides', () => {
+      const cover = create(
+        <ThemeProvider theme={{ spacing: { md: 1600 } }}>
+          <Cover>
+            <Lorem />
+          </Cover>
+        </ThemeProvider>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
   });
 
   // describe('incorrect usage', () => {
