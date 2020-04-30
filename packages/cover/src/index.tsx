@@ -1,29 +1,74 @@
-// import styled from 'styled-components';
-// import PropTypes from 'prop-types';
-// import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
+import React, { Children } from 'react';
+import styled from 'styled-components';
+import PadBox, { PadBoxProps } from '@bedrock-layout/padbox';
+import { forwardRefWithAs } from '@bedrock-layout/type-utils';
+import PropTypes from 'prop-types';
+import {
+  spacing as defaultSpacings,
+  SpacingTypes,
+  mergeSpacings,
+} from '@bedrock-layout/spacing-constants';
 
-// export interface CenterProps {
-//   maxWidth?: number;
-// }
+const VerticallyCentered = styled.div`
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+`;
 
-// const Center = styled.div<CenterProps>`
-//   --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
-//     typeof maxWidth === 'number'
-//       ? `${maxWidth}px`
-//       : mergeBreakpoints(breakPoints).medium + 'px'};
+interface CoverWrapperProps extends PadBoxProps {
+  gutter?: SpacingTypes;
+  minHeight?: string;
+}
 
-//   box-sizing: content-box;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-inline-start: auto;
-//   margin-inline-end: auto;
-//   max-width: var(--maxWidth);
-// `;
+const CoverWrapper = styled(PadBox)<CoverWrapperProps>`
+  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
+    gutter && mergeSpacings(spacing)[gutter]
+      ? mergeSpacings(spacing)[gutter]
+      : mergeSpacings(spacing).md};
 
-// Center.displayName = 'Center';
+  display: flex;
+  flex-direction: column;
+  min-height: ${(props) => props.minHeight || '100vh'};
 
-// Center.propTypes = {
-//   maxWidth: PropTypes.number,
-// };
+  & > *:not(${VerticallyCentered}) {
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    margin-block-start: var(--gutter);
+    margin-block-end: var(--gutter);
+  }
+  & > :first-child:not(${VerticallyCentered}) {
+    margin-top: 0;
+  }
 
-export default () => null;
+  & > :last-child:not(${VerticallyCentered}) {
+    margin-bottom: 0;
+  }
+`;
+
+export interface CoverProps extends CoverWrapperProps {
+  top?: React.ReactNode;
+  bottom?: React.ReactNode;
+}
+
+const Cover = forwardRefWithAs<CoverProps, 'div'>(
+  ({ children, top, bottom, as, ...props }, ref) => {
+    return (
+      <CoverWrapper as={as} ref={ref} {...props}>
+        {top}
+        <VerticallyCentered>{Children.only(children)}</VerticallyCentered>
+        {bottom}
+      </CoverWrapper>
+    );
+  }
+);
+
+Cover.displayName = 'Cover';
+
+Cover.propTypes = {
+  gutter: PropTypes.oneOf<SpacingTypes>(
+    Object.keys(defaultSpacings) as SpacingTypes[]
+  ),
+};
+
+export default Cover;

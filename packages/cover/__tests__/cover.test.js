@@ -1,20 +1,20 @@
-//import React from 'react';
-//import { create } from 'react-test-renderer';
+import React from 'react';
+import { create } from 'react-test-renderer';
 //import { ThemeProvider } from 'styled-components';
 import Cover from '../src';
 
-// const Lorem = () => (
-//   <p>
-//     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-//     vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque
-//     sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin
-//     elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut
-//     imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique
-//     senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices,
-//     quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus
-//     tortor et enim.
-//   </p>
-// );
+const Lorem = () => (
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+    vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque
+    sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin
+    elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut
+    imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique
+    senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices,
+    quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus
+    tortor et enim.
+  </p>
+);
 
 describe('Cover', () => {
   describe('correct usage', () => {
@@ -22,14 +22,14 @@ describe('Cover', () => {
       expect(Cover).toBeTruthy();
     });
 
-    // it('renders default width', () => {
-    //   const cover = create(
-    //     <Cover>
-    //       <Lorem />
-    //     </Cover>
-    //   );
-    //   expect(cover.toJSON()).toMatchSnapshot();
-    // });
+    it('renders default width', () => {
+      const cover = create(
+        <Cover>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
 
     // it('renders custom width', () => {
     //   const cover = create(
