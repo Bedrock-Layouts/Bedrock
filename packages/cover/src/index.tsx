@@ -55,9 +55,9 @@ const Cover = forwardRefWithAs<CoverProps, 'div'>(
   ({ children, top, bottom, as, ...props }, ref) => {
     return (
       <CoverWrapper as={as} ref={ref} {...props}>
-        {top}
+        {top && Children.only(top)}
         <VerticallyCentered>{Children.only(children)}</VerticallyCentered>
-        {bottom}
+        {bottom && Children.only(bottom)}
       </CoverWrapper>
     );
   }

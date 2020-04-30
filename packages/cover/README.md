@@ -1,32 +1,33 @@
-# `@bedrock-layout/center`
+# `@bedrock-layout/cover`
 
-Layout helper that centers the content
+Layout helper that covers a certain height and vertically center's it's child
 
 ## When to Use
 
-Used to center content on the screen
+Used to cover on the screen and center it's child
+
+It will optionally take a top and/or a bottom element to put above or below the centered element
 
 ## How to install
 
-`npm install @bedrock-layout/center`
+`npm install @bedrock-layout/cover`
 
 ## Usage
 
 ```javascript
-import Center from '@bedrock-layout/center';
+import Cover from '@bedrock-layout/cover';
 
-<Center>
+<Cover>
   <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-</Center>;
+</Cover>;
 ```
 
 ## API
 
-| Property | Description             | Type   | Default           |
-| -------- | ----------------------- | ------ | ----------------- |
-| maxWidth | maxWidth of the content | number | medium breakpoint |
+In addition to the props of the PadBox, Cover has the following props:
+
+| Property  | Description                       | Type                                                       | Default |
+| --------- | --------------------------------- | ---------------------------------------------------------- | ------- |
+| children  | takes a single child              | ReactNode                                                  | -       |
+| minHeight | minHeight of the cover            | any valid css size unit as a string                        | "100vh" |
+| gutter    | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`    |
