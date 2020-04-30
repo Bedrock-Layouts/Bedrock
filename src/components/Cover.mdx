@@ -1,0 +1,54 @@
+---
+name: Cover
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Cover from '@bedrock-layout/cover';
+
+# Cover
+
+## Use case
+
+The Cover is designed to cover a predefinded area, 100vh by default, and vertically center it's child.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the stack component
+
+```bash
+  npm install @bedrock-layout/cover
+```
+
+## Basic usage
+
+<Playground>
+  <Cover top={<div>I'm on the Top</div>} >
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </div>
+  </Cover>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/cover--basic) for more details.
+
+## Properties
+
+| Property | Type                                                       | Default |
+| -------- | ---------------------------------------------------------- | ------- |
+| minHeight| any valid css size unit as a string                        | "100vh" |
+| gutter   | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`    |
+| children | ReactNode                                                  | -       |
+| top      | ReactNode                                                  | -       |
+| bottom   | ReactNode                                                  | -       |

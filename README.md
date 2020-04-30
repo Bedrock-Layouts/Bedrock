@@ -29,6 +29,6 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | useMatchMedia          |
 | ✅     | useContainerQuery      |
 | ✅     | InlineCluster          |
-| 🛠      | Cover                  |
-|        | Frame                  |
+| ✅     | Cover                  |
+| 🛠      | Frame                  |
 |        | MasonaryGrid           |

@@ -85,7 +85,10 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
     : paddingArrToString(padding);
 
   function paddingArrToString(padArr: SpacingTypes | SpacingTypes[]) {
-    if (Array.isArray(padArr) && !padArr.every(val => validSpacings.has(val))) {
+    if (
+      Array.isArray(padArr) &&
+      !padArr.every((val) => validSpacings.has(val))
+    ) {
       console.error('Invalid padding Type');
     }
 
@@ -100,8 +103,8 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = 'md') => {
     const padObjVals = Object.values(padObj);
 
     if (
-      !padObjKeys.every(key => validKeys.has(key)) ||
-      !padObjVals.every(val => validSpacings.has(val))
+      !padObjKeys.every((key) => validKeys.has(key)) ||
+      !padObjVals.every((val) => validSpacings.has(val))
     ) {
       console.error('Invalid padding Type');
     }
@@ -122,7 +125,7 @@ export interface PadBoxProps {
 
 const PadBox = styled.div<PadBoxProps>`
   box-sizing: border-box;
-  ${props => paddingToString(props.theme.spacing)(props.padding)}
+  ${(props) => paddingToString(props.theme.spacing)(props.padding)}
 `;
 
 PadBox.displayName = 'PadBox';
