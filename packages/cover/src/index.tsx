@@ -16,6 +16,20 @@ const VerticallyCentered = styled.div`
   margin-block-end: auto;
 `;
 
+const Top = styled.div`
+  margin-top: 0;
+  margin-block-start: 0;
+  margin-bottom: var(--gutter);
+  margin-block-end: var(--gutter);
+`;
+
+const Bottom = styled.div`
+  margin-top: var(--gutter);
+  margin-block-start: var(--gutter);
+  margin-bottom: 0;
+  margin-block-end: 0;
+`;
+
 interface CoverWrapperProps extends PadBoxProps {
   gutter?: SpacingTypes;
   minHeight?: string;
@@ -30,22 +44,6 @@ const CoverWrapper = styled(PadBox)<CoverWrapperProps>`
   display: flex;
   flex-direction: column;
   min-height: ${(props) => props.minHeight || '100vh'};
-
-  & > *:not(${VerticallyCentered}) {
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    margin-block-start: var(--gutter);
-    margin-block-end: var(--gutter);
-  }
-  & > :first-child:not(${VerticallyCentered}) {
-    margin-top: 0;
-    margin-block-start: 0;
-  }
-
-  & > :last-child:not(${VerticallyCentered}) {
-    margin-bottom: 0;
-    margin-block-end: 0;
-  }
 `;
 
 export interface CoverProps extends CoverWrapperProps {
@@ -57,9 +55,9 @@ const Cover = forwardRefWithAs<CoverProps, 'div'>(
   ({ children, top, bottom, as, ...props }, ref) => {
     return (
       <CoverWrapper as={as} ref={ref} {...props}>
-        {top && Children.only(top)}
+        {top && <Top>{Children.only(top)}</Top>}
         <VerticallyCentered>{Children.only(children)}</VerticallyCentered>
-        {bottom && Children.only(bottom)}
+        {bottom && <Bottom>{Children.only(bottom)}</Bottom>}
       </CoverWrapper>
     );
   }
