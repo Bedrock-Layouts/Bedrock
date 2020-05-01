@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
@@ -6,25 +5,8 @@ import {
   SpacingTypes,
   mergeSpacings,
 } from '@bedrock-layout/spacing-constants';
-import { forwardRefWithAs } from '@bedrock-layout/type-utils';
-
-interface OuterWrapperProps {
-  gutter?: SpacingTypes;
-}
-const OuterWrapper = styled.div<OuterWrapperProps>`
-  box-sizing: border-box;
-
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
-`;
 
 type JustifyAlignOptions = 'start' | 'center' | 'end';
-interface InnerWrapperProps {
-  justify?: JustifyAlignOptions;
-  align?: JustifyAlignOptions;
-}
 
 type JustifyAlignMap = { [key in JustifyAlignOptions]: string };
 const justifyAlignMap: JustifyAlignMap = {
@@ -32,8 +14,18 @@ const justifyAlignMap: JustifyAlignMap = {
   end: 'flex-end',
   center: 'center',
 };
+export interface InlineClusterProps {
+  justify?: JustifyAlignOptions;
+  align?: JustifyAlignOptions;
+  gutter?: SpacingTypes;
+}
 
-const InnerWrapper = styled.div<InnerWrapperProps>`
+const InlineCluster = styled.div<InlineClusterProps>`
+  box-sizing: border-box;
+  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
+    gutter && mergeSpacings(spacing)[gutter]
+      ? mergeSpacings(spacing)[gutter]
+      : mergeSpacings(spacing).md};
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -51,26 +43,6 @@ const InnerWrapper = styled.div<InnerWrapperProps>`
   }
 `;
 
-export interface InlineClusterProps
-  extends OuterWrapperProps,
-    InnerWrapperProps {}
-
-const InlineCluster = forwardRefWithAs<InlineClusterProps, 'div'>(
-  ({ gutter, as, justify, align, children, className, ...props }, ref) => {
-    return (
-      <OuterWrapper ref={ref} gutter={gutter} {...props}>
-        <InnerWrapper
-          as={as}
-          className={className}
-          justify={justify}
-          align={align}
-        >
-          {children}
-        </InnerWrapper>
-      </OuterWrapper>
-    );
-  }
-);
 InlineCluster.displayName = 'InlineCluster';
 
 InlineCluster.propTypes = {
