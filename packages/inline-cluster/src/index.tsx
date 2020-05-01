@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   spacing as defaultSpacings,
   SpacingTypes,
-  mergeSpacings
+  mergeSpacings,
 } from '@bedrock-layout/spacing-constants';
 import { forwardRefWithAs } from '@bedrock-layout/type-utils';
 
@@ -30,18 +30,18 @@ type JustifyAlignMap = { [key in JustifyAlignOptions]: string };
 const justifyAlignMap: JustifyAlignMap = {
   start: 'flex-start',
   end: 'flex-end',
-  center: 'center'
+  center: 'center',
 };
 
 const InnerWrapper = styled.div<InnerWrapperProps>`
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: ${props =>
+  justify-content: ${(props) =>
     typeof props.justify !== 'undefined' && justifyAlignMap[props.justify]
       ? justifyAlignMap[props.justify]
       : justifyAlignMap.start};
-  align-items: ${props =>
+  align-items: ${(props) =>
     typeof props.align !== 'undefined' && justifyAlignMap[props.align]
       ? justifyAlignMap[props.align]
       : justifyAlignMap.start};
@@ -56,10 +56,15 @@ export interface InlineClusterProps
     InnerWrapperProps {}
 
 const InlineCluster = forwardRefWithAs<InlineClusterProps, 'div'>(
-  ({ gutter, as, justify, align, children, ...props }, ref) => {
+  ({ gutter, as, justify, align, children, className, ...props }, ref) => {
     return (
-      <OuterWrapper ref={ref} as={as} gutter={gutter} {...props}>
-        <InnerWrapper justify={justify} align={align}>
+      <OuterWrapper ref={ref} gutter={gutter} {...props}>
+        <InnerWrapper
+          as={as}
+          className={className}
+          justify={justify}
+          align={align}
+        >
           {children}
         </InnerWrapper>
       </OuterWrapper>
@@ -73,7 +78,7 @@ InlineCluster.propTypes = {
     Object.keys(defaultSpacings) as SpacingTypes[]
   ),
   justify: PropTypes.oneOf<JustifyAlignOptions>(['start', 'center', 'end']),
-  align: PropTypes.oneOf<JustifyAlignOptions>(['start', 'center', 'end'])
+  align: PropTypes.oneOf<JustifyAlignOptions>(['start', 'center', 'end']),
 };
 
 export default InlineCluster;
