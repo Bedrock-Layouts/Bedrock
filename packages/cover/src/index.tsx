@@ -39,10 +39,12 @@ const CoverWrapper = styled(PadBox)<CoverWrapperProps>`
   }
   & > :first-child:not(${VerticallyCentered}) {
     margin-top: 0;
+    margin-block-start: 0;
   }
 
   & > :last-child:not(${VerticallyCentered}) {
     margin-bottom: 0;
+    margin-block-end: 0;
   }
 `;
 
