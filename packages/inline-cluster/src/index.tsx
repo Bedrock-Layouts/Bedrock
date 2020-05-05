@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
@@ -5,6 +6,7 @@ import {
   SpacingTypes,
   mergeSpacings,
 } from '@bedrock-layout/spacing-constants';
+import { forwardRefWithAs } from '@bedrock-layout/type-utils';
 
 type JustifyAlignOptions = 'start' | 'center' | 'end';
 
@@ -20,7 +22,7 @@ export interface InlineClusterProps {
   gutter?: SpacingTypes;
 }
 
-const InlineCluster = styled.div<InlineClusterProps>`
+const InlineClusterWrapper = styled.div<InlineClusterProps>`
   box-sizing: border-box;
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
@@ -42,6 +44,18 @@ const InlineCluster = styled.div<InlineClusterProps>`
     margin: calc(var(--gutter) / 2);
   }
 `;
+
+const InlineCluster = forwardRefWithAs<InlineClusterProps, 'div'>(
+  ({ children, ...props }, ref) => {
+    return (
+      <InlineClusterWrapper {...props} ref={ref}>
+        {React.Children.map(children, (child) => (
+          <div>{child}</div>
+        ))}
+      </InlineClusterWrapper>
+    );
+  }
+);
 
 InlineCluster.displayName = 'InlineCluster';
 

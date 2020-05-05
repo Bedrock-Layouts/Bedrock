@@ -4,7 +4,7 @@ import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
 import styled from 'styled-components';
 import { select } from '@storybook/addon-knobs';
 
-const BorderedBox = styled.span`
+const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = 'BorderedBox';
@@ -21,6 +21,7 @@ function Example() {
       justify={justify}
       align={align}
       gutter={gutter as SpacingTypes}
+      style={{ margin: '1rem 0' }}
     >
       <BorderedBox style={{ height: 100 }}>Lorem ipsum dolor</BorderedBox>
       <BorderedBox>sit amet consectetur adipisicing elit.</BorderedBox>
