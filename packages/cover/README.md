@@ -24,8 +24,6 @@ import Cover from '@bedrock-layout/cover';
 
 ## API
 
-In addition to the props of the PadBox, Cover has the following props:
-
 | Property  | Description                       | Type                                                       | Default |
 | --------- | --------------------------------- | ---------------------------------------------------------- | ------- |
 | children  | takes a single child              | ReactNode                                                  | -       |
