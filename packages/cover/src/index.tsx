@@ -1,6 +1,5 @@
 import React, { Children } from 'react';
 import styled from 'styled-components';
-import PadBox, { PadBoxProps } from '@bedrock-layout/padbox';
 import { forwardRefWithAs } from '@bedrock-layout/type-utils';
 import PropTypes from 'prop-types';
 import {
@@ -30,12 +29,12 @@ const Bottom = styled.div`
   margin-block-end: 0;
 `;
 
-interface CoverWrapperProps extends PadBoxProps {
+interface CoverWrapperProps {
   gutter?: SpacingTypes;
   minHeight?: string;
 }
 
-const CoverWrapper = styled(PadBox)<CoverWrapperProps>`
+const CoverWrapper = styled.div<CoverWrapperProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
