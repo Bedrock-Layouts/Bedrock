@@ -402,7 +402,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 7
 exports[`Switcher ColumnsSwitcher correct usage renders custom columns 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 5;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -422,7 +422,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders custom columns 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -447,7 +447,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders custom columns 1`] = `
 exports[`Switcher ColumnsSwitcher correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -467,7 +467,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -492,7 +492,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders default gutters 1`] = `
 exports[`Switcher ColumnsSwitcher correct usage renders dense mode 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -512,7 +512,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders dense mode 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -537,7 +537,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders dense mode 1`] = `
 exports[`Switcher ColumnsSwitcher correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -557,7 +557,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders with theme overrides 1`]
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -582,7 +582,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders with theme overrides 1`]
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong columns input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -602,7 +602,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -627,7 +627,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong dense input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -647,7 +647,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -672,7 +672,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -692,7 +692,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -717,7 +717,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong switchAt input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -737,7 +737,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1147,7 +1147,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 7`]
 exports[`Switcher SplitSwitcher correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -1165,7 +1165,7 @@ exports[`Switcher SplitSwitcher correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1190,7 +1190,7 @@ exports[`Switcher SplitSwitcher correct usage renders default gutters 1`] = `
 exports[`Switcher SplitSwitcher correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -1208,7 +1208,7 @@ exports[`Switcher SplitSwitcher correct usage renders with theme overrides 1`] =
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -1233,7 +1233,7 @@ exports[`Switcher SplitSwitcher correct usage renders with theme overrides 1`] =
 exports[`Switcher SplitSwitcher incorrect usage renders default with console error with wrong fraction input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -1251,7 +1251,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1276,7 +1276,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
 exports[`Switcher SplitSwitcher incorrect usage renders default with console error with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -1294,7 +1294,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1319,7 +1319,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
 exports[`Switcher SplitSwitcher incorrect usage renders default with console error with wrong switchAt input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -1337,7 +1337,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 

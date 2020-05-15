@@ -18,7 +18,7 @@ const Grid = styled.div<GridProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
 
   --minItemWidth: ${props =>
     typeof props.minItemWidth === 'number'
@@ -44,7 +44,7 @@ const Grid = styled.div<GridProps>`
       margin-top: ${({ gutter, theme: { spacing = {} } }) =>
         gutter && mergeSpacings(spacing)[gutter]
           ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).md};
+          : mergeSpacings(spacing).lg};
     }
   }
 `;
@@ -59,7 +59,7 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
-  gutter: 'md',
+  gutter: 'lg',
 };
 
 export default Grid;

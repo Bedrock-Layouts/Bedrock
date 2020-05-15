@@ -416,7 +416,7 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 exports[`Stack correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -438,7 +438,7 @@ exports[`Stack correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -463,7 +463,7 @@ exports[`Stack correct usage renders default gutters 1`] = `
 exports[`Stack correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -485,7 +485,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -510,7 +510,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
 exports[`Stack incorrect usage renders default with console error with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -532,7 +532,7 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 

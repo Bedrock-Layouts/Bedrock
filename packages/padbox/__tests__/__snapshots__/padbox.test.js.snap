@@ -171,7 +171,7 @@ exports[`PadBox correct usage renders all the padding options 7`] = `
 exports[`PadBox correct usage renders default padding 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 <div
@@ -195,7 +195,7 @@ exports[`PadBox correct usage renders default padding 1`] = `
 exports[`PadBox correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 200px;
+  padding: 1rem;
 }
 
 <div

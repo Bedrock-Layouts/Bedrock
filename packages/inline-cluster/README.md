@@ -26,6 +26,6 @@ import InlineCluster from '@bedrock-layout/inline-cluster';
 
 | Property | Type                                    | Default |
 | -------- | --------------------------------------- | ------- |
-| gutter   | One of: `none, xs, sm, md, lg, xl, xxl` | `md`    |
+| gutter   | One of: `none, xs, sm, md, lg, xl, xxl` | `lg`    |
 | justify  | One of: `start, end, center`            | `start` |
 | align    | One of: `start, end, center`            | `start` |

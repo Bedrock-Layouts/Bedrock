@@ -38,11 +38,11 @@ const CoverWrapper = styled.div<CoverWrapperProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
 
   display: flex;
   flex-direction: column;
-  min-height: ${(props) => props.minHeight || '100vh'};
+  min-height: ${props => props.minHeight || '100vh'};
 `;
 
 export interface CoverProps extends CoverWrapperProps {

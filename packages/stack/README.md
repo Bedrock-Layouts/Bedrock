@@ -29,4 +29,4 @@ import Stack from '@bedrock-layout/stack';
 
 | Property | Description                                      | Type                                                       | Default |
 | -------- | ------------------------------------------------ | ---------------------------------------------------------- | ------- |
-| gutter   | sets the gutters (margin) inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`    |
+| gutter   | sets the gutters (margin) inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`    |

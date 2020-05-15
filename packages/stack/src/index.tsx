@@ -15,7 +15,7 @@ const Stack = styled.div<StackProps>`
   --gutter:  ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
 
   display: grid;
   grid-auto-columns: 100%;
@@ -33,7 +33,7 @@ const Stack = styled.div<StackProps>`
       margin-top:  ${({ gutter, theme: { spacing = {} } }) =>
         gutter && mergeSpacings(spacing)[gutter]
           ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).md};
+          : mergeSpacings(spacing).lg};
       }};
     }
   }
@@ -48,7 +48,7 @@ Stack.propTypes = {
 };
 
 Stack.defaultProps = {
-  gutter: 'md',
+  gutter: 'lg',
 };
 
 export default Stack;

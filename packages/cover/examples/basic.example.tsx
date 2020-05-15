@@ -14,14 +14,9 @@ let name = 'Basic';
 
 function Example() {
   const minHeight = text('minHeight', '100vh');
-  const padding = select('padding', Object.keys(spacing), 'md');
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   return (
-    <Cover
-      minHeight={minHeight}
-      padding={padding as SpacingTypes}
-      gutter={gutter as SpacingTypes}
-    >
+    <Cover minHeight={minHeight} gutter={gutter as SpacingTypes}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident

@@ -40,7 +40,7 @@ const Split = styled.div<SplitProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
 
   display: grid;
   grid-template-columns: ${({ fraction = '1/2' }) =>
@@ -55,7 +55,7 @@ const Split = styled.div<SplitProps>`
       margin-top: ${({ gutter, theme: { spacing = {} } }) =>
         gutter && mergeSpacings(spacing)[gutter]
           ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).md};
+          : mergeSpacings(spacing).lg};
     }
   }
 `;
@@ -72,7 +72,7 @@ Split.propTypes = {
 };
 
 Split.defaultProps = {
-  gutter: 'md',
+  gutter: 'lg',
   fraction: '1/2',
 };
 

@@ -13,7 +13,7 @@ let title = 'Columns';
 let name = 'Basic';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   const columns = number('columns', 3);
   return (
     <Columns gutter={gutter as SpacingTypes} columns={columns}>

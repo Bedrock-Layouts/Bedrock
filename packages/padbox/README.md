@@ -22,4 +22,4 @@ import Stack from '@bedrock-layout/padbox';
 
 | Property | Description  | Type                                                    | Default |
 | -------- | ------------ | ------------------------------------------------------- | ------- |
-| padding  | sets padding | spacing, array of spacings, or object of spacing values | `md`    |
+| padding  | sets padding | spacing, array of spacings, or object of spacing values | `lg`    |

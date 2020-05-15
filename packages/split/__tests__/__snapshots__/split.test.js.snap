@@ -3,7 +3,7 @@
 exports[`Split correct usage renders all the fraction options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--gutter);
@@ -21,7 +21,7 @@ exports[`Split correct usage renders all the fraction options 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -46,7 +46,7 @@ exports[`Split correct usage renders all the fraction options 1`] = `
 exports[`Split correct usage renders all the fraction options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: var(--gutter);
@@ -68,7 +68,7 @@ exports[`Split correct usage renders all the fraction options 2`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -93,7 +93,7 @@ exports[`Split correct usage renders all the fraction options 2`] = `
 exports[`Split correct usage renders all the fraction options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: var(--gutter);
@@ -119,7 +119,7 @@ exports[`Split correct usage renders all the fraction options 3`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -144,7 +144,7 @@ exports[`Split correct usage renders all the fraction options 3`] = `
 exports[`Split correct usage renders all the fraction options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: var(--gutter);
@@ -174,7 +174,7 @@ exports[`Split correct usage renders all the fraction options 4`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -199,7 +199,7 @@ exports[`Split correct usage renders all the fraction options 4`] = `
 exports[`Split correct usage renders all the fraction options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -233,7 +233,7 @@ exports[`Split correct usage renders all the fraction options 5`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -258,7 +258,7 @@ exports[`Split correct usage renders all the fraction options 5`] = `
 exports[`Split correct usage renders all the fraction options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: var(--gutter);
@@ -296,7 +296,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -321,7 +321,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
 exports[`Split correct usage renders all the fraction options 7`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: var(--gutter);
@@ -363,7 +363,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -773,7 +773,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 exports[`Split correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -791,7 +791,7 @@ exports[`Split correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -816,7 +816,7 @@ exports[`Split correct usage renders default gutters 1`] = `
 exports[`Split correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -834,7 +834,7 @@ exports[`Split correct usage renders with theme overrides 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -859,7 +859,7 @@ exports[`Split correct usage renders with theme overrides 1`] = `
 exports[`Split incorrect usage renders default with console error with fraction input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -877,7 +877,7 @@ exports[`Split incorrect usage renders default with console error with fraction 
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -902,7 +902,7 @@ exports[`Split incorrect usage renders default with console error with fraction 
 exports[`Split incorrect usage renders default with console error with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
@@ -920,7 +920,7 @@ exports[`Split incorrect usage renders default with console error with wrong gut
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 

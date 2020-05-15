@@ -29,5 +29,5 @@ import Grid from '@bedrock-layout/grid';
 
 | Property     | Description                       | Type                                                       | Default                               |
 | ------------ | --------------------------------- | ---------------------------------------------------------- | ------------------------------------- |
-| gutter       | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `md`                                  |
+| gutter       | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`                                  |
 | minItemWidth | min width in px of each grid item | number                                                     | breakPoints.smallOnly or '39.9375rem' |
