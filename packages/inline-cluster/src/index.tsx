@@ -27,15 +27,15 @@ const InlineClusterWrapper = styled.div<InlineClusterProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: ${(props) =>
+  justify-content: ${props =>
     typeof props.justify !== 'undefined' && justifyAlignMap[props.justify]
       ? justifyAlignMap[props.justify]
       : justifyAlignMap.start};
-  align-items: ${(props) =>
+  align-items: ${props =>
     typeof props.align !== 'undefined' && justifyAlignMap[props.align]
       ? justifyAlignMap[props.align]
       : justifyAlignMap.start};
@@ -49,7 +49,7 @@ const InlineCluster = forwardRefWithAs<InlineClusterProps, 'div'>(
   ({ children, ...props }, ref) => {
     return (
       <InlineClusterWrapper {...props} ref={ref}>
-        {React.Children.map(children, (child) => (
+        {React.Children.map(children, child => (
           <div>{child}</div>
         ))}
       </InlineClusterWrapper>

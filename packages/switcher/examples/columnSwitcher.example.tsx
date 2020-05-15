@@ -18,7 +18,7 @@ let title = 'Switcher';
 let name = 'ColumnSwitcher';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   const dense = boolean('dense', false);
   const columns = number('columns', 3);
   const switchAt = number('switchAt', breakPoints.smallOnly);

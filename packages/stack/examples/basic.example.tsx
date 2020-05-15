@@ -13,7 +13,7 @@ let title = 'Stack';
 let name = 'Basic';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   return (
     <Stack gutter={gutter as SpacingTypes}>
       <BorderedBox>

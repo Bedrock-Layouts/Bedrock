@@ -13,7 +13,7 @@ let title = 'Grid';
 let name = 'Basic';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   return (
     <Grid gutter={gutter as SpacingTypes}>
       <BorderedBox>

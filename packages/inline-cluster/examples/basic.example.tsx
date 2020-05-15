@@ -13,7 +13,7 @@ let title = 'InlineCluster';
 let name = 'Basic';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   const justify = select('justify', ['start', 'end', 'center'], 'start');
   const align = select('align', ['start', 'end', 'center'], 'start');
   return (

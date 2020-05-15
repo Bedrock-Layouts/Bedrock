@@ -521,7 +521,7 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 exports[`Grid correct usage renders custom minItemWidth 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --minItemWidth: 320px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
@@ -546,7 +546,7 @@ exports[`Grid correct usage renders custom minItemWidth 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -571,7 +571,7 @@ exports[`Grid correct usage renders custom minItemWidth 1`] = `
 exports[`Grid correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
@@ -596,7 +596,7 @@ exports[`Grid correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -621,7 +621,7 @@ exports[`Grid correct usage renders default gutters 1`] = `
 exports[`Grid correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   --minItemWidth: 320px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
@@ -646,7 +646,7 @@ exports[`Grid correct usage renders with theme overrides 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -671,7 +671,7 @@ exports[`Grid correct usage renders with theme overrides 1`] = `
 exports[`Grid incorrect usage renders default with console error with minItemWidth input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
@@ -696,7 +696,7 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -721,7 +721,7 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
 exports[`Grid incorrect usage renders default with console error with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --minItemWidth: 639px;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(var(--minItemWidth),1fr));
@@ -746,7 +746,7 @@ exports[`Grid incorrect usage renders default with console error with wrong gutt
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 

@@ -17,7 +17,7 @@ let title = 'Switcher';
 let name = 'SplitSwitcher';
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   const fraction = select(
     'fraction',
     ['auto-start', 'auto-end', '1/4', '1/3', '1/2', '2/3', '3/4'],

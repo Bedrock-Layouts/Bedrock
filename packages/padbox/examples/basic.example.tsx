@@ -13,7 +13,7 @@ let title = 'PadBox';
 let name = 'Basic';
 
 function Example() {
-  const padding = select('padding', Object.keys(spacing), 'md');
+  const padding = select('padding', Object.keys(spacing), 'lg');
   return (
     <PadBox as={BorderedBox} padding={padding as SpacingTypes}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
