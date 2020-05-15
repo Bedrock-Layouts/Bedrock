@@ -14,12 +14,10 @@ let name = 'With Top and Bottom';
 
 function Example() {
   const minHeight = text('minHeight', '100vh');
-  const padding = select('padding', Object.keys(spacing), 'md');
-  const gutter = select('gutter', Object.keys(spacing), 'md');
+  const gutter = select('gutter', Object.keys(spacing), 'lg');
   return (
     <Cover
       minHeight={minHeight}
-      padding={padding as SpacingTypes}
       gutter={gutter as SpacingTypes}
       top={<div>I am on Top</div>}
       bottom={<div>I am on Bottom</div>}
