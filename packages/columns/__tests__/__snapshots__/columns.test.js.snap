@@ -3,7 +3,7 @@
 exports[`Column correct usage renders custom span 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -27,7 +27,7 @@ exports[`Column correct usage renders custom span 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -58,7 +58,7 @@ exports[`Column correct usage renders custom span 1`] = `
 exports[`Column correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -82,7 +82,7 @@ exports[`Column correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -113,7 +113,7 @@ exports[`Column correct usage renders default gutters 1`] = `
 exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -137,7 +137,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -168,7 +168,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 exports[`Column incorrect usage renders a span of 1 if given negative number 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -192,7 +192,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -223,7 +223,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 exports[`Column incorrect usage renders default with console error with wrong span input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -247,7 +247,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -677,7 +677,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 exports[`Columns correct usage renders custom columns 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 5;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -697,7 +697,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -722,7 +722,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
 exports[`Columns correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -742,7 +742,7 @@ exports[`Columns correct usage renders default gutters 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -767,7 +767,7 @@ exports[`Columns correct usage renders default gutters 1`] = `
 exports[`Columns correct usage renders dense mode 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -787,7 +787,7 @@ exports[`Columns correct usage renders dense mode 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -812,7 +812,7 @@ exports[`Columns correct usage renders dense mode 1`] = `
 exports[`Columns correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -832,7 +832,7 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 200px;
+    margin-top: 1rem;
   }
 }
 
@@ -857,7 +857,7 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
 exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -877,7 +877,7 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -902,7 +902,7 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 exports[`Columns incorrect usage renders 1 columns if given negative number 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -922,7 +922,7 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -947,7 +947,7 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
 exports[`Columns incorrect usage renders default with console error with incorrect column type 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -967,7 +967,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -992,7 +992,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
 exports[`Columns incorrect usage renders default with console error with incorrect dense type 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -1012,7 +1012,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1037,7 +1037,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
 exports[`Columns incorrect usage renders default with console error with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -1057,7 +1057,7 @@ exports[`Columns incorrect usage renders default with console error with wrong g
   }
 
   .c0 > * + * {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 }
 

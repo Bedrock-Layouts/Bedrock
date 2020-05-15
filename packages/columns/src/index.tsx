@@ -18,13 +18,13 @@ const Columns = styled.div<ColumnsProps>`
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).md};
+      : mergeSpacings(spacing).lg};
   --columns: ${({ columns = 1 }) => (columns > 0 ? columns : 1)};
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: var(--gutter);
-  grid-auto-flow: row ${(props) => props.dense === true && 'dense'};
+  grid-auto-flow: row ${props => props.dense === true && 'dense'};
 
   @supports not (grid-gap: var(--gutter)) {
     display: flex;
@@ -34,7 +34,7 @@ const Columns = styled.div<ColumnsProps>`
       margin-top: ${({ gutter, theme: { spacing = {} } }) =>
         gutter && mergeSpacings(spacing)[gutter]
           ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).md};
+          : mergeSpacings(spacing).lg};
     }
   }
 `;
@@ -50,7 +50,7 @@ Columns.propTypes = {
 };
 
 Columns.defaultProps = {
-  gutter: 'md',
+  gutter: 'lg',
   columns: 1,
   dense: false,
 };
@@ -60,11 +60,11 @@ export interface ColumnProps {
 }
 
 type SafeSpan = (span: any) => number;
-const safeSpan: SafeSpan = (span) => {
+const safeSpan: SafeSpan = span => {
   return Number.isInteger(span) ? span : 1;
 };
 
-export const Column = styled.div.attrs((props) => ({
+export const Column = styled.div.attrs(props => ({
   /* eslint-disable */
   ['data-bedrock-layout-column']: '',
 }))<ColumnProps>`
