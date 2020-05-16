@@ -30,5 +30,5 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | useContainerQuery      |
 | ✅     | InlineCluster          |
 | ✅     | Cover                  |
-| 🛠      | Frame                  |
-|        | MasonaryGrid           |
+| ✅     | Frame                  |
+| 🛠      | MasonaryGrid           |
