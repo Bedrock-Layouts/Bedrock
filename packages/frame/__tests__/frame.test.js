@@ -1,23 +1,6 @@
-// import React from 'react';
-// import { create } from 'react-test-renderer';
+import React from 'react';
+import { create } from 'react-test-renderer';
 import Frame from '../src';
-
-// const Lorem = () => (
-//   <>
-//     {Array.from(Array(4).keys()).map(i => (
-//       <p key={i}>
-//         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-//         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
-//         neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum
-//         sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien,
-//         condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant
-//         morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-//         Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper
-//         diam, ac placerat purus tortor et enim.
-//       </p>
-//     ))}
-//   </>
-// );
 
 describe('Frame', () => {
   describe('correct usage', () => {
@@ -25,59 +8,112 @@ describe('Frame', () => {
       expect(Frame).toBeTruthy();
     });
 
-    // it('renders default width', () => {
-    //   const Frame = create(
-    //     <Frame>
-    //       <Lorem />
-    //     </Frame>
-    //   );
-    //   expect(Frame.toJSON()).toMatchSnapshot();
-    // });
+    it('renders with ratio', () => {
+      const frame = create(
+        <Frame ratio={[16, 9]}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+      expect(frame.toJSON()).toMatchSnapshot();
+    });
 
-    // it('renders custom width', () => {
-    //   const Frame = create(
-    //     <Frame maxWidth={320}>
-    //       <Lorem />
-    //     </Frame>
-    //   );
-    //   expect(Frame.toJSON()).toMatchSnapshot();
-    // });
-
-    // it('renders with theme overrides', () => {
-    //   const Frame = create(
-    //     <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
-    //       <Frame>
-    //         <Lorem />
-    //       </Frame>
-    //     </ThemeProvider>
-    //   );
-    //   expect(Frame.toJSON()).toMatchSnapshot();
-    // });
+    it('renders custom position', () => {
+      const frame = create(
+        <Frame ratio={[16, 9]} position='top left'>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+      expect(frame.toJSON()).toMatchSnapshot();
+    });
   });
 
-  // describe('incorrect usage', () => {
-  //   let originalError;
-  //   let spy;
-  //   beforeEach(() => {
-  //     originalError = console.error;
-  //     spy = jest.fn();
-  //     console.error = spy;
-  //   });
-  //   afterEach(() => {
-  //     console.error = originalError;
-  //   });
+  describe('incorrect usage', () => {
+    let originalError;
+    let spy;
+    beforeEach(() => {
+      originalError = console.error;
+      spy = jest.fn();
+      console.error = spy;
+    });
+    afterEach(() => {
+      console.error = originalError;
+    });
 
-  //   it('renders default with console error with no children', () => {
-  //     expect(spy.mock.calls.length).toBe(0);
+    it('renders default position with incorrect value', () => {
+      expect(spy.mock.calls.length).toBe(0);
 
-  //     const errorStack = create(
-  //       <Frame maxWidth='incorrect'>
-  //         <Lorem />
-  //       </Frame>
-  //     );
+      const errorStack = create(
+        <Frame ratio={[16, 9]} position={true}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
 
-  //     expect(spy.mock.calls.length).toBe(1);
-  //     expect(errorStack.toJSON()).toMatchSnapshot();
-  //   });
-  // });
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+    it('renders ratio of 1:1 with error if no ratio provided', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Frame>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('renders ratio of 1:1 with error if ratio is not an array', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Frame ratio={{ 0: 16, 1: 9 }}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('falls back to 1 with error if array of length <1 provided', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Frame ratio={[16]}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('falls back to 1 with error if array of length >2 provided', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Frame ratio={[16, 9, 8, 6]}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it('falls back to 1 with error if array of not numbers provided', () => {
+      expect(spy.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Frame ratio={['16', '9']}>
+          <img src='https://picsum.photos/5000' alt='random thing' />
+        </Frame>
+      );
+
+      expect(spy.mock.calls.length).toBe(1);
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+  });
 });

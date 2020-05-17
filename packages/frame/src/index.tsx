@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PropTypes, { Validator } from 'prop-types';
+import PropTypes from 'prop-types';
 
 export interface FrameProps {
   ratio: [number, number];
@@ -7,8 +7,15 @@ export interface FrameProps {
 }
 
 const Frame = styled.div<FrameProps>`
-  --n: ${props => (props.ratio ? props.ratio[0] : 1)};
-  --d: ${props => (props.ratio ? props.ratio[1] : 1)};
+  --d: ${props =>
+    props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
+      ? props.ratio[0]
+      : 1};
+  --n: ${props =>
+    props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
+      ? props.ratio[1]
+      : 1};
+  box-sizing: border-box;
   display: block;
   width: 100%;
   padding-bottom: calc(var(--n) / var(--d) * 100%);
@@ -31,25 +38,30 @@ const Frame = styled.div<FrameProps>`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: ${props => props.position || '50%'};
+    object-position: ${props =>
+      typeof props.position === 'string' ? props.position : '50%'};
   }
 `;
 
 Frame.displayName = 'Frame';
 
-// type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
-// const twoNumbers: TwoNumbers = (props, propName) => {
-//   if (
-//     !Array.isArray(props.ratio) ||
-//     props.ratio.length !== 2 ||
-//     !props.ratio.every(Number.isInteger)
-//   ) {
-//     return new Error(`${propName} needs to be an array of two numbers`);
-//   }
-// };
+type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
+const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
+  if (typeof ratio === 'undefined') return new Error(`${propName} is required`);
+
+  if (
+    !Array.isArray(ratio) ||
+    ratio.length !== 2 ||
+    !ratio.every(Number.isInteger)
+  ) {
+    console.error(`${propName} needs to be an array of two numbers`);
+  }
+  return undefined;
+};
 
 Frame.propTypes = {
-  //ratio: twoNumbers,
+  //It's valid propType but type of Validator<[number, number]> makes no sense
+  ratio: twoNumbers as any,
   position: PropTypes.string,
 };
 

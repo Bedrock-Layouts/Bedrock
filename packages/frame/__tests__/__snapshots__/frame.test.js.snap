@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Frame correct usage renders custom position 1`] = `
+.c0 {
+  --d: 16;
+  --n: 9;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame correct usage renders with ratio 1`] = `
+.c0 {
+  --d: 16;
+  --n: 9;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage falls back to 1 with error if array of length <1 provided 1`] = `
+.c0 {
+  --d: 16;
+  --n: 1;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage falls back to 1 with error if array of length >2 provided 1`] = `
+.c0 {
+  --d: 16;
+  --n: 9;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage falls back to 1 with error if array of not numbers provided 1`] = `
+.c0 {
+  --d: 1;
+  --n: 1;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders default position with incorrect value 1`] = `
+.c0 {
+  --d: 16;
+  --n: 9;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provided 1`] = `
+.c0 {
+  --d: 1;
+  --n: 1;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not an array 1`] = `
+.c0 {
+  --d: 16;
+  --n: 9;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.c0 > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > img,
+.c0 > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
