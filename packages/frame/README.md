@@ -22,7 +22,7 @@ import Frame from '@bedrock-layout/frame';
 
 ## API
 
-| Property | Description | Type             | Default           |
-| -------- | ----------- | ---------------- | ----------------- |
-| ratio    | ratio       | [number, number] | medium breakpoint |
-| position | position    | string           | `50%`             |
+| Property | Description                                                                               | Type               | Default           |
+| -------- | ----------------------------------------------------------------------------------------- | ------------------ | ----------------- |
+| ratio    | ratio                                                                                     | `[number, number]` | medium breakpoint |
+| position | [object-position value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) | string             | `50%`             |
