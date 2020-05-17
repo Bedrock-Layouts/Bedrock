@@ -1,0 +1,46 @@
+---
+name: Frame
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Frame from '@bedrock-layout/frame';
+
+# Frame
+
+## Use case
+
+The Center is designed to center and clamp the width at the a defined width, the medium breakpoint by Default
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the stack component
+
+```bash
+  npm install @bedrock-layout/frame
+```
+
+## Basic usage
+
+<Playground>
+  <Frame ratio={[16, 9]}>
+    <img src={`https://picsum.photos/5000`} alt='cat' />
+  </Frame>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/frame--basic) for more details.
+
+## Properties
+
+| Property | Type                                                                                                  | Default  |
+| -------- | ----------------------------------------------------------------------------------------------------- | -------- |
+| ratio    | `[number,number]`                                                                                     | required |
+| postion  | [object-position value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) as a string | `50%`    |
