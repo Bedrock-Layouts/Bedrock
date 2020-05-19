@@ -61,7 +61,7 @@ const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
 
 Frame.propTypes = {
   //It's valid propType but type of Validator<[number, number]> makes no sense
-  ratio: twoNumbers as any,
+  ratio: (twoNumbers as unknown) as React.Validator<[number, number]>,
   position: PropTypes.string,
 };
 
