@@ -26,15 +26,12 @@ const Grid = styled.div<GridProps>`
       : mergeBreakpoints(props.theme.breakPoints).smallOnly + 'px'};
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--minItemWidth), 1fr));
   grid-gap: var(--gutter);
 
-  @supports (min(var(--minItemWidth), 100%)) {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--minItemWidth), 100%), 1fr)
-    );
-  }
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--minItemWidth), 100%), 1fr)
+  );
 
   @supports not (grid-gap: var(--gutter)) {
     display: flex;

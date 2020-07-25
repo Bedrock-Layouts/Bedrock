@@ -59,9 +59,9 @@ export interface ColumnProps {
   span?: number;
 }
 
-type SafeSpan = (span: any) => number;
+type SafeSpan = (span: unknown) => number;
 const safeSpan: SafeSpan = span => {
-  return Number.isInteger(span) ? span : 1;
+  return typeof span === 'number' ? span : 1;
 };
 
 export const Column = styled.div.attrs(props => ({
