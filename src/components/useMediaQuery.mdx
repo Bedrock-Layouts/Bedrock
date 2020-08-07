@@ -7,7 +7,7 @@ menu: Components
 
 ## Use case
 
-When you need to do logic based on the size of the viewport. It uses the matchMedia API, it takes a value and will return if that value is less than or equal to it.
+When you need to do logic based on the size of the viewport, such as determining whether to use a mobile layout or full screen layout. It uses the matchMedia API, taking a value and returning a boolean for whether the viewport size is less than or equal to that value.
 
 ## How to install
 
@@ -21,9 +21,13 @@ When you need to do logic based on the size of the viewport. It uses the matchMe
 import useMediaQuery from '@bedrock-layout/use-media-query';
 
 const App = () => {
-    const matches = useMediaQuery("(max-width:640px)")
-    // do something with matches
-    return <div ref={setRef} {...props}>
+  const smallScreen = useMediaQuery("(max-width:640px)")
+
+  return (
+    <div ref={setRef} {...props}>
+      {smallScreen ? <MobileNav /> : <FullScreenNav />}
+    </div>
+  )
 }
 ```
 
