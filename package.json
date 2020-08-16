@@ -1,7 +1,7 @@
 {
   "name": "root",
   "description": "Foundational Layout Primitives for your React App",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
@@ -16,14 +16,14 @@
     "build:site": "docz build",
     "lint": "eslint packages/** --no-error-on-unmatched-pattern",
     "serve": "docz serve",
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna exec -- yarn link",
     "changes": "dotenv lerna-changelog",
     "clean": "lerna clean",
     "build": "lerna run clean:build && lerna run build",
     "build:watch": "lerna run build:watch --stream",
     "build:storybook": "build-storybook",
-    "initialize": "npm i && npm run bootstrap && npm run build",
-    "prepublish": "npm run build",
+    "initialize": "yarn && yarn run bootstrap && yarn run build",
+    "prepublish": "yarn run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package"
   },
@@ -102,7 +102,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run lint"
+      "pre-commit": "yarn test && yarn run lint"
     }
   }
 }
