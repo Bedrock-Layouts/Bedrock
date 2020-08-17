@@ -1,14 +1,14 @@
-import React from 'react';
-import AppBoundary from '@bedrock-layout/appboundary';
-import styled from 'styled-components';
+import React from "react";
+import AppBoundary from "@bedrock-layout/appboundary";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'AppBoundary';
-let name = 'Basic';
+let title = "AppBoundary";
+let name = "Basic";
 
 function Example() {
   return (

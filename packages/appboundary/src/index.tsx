@@ -1,8 +1,8 @@
-import React from 'react';
-import styled, { ThemeContext } from 'styled-components';
-import PropTypes from 'prop-types';
-import Center from '@bedrock-layout/center';
-import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
+import React from "react";
+import styled, { ThemeContext } from "styled-components";
+import PropTypes from "prop-types";
+import Center from "@bedrock-layout/center";
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 
 export interface AppBoundaryProps {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const AppBoundary = ({ children }: AppBoundaryProps) => {
   );
 };
 
-AppBoundary.displayName = 'AppBoundary';
+AppBoundary.displayName = "AppBoundary";
 
 AppBoundary.propTypes = {
   children: PropTypes.oneOfType([

@@ -1,12 +1,12 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
-import AppBoundary from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
+import AppBoundary from "../src";
 
 const Lorem = () => {
   return (
     <>
-      {Array.from(Array(4).keys()).map(i => (
+      {Array.from(Array(4).keys()).map((i) => (
         <p key={i}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
           vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -22,13 +22,13 @@ const Lorem = () => {
   );
 };
 
-describe('AppBoundary', () => {
-  describe('correct usage', () => {
-    test('AppBoundary is not null', () => {
+describe("AppBoundary", () => {
+  describe("correct usage", () => {
+    test("AppBoundary is not null", () => {
       expect(AppBoundary).toBeTruthy();
     });
 
-    it('renders default gutters', () => {
+    it("renders default gutters", () => {
       const appboundary = create(
         <AppBoundary>
           <Lorem />
@@ -37,7 +37,7 @@ describe('AppBoundary', () => {
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const appboundary = create(
         <ThemeProvider theme={{ breakPoints: { xxlarge: 1600 } }}>
           <AppBoundary>
@@ -49,7 +49,7 @@ describe('AppBoundary', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -61,7 +61,7 @@ describe('AppBoundary', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with no children', () => {
+    it("renders default with console error with no children", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(<AppBoundary />);
