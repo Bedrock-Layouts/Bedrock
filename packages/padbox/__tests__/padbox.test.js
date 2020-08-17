@@ -1,12 +1,12 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import PadBox from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider } from "styled-components";
+import PadBox from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -21,13 +21,13 @@ const Lorem = () => (
   </>
 );
 
-describe('PadBox', () => {
-  describe('correct usage', () => {
-    test('Stack is not null', () => {
+describe("PadBox", () => {
+  describe("correct usage", () => {
+    test("Stack is not null", () => {
       expect(PadBox).toBeTruthy();
     });
 
-    it('renders default padding', () => {
+    it("renders default padding", () => {
       const padbox = create(
         <PadBox>
           <Lorem />
@@ -36,8 +36,8 @@ describe('PadBox', () => {
       expect(padbox.toJSON()).toMatchSnapshot();
     });
 
-    it('renders all the padding options', () => {
-      Object.keys(spacing).forEach(padding => {
+    it("renders all the padding options", () => {
+      Object.keys(spacing).forEach((padding) => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
@@ -47,13 +47,13 @@ describe('PadBox', () => {
       });
     });
 
-    it('use 1, 2, 3, 4 items arrays', () => {
+    it("use 1, 2, 3, 4 items arrays", () => {
       [
-        ['md'],
-        ['md', 'lg'],
-        ['md', 'lg', 'xs'],
-        ['md', 'lg', 'xs', 'sm'],
-      ].forEach(padding => {
+        ["md"],
+        ["md", "lg"],
+        ["md", "lg", "xs"],
+        ["md", "lg", "xs", "sm"],
+      ].forEach((padding) => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
@@ -63,17 +63,17 @@ describe('PadBox', () => {
       });
     });
 
-    it('use padding object', () => {
+    it("use padding object", () => {
       [
-        { left: 'md' },
-        { right: 'md' },
-        { top: 'md' },
-        { bottom: 'md' },
-        { inlineStart: 'md' },
-        { inlineEnd: 'md' },
-        { blockStart: 'md' },
-        { blockEnd: 'md' },
-      ].forEach(padding => {
+        { left: "md" },
+        { right: "md" },
+        { top: "md" },
+        { bottom: "md" },
+        { inlineStart: "md" },
+        { inlineEnd: "md" },
+        { blockStart: "md" },
+        { blockEnd: "md" },
+      ].forEach((padding) => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
@@ -83,9 +83,9 @@ describe('PadBox', () => {
       });
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
           <PadBox>
             <Lorem />
           </PadBox>
@@ -95,7 +95,7 @@ describe('PadBox', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
 
@@ -109,11 +109,11 @@ describe('PadBox', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong input', () => {
+    it("renders default with console error with wrong input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <PadBox padding='incorrect'>
+        <PadBox padding="incorrect">
           <Lorem />
         </PadBox>
       );
@@ -122,11 +122,11 @@ describe('PadBox', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with console error with wrong input in array', () => {
+    it("renders with console error with wrong input in array", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <PadBox padding={['incorrect', 'incorrect']}>
+        <PadBox padding={["incorrect", "incorrect"]}>
           <Lorem />
         </PadBox>
       );
@@ -135,11 +135,11 @@ describe('PadBox', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with console error with wrong input in object', () => {
+    it("renders with console error with wrong input in object", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <PadBox padding={{ incorrect: 'incorrect' }}>
+        <PadBox padding={{ incorrect: "incorrect" }}>
           <Lorem />
         </PadBox>
       );
@@ -148,8 +148,8 @@ describe('PadBox', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('throws if more than 4 items in array', () => {
-      const padding = ['xs', 'xs', 'xs', 'xs', 'xs'];
+    it("throws if more than 4 items in array", () => {
+      const padding = ["xs", "xs", "xs", "xs", "xs"];
 
       expect(() =>
         create(

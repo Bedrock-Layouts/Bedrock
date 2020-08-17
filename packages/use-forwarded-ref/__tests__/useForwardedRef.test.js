@@ -1,7 +1,7 @@
-import useForwardedRef from '../src';
+import useForwardedRef from "../src";
 
-describe('useForwardedRef', () => {
-  test('useForwardedRef is not null', () => {
+describe("useForwardedRef", () => {
+  test("useForwardedRef is not null", () => {
     expect(useForwardedRef).toBeTruthy();
   });
 });

@@ -1,10 +1,10 @@
-const none = '0px';
-const xs = '0.125rem';
-const sm = '0.25rem';
-const md = '0.5rem';
-const lg = '1rem';
-const xl = '2rem';
-const xxl = '4rem';
+const none = "0px";
+const xs = "0.125rem";
+const sm = "0.25rem";
+const md = "0.5rem";
+const lg = "1rem";
+const xl = "2rem";
+const xxl = "4rem";
 
 export interface Spacing {
   none: string;

@@ -1,12 +1,12 @@
-import React from 'react';
-import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
-import styled from 'styled-components';
+import React from "react";
+import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
 const RefBox = React.forwardRef<HTMLElement, { children?: React.ReactNode }>(
   ({ children }, ref) => {
@@ -28,10 +28,10 @@ const RefBox = React.forwardRef<HTMLElement, { children?: React.ReactNode }>(
   }
 );
 
-RefBox.displayName = 'RefBox';
+RefBox.displayName = "RefBox";
 
-let title = 'useForwardedRef';
-let name = 'Basic';
+let title = "useForwardedRef";
+let name = "Basic";
 
 function Example() {
   const outerRef = React.useRef<HTMLElement>(null);

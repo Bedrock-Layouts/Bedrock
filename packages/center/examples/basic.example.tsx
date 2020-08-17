@@ -1,18 +1,18 @@
-import React from 'react';
-import Center from '@bedrock-layout/center';
-import styled from 'styled-components';
-import { number } from '@storybook/addon-knobs';
+import React from "react";
+import Center from "@bedrock-layout/center";
+import styled from "styled-components";
+import { number } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Center';
-let name = 'Basic';
+let title = "Center";
+let name = "Basic";
 
 function Example() {
-  const maxWidth = number('maxWidth', 640);
+  const maxWidth = number("maxWidth", 640);
   return (
     <Center maxWidth={maxWidth}>
       <BorderedBox>

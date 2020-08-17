@@ -46,6 +46,7 @@
     "build": "microbundle build --jsx React.createElement && rimraf ./.rts2_cache*",
     "build:watch": "microbundle build --jsx React.createElement --watch",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
+    "fix-format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different"
   },
   "bugs": {

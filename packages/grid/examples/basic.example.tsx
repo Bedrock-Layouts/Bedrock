@@ -1,19 +1,19 @@
-import React from 'react';
-import Grid from '@bedrock-layout/grid';
-import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
-import styled from 'styled-components';
-import { select } from '@storybook/addon-knobs';
+import React from "react";
+import Grid from "@bedrock-layout/grid";
+import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
+import styled from "styled-components";
+import { select } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Grid';
-let name = 'Basic';
+let title = "Grid";
+let name = "Basic";
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'lg');
+  const gutter = select("gutter", Object.keys(spacing), "lg");
   return (
     <Grid gutter={gutter as SpacingTypes}>
       <BorderedBox>

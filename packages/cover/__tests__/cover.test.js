@@ -1,8 +1,8 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import Cover from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider } from "styled-components";
+import Cover from "../src";
 
 const Lorem = () => (
   <p>
@@ -17,13 +17,13 @@ const Lorem = () => (
   </p>
 );
 
-describe('Cover', () => {
-  describe('correct usage', () => {
-    test('Cover is not null', () => {
+describe("Cover", () => {
+  describe("correct usage", () => {
+    test("Cover is not null", () => {
       expect(Cover).toBeTruthy();
     });
 
-    it('renders default', () => {
+    it("renders default", () => {
       const cover = create(
         <Cover>
           <Lorem />
@@ -32,15 +32,15 @@ describe('Cover', () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it('renders custom height', () => {
+    it("renders custom height", () => {
       const cover = create(
-        <Cover minHeight='500px'>
+        <Cover minHeight="500px">
           <Lorem />
         </Cover>
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
-    it('renders with top', () => {
+    it("renders with top", () => {
       const cover = create(
         <Cover top={<Lorem />}>
           <Lorem />
@@ -49,7 +49,7 @@ describe('Cover', () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with bottom', () => {
+    it("renders with bottom", () => {
       const cover = create(
         <Cover bottom={<Lorem />}>
           <Lorem />
@@ -58,7 +58,7 @@ describe('Cover', () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it('renders all the gutter options', () => {
+    it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const cover = create(
           <Cover gutter={gutter}>
@@ -69,7 +69,7 @@ describe('Cover', () => {
       });
     });
 
-    it('renders all the padding options', () => {
+    it("renders all the padding options", () => {
       Object.keys(spacing).forEach((padding) => {
         const cover = create(
           <Cover padding={padding}>
@@ -80,12 +80,12 @@ describe('Cover', () => {
       });
     });
 
-    it('use 1, 2, 3, 4 items arrays', () => {
+    it("use 1, 2, 3, 4 items arrays", () => {
       [
-        ['md'],
-        ['md', 'lg'],
-        ['md', 'lg', 'xs'],
-        ['md', 'lg', 'xs', 'sm'],
+        ["md"],
+        ["md", "lg"],
+        ["md", "lg", "xs"],
+        ["md", "lg", "xs", "sm"],
       ].forEach((padding) => {
         const cover = create(
           <Cover padding={padding}>
@@ -96,16 +96,16 @@ describe('Cover', () => {
       });
     });
 
-    it('use padding object', () => {
+    it("use padding object", () => {
       [
-        { left: 'md' },
-        { right: 'md' },
-        { top: 'md' },
-        { bottom: 'md' },
-        { inlineStart: 'md' },
-        { inlineEnd: 'md' },
-        { blockStart: 'md' },
-        { blockEnd: 'md' },
+        { left: "md" },
+        { right: "md" },
+        { top: "md" },
+        { bottom: "md" },
+        { inlineStart: "md" },
+        { inlineEnd: "md" },
+        { blockStart: "md" },
+        { blockEnd: "md" },
       ].forEach((padding) => {
         const cover = create(
           <Cover padding={padding}>
@@ -116,7 +116,7 @@ describe('Cover', () => {
       });
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const cover = create(
         <ThemeProvider theme={{ spacing: { md: 1600 } }}>
           <Cover>
@@ -128,7 +128,7 @@ describe('Cover', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -140,11 +140,11 @@ describe('Cover', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong gutter', () => {
+    it("renders default with console error with wrong gutter", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Cover gutter='incorrect'>
+        <Cover gutter="incorrect">
           <Lorem />
         </Cover>
       );
@@ -152,9 +152,9 @@ describe('Cover', () => {
       expect(spy.mock.calls.length).toBe(1);
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-    it('renders with min-height incorrect with invalid minHeight', () => {
+    it("renders with min-height incorrect with invalid minHeight", () => {
       const errorStack = create(
-        <Cover minHeight='incorrect'>
+        <Cover minHeight="incorrect">
           <Lorem />
         </Cover>
       );
@@ -162,7 +162,7 @@ describe('Cover', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders throws with more than one child', () => {
+    it("renders throws with more than one child", () => {
       expect(spy.mock.calls.length).toBe(0);
       class CatchError extends React.Component {
         state = { isError: false };

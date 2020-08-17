@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import PropTypes from "prop-types";
 import {
   spacing as defaultSpacings,
   SpacingTypes,
   mergeSpacings,
   mergeBreakpoints,
-} from '@bedrock-layout/spacing-constants';
+} from "@bedrock-layout/spacing-constants";
 
 export interface GridProps {
   gutter?: SpacingTypes;
@@ -20,10 +20,10 @@ const Grid = styled.div<GridProps>`
       ? mergeSpacings(spacing)[gutter]
       : mergeSpacings(spacing).lg};
 
-  --minItemWidth: ${props =>
-    typeof props.minItemWidth === 'number'
+  --minItemWidth: ${(props) =>
+    typeof props.minItemWidth === "number"
       ? `${props.minItemWidth}px`
-      : mergeBreakpoints(props.theme.breakPoints).smallOnly + 'px'};
+      : mergeBreakpoints(props.theme.breakPoints).smallOnly + "px"};
 
   display: grid;
   grid-gap: var(--gutter);
@@ -46,7 +46,7 @@ const Grid = styled.div<GridProps>`
   }
 `;
 
-Grid.displayName = 'Grid';
+Grid.displayName = "Grid";
 
 Grid.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
@@ -56,7 +56,7 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
-  gutter: 'lg',
+  gutter: "lg",
 };
 
 export default Grid;

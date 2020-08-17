@@ -1,12 +1,12 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import InlineCluster from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider } from "styled-components";
+import InlineCluster from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -21,13 +21,13 @@ const Lorem = () => (
   </>
 );
 
-describe('InlineCluster', () => {
-  test('test todo', () => Promise.resolve());
-  describe('correct usage', () => {
-    test('InlineCluster is not null', () => {
+describe("InlineCluster", () => {
+  test("test todo", () => Promise.resolve());
+  describe("correct usage", () => {
+    test("InlineCluster is not null", () => {
       expect(InlineCluster).toBeTruthy();
     });
-    it('renders defaults', () => {
+    it("renders defaults", () => {
       const inlineCluster = create(
         <InlineCluster>
           <Lorem />
@@ -35,8 +35,8 @@ describe('InlineCluster', () => {
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
-    it('renders all the gutter options', () => {
-      Object.keys(spacing).forEach(gutter => {
+    it("renders all the gutter options", () => {
+      Object.keys(spacing).forEach((gutter) => {
         const inlineCluster = create(
           <InlineCluster gutter={gutter}>
             <Lorem />
@@ -45,8 +45,8 @@ describe('InlineCluster', () => {
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
     });
-    it('renders all the justify options', () => {
-      ['start', 'center', 'end'].forEach(justify => {
+    it("renders all the justify options", () => {
+      ["start", "center", "end"].forEach((justify) => {
         const inlineCluster = create(
           <InlineCluster justify={justify}>
             <Lorem />
@@ -55,8 +55,8 @@ describe('InlineCluster', () => {
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
     });
-    it('renders all the align options', () => {
-      ['start', 'center', 'end'].forEach(align => {
+    it("renders all the align options", () => {
+      ["start", "center", "end"].forEach((align) => {
         const inlineCluster = create(
           <InlineCluster align={align}>
             <Lorem />
@@ -66,10 +66,10 @@ describe('InlineCluster', () => {
       });
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const inlineCluster = create(
         <ThemeProvider
-          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: '200px' } }}
+          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: "200px" } }}
         >
           <InlineCluster>
             <Lorem />
@@ -80,7 +80,7 @@ describe('InlineCluster', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -92,11 +92,11 @@ describe('InlineCluster', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong gutter input', () => {
+    it("renders default with console error with wrong gutter input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <InlineCluster gutter='incorrect'>
+        <InlineCluster gutter="incorrect">
           <Lorem />
         </InlineCluster>
       );
@@ -105,11 +105,11 @@ describe('InlineCluster', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders default with console error with incorrect justify', () => {
+    it("renders default with console error with incorrect justify", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <InlineCluster justify='incorrect'>
+        <InlineCluster justify="incorrect">
           <Lorem />
         </InlineCluster>
       );
@@ -117,11 +117,11 @@ describe('InlineCluster', () => {
       expect(spy.mock.calls.length).toBe(1);
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-    it('renders default with console error with incorrect align', () => {
+    it("renders default with console error with incorrect align", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <InlineCluster align='incorrect'>
+        <InlineCluster align="incorrect">
           <Lorem />
         </InlineCluster>
       );

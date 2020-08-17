@@ -1,19 +1,19 @@
-import React from 'react';
-import Columns, { Column } from '@bedrock-layout/columns';
-import styled from 'styled-components';
-import { number, boolean } from '@storybook/addon-knobs';
+import React from "react";
+import Columns, { Column } from "@bedrock-layout/columns";
+import styled from "styled-components";
+import { number, boolean } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Columns';
-let name = 'With Column Component';
+let title = "Columns";
+let name = "With Column Component";
 
 function Example() {
-  const columns = number('columns', 3);
-  const dense = boolean('dense', false);
+  const columns = number("columns", 3);
+  const dense = boolean("dense", false);
   return (
     <Columns columns={columns} dense={dense}>
       <Column span={2}>

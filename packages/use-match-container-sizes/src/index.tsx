@@ -1,14 +1,14 @@
-import React from 'react';
-import { ThemeContext } from 'styled-components';
-import useContainterQuery from '@bedrock-layout/use-container-query';
-import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
+import React from "react";
+import { ThemeContext } from "styled-components";
+import useContainterQuery from "@bedrock-layout/use-container-query";
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 
 const safeTheme = { breakPoints: {} };
 
 type ContainerMatchMap = { [s: string]: boolean };
 type UseMatchContainerSizes = (node: Element) => ContainerMatchMap;
 
-export const useMatchContainerSizes: UseMatchContainerSizes = node => {
+export const useMatchContainerSizes: UseMatchContainerSizes = (node) => {
   const constants = React.useContext(ThemeContext) || safeTheme;
   const breakPoints = constants.breakPoints || {};
   const mergedBreakPoints = mergeBreakpoints(breakPoints);

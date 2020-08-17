@@ -1,11 +1,11 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
-import Center from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
+import Center from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -20,13 +20,13 @@ const Lorem = () => (
   </>
 );
 
-describe('Center', () => {
-  describe('correct usage', () => {
-    test('Center is not null', () => {
+describe("Center", () => {
+  describe("correct usage", () => {
+    test("Center is not null", () => {
       expect(Center).toBeTruthy();
     });
 
-    it('renders default width', () => {
+    it("renders default width", () => {
       const center = create(
         <Center>
           <Lorem />
@@ -35,7 +35,7 @@ describe('Center', () => {
       expect(center.toJSON()).toMatchSnapshot();
     });
 
-    it('renders custom width', () => {
+    it("renders custom width", () => {
       const center = create(
         <Center maxWidth={320}>
           <Lorem />
@@ -44,7 +44,7 @@ describe('Center', () => {
       expect(center.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const center = create(
         <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
           <Center>
@@ -56,7 +56,7 @@ describe('Center', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -68,11 +68,11 @@ describe('Center', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with no children', () => {
+    it("renders default with console error with no children", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Center maxWidth='incorrect'>
+        <Center maxWidth="incorrect">
           <Lorem />
         </Center>
       );

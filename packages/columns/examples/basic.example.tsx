@@ -1,20 +1,20 @@
-import React from 'react';
-import Columns from '@bedrock-layout/columns';
-import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
-import styled from 'styled-components';
-import { select, number } from '@storybook/addon-knobs';
+import React from "react";
+import Columns from "@bedrock-layout/columns";
+import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
+import styled from "styled-components";
+import { select, number } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Columns';
-let name = 'Basic';
+let title = "Columns";
+let name = "Basic";
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'lg');
-  const columns = number('columns', 3);
+  const gutter = select("gutter", Object.keys(spacing), "lg");
+  const columns = number("columns", 3);
   return (
     <Columns gutter={gutter as SpacingTypes} columns={columns}>
       <BorderedBox>

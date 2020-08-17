@@ -1,12 +1,12 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import Columns, { Column } from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider } from "styled-components";
+import Columns, { Column } from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -21,13 +21,13 @@ const Lorem = () => (
   </>
 );
 
-describe('Column', () => {
-  describe('correct usage', () => {
-    test('Column is not null', () => {
+describe("Column", () => {
+  describe("correct usage", () => {
+    test("Column is not null", () => {
       expect(Column).toBeTruthy();
     });
 
-    it('renders default gutters', () => {
+    it("renders default gutters", () => {
       const columns = create(
         <Columns>
           <Column>
@@ -38,7 +38,7 @@ describe('Column', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders custom span', () => {
+    it("renders custom span", () => {
       const columns = create(
         <Columns>
           <Column span={2}>
@@ -50,7 +50,7 @@ describe('Column', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -62,12 +62,12 @@ describe('Column', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong span input', () => {
+    it("renders default with console error with wrong span input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
         <Columns>
-          <Column span='incorrect'>
+          <Column span="incorrect">
             <Lorem />
           </Column>
         </Columns>
@@ -77,7 +77,7 @@ describe('Column', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders a span of 1 if given 0', () => {
+    it("renders a span of 1 if given 0", () => {
       const columns = create(
         <Columns>
           <Column span={0}>
@@ -88,7 +88,7 @@ describe('Column', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders a span of 1 if given negative number', () => {
+    it("renders a span of 1 if given negative number", () => {
       const columns = create(
         <Columns>
           <Column span={-1}>
@@ -101,13 +101,13 @@ describe('Column', () => {
   });
 });
 
-describe('Columns', () => {
-  describe('correct usage', () => {
-    test('Columns is not null', () => {
+describe("Columns", () => {
+  describe("correct usage", () => {
+    test("Columns is not null", () => {
       expect(Columns).toBeTruthy();
     });
 
-    it('renders default gutters', () => {
+    it("renders default gutters", () => {
       const columns = create(
         <Columns>
           <Lorem />
@@ -116,8 +116,8 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders all the gutter options', () => {
-      Object.keys(spacing).forEach(gutter => {
+    it("renders all the gutter options", () => {
+      Object.keys(spacing).forEach((gutter) => {
         const columns = create(
           <Columns gutter={gutter}>
             <Lorem />
@@ -127,7 +127,7 @@ describe('Columns', () => {
       });
     });
 
-    it('renders custom columns', () => {
+    it("renders custom columns", () => {
       const columns = create(
         <Columns columns={5}>
           <Lorem />
@@ -136,7 +136,7 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders dense mode', () => {
+    it("renders dense mode", () => {
       const columns = create(
         <Columns dense>
           <Lorem />
@@ -145,9 +145,9 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const columns = create(
-        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
           <Columns>
             <Lorem />
           </Columns>
@@ -157,7 +157,7 @@ describe('Columns', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -169,11 +169,11 @@ describe('Columns', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong gutter input', () => {
+    it("renders default with console error with wrong gutter input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Columns gutter='incorrect'>
+        <Columns gutter="incorrect">
           <Lorem />
         </Columns>
       );
@@ -182,7 +182,7 @@ describe('Columns', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders 1 columns if given 0', () => {
+    it("renders 1 columns if given 0", () => {
       const columns = create(
         <Columns columns={0}>
           <Lorem />
@@ -191,7 +191,7 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders 1 columns if given negative number', () => {
+    it("renders 1 columns if given negative number", () => {
       const columns = create(
         <Columns columns={-1}>
           <Lorem />
@@ -200,11 +200,11 @@ describe('Columns', () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it('renders default with console error with incorrect column type', () => {
+    it("renders default with console error with incorrect column type", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Columns columns='incorrect'>
+        <Columns columns="incorrect">
           <Lorem />
         </Columns>
       );
@@ -213,11 +213,11 @@ describe('Columns', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders default with console error with incorrect dense type', () => {
+    it("renders default with console error with incorrect dense type", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Columns dense='incorrect'>
+        <Columns dense="incorrect">
           <Lorem />
         </Columns>
       );

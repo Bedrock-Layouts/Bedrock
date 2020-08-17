@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export interface FrameProps {
   ratio: [number, number];
@@ -7,11 +7,11 @@ export interface FrameProps {
 }
 
 const Frame = styled.div<FrameProps>`
-  --d: ${props =>
+  --d: ${(props) =>
     props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
       ? props.ratio[0]
       : 1};
-  --n: ${props =>
+  --n: ${(props) =>
     props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
       ? props.ratio[1]
       : 1};
@@ -38,16 +38,16 @@ const Frame = styled.div<FrameProps>`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: ${props =>
-      typeof props.position === 'string' ? props.position : '50%'};
+    object-position: ${(props) =>
+      typeof props.position === "string" ? props.position : "50%"};
   }
 `;
 
-Frame.displayName = 'Frame';
+Frame.displayName = "Frame";
 
 type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
 const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
-  if (typeof ratio === 'undefined') return new Error(`${propName} is required`);
+  if (typeof ratio === "undefined") return new Error(`${propName} is required`);
 
   if (
     !Array.isArray(ratio) ||

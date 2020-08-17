@@ -1,7 +1,7 @@
-import useMediaQuery from '../src';
+import useMediaQuery from "../src";
 
-describe('useMediaQuery', () => {
-  test('useMediaQuery is not null', () => {
+describe("useMediaQuery", () => {
+  test("useMediaQuery is not null", () => {
     expect(useMediaQuery).toBeTruthy();
   });
 });

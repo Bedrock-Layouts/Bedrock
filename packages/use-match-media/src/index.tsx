@@ -1,7 +1,7 @@
-import React from 'react';
-import { ThemeContext } from 'styled-components';
-import useMediaQuery from '@bedrock-layout/use-media-query';
-import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
+import React from "react";
+import { ThemeContext } from "styled-components";
+import useMediaQuery from "@bedrock-layout/use-media-query";
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 
 const safeTheme = { breakPoints: {} };
 

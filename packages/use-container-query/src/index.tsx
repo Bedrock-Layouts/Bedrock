@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
+import { useState, useEffect } from "react";
+import ResizeObserver from "resize-observer-polyfill";
 
 type UseContainterQuery = (
   node: Element,
@@ -8,7 +8,7 @@ type UseContainterQuery = (
 ) => boolean;
 
 const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
-  if (typeof maxWidth !== 'undefined' && maxWidth <= width) {
+  if (typeof maxWidth !== "undefined" && maxWidth <= width) {
     throw new Error(
       `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`
     );
@@ -24,7 +24,7 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
         const nodeWidth = (entry as any).borderBox
           ? (entry as any).borderBox.inlineSize
           : entry.contentRect.width;
-        if (typeof maxWidth !== 'undefined') {
+        if (typeof maxWidth !== "undefined") {
           setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
         } else {
           setMatch(nodeWidth <= width);

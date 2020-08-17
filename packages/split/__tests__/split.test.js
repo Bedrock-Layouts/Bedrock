@@ -1,12 +1,12 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import Split from '../src';
+import React from "react";
+import { create } from "react-test-renderer";
+import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider } from "styled-components";
+import Split from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -21,13 +21,13 @@ const Lorem = () => (
   </>
 );
 
-describe('Split', () => {
-  describe('correct usage', () => {
-    test('Split is not null', () => {
+describe("Split", () => {
+  describe("correct usage", () => {
+    test("Split is not null", () => {
       expect(Split).toBeTruthy();
     });
 
-    it('renders default gutters', () => {
+    it("renders default gutters", () => {
       const split = create(
         <Split>
           <Lorem />
@@ -36,8 +36,8 @@ describe('Split', () => {
       expect(split.toJSON()).toMatchSnapshot();
     });
 
-    it('renders all the gutter options', () => {
-      Object.keys(spacing).forEach(gutter => {
+    it("renders all the gutter options", () => {
+      Object.keys(spacing).forEach((gutter) => {
         const split = create(
           <Split gutter={gutter}>
             <Lorem />
@@ -47,9 +47,9 @@ describe('Split', () => {
       });
     });
 
-    it('renders all the fraction options', () => {
-      ['auto-start', 'auto-end', '1/4', '1/3', '1/2', '2/3', '3/4'].forEach(
-        fraction => {
+    it("renders all the fraction options", () => {
+      ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"].forEach(
+        (fraction) => {
           const split = create(
             <Split fraction={fraction}>
               <Lorem />
@@ -60,9 +60,9 @@ describe('Split', () => {
       );
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const split = create(
-        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
           <Split>
             <Lorem />
           </Split>
@@ -72,7 +72,7 @@ describe('Split', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -84,11 +84,11 @@ describe('Split', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong gutter input', () => {
+    it("renders default with console error with wrong gutter input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Split gutter='incorrect'>
+        <Split gutter="incorrect">
           <Lorem />
         </Split>
       );
@@ -97,11 +97,11 @@ describe('Split', () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders default with console error with fraction input', () => {
+    it("renders default with console error with fraction input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Split fraction='incorrect'>
+        <Split fraction="incorrect">
           <Lorem />
         </Split>
       );

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { mergeBreakpoints } from '@bedrock-layout/spacing-constants';
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 
 export interface CenterProps {
   maxWidth?: number;
@@ -8,9 +8,9 @@ export interface CenterProps {
 
 const Center = styled.div<CenterProps>`
   --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
-    typeof maxWidth === 'number'
+    typeof maxWidth === "number"
       ? `${maxWidth}px`
-      : mergeBreakpoints(breakPoints).medium + 'px'};
+      : mergeBreakpoints(breakPoints).medium + "px"};
 
   box-sizing: content-box;
   margin-left: auto;
@@ -20,7 +20,7 @@ const Center = styled.div<CenterProps>`
   max-width: var(--maxWidth);
 `;
 
-Center.displayName = 'Center';
+Center.displayName = "Center";
 
 Center.propTypes = {
   maxWidth: PropTypes.number,

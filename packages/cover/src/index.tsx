@@ -1,12 +1,12 @@
-import React, { Children } from 'react';
-import styled from 'styled-components';
-import { forwardRefWithAs } from '@bedrock-layout/type-utils';
-import PropTypes from 'prop-types';
+import React, { Children } from "react";
+import styled from "styled-components";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import PropTypes from "prop-types";
 import {
   spacing as defaultSpacings,
   SpacingTypes,
   mergeSpacings,
-} from '@bedrock-layout/spacing-constants';
+} from "@bedrock-layout/spacing-constants";
 
 const VerticallyCentered = styled.div`
   margin-top: auto;
@@ -42,7 +42,7 @@ const CoverWrapper = styled.div<CoverWrapperProps>`
 
   display: flex;
   flex-direction: column;
-  min-height: ${props => props.minHeight || '100vh'};
+  min-height: ${(props) => props.minHeight || "100vh"};
 `;
 
 export interface CoverProps extends CoverWrapperProps {
@@ -50,7 +50,7 @@ export interface CoverProps extends CoverWrapperProps {
   bottom?: React.ReactNode;
 }
 
-const Cover = forwardRefWithAs<CoverProps, 'div'>(
+const Cover = forwardRefWithAs<CoverProps, "div">(
   ({ children, top, bottom, as, ...props }, ref) => {
     return (
       <CoverWrapper as={as} ref={ref} {...props}>
@@ -62,7 +62,7 @@ const Cover = forwardRefWithAs<CoverProps, 'div'>(
   }
 );
 
-Cover.displayName = 'Cover';
+Cover.displayName = "Cover";
 
 Cover.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(

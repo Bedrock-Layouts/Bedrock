@@ -1,23 +1,23 @@
-import React from 'react';
-import Split from '@bedrock-layout/split';
-import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
-import styled from 'styled-components';
-import { select } from '@storybook/addon-knobs';
+import React from "react";
+import Split from "@bedrock-layout/split";
+import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
+import styled from "styled-components";
+import { select } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Split';
-let name = 'Basic';
+let title = "Split";
+let name = "Basic";
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'lg');
+  const gutter = select("gutter", Object.keys(spacing), "lg");
   const fraction = select(
-    'fraction',
-    ['auto-start', 'auto-end', '1/4', '1/3', '1/2', '2/3', '3/4'],
-    '1/2'
+    "fraction",
+    ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"],
+    "1/2"
   );
   return (
     <Split gutter={gutter as SpacingTypes} fraction={fraction}>

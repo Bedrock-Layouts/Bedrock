@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function useStatefulRef<T>(initialVal = null) {
   let [cur, setCur] = React.useState<T | null>(initialVal);
@@ -13,7 +13,7 @@ function useStatefulRef<T>(initialVal = null) {
     },
   });
 
-  Object.defineProperty(ref, 'current', {
+  Object.defineProperty(ref, "current", {
     get: () => cur as T,
     set: (value: T) => {
       if (!Object.is(cur, value)) {

@@ -1,7 +1,7 @@
-import useStatefulRef from '../src';
+import useStatefulRef from "../src";
 
-describe('useStatefulRef', () => {
-  test('useStatefulRef is not null', () => {
+describe("useStatefulRef", () => {
+  test("useStatefulRef is not null", () => {
     expect(useStatefulRef).toBeTruthy();
   });
 });

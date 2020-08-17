@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type HandleMQLChange = (this: MediaQueryList, env: MediaQueryListEvent) => any;
 

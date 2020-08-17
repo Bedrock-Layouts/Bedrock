@@ -16,6 +16,7 @@
     "build:site": "docz build",
     "lint": "eslint packages/** --no-error-on-unmatched-pattern",
     "check-format": "lerna run check-format",
+    "fix-format": "lerna run fix-format",
     "serve": "docz serve",
     "bootstrap": "yarn run link && lerna bootstrap --hoist && rimraf package-lock.json",
     "link": "lerna exec -- yarn link",

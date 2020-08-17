@@ -1,7 +1,7 @@
-import useMatchContainerSizes from '../src';
+import useMatchContainerSizes from "../src";
 
-describe('useMatchContainerSizes', () => {
-  test('useMatchContainerSizes is not null', () => {
+describe("useMatchContainerSizes", () => {
+  test("useMatchContainerSizes is not null", () => {
     expect(useMatchContainerSizes).toBeTruthy();
   });
 });

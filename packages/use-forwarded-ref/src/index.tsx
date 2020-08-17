@@ -1,5 +1,5 @@
-import React from 'react';
-import useStatefulRef from '@bedrock-layout/use-stateful-ref';
+import React from "react";
+import useStatefulRef from "@bedrock-layout/use-stateful-ref";
 
 export default function useForwardedRef<T>(
   forwardedRef: React.Ref<T>
@@ -8,7 +8,7 @@ export default function useForwardedRef<T>(
   React.useEffect(() => {
     if (!forwardedRef) return;
 
-    if (typeof forwardedRef === 'function') {
+    if (typeof forwardedRef === "function") {
       forwardedRef(innerRef.current);
     } else {
       (forwardedRef as React.MutableRefObject<T | null>).current =

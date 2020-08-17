@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import PropTypes from "prop-types";
 import {
   spacing as defaultSpacings,
   SpacingTypes,
   mergeSpacings,
-} from '@bedrock-layout/spacing-constants';
+} from "@bedrock-layout/spacing-constants";
 
 export interface ColumnsProps {
   gutter?: SpacingTypes;
@@ -24,7 +24,7 @@ const Columns = styled.div<ColumnsProps>`
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: var(--gutter);
-  grid-auto-flow: row ${props => props.dense === true && 'dense'};
+  grid-auto-flow: row ${(props) => props.dense === true && "dense"};
 
   @supports not (grid-gap: var(--gutter)) {
     display: flex;
@@ -39,7 +39,7 @@ const Columns = styled.div<ColumnsProps>`
   }
 `;
 
-Columns.displayName = 'Columns';
+Columns.displayName = "Columns";
 
 Columns.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
@@ -50,7 +50,7 @@ Columns.propTypes = {
 };
 
 Columns.defaultProps = {
-  gutter: 'lg',
+  gutter: "lg",
   columns: 1,
   dense: false,
 };
@@ -60,13 +60,13 @@ export interface ColumnProps {
 }
 
 type SafeSpan = (span: unknown) => number;
-const safeSpan: SafeSpan = span => {
-  return typeof span === 'number' ? span : 1;
+const safeSpan: SafeSpan = (span) => {
+  return typeof span === "number" ? span : 1;
 };
 
-export const Column = styled.div.attrs(props => ({
+export const Column = styled.div.attrs((props) => ({
   /* eslint-disable */
-  ['data-bedrock-layout-column']: '',
+  ["data-bedrock-layout-column"]: "",
 }))<ColumnProps>`
   grid-column: span ${({ span = 1 }) => Math.max(safeSpan(span), 1)} / auto;
 `;
@@ -79,8 +79,8 @@ Column.defaultProps = {
   span: 1,
 };
 
-if (typeof exports !== 'undefined') {
-  Object.defineProperty(exports, '__esModule', {
+if (typeof exports !== "undefined") {
+  Object.defineProperty(exports, "__esModule", {
     value: true,
   });
 }
