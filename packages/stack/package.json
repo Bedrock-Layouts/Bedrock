@@ -42,7 +42,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "clean:build": "rimraf lib",
-    "build": "microbundle build --jsx react && rimraf ./.rts2_cache*"
+    "build": "microbundle build --jsx React.createElement && rimraf ./.rts2_cache*"
   },
   "bugs": {
     "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
