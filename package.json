@@ -20,10 +20,9 @@
     "link": "lerna exec -- yarn link",
     "changes": "dotenv lerna-changelog",
     "clean": "lerna clean",
-    "build": "lerna run clean:build && lerna run build",
+    "build": "yarn run bootstrap && lerna run clean:build && lerna run build",
     "build:watch": "lerna run build:watch --stream",
     "build:storybook": "build-storybook",
-    "initialize": "yarn && yarn run bootstrap && yarn run build",
     "prepublish": "yarn run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package"
