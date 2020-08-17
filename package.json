@@ -97,6 +97,7 @@
     "jest-styled-components": "^7.0.0",
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
+    "lint-staged": "^10.2.11",
     "microbundle": "^0.12.3",
     "pepjs": "^0.5.2",
     "prettier": "^2.0.5",
@@ -106,9 +107,23 @@
     "rimraf": "^3.0.2",
     "typescript-eslint": "0.0.1-alpha.0"
   },
+  "prettier": {
+    "semi": true,
+    "singleQuote": false,
+    "arrowParens": "always"
+  },
+  "lint-staged": {
+    "*.+(js|ts|tsx)": [
+      "eslint"
+    ],
+    "**/*.+(js|json|ts|tsx)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn verify"
+      "pre-commit": "yarn verify && lint-staged"
     }
   }
 }
