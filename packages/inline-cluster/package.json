@@ -43,7 +43,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "clean:build": "rimraf lib",
-    "build": "microbundle build --jsx React.createElement.createElement && rimraf ./.rts2_cache*",
+    "build": "microbundle build --jsx React.createElement.createElement",
     "build:watch": "microbundle build --jsx React.createElement --watch",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
     "fix-format": "npm run prettier -- --write",
