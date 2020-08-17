@@ -26,7 +26,8 @@
     "build:storybook": "build-storybook",
     "prepublish": "yarn run build",
     "publish": "lerna publish",
-    "publish:fix": "lerna publish from-package"
+    "publish:fix": "lerna publish from-package",
+    "verify": "yarn test && yarn run lint && yarn check-format"
   },
   "dependencies": {
     "@bedrock-layout/appboundary": "file:./packages/appboundary",
@@ -104,7 +105,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && yarn run lint"
+      "pre-commit": "yarn verify"
     }
   }
 }
