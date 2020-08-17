@@ -3,7 +3,8 @@
     "react-app",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier"
   ],
   "plugins": ["jsx-a11y", "@typescript-eslint"],
   "ignorePatterns": ["node_modules", "packages/*/lib"],
