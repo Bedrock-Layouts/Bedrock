@@ -23,7 +23,7 @@
     "link": "lerna exec -- yarn link",
     "changes": "dotenv lerna-changelog",
     "clean": "lerna clean",
-    "build": "yarn run bootstrap && lerna run clean:build --parallel && lerna run build",
+    "build": "lerna run clean:build --parallel && lerna run build",
     "build:watch": "lerna run build:watch --stream",
     "build:storybook": "build-storybook",
     "prepublish": "yarn run build",
