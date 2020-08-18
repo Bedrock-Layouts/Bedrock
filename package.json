@@ -25,7 +25,7 @@
     "build": "lerna run clean:build --parallel && lerna run build",
     "build:watch": "lerna run build:watch --stream",
     "build:storybook": "build-storybook",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package",
     "verify": "npm-run-all --parallel check-types test lint check-format"
@@ -123,7 +123,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn verify && lint-staged"
+      "pre-commit": "npm run verify && lint-staged"
     }
   }
 }
