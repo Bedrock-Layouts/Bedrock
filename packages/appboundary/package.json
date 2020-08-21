@@ -42,6 +42,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
     "clean:build": "rimraf lib",
     "build": "microbundle build --jsx React.createElement",
     "build:watch": "microbundle build --jsx React.createElement --watch",
