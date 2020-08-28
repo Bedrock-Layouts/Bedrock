@@ -117,8 +117,7 @@
       "eslint"
     ],
     "**/*.+(js|json|ts|tsx)": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "husky": {
