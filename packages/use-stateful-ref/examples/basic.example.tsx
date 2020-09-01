@@ -1,5 +1,5 @@
-import React from "react";
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import React from "react";
 import styled from "styled-components";
 
 const BorderedBox = styled.div`
@@ -8,8 +8,8 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = "BorderedBox";
 
-let title = "useStatefulRef";
-let name = "Basic";
+const title = "useStatefulRef";
+const name = "Basic";
 
 function Example() {
   const ref = useStatefulRef<HTMLDivElement>(null);

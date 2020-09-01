@@ -1,15 +1,15 @@
-import React from "react";
 import PadBox from "@bedrock-layout/padbox";
-import styled from "styled-components";
 import { array } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "PadBox";
-let name = "Padding Array";
+const title = "PadBox";
+const name = "Padding Array";
 
 function Example() {
   const padding = array("padding", ["md", "lg"]);

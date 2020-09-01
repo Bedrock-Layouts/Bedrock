@@ -1,7 +1,7 @@
-import React from "react";
 import useMediaQuery from "@bedrock-layout/use-media-query";
-import styled from "styled-components";
 import { number } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
@@ -9,8 +9,8 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = "BorderedBox";
 
-let title = "useMediaQuery";
-let name = "Basic";
+const title = "useMediaQuery";
+const name = "Basic";
 
 function Example() {
   const width = number("screen-width", 640);

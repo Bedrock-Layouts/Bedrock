@@ -1,7 +1,7 @@
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
+import useContainterQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { ThemeContext } from "styled-components";
-import useContainterQuery from "@bedrock-layout/use-container-query";
-import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 
 const safeTheme = { breakPoints: {} };
 

@@ -1,7 +1,8 @@
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
-import { spacing } from "@bedrock-layout/spacing-constants";
 import { ThemeProvider } from "styled-components";
+
 import Split from "../src";
 
 const Lorem = () => (

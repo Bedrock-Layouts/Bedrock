@@ -1,19 +1,19 @@
-import React from 'react';
-import Stack from '@bedrock-layout/stack';
-import { spacing, SpacingTypes } from '@bedrock-layout/spacing-constants';
-import styled from 'styled-components';
-import { select } from '@storybook/addon-knobs';
+import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
+import Stack from "@bedrock-layout/stack";
+import { select } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-BorderedBox.displayName = 'BorderedBox';
+BorderedBox.displayName = "BorderedBox";
 
-let title = 'Stack';
-let name = 'Basic';
+const title = "Stack";
+const name = "Basic";
 
 function Example() {
-  const gutter = select('gutter', Object.keys(spacing), 'lg');
+  const gutter = select("gutter", Object.keys(spacing), "lg");
   return (
     <Stack gutter={gutter as SpacingTypes}>
       <BorderedBox>

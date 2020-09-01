@@ -1,16 +1,16 @@
-import React from "react";
 import PadBox from "@bedrock-layout/padbox";
-import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
-import styled from "styled-components";
+import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import { select } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "PadBox";
-let name = "Basic";
+const title = "PadBox";
+const name = "Basic";
 
 function Example() {
   const padding = select("padding", Object.keys(spacing), "lg");

@@ -1,8 +1,8 @@
-import React from "react";
-import styled, { ThemeContext } from "styled-components";
-import PropTypes from "prop-types";
 import Center from "@bedrock-layout/center";
 import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { ThemeContext } from "styled-components";
 
 export interface AppBoundaryProps {
   children: React.ReactNode;

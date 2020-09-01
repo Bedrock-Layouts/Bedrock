@@ -1,15 +1,15 @@
-import React from "react";
 import Grid from "@bedrock-layout/grid";
-import styled from "styled-components";
 import { number } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Grid";
-let name = "minItemWidth";
+const title = "Grid";
+const name = "minItemWidth";
 
 function Example() {
   const minItemWidth = number("minItemWidth", 320);

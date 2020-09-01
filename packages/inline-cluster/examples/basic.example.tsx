@@ -1,16 +1,16 @@
-import React from "react";
 import InlineCluster from "@bedrock-layout/inline-cluster";
-import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
-import styled from "styled-components";
+import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import { select } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "InlineCluster";
-let name = "Basic";
+const title = "InlineCluster";
+const name = "Basic";
 
 function Example() {
   const gutter = select("gutter", Object.keys(spacing), "lg");
