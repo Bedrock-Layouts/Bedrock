@@ -1,16 +1,16 @@
-import React from "react";
 import Cover from "@bedrock-layout/cover";
+import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
+import { select, text } from "@storybook/addon-knobs";
+import React from "react";
 import styled from "styled-components";
-import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
-import { text, select } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Cover";
-let name = "With bottom";
+const title = "Cover";
+const name = "With bottom";
 
 function Example() {
   const minHeight = text("minHeight", "100vh");

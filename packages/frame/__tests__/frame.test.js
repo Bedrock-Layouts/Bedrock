@@ -1,5 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
+
 import Frame from "../src";
 
 describe("Frame", () => {

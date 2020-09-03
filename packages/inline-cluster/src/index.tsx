@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
 import {
-  spacing as defaultSpacings,
   SpacingTypes,
+  spacing as defaultSpacings,
   mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 type JustifyAlignOptions = "start" | "center" | "end";
 

@@ -1,7 +1,7 @@
-import React from "react";
 import Frame from "@bedrock-layout/frame";
-import styled from "styled-components";
 import { array, text } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const Center = styled.div`
   width: 65vw;
@@ -9,8 +9,8 @@ const Center = styled.div`
 `;
 Center.displayName = "Center";
 
-let title = "Frame";
-let name = "Basic";
+const title = "Frame";
+const name = "Basic";
 
 function Example() {
   const ratio = array("ratio", ["16", "9"]);

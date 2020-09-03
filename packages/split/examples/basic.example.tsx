@@ -1,16 +1,16 @@
-import React from "react";
+import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import Split from "@bedrock-layout/split";
-import { spacing, SpacingTypes } from "@bedrock-layout/spacing-constants";
-import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
+import React from "react";
+import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Split";
-let name = "Basic";
+const title = "Split";
+const name = "Basic";
 
 function Example() {
   const gutter = select("gutter", Object.keys(spacing), "lg");

@@ -1,9 +1,10 @@
-import React from "react";
-import { create, act } from "react-test-renderer";
 import { spacing } from "@bedrock-layout/spacing-constants";
-import { ThemeProvider } from "styled-components";
-import { SplitSwitcher, ColumnsSwitcher } from "../src";
 import useContainerQuery from "@bedrock-layout/use-container-query";
+import React from "react";
+import { act, create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
+
+import { ColumnsSwitcher, SplitSwitcher } from "../src";
 
 jest.mock("@bedrock-layout/use-container-query");
 

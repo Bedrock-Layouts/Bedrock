@@ -1,12 +1,12 @@
-import React, { Children } from "react";
-import styled from "styled-components";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
-import PropTypes from "prop-types";
 import {
-  spacing as defaultSpacings,
   SpacingTypes,
+  spacing as defaultSpacings,
   mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import PropTypes from "prop-types";
+import React, { Children } from "react";
+import styled from "styled-components";
 
 const VerticallyCentered = styled.div`
   margin-top: auto;

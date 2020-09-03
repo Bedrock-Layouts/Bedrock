@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
 import {
-  spacing as defaultSpacings,
   SpacingTypes,
+  spacing as defaultSpacings,
   mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 type FractionTypes =
   | "auto-start"

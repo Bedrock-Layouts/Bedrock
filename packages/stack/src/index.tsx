@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import {
-  spacing as defaultSpacings,
   SpacingTypes,
+  spacing as defaultSpacings,
   mergeSpacings,
-} from '@bedrock-layout/spacing-constants';
+} from "@bedrock-layout/spacing-constants";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 export interface StackProps {
   gutter?: SpacingTypes;
@@ -39,7 +39,7 @@ const Stack = styled.div<StackProps>`
   }
 `;
 
-Stack.displayName = 'Stack';
+Stack.displayName = "Stack";
 
 Stack.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
@@ -48,7 +48,7 @@ Stack.propTypes = {
 };
 
 Stack.defaultProps = {
-  gutter: 'lg',
+  gutter: "lg",
 };
 
 export default Stack;

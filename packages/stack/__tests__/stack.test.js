@@ -1,12 +1,13 @@
-import React from 'react';
-import { create } from 'react-test-renderer';
-import { spacing } from '@bedrock-layout/spacing-constants';
-import { ThemeProvider } from 'styled-components';
-import Stack from '../src';
+import { spacing } from "@bedrock-layout/spacing-constants";
+import React from "react";
+import { create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
+
+import Stack from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(4).keys()).map(i => (
+    {Array.from(Array(4).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
         vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus
@@ -21,13 +22,13 @@ const Lorem = () => (
   </>
 );
 
-describe('Stack', () => {
-  describe('correct usage', () => {
-    test('Stack is not null', () => {
+describe("Stack", () => {
+  describe("correct usage", () => {
+    test("Stack is not null", () => {
       expect(Stack).toBeTruthy();
     });
 
-    it('renders default gutters', () => {
+    it("renders default gutters", () => {
       const stack = create(
         <Stack>
           <Lorem />
@@ -36,8 +37,8 @@ describe('Stack', () => {
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
-    it('renders all the gutter options', () => {
-      Object.keys(spacing).forEach(gutter => {
+    it("renders all the gutter options", () => {
+      Object.keys(spacing).forEach((gutter) => {
         const stack = create(
           <Stack gutter={gutter}>
             <Lorem />
@@ -47,9 +48,9 @@ describe('Stack', () => {
       });
     });
 
-    it('renders with theme overrides', () => {
+    it("renders with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { md: '200px' } }}>
+        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
           <Stack>
             <Lorem />
           </Stack>
@@ -59,7 +60,7 @@ describe('Stack', () => {
     });
   });
 
-  describe('incorrect usage', () => {
+  describe("incorrect usage", () => {
     let originalError;
     let spy;
     beforeEach(() => {
@@ -71,11 +72,11 @@ describe('Stack', () => {
       console.error = originalError;
     });
 
-    it('renders default with console error with wrong input', () => {
+    it("renders default with console error with wrong input", () => {
       expect(spy.mock.calls.length).toBe(0);
 
       const errorStack = create(
-        <Stack gutter='incorrect'>
+        <Stack gutter="incorrect">
           <Lorem />
         </Stack>
       );

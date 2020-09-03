@@ -1,5 +1,5 @@
-import React from "react";
 import useContainerQuery from "@bedrock-layout/use-container-query";
+import React from "react";
 import styled from "styled-components";
 
 const BorderedBox = styled.div`
@@ -8,8 +8,8 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = "BorderedBox";
 
-let title = "useContainerQuery";
-let name = "Width Range";
+const title = "useContainerQuery";
+const name = "Width Range";
 
 function Example() {
   const [node, ref] = React.useState(null);

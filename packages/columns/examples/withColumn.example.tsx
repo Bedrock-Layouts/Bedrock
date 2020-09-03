@@ -1,15 +1,15 @@
-import React from "react";
 import Columns, { Column } from "@bedrock-layout/columns";
+import { boolean, number } from "@storybook/addon-knobs";
+import React from "react";
 import styled from "styled-components";
-import { number, boolean } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Columns";
-let name = "With Column Component";
+const title = "Columns";
+const name = "With Column Component";
 
 function Example() {
   const columns = number("columns", 3);

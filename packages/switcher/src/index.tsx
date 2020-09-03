@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react";
-import { ThemeContext } from "styled-components";
-import PropTypes from "prop-types";
-import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
-import Stack, { StackProps } from "@bedrock-layout/stack";
-import Split, { SplitProps } from "@bedrock-layout/split";
 import Columns, { ColumnsProps } from "@bedrock-layout/columns";
-import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
-import useContainerQuery from "@bedrock-layout/use-container-query";
+import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
+import Split, { SplitProps } from "@bedrock-layout/split";
+import Stack, { StackProps } from "@bedrock-layout/stack";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import useContainerQuery from "@bedrock-layout/use-container-query";
+import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
+import PropTypes from "prop-types";
+import React from "react";
+import { ThemeContext } from "styled-components";
 
 export interface SplitSwitcherProps extends StackProps, SplitProps {
   switchAt?: number;
@@ -70,8 +70,6 @@ export const ColumnsSwitcher = forwardRefWithAs<ColumnSwitcherProps, "div">(
 );
 
 ColumnsSwitcher.displayName = "ColumnsSwitcher";
-
-//console.log(Columns);
 
 ColumnsSwitcher.propTypes = {
   ...Columns.propTypes,

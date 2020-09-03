@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 
 type UseContainterQuery = (
@@ -20,9 +20,14 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
     let observer: ResizeObserver;
     if (node) {
       observer = new ResizeObserver(([entry]) => {
-        // using `any` as this is future forward, but the types do not yet exist
+        /* 
+        I am using `any` as this is future forward, but the types do not yet exist
+        due to it being still experimental
+        */
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const nodeWidth = (entry as any).borderBox
-          ? (entry as any).borderBox.inlineSize
+          ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (entry as any).borderBox.inlineSize
           : entry.contentRect.width;
         if (typeof maxWidth !== "undefined") {
           setMatch(nodeWidth >= width && nodeWidth <= maxWidth);

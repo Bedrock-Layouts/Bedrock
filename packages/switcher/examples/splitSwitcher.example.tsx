@@ -1,20 +1,20 @@
-import React from "react";
-import { SplitSwitcher } from "@bedrock-layout/switcher";
 import {
-  spacing,
-  breakPoints,
   SpacingTypes,
+  breakPoints,
+  spacing,
 } from "@bedrock-layout/spacing-constants";
+import { SplitSwitcher } from "@bedrock-layout/switcher";
+import { number, select } from "@storybook/addon-knobs";
+import React from "react";
 import styled from "styled-components";
-import { select, number } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Switcher";
-let name = "SplitSwitcher";
+const title = "Switcher";
+const name = "SplitSwitcher";
 
 function Example() {
   const gutter = select("gutter", Object.keys(spacing), "lg");

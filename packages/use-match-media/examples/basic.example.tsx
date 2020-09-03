@@ -1,5 +1,5 @@
-import React from "react";
 import useMatchMedia from "@bedrock-layout/use-match-media";
+import React from "react";
 import styled from "styled-components";
 
 const BorderedBox = styled.div`
@@ -8,8 +8,8 @@ const BorderedBox = styled.div`
 
 BorderedBox.displayName = "BorderedBox";
 
-let title = "useMatchMedia";
-let name = "Basic";
+const title = "useMatchMedia";
+const name = "Basic";
 
 function Example() {
   const matches = useMatchMedia();

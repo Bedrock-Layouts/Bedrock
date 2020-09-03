@@ -1,21 +1,21 @@
-import React from "react";
-import { ColumnsSwitcher } from "@bedrock-layout/switcher";
-import {
-  spacing,
-  breakPoints,
-  SpacingTypes,
-} from "@bedrock-layout/spacing-constants";
 import { Column } from "@bedrock-layout/columns";
+import {
+  SpacingTypes,
+  breakPoints,
+  spacing,
+} from "@bedrock-layout/spacing-constants";
+import { ColumnsSwitcher } from "@bedrock-layout/switcher";
+import { boolean, number, select } from "@storybook/addon-knobs";
+import React from "react";
 import styled from "styled-components";
-import { select, number, boolean } from "@storybook/addon-knobs";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-let title = "Switcher";
-let name = "ColumnSwitcher";
+const title = "Switcher";
+const name = "ColumnSwitcher";
 
 function Example() {
   const gutter = select("gutter", Object.keys(spacing), "lg");

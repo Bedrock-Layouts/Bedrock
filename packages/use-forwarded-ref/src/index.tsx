@@ -1,5 +1,5 @@
-import React from "react";
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import React from "react";
 
 export default function useForwardedRef<T>(
   forwardedRef: React.Ref<T>

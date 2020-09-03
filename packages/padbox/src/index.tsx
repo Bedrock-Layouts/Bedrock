@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
 import {
-  spacing as defaultSpacings,
   SpacingTypes,
+  spacing as defaultSpacings,
   mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const keyToProperty = (key: string) => {
   type map = { [s: string]: string };
@@ -91,9 +91,8 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = "lg") => {
     ) {
       console.error("Invalid padding Type");
     }
-
-    return `padding: ${Array()
-      .concat(padArr)
+    const safePadArr = Array.isArray(padArr) ? padArr : [padArr];
+    return `padding: ${safePadArr
       .map((pad: SpacingTypes) => spacingMap[pad])
       .join(" ")};`;
   }
