@@ -1,29 +1,25 @@
-// import React from "react";
-// import ReactDOM from "react-dom/";
-// import { act } from "react-dom/test-utils";
+import React from "react";
+import ReactDOM from "react-dom/";
+import { act } from "react-dom/test-utils";
+import ResizeObserver from "resize-observer-polyfill";
 
 import useContainerQuery from "../src";
 
 //import { create } from "react-test-renderer";
 
-const OBSERVE = jest.fn();
-const UNOBSERVE = jest.fn();
-// class ResizeObserverMock {
-//   constructor() {
-//     this.observe = OBSERVE;
-//     this.unobserve = UNOBSERVE;
-//   }
-// }
+jest.mock("resize-observer-polyfill", () =>
+  jest.fn((impl) => ({
+    observe: jest.fn(() => impl([{ contentRect: { width: 300 } }])),
+    disconnect: jest.fn(),
+    unobserve: jest.fn(),
+  }))
+);
 
-window.ResizeObserver = jest.fn(() => ({
-  observe: OBSERVE,
-  unobserve: UNOBSERVE,
-}));
-
-// const HookWrapper = () => {
-//   useContainerQuery({}, 320);
-//   return null;
-// };
+let matches;
+const HookWrapper = () => {
+  matches = useContainerQuery(document.createElement("div"), 320);
+  return null;
+};
 
 describe("useContainerQuery", () => {
   let container;
@@ -34,6 +30,7 @@ describe("useContainerQuery", () => {
   });
 
   afterEach(() => {
+    matches = undefined;
     document.body.removeChild(container);
     container = null;
   });
@@ -41,11 +38,12 @@ describe("useContainerQuery", () => {
     expect(useContainerQuery).toBeTruthy();
   });
 
-  // test("ResizeObserver is called", () => {
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper />, container);
-  //   });
+  test("ResizeObserver is called", () => {
+    act(() => {
+      ReactDOM.render(<HookWrapper />, container);
+    });
 
-  //   expect(OBSERVE).toBeCalled();
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(true);
+  });
 });
