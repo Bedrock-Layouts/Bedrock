@@ -21,7 +21,11 @@ module.exports = {
   // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: null,
+  collectCoverageFrom: [
+    "**/packages/**/src/**/*.js",
+    "**/packages/**/src/**/*.ts",
+    "**/packages/**/src/**/*.tsx",
+  ],
 
   // The directory where Jest should output its coverage files
   // coverageDirectory: null,
@@ -40,7 +44,50 @@ module.exports = {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: null,
+  coverageThreshold: {
+    global: {
+      statements: 95,
+      branches: 89,
+      functions: 95,
+      lines: 95,
+    },
+    "packages/use-container-query/src/index.tsx": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+    "packages/use-forwarded-ref/src": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+    "packages/use-stateful-ref/src": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+    "packages/use-match-container-sizes/src": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+    "packages/use-media-query/src": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+    "packages/type-utils/src": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: null,
@@ -75,9 +122,9 @@ module.exports = {
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$':
-      '<rootDir>/__mocks__/fileMock.js',
-    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$":
+      "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -125,7 +172,7 @@ module.exports = {
   // setupFiles: [''],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ['./setupTest.js'],
+  setupFilesAfterEnv: ["./setupTest.js"],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
@@ -146,7 +193,7 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['node_modules', '.docz'],
+  testPathIgnorePatterns: ["node_modules", ".docz"],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],

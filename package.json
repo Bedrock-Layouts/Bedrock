@@ -11,6 +11,7 @@
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --notify",
     "dev": "docz dev",
     "build:site": "docz build",
@@ -28,7 +29,7 @@
     "prepublish": "npm run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package",
-    "verify": "npm-run-all --parallel check-types test lint check-format"
+    "verify": "npm-run-all --parallel check-types test lint check-format test:coverage"
   },
   "dependencies": {
     "@bedrock-layout/appboundary": "file:./packages/appboundary",
@@ -132,7 +133,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run verify"
     }
   }
 }

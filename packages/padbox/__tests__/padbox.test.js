@@ -65,6 +65,7 @@ describe("PadBox", () => {
     });
 
     it("use padding object", () => {
+      window.CSS.supports.mockReturnValue(true);
       [
         { left: "md" },
         { right: "md" },
@@ -93,6 +94,24 @@ describe("PadBox", () => {
         </ThemeProvider>
       );
       expect(stack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with classic css properties for old browser", () => {
+      window.CSS.supports.mockReturnValue(false);
+
+      [
+        { left: "md" },
+        { right: "md" },
+        { top: "md" },
+        { bottom: "md" },
+        { inlineStart: "md" },
+        { inlineEnd: "md" },
+        { blockStart: "md" },
+        { blockEnd: "md" },
+      ].forEach((padding) => {
+        const padbox = create(<PadBox padding={padding} />);
+        expect(padbox.toJSON()).toMatchSnapshot();
+      });
     });
   });
 
