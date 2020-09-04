@@ -192,6 +192,94 @@ exports[`PadBox correct usage renders default padding 1`] = `
 </div>
 `;
 
+exports[`PadBox correct usage renders with classic css properties for old browser 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 2`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 3`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-top: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 4`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-bottom: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 5`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 6`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 7`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-top: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`PadBox correct usage renders with classic css properties for old browser 8`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-bottom: 0.5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`PadBox correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
