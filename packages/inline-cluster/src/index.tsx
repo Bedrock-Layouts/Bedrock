@@ -28,9 +28,10 @@ const InlineClusterWrapper = styled.div<InlineClusterProps>`
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
       : mergeSpacings(spacing).lg};
-  box-sizing: border-box;
-  display: flex;
+
+  display: inline-flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: ${(props) =>
     typeof props.justify !== "undefined" && justifyAlignMap[props.justify]
       ? justifyAlignMap[props.justify]
