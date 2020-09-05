@@ -79,6 +79,15 @@ describe("InlineCluster", () => {
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
+
+    it("accepts className prop", () => {
+      const inlineCluster = create(
+        <InlineCluster className="CLASSNAME">
+          <Lorem />
+        </InlineCluster>
+      );
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
+    });
   });
 
   describe("incorrect usage", () => {

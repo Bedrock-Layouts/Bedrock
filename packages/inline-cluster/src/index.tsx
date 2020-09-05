@@ -16,7 +16,8 @@ const justifyAlignMap: JustifyAlignMap = {
   end: "flex-end",
   center: "center",
 };
-export interface InlineClusterProps {
+export interface InlineClusterProps
+  extends React.PropsWithoutRef<JSX.IntrinsicElements["div"]> {
   justify?: JustifyAlignOptions;
   align?: JustifyAlignOptions;
   gutter?: SpacingTypes;
