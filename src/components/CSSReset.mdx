@@ -7,19 +7,28 @@ menu: Components
 
 A CSS Reset that compliments well with the Bedrock Layout Primitives
 
-## Use case
+## Another CSS Reset
 
-When you don't have your own CSS reset.
+I know there are several CSS Resets out there and one might ask why another one.
+This reset has been curated from a few resouces and has become my default reset for any project I do now.
+Though this reset is not required for Bedrock Layout Primitives, it does complement it nicely and I would highly recomend it.
 
 ## How to install
 
-If you haven't already, install `styled-components`:
+To get the full benefit, you use the [focus-visible polyfill](https://www.npmjs.com/package/focus-visible).
+It's most easily used by installing from npm:
+
+```bash
+  npm install focus-visible
+```
+
+If you plan on using the `GlobalStyle` component or the mixin, then you will need to install `styled-components`:
 
 ```bash
   npm install styled-components
 ```
 
-Then install the stack component
+Then install the reset:
 
 ```bash
   npm install @bedrock-layout/css-reset
@@ -63,3 +72,9 @@ You can also just bring in the CSS Stylesheet directly from the `lib` folder:
 ```javascript
 import "@bedrock-layout/css-reset/lib/reset.css";
 ```
+
+## Resources
+
+- [A Modern CSS Reset](https://hankchizljaw.com/wrote/a-modern-css-reset/)
+- [Axioms](https://every-layout.dev/rudiments/axioms/)
+- [focus-visible explainer](https://github.com/WICG/focus-visible/blob/HEAD/explainer.md)
