@@ -6,10 +6,12 @@ export const reset = css`
   *::after {
     box-sizing: border-box;
   }
+
   ul[class],
   ol[class] {
     padding: 0;
   }
+
   body,
   h1,
   h2,
@@ -26,6 +28,7 @@ export const reset = css`
   dd {
     margin: 0;
   }
+
   body {
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -33,23 +36,28 @@ export const reset = css`
     line-height: 1.5;
     font-size: 100%;
   }
+
   ul[class],
   ol[class] {
     list-style: none;
   }
+
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
+
   img {
     max-width: 100%;
     display: block;
   }
+
   input,
   button,
   textarea,
   select {
     font: inherit;
   }
+
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
@@ -58,6 +66,7 @@ export const reset = css`
       scroll-behavior: auto !important;
     }
   }
+
   p,
   h1,
   h2,
@@ -68,6 +77,10 @@ export const reset = css`
   li,
   figcaption {
     max-width: 60ch;
+  }
+
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
   }
 `;
 
