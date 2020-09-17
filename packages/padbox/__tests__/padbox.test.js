@@ -130,7 +130,7 @@ describe("PadBox", () => {
     });
 
     it("renders default with console error with wrong input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <PadBox padding="incorrect">
@@ -138,12 +138,12 @@ describe("PadBox", () => {
         </PadBox>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders with console error with wrong input in array", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <PadBox padding={["incorrect", "incorrect"]}>
@@ -151,12 +151,12 @@ describe("PadBox", () => {
         </PadBox>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders with console error with wrong input in object", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <PadBox padding={{ incorrect: "incorrect" }}>
@@ -164,7 +164,7 @@ describe("PadBox", () => {
         </PadBox>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

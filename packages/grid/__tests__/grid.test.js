@@ -72,19 +72,16 @@ describe("Grid", () => {
   });
 
   describe("incorrect usage", () => {
-    let originalError;
-    let spy;
     beforeEach(() => {
-      originalError = console.error;
-      spy = jest.fn();
-      console.error = spy;
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
-      console.error = originalError;
+      console.error.mockRestore();
     });
 
     it("renders default with console error with wrong gutter input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Grid gutter="incorrect">
@@ -92,12 +89,12 @@ describe("Grid", () => {
         </Grid>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with minItemWidth input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Grid minItemWidth="incorrect">
@@ -105,7 +102,7 @@ describe("Grid", () => {
         </Grid>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
