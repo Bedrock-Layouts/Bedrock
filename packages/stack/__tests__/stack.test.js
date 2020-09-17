@@ -61,19 +61,16 @@ describe("Stack", () => {
   });
 
   describe("incorrect usage", () => {
-    let originalError;
-    let spy;
     beforeEach(() => {
-      originalError = console.error;
-      spy = jest.fn();
-      console.error = spy;
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
-      console.error = originalError;
+      console.error.mockRestore();
     });
 
     it("renders default with console error with wrong input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Stack gutter="incorrect">
@@ -81,7 +78,7 @@ describe("Stack", () => {
         </Stack>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

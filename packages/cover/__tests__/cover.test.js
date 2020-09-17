@@ -130,19 +130,16 @@ describe("Cover", () => {
   });
 
   describe("incorrect usage", () => {
-    let originalError;
-    let spy;
     beforeEach(() => {
-      originalError = console.error;
-      spy = jest.fn();
-      console.error = spy;
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
-      console.error = originalError;
+      console.error.mockRestore();
     });
 
     it("renders default with console error with wrong gutter", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Cover gutter="incorrect">
@@ -150,7 +147,7 @@ describe("Cover", () => {
         </Cover>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
     it("renders with min-height incorrect with invalid minHeight", () => {
@@ -164,7 +161,7 @@ describe("Cover", () => {
     });
 
     it("renders throws with more than one child", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
       class CatchError extends React.Component {
         state = { isError: false };
         componentDidCatch() {
@@ -184,7 +181,7 @@ describe("Cover", () => {
         </CatchError>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
     });
   });
 });

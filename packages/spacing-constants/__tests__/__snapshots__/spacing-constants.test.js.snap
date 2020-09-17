@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spacing Constants constant snampshot 1`] = `
+exports[`Spacing Constants constant snapshot 1`] = `
 Object {
   "breakPoints": Object {
     "large": 1199,
@@ -32,6 +32,40 @@ Object {
     "xs": "0.125rem",
     "xxl": "4rem",
   },
+}
+`;
+
+exports[`Spacing Constants does not break if called with no object 1`] = `
+Object {
+  "large": 1199,
+  "largeOnly": Array [
+    1024,
+    1199,
+  ],
+  "medium": 1023,
+  "mediumOnly": Array [
+    640,
+    1023,
+  ],
+  "smallOnly": 639,
+  "xlarge": 1439,
+  "xlargeOnly": Array [
+    1200,
+    1439,
+  ],
+  "xxlarge": 1920,
+}
+`;
+
+exports[`Spacing Constants does not break if called without an object 1`] = `
+Object {
+  "lg": "1rem",
+  "md": "0.5rem",
+  "none": "0px",
+  "sm": "0.25rem",
+  "xl": "2rem",
+  "xs": "0.125rem",
+  "xxl": "4rem",
 }
 `;
 

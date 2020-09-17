@@ -52,19 +52,16 @@ describe("Column", () => {
   });
 
   describe("incorrect usage", () => {
-    let originalError;
-    let spy;
     beforeEach(() => {
-      originalError = console.error;
-      spy = jest.fn();
-      console.error = spy;
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
-      console.error = originalError;
+      console.error.mockRestore();
     });
 
     it("renders default with console error with wrong span input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Columns>
@@ -74,7 +71,7 @@ describe("Column", () => {
         </Columns>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -159,19 +156,16 @@ describe("Columns", () => {
   });
 
   describe("incorrect usage", () => {
-    let originalError;
-    let spy;
     beforeEach(() => {
-      originalError = console.error;
-      spy = jest.fn();
-      console.error = spy;
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
-      console.error = originalError;
+      console.error.mockRestore();
     });
 
     it("renders default with console error with wrong gutter input", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Columns gutter="incorrect">
@@ -179,7 +173,7 @@ describe("Columns", () => {
         </Columns>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -202,7 +196,7 @@ describe("Columns", () => {
     });
 
     it("renders default with console error with incorrect column type", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Columns columns="incorrect">
@@ -210,12 +204,12 @@ describe("Columns", () => {
         </Columns>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with incorrect dense type", () => {
-      expect(spy.mock.calls.length).toBe(0);
+      expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Columns dense="incorrect">
@@ -223,7 +217,7 @@ describe("Columns", () => {
         </Columns>
       );
 
-      expect(spy.mock.calls.length).toBe(1);
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
