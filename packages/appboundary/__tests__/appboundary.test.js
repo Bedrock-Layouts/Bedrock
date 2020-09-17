@@ -53,6 +53,7 @@ describe("AppBoundary", () => {
   describe("incorrect usage", () => {
     beforeEach(() => {
       jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
     });
     afterEach(() => {
       console.error.mockRestore();
