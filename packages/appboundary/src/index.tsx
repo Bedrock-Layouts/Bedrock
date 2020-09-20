@@ -18,7 +18,7 @@ const Outer = styled.div`
 const safeTheme = { breakPoints: {} };
 
 const AppBoundary = ({ children }: AppBoundaryProps) => {
-  const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
+  const { breakPoints } = React.useContext(ThemeContext) || safeTheme;
   const maxWidth = mergeBreakpoints(breakPoints).xxlarge;
   return (
     <Outer>
