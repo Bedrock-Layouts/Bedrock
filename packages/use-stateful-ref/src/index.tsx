@@ -4,14 +4,8 @@ function useStatefulRef<T>(initialVal = null) {
   // eslint-disable-next-line prefer-const
   let [cur, setCur] = React.useState<T | null>(initialVal);
 
-  const [ref] = React.useState({
-    get current() {
-      return cur as T;
-    },
-    set current(value: T) {
-      cur = value;
-      setCur(value);
-    },
+  const { current: ref } = React.useRef({
+    current: cur,
   });
 
   Object.defineProperty(ref, "current", {
