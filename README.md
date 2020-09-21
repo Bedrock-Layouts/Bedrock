@@ -32,4 +32,4 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Cover                  |
 | ✅     | Frame                  |
 | 🛠      | MasonaryGrid           |
-| 🛠      | CSS Reset              |
+| ✅     | CSS Reset              |

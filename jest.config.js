@@ -46,10 +46,10 @@ module.exports = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
-      statements: 95.98,
-      branches: 91.48,
-      lines: 95.83,
-      functions: 96.43,
+      statements: 100,
+      branches: 94.57,
+      lines: 100,
+      functions: 100,
     },
     "packages/use-match-container-sizes/src": {
       statements: 0,
@@ -57,7 +57,7 @@ module.exports = {
       functions: 0,
       lines: 0,
     },
-    "packages/use-media-query/src": {
+    "packages/use-match-media/src": {
       statements: 0,
       branches: 0,
       functions: 0,
