@@ -9,8 +9,7 @@ type ContainerMatchMap = { [s: string]: boolean };
 type UseMatchMedia = () => ContainerMatchMap;
 
 export const useMatchMedia: UseMatchMedia = () => {
-  const constants = React.useContext(ThemeContext) || safeTheme;
-  const breakPoints = constants.breakPoints || {};
+  const { breakPoints } = React.useContext(ThemeContext) || safeTheme;
   const mergedBreakPoints = mergeBreakpoints(breakPoints);
 
   return Object.entries(mergedBreakPoints).reduce((acc, [key, value]) => {
