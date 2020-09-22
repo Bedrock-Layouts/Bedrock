@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useMatchMedia should call useMediaQuery 1`] = `
+Object {
+  "large": true,
+  "largeOnly": true,
+  "medium": true,
+  "mediumOnly": true,
+  "smallOnly": true,
+  "xlarge": true,
+  "xlargeOnly": true,
+  "xxlarge": true,
+}
+`;
+
+exports[`useMatchMedia should call useMediaQuery 2`] = `
+Array [
+  Array [
+    "(max-width:639px)",
+  ],
+  Array [
+    "(min-width:640px) and (max-width:1023px)",
+  ],
+  Array [
+    "(min-width:1024px) and (max-width:1199px)",
+  ],
+  Array [
+    "(min-width:1200px) and (max-width:1439px)",
+  ],
+  Array [
+    "(max-width:1023px)",
+  ],
+  Array [
+    "(max-width:1199px)",
+  ],
+  Array [
+    "(max-width:1439px)",
+  ],
+  Array [
+    "(max-width:1920px)",
+  ],
+]
+`;
