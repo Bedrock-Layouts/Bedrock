@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useMatchContainerSizes should call useContainerQuery 1`] = `
+Object {
+  "large": true,
+  "largeOnly": true,
+  "medium": true,
+  "mediumOnly": true,
+  "smallOnly": true,
+  "xlarge": true,
+  "xlargeOnly": true,
+  "xxlarge": true,
+}
+`;
+
+exports[`useMatchContainerSizes should call useContainerQuery 2`] = `
+Array [
+  Array [
+    <div />,
+    639,
+    undefined,
+  ],
+  Array [
+    <div />,
+    640,
+    1023,
+  ],
+  Array [
+    <div />,
+    1024,
+    1199,
+  ],
+  Array [
+    <div />,
+    1200,
+    1439,
+  ],
+  Array [
+    <div />,
+    1023,
+    undefined,
+  ],
+  Array [
+    <div />,
+    1199,
+    undefined,
+  ],
+  Array [
+    <div />,
+    1439,
+    undefined,
+  ],
+  Array [
+    <div />,
+    1920,
+    undefined,
+  ],
+]
+`;

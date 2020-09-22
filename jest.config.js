@@ -47,21 +47,9 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 100,
-      branches: 94.57,
+      branches: 94.74,
       lines: 100,
       functions: 100,
-    },
-    "packages/use-match-container-sizes/src": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
-    "packages/use-match-media/src": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
     },
   },
 

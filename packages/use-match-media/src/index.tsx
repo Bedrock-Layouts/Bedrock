@@ -19,7 +19,7 @@ export const useMatchMedia: UseMatchMedia = () => {
         ? `(min-width:${width}px) and (max-width:${maxWidth}px)`
         : `(max-width:${width}px)`;
 
-    /* eslint-disable */
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     acc[key] = useMediaQuery(query);
     return acc;
   }, {} as { [s: string]: boolean });
