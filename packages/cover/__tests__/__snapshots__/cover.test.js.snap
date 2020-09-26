@@ -141,7 +141,7 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 }
 
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -174,7 +174,7 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
 }
 
 .c0 {
-  --gutter: 2rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,6 +199,105 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
 `;
 
 exports[`Cover correct usage renders all the gutter options 7`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the gutter options 8`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the gutter options 9`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the gutter options 10`] = `
 .c1 {
   margin-top: auto;
   margin-bottom: auto;
@@ -430,6 +529,105 @@ exports[`Cover correct usage renders all the padding options 6`] = `
 `;
 
 exports[`Cover correct usage renders all the padding options 7`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the padding options 8`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the padding options 9`] = `
+.c1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+.c0 {
+  --gutter: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover correct usage renders all the padding options 10`] = `
 .c1 {
   margin-top: auto;
   margin-bottom: auto;

@@ -99,7 +99,7 @@ exports[`PadBox correct usage renders all the padding options 4`] = `
 exports[`PadBox correct usage renders all the padding options 5`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 <div
@@ -123,7 +123,7 @@ exports[`PadBox correct usage renders all the padding options 5`] = `
 exports[`PadBox correct usage renders all the padding options 6`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 <div
@@ -145,6 +145,78 @@ exports[`PadBox correct usage renders all the padding options 6`] = `
 `;
 
 exports[`PadBox correct usage renders all the padding options 7`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`PadBox correct usage renders all the padding options 8`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`PadBox correct usage renders all the padding options 9`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`PadBox correct usage renders all the padding options 10`] = `
 .c0 {
   box-sizing: border-box;
   padding: 4rem;
@@ -196,6 +268,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-left: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 
 <div
@@ -207,6 +280,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-right: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 <div
@@ -218,6 +292,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-top: 0.5rem;
+  padding-block-start: 0.5rem;
 }
 
 <div
@@ -229,6 +304,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-bottom: 0.5rem;
+  padding-block-end: 0.5rem;
 }
 
 <div
@@ -240,6 +316,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-left: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 
 <div
@@ -251,6 +328,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-right: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 <div
@@ -262,6 +340,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-top: 0.5rem;
+  padding-block-start: 0.5rem;
 }
 
 <div
@@ -273,6 +352,7 @@ exports[`PadBox correct usage renders with classic css properties for old browse
 .c0 {
   box-sizing: border-box;
   padding-bottom: 0.5rem;
+  padding-block-end: 0.5rem;
 }
 
 <div
@@ -403,6 +483,7 @@ exports[`PadBox correct usage use 1, 2, 3, 4 items arrays 4`] = `
 exports[`PadBox correct usage use padding object 1`] = `
 .c0 {
   box-sizing: border-box;
+  padding-left: 0.5rem;
   padding-inline-start: 0.5rem;
 }
 
@@ -427,6 +508,7 @@ exports[`PadBox correct usage use padding object 1`] = `
 exports[`PadBox correct usage use padding object 2`] = `
 .c0 {
   box-sizing: border-box;
+  padding-right: 0.5rem;
   padding-inline-end: 0.5rem;
 }
 
@@ -451,6 +533,7 @@ exports[`PadBox correct usage use padding object 2`] = `
 exports[`PadBox correct usage use padding object 3`] = `
 .c0 {
   box-sizing: border-box;
+  padding-top: 0.5rem;
   padding-block-start: 0.5rem;
 }
 
@@ -475,6 +558,7 @@ exports[`PadBox correct usage use padding object 3`] = `
 exports[`PadBox correct usage use padding object 4`] = `
 .c0 {
   box-sizing: border-box;
+  padding-bottom: 0.5rem;
   padding-block-end: 0.5rem;
 }
 
@@ -499,6 +583,7 @@ exports[`PadBox correct usage use padding object 4`] = `
 exports[`PadBox correct usage use padding object 5`] = `
 .c0 {
   box-sizing: border-box;
+  padding-left: 0.5rem;
   padding-inline-start: 0.5rem;
 }
 
@@ -523,6 +608,7 @@ exports[`PadBox correct usage use padding object 5`] = `
 exports[`PadBox correct usage use padding object 6`] = `
 .c0 {
   box-sizing: border-box;
+  padding-right: 0.5rem;
   padding-inline-end: 0.5rem;
 }
 
@@ -547,6 +633,7 @@ exports[`PadBox correct usage use padding object 6`] = `
 exports[`PadBox correct usage use padding object 7`] = `
 .c0 {
   box-sizing: border-box;
+  padding-top: 0.5rem;
   padding-block-start: 0.5rem;
 }
 
@@ -571,6 +658,7 @@ exports[`PadBox correct usage use padding object 7`] = `
 exports[`PadBox correct usage use padding object 8`] = `
 .c0 {
   box-sizing: border-box;
+  padding-bottom: 0.5rem;
   padding-block-end: 0.5rem;
 }
 
