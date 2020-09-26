@@ -25,10 +25,13 @@ Object {
   "mergeSpacings": [Function],
   "spacing": Object {
     "lg": "1rem",
+    "lgXl": "1.5rem",
     "md": "0.5rem",
+    "mdLg": "0.75rem",
     "none": "0px",
     "sm": "0.25rem",
     "xl": "2rem",
+    "xlXXl": "3rem",
     "xs": "0.125rem",
     "xxl": "4rem",
   },
@@ -60,10 +63,13 @@ Object {
 exports[`Spacing Constants does not break if called without an object 1`] = `
 Object {
   "lg": "1rem",
+  "lgXl": "1.5rem",
   "md": "0.5rem",
+  "mdLg": "0.75rem",
   "none": "0px",
   "sm": "0.25rem",
   "xl": "2rem",
+  "xlXXl": "3rem",
   "xs": "0.125rem",
   "xxl": "4rem",
 }
@@ -94,10 +100,13 @@ Object {
 exports[`Spacing Constants merges spacing 1`] = `
 Object {
   "lg": "1rem",
+  "lgXl": "1.5rem",
   "md": "0.5rem",
+  "mdLg": "0.75rem",
   "none": "0px",
   "sm": "0.25rem",
   "xl": "8rem",
+  "xlXXl": "3rem",
   "xs": "0.125rem",
   "xxl": "4rem",
 }

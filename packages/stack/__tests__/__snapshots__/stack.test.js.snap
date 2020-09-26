@@ -215,6 +215,69 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
 exports[`Stack correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
+  --gutter: 0.75rem;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Stack correct usage renders all the gutter options 6`] = `
+.c0 {
+  box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
@@ -223,6 +286,10 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -275,7 +342,78 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 6`] = `
+exports[`Stack correct usage renders all the gutter options 7`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 1.5rem;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Stack correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 2rem;
@@ -286,6 +424,14 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
 }
 
 @supports not (grid-gap:var(--gutter)) {
@@ -342,7 +488,86 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders all the gutter options 7`] = `
+exports[`Stack correct usage renders all the gutter options 9`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 3rem;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: var(--gutter);
+}
+
+.c0 *[data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .c0 > * + * {
+    margin-top: 3rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Stack correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 4rem;
@@ -353,6 +578,18 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
+}
+
+@supports not (grid-gap:var(--gutter)) {
+
 }
 
 @supports not (grid-gap:var(--gutter)) {
