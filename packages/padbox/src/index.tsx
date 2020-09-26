@@ -6,36 +6,18 @@ import {
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const keyToProperty = (key: string) => {
+const keyToProperty = (key: string, val: string) => {
   type map = { [s: string]: string };
   const modernMap: map = {
-    left: "inline-start",
-    right: "inline-end",
-    top: "block-start",
-    bottom: "block-end",
-    inlineStart: "inline-start",
-    inlineEnd: "inline-end",
-    blockStart: "block-start",
-    blockEnd: "block-end",
+    left: `padding-left:${val}; padding-inline-start:${val};`,
+    right: `padding-right:${val}; padding-inline-end:${val};`,
+    top: `padding-top:${val}; padding-block-start:${val};`,
+    bottom: `padding-bottom:${val}; padding-block-end:${val};`,
+    inlineStart: `padding-left:${val}; padding-inline-start:${val};`,
+    inlineEnd: `padding-right:${val}; padding-inline-end:${val};`,
+    blockStart: `padding-top:${val}; padding-block-start:${val};`,
+    blockEnd: `padding-bottom:${val}; padding-block-end:${val};`,
   };
-
-  const classicMap: map = {
-    left: "left",
-    right: "right",
-    top: "top",
-    bottom: "bottom",
-    inlineStart: "left",
-    inlineEnd: "right",
-    blockStart: "top",
-    blockEnd: "bottom",
-  };
-
-  if (
-    typeof CSS !== "undefined" &&
-    !CSS.supports("padding-inline-start", "100px")
-  ) {
-    return classicMap[key];
-  }
 
   return modernMap[key];
 };
@@ -110,9 +92,7 @@ const paddingToString: PaddingToString = (spacing = {}) => (padding = "lg") => {
 
     return Object.entries(padObj).reduce(
       (acc, [key, val]) =>
-        validKeys.has(key)
-          ? acc + `padding-${keyToProperty(key)}: ${spacingMap[val]};`
-          : acc,
+        validKeys.has(key) ? acc + keyToProperty(key, spacingMap[val]) : acc,
       ""
     );
   }
