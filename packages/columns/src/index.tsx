@@ -19,24 +19,13 @@ const Columns = styled.div<ColumnsProps>`
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
       : mergeSpacings(spacing).lg};
+
   --columns: ${({ columns = 1 }) => (columns > 0 ? columns : 1)};
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
   grid-auto-flow: row ${(props) => props.dense === true && "dense"};
-
-  @supports not (grid-gap: var(--gutter)) {
-    display: flex;
-    flex-flow: column;
-
-    > * + * {
-      margin-top: ${({ gutter, theme: { spacing = {} } }) =>
-        gutter && mergeSpacings(spacing)[gutter]
-          ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).lg};
-    }
-  }
 `;
 
 Columns.displayName = "Columns";
