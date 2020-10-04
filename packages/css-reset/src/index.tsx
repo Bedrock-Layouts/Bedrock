@@ -31,6 +31,7 @@ export const reset = css`
 
   body {
     min-height: 100vh;
+    min-block-size: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -48,6 +49,7 @@ export const reset = css`
 
   img {
     max-width: 100%;
+    max-inline-size: 100%;
     display: block;
   }
 
@@ -77,6 +79,7 @@ export const reset = css`
   li,
   figcaption {
     max-width: 60ch;
+    max-inline-size: 60ch;
   }
 
   .js-focus-visible :focus:not(.focus-visible) {
