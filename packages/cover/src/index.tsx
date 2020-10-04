@@ -9,23 +9,18 @@ import React, { Children } from "react";
 import styled from "styled-components";
 
 const VerticallyCentered = styled.div`
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 `;
 
 const Top = styled.div`
-  margin-top: 0;
   margin-block-start: 0;
-  margin-bottom: var(--gutter);
   margin-block-end: var(--gutter);
 `;
 
 const Bottom = styled.div`
-  margin-top: var(--gutter);
   margin-block-start: var(--gutter);
-  margin-bottom: 0;
   margin-block-end: 0;
 `;
 
@@ -42,7 +37,7 @@ const CoverWrapper = styled.div<CoverWrapperProps>`
 
   display: flex;
   flex-direction: column;
-  min-height: ${(props) => props.minHeight || "100vh"};
+  min-block-size: ${(props) => props.minHeight || "100vh"};
 `;
 
 export interface CoverProps extends CoverWrapperProps {
