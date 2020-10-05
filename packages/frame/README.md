@@ -2,6 +2,8 @@
 
 Layout helper that frames the content
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to frame content on the screen

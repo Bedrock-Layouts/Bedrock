@@ -2,6 +2,8 @@
 
 Layout helper that creates inline-cluster of items
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to create a inline-cluster layouts

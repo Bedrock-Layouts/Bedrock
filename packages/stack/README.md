@@ -2,6 +2,8 @@
 
 Layout helper that creates vertical stack with gutters
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to create a stacked layouts
@@ -27,6 +29,6 @@ import Stack from '@bedrock-layout/stack';
 
 ## API
 
-| Property | Description                                      | Type                                                       | Default |
-| -------- | ------------------------------------------------ | ---------------------------------------------------------- | ------- |
-| gutter   | sets the gutters (margin) inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`    |
+| Property | Description                                      | Type    | Default |
+| -------- | ------------------------------------------------ | ------- | ------- |
+| gutter   | sets the gutters (margin) inbetween each element | `"none" | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
