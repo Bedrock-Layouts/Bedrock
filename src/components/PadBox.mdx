@@ -32,7 +32,7 @@ Then install the stack component
 `padding` can take a single value for a consistent box shape padding
 
 <Playground>
-  <PadBox style={{border:'1px solid black'}} padding='lg'>
+  <PadBox style={{ border: "1px solid black" }} padding="lg">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
     corrupti beatae commodi vitae, perspiciatis totam provident architecto
     doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est
@@ -45,7 +45,10 @@ Then install the stack component
 `padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 <Playground>
-  <PadBox style={{border:'1px solid black'}} padding={['lg','xs','sm','xl']}>
+  <PadBox
+    style={{ border: "1px solid black" }}
+    padding={["lg", "xs", "sm", "xl"]}
+  >
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
     corrupti beatae commodi vitae, perspiciatis totam provident architecto
     doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est
@@ -55,12 +58,15 @@ Then install the stack component
 
 ## Usage With an Object
 
-`padding` can take an object to specify which locations will have padding and which type. 
+`padding` can take an object to specify which locations will have padding and which type.
 The properties support both traditional properties, `top, bottom, right, left` and logical properties in camelcase, `blockStart, blockEnd, inlineStart, inlineEnd`
 no matter which properties are given, logical properties are used, if supported.
 
 <Playground>
-  <PadBox style={{border:'1px solid black'}} padding={{top:'lg',blockEnd:'sm'}}>
+  <PadBox
+    style={{ border: "1px solid black" }}
+    padding={{ top: "lg", blockEnd: "sm" }}
+  >
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
     corrupti beatae commodi vitae, perspiciatis totam provident architecto
     doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est
@@ -74,12 +80,8 @@ no matter which properties are given, logical properties are used, if supported.
 
 ## Properties
 
-| Property         | Type                                                                    | Default |
-| ---------------- | ----------------------------------------------------------------------- | ------- |
-| padding          | One of: `none, xs, sm, md, lg, xl, xxl`                                 | `lg`    |
-| padding (array)  | Array of padding options                                                | `lg`    |
-| padding (object) | Object of with padding locations as keys and padding options as values  | `lg`    |
-
-## IE11 Fallback
-
-For browsers that do no support CSS logical properties, it will fall back to traditional properties
+| Property         | Type                                                                   | Default |
+| ---------------- | ---------------------------------------------------------------------- | ------- |
+| padding          | One of: `none, xs, sm, md, lg, xl, xxl`                                | `lg`    |
+| padding (array)  | Array of padding options                                               | `lg`    |
+| padding (object) | Object of with padding locations as keys and padding options as values | `lg`    |
