@@ -43,21 +43,11 @@ const Split = styled.div<SplitProps>`
       : mergeSpacings(spacing).lg};
 
   display: grid;
+  gap: var(--gutter);
   grid-template-columns: ${({ fraction = "1/2" }) =>
     fractions[fraction] || fractions["1/2"]}};
-  grid-gap: var(--gutter);
 
-  @supports not (grid-gap: var(--gutter)) {
-    display: flex;
-    flex-flow: column;
 
-    > * + * {
-      margin-top: ${({ gutter, theme: { spacing = {} } }) =>
-        gutter && mergeSpacings(spacing)[gutter]
-          ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).lg};
-    }
-  }
 `;
 
 Split.displayName = "Split";
