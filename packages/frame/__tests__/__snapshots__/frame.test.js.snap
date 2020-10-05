@@ -6,8 +6,8 @@ exports[`Frame correct usage renders custom position 1`] = `
   --n: 9;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -18,6 +18,16 @@ exports[`Frame correct usage renders custom position 1`] = `
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,8 +66,8 @@ exports[`Frame correct usage renders with ratio 1`] = `
   --n: 9;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -68,6 +78,16 @@ exports[`Frame correct usage renders with ratio 1`] = `
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,8 +126,8 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
   --n: 1;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -118,6 +138,16 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,8 +186,8 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
   --n: 9;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -168,6 +198,16 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,8 +246,8 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
   --n: 1;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -218,6 +258,16 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,8 +306,8 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
   --n: 9;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -268,6 +318,16 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -306,8 +366,8 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   --n: 1;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -318,6 +378,16 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -356,8 +426,8 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
   --n: 9;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 }
 
@@ -368,6 +438,16 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
