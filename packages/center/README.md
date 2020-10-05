@@ -2,6 +2,8 @@
 
 Layout helper that centers the content
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to center content on the screen

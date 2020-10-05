@@ -2,10 +2,9 @@
 
 exports[`Cover correct usage renders all the gutter options 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -17,7 +16,7 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -35,10 +34,9 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
 
 exports[`Cover correct usage renders all the gutter options 2`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -50,7 +48,7 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -68,10 +66,9 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
 
 exports[`Cover correct usage renders all the gutter options 3`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -83,7 +80,7 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -101,10 +98,9 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
 
 exports[`Cover correct usage renders all the gutter options 4`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -116,7 +112,7 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -134,10 +130,9 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
 
 exports[`Cover correct usage renders all the gutter options 5`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -149,7 +144,7 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -167,10 +162,9 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 
 exports[`Cover correct usage renders all the gutter options 6`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -182,7 +176,7 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -200,10 +194,9 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
 
 exports[`Cover correct usage renders all the gutter options 7`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -215,7 +208,7 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -233,10 +226,9 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
 
 exports[`Cover correct usage renders all the gutter options 8`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -248,7 +240,7 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -266,10 +258,9 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
 
 exports[`Cover correct usage renders all the gutter options 9`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -281,7 +272,7 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -299,10 +290,9 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
 
 exports[`Cover correct usage renders all the gutter options 10`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -314,7 +304,7 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -332,10 +322,9 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
 
 exports[`Cover correct usage renders all the padding options 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -347,7 +336,7 @@ exports[`Cover correct usage renders all the padding options 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -365,10 +354,9 @@ exports[`Cover correct usage renders all the padding options 1`] = `
 
 exports[`Cover correct usage renders all the padding options 2`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -380,7 +368,7 @@ exports[`Cover correct usage renders all the padding options 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -398,10 +386,9 @@ exports[`Cover correct usage renders all the padding options 2`] = `
 
 exports[`Cover correct usage renders all the padding options 3`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -413,7 +400,7 @@ exports[`Cover correct usage renders all the padding options 3`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -431,10 +418,9 @@ exports[`Cover correct usage renders all the padding options 3`] = `
 
 exports[`Cover correct usage renders all the padding options 4`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -446,7 +432,7 @@ exports[`Cover correct usage renders all the padding options 4`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -464,10 +450,9 @@ exports[`Cover correct usage renders all the padding options 4`] = `
 
 exports[`Cover correct usage renders all the padding options 5`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -479,7 +464,7 @@ exports[`Cover correct usage renders all the padding options 5`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -497,10 +482,9 @@ exports[`Cover correct usage renders all the padding options 5`] = `
 
 exports[`Cover correct usage renders all the padding options 6`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -512,7 +496,7 @@ exports[`Cover correct usage renders all the padding options 6`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -530,10 +514,9 @@ exports[`Cover correct usage renders all the padding options 6`] = `
 
 exports[`Cover correct usage renders all the padding options 7`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -545,7 +528,7 @@ exports[`Cover correct usage renders all the padding options 7`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -563,10 +546,9 @@ exports[`Cover correct usage renders all the padding options 7`] = `
 
 exports[`Cover correct usage renders all the padding options 8`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -578,7 +560,7 @@ exports[`Cover correct usage renders all the padding options 8`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -596,10 +578,9 @@ exports[`Cover correct usage renders all the padding options 8`] = `
 
 exports[`Cover correct usage renders all the padding options 9`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -611,7 +592,7 @@ exports[`Cover correct usage renders all the padding options 9`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -629,10 +610,9 @@ exports[`Cover correct usage renders all the padding options 9`] = `
 
 exports[`Cover correct usage renders all the padding options 10`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -644,7 +624,7 @@ exports[`Cover correct usage renders all the padding options 10`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -662,10 +642,9 @@ exports[`Cover correct usage renders all the padding options 10`] = `
 
 exports[`Cover correct usage renders custom height 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -677,7 +656,7 @@ exports[`Cover correct usage renders custom height 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 500px;
+  min-block-size: 500px;
 }
 
 <div
@@ -695,10 +674,9 @@ exports[`Cover correct usage renders custom height 1`] = `
 
 exports[`Cover correct usage renders default 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -710,7 +688,7 @@ exports[`Cover correct usage renders default 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -728,16 +706,13 @@ exports[`Cover correct usage renders default 1`] = `
 
 exports[`Cover correct usage renders with bottom 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c2 {
-  margin-top: var(--gutter);
   margin-block-start: var(--gutter);
-  margin-bottom: 0;
   margin-block-end: 0;
 }
 
@@ -750,7 +725,7 @@ exports[`Cover correct usage renders with bottom 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -775,10 +750,9 @@ exports[`Cover correct usage renders with bottom 1`] = `
 
 exports[`Cover correct usage renders with theme overrides 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -790,7 +764,7 @@ exports[`Cover correct usage renders with theme overrides 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -808,16 +782,13 @@ exports[`Cover correct usage renders with theme overrides 1`] = `
 
 exports[`Cover correct usage renders with top 1`] = `
 .c2 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c1 {
-  margin-top: 0;
   margin-block-start: 0;
-  margin-bottom: var(--gutter);
   margin-block-end: var(--gutter);
 }
 
@@ -830,7 +801,7 @@ exports[`Cover correct usage renders with top 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -855,10 +826,9 @@ exports[`Cover correct usage renders with top 1`] = `
 
 exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -870,7 +840,7 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -888,10 +858,9 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
 
 exports[`Cover correct usage use 1, 2, 3, 4 items arrays 2`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -903,7 +872,7 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -921,10 +890,9 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 2`] = `
 
 exports[`Cover correct usage use 1, 2, 3, 4 items arrays 3`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -936,7 +904,7 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 3`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -954,10 +922,9 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 3`] = `
 
 exports[`Cover correct usage use 1, 2, 3, 4 items arrays 4`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -969,7 +936,7 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 4`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -987,10 +954,9 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 4`] = `
 
 exports[`Cover correct usage use padding object 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1002,7 +968,7 @@ exports[`Cover correct usage use padding object 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1020,10 +986,9 @@ exports[`Cover correct usage use padding object 1`] = `
 
 exports[`Cover correct usage use padding object 2`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1035,7 +1000,7 @@ exports[`Cover correct usage use padding object 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1053,10 +1018,9 @@ exports[`Cover correct usage use padding object 2`] = `
 
 exports[`Cover correct usage use padding object 3`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1068,7 +1032,7 @@ exports[`Cover correct usage use padding object 3`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1086,10 +1050,9 @@ exports[`Cover correct usage use padding object 3`] = `
 
 exports[`Cover correct usage use padding object 4`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1101,7 +1064,7 @@ exports[`Cover correct usage use padding object 4`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1119,10 +1082,9 @@ exports[`Cover correct usage use padding object 4`] = `
 
 exports[`Cover correct usage use padding object 5`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1134,7 +1096,7 @@ exports[`Cover correct usage use padding object 5`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1152,10 +1114,9 @@ exports[`Cover correct usage use padding object 5`] = `
 
 exports[`Cover correct usage use padding object 6`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1167,7 +1128,7 @@ exports[`Cover correct usage use padding object 6`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1185,10 +1146,9 @@ exports[`Cover correct usage use padding object 6`] = `
 
 exports[`Cover correct usage use padding object 7`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1200,7 +1160,7 @@ exports[`Cover correct usage use padding object 7`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1218,10 +1178,9 @@ exports[`Cover correct usage use padding object 7`] = `
 
 exports[`Cover correct usage use padding object 8`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1233,7 +1192,7 @@ exports[`Cover correct usage use padding object 8`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1251,10 +1210,9 @@ exports[`Cover correct usage use padding object 8`] = `
 
 exports[`Cover incorrect usage renders default with console error with wrong gutter 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1266,7 +1224,7 @@ exports[`Cover incorrect usage renders default with console error with wrong gut
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 <div
@@ -1284,10 +1242,9 @@ exports[`Cover incorrect usage renders default with console error with wrong gut
 
 exports[`Cover incorrect usage renders with min-height incorrect with invalid minHeight 1`] = `
 .c1 {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  margin-block: auto;
 }
 
 .c0 {
@@ -1299,7 +1256,7 @@ exports[`Cover incorrect usage renders with min-height incorrect with invalid mi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: incorrect;
+  min-block-size: incorrect;
 }
 
 <div

@@ -2,6 +2,8 @@
 
 Layout helper that covers a certain height and vertically center's it's child
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to cover on the screen and center it's child
@@ -24,8 +26,8 @@ import Cover from '@bedrock-layout/cover';
 
 ## API
 
-| Property  | Description                       | Type                                                       | Default |
-| --------- | --------------------------------- | ---------------------------------------------------------- | ------- |
-| children  | takes a single child              | ReactNode                                                  | -       |
-| minHeight | minHeight of the cover            | any valid css size unit as a string                        | "100vh" |
-| gutter    | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`    |
+| Property  | Description                       | Type                                | Default |
+| --------- | --------------------------------- | ----------------------------------- | ------- |
+| children  | takes a single child              | ReactNode                           | -       |
+| minHeight | minHeight of the cover            | any valid css size unit as a string | "100vh" |
+| gutter    | sets space inbetween each element | `"none"                             | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |

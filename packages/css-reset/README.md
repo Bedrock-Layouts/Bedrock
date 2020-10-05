@@ -2,6 +2,8 @@
 
 A CSS Reset that compliments well with the Bedrock Layout Primitives
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 When you don't have your own CSS reset.

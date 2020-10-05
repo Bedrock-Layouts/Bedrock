@@ -11,23 +11,35 @@ const Frame = styled.div<FrameProps>`
     props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
       ? props.ratio[0]
       : 1};
+
   --n: ${(props) =>
     props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
       ? props.ratio[1]
       : 1};
+
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  inline-size: 100%;
+  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
 
   > * {
     overflow: hidden;
     position: absolute;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+
+    inset-block: 0;
+    inset-inline: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;

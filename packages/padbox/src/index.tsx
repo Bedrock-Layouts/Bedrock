@@ -9,14 +9,14 @@ import styled from "styled-components";
 const keyToProperty = (key: string, val: string) => {
   type map = { [s: string]: string };
   const modernMap: map = {
-    left: `padding-left:${val}; padding-inline-start:${val};`,
-    right: `padding-right:${val}; padding-inline-end:${val};`,
-    top: `padding-top:${val}; padding-block-start:${val};`,
-    bottom: `padding-bottom:${val}; padding-block-end:${val};`,
-    inlineStart: `padding-left:${val}; padding-inline-start:${val};`,
-    inlineEnd: `padding-right:${val}; padding-inline-end:${val};`,
-    blockStart: `padding-top:${val}; padding-block-start:${val};`,
-    blockEnd: `padding-bottom:${val}; padding-block-end:${val};`,
+    left: `padding-inline-start:${val};`,
+    right: `padding-inline-end:${val};`,
+    top: `padding-block-start:${val};`,
+    bottom: `padding-block-end:${val};`,
+    inlineStart: `padding-inline-start:${val};`,
+    inlineEnd: `padding-inline-end:${val};`,
+    blockStart: `padding-block-start:${val};`,
+    blockEnd: `padding-block-end:${val};`,
   };
 
   return modernMap[key];

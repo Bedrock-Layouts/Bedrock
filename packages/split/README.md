@@ -2,6 +2,8 @@
 
 Layout helper that creates Split view of various fractional amounts
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to create a split layouts
@@ -27,7 +29,7 @@ import Split from '@bedrock-layout/split';
 
 ## API
 
-| Property | Description                       | Type                                                                | Default |
-| -------- | --------------------------------- | ------------------------------------------------------------------- | ------- |
-| gutter   | sets space inbetween each element | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"`          | `lg`    |
-| fraction | sets the fractional split         | `'auto-start' | 'auto-end' | '1/4' | '1/3' | '1/2' | '2/3' | '3/4'` | `1/2`   |
+| Property | Description                       | Type          | Default    |
+| -------- | --------------------------------- | ------------- | ---------- |
+| gutter   | sets space inbetween each element | `"none"       | "xs"       | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
+| fraction | sets the fractional split         | `'auto-start' | 'auto-end' | '1/4' | '1/3' | '1/2' | '2/3' | '3/4'` | `1/2` |

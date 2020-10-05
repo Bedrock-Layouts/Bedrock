@@ -26,24 +26,12 @@ const Grid = styled.div<GridProps>`
       : mergeBreakpoints(props.theme.breakPoints).smallOnly + "px"};
 
   display: grid;
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
 
   grid-template-columns: repeat(
     auto-fit,
     minmax(min(var(--minItemWidth), 100%), 1fr)
   );
-
-  @supports not (grid-gap: var(--gutter)) {
-    display: flex;
-    flex-flow: column;
-
-    > * + * {
-      margin-top: ${({ gutter, theme: { spacing = {} } }) =>
-        gutter && mergeSpacings(spacing)[gutter]
-          ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).lg};
-    }
-  }
 `;
 
 Grid.displayName = "Grid";

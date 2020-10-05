@@ -37,7 +37,7 @@ import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 ### SplitSwitcher
 
 <Playground>
-  <SplitSwitcher gutter='lg' fraction='1/2' switchAt={700}>
+  <SplitSwitcher gutter="lg" fraction="1/2" switchAt={700}>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
@@ -60,7 +60,7 @@ import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 ### ColumnsSwitcher
 
 <Playground>
-  <ColumnsSwitcher gutter='lg' columns={2} switchAt={700}>
+  <ColumnsSwitcher gutter="lg" columns={2} switchAt={700}>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
@@ -113,7 +113,3 @@ It has the same API has the [`Columns` component](/src-components-columns) plus:
 | Property | Type   | Default              |
 | -------- | ------ | -------------------- |
 | switchAt | number | smallOnly breakPoint |
-
-## IE11 Fallback
-
-For browsers that do no support CSS Grid, it will fall back to a flex column.

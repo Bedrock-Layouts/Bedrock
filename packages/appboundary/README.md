@@ -2,6 +2,8 @@
 
 Layout helper that clamps that app at the xxlarge breakpoint
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to control the width of the app on xlarge screens

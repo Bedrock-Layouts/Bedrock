@@ -2,6 +2,8 @@
 
 Layout helper that creates columns of items
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to create a Columned layouts
@@ -58,11 +60,11 @@ import Columns, { Column } from '@bedrock-layout/columns';
 
 ### Columns
 
-| Property | Description                               | Type                                                       | Default |
-| -------- | ----------------------------------------- | ---------------------------------------------------------- | ------- |
-| gutter   | sets space inbetween each element         | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`    |
-| columns  | number of columns                         | number                                                     | 1       |
-| dense    | used with `Column` to have a dense layout | boolean                                                    | false   |
+| Property | Description                               | Type    | Default |
+| -------- | ----------------------------------------- | ------- | ------- |
+| gutter   | sets space inbetween each element         | `"none" | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
+| columns  | number of columns                         | number  | 1       |
+| dense    | used with `Column` to have a dense layout | boolean | false   |
 
 ### Column
 

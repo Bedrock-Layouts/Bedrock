@@ -4,11 +4,10 @@ exports[`Center correct usage renders custom width 1`] = `
 .c0 {
   --maxWidth: 320px;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: var(--maxWidth);
+  margin-inline: auto;
+  max-inline-size: var(--maxWidth);
 }
 
 <div
@@ -33,11 +32,10 @@ exports[`Center correct usage renders default width 1`] = `
 .c0 {
   --maxWidth: 1023px;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: var(--maxWidth);
+  margin-inline: auto;
+  max-inline-size: var(--maxWidth);
 }
 
 <div
@@ -62,11 +60,10 @@ exports[`Center correct usage renders with theme overrides 1`] = `
 .c0 {
   --maxWidth: 1600px;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: var(--maxWidth);
+  margin-inline: auto;
+  max-inline-size: var(--maxWidth);
 }
 
 <div
@@ -91,11 +88,10 @@ exports[`Center incorrect usage renders default with console error with no child
 .c0 {
   --maxWidth: 1023px;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: var(--maxWidth);
+  margin-inline: auto;
+  max-inline-size: var(--maxWidth);
 }
 
 <div

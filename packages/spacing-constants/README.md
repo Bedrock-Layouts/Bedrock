@@ -1,5 +1,7 @@
 # `@bedrock-layout/spacing-constants`
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these in to your App Directly since the Layout Primitives already implement them, but these do exist incase you ever need the raw values.
 
 The spacing is built simply on `1rem` as the starting mid point and then doubling the value at each step above and halfing the value each step below. This comes down to the following spacings: `0`, `0.125rem`, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`. Each one of these spacing points are then named based on t-shirt size or `none`, `xs`, `sm`, `md`, `lg`, `xl`, and `xxl` respectively.

@@ -2,6 +2,8 @@
 
 When you need to use a ref and use are useing for
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## Usage
 
 ```javascript

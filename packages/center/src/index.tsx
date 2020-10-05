@@ -13,11 +13,12 @@ const Center = styled.div<CenterProps>`
       : mergeBreakpoints(breakPoints).medium + "px"};
 
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
+
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: var(--maxWidth);
+  margin-inline: auto;
+
+  max-inline-size: var(--maxWidth);
 `;
 
 Center.displayName = "Center";

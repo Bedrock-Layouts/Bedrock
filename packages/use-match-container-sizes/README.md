@@ -2,6 +2,8 @@
 
 When you need to do logic based on the size of an element. It uses the `@bedrock-layout/use-container-query` under the hood to build an object of booleans based on the breakPoint contants
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## Usage
 
 ```javascript

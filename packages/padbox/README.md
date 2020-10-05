@@ -2,6 +2,8 @@
 
 Layout helper that creates vertical stack with gutters
 
+Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
+
 ## When to Use
 
 Used to create uniform padding

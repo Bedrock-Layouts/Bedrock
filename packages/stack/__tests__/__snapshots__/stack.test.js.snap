@@ -13,22 +13,6 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 0px;
-  }
-}
-
 <div
   className="c0"
 >
@@ -58,26 +42,6 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 0.125rem;
-  }
 }
 
 <div
@@ -111,30 +75,6 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 0.25rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -164,34 +104,6 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 0.5rem;
-  }
 }
 
 <div
@@ -225,38 +137,6 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 0.75rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -286,42 +166,6 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 1rem;
-  }
 }
 
 <div
@@ -355,46 +199,6 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 1.5rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -424,50 +228,6 @@ exports[`Stack correct usage renders all the gutter options 8`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 2rem;
-  }
 }
 
 <div
@@ -501,54 +261,6 @@ exports[`Stack correct usage renders all the gutter options 9`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 3rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -578,58 +290,6 @@ exports[`Stack correct usage renders all the gutter options 10`] = `
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 4rem;
-  }
 }
 
 <div
@@ -663,22 +323,6 @@ exports[`Stack correct usage renders default gutters 1`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 1rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -710,22 +354,6 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   grid-column: span 1 / auto;
 }
 
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 1rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -755,22 +383,6 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
 
 .c0 *[data-bedrock-layout-column] {
   grid-column: span 1 / auto;
-}
-
-@supports not (grid-gap:var(--gutter)) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-  }
-
-  .c0 > * + * {
-    margin-top: 1rem;
-  }
 }
 
 <div
