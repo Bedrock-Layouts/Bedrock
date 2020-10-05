@@ -12,7 +12,7 @@ export interface StackProps {
 
 const Stack = styled.div<StackProps>`
   box-sizing: border-box;
-  --gutter:  ${({ gutter, theme: { spacing = {} } }) =>
+  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
       : mergeSpacings(spacing).lg};
@@ -21,21 +21,8 @@ const Stack = styled.div<StackProps>`
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
 
-  *[data-bedrock-layout-column]{
+  *[data-bedrock-layout-column] {
     grid-column: span 1 / auto;
-  }
-
-  @supports not (grid-gap: var(--gutter)) {
-    display: flex;
-    flex-flow: column;
-
-    & > * + * {
-      margin-top:  ${({ gutter, theme: { spacing = {} } }) =>
-        gutter && mergeSpacings(spacing)[gutter]
-          ? mergeSpacings(spacing)[gutter]
-          : mergeSpacings(spacing).lg};
-      }};
-    }
   }
 `;
 
