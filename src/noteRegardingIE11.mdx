@@ -1,0 +1,35 @@
+---
+name: Regarding IE11
+route: /regarding-ie11
+---
+
+# Regarding IE11
+
+## Is IE11 Dead
+
+We are at an interesting cross roads. IE11's usage globally has understandably declined and the Windows 7, the last operating system to use
+IE11 as it's default browser, is officially no longer supported by Microsoft. Microsoft's own applications, such as Teams and
+Office 365, will officially no longer support IE11 by August 2021. That said, IE11 is not "dead" yet. Windows 7 has extended support
+for Enterprise customers. IE11 is also installed on Window 10 for compatability reasons. As long as there are Windows 10 machines, IE11 will
+still be an available browser for customers to use.
+
+## Supporting Older Browsers
+
+As stated earlier IE11, once the dominate force on the internet, has around 1 to 3 percent global usage, depending on how you measure. Unfortunately,
+among enterprise users, this usage is much higher. Ultimately, the decision how or if to support IE11 is totally dependant on your situation.
+Support also does not mean that you have to provide the same experience. One can provide an experience using modern CSS, while providing fall back
+layouts for older browsers that don't support the latest and greatest.
+
+## Does Bedrock Layout Primitives Support ie11
+
+The obvious question is does Bedrock Layout Primitives support IE11? An earlier version of our components did attempt to provide fallbacks for
+IE11 while supporting modern layouts. It was later discovered that several of the fallbacks were incorrectly implemented. At that point we had
+two decisions: go back and fix them or rip them out and focus on modern evergreen browsers.
+
+Ultimately, we decided it would be best to rip out all the fallbacks for IE11. We decided to do this for a few reasons. The library was still young
+enough that it would not cause large cascading impact on people's apps. Providing fallbacks are not the job of the library, because only you as
+the app developer can know what is the most appropriate fallback for your application. Any fallback that we provide would then have to be overridden
+creating a bigger problem for you the developer.
+
+Going forward, Bedrock Layout Primitives will support the latest and greatest in CSS layouts while providing fallbacks for
+all the 4 major browsers latest version minus one version.
