@@ -27,6 +27,7 @@ const InlineCluster = styled.div.attrs(({ children }) => {
   };
 })<InlineClusterProps>`
   box-sizing: border-box;
+
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
@@ -34,16 +35,20 @@ const InlineCluster = styled.div.attrs(({ children }) => {
 
   display: inline-flex;
   flex-wrap: wrap;
-  width: 100%;
+  inline-size: 100%;
+
   justify-content: ${(props) =>
     typeof props.justify !== "undefined" && justifyAlignMap[props.justify]
       ? justifyAlignMap[props.justify]
       : justifyAlignMap.start};
+
   align-items: ${(props) =>
     typeof props.align !== "undefined" && justifyAlignMap[props.align]
       ? justifyAlignMap[props.align]
       : justifyAlignMap.start};
+
   margin: calc(var(--gutter) / 2 * -1);
+
   & > * {
     margin: calc(var(--gutter) / 2);
   }
