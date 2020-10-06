@@ -1,4 +1,4 @@
-import Columns, { Column } from "@bedrock-layout/columns";
+import { Column, Columns } from "@bedrock-layout/columns";
 import { boolean, number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";

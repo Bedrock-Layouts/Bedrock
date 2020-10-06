@@ -17,7 +17,7 @@ Used to create a Columned layouts
 ### Basic Usage
 
 ```javascript
-import Columns from '@bedrock-layout/columns';
+import { Columns } from '@bedrock-layout/columns';
 
 <Columns columns={5}>
   <div>1</div>
@@ -32,7 +32,7 @@ import Columns from '@bedrock-layout/columns';
 ### Usage with `Column`
 
 ```javascript
-import Columns, { Column } from '@bedrock-layout/columns';
+import { Columns, Column } from '@bedrock-layout/columns';
 
 <Columns columns={3} dense>
   <Column span={2}>

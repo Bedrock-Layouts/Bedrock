@@ -1,4 +1,4 @@
-import Columns, { ColumnsProps } from "@bedrock-layout/columns";
+import { Columns, ColumnsProps } from "@bedrock-layout/columns";
 import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 import Split, { SplitProps } from "@bedrock-layout/split";
 import Stack, { StackProps } from "@bedrock-layout/stack";

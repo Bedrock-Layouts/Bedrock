@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import Columns, { Column } from "../src";
+import { Column, Columns } from "../src";
 
 const Lorem = () => (
   <>

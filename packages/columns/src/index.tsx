@@ -12,7 +12,7 @@ export interface ColumnsProps {
   dense?: boolean;
 }
 
-const Columns = styled.div<ColumnsProps>`
+export const Columns = styled.div<ColumnsProps>`
   box-sizing: border-box;
 
   --gutter: ${({ gutter, theme: { spacing = {} } }) =>
@@ -67,10 +67,3 @@ Column.propTypes = {
 Column.defaultProps = {
   span: 1,
 };
-
-if (typeof exports !== "undefined") {
-  Object.defineProperty(exports, "__esModule", {
-    value: true,
-  });
-}
-export default Columns;

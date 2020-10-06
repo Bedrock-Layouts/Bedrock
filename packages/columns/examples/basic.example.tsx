@@ -1,4 +1,4 @@
-import Columns from "@bedrock-layout/columns";
+import { Columns } from "@bedrock-layout/columns";
 import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import { number, select } from "@storybook/addon-knobs";
 import React from "react";
