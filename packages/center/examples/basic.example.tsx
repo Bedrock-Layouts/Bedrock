@@ -6,6 +6,7 @@ import styled from "styled-components";
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
+
 BorderedBox.displayName = "BorderedBox";
 
 const title = "Center";

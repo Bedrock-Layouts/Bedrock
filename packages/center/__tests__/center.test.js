@@ -45,6 +45,15 @@ describe("Center", () => {
       expect(center.toJSON()).toMatchSnapshot();
     });
 
+    it("renders with centered text", () => {
+      const center = create(
+        <Center centerText>
+          <Lorem />
+        </Center>
+      );
+      expect(center.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with theme overrides", () => {
       const center = create(
         <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>

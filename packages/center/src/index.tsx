@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export interface CenterProps {
   maxWidth?: number;
+  centerText?: boolean;
 }
 
 const Center = styled.div<CenterProps>`
@@ -19,6 +20,8 @@ const Center = styled.div<CenterProps>`
   margin-inline: auto;
 
   max-inline-size: var(--maxWidth);
+
+  ${(props) => (props.centerText ? "text-align:center;" : "")}
 `;
 
 Center.displayName = "Center";
