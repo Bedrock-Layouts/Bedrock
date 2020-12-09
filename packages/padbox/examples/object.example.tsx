@@ -1,5 +1,4 @@
 import PadBox from "@bedrock-layout/padbox";
-import { object } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,10 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "PadBox";
 const name = "Padding Object";
 
-function Example() {
-  const padding = object("padding", { left: "md", blockStart: "lg" });
+function Example(args: Record<string, unknown>) {
   return (
-    <PadBox as={BorderedBox} padding={padding}>
+    <PadBox as={BorderedBox} {...args}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
       doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
@@ -24,6 +22,9 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  padding: { left: "md", blockStart: "lg" },
+};
 export const Comp = Example;
 export default {
   title,
