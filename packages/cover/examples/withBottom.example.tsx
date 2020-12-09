@@ -1,6 +1,4 @@
 import Cover from "@bedrock-layout/cover";
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
-import { select, text } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,15 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Cover";
 const name = "With bottom";
 
-function Example() {
-  const minHeight = text("minHeight", "100vh");
-  const gutter = select("gutter", Object.keys(spacing), "lg");
+function Example(args: Record<string, unknown>) {
   return (
-    <Cover
-      minHeight={minHeight}
-      gutter={gutter as SpacingTypes}
-      bottom={<div>I am on Bottom</div>}
-    >
+    <Cover {...args} bottom={<div>I am on Bottom</div>}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -32,6 +24,10 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  minHeight: "100vh",
+  gutter: "lg",
+};
 export const Comp = Example;
 export default {
   title,

@@ -1,6 +1,4 @@
 import Grid from "@bedrock-layout/grid";
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
-import { select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,10 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Grid";
 const name = "Basic";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
+function Example(args: Record<string, unknown>) {
   return (
-    <Grid gutter={gutter as SpacingTypes}>
+    <Grid {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -45,6 +42,7 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = { gutter: "lg" };
 export const Comp = Example;
 export default {
   title,

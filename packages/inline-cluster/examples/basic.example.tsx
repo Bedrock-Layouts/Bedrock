@@ -1,6 +1,4 @@
 import InlineCluster from "@bedrock-layout/inline-cluster";
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
-import { select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,17 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "InlineCluster";
 const name = "Basic";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
-  const justify = select("justify", ["start", "end", "center"], "start");
-  const align = select("align", ["start", "end", "center"], "start");
+function Example(args: Record<string, unknown>) {
   return (
-    <InlineCluster
-      justify={justify}
-      align={align}
-      gutter={gutter as SpacingTypes}
-      style={{ margin: "1rem 0" }}
-    >
+    <InlineCluster {...args} style={{ margin: "1rem 0" }}>
       <BorderedBox style={{ height: 100 }}>Lorem ipsum dolor</BorderedBox>
       <BorderedBox>sit amet consectetur adipisicing elit.</BorderedBox>
       <BorderedBox>Fuga consequuntur</BorderedBox>
@@ -32,6 +22,11 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  gutter: "lg",
+  justify: "start",
+  align: "start",
+};
 export const Comp = Example;
 export default {
   title,

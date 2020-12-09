@@ -1,5 +1,4 @@
 import useMediaQuery from "@bedrock-layout/use-media-query";
-import { number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,8 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "useMediaQuery";
 const name = "Basic";
 
-function Example() {
-  const width = number("screen-width", 640);
+function Example({ width }) {
   const matches = useMediaQuery(`(max-width:${width}px)`);
 
   return (
@@ -24,6 +22,9 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  width: 640,
+};
 export const Comp = Example;
 export default {
   title,

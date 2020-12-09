@@ -1,11 +1,6 @@
 import { Column } from "@bedrock-layout/columns";
-import {
-  SpacingTypes,
-  breakPoints,
-  spacing,
-} from "@bedrock-layout/spacing-constants";
+import { breakPoints } from "@bedrock-layout/spacing-constants";
 import { ColumnsSwitcher } from "@bedrock-layout/switcher";
-import { boolean, number, select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -17,18 +12,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "ColumnSwitcher";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
-  const dense = boolean("dense", false);
-  const columns = number("columns", 3);
-  const switchAt = number("switchAt", breakPoints.smallOnly);
+function Example(args) {
   return (
-    <ColumnsSwitcher
-      gutter={gutter as SpacingTypes}
-      columns={columns}
-      switchAt={switchAt}
-      dense={dense}
-    >
+    <ColumnsSwitcher {...args}>
       <>
         <BorderedBox>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -62,6 +48,12 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  gutter: "lg",
+  dense: false,
+  columns: 3,
+  switchAt: breakPoints.smallOnly,
+};
 export const Comp = Example;
 export default {
   title,

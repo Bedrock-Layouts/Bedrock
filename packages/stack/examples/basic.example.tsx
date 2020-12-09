@@ -1,6 +1,4 @@
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import Stack from "@bedrock-layout/stack";
-import { select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,10 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Stack";
 const name = "Basic";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
+function Example(args) {
   return (
-    <Stack gutter={gutter as SpacingTypes}>
+    <Stack {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -45,6 +42,9 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  gutter: "lg",
+};
 export const Comp = Example;
 export default {
   title,

@@ -1,5 +1,4 @@
 import useContainerQuery from "@bedrock-layout/use-container-query";
-import { number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,8 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "useContainerQuery";
 const name = "Basic";
 
-function Example() {
-  const width = number("width", 320);
+function Example({ width }) {
   const [node, ref] = React.useState<HTMLDivElement | null>(null);
   const matches = useContainerQuery(node as HTMLDivElement, width);
 
@@ -25,6 +23,9 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  width: 320,
+};
 export const Comp = Example;
 export default {
   title,
