@@ -1,10 +1,10 @@
 import Center from "@bedrock-layout/center";
-import { number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
+  width: 75%;
 `;
 BorderedBox.displayName = "BorderedBox";
 
@@ -13,7 +13,7 @@ const name = "Basic";
 
 function Example(args: Record<string, unknown>) {
   return (
-    <Center {...args}>
+    <Center as={BorderedBox} {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -46,6 +46,7 @@ Example.story = { name };
 Example.args = {
   maxWidth: 640,
   centerText: false,
+  centerChildren: false,
 };
 export const Comp = Example;
 export default {
