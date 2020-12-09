@@ -28,6 +28,7 @@ Center.displayName = "Center";
 
 Center.propTypes = {
   maxWidth: PropTypes.number,
+  centerText: PropTypes.bool,
 };
 
 export default Center;

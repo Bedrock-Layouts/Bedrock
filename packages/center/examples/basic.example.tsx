@@ -6,16 +6,14 @@ import styled from "styled-components";
 const BorderedBox = styled.div`
   border: 1px solid black;
 `;
-
 BorderedBox.displayName = "BorderedBox";
 
 const title = "Center";
 const name = "Basic";
 
-function Example() {
-  const maxWidth = number("maxWidth", 640);
+function Example(args: Record<string, unknown>) {
   return (
-    <Center maxWidth={maxWidth}>
+    <Center {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -45,7 +43,15 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  maxWidth: 640,
+  centerText: false,
+};
 export const Comp = Example;
 export default {
   title,
+  component: Center,
+  argTypes: {
+    maxWidth: { control: "number" },
+  },
 };

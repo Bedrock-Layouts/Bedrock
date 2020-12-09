@@ -1,12 +1,13 @@
-import { addDecorator, configure } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
-import { withKnobs } from '@storybook/addon-knobs';
-import 'pepjs';
-import './styles.css';
+import "pepjs";
+
+import "./styles.css";
+
+import { withInfo } from "@storybook/addon-info";
+import { addDecorator, configure } from "@storybook/react";
 
 configure(() => {
   const req = require.context(
-    '../packages',
+    "../packages",
     true,
     /^((?!node_modules).)*\.example\.(js|ts|tsx)$/
   );
@@ -35,4 +36,3 @@ configure(() => {
 }, module);
 
 addDecorator(withInfo);
-addDecorator(withKnobs);
