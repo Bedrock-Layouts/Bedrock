@@ -1,10 +1,5 @@
-import {
-  SpacingTypes,
-  breakPoints,
-  spacing,
-} from "@bedrock-layout/spacing-constants";
+import { breakPoints } from "@bedrock-layout/spacing-constants";
 import { SplitSwitcher } from "@bedrock-layout/switcher";
-import { number, select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -16,20 +11,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "SplitSwitcher";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
-  const fraction = select(
-    "fraction",
-    ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"],
-    "1/2"
-  );
-  const switchAt = number("switchAt", breakPoints.smallOnly);
+function Example(args) {
   return (
-    <SplitSwitcher
-      gutter={gutter as SpacingTypes}
-      fraction={fraction}
-      switchAt={switchAt}
-    >
+    <SplitSwitcher {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -59,6 +43,11 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  gutter: "lg",
+  fraction: "1/2",
+  switchAt: breakPoints.smallOnly,
+};
 export const Comp = Example;
 export default {
   title,
