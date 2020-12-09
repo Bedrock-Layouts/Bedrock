@@ -12,15 +12,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Split";
 const name = "Basic";
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
-  const fraction = select(
-    "fraction",
-    ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"],
-    "1/2"
-  );
+function Example(args) {
   return (
-    <Split gutter={gutter as SpacingTypes} fraction={fraction}>
+    <Split {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -50,6 +44,10 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  gutter: "lg",
+  fraction: "1/2",
+};
 export const Comp = Example;
 export default {
   title,
