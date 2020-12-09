@@ -29,6 +29,7 @@ import Center from '@bedrock-layout/center';
 
 ## API
 
-| Property | Description             | Type   | Default           |
-| -------- | ----------------------- | ------ | ----------------- |
-| maxWidth | maxWidth of the content | number | medium breakpoint |
+| Property   | Description             | Type    | Default           |
+| ---------- | ----------------------- | ------- | ----------------- |
+| maxWidth   | maxWidth of the content | number  | medium breakpoint |
+| centerText | center align text       | boolean | false             |
