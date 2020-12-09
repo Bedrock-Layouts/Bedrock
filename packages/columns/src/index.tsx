@@ -15,7 +15,7 @@ export interface ColumnsProps {
 export const Columns = styled.div<ColumnsProps>`
   box-sizing: border-box;
 
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
+  --gutter: ${({ gutter = "lg", theme: { spacing = {} } }) =>
     gutter && mergeSpacings(spacing)[gutter]
       ? mergeSpacings(spacing)[gutter]
       : mergeSpacings(spacing).lg};
@@ -25,7 +25,7 @@ export const Columns = styled.div<ColumnsProps>`
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: var(--gutter);
-  grid-auto-flow: row ${(props) => props.dense === true && "dense"};
+  grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
 `;
 
 Columns.displayName = "Columns";
@@ -36,12 +36,6 @@ Columns.propTypes = {
   ),
   columns: PropTypes.number,
   dense: PropTypes.bool,
-};
-
-Columns.defaultProps = {
-  gutter: "lg",
-  columns: 1,
-  dense: false,
 };
 
 export interface ColumnProps {

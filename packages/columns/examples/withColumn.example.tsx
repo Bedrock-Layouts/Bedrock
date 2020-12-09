@@ -1,5 +1,4 @@
 import { Column, Columns } from "@bedrock-layout/columns";
-import { boolean, number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,11 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Columns";
 const name = "With Column Component";
 
-function Example() {
-  const columns = number("columns", 3);
-  const dense = boolean("dense", false);
+function Example(args: Record<string, unknown>) {
   return (
-    <Columns columns={columns} dense={dense}>
+    <Columns {...args}>
       <Column span={2}>
         <BorderedBox>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -53,6 +50,10 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = {
+  columns: 3,
+  dense: false,
+};
 export const Comp = Example;
 export default {
   title,

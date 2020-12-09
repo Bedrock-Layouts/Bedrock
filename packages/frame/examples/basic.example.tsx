@@ -1,5 +1,4 @@
 import Frame from "@bedrock-layout/frame";
-import { array, text } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,12 +11,10 @@ Center.displayName = "Center";
 const title = "Frame";
 const name = "Basic";
 
-function Example() {
-  const ratio = array("ratio", ["16", "9"]);
-  const position = text("position", "50% 50%");
+function Example(args: Record<string, unknown>) {
   return (
     <Center>
-      <Frame ratio={ratio.map((i) => parseInt(i))} position={position}>
+      <Frame {...args}>
         <img src={`https://picsum.photos/5000`} alt="cat" />
       </Frame>
     </Center>
@@ -25,6 +22,7 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = { ratio: [16, 9], position: "50% 50%" };
 export const Comp = Example;
 export default {
   title,

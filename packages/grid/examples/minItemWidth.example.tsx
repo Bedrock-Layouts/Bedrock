@@ -1,5 +1,4 @@
 import Grid from "@bedrock-layout/grid";
-import { number } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,10 +10,9 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Grid";
 const name = "minItemWidth";
 
-function Example() {
-  const minItemWidth = number("minItemWidth", 320);
+function Example(args: Record<string, unknown>) {
   return (
-    <Grid minItemWidth={minItemWidth}>
+    <Grid {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -44,6 +42,7 @@ function Example() {
 }
 
 Example.story = { name };
+Example.args = { minItemWidth: 640 };
 export const Comp = Example;
 export default {
   title,

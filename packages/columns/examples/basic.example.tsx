@@ -1,6 +1,5 @@
 import { Columns } from "@bedrock-layout/columns";
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
-import { number, select } from "@storybook/addon-knobs";
+//import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,12 +10,11 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "Columns";
 const name = "Basic";
+const component = Columns;
 
-function Example() {
-  const gutter = select("gutter", Object.keys(spacing), "lg");
-  const columns = number("columns", 3);
+function Example(args: Record<string, unknown>) {
   return (
-    <Columns gutter={gutter as SpacingTypes} columns={columns}>
+    <Columns {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -45,8 +43,14 @@ function Example() {
   );
 }
 
+//const options = Object.keys(spacing);
+
 Example.story = { name };
+Example.args = { gutter: "xl", columns: 3 };
+
 export const Comp = Example;
+
 export default {
   title,
+  component,
 };
