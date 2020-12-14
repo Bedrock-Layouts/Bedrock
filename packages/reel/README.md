@@ -1,6 +1,6 @@
 # `@bedrock-layout/reel`
 
-Layout helper that centers the content
+Layout helper for scrolling content
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
@@ -15,7 +15,7 @@ Used to provide convenient scrolling for lists of media (i.e carousel).
 ## Usage
 
 ```javascript
-import Center from '@bedrock-layout/center';
+import Reel from '@bedrock-layout/reel';
 
 <Reel maxHeight={300}>
   <div>1</div>
