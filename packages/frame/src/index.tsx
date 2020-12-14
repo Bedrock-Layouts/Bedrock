@@ -6,16 +6,25 @@ export interface FrameProps {
   position?: string;
 }
 
-const Frame = styled.div<FrameProps>`
-  --d: ${(props) =>
+const Frame = styled.div.attrs<FrameProps>((props) => {
+  const d =
     props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
       ? props.ratio[0]
-      : 1};
+      : 1;
 
-  --n: ${(props) =>
+  const n =
     props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
       ? props.ratio[1]
-      : 1};
+      : 1;
+  return {
+    style: {
+      "--d": d,
+      "--n": n,
+    },
+  };
+})<FrameProps>`
+  --d: 1;
+  --n: 1;
 
   box-sizing: border-box;
   display: block;
@@ -49,6 +58,10 @@ const Frame = styled.div<FrameProps>`
   > video {
     width: 100%;
     height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
+    size: 100%;
+
     object-fit: cover;
     object-position: ${(props) =>
       typeof props.position === "string" ? props.position : "50%"};

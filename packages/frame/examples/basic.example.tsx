@@ -11,10 +11,13 @@ Center.displayName = "Center";
 const title = "Frame";
 const name = "Basic";
 
-function Example(args: Record<string, unknown>) {
+function Example({ ratio = [], ...args }: Record<string, unknown>) {
+  ratio = (ratio as unknown[]).map((x) =>
+    typeof x === "string" ? parseInt(x) : x
+  );
   return (
     <Center>
-      <Frame {...args}>
+      <Frame ratio={ratio as [number, number]} {...args}>
         <img src={`https://picsum.photos/5000`} alt="cat" />
       </Frame>
     </Center>
@@ -26,4 +29,7 @@ Example.args = { ratio: [16, 9], position: "50% 50%" };
 export const Comp = Example;
 export default {
   title,
+  argTypes: {
+    ratio: { control: "array" },
+  },
 };
