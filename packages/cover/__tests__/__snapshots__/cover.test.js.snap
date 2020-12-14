@@ -8,7 +8,7 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
 }
 
 .c0 {
-  --gutter: 0px;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,6 +21,11 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
 >
   <div
     className="c1"
@@ -40,7 +45,7 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
 }
 
 .c0 {
-  --gutter: 0.125rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,6 +58,11 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "0.125rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -72,7 +82,7 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
 }
 
 .c0 {
-  --gutter: 0.25rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,6 +95,11 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "0.25rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -104,7 +119,7 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
 }
 
 .c0 {
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,6 +132,11 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "0.5rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -136,7 +156,7 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 }
 
 .c0 {
-  --gutter: 0.75rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,6 +169,11 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "0.75rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -181,6 +206,11 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -200,7 +230,7 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
 }
 
 .c0 {
-  --gutter: 1.5rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,6 +243,11 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1.5rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -232,7 +267,7 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
 }
 
 .c0 {
-  --gutter: 2rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -245,6 +280,11 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "2rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -264,7 +304,7 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
 }
 
 .c0 {
-  --gutter: 3rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -277,6 +317,11 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "3rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -296,7 +341,7 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
 }
 
 .c0 {
-  --gutter: 4rem;
+  --gutter: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -309,6 +354,11 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "4rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -341,6 +391,11 @@ exports[`Cover correct usage renders all the padding options 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -373,6 +428,11 @@ exports[`Cover correct usage renders all the padding options 2`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -405,6 +465,11 @@ exports[`Cover correct usage renders all the padding options 3`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -437,6 +502,11 @@ exports[`Cover correct usage renders all the padding options 4`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -469,6 +539,11 @@ exports[`Cover correct usage renders all the padding options 5`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -501,6 +576,11 @@ exports[`Cover correct usage renders all the padding options 6`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -533,6 +613,11 @@ exports[`Cover correct usage renders all the padding options 7`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -565,6 +650,11 @@ exports[`Cover correct usage renders all the padding options 8`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -597,6 +687,11 @@ exports[`Cover correct usage renders all the padding options 9`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -629,6 +724,11 @@ exports[`Cover correct usage renders all the padding options 10`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -661,6 +761,11 @@ exports[`Cover correct usage renders custom height 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -693,6 +798,11 @@ exports[`Cover correct usage renders default 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -730,6 +840,11 @@ exports[`Cover correct usage renders with bottom 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -769,6 +884,11 @@ exports[`Cover correct usage renders with theme overrides 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -806,6 +926,11 @@ exports[`Cover correct usage renders with top 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -845,6 +970,11 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -877,6 +1007,11 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 2`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -909,6 +1044,11 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 3`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -941,6 +1081,11 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 4`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -973,6 +1118,11 @@ exports[`Cover correct usage use padding object 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1005,6 +1155,11 @@ exports[`Cover correct usage use padding object 2`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1037,6 +1192,11 @@ exports[`Cover correct usage use padding object 3`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1069,6 +1229,11 @@ exports[`Cover correct usage use padding object 4`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1101,6 +1266,11 @@ exports[`Cover correct usage use padding object 5`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1133,6 +1303,11 @@ exports[`Cover correct usage use padding object 6`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1165,6 +1340,11 @@ exports[`Cover correct usage use padding object 7`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1197,6 +1377,11 @@ exports[`Cover correct usage use padding object 8`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1229,6 +1414,11 @@ exports[`Cover incorrect usage renders default with console error with wrong gut
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -1261,6 +1451,11 @@ exports[`Cover incorrect usage renders with min-height incorrect with invalid mi
 
 <div
   className="c0"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
