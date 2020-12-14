@@ -17,6 +17,12 @@ exports[`Column correct usage renders custom span 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -56,11 +62,16 @@ exports[`Column correct usage renders default gutters 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
     data-bedrock-layout-column=""
-    span={1}
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -95,6 +106,12 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -134,6 +151,12 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -173,6 +196,12 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
@@ -198,7 +227,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 exports[`Columns correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -208,6 +237,12 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -227,7 +262,7 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
 exports[`Columns correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.125rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -237,6 +272,12 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.125rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -256,7 +297,7 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
 exports[`Columns correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.25rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -266,6 +307,12 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.25rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -285,7 +332,7 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
 exports[`Columns correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -295,6 +342,12 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -314,7 +367,7 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
 exports[`Columns correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.75rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -324,6 +377,12 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.75rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -353,6 +412,12 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -372,7 +437,7 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
 exports[`Columns correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1.5rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -382,6 +447,12 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -401,7 +472,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 exports[`Columns correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 2rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -411,6 +482,12 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "2rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -430,7 +507,7 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
 exports[`Columns correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 3rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -440,6 +517,12 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "3rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -459,7 +542,7 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 exports[`Columns correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 4rem;
+  --gutter: 1rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -469,6 +552,12 @@ exports[`Columns correct usage renders all the gutter options 10`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "4rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -489,7 +578,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
-  --columns: 5;
+  --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
   gap: var(--gutter);
@@ -498,6 +587,12 @@ exports[`Columns correct usage renders custom columns 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 5,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -527,6 +622,12 @@ exports[`Columns correct usage renders default gutters 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -556,6 +657,12 @@ exports[`Columns correct usage renders dense mode 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -585,6 +692,12 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -614,6 +727,12 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -643,6 +762,12 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -672,6 +797,12 @@ exports[`Columns incorrect usage renders default with console error with incorre
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -701,6 +832,12 @@ exports[`Columns incorrect usage renders default with console error with incorre
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -730,6 +867,12 @@ exports[`Columns incorrect usage renders default with console error with wrong g
 
 <div
   className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

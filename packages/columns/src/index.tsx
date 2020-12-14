@@ -12,15 +12,23 @@ export interface ColumnsProps {
   dense?: boolean;
 }
 
-export const Columns = styled.div<ColumnsProps>`
+export const Columns = styled.div.attrs<ColumnsProps>(
+  ({ columns = 1, gutter = "lg", theme: { spacing = {} } }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+    return {
+      style: {
+        "--columns": columns > 0 ? columns : 1,
+        "--gutter": safeGutter,
+      },
+    };
+  }
+)<ColumnsProps>`
   box-sizing: border-box;
-
-  --gutter: ${({ gutter = "lg", theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
-
-  --columns: ${({ columns = 1 }) => (columns > 0 ? columns : 1)};
+  --gutter: 1rem;
+  --columns: 1;
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -48,16 +56,13 @@ const safeSpan: SafeSpan = (span) => {
 };
 
 export const Column = styled.div.attrs((props) => ({
-  /* eslint-disable */
-  ["data-bedrock-layout-column"]: "",
+  "data-bedrock-layout-column": "",
 }))<ColumnProps>`
   grid-column: span ${({ span = 1 }) => Math.max(safeSpan(span), 1)} / auto;
 `;
 
+Column.displayName = "Column";
+
 Column.propTypes = {
   span: PropTypes.number,
-};
-
-Column.defaultProps = {
-  span: 1,
 };
