@@ -112,15 +112,12 @@ PadBox.displayName = "PadBox";
 const spacingOptionsTypes = PropTypes.oneOf(Object.keys(defaultSpacings));
 
 PadBox.propTypes = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   padding: PropTypes.oneOfType<any>([
     spacingOptionsTypes,
     PropTypes.objectOf(spacingOptionsTypes),
     PropTypes.arrayOf(spacingOptionsTypes),
   ]),
-};
-
-PadBox.defaultProps = {
-  padding: "lg",
 };
 
 export default PadBox;
