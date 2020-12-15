@@ -34,20 +34,27 @@ export interface SplitProps {
   fraction?: FractionTypes;
 }
 
-const Split = styled.div<SplitProps>`
+const Split = styled.div.attrs<SplitProps>(
+  ({ gutter = "lg", theme: { spacing = {} } }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+    return {
+      style: {
+        "--gutter": safeGutter,
+      },
+    };
+  }
+)<SplitProps>`
   box-sizing: border-box;
 
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
+  --gutter: 1rem;
 
   display: grid;
   gap: var(--gutter);
   grid-template-columns: ${({ fraction = "1/2" }) =>
     fractions[fraction] || fractions["1/2"]}};
-
-
 `;
 
 Split.displayName = "Split";
@@ -59,11 +66,6 @@ Split.propTypes = {
   fraction: PropTypes.oneOf<FractionTypes>(
     Object.keys(fractions) as FractionTypes[]
   ),
-};
-
-Split.defaultProps = {
-  gutter: "lg",
-  fraction: "1/2",
 };
 
 export default Split;

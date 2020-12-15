@@ -34,8 +34,4 @@ Stack.propTypes = {
   ),
 };
 
-Stack.defaultProps = {
-  gutter: "lg",
-};
-
 export default Stack;
