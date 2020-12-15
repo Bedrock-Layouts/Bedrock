@@ -8,11 +8,20 @@ export interface CenterProps {
   centerChildren?: boolean;
 }
 
-const Center = styled.div<CenterProps>`
-  --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
-    typeof maxWidth === "number"
-      ? `${maxWidth}px`
-      : mergeBreakpoints(breakPoints).medium + "px"};
+const Center = styled.div.attrs<CenterProps>(
+  ({ maxWidth, theme: { breakPoints } }) => {
+    const safeMaxWidth =
+      typeof maxWidth === "number"
+        ? `${maxWidth}px`
+        : mergeBreakpoints(breakPoints).medium + "px";
+    return {
+      style: {
+        "--maxWidth": safeMaxWidth,
+      },
+    };
+  }
+)<CenterProps>`
+  --maxWidth: 1023px;
 
   box-sizing: content-box;
 

@@ -1,5 +1,7 @@
 # `@bedrock-layout/reel`
 
+Note: **This is an experimental primitive and still not in v1 release, use with caution**
+
 Layout helper for scrolling content
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)

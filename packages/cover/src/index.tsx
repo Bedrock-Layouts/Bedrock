@@ -29,11 +29,20 @@ interface CoverWrapperProps {
   minHeight?: string;
 }
 
-const CoverWrapper = styled.div<CoverWrapperProps>`
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
+const CoverWrapper = styled.div.attrs<CoverWrapperProps>(
+  ({ gutter = "lg", theme: { spacing = {} } }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+    return {
+      style: {
+        "--gutter": safeGutter,
+      },
+    };
+  }
+)<CoverWrapperProps>`
+  --gutter: 1rem;
 
   display: flex;
   flex-direction: column;

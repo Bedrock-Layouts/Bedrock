@@ -2,7 +2,7 @@
 
 exports[`Center correct usage renders custom width 1`] = `
 .c0 {
-  --maxWidth: 320px;
+  --maxWidth: 1023px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -12,6 +12,11 @@ exports[`Center correct usage renders custom width 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "320px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -40,6 +45,11 @@ exports[`Center correct usage renders default width 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "1023px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -79,6 +89,11 @@ exports[`Center correct usage renders with centered children 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "1023px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -108,6 +123,11 @@ exports[`Center correct usage renders with centered text 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "1023px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -126,7 +146,7 @@ exports[`Center correct usage renders with centered text 1`] = `
 
 exports[`Center correct usage renders with theme overrides 1`] = `
 .c0 {
-  --maxWidth: 1600px;
+  --maxWidth: 1023px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -136,6 +156,11 @@ exports[`Center correct usage renders with theme overrides 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "1600px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -164,6 +189,11 @@ exports[`Center incorrect usage renders default with console error with no child
 
 <div
   className="c0"
+  style={
+    Object {
+      "--maxWidth": "1023px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

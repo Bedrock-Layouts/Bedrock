@@ -12,18 +12,34 @@ export interface GridProps {
   minItemWidth?: number;
 }
 
-const Grid = styled.div<GridProps>`
+const Grid = styled.div.attrs<GridProps>(
+  ({
+    minItemWidth,
+    gutter = "lg",
+    theme: { spacing = {}, breakPoints = {} },
+  }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+
+    const safeMinItemWidth =
+      typeof minItemWidth === "number"
+        ? `${minItemWidth}px`
+        : mergeBreakpoints(breakPoints).smallOnly + "px";
+
+    return {
+      style: {
+        "--gutter": safeGutter,
+        "--minItemWidth": safeMinItemWidth,
+      },
+    };
+  }
+)<GridProps>`
   box-sizing: border-box;
 
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
-
-  --minItemWidth: ${(props) =>
-    typeof props.minItemWidth === "number"
-      ? `${props.minItemWidth}px`
-      : mergeBreakpoints(props.theme.breakPoints).smallOnly + "px"};
+  --gutter: 1rem;
+  --minItemWidth: 639px;
 
   display: grid;
   gap: var(--gutter);
@@ -41,10 +57,6 @@ Grid.propTypes = {
     Object.keys(defaultSpacings) as SpacingTypes[]
   ),
   minItemWidth: PropTypes.number,
-};
-
-Grid.defaultProps = {
-  gutter: "lg",
 };
 
 export default Grid;
