@@ -21,17 +21,23 @@ export interface InlineClusterProps {
   gutter?: SpacingTypes;
 }
 
-const InlineCluster = styled.div.attrs(({ children }) => {
-  return {
-    children: React.Children.map(children, (child) => <div>{child}</div>),
-  };
-})<InlineClusterProps>`
+const InlineCluster = styled.div.attrs<InlineClusterProps>(
+  ({ children, gutter = "lg", theme: { spacing = {} } }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+    return {
+      style: {
+        "--gutter": safeGutter,
+      },
+      children: React.Children.map(children, (child) => <div>{child}</div>),
+    };
+  }
+)<InlineClusterProps>`
   box-sizing: border-box;
 
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
+  --gutter: 1rem;
 
   display: inline-flex;
   flex-wrap: wrap;

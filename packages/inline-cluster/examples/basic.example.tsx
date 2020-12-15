@@ -12,7 +12,7 @@ const name = "Basic";
 
 function Example(args: Record<string, unknown>) {
   return (
-    <InlineCluster {...args} style={{ margin: "1rem 0" }}>
+    <InlineCluster {...args}>
       <BorderedBox style={{ height: 100 }}>Lorem ipsum dolor</BorderedBox>
       <BorderedBox>sit amet consectetur adipisicing elit.</BorderedBox>
       <BorderedBox>Fuga consequuntur</BorderedBox>
