@@ -10,12 +10,21 @@ export interface StackProps {
   gutter?: SpacingTypes;
 }
 
-const Stack = styled.div<StackProps>`
+const Stack = styled.div.attrs<StackProps>(
+  ({ gutter = "lg", theme: { spacing = {} } }) => {
+    const safeGutter =
+      gutter && mergeSpacings(spacing)[gutter]
+        ? mergeSpacings(spacing)[gutter]
+        : mergeSpacings(spacing).lg;
+    return {
+      style: {
+        "--gutter": safeGutter,
+      },
+    };
+  }
+)<StackProps>`
   box-sizing: border-box;
-  --gutter: ${({ gutter, theme: { spacing = {} } }) =>
-    gutter && mergeSpacings(spacing)[gutter]
-      ? mergeSpacings(spacing)[gutter]
-      : mergeSpacings(spacing).lg};
+  --gutter: 1rem;
 
   display: grid;
   grid-auto-columns: 100%;
