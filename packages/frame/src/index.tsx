@@ -29,17 +29,16 @@ const Frame = styled.div.attrs<FrameProps>((props) => {
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
+
+  @supports not (aspect-ratio: 1/1) {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 
   > * {
     overflow: hidden;
     position: absolute;
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
     inset-block-start: 0;
     inset-block-end: 0;
@@ -56,8 +55,6 @@ const Frame = styled.div.attrs<FrameProps>((props) => {
 
   > img,
   > video {
-    width: 100%;
-    height: 100%;
     inline-size: 100%;
     block-size: 100%;
     size: 100%;
@@ -71,6 +68,7 @@ const Frame = styled.div.attrs<FrameProps>((props) => {
 Frame.displayName = "Frame";
 
 type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
+
 const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
   if (typeof ratio === "undefined") return new Error(`${propName} is required`);
 

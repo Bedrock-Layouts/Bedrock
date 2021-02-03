@@ -7,17 +7,13 @@ exports[`Frame correct usage renders custom position 1`] = `
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -44,8 +40,6 @@ exports[`Frame correct usage renders custom position 1`] = `
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -53,6 +47,12 @@ exports[`Frame correct usage renders custom position 1`] = `
   size: 100%;
   object-fit: cover;
   object-position: top left;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -78,17 +78,13 @@ exports[`Frame correct usage renders with ratio 1`] = `
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -115,8 +111,6 @@ exports[`Frame correct usage renders with ratio 1`] = `
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -124,6 +118,12 @@ exports[`Frame correct usage renders with ratio 1`] = `
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -149,17 +149,13 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -186,8 +182,6 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -195,6 +189,12 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -220,17 +220,13 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -257,8 +253,6 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -266,6 +260,12 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -291,17 +291,13 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -328,8 +324,6 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -337,6 +331,12 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -362,17 +362,13 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -399,8 +395,6 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -408,6 +402,12 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -433,17 +433,13 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -470,8 +466,6 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -479,6 +473,12 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
@@ -504,17 +504,13 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
-  padding-block-end: calc(var(--n) / var(--d) * 100%);
   position: relative;
+  aspect-ratio: var(--d) / var(--n);
 }
 
 .c0 > * {
   overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   -webkit-inset-block-start: 0;
   -ms-intb-rlock-start: 0;
   inset-block-start: 0;
@@ -541,8 +537,6 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
 
 .c0 > img,
 .c0 > video {
-  width: 100%;
-  height: 100%;
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -550,6 +544,12 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
   size: 100%;
   object-fit: cover;
   object-position: 50%;
+}
+
+@supports not (aspect-ratio:1/1) {
+  .c0 {
+    padding-block-end: calc(var(--n) / var(--d) * 100%);
+  }
 }
 
 <div
