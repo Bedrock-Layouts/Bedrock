@@ -21,7 +21,7 @@ will trigger a rerender when the `current` property changes.
 ```javascript
 import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
 
-const ForwardedRefDiv = React.forwardRef(props,ref)=>{
+const ForwardedRefDiv = React.forwardRef((props,ref)=>{
     const innerRef = useForwardedRef(ref)
     // do something with innerRef
     return <div ref={innerRef} {...props}>
