@@ -9,7 +9,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 ```javascript
 import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
 
-const ForwardedRefDiv = React.forwardRef(props,ref)=>{
+const ForwardedRefDiv = React.forwardRef((props,ref)=>{
     const innerRef = useForwardedRef(ref)
     // do something with innerRef
     return <div ref={innerRef} {...props}>
