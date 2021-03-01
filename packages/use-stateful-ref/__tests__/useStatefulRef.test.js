@@ -12,7 +12,10 @@ const setState = jest.fn((newState) => {
   state = newState;
 });
 
-React.useState.mockReturnValue([state, setState]);
+React.useState.mockImplementation((initialValue) => {
+  state = initialValue;
+  return [state, setState];
+});
 
 let statefulRef;
 const HookWrapper = ({ value, initialValue }) => {
@@ -32,6 +35,7 @@ describe("useStatefulRef", () => {
   });
 
   afterEach(() => {
+    state = undefined;
     statefulRef = undefined;
     document.body.removeChild(container);
     container = null;
@@ -63,12 +67,16 @@ describe("useStatefulRef", () => {
   });
 
   it("should call not call setState when setting value to same value", () => {
+    expect(setState).not.toBeCalled();
+
     act(() => {
       ReactDOM.render(
         <HookWrapper initialValue="Test" value="Test" />,
         container
       );
     });
+
+    expect(setState).not.toBeCalled();
 
     expect(setState.mock.calls).toMatchSnapshot();
   });

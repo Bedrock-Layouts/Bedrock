@@ -1,4 +1,4 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { breakPoints, spacing } from "@bedrock-layout/spacing-constants";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { act, create } from "react-test-renderer";
@@ -77,10 +77,28 @@ describe("Switcher", () => {
       });
 
       it("should render a stack if container is below default", () => {
-        useContainerQuery.mockReturnValue(true);
+        useContainerQuery.mockImplementation((...[, width]) => {
+          return width <= breakPoints.smallOnly;
+        });
 
         const stack = create(
           <SplitSwitcher>
+            <Lorem />
+          </SplitSwitcher>
+        );
+
+        expect(stack.toJSON()).toMatchSnapshot();
+
+        useContainerQuery.mockRestore();
+      });
+
+      it("should render a split if container is above switchAt", () => {
+        useContainerQuery.mockImplementation((...[, width]) => {
+          return width <= breakPoints.smallOnly;
+        });
+
+        const stack = create(
+          <SplitSwitcher switchAt={breakPoints.smallOnly + 1}>
             <Lorem />
           </SplitSwitcher>
         );
@@ -208,10 +226,28 @@ describe("Switcher", () => {
         expect(spy).toBeCalled();
       });
       it("should render a stack if container is below default", () => {
-        useContainerQuery.mockReturnValue(true);
+        useContainerQuery.mockImplementation((...[, width]) => {
+          return width <= breakPoints.smallOnly;
+        });
 
         const stack = create(
           <ColumnsSwitcher>
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+
+        expect(stack.toJSON()).toMatchSnapshot();
+
+        useContainerQuery.mockRestore();
+      });
+
+      it("should render a columns if container is above switchAt", () => {
+        useContainerQuery.mockImplementation((...[, width]) => {
+          return width <= breakPoints.smallOnly;
+        });
+
+        const stack = create(
+          <ColumnsSwitcher switchAt={breakPoints.smallOnly + 1}>
             <Lorem />
           </ColumnsSwitcher>
         );
