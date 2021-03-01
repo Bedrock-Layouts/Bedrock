@@ -16,6 +16,7 @@
     "dev": "docz dev",
     "build:site": "docz build",
     "lint": "lerna run lint --parallel",
+    "lint-staged": "lint-staged",
     "check-types": "lerna run check-types --parallel",
     "check-format": "lerna run check-format --parallel",
     "fix-format": "lerna run fix-format --parallel",
@@ -29,7 +30,8 @@
     "prepublish": "npm run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package",
-    "verify": "npm-run-all --parallel check-types lint check-format test:coverage"
+    "verify": "npm-run-all --parallel check-types lint check-format test:coverage",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@bedrock-layout/appboundary": "file:./packages/appboundary",
@@ -93,7 +95,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "^4.3.6",
+    "husky": "^5.1.2",
     "import-sort-style-module": "^6.0.0",
     "jest": "^26.4.0",
     "jest-styled-components": "^7.0.0",
@@ -131,10 +133,5 @@
     ],
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run verify"
-    }
   }
 }
