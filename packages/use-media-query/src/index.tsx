@@ -23,11 +23,11 @@ const useMediaQuery = (query: string) => {
       if (shouldUpdate) setMatch(matches);
     };
 
-    if (mql) mql.addListener(handleChange);
+    mql?.addListener(handleChange);
 
     return () => {
       shouldUpdate = false;
-      if (mql) mql.removeListener(handleChange);
+      mql?.removeListener(handleChange);
     };
   }, [query, match]);
 
