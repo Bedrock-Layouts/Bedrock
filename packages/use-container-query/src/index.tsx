@@ -17,9 +17,9 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
   const [matches, setMatch] = useState(false);
 
   useEffect(() => {
-    let observer: ResizeObserver;
+    let observer: ResizeObserver | undefined;
     if (node) {
-      observer = new ResizeObserver(([entry]) => {
+      observer = new ResizeObserver(([entry]: ResizeObserverEntry[]) => {
         /* 
         I am using `any` as this is future forward, but the types do not yet exist
         due to it being still experimental
@@ -41,9 +41,10 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
     }
 
     return () => {
-      if (observer) observer.disconnect();
+      observer?.disconnect();
     };
   }, [setMatch, node, width, maxWidth]);
+
   return matches;
 };
 
