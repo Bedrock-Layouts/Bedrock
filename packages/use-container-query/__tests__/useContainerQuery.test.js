@@ -5,6 +5,8 @@ import ResizeObserver from "resize-observer-polyfill";
 
 import useContainerQuery from "../src";
 
+jest.spyOn(console, "error").mockImplementation(() => void 0);
+
 jest.mock("resize-observer-polyfill", () =>
   jest.fn((impl) => ({
     observe: jest.fn(() => impl([{ contentRect: { width: 300 } }])),
