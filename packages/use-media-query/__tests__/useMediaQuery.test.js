@@ -4,12 +4,14 @@ import { act } from "react-dom/test-utils";
 
 import useMediaQuery from "../src";
 
-let matches;
+let matches = true;
 const HookWrapper = ({ width = 320 }) => {
   matches = useMediaQuery(`(max-width:${width}px)`);
 
   return null;
 };
+
+jest.spyOn(console, "error").mockImplementation(() => void 0);
 
 describe("useMediaQuery", () => {
   let container;
@@ -24,11 +26,13 @@ describe("useMediaQuery", () => {
     document.body.removeChild(container);
     container = null;
   });
+
   test("useMediaQuery is not null", () => {
     expect(useMediaQuery).toBeTruthy();
   });
-  it("should call window.matchMedia", () => {
-    act(() => {
+
+  it("should call window.matchMedia", async () => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
     });
 
@@ -36,20 +40,20 @@ describe("useMediaQuery", () => {
     expect(window.matchMedia.mock.calls).toMatchSnapshot();
   });
 
-  it("should update matches when listener is called", () => {
+  it("should update matches when listener is called", async () => {
     let listeners = [];
     window.matchMedia.mockImplementation((query) => ({
       matches: true,
       media: query,
-      addListener: jest.fn((fn) => {
+      addEventListener: jest.fn((_, fn) => {
         listeners = listeners.concat(fn);
       }),
-      removeListener: jest.fn((fn) => {
+      removeEventListener: jest.fn((_, fn) => {
         listeners = listeners.filter((listener) => listener !== fn);
       }),
     }));
 
-    act(() => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
     });
 
@@ -59,39 +63,54 @@ describe("useMediaQuery", () => {
     window.matchMedia.mockRestore();
   });
 
-  it("wont update matches if unmounted", () => {
+  it("wont update matches if unmounted", async () => {
     let listeners = [];
+
     window.matchMedia.mockImplementation((query) => ({
       matches: true,
       media: query,
-      addListener: jest.fn((fn) => {
-        listeners = listeners.concat(fn);
+      addEventListener: jest.fn((_, fn) => {
+        listeners.push(fn);
       }),
-      removeListener: jest.fn(),
+      removeEventListener: jest.fn((_, fn) => {
+        listeners = listeners.filter((listener) => listener !== fn);
+      }),
     }));
 
-    act(() => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
     });
 
-    act(() => {
-      ReactDOM.unmountComponentAtNode(container);
-    });
+    const fn = listeners[0];
 
-    listeners[0]({ matches: false });
+    await act(async () => {
+      if (ReactDOM.unmountComponentAtNode(container)) {
+        fn({ matches: false });
+      }
+    });
 
     expect(matches).toBe(true);
     window.matchMedia.mockRestore();
   });
 
-  it("returns false if matchMedia not on window", () => {
+  it("returns false if matchMedia not on window", async () => {
+    const fakeRef = {
+      current: null,
+    };
+
+    jest.spyOn(React, "useRef").mockImplementation(() => fakeRef);
+
     const matchMedia = window.matchMedia;
+
     window.matchMedia = undefined;
-    act(() => {
+
+    await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
     });
 
     expect(matches).toBe(false);
+    expect(fakeRef.current).toBe(null);
+
     window.matchMedia = matchMedia;
   });
 });

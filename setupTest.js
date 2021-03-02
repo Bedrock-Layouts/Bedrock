@@ -1,4 +1,5 @@
 import "jest-styled-components";
+import "regenerator-runtime/runtime";
 
 Object.defineProperty(window, "CSS", {
   writable: true,

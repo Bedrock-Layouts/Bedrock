@@ -1,6 +1,6 @@
 import React from "react";
 
-type HandleMQLChange = (this: MediaQueryList, env: MediaQueryListEvent) => any;
+type HandleMQLChange = (this: MediaQueryList, env: MediaQueryListEvent) => void;
 
 const useMediaQuery = (query: string) => {
   const [match, setMatch] = React.useState(false);
@@ -23,13 +23,13 @@ const useMediaQuery = (query: string) => {
       if (shouldUpdate) setMatch(matches);
     };
 
-    mql?.addListener(handleChange);
+    mql?.addEventListener("change", handleChange);
 
     return () => {
       shouldUpdate = false;
-      mql?.removeListener(handleChange);
+      mql?.removeEventListener("change", handleChange);
     };
-  }, [query, match]);
+  }, [query, match, setMatch]);
 
   return match;
 };
