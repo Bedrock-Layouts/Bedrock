@@ -36,6 +36,24 @@ describe("InlineCluster", () => {
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
+
+    it("renders check for the browser", () => {
+      const oldDocument = document;
+      // eslint-disable-next-line no-native-reassign
+      document = undefined;
+
+      const inlineCluster = create(
+        <InlineCluster>
+          <Lorem />
+        </InlineCluster>
+      );
+
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
+
+      // eslint-disable-next-line no-native-reassign
+      document = oldDocument;
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const inlineCluster = create(
