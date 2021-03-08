@@ -1,4 +1,4 @@
-import Stack from "@bedrock-layout/stack";
+import Stack, { StackProps } from "@bedrock-layout/stack";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Stack";
 const name = "Basic";
 
-function Example(args) {
+function Example(args: StackProps) {
   return (
     <Stack {...args}>
       <BorderedBox>

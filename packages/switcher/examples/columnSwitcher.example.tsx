@@ -1,6 +1,6 @@
 import { Column } from "@bedrock-layout/columns";
 import { breakPoints } from "@bedrock-layout/spacing-constants";
-import { ColumnsSwitcher } from "@bedrock-layout/switcher";
+import { ColumnSwitcherProps, ColumnsSwitcher } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,7 +12,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "ColumnSwitcher";
 
-function Example(args) {
+function Example(args: ColumnSwitcherProps) {
   return (
     <ColumnsSwitcher {...args}>
       <>

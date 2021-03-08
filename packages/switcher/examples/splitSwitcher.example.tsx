@@ -1,5 +1,5 @@
 import { breakPoints } from "@bedrock-layout/spacing-constants";
-import { SplitSwitcher } from "@bedrock-layout/switcher";
+import { SplitSwitcher, SplitSwitcherProps } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,7 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "SplitSwitcher";
 
-function Example(args) {
+function Example(args: SplitSwitcherProps) {
   return (
     <SplitSwitcher {...args}>
       <BorderedBox>
