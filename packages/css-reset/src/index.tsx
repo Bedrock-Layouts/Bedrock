@@ -7,19 +7,14 @@ export const reset = css`
     box-sizing: border-box;
   }
 
-  ul[class],
-  ol[class] {
-    padding: 0;
-  }
-
   body,
   h1,
   h2,
   h3,
   h4,
   p,
-  ul[class],
-  ol[class],
+  ul,
+  ol,
   li,
   figure,
   figcaption,
@@ -29,18 +24,22 @@ export const reset = css`
     margin: 0;
   }
 
+  ul[class],
+  ol[class] {
+    padding: 0;
+    list-style: none;
+  }
+
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
   body {
     min-height: 100vh;
     min-block-size: 100vh;
-    scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-size: 100%;
-  }
-
-  ul[class],
-  ol[class] {
-    list-style: none;
   }
 
   a:not([class]) {
@@ -48,25 +47,9 @@ export const reset = css`
   }
 
   img {
+    display: block;
     max-width: 100%;
     max-inline-size: 100%;
-    display: block;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
   }
 
   p,
@@ -82,8 +65,30 @@ export const reset = css`
     max-inline-size: 60ch;
   }
 
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
   .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 `;
 
