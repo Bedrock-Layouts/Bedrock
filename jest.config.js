@@ -51,6 +51,12 @@ module.exports = {
       lines: 99,
       functions: 100,
     },
+    "./packages/inline/src/index.tsx": {
+      statements: 0,
+      branches: 0,
+      lines: 0,
+      functions: 0,
+    },
   },
 
   // A path to a custom dependency extractor

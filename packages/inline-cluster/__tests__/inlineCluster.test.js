@@ -23,7 +23,6 @@ const Lorem = () => (
 );
 
 describe("InlineCluster", () => {
-  test("test todo", () => Promise.resolve());
   describe("correct usage", () => {
     test("InlineCluster is not null", () => {
       expect(InlineCluster).toBeTruthy();

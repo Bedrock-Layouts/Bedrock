@@ -1,0 +1,51 @@
+---
+name: Inline
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Inline from '@bedrock-layout/inline';
+
+# Inline
+
+## Use case
+
+The Inline component is designed constistent spacing around inline elements of variable width. Unlike the InlineCluster component,
+the items in the Inline component will not wrap. The Inline component also allows you to specify a child that can stretch, filling the execess space.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the Inline component
+
+```bash
+  npm install @bedrock-layout/inline
+```
+
+## Basic usage
+
+<Playground>
+  <Inline stretch="start" gutter="lg" justify="start" align="start">
+    <span>Lorem ipsum dolor</span>
+    <span>sit amet consectetur</span>
+    <span>adipisicing elit.</span>
+  </Inline>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/inline--basic) for more details.
+
+## Properties
+
+| Property | Type                                          | Default |
+| -------- | --------------------------------------------- | ------- |
+| stretch  | One of: `all, start, end, index of the child` | -       |
+| gutter   | One of: `none, xs, sm, md, lg, xl, xxl`       | `lg`    |
+| justify  | One of: `start, end, center`                  | `start` |
+| align    | One of: `start, end, center`                  | `start` |

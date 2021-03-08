@@ -62,6 +62,8 @@ export function flexGapSupported(): boolean {
   return isSupported;
 }
 
+const isFlexGapSupported = flexGapSupported();
+
 const InlineCluster = styled.div.attrs<InlineClusterProps>(
   ({ children, gutter = "lg", theme: { spacing = {} } }) => {
     const safeGutter =
@@ -72,7 +74,9 @@ const InlineCluster = styled.div.attrs<InlineClusterProps>(
       style: {
         "--gutter": safeGutter,
       },
-      children: React.Children.map(children, (child) => <div>{child}</div>),
+      children: isFlexGapSupported
+        ? children
+        : React.Children.map(children, (child) => <div>{child}</div>),
     };
   }
 )<InlineClusterProps>`
@@ -94,7 +98,7 @@ const InlineCluster = styled.div.attrs<InlineClusterProps>(
       ? justifyAlignMap[props.align]
       : justifyAlignMap.start};
 
-  ${flexGapSupported() ? gapSupportedCSS : fallbackCss}
+  ${isFlexGapSupported ? gapSupportedCSS : fallbackCss}
 `;
 
 InlineCluster.displayName = "InlineCluster";

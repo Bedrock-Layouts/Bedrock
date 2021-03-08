@@ -1,4 +1,5 @@
 import useContainerQuery from "@bedrock-layout/use-container-query";
+import useStatefulRef from "packages/use-stateful-ref/lib";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,8 +13,8 @@ const title = "useContainerQuery";
 const name = "Width Range";
 
 function Example() {
-  const [node, ref] = React.useState(null);
-  const matches = useContainerQuery(node, 320, 640);
+  const ref = useStatefulRef<HTMLDivElement>(null);
+  const matches = useContainerQuery(ref.current, 320, 640);
 
   return (
     <BorderedBox style={{ margin: "auto", width: "50vw" }} ref={ref}>

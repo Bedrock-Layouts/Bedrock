@@ -11,7 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "useContainerQuery";
 const name = "Basic";
 
-function Example({ width }) {
+function Example({ width }: { width: number }) {
   const [node, ref] = React.useState<HTMLDivElement | null>(null);
   const matches = useContainerQuery(node as HTMLDivElement, width);
 

@@ -1,6 +1,4 @@
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
-import Split from "@bedrock-layout/split";
-import { select } from "@storybook/addon-knobs";
+import Split, { SplitProps } from "@bedrock-layout/split";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Split";
 const name = "Basic";
 
-function Example(args) {
+function Example(args: SplitProps) {
   return (
     <Split {...args}>
       <BorderedBox>
