@@ -20,7 +20,7 @@ If you haven't already, install `styled-components`:
   npm install styled-components
 ```
 
-Then install the stack component
+Then install the Cover component
 
 ```bash
   npm install @bedrock-layout/cover
@@ -29,7 +29,7 @@ Then install the stack component
 ## Basic usage
 
 <Playground>
-  <Cover top={<div>I'm on the Top</div>} >
+  <Cover top={<div>I'm on the Top</div>}>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
@@ -45,10 +45,10 @@ Then install the stack component
 
 ## Properties
 
-| Property | Type                                                       | Default |
-| -------- | ---------------------------------------------------------- | ------- |
-| minHeight| any valid css size unit as a string                        | "100vh" |
-| gutter   | `"none" | "xs" | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg`    |
-| children | ReactNode                                                  | -       |
-| top      | ReactNode                                                  | -       |
-| bottom   | ReactNode                                                  | -       |
+| Property  | Type                                | Default |
+| --------- | ----------------------------------- | ------- | ---- | ---- | ---- | ---- | ---- | ------ | ---- |
+| minHeight | any valid css size unit as a string | "100vh" |
+| gutter    | `"none"                             | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
+| children  | ReactNode                           | -       |
+| top       | ReactNode                           | -       |
+| bottom    | ReactNode                           | -       |

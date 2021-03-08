@@ -28,6 +28,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | useMediaQuery          |
 | ✅     | useMatchMedia          |
 | ✅     | useContainerQuery      |
+| ✅     | Inline                 |
 | ✅     | InlineCluster          |
 | ✅     | Cover                  |
 | ✅     | Frame                  |
