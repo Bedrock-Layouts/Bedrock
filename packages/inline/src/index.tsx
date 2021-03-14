@@ -1,16 +1,19 @@
 import InlineCluster, {
   InlineClusterProps,
+  isFlexGapSupported,
 } from "@bedrock-layout/inline-cluster";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type Stretch = "all" | "start" | "end" | number;
+type SwitchAt = string | number;
 
 export interface InlineProps extends InlineClusterProps {
   stretch?: Stretch;
+  switchAt: SwitchAt;
 }
 
-const Inline = styled(InlineCluster)<{ stretch?: Stretch }>`
+const inlineStyles = css<InlineProps>`
   flex-wrap: nowrap;
   ${({ stretch }) =>
     stretch === "all"
@@ -24,6 +27,41 @@ const Inline = styled(InlineCluster)<{ stretch?: Stretch }>`
       : null}
 `;
 
+const responsive = css<InlineProps>`
+  --switchAt: ${({ switchAt }) =>
+    typeof switchAt === "string" ? switchAt : `${switchAt}px`};
+  flex-wrap: wrap;
+  & > * {
+    flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  }
+`;
+
+function shouldUseSwitch(switchAt: SwitchAt) {
+  if (switchAt > -1) {
+    return true;
+  }
+
+  if (typeof switchAt === "string" && typeof CSS !== undefined) {
+    return CSS.supports(`height: ${switchAt}`);
+  }
+
+  return false;
+}
+
+const Inline = styled(InlineCluster)<InlineProps>`
+  ${isFlexGapSupported
+    ? css`
+        ${inlineStyles}
+        ${(props) => shouldUseSwitch(props.switchAt) && responsive}
+      `
+    : css`
+        & > * {
+          ${inlineStyles}
+          ${(props) => shouldUseSwitch(props.switchAt) && responsive}
+        }
+      `}
+`;
+
 Inline.displayName = "Inline";
 
 Inline.propTypes = {
@@ -32,6 +70,10 @@ Inline.propTypes = {
     PropTypes.oneOf<Stretch>(["all", "start", "end"]),
     PropTypes.number,
   ]),
+  switchAt: (PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]) as unknown) as React.Validator<SwitchAt>,
 };
 
 export default Inline;

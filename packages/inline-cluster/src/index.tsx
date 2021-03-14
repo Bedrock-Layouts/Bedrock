@@ -22,15 +22,37 @@ export interface InlineClusterProps {
   gutter?: SpacingTypes;
 }
 
-const fallbackCss = css`
-  margin: calc(var(--gutter) / 2 * -1);
+const justifyAlign = css<InlineClusterProps>`
+  justify-content: ${(props) =>
+    typeof props.justify !== "undefined" && justifyAlignMap[props.justify]
+      ? justifyAlignMap[props.justify]
+      : justifyAlignMap.start};
 
+  align-items: ${(props) =>
+    typeof props.align !== "undefined" && justifyAlignMap[props.align]
+      ? justifyAlignMap[props.align]
+      : justifyAlignMap.start};
+`;
+
+const fallbackCss = css`
   & > * {
-    margin: calc(var(--gutter) / 2);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    ${justifyAlign}
+    margin: calc(var(--gutter) / 2 * -1);
+
+    & > * {
+      margin: calc(var(--gutter) / 2);
+    }
   }
 `;
 
 const gapSupportedCSS = css`
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  ${justifyAlign}
   gap: var(--gutter);
 `;
 
@@ -62,7 +84,7 @@ export function flexGapSupported(): boolean {
   return isSupported;
 }
 
-const isFlexGapSupported = flexGapSupported();
+export const isFlexGapSupported = flexGapSupported();
 
 const InlineCluster = styled.div.attrs<InlineClusterProps>(
   ({ children, gutter = "lg", theme: { spacing = {} } }) => {
@@ -74,29 +96,19 @@ const InlineCluster = styled.div.attrs<InlineClusterProps>(
       style: {
         "--gutter": safeGutter,
       },
-      children: isFlexGapSupported
-        ? children
-        : React.Children.map(children, (child) => <div>{child}</div>),
+      children: isFlexGapSupported ? (
+        children
+      ) : (
+        <div>
+          {React.Children.map(children, (child) => (
+            <div>{child}</div>
+          ))}
+        </div>
+      ),
     };
   }
 )<InlineClusterProps>`
-  box-sizing: border-box;
-
   --gutter: 1rem;
-
-  display: flex;
-  flex-wrap: wrap;
-  inline-size: 100%;
-
-  justify-content: ${(props) =>
-    typeof props.justify !== "undefined" && justifyAlignMap[props.justify]
-      ? justifyAlignMap[props.justify]
-      : justifyAlignMap.start};
-
-  align-items: ${(props) =>
-    typeof props.align !== "undefined" && justifyAlignMap[props.align]
-      ? justifyAlignMap[props.align]
-      : justifyAlignMap.start};
 
   ${isFlexGapSupported ? gapSupportedCSS : fallbackCss}
 `;
