@@ -10,7 +10,7 @@ type SwitchAt = string | number;
 
 export interface InlineProps extends InlineClusterProps {
   stretch?: Stretch;
-  switchAt: SwitchAt;
+  switchAt?: SwitchAt;
 }
 
 const inlineStyles = css<InlineProps>`
@@ -36,8 +36,8 @@ const responsive = css<InlineProps>`
   }
 `;
 
-function shouldUseSwitch(switchAt: SwitchAt) {
-  if (switchAt > -1) {
+function shouldUseSwitch(switchAt?: SwitchAt) {
+  if (switchAt && switchAt > -1) {
     return true;
   }
 
