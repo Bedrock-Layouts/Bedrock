@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ResizeObserver from "resize-observer-polyfill";
 
 type UseContainterQuery = (
   node: Element,
@@ -8,7 +7,7 @@ type UseContainterQuery = (
 ) => boolean;
 
 const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
-  if (typeof maxWidth !== "undefined" && maxWidth <= width) {
+  if (maxWidth !== undefined && maxWidth <= width) {
     throw new Error(
       `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`
     );
@@ -18,17 +17,11 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
 
   useEffect(() => {
     let observer: ResizeObserver | undefined;
-    if (node) {
-      observer = new ResizeObserver(([entry]: ResizeObserverEntry[]) => {
-        /* 
-        I am using `any` as this is future forward, but the types do not yet exist
-        due to it being still experimental
-        */
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const nodeWidth = (entry as any).borderBox
-          ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (entry as any).borderBox.inlineSize
-          : entry.contentRect.width;
+    if (node && window.ResizeObserver) {
+      observer = new ResizeObserver(([entry]) => {
+        const nodeWidth =
+          entry.borderBoxSize?.length ?? entry.contentRect.width;
+
         if (typeof maxWidth !== "undefined") {
           setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
         } else {

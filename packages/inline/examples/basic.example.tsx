@@ -27,6 +27,7 @@ Example.args = {
   justify: "start",
   align: "start",
   stretch: "end",
+  switchAt: "40rem",
 };
 
 export const Comp = Example;
