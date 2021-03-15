@@ -32,3 +32,4 @@ import Inline from '@bedrock-layout/inline';
 | gutter   | One of: `none, xs, sm, md, lg, xl, xxl`       | `lg`    |
 | justify  | One of: `start, end, center`                  | `start` |
 | align    | One of: `start, end, center`                  | `start` |
+| switchAt | One of: `CSS length, number`                  | -       |
