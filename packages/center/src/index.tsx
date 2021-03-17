@@ -3,17 +3,28 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface CenterProps {
-  maxWidth?: number;
+  maxWidth?: number | string;
   centerText?: boolean;
   centerChildren?: boolean;
 }
 
+function getSafeMaxWidth(breakPoints: object, maxWidth?: number | string) {
+  if (
+    typeof maxWidth === "string" &&
+    typeof CSS !== undefined &&
+    CSS.supports(`width:${maxWidth}`)
+  ) {
+    return maxWidth;
+  }
+
+  return typeof maxWidth === "number"
+    ? `${maxWidth}px`
+    : mergeBreakpoints(breakPoints).medium + "px";
+}
+
 const Center = styled.div.attrs<CenterProps>(
   ({ maxWidth, theme: { breakPoints } }) => {
-    const safeMaxWidth =
-      typeof maxWidth === "number"
-        ? `${maxWidth}px`
-        : mergeBreakpoints(breakPoints).medium + "px";
+    const safeMaxWidth = getSafeMaxWidth(breakPoints, maxWidth);
     return {
       style: {
         "--maxWidth": safeMaxWidth,
@@ -46,7 +57,7 @@ const Center = styled.div.attrs<CenterProps>(
 Center.displayName = "Center";
 
 Center.propTypes = {
-  maxWidth: PropTypes.number,
+  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   centerText: PropTypes.bool,
 };
 
