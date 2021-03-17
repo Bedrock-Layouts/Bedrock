@@ -53,6 +53,6 @@ export default {
   title,
   component: Center,
   argTypes: {
-    maxWidth: { control: "number" },
+    maxWidth: "640px",
   },
 };

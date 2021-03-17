@@ -45,6 +45,16 @@ describe("Center", () => {
       expect(center.toJSON()).toMatchSnapshot();
     });
 
+    it("renders custom width as string", () => {
+      CSS.supports.mockImplementation(() => true);
+      const center = create(
+        <Center maxWidth="max-width">
+          <Lorem />
+        </Center>
+      );
+      expect(center.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with centered text", () => {
       const center = create(
         <Center centerText>
@@ -62,6 +72,7 @@ describe("Center", () => {
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
+
     it("renders with theme overrides", () => {
       const center = create(
         <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
@@ -87,7 +98,7 @@ describe("Center", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Center maxWidth="incorrect">
+        <Center maxWidth={["incorrect"]}>
           <Lorem />
         </Center>
       );

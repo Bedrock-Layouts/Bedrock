@@ -21,3 +21,10 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });
+
+Object.defineProperty(window, "CSS", {
+  writable: true,
+  value: {
+    supports: jest.fn(),
+  },
+});
