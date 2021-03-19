@@ -33,12 +33,23 @@ import { ThemeProvider } from 'styled-components';
 
 const newSpacings = {
     sm:'45px',
-    xxlg:'100ch'
+    xxl:'100ch'
 }
 
-<ThemeProvider theme={{spacing:newSpacings}}>
+<ThemeProvider theme={{ spacing: newSpacings }}>
     <Stack gutter="sm">
      {...}
     </Stack>
 </ThemeProvider>;
 ```
+
+| spacing | breakpoints  |
+| ------- | ------------ |
+| `none`  | `medium`     |
+| `xs`    | `large`      |
+| `sm`    | `xlarge`     |
+| `md`    | `xxlarge`    |
+| `lg`    | `smallOnly`  |
+| `xl`    | `mediumOnly` |
+| `xxl`   | `largeOnly`  |
+| -       | `xlargeOnly` |
