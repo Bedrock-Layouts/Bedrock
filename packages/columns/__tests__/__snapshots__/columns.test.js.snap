@@ -275,7 +275,7 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "0.125rem",
+      "--gutter": "0.0625rem",
     }
   }
 >
@@ -310,7 +310,7 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "0.25rem",
+      "--gutter": "0.125rem",
     }
   }
 >
@@ -345,7 +345,7 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "0.5rem",
+      "--gutter": "0.25rem",
     }
   }
 >
@@ -380,7 +380,7 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "0.75rem",
+      "--gutter": "0.5rem",
     }
   }
 >
@@ -415,7 +415,7 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "1rem",
+      "--gutter": "0.75rem",
     }
   }
 >
@@ -450,7 +450,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "1.5rem",
+      "--gutter": "1rem",
     }
   }
 >
@@ -485,7 +485,7 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "2rem",
+      "--gutter": "1.5rem",
     }
   }
 >
@@ -520,7 +520,7 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
   style={
     Object {
       "--columns": 1,
-      "--gutter": "3rem",
+      "--gutter": "2rem",
     }
   }
 >
@@ -540,6 +540,41 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 `;
 
 exports[`Columns correct usage renders all the gutter options 10`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 1rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+<div
+  className="c0"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "3rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Columns correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;

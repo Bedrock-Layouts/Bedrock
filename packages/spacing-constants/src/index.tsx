@@ -1,4 +1,5 @@
 const none = "0px";
+const xxs = "0.0625rem";
 const xs = "0.125rem";
 const sm = "0.25rem";
 const md = "0.5rem";
@@ -11,6 +12,7 @@ const xxl = "4rem";
 
 export interface Spacing {
   none: string;
+  xxs: string;
   xs: string;
   sm: string;
   md: string;
@@ -22,10 +24,9 @@ export interface Spacing {
   xxl: string;
 }
 
-export type SpacingTypes = keyof Spacing;
-
 export const spacing: Spacing = {
   none,
+  xxs,
   xs,
   sm,
   md,
@@ -36,6 +37,8 @@ export const spacing: Spacing = {
   xlXXl,
   xxl,
 };
+
+export type SpacingTypes = keyof Spacing;
 
 type MergeSpacings = (spacing: object) => Spacing;
 export const mergeSpacings: MergeSpacings = (newSpacings) => ({
