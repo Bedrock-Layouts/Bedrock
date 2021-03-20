@@ -313,7 +313,7 @@ exports[`InlineCluster correct usage renders all the gutter options 2`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "0.125rem",
+      "--gutter": "0.0625rem",
     }
   }
 >
@@ -369,7 +369,7 @@ exports[`InlineCluster correct usage renders all the gutter options 3`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "0.25rem",
+      "--gutter": "0.125rem",
     }
   }
 >
@@ -425,7 +425,7 @@ exports[`InlineCluster correct usage renders all the gutter options 4`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "0.5rem",
+      "--gutter": "0.25rem",
     }
   }
 >
@@ -481,7 +481,7 @@ exports[`InlineCluster correct usage renders all the gutter options 5`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "0.75rem",
+      "--gutter": "0.5rem",
     }
   }
 >
@@ -537,7 +537,7 @@ exports[`InlineCluster correct usage renders all the gutter options 6`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "1rem",
+      "--gutter": "0.75rem",
     }
   }
 >
@@ -593,7 +593,7 @@ exports[`InlineCluster correct usage renders all the gutter options 7`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "1.5rem",
+      "--gutter": "1rem",
     }
   }
 >
@@ -649,7 +649,7 @@ exports[`InlineCluster correct usage renders all the gutter options 8`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "2rem",
+      "--gutter": "1.5rem",
     }
   }
 >
@@ -705,7 +705,7 @@ exports[`InlineCluster correct usage renders all the gutter options 9`] = `
   className="c0"
   style={
     Object {
-      "--gutter": "3rem",
+      "--gutter": "2rem",
     }
   }
 >
@@ -729,6 +729,62 @@ exports[`InlineCluster correct usage renders all the gutter options 9`] = `
 `;
 
 exports[`InlineCluster correct usage renders all the gutter options 10`] = `
+.c0 {
+  --gutter: 1rem;
+}
+
+.c0 > * {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: calc(var(--gutter) / 2 * -1);
+}
+
+.c0 > * > * {
+  margin: calc(var(--gutter) / 2);
+}
+
+<div
+  className="c0"
+  style={
+    Object {
+      "--gutter": "3rem",
+    }
+  }
+>
+  <div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`InlineCluster correct usage renders all the gutter options 11`] = `
 .c0 {
   --gutter: 1rem;
 }
