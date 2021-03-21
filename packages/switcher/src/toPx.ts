@@ -35,6 +35,10 @@ export function toPX(str: string, element?: Element): number | null {
   const safeStr = (str || "px").trim().toLowerCase();
 
   switch (safeStr) {
+    case "vmin":
+    case "vmax":
+    case "vh":
+    case "vw":
     case "%":
       return null;
     case "ch":
@@ -44,14 +48,6 @@ export function toPX(str: string, element?: Element): number | null {
       return getPropertyInPX(elementOrBody, "font-size");
     case "rem":
       return getPropertyInPX(document.body, "font-size");
-    case "vw":
-      return window.innerWidth / 100;
-    case "vh":
-      return window.innerHeight / 100;
-    case "vmin":
-      return Math.min(window.innerWidth, window.innerHeight) / 100;
-    case "vmax":
-      return Math.max(window.innerWidth, window.innerHeight) / 100;
     case "in":
       return PIXELS_PER_INCH;
     case "cm":
