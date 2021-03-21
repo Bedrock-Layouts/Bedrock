@@ -40,17 +40,19 @@ import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 
 ### SplitSwitcher
 
-| Property | Description                       | Type          | Default               |
-| -------- | --------------------------------- | ------------- | --------------------- |
-| gutter   | sets space inbetween each element | `"none"       | "xs"                  | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
-| fraction | sets the fractional split         | `'auto-start' | 'auto-end'            | '1/4' | '1/3' | '1/2' | '2/3' | '3/4'` | `1/2` |
-| switchAt | sets the width that               | number        | breakPoints.smallOnly |
+| Property | Description                       | Type                                   | Default               |
+| -------- | --------------------------------- | -------------------------------------- | --------------------- |
+| gutter   | sets space inbetween each element | one of spacings                        | `lg`                  |
+| fraction | sets the fractional split         | `test`                                 | `1/2`                 |
+| switchAt | sets the width that               | number or valid CSS length as a string | breakPoints.smallOnly |
 
 ### ColumnsSwitcher
 
-| Property | Description                               | Type    | Default               |
-| -------- | ----------------------------------------- | ------- | --------------------- |
-| gutter   | sets space inbetween each element         | `"none" | "xs"                  | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
-| columns  | number of columns                         | number  | 1                     |
-| dense    | used with `Column` to have a dense layout | boolean | false                 |
-| switchAt | sets the width that                       | number  | breakPoints.smallOnly |
+| Property | Description                               | Type                                   | Default               |
+| -------- | ----------------------------------------- | -------------------------------------- | --------------------- |
+| gutter   | sets space inbetween each element         | one of spacings                        | `lg`                  |
+| columns  | number of columns                         | number                                 | 1                     |
+| dense    | used with `Column` to have a dense layout | boolean                                | false                 |
+| switchAt | sets the width that                       | number or valid CSS length as a string | breakPoints.smallOnly |
+
+- The spacing and breakPoints can be found at [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants)
