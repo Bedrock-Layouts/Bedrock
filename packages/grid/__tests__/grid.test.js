@@ -57,6 +57,16 @@ describe("Grid", () => {
       expect(grid.toJSON()).toMatchSnapshot();
     });
 
+    it("renders custom minItemWidth as string", () => {
+      CSS.supports.mockImplementation(() => true);
+      const grid = create(
+        <Grid minItemWidth="32rem">
+          <Lorem />
+        </Grid>
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with theme overrides", () => {
       const grid = create(
         <ThemeProvider
@@ -97,7 +107,7 @@ describe("Grid", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Grid minItemWidth="incorrect">
+        <Grid minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>
       );

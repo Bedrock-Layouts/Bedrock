@@ -42,7 +42,7 @@ function Example(args: Record<string, unknown>) {
 }
 
 Example.story = { name };
-Example.args = { minItemWidth: 640 };
+Example.args = { minItemWidth: "640px" };
 export const Comp = Example;
 export default {
   title,

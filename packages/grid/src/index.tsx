@@ -9,7 +9,24 @@ import styled from "styled-components";
 
 export interface GridProps {
   gutter?: SpacingTypes;
-  minItemWidth?: number;
+  minItemWidth?: number | string;
+}
+
+function getSafeMinItemWidth(
+  breakPoints: object,
+  minItemWidth?: number | string
+) {
+  if (
+    typeof minItemWidth === "string" &&
+    typeof CSS !== undefined &&
+    CSS.supports(`width:${minItemWidth}`)
+  ) {
+    return minItemWidth;
+  }
+
+  return typeof minItemWidth === "number"
+    ? `${minItemWidth}px`
+    : mergeBreakpoints(breakPoints).smallOnly + "px";
 }
 
 const Grid = styled.div.attrs<GridProps>(
@@ -23,10 +40,7 @@ const Grid = styled.div.attrs<GridProps>(
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
 
-    const safeMinItemWidth =
-      typeof minItemWidth === "number"
-        ? `${minItemWidth}px`
-        : mergeBreakpoints(breakPoints).smallOnly + "px";
+    const safeMinItemWidth = getSafeMinItemWidth(breakPoints, minItemWidth);
 
     return {
       style: {
@@ -56,7 +70,7 @@ Grid.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
     Object.keys(defaultSpacings) as SpacingTypes[]
   ),
-  minItemWidth: PropTypes.number,
+  minItemWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Grid;
