@@ -67,7 +67,9 @@ Then install the Grid component
 
 ## Properties
 
-| Property     | Type                                    | Default                             |
-| ------------ | --------------------------------------- | ----------------------------------- |
-| gutter       | One of: `none, xs, sm, md, lg, xl, xxl` | `lg`                                |
-| minItemWidth | number                                  | smallOnly breakPoint ('39.9375rem') |
+| Property     | Description                       | Type                                   | Default               |
+| ------------ | --------------------------------- | -------------------------------------- | --------------------- |
+| gutter       | sets space inbetween each element | one of spacings                        | `lg`                  |
+| minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
+
+- The spacing and breakPoints can be found at [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants)
