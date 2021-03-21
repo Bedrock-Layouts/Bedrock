@@ -1,5 +1,4 @@
 import { Column } from "@bedrock-layout/columns";
-import { breakPoints } from "@bedrock-layout/spacing-constants";
 import { ColumnSwitcherProps, ColumnsSwitcher } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
@@ -52,7 +51,7 @@ Example.args = {
   gutter: "lg",
   dense: false,
   columns: 3,
-  switchAt: breakPoints.smallOnly,
+  switchAt: "639px",
 };
 export const Comp = Example;
 export default {

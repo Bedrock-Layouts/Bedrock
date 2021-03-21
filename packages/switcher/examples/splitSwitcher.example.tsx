@@ -1,4 +1,3 @@
-import { breakPoints } from "@bedrock-layout/spacing-constants";
 import { SplitSwitcher, SplitSwitcherProps } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
@@ -46,7 +45,7 @@ Example.story = { name };
 Example.args = {
   gutter: "lg",
   fraction: "1/2",
-  switchAt: breakPoints.smallOnly,
+  switchAt: "639px",
 };
 export const Comp = Example;
 export default {

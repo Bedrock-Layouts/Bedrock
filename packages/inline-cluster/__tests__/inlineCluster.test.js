@@ -36,10 +36,12 @@ describe("InlineCluster", () => {
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
-    it("renders check for the browser", () => {
+    it("renders check for the browser", async () => {
       const oldDocument = document;
       // eslint-disable-next-line no-native-reassign
       document = undefined;
+
+      const InlineCluster = await (await import("../src/index")).default;
 
       const inlineCluster = create(
         <InlineCluster>

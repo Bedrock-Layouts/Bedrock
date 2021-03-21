@@ -9,8 +9,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import { ThemeContext } from "styled-components";
 
+import { toPX } from "./toPx";
+
 export interface SplitSwitcherProps extends StackProps, SplitProps {
-  switchAt?: number;
+  switchAt?: number | string;
   children?: React.ReactNode;
 }
 
@@ -20,10 +22,17 @@ export const SplitSwitcher = forwardRefWithAs<SplitSwitcherProps, "div">(
   ({ fraction, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
-    const widthToSwitchAt =
-      switchAt && switchAt > -1
-        ? switchAt
-        : mergeBreakpoints(breakPoints).smallOnly;
+
+    const maybePx = toPX(
+      typeof switchAt === "string" ? switchAt : "",
+      safeRef.current
+    );
+
+    const widthToSwitchAt: number = maybePx
+      ? maybePx
+      : typeof switchAt === "number" && switchAt > -1
+      ? switchAt
+      : mergeBreakpoints(breakPoints).smallOnly;
 
     const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
@@ -48,10 +57,17 @@ export const ColumnsSwitcher = forwardRefWithAs<ColumnSwitcherProps, "div">(
   ({ columns, dense, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
-    const widthToSwitchAt =
-      switchAt && switchAt > -1
-        ? switchAt
-        : mergeBreakpoints(breakPoints).smallOnly;
+
+    const maybePx = toPX(
+      typeof switchAt === "string" ? switchAt : "",
+      safeRef.current
+    );
+
+    const widthToSwitchAt: number = maybePx
+      ? maybePx
+      : typeof switchAt === "number" && switchAt > -1
+      ? switchAt
+      : mergeBreakpoints(breakPoints).smallOnly;
 
     const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
