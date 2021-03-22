@@ -30,7 +30,7 @@ const Stack = styled.div.attrs<StackProps>(
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
 
-  *[data-bedrock-layout-column] {
+  & > [data-bedrock-layout-column] {
     grid-column: span 1 / auto;
   }
 `;

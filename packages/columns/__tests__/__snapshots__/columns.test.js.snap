@@ -12,7 +12,8 @@ exports[`Column correct usage renders custom span 1`] = `
 }
 
 .c1 {
-  grid-column: span 2 / auto;
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <div
@@ -28,6 +29,11 @@ exports[`Column correct usage renders custom span 1`] = `
     className="c1"
     data-bedrock-layout-column=""
     span={2}
+    style={
+      Object {
+        "--span": 2,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -57,7 +63,8 @@ exports[`Column correct usage renders default gutters 1`] = `
 }
 
 .c1 {
-  grid-column: span 1 / auto;
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <div
@@ -72,6 +79,11 @@ exports[`Column correct usage renders default gutters 1`] = `
   <div
     className="c1"
     data-bedrock-layout-column=""
+    style={
+      Object {
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -101,7 +113,8 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 }
 
 .c1 {
-  grid-column: span 1 / auto;
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <div
@@ -117,6 +130,11 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
     className="c1"
     data-bedrock-layout-column=""
     span={0}
+    style={
+      Object {
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -146,7 +164,8 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 }
 
 .c1 {
-  grid-column: span 1 / auto;
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <div
@@ -162,6 +181,11 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
     className="c1"
     data-bedrock-layout-column=""
     span={-1}
+    style={
+      Object {
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -191,7 +215,8 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 }
 
 .c1 {
-  grid-column: span 1 / auto;
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <div
@@ -207,6 +232,11 @@ exports[`Column incorrect usage renders default with console error with wrong sp
     className="c1"
     data-bedrock-layout-column=""
     span="incorrect"
+    style={
+      Object {
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

@@ -9,7 +9,7 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -45,7 +45,7 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -81,7 +81,7 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -117,7 +117,7 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -153,7 +153,7 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -189,7 +189,7 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -225,7 +225,7 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -261,7 +261,7 @@ exports[`Stack correct usage renders all the gutter options 8`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -297,7 +297,7 @@ exports[`Stack correct usage renders all the gutter options 9`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -333,7 +333,7 @@ exports[`Stack correct usage renders all the gutter options 10`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -369,7 +369,7 @@ exports[`Stack correct usage renders all the gutter options 11`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -405,7 +405,7 @@ exports[`Stack correct usage renders default gutters 1`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -441,7 +441,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -477,7 +477,7 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
