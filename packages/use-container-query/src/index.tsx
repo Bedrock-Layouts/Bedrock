@@ -20,7 +20,7 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
     if (node && window.ResizeObserver) {
       observer = new ResizeObserver(([entry]) => {
         const nodeWidth =
-          entry.borderBoxSize?.length ?? entry.contentRect.width;
+          entry.borderBoxSize?.inlineSize ?? entry.contentRect.width;
 
         if (typeof maxWidth !== "undefined") {
           setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
