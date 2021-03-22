@@ -39,7 +39,6 @@ Array [
   }
 
   body {
-    min-height: 100vh;
     min-block-size: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -52,7 +51,6 @@ Array [
 
   img {
     display: block;
-    max-width: 100%;
     max-inline-size: 100%;
   }
 
@@ -65,7 +63,6 @@ Array [
   h6,
   li,
   figcaption {
-    max-width: 60ch;
     max-inline-size: 60ch;
   }
 
@@ -74,7 +71,7 @@ Array [
   textarea,
   select {
     font: inherit;
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 
   .js-focus-visible :focus:not(.focus-visible) {

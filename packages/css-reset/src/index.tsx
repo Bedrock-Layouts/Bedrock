@@ -35,7 +35,6 @@ export const reset = css`
   }
 
   body {
-    min-height: 100vh;
     min-block-size: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -48,7 +47,6 @@ export const reset = css`
 
   img {
     display: block;
-    max-width: 100%;
     max-inline-size: 100%;
   }
 
@@ -61,7 +59,6 @@ export const reset = css`
   h6,
   li,
   figcaption {
-    max-width: 60ch;
     max-inline-size: 60ch;
   }
 
@@ -70,7 +67,7 @@ export const reset = css`
   textarea,
   select {
     font: inherit;
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 
   .js-focus-visible :focus:not(.focus-visible) {
