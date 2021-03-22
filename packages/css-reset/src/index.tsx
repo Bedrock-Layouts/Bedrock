@@ -70,6 +70,7 @@ export const reset = css`
   textarea,
   select {
     font: inherit;
+    max-width: 100%;
   }
 
   .js-focus-visible :focus:not(.focus-visible) {
