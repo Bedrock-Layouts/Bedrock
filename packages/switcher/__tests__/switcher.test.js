@@ -148,7 +148,7 @@ describe("Switcher", () => {
         expect(console.error.mock.calls.length).toBe(0);
 
         const errorStack = create(
-          <SplitSwitcher switchAt="incorrect">
+          <SplitSwitcher switchAt={{ value: "incorrect" }}>
             <Lorem />
           </SplitSwitcher>
         );
@@ -299,7 +299,7 @@ describe("Switcher", () => {
       it("renders default with console error with wrong switchAt input", () => {
         expect(console.error.mock.calls.length).toBe(0);
         const errorStack = create(
-          <ColumnsSwitcher switchAt="incorrect">
+          <ColumnsSwitcher switchAt={{ value: "incorrect" }}>
             <Lorem />
           </ColumnsSwitcher>
         );

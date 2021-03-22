@@ -46,10 +46,13 @@ export const SplitSwitcher = forwardRefWithAs<SplitSwitcherProps, "div">(
 
 SplitSwitcher.displayName = "SplitSwitcher";
 
-SplitSwitcher.propTypes = { ...Split.propTypes, switchAt: PropTypes.number };
+SplitSwitcher.propTypes = {
+  ...Split.propTypes,
+  switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
 
 export interface ColumnSwitcherProps extends StackProps, ColumnsProps {
-  switchAt?: number;
+  switchAt?: number | string;
   children?: React.ReactNode;
 }
 
@@ -89,5 +92,5 @@ ColumnsSwitcher.displayName = "ColumnsSwitcher";
 
 ColumnsSwitcher.propTypes = {
   ...Columns.propTypes,
-  switchAt: PropTypes.number,
+  switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
