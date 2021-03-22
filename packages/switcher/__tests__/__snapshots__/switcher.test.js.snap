@@ -569,7 +569,7 @@ exports[`Switcher ColumnsSwitcher correct usage should render a stack if contain
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
@@ -1193,7 +1193,7 @@ exports[`Switcher SplitSwitcher correct usage should render a stack if container
   grid-gap: var(--gutter);
 }
 
-.c0 *[data-bedrock-layout-column] {
+.c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
 
