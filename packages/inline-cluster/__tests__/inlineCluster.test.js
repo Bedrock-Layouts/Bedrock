@@ -91,6 +91,17 @@ describe("InlineCluster", () => {
         <ThemeProvider
           theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: "200px" } }}
         >
+          <InlineCluster gutter="none">
+            <Lorem />
+          </InlineCluster>
+        </ThemeProvider>
+      );
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with theme overrides using numbers", () => {
+      const inlineCluster = create(
+        <ThemeProvider theme={{ spacing: { none: 0 } }}>
           <InlineCluster>
             <Lorem />
           </InlineCluster>

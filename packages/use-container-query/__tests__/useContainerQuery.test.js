@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
-import ResizeObserver from "resize-observer-polyfill";
 
 import useContainerQuery from "../src";
 

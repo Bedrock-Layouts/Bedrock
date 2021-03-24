@@ -88,10 +88,11 @@ export const isFlexGapSupported = flexGapSupported();
 
 const InlineCluster = styled.div.attrs<InlineClusterProps>(
   ({ children, gutter = "lg", theme: { spacing = {} } }) => {
+    const mergedSpacings = mergeSpacings(spacing);
     const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
+      gutter && mergedSpacings[gutter]
+        ? mergedSpacings[gutter]
+        : mergedSpacings.lg;
     return {
       style: {
         "--gutter": safeGutter,

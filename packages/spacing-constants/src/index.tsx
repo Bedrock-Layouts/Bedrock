@@ -41,10 +41,18 @@ export const spacing: Spacing = {
 export type SpacingTypes = keyof Spacing;
 
 type MergeSpacings = (spacing: object) => Spacing;
-export const mergeSpacings: MergeSpacings = (newSpacings) => ({
-  ...spacing,
-  ...newSpacings,
-});
+export const mergeSpacings: MergeSpacings = (newSpacings = {}) => {
+  const safeSpacings = Object.fromEntries(
+    Object.entries(newSpacings).map(([spaceKey, value]) => [
+      spaceKey,
+      typeof value === "number" ? `${value}px` : value,
+    ])
+  );
+  return {
+    ...spacing,
+    ...safeSpacings,
+  };
+};
 
 type NumberTuple = [number, number];
 /* Based on Foundations Break Points */
