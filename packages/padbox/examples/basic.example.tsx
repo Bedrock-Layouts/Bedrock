@@ -1,5 +1,4 @@
 import PadBox from "@bedrock-layout/padbox";
-import { SpacingTypes, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "PadBox";
 const name = "Basic";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <PadBox as={BorderedBox} {...args}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur

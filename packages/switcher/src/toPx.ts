@@ -5,7 +5,7 @@ function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
 
-  const [, unit] = str.match(/[\d.\-\+]*\s*(.*)/) ?? ["", ""];
+  const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
@@ -13,17 +13,17 @@ function parseUnit(str: string): [number, string] {
 const PIXELS_PER_INCH: number = getSizeBrutal("in", document.body); // 96
 
 function getPropertyInPX(element: Element, prop: string): number {
-  var [value, units] = parseUnit(
+  const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)
   );
   return value * (toPX(units, element) ?? 1);
 }
 
 function getSizeBrutal(unit: string, element: Element) {
-  var testDIV = document.createElement("div");
+  const testDIV = document.createElement("div");
   testDIV.style["height"] = "128" + unit;
   element.appendChild(testDIV);
-  var size = getPropertyInPX(testDIV, "height") / 128;
+  const size = getPropertyInPX(testDIV, "height") / 128;
   element.removeChild(testDIV);
   return size;
 }

@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Grid";
 const name = "minItemWidth";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <Grid {...args}>
       <BorderedBox>

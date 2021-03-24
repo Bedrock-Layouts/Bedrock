@@ -8,7 +8,10 @@ export interface CenterProps {
   centerChildren?: boolean;
 }
 
-function getSafeMaxWidth(breakPoints: object, maxWidth?: number | string) {
+function getSafeMaxWidth(
+  breakPoints: Record<string, unknown>,
+  maxWidth?: number | string
+) {
   if (
     typeof maxWidth === "string" &&
     typeof CSS !== undefined &&

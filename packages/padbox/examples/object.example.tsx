@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "PadBox";
 const name = "Padding Object";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <PadBox as={BorderedBox} {...args}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur

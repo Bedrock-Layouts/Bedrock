@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/index.js
  */
@@ -5,7 +6,7 @@ function parseUnit(str) {
   str = String(str);
   const num = parseFloat(str);
 
-  const [, unit] = str.match(/[\d.\-\+]*\s*(.*)/) ?? ["", ""];
+  const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }

@@ -40,7 +40,7 @@ export const spacing: Spacing = {
 
 export type SpacingTypes = keyof Spacing;
 
-type MergeSpacings = (spacing: object) => Spacing;
+type MergeSpacings = (spacing: Record<string, unknown>) => Spacing;
 export const mergeSpacings: MergeSpacings = (newSpacings = {}) => {
   const safeSpacings = Object.fromEntries(
     Object.entries(newSpacings).map(([spaceKey, value]) => [
@@ -89,7 +89,7 @@ export const breakPoints: BreakPoints = {
   xxlarge,
 };
 
-type MergeBreakpoints = (breakPoints: object) => BreakPoints;
+type MergeBreakpoints = (breakPoints: Record<string, unknown>) => BreakPoints;
 export const mergeBreakpoints: MergeBreakpoints = (newBreakPoints = {}) => ({
   ...breakPoints,
   ...newBreakPoints,

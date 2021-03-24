@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "SplitSwitcher";
 
-function Example(args: SplitSwitcherProps) {
+function Example(args: SplitSwitcherProps): React.ReactNode {
   return (
     <SplitSwitcher {...args}>
       <BorderedBox>
