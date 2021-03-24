@@ -13,7 +13,7 @@ export interface GridProps {
 }
 
 function getSafeMinItemWidth(
-  breakPoints: object,
+  breakPoints: Record<string, unknown>,
   minItemWidth?: number | string
 ) {
   if (

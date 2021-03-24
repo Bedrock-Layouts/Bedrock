@@ -40,7 +40,9 @@ type PaddingTypes =
   | [SpacingTypes, SpacingTypes, SpacingTypes]
   | [SpacingTypes, SpacingTypes, SpacingTypes, SpacingTypes];
 
-type PaddingToString = (spacing: object) => (padding?: PaddingTypes) => string;
+type PaddingToString = (
+  spacing: Record<string, unknown>
+) => (padding?: PaddingTypes) => string;
 
 const validKeys = new Set([
   "left",

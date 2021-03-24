@@ -11,7 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Switcher";
 const name = "ColumnSwitcher";
 
-function Example(args: ColumnSwitcherProps) {
+function Example(args: ColumnSwitcherProps): React.ReactNode {
   return (
     <ColumnsSwitcher {...args}>
       <>
