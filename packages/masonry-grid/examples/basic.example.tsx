@@ -1,4 +1,4 @@
-import MasonaryGrid from "@bedrock-layout/masonary-grid";
+import MasonryGrid from "@bedrock-layout/masonry-grid";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,12 +7,12 @@ const BorderedBox = styled.div`
 `;
 BorderedBox.displayName = "BorderedBox";
 
-const title = "MasonaryGrid";
+const title = "MasonryGrid";
 const name = "Basic";
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
-    <MasonaryGrid {...args}>
+    <MasonryGrid {...args}>
       <BorderedBox>
         1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -85,7 +85,7 @@ function Example(args: Record<string, unknown>): React.ReactNode {
         ipsum. Donec ultrices vel nisi vehicula facilisis. Vestibulum cursus
         nisi tellus, sit amet sagittis nisl luctus ut.
       </BorderedBox>
-    </MasonaryGrid>
+    </MasonryGrid>
   );
 }
 

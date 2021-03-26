@@ -57,7 +57,7 @@ module.exports = {
       lines: 0,
       functions: 0,
     },
-    "./packages/masonary-grid/src/index.tsx": {
+    "./packages/masonry-grid/src/index.tsx": {
       statements: 0,
       branches: 0,
       lines: 0,
@@ -75,7 +75,7 @@ module.exports = {
       lines: 0,
       functions: 0,
     },
-    "./packages/masonary-grid/src/toPx.ts": {
+    "./packages/masonry-grid/src/toPx.ts": {
       statements: 0,
       branches: 0,
       lines: 0,

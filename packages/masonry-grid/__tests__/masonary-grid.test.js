@@ -18,7 +18,7 @@
 //   </>
 // );
 
-describe("MasonaryGrid", () => {
+describe("MasonryGrid", () => {
   describe("correct usage", () => {
     test.todo("add tests");
     // test("Grid is not null", () => {

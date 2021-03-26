@@ -77,7 +77,7 @@ const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
   );
 };
 
-const MasonaryGrid = styled(Grid).attrs<GridProps>((props) => {
+const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
   return {
     children: Children.map(props.children, (child) => (
       <Resizer gutter={props.gutter ?? "lg"}>{child}</Resizer>
@@ -87,6 +87,6 @@ const MasonaryGrid = styled(Grid).attrs<GridProps>((props) => {
   grid-template-rows: 1px;
 `;
 
-MasonaryGrid.displayName = "MasonaryGrid";
+MasonryGrid.displayName = "MasonryGrid";
 
-export default MasonaryGrid;
+export default MasonryGrid;
