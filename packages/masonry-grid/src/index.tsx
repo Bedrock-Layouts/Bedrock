@@ -11,6 +11,7 @@ const RowSpanner = styled.div`
   grid-row: span var(--rows);
 
   > * {
+    display: block;
     height: 100%;
   }
 `;
@@ -43,7 +44,7 @@ const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
   );
 
   React.useEffect(() => {
-    setRowSpan(getRowHeight(childRef.current));
+    if (childRef.current) setRowSpan(getRowHeight(childRef.current));
   }, [childRef, getRowHeight]);
 
   React.useEffect(() => {
@@ -88,5 +89,7 @@ const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
 `;
 
 MasonryGrid.displayName = "MasonryGrid";
+
+MasonryGrid.propTypes = Grid.propTypes;
 
 export default MasonryGrid;

@@ -28,3 +28,12 @@ Object.defineProperty(window, "CSS", {
     supports: jest.fn(),
   },
 });
+
+Object.defineProperty(window, "ResizeObserver", {
+  writable: true,
+  value: jest.fn().mockImplementation(() => ({
+    disconnect: jest.fn(),
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+  })),
+});

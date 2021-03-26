@@ -63,12 +63,6 @@ module.exports = {
       lines: 0,
       functions: 0,
     },
-    "./packages/use-container-query/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
-    },
     "./packages/switcher/src/toPx.ts": {
       statements: 0,
       branches: 0,
