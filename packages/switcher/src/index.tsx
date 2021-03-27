@@ -9,8 +9,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import { ThemeContext } from "styled-components";
 
-import { toPX } from "./toPx";
-
 export interface SplitSwitcherProps extends StackProps, SplitProps {
   switchAt?: number | string;
   children?: React.ReactNode;
@@ -18,15 +16,26 @@ export interface SplitSwitcherProps extends StackProps, SplitProps {
 
 const safeTheme = { breakPoints: {} };
 
+//Logic forked from is-in-browser npm package
+const isBrowser =
+  typeof window === "object" &&
+  typeof document === "object" &&
+  document.nodeType === 9;
+
 export const SplitSwitcher = forwardRefWithAs<SplitSwitcherProps, "div">(
   ({ fraction, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
+    const [maybePx, setMaybePx] = React.useState<number | null>(null);
 
-    const maybePx = toPX(
-      typeof switchAt === "string" ? switchAt : "",
-      safeRef.current
-    );
+    React.useEffect(() => {
+      const maybePx =
+        isBrowser && typeof switchAt === "string"
+          ? toPX(switchAt, safeRef.current)
+          : null;
+
+      setMaybePx(maybePx);
+    }, [safeRef, switchAt]);
 
     const widthToSwitchAt: number = maybePx
       ? maybePx
@@ -94,3 +103,79 @@ ColumnsSwitcher.propTypes = {
   ...Columns.propTypes,
   switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+
+/**
+ * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
+ */
+function parseUnit(str: string): [number, string] {
+  str = String(str);
+  const num = parseFloat(str);
+
+  const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
+
+  return [num, unit];
+}
+const PIXELS_PER_INCH: number = isBrowser
+  ? getSizeBrutal("in", document.body)
+  : 96; // 96
+
+function getPropertyInPX(element: Element, prop: string): number {
+  const [value, units] = parseUnit(
+    getComputedStyle(element).getPropertyValue(prop)
+  );
+  return value * (toPX(units, element) ?? 1);
+}
+
+function getSizeBrutal(unit: string, element: Element) {
+  const testDIV = document.createElement("div");
+  testDIV.style["height"] = "128" + unit;
+  element.appendChild(testDIV);
+  const size = getPropertyInPX(testDIV, "height") / 128;
+  element.removeChild(testDIV);
+  return size;
+}
+
+export function toPX(str: string, element?: Element): number | null {
+  if (!str) return null;
+
+  const elementOrBody = element ?? document.body;
+  const safeStr = (str || "px").trim().toLowerCase();
+
+  switch (safeStr) {
+    case "vmin":
+    case "vmax":
+    case "vh":
+    case "vw":
+    case "%":
+      return null;
+    case "ch":
+    case "ex":
+      return getSizeBrutal(safeStr, elementOrBody);
+    case "em":
+      return getPropertyInPX(elementOrBody, "font-size");
+    case "rem":
+      return getPropertyInPX(document.body, "font-size");
+    case "in":
+      return PIXELS_PER_INCH;
+    case "cm":
+      return PIXELS_PER_INCH / 2.54;
+    case "mm":
+      return PIXELS_PER_INCH / 25.4;
+    case "pt":
+      return PIXELS_PER_INCH / 72;
+    case "pc":
+      return PIXELS_PER_INCH / 6;
+    case "px":
+      return 1;
+    default: {
+      const [value, units] = parseUnit(safeStr);
+
+      if (isNaN(value)) return null;
+
+      if (!units) return value;
+
+      const px = toPX(units, element);
+      return typeof px === "number" ? value * px : null;
+    }
+  }
+}

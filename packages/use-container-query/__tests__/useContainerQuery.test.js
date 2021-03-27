@@ -6,7 +6,7 @@ import useContainerQuery from "../src";
 
 jest.spyOn(console, "error").mockImplementation(() => void 0);
 
-jest.mock("resize-observer-polyfill", () =>
+ResizeObserver.mockImplementation(
   jest.fn((impl) => ({
     observe: jest.fn(() => impl([{ contentRect: { width: 300 } }])),
     disconnect: jest.fn(),
@@ -41,94 +41,94 @@ describe("useContainerQuery", () => {
     expect(useContainerQuery).toBeTruthy();
   });
 
-  // test("ResizeObserver is called", () => {
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper minWidth={320} />, container);
-  //   });
+  test("ResizeObserver is called", () => {
+    act(() => {
+      ReactDOM.render(<HookWrapper minWidth={320} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(true);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(true);
+  });
 
-  // it("should match when inbetween minWidth and maxWidth", () => {
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper minWidth={100} maxWidth={400} />, container);
-  //   });
+  it("should match when inbetween minWidth and maxWidth", () => {
+    act(() => {
+      ReactDOM.render(<HookWrapper minWidth={100} maxWidth={400} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(true);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(true);
+  });
 
-  // it("should not match when below minWidth and maxWidth", () => {
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper minWidth={100} maxWidth={200} />, container);
-  //   });
+  it("should not match when below minWidth and maxWidth", () => {
+    act(() => {
+      ReactDOM.render(<HookWrapper minWidth={100} maxWidth={200} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(false);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(false);
+  });
 
-  // it("should not match when above minWidth and maxWidth", () => {
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper minWidth={330} maxWidth={400} />, container);
-  //   });
+  it("should not match when above minWidth and maxWidth", () => {
+    act(() => {
+      ReactDOM.render(<HookWrapper minWidth={330} maxWidth={400} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(false);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(false);
+  });
 
-  // it("should prefer borderBox over contentRect", () => {
-  //   ResizeObserver.mockImplementation(
-  //     jest.fn((impl) => ({
-  //       observe: jest.fn(() =>
-  //         impl([{ contentRect: { width: 2 }, borderBox: { inlineSize: 1 } }])
-  //       ),
-  //       disconnect: jest.fn(),
-  //       unobserve: jest.fn(),
-  //     }))
-  //   );
+  it("should prefer borderBox over contentRect", () => {
+    ResizeObserver.mockImplementation(
+      jest.fn((impl) => ({
+        observe: jest.fn(() =>
+          impl([{ contentRect: { width: 2 }, borderBox: { inlineSize: 1 } }])
+        ),
+        disconnect: jest.fn(),
+        unobserve: jest.fn(),
+      }))
+    );
 
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper />, container);
-  //   });
+    act(() => {
+      ReactDOM.render(<HookWrapper minWidth={2} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(true);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(true);
+  });
 
-  // test("Will match on 1px if no minWidth provided", () => {
-  //   ResizeObserver.mockImplementation(
-  //     jest.fn((impl) => ({
-  //       observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
-  //       disconnect: jest.fn(),
-  //       unobserve: jest.fn(),
-  //     }))
-  //   );
+  test("Will match on 1px if no minWidth provided", () => {
+    ResizeObserver.mockImplementation(
+      jest.fn((impl) => ({
+        observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
+        disconnect: jest.fn(),
+        unobserve: jest.fn(),
+      }))
+    );
 
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper />, container);
-  //   });
+    act(() => {
+      ReactDOM.render(<HookWrapper />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(true);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(true);
+  });
 
-  // test("Will return false if no node provided", () => {
-  //   ResizeObserver.mockImplementation(
-  //     jest.fn((impl) => ({
-  //       observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
-  //       disconnect: jest.fn(),
-  //       unobserve: jest.fn(),
-  //     }))
-  //   );
+  test("Will return false if no node provided", () => {
+    ResizeObserver.mockImplementation(
+      jest.fn((impl) => ({
+        observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
+        disconnect: jest.fn(),
+        unobserve: jest.fn(),
+      }))
+    );
 
-  //   act(() => {
-  //     ReactDOM.render(<HookWrapper withNode={false} />, container);
-  //   });
+    act(() => {
+      ReactDOM.render(<HookWrapper withNode={false} />, container);
+    });
 
-  //   expect(ResizeObserver).toBeCalled();
-  //   expect(matches).toBe(false);
-  // });
+    expect(ResizeObserver).toBeCalled();
+    expect(matches).toBe(false);
+  });
 
   test("Throws and error when called with a maxWidth less than minWidth", () => {
     const renderToThrow = () =>

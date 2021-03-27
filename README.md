@@ -33,5 +33,5 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Cover                  |
 | ✅     | Frame                  |
 | 🛠      | Reel                   |
-| 🛠      | MasonaryGrid           |
+| ✅     | MasonryGrid            |
 | ✅     | CSS Reset              |
