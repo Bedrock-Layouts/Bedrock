@@ -57,19 +57,13 @@ module.exports = {
       lines: 0,
       functions: 0,
     },
+    "./packages/switcher/src/index.tsx": {
+      statements: 0,
+      branches: 0,
+      lines: 0,
+      functions: 0,
+    },
     "./packages/masonry-grid/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
-    },
-    "./packages/switcher/src/toPx.ts": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
-    },
-    "./packages/masonry-grid/src/toPx.ts": {
       statements: 0,
       branches: 0,
       lines: 0,
