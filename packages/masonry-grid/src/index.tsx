@@ -6,6 +6,12 @@ import styled, { CSSProperties, ThemeContext } from "styled-components";
 
 import { toPX } from "./toPx";
 
+//Logic forked from is-in-browser npm package
+const isBrowser =
+  typeof window === "object" &&
+  typeof document === "object" &&
+  document.nodeType === 9;
+
 const RowSpanner = styled.div`
   --rows: 1;
   grid-row: span var(--rows);
@@ -31,7 +37,7 @@ const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
     (node: Element) => {
       const gapString = spacingMap[gutter] ?? "1rem";
 
-      const maybeGap = toPX(gapString, childRef.current);
+      const maybeGap = isBrowser ? toPX(gapString, childRef.current) : null;
 
       const gap: number = maybeGap ? maybeGap : 0;
 

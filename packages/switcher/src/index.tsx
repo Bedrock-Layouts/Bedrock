@@ -18,15 +18,21 @@ export interface SplitSwitcherProps extends StackProps, SplitProps {
 
 const safeTheme = { breakPoints: {} };
 
+//Logic forked from is-in-browser npm package
+const isBrowser =
+  typeof window === "object" &&
+  typeof document === "object" &&
+  document.nodeType === 9;
+
 export const SplitSwitcher = forwardRefWithAs<SplitSwitcherProps, "div">(
   ({ fraction, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
 
-    const maybePx = toPX(
-      typeof switchAt === "string" ? switchAt : "",
-      safeRef.current
-    );
+    const maybePx =
+      isBrowser && typeof switchAt === "string"
+        ? toPX(switchAt, safeRef.current)
+        : null;
 
     const widthToSwitchAt: number = maybePx
       ? maybePx

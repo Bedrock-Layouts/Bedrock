@@ -1,0 +1,75 @@
+---
+name: MasonryGrid
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import MasonryGrid from '@bedrock-layout/masonry-grid';
+
+# MasonryGrid
+
+## Use case
+
+The MasonryGrid component is designed to create a masonry grid layout of items that will automatically wrap based on the minItemWidth
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the MasonryGrid component
+
+```bash
+  npm install @bedrock-layout/grid
+```
+
+## Basic usage
+
+<Playground>
+  <MasonryGrid gutter="lg" minItemWidth="20rem">
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </div>
+    <div>
+      Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum elementum
+      enim in pharetra. Curabitur eget urna cursus, imperdiet leo eu, elementum
+      leo. Proin laoreet eleifend nisl ut iaculis. Ut dictum est vitae rutrum
+      elementum. Donec dictum ex ac nibh auctor semper. Phasellus sed rhoncus
+      arcu, eu consectetur ipsum. Ut dictum a elit at sollicitudin. Quisque sed
+      augue molestie, auctor purus quis, luctus ipsum. Donec ultrices vel nisi
+      vehicula facilisis. Vestibulum cursus nisi tellus, sit amet sagittis nisl
+      luctus ut.
+    </div>
+    <div>
+      Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+      porttitor magna id metus lacinia, quis posuere est ultrices. Cras et massa
+      eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a molestie
+      vitae, mattis et lectus. Aenean hendrerit bibendum turpis. Ut auctor in
+      nulla non dapibus. Pellentesque velit arcu, molestie sed consectetur
+      euismod, semper nec elit. Pellentesque quis ullamcorper felis. Donec quis
+      ex euismod, malesuada ex et, hendrerit lectus. Integer accumsan
+      sollicitudin accumsan. Aliquam nec ante viverra, congue ipsum tincidunt,
+      auctor eros. Morbi tempor eget dolor et hendrerit. Donec eget placerat
+      lorem. Phasellus a accumsan odio.
+    </div>
+  </MasonryGrid>
+</Playground>
+
+## Storybook
+
+[Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/grid--basic) for more details.
+
+## Properties
+
+| Property     | Description                       | Type                                   | Default               |
+| ------------ | --------------------------------- | -------------------------------------- | --------------------- |
+| gutter       | sets space inbetween each element | one of spacings                        | `lg`                  |
+| minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
+
+- The spacing and breakPoints can be found at [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants)

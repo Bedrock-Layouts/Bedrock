@@ -1,58 +1,37 @@
-# `@bedrock-layout/switcher`
+# `@bedrock-layout/masonry-grid`
 
-Layout helper that creates Split view of various fractional amounts and switches
+Layout helper that creates a Masonry Grid of items
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
 ## When to Use
 
-Used to create a split layouts
+Used to create a masonry grid layouts
 
 ## How to install
 
-`npm install @bedrock-layout/switcher`
+`npm install @bedrock-layout/masonry-grid`
 
 ## Usage
 
 ```javascript
-import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
+import MasonryGrid from '@bedrock-layout/masonry-grid';
 
-<SplitSwitcher fraction='2/3'>
+<MasonryGrid minItemWidth={300}>
   <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
   <div>6</div>
-</SplitSwitcher>
-
-<ColumnsSwitcher columns={4}>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-</ColumnsSwitcher>
+</MasonryGrid>;
 ```
 
 ## API
 
-### SplitSwitcher
-
-| Property | Description                       | Type                                   | Default               |
-| -------- | --------------------------------- | -------------------------------------- | --------------------- |
-| gutter   | sets space inbetween each element | one of spacings                        | `lg`                  |
-| fraction | sets the fractional split         | `test`                                 | `1/2`                 |
-| switchAt | sets the width that               | number or valid CSS length as a string | breakPoints.smallOnly |
-
-### ColumnsSwitcher
-
-| Property | Description                               | Type                                   | Default               |
-| -------- | ----------------------------------------- | -------------------------------------- | --------------------- |
-| gutter   | sets space inbetween each element         | one of spacings                        | `lg`                  |
-| columns  | number of columns                         | number                                 | 1                     |
-| dense    | used with `Column` to have a dense layout | boolean                                | false                 |
-| switchAt | sets the width that                       | number or valid CSS length as a string | breakPoints.smallOnly |
+| Property     | Description                       | Type                                   | Default               |
+| ------------ | --------------------------------- | -------------------------------------- | --------------------- |
+| gutter       | sets space inbetween each element | one of spacings                        | `lg`                  |
+| minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
 
 - The spacing and breakPoints can be found at [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants)
