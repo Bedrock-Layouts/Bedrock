@@ -29,7 +29,7 @@ Then install the Cover component
 ## Basic usage
 
 <Playground>
-  <Cover top={<div>I'm on the Top</div>}>
+  <Cover minHeight="50vh" gutter="sm" top={<div>I'm on the Top</div>}>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
@@ -39,16 +39,20 @@ Then install the Cover component
   </Cover>
 </Playground>
 
+## `data-attributes`
+
+For purposes of styling, the `top`, `children`, and `bottom` are wrapped in an elements with a data attributes of `data-bedrock-layout-cover-top`, `data-bedrock-layout-cover-child`, and `data-bedrock-layout-cover-bottom` respectively.
+
 ## Storybook
 
 [Checkout storybook](https://storybook.bedrock-layout.dev/?path=/story/cover--basic) for more details.
 
 ## Properties
 
-| Property  | Type                                         | Default |
-| --------- | -------------------------------------------- | ------- |
-| minHeight | any valid css size unit as a string          | "100vh" |
-| gutter    | One of: `none, xxs, xs, sm, md, lg, xl, xxl` | `lg`    |
-| children  | ReactNode                                    | -       |
-| top       | ReactNode                                    | -       |
-| bottom    | ReactNode                                    | -       |
+| Property  | Description                       | Type                                                                      | Default |
+| --------- | --------------------------------- | ------------------------------------------------------------------------- | ------- |
+| minHeight | minHeight of the cover            | any valid css size unit as a string (will revert to default if not valid) | "100vh" |
+| gutter    | sets space inbetween each element | `"none" , "xxs" ,"xs" , "sm", "md", "lg", "lg", "xl", "xxl"`              | `lg`    |
+| children  | takes a single child              | ReactNode                                                                 | -       |
+| top       | takes a single child              | ReactNode                                                                 | -       |
+| bottom    | takes a single child              | ReactNode                                                                 | -       |
