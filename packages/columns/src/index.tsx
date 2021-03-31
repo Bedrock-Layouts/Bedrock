@@ -13,13 +13,14 @@ export interface ColumnsProps {
 }
 
 export const Columns = styled.div.attrs<ColumnsProps>(
-  ({ columns = 1, gutter = "lg", theme: { spacing = {} } }) => {
+  ({ columns = 1, gutter = "lg", theme: { spacing = {} }, style }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
       style: {
+        ...style,
         "--columns": columns > 0 ? columns : 1,
         "--gutter": safeGutter,
       },
@@ -56,9 +57,10 @@ const safeSpan: SafeSpan = (span) => {
 };
 
 //ColumnsProps passed twice to make propTypes work
-export const Column = styled.div.attrs<ColumnProps>(({ span }) => ({
+export const Column = styled.div.attrs<ColumnProps>(({ span, style }) => ({
   "data-bedrock-layout-column": "",
   style: {
+    ...style,
     "--span": Math.max(safeSpan(span), 1),
   },
 }))<ColumnProps>`

@@ -3,30 +3,64 @@ import {
   spacing as defaultSpacings,
   mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import PropTypes from "prop-types";
 import React, { Children } from "react";
 import styled from "styled-components";
 
-interface CoverWrapperProps {
+export interface CoverProps {
+  top?: React.ReactNode;
+  bottom?: React.ReactNode;
   gutter?: SpacingTypes;
   minHeight?: string;
 }
 
-const CoverWrapper = styled.div.attrs<CoverWrapperProps>(
-  ({ style, gutter = "lg", theme: { spacing = {} } }) => {
+const Cover = styled.div.attrs<CoverProps>(
+  ({
+    style,
+    gutter = "lg",
+    theme: { spacing = {} },
+    children,
+    top,
+    bottom,
+  }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
+
+    const rows: string =
+      top && bottom
+        ? "auto 1fr auto"
+        : top
+        ? "auto 1fr"
+        : bottom
+        ? "1fr auto"
+        : "1fr";
+
     return {
       style: {
         ...style,
         "--gutter": safeGutter,
+        "--rows": rows,
       },
+      children: (
+        <>
+          {top && (
+            <div data-bedrock-layout-cover-top="">{Children.only(top)}</div>
+          )}
+          <div data-bedrock-layout-cover-child="">
+            {Children.only(children)}
+          </div>
+          {bottom && (
+            <div data-bedrock-layout-cover-bottom="">
+              {Children.only(bottom)}
+            </div>
+          )}
+        </>
+      ),
     };
   }
-)<CoverWrapperProps>`
+)<CoverProps>`
   --gutter: 1rem;
   --rows: 1fr;
 
@@ -44,49 +78,15 @@ const CoverWrapper = styled.div.attrs<CoverWrapperProps>(
   }
 `;
 
-export interface CoverProps extends CoverWrapperProps {
-  top?: React.ReactNode;
-  bottom?: React.ReactNode;
-}
-
-const Cover = forwardRefWithAs<CoverProps, "div">(
-  ({ children, top, bottom, as, style, ...props }, ref) => {
-    const rows: string =
-      top && bottom
-        ? "auto 1fr auto"
-        : top
-        ? "auto 1fr"
-        : bottom
-        ? "1fr auto"
-        : "1fr";
-
-    return (
-      <CoverWrapper
-        as={as}
-        ref={ref}
-        style={{ ...style, "--rows": rows } as React.CSSProperties}
-        {...props}
-      >
-        {top && (
-          <div data-bedrock-layout-cover-top="">{Children.only(top)}</div>
-        )}
-        <div data-bedrock-layout-cover-child="">{Children.only(children)}</div>
-        {bottom && (
-          <div data-bedrock-layout-cover-bottom="">{Children.only(bottom)}</div>
-        )}
-      </CoverWrapper>
-    );
-  }
-);
-
 Cover.displayName = "Cover";
 
 Cover.propTypes = {
   gutter: PropTypes.oneOf<SpacingTypes>(
-    (Object.keys(defaultSpacings) as unknown) as SpacingTypes[]
+    Object.keys(defaultSpacings) as SpacingTypes[]
   ),
   minHeight: PropTypes.string,
   top: PropTypes.element,
+  bottom: PropTypes.element,
 };
 
 export default Cover;

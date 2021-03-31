@@ -34,6 +34,7 @@ const Grid = styled.div.attrs<GridProps>(
     minItemWidth,
     gutter = "lg",
     theme: { spacing = {}, breakPoints = {} },
+    style,
   }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
@@ -44,6 +45,7 @@ const Grid = styled.div.attrs<GridProps>(
 
     return {
       style: {
+        ...style,
         "--gutter": safeGutter,
         "--minItemWidth": safeMinItemWidth,
       },

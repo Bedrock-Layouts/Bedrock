@@ -26,10 +26,11 @@ function getSafeMaxWidth(
 }
 
 const Center = styled.div.attrs<CenterProps>(
-  ({ maxWidth, theme: { breakPoints } }) => {
+  ({ maxWidth, theme: { breakPoints }, style }) => {
     const safeMaxWidth = getSafeMaxWidth(breakPoints, maxWidth);
     return {
       style: {
+        ...style,
         "--maxWidth": safeMaxWidth,
       },
     };
