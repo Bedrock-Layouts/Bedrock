@@ -38,6 +38,7 @@ const Cover = styled.div.attrs<CoverProps>(
         : "1fr";
 
     return {
+      "data-bedrock-layout-cover": "",
       style: {
         ...style,
         "--gutter": safeGutter,
