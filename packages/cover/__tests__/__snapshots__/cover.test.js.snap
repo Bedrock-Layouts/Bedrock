@@ -1096,6 +1096,60 @@ exports[`Cover correct usage renders with top 1`] = `
 </div>
 `;
 
+exports[`Cover correct usage renders with top and bottom 1`] = `
+.c0 {
+  --gutter: 1rem;
+  --rows: 1fr;
+  display: grid;
+  gap: var(--gutter);
+  min-block-size: 100vh;
+  grid-template-rows: var(--rows);
+}
+
+.c0 > [data-bedrock-layout-cover-child] {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@supports (min-block-size:) {
+
+}
+
+<div
+  className="c0"
+  data-bedrock-layout-cover=""
+  style={
+    Object {
+      "--gutter": "1rem",
+      "--rows": "auto 1fr auto",
+    }
+  }
+>
+  <div
+    data-bedrock-layout-cover-top=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+  <div
+    data-bedrock-layout-cover-child=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+  <div
+    data-bedrock-layout-cover-bottom=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
 .c0 {
   --gutter: 1rem;

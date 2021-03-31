@@ -7,7 +7,8 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: var(--maxWidth);
+  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth,1023px);
 }
 
 .c0 {
@@ -23,6 +24,7 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
 >
   <div
     className="c1"
+    data-bedrock-layout-center=""
     style={
       Object {
         "--maxWidth": "1920px",
@@ -52,7 +54,8 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: var(--maxWidth);
+  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth,1023px);
 }
 
 .c0 {
@@ -68,6 +71,7 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
 >
   <div
     className="c1"
+    data-bedrock-layout-center=""
     style={
       Object {
         "--maxWidth": "1600px",

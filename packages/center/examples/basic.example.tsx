@@ -11,7 +11,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Center";
 const name = "Basic";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <Center as={BorderedBox} {...args}>
       <BorderedBox>
@@ -44,7 +44,7 @@ function Example(args: Record<string, unknown>) {
 
 Example.story = { name };
 Example.args = {
-  maxWidth: 640,
+  maxWidth: "640px",
   centerText: false,
   centerChildren: false,
 };

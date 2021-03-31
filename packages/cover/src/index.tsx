@@ -45,7 +45,7 @@ const Cover = styled.div.attrs<CoverProps>(
         "--rows": rows,
       },
       children: (
-        <>
+        <React.Fragment>
           {top && (
             <div data-bedrock-layout-cover-top="">{Children.only(top)}</div>
           )}
@@ -57,7 +57,7 @@ const Cover = styled.div.attrs<CoverProps>(
               {Children.only(bottom)}
             </div>
           )}
-        </>
+        </React.Fragment>
       ),
     };
   }

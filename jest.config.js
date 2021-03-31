@@ -48,26 +48,39 @@ module.exports = {
     global: {
       statements: 99,
       branches: 94,
-      lines: 99,
       functions: 100,
+      lines: 99,
     },
+    //TODO Fix the below coverage
     "./packages/inline/src/index.tsx": {
       statements: 0,
       branches: 0,
       lines: 0,
       functions: 0,
     },
-    "./packages/switcher/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
-    },
     "./packages/masonry-grid/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
+      statements: 58,
+      branches: 31,
+      functions: 75,
+      lines: 61,
+    },
+    "./packages/grid/src/index.tsx": {
+      statements: 90,
+      branches: 93,
+      functions: 66,
+      lines: 90,
+    },
+    "./packages/center/src/index.tsx": {
+      statements: 91,
+      branches: 91,
+      functions: 80,
+      lines: 91,
+    },
+    "./packages/switcher/src/index.tsx": {
+      statements: 95,
+      branches: 83,
+      functions: 100,
+      lines: 98,
     },
   },
 
