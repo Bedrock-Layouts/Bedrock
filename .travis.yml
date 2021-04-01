@@ -3,4 +3,4 @@ node_js:
   - 14
 script: npm run verify
 after_failure:
-  - cat verify_*.failure.txt
+  - cd /home/travis/.npm/_logs/ &&  cat `ls -rt |tail -1`
