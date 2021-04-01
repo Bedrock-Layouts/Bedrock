@@ -17,6 +17,7 @@ const Frame = styled.div.attrs<FrameProps>((props) => {
       ? props.ratio[1]
       : 1;
   return {
+    "data-bedrock-layout-frame": "",
     style: {
       ...props.style,
       "--d": d,

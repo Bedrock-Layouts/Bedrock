@@ -20,6 +20,10 @@ import Stack from '@bedrock-layout/padbox';
 <Padbox>{...content}</Padbox>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-padbox`.
+
 ## API
 
 | Property | Description  | Type                                                    | Default |

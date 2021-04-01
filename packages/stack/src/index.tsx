@@ -17,6 +17,7 @@ const Stack = styled.div.attrs<StackProps>(
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
+      "data-bedrock-layout-stack": "",
       style: {
         ...style,
         "--gutter": safeGutter,

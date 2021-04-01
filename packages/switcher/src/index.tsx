@@ -46,9 +46,20 @@ export const SplitSwitcher = forwardRefWithAs<SplitSwitcherProps, "div">(
     const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
     return shouldSwitch ? (
-      <Stack as={as} ref={safeRef} {...props} />
+      <Stack
+        data-bedrock-layout-split-switcher=""
+        as={as}
+        ref={safeRef}
+        {...props}
+      />
     ) : (
-      <Split as={as} ref={safeRef} fraction={fraction} {...props} />
+      <Split
+        data-bedrock-layout-split-switcher=""
+        as={as}
+        ref={safeRef}
+        fraction={fraction}
+        {...props}
+      />
     );
   }
 );
@@ -89,9 +100,15 @@ export const ColumnsSwitcher = forwardRefWithAs<ColumnSwitcherProps, "div">(
     const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
 
     return shouldSwitch ? (
-      <Stack as={as} ref={safeRef} {...props} />
+      <Stack
+        data-bedrock-layout-columns-switcher=""
+        as={as}
+        ref={safeRef}
+        {...props}
+      />
     ) : (
       <Columns
+        data-bedrock-layout-columns-switcher=""
         as={as}
         ref={safeRef}
         columns={columns}

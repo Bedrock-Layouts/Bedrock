@@ -57,6 +57,7 @@ exports[`Frame correct usage renders custom position 1`] = `
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,
@@ -128,6 +129,7 @@ exports[`Frame correct usage renders with ratio 1`] = `
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,
@@ -199,6 +201,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,
@@ -270,6 +273,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,
@@ -341,6 +345,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 1,
@@ -412,6 +417,7 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,
@@ -483,6 +489,7 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 1,
@@ -554,6 +561,7 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
 
 <div
   className="c0"
+  data-bedrock-layout-frame=""
   style={
     Object {
       "--d": 16,

@@ -29,6 +29,10 @@ import Reel from '@bedrock-layout/reel';
 </Reel>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-reel`.
+
 ## API
 
 | Property  | Description                                  | Type    | Default |

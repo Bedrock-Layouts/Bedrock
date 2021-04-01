@@ -84,6 +84,7 @@ const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
 
 const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
   return {
+    "data-bedrock-layout-masonry-grid": "",
     children: Children.map(props.children, (child) => (
       <Resizer gutter={props.gutter ?? "lg"}>{child}</Resizer>
     )),

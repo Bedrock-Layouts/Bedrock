@@ -50,6 +50,7 @@ const Grid = styled.div.attrs<GridProps>(
     const safeMinItemWidth = getSafeMinItemWidth(breakPoints, minItemWidth);
 
     return {
+      "data-bedrock-layout-grid": "",
       style: {
         ...style,
         "--gutter": safeGutter,

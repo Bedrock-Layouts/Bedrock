@@ -27,6 +27,10 @@ import Grid from '@bedrock-layout/grid';
 </Grid>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-grid`.
+
 ## API
 
 | Property     | Description                       | Type                                   | Default               |

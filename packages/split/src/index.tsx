@@ -41,6 +41,7 @@ const Split = styled.div.attrs<SplitProps>(
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
+      "data-bedrock-layout-split": "",
       style: {
         ...style,
         "--gutter": safeGutter,

@@ -24,6 +24,10 @@ import Inline from '@bedrock-layout/inline';
 </Inline>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-inline`.
+
 ## API
 
 | Property | Type                                          | Default |

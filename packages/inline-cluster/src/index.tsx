@@ -94,6 +94,7 @@ const InlineCluster = styled.div.attrs<InlineClusterProps>(
         ? mergedSpacings[gutter]
         : mergedSpacings.lg;
     return {
+      "data-bedrock-layout-inline-cluster": "",
       style: {
         ...style,
         "--gutter": safeGutter,

@@ -19,6 +19,7 @@ export const Columns = styled.div.attrs<ColumnsProps>(
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
+      "data-bedrock-layout-columns": "",
       style: {
         ...style,
         "--columns": columns > 0 ? columns : 1,
