@@ -18,6 +18,7 @@ const Frame = styled.div.attrs<FrameProps>((props) => {
       : 1;
   return {
     style: {
+      ...props.style,
       "--d": d,
       "--n": n,
     },

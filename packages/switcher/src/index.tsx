@@ -69,11 +69,16 @@ export const ColumnsSwitcher = forwardRefWithAs<ColumnSwitcherProps, "div">(
   ({ columns, dense, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const { breakPoints = {} } = React.useContext(ThemeContext) || safeTheme;
+    const [maybePx, setMaybePx] = React.useState<number | null>(null);
 
-    const maybePx = toPX(
-      typeof switchAt === "string" ? switchAt : "",
-      safeRef.current
-    );
+    React.useEffect(() => {
+      const maybePx =
+        isBrowser && typeof switchAt === "string"
+          ? toPX(switchAt, safeRef.current)
+          : null;
+
+      setMaybePx(maybePx);
+    }, [safeRef, switchAt]);
 
     const widthToSwitchAt: number = maybePx
       ? maybePx
@@ -135,11 +140,11 @@ function getSizeBrutal(unit: string, element: Element) {
   return size;
 }
 
-export function toPX(str: string, element?: Element): number | null {
+function toPX(str: string, element?: Element): number | null {
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
-  const safeStr = (str || "px").trim().toLowerCase();
+  const safeStr = (str ?? "px").trim().toLowerCase();
 
   switch (safeStr) {
     case "vmin":

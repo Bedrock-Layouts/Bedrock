@@ -59,6 +59,15 @@ describe("Cover", () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
+    it("renders with top and bottom", () => {
+      const cover = create(
+        <Cover top={<Lorem />} bottom={<Lorem />}>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const cover = create(

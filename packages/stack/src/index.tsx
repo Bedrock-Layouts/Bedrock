@@ -11,13 +11,14 @@ export interface StackProps {
 }
 
 const Stack = styled.div.attrs<StackProps>(
-  ({ gutter = "lg", theme: { spacing = {} } }) => {
+  ({ gutter = "lg", theme: { spacing = {} }, style }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
       style: {
+        ...style,
         "--gutter": safeGutter,
       },
     };

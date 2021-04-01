@@ -49,21 +49,4 @@ describe("AppBoundary", () => {
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
   });
-
-  describe("incorrect usage", () => {
-    beforeEach(() => {
-      jest.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
-    it("renders default with console error with no children", () => {
-      const errorStack = create(<AppBoundary />);
-
-      expect(console.error).toBeCalled();
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-  });
 });

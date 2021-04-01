@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "AppBoundary";
 const name = "Basic";
 
-function Example() {
+function Example(): React.ReactNode {
   return (
     <AppBoundary>
       <BorderedBox>

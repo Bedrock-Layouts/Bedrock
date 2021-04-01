@@ -2,3 +2,5 @@ language: node_js
 node_js:
   - 14
 script: npm run verify
+after_failure:
+  - cd /home/travis/.npm/_logs/ &&  cat `ls -rt |tail -1`

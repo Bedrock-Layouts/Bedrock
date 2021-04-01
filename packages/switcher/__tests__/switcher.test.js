@@ -225,6 +225,49 @@ describe("Switcher", () => {
         });
         expect(spy).toBeCalled();
       });
+
+      it.each`
+        switchAt  | expected
+        ${"1px"}  | ${1}
+        ${"px"}   | ${1}
+        ${"in"}   | ${1}
+        ${"cm"}   | ${1 / 2.54}
+        ${"mm"}   | ${1 / 25.4}
+        ${"pt"}   | ${1 / 72}
+        ${"pc"}   | ${1 / 6}
+        ${"vmin"} | ${null}
+        ${"vmax"} | ${null}
+        ${"vh"}   | ${null}
+        ${"vw"}   | ${null}
+        ${"%"}    | ${null}
+        ${"em"}   | ${NaN}
+        ${"rem"}  | ${NaN}
+      `(
+        "should return defaults when not in the browser",
+        ({ switchAt, expected }) => {
+          let value;
+          const setStateSpy = jest.fn((val) => (value = val));
+          jest.spyOn(React, "useState").mockImplementation((val) => {
+            value = val;
+
+            return [value, setStateSpy];
+          });
+
+          act(() => {
+            create(
+              <ColumnsSwitcher switchAt={switchAt}>
+                <Lorem />
+              </ColumnsSwitcher>
+            );
+          });
+
+          expect(setStateSpy).toHaveBeenCalled();
+          expect(value).toBe(expected);
+
+          React.useState.mockRestore();
+        }
+      );
+
       it("should render a stack if container is below default", () => {
         useContainerQuery.mockImplementation((...[, width]) => {
           return width <= breakPoints.smallOnly;

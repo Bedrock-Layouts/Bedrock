@@ -12,13 +12,19 @@ export interface GridProps {
   minItemWidth?: number | string;
 }
 
+const CSS =
+  globalThis.CSS !== undefined
+    ? globalThis.CSS
+    : {
+        supports: () => false,
+      };
+
 function getSafeMinItemWidth(
   breakPoints: Record<string, unknown>,
   minItemWidth?: number | string
 ) {
   if (
     typeof minItemWidth === "string" &&
-    typeof CSS !== undefined &&
     CSS.supports(`width:${minItemWidth}`)
   ) {
     return minItemWidth;
@@ -34,6 +40,7 @@ const Grid = styled.div.attrs<GridProps>(
     minItemWidth,
     gutter = "lg",
     theme: { spacing = {}, breakPoints = {} },
+    style,
   }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
@@ -44,6 +51,7 @@ const Grid = styled.div.attrs<GridProps>(
 
     return {
       style: {
+        ...style,
         "--gutter": safeGutter,
         "--minItemWidth": safeMinItemWidth,
       },

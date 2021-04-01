@@ -35,13 +35,14 @@ export interface SplitProps {
 }
 
 const Split = styled.div.attrs<SplitProps>(
-  ({ gutter = "lg", theme: { spacing = {} } }) => {
+  ({ gutter = "lg", theme: { spacing = {} }, style }) => {
     const safeGutter =
       gutter && mergeSpacings(spacing)[gutter]
         ? mergeSpacings(spacing)[gutter]
         : mergeSpacings(spacing).lg;
     return {
       style: {
+        ...style,
         "--gutter": safeGutter,
       },
     };

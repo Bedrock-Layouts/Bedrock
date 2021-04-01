@@ -8,15 +8,18 @@ export interface CenterProps {
   centerChildren?: boolean;
 }
 
+const CSS =
+  globalThis.CSS !== undefined
+    ? globalThis.CSS
+    : {
+        supports: () => false,
+      };
+
 function getSafeMaxWidth(
   breakPoints: Record<string, unknown>,
   maxWidth?: number | string
 ) {
-  if (
-    typeof maxWidth === "string" &&
-    typeof CSS !== undefined &&
-    CSS.supports(`width:${maxWidth}`)
-  ) {
+  if (typeof maxWidth === "string" && CSS.supports(`max-width:${maxWidth}`)) {
     return maxWidth;
   }
 
@@ -26,15 +29,22 @@ function getSafeMaxWidth(
 }
 
 const Center = styled.div.attrs<CenterProps>(
-  ({ maxWidth, theme: { breakPoints } }) => {
+  ({ maxWidth, theme: { breakPoints }, style }) => {
     const safeMaxWidth = getSafeMaxWidth(breakPoints, maxWidth);
     return {
+      "data-bedrock-layout-center": "",
       style: {
+        ...style,
         "--maxWidth": safeMaxWidth,
       },
     };
   }
 )<CenterProps>`
+  @property --maxWidth {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 1023px;
+  }
   --maxWidth: 1023px;
 
   box-sizing: content-box;
@@ -43,14 +53,15 @@ const Center = styled.div.attrs<CenterProps>(
   margin-inline-end: auto;
   margin-inline: auto;
 
-  max-inline-size: var(--maxWidth);
+  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth, 1023px);
 
-  ${(props) => (props.centerText ? "text-align:center;" : "")}
+  ${(props) => (props.centerText ? "text-align: center;" : "")}
 
   ${(props) =>
     props.centerChildren
       ? `
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   `
