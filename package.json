@@ -30,7 +30,7 @@
     "prepublish": "npm run build",
     "publish": "lerna publish",
     "publish:fix": "lerna publish from-package",
-    "verify": "npm-run-all --parallel check-types",
+    "verify": "npm-run-all --parallel check-types lint",
     "postinstall": "husky install"
   },
   "dependencies": {
