@@ -8,7 +8,9 @@ export interface ReelProps {
   proximity?: boolean;
 }
 
-const Reel = styled.div<ReelProps>`
+const Reel = styled.div.attrs<ReelProps>(() => ({
+  "data-bedrock-layout-reel": "",
+}))<ReelProps>`
   overflow: scroll;
 
   ${(props) => (props.maxHeight ? `max-height: ${props.maxHeight}px;` : "")}
