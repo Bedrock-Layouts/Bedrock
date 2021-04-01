@@ -22,6 +22,10 @@ import Frame from '@bedrock-layout/frame';
 </Frame>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-frame`.
+
 ## API
 
 | Property | Description                                                                               | Type               | Default           |

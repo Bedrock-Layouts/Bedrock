@@ -27,6 +27,10 @@ import MasonryGrid from '@bedrock-layout/masonry-grid';
 </MasonryGrid>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-masonry-grid`.
+
 ## API
 
 | Property     | Description                       | Type                                   | Default               |

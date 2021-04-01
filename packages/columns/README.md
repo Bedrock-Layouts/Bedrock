@@ -56,12 +56,16 @@ import { Columns, Column } from '@bedrock-layout/columns';
 </Columns>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-columns` and `data-bedrock-layout-column`.
+
 ## API
 
 ### Columns
 
 | Property | Description                               | Type    | Default |
-| -------- | ----------------------------------------- | ------- | ------- |
+| -------- | ----------------------------------------- | ------- | ------- | ---- | ---- | ---- | ---- | ---- | ------ | ---- |
 | gutter   | sets space inbetween each element         | `"none" | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
 | columns  | number of columns                         | number  | 1       |
 | dense    | used with `Column` to have a dense layout | boolean | false   |

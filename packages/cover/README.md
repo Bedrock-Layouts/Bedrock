@@ -24,7 +24,9 @@ import Cover from '@bedrock-layout/cover';
 </Cover>;
 ```
 
-For purposes of styling, the `top`, `children`, and `bottom` are wrapped in an elements with a data attributes of `data-bedrock-layout-cover-top`, `data-bedrock-layout-cover-child`, and `data-bedrock-layout-cover-bottom` respectively.
+## data-attribute
+
+For purposes of styling, the outer wrapper as the `data-bedrock-layout-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an elements with a data attributes of `data-bedrock-layout-cover-top`, `data-bedrock-layout-cover-child`, and `data-bedrock-layout-cover-bottom` respectively.
 
 ## API
 

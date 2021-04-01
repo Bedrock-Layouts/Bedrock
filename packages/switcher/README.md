@@ -36,6 +36,10 @@ import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
 </ColumnsSwitcher>
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-columns-switcher` and `data-bedrock-layout-split-switcher`.
+
 ## API
 
 ### SplitSwitcher

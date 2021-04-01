@@ -27,6 +27,10 @@ import Center from '@bedrock-layout/center';
 </Center>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-center`.
+
 ## API
 
 | Property       | Description             | Type           | Default           |

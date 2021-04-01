@@ -27,6 +27,10 @@ import AppBoundary from '@bedrock-layout/appboundary';
 </AppBoundary>;
 ```
 
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-appboundary`.
+
 ## API
 
 | Property | Description | Type      | Default |
