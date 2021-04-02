@@ -29,7 +29,6 @@ exports[`Column correct usage renders custom span 1`] = `
   <div
     className="c1"
     data-bedrock-layout-column=""
-    span={2}
     style={
       Object {
         "--span": 2,
@@ -132,7 +131,6 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
   <div
     className="c1"
     data-bedrock-layout-column=""
-    span={0}
     style={
       Object {
         "--span": 1,
@@ -184,7 +182,6 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
   <div
     className="c1"
     data-bedrock-layout-column=""
-    span={-1}
     style={
       Object {
         "--span": 1,
@@ -236,7 +233,6 @@ exports[`Column incorrect usage renders default with console error with wrong sp
   <div
     className="c1"
     data-bedrock-layout-column=""
-    span="incorrect"
     style={
       Object {
         "--span": 1,

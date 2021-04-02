@@ -48,9 +48,10 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
   return false;
 }
 
-const Inline = styled(InlineCluster).attrs<InlineProps>((props) => {
+const Inline = styled(InlineCluster).attrs<InlineProps>(() => {
   return {
     "data-bedrock-layout-inline": "",
+    "data-bedrock-layout-inline-cluster": undefined,
   };
 })<InlineProps>`
   ${isFlexGapSupported
