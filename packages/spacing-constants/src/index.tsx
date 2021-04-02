@@ -38,11 +38,17 @@ export const spacing: Spacing = {
   xxl,
 };
 
+function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
+  return entries.reduce((acc, [key, value]) => {
+    return { ...acc, [key]: value };
+  }, {});
+}
+
 export type SpacingTypes = keyof Spacing;
 
 type MergeSpacings = (spacing: Record<string, unknown>) => Spacing;
 export const mergeSpacings: MergeSpacings = (newSpacings = {}) => {
-  const safeSpacings = Object.fromEntries(
+  const safeSpacings = fromEntries(
     Object.entries(newSpacings).map(([spaceKey, value]) => [
       spaceKey,
       typeof value === "number" ? `${value}px` : value,

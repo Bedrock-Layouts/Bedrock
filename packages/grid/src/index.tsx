@@ -12,12 +12,17 @@ export interface GridProps {
   minItemWidth?: number | string;
 }
 
-const CSS =
-  globalThis.CSS !== undefined
-    ? globalThis.CSS
-    : {
-        supports: () => false,
-      };
+//Logic forked from is-in-browser npm package
+const isBrowser =
+  typeof window === "object" &&
+  typeof document === "object" &&
+  document.nodeType === 9;
+
+const CSS = isBrowser
+  ? window.CSS
+  : {
+      supports: () => false,
+    };
 
 function getSafeMinItemWidth(
   breakPoints: Record<string, unknown>,
