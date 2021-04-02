@@ -58,13 +58,18 @@ const safeSpan: SafeSpan = (span) => {
 };
 
 //ColumnsProps passed twice to make propTypes work
-export const Column = styled.div.attrs<ColumnProps>(({ span, style }) => ({
-  "data-bedrock-layout-column": "",
-  style: {
-    ...style,
-    "--span": Math.max(safeSpan(span), 1),
-  },
-}))<ColumnProps>`
+export const Column = styled.div.attrs<ColumnProps>((props) => {
+  const { span, style } = props;
+
+  return {
+    "data-bedrock-layout-column": "",
+    span: undefined,
+    style: {
+      ...style,
+      "--span": Math.max(safeSpan(span), 1),
+    },
+  };
+})<ColumnProps>`
   --span: 1;
   grid-column: span min(var(--span), var(--columns)) / auto;
 `;
