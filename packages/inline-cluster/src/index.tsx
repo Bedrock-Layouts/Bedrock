@@ -35,13 +35,16 @@ const justifyAlign = css<InlineClusterProps>`
 `;
 
 const fallbackCss = css`
+  overflow: hidden;
   & > * {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    ${justifyAlign}
-    margin: calc(var(--gutter) / 2 * -1);
+    block-size: calc(100% + var(--gutter));
 
+    ${justifyAlign}
+
+    margin: calc(var(--gutter) / 2 * -1);
     & > * {
       margin: calc(var(--gutter) / 2);
     }
