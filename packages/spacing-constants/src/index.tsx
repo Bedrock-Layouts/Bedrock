@@ -1,14 +1,4 @@
-const none = "0px";
-const xxs = "0.0625rem";
-const xs = "0.125rem";
-const sm = "0.25rem";
-const md = "0.5rem";
-const mdLg = "0.75rem";
-const lg = "1rem";
-const lgXl = "1.5rem";
-const xl = "2rem";
-const xlXXl = "3rem";
-const xxl = "4rem";
+import { DefaultTheme } from "styled-components";
 
 export interface Spacing {
   none: string;
@@ -24,7 +14,25 @@ export interface Spacing {
   xxl: string;
 }
 
-export const spacing: Spacing = {
+type ThemeOrDefault<T> = T extends { spacing: Record<string, string | number> }
+  ? T["spacing"]
+  : Spacing;
+
+export type SpacingOptions = ThemeOrDefault<DefaultTheme>;
+
+const none = "0px";
+const xxs = "0.0625rem";
+const xs = "0.125rem";
+const sm = "0.25rem";
+const md = "0.5rem";
+const mdLg = "0.75rem";
+const lg = "1rem";
+const lgXl = "1.5rem";
+const xl = "2rem";
+const xlXXl = "3rem";
+const xxl = "4rem";
+
+export const spacing: Record<string, string> = {
   none,
   xxs,
   xs,
@@ -54,10 +62,30 @@ export const mergeSpacings: MergeSpacings = (newSpacings = {}) => {
       typeof value === "number" ? `${value}px` : value,
     ])
   );
-  return {
+  return ({
     ...spacing,
     ...safeSpacings,
-  };
+  } as unknown) as Spacing;
+};
+
+type MaybeValue = string | undefined;
+
+type GetSpacingValue = <T>(
+  theme: T & { spacing?: Record<string, string | number> },
+  spacingKey: SpacingTypes | keyof SpacingOptions
+) => MaybeValue;
+
+export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
+  if (!theme.spacing) return spacing[spacingKey];
+
+  const safeSpacings = fromEntries(
+    Object.entries(theme.spacing).map(([spaceKey, value]) => [
+      spaceKey,
+      typeof value === "number" ? `${value}px` : value,
+    ])
+  );
+
+  return safeSpacings[spacingKey];
 };
 
 type NumberTuple = [number, number];

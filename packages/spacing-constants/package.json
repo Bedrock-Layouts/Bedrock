@@ -27,6 +27,10 @@
   "files": [
     "lib"
   ],
+  "peerDependencies": {
+    "react": "^16.8 || ^17",
+    "styled-components": ">=5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
