@@ -30,7 +30,7 @@ describe("Column", () => {
 
     it("renders default gutters", () => {
       const columns = create(
-        <Columns>
+        <Columns gutter="lg">
           <Column>
             <Lorem />
           </Column>
@@ -41,7 +41,7 @@ describe("Column", () => {
 
     it("renders custom span", () => {
       const columns = create(
-        <Columns>
+        <Columns gutter="lg">
           <Column span={2}>
             <Lorem />
           </Column>
@@ -64,7 +64,7 @@ describe("Column", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Columns>
+        <Columns gutter="lg">
           <Column span="incorrect">
             <Lorem />
           </Column>
@@ -77,7 +77,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given 0", () => {
       const columns = create(
-        <Columns>
+        <Columns gutter="lg">
           <Column span={0}>
             <Lorem />
           </Column>
@@ -88,7 +88,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given negative number", () => {
       const columns = create(
-        <Columns>
+        <Columns gutter="lg">
           <Column span={-1}>
             <Lorem />
           </Column>
@@ -105,15 +105,6 @@ describe("Columns", () => {
       expect(Columns).toBeTruthy();
     });
 
-    it("renders default gutters", () => {
-      const columns = create(
-        <Columns>
-          <Lorem />
-        </Columns>
-      );
-      expect(columns.toJSON()).toMatchSnapshot();
-    });
-
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const columns = create(
@@ -127,7 +118,7 @@ describe("Columns", () => {
 
     it("renders custom columns", () => {
       const columns = create(
-        <Columns columns={5}>
+        <Columns gutter="lg" columns={5}>
           <Lorem />
         </Columns>
       );
@@ -136,7 +127,7 @@ describe("Columns", () => {
 
     it("renders dense mode", () => {
       const columns = create(
-        <Columns dense>
+        <Columns gutter="lg" dense>
           <Lorem />
         </Columns>
       );
@@ -145,8 +136,8 @@ describe("Columns", () => {
 
     it("renders with theme overrides", () => {
       const columns = create(
-        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-          <Columns>
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <Columns gutter="1x">
             <Lorem />
           </Columns>
         </ThemeProvider>
@@ -164,7 +155,20 @@ describe("Columns", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong gutter input", () => {
+    it("renders default with console error with no gutter input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Columns>
+          <Lorem />
+        </Columns>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -173,7 +177,6 @@ describe("Columns", () => {
         </Columns>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

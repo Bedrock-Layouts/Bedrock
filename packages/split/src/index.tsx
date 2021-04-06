@@ -1,7 +1,6 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -30,21 +29,17 @@ const fractions: Fractions = {
 };
 
 export interface SplitProps {
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
   fraction?: FractionTypes;
 }
 
-const Split = styled.div.attrs<SplitProps>(
-  ({ gutter = "lg", theme: { spacing = {} }, style }) => {
-    const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
+export const Split = styled.div.attrs<SplitProps>(
+  ({ gutter = "lg", theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
     return {
       "data-bedrock-layout-split": "",
       style: {
-        ...style,
-        "--gutter": safeGutter,
+        "--gutter": maybeGutter ?? "0px",
       },
     };
   }
@@ -62,12 +57,8 @@ const Split = styled.div.attrs<SplitProps>(
 Split.displayName = "Split";
 
 Split.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   fraction: PropTypes.oneOf<FractionTypes>(
     Object.keys(fractions) as FractionTypes[]
   ),
 };
-
-export default Split;

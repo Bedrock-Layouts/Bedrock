@@ -1,4 +1,4 @@
-import Split, { SplitProps } from "@bedrock-layout/split";
+import { Split, SplitProps } from "@bedrock-layout/split";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Split";
 const name = "Basic";
 
-function Example(args: SplitProps) {
+function Example(args: SplitProps): React.ReactNode {
   return (
     <Split {...args}>
       <BorderedBox>
@@ -46,6 +46,7 @@ Example.args = {
   gutter: "lg",
   fraction: "1/2",
 };
+
 export const Comp = Example;
 export default {
   title,

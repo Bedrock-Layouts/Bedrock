@@ -1,7 +1,7 @@
 import { Columns, ColumnsProps } from "@bedrock-layout/columns";
 import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
-import Split, { SplitProps } from "@bedrock-layout/split";
-import Stack, { StackProps } from "@bedrock-layout/stack";
+import { Split, SplitProps } from "@bedrock-layout/split";
+import { Stack, StackProps } from "@bedrock-layout/stack";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";

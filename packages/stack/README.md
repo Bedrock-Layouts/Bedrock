@@ -15,9 +15,9 @@ Used to create a stacked layouts
 ## Usage
 
 ```javascript
-import Stack from '@bedrock-layout/stack';
+import { Stack } from '@bedrock-layout/stack';
 
-<Stack>
+<Stack gutter='lg'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -33,6 +33,10 @@ For purposes of styling you can select `data-bedrock-layout-stack`.
 
 ## API
 
-| Property | Description                                      | Type                                                       | Default |
-| -------- | ------------------------------------------------ | ---------------------------------------------------------- | ------- |
-| gutter   | sets the gutters (margin) inbetween each element | `"none" , "xs" , "sm" , "md" , "lg" , "lg" , "xl" , "xxl"` | `lg`    |
+\* required
+
+| Property | Description                       | Type               | Default |
+| -------- | --------------------------------- | ------------------ | ------- |
+| gutter\* | sets space inbetween each element | one of spacing\*\* | -       |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

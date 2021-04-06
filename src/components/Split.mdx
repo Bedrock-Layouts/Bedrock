@@ -4,7 +4,7 @@ menu: Components
 ---
 
 import { Playground, Props } from 'docz';
-import Split from '@bedrock-layout/split';
+import { Split } from '@bedrock-layout/split';
 
 # Split
 
@@ -24,6 +24,12 @@ Then install the Split component
 
 ```bash
   npm install @bedrock-layout/split
+```
+
+Finally, you import the component.
+
+```javascript
+import { Split } from '@bedrock-layout/split';
 ```
 
 ## Basic usage
@@ -59,7 +65,11 @@ For purposes of styling you can select `data-bedrock-layout-split`.
 
 ## Properties
 
-| Property | Type                                                    | Default |
-| -------- | ------------------------------------------------------- | ------- |
-| gutter   | One of: `none, xxs, xs, sm, md, lg, xl, xxl`            | `lg`    |
-| fraction | One of: `auto-start, auto-end, 1/4, 1/3, 1/2, 2/3, 3/4` | `1/2`   |
+\* required
+
+| Property | Description                                             | Type               | Default |
+| -------- | ------------------------------------------------------- | ------------------ | ------- |
+| gutter\* | sets space between each element                         | one of spacing\*\* | -       |
+| fraction | One of: `auto-start, auto-end, 1/4, 1/3, 1/2, 2/3, 3/4` | `1/2`              |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

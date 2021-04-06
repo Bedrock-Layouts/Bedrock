@@ -19,7 +19,7 @@ Used to create a Columned layouts
 ```javascript
 import { Columns } from '@bedrock-layout/columns';
 
-<Columns columns={5}>
+<Columns gutter='lg' columns={5}>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -34,7 +34,7 @@ import { Columns } from '@bedrock-layout/columns';
 ```javascript
 import { Columns, Column } from '@bedrock-layout/columns';
 
-<Columns columns={3} dense>
+<Columns gutter='lg' columns={3} dense>
   <Column span={2}>
     <div>1</div>
   </Column>
@@ -64,11 +64,15 @@ For purposes of styling you can select `data-bedrock-layout-columns` and `data-b
 
 ### Columns
 
-| Property | Description                               | Type    | Default |
-| -------- | ----------------------------------------- | ------- | ------- | ---- | ---- | ---- | ---- | ---- | ------ | ---- |
-| gutter   | sets space inbetween each element         | `"none" | "xs"    | "sm" | "md" | "lg" | "lg" | "xl" | "xxl"` | `lg` |
-| columns  | number of columns                         | number  | 1       |
-| dense    | used with `Column` to have a dense layout | boolean | false   |
+\* required
+
+| Property | Description                               | Type               | Default |
+| -------- | ----------------------------------------- | ------------------ | ------- |
+| gutter\* | sets space between each element           | one of spacing\*\* | -       |
+| columns  | number of columns                         | number             | 1       |
+| dense    | used with `Column` to have a dense layout | boolean            | false   |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
 
 ### Column
 

@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import Split from "../src";
+import { Split } from "../src";
 
 const Lorem = () => (
   <>
@@ -28,15 +28,6 @@ describe("Split", () => {
       expect(Split).toBeTruthy();
     });
 
-    it("renders default gutters", () => {
-      const split = create(
-        <Split>
-          <Lorem />
-        </Split>
-      );
-      expect(split.toJSON()).toMatchSnapshot();
-    });
-
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const split = create(
@@ -52,7 +43,7 @@ describe("Split", () => {
       ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"].forEach(
         (fraction) => {
           const split = create(
-            <Split fraction={fraction}>
+            <Split gutter="lg" fraction={fraction}>
               <Lorem />
             </Split>
           );
@@ -63,8 +54,8 @@ describe("Split", () => {
 
     it("renders with theme overrides", () => {
       const split = create(
-        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-          <Split>
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <Split gutter="1x">
             <Lorem />
           </Split>
         </ThemeProvider>
@@ -82,7 +73,20 @@ describe("Split", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong gutter input", () => {
+    it("renders default with console error with no gutter input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Split>
+          <Lorem />
+        </Split>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -91,7 +95,6 @@ describe("Split", () => {
         </Split>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

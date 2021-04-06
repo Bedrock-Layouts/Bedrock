@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import Stack from "../src";
+import { Stack } from "../src";
 
 const Lorem = () => (
   <>
@@ -28,15 +28,6 @@ describe("Stack", () => {
       expect(Stack).toBeTruthy();
     });
 
-    it("renders default gutters", () => {
-      const stack = create(
-        <Stack>
-          <Lorem />
-        </Stack>
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-    });
-
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const stack = create(
@@ -50,8 +41,19 @@ describe("Stack", () => {
 
     it("renders with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-          <Stack>
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <Stack gutter="1x">
+            <Lorem />
+          </Stack>
+        </ThemeProvider>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders 0px with theme overrides", () => {
+      const stack = create(
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <Stack gutter="lg">
             <Lorem />
           </Stack>
         </ThemeProvider>
@@ -69,7 +71,7 @@ describe("Stack", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong input", () => {
+    it("renders default with wrong input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -78,8 +80,19 @@ describe("Stack", () => {
         </Stack>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console.error with no", () => {
+      expect(console.error).not.toBeCalled();
+
+      create(
+        <Stack>
+          <Lorem />
+        </Stack>
+      );
+
+      expect(console.error).toHaveBeenCalled();
     });
   });
 });
