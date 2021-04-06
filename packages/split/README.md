@@ -1,6 +1,6 @@
 # `@bedrock-layout/split`
 
-Layout helper that creates Split view of various fractional amounts
+A layout primitive that creates a split view of various fractional amounts
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
@@ -15,9 +15,9 @@ Used to create a split layouts
 ## Usage
 
 ```javascript
-import Split from '@bedrock-layout/split';
+import { Split } from '@bedrock-layout/split';
 
-<Split fraction='2/3'>
+<Split gutter='lg' fraction='2/3'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -33,7 +33,11 @@ For purposes of styling you can select `data-bedrock-layout-split`.
 
 ## API
 
-| Property | Description                       | Type                                                                | Default |
-| -------- | --------------------------------- | ------------------------------------------------------------------- | ------- |
-| gutter   | sets space inbetween each element | `"none" , "xs" , "sm" , "md" , "lg" , "lg" , "xl" , "xxl"`          | `lg`    |
-| fraction | sets the fractional split         | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+\* required
+
+| Property | Description                     | Type                                                                | Default |
+| -------- | ------------------------------- | ------------------------------------------------------------------- | ------- |
+| gutter\* | sets space between each element | one of spacing\*\*                                                  | -       |
+| fraction | sets the fractional split       | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
