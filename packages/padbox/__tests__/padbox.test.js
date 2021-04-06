@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import PadBox from "../src";
+import { PadBox } from "../src";
 
 const Lorem = () => (
   <>
@@ -26,15 +26,6 @@ describe("PadBox", () => {
   describe("correct usage", () => {
     test("Stack is not null", () => {
       expect(PadBox).toBeTruthy();
-    });
-
-    it("renders default padding", () => {
-      const padbox = create(
-        <PadBox>
-          <Lorem />
-        </PadBox>
-      );
-      expect(padbox.toJSON()).toMatchSnapshot();
     });
 
     it("renders all the padding options", () => {
@@ -87,31 +78,13 @@ describe("PadBox", () => {
 
     it("renders with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-          <PadBox>
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <PadBox padding="1x">
             <Lorem />
           </PadBox>
         </ThemeProvider>
       );
       expect(stack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with classic css properties for old browser", () => {
-      window.CSS.supports.mockReturnValue(false);
-
-      [
-        { left: "md" },
-        { right: "md" },
-        { top: "md" },
-        { bottom: "md" },
-        { inlineStart: "md" },
-        { inlineEnd: "md" },
-        { blockStart: "md" },
-        { blockEnd: "md" },
-      ].forEach((padding) => {
-        const padbox = create(<PadBox padding={padding} />);
-        expect(padbox.toJSON()).toMatchSnapshot();
-      });
     });
   });
 
@@ -129,11 +102,11 @@ describe("PadBox", () => {
       console.error = originalError;
     });
 
-    it("renders default with console error with wrong input", () => {
+    it("renders default with console error with no input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <PadBox padding="incorrect">
+        <PadBox>
           <Lorem />
         </PadBox>
       );
@@ -142,7 +115,19 @@ describe("PadBox", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders with console error with wrong input in array", () => {
+    it("renders default with wrong input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <PadBox padding="incorrect">
+          <Lorem />
+        </PadBox>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders defaults with wrong input in array", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -155,11 +140,11 @@ describe("PadBox", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders with console error with wrong input in object", () => {
+    it("renders defaults with wrong input in object", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <PadBox padding={{ incorrect: "incorrect" }}>
+        <PadBox padding={{ incorrect: "incorrect", left: "incorrect" }}>
           <Lorem />
         </PadBox>
       );
