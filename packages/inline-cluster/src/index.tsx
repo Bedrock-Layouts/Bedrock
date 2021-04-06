@@ -1,7 +1,6 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import React from "react";
@@ -19,7 +18,7 @@ const justifyAlignMap: JustifyAlignMap = {
 export interface InlineClusterProps {
   justify?: JustifyAlignOptions;
   align?: JustifyAlignOptions;
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
 }
 
 const justifyAlign = css<InlineClusterProps>`
@@ -89,18 +88,13 @@ export function flexGapSupported(): boolean {
 
 export const isFlexGapSupported = flexGapSupported();
 
-const InlineCluster = styled.div.attrs<InlineClusterProps>(
-  ({ children, gutter = "lg", theme: { spacing = {} }, style }) => {
-    const mergedSpacings = mergeSpacings(spacing);
-    const safeGutter =
-      gutter && mergedSpacings[gutter]
-        ? mergedSpacings[gutter]
-        : mergedSpacings.lg;
+export const InlineCluster = styled.div.attrs<InlineClusterProps>(
+  ({ children, gutter = "lg", theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
     return {
       "data-bedrock-layout-inline-cluster": "",
       style: {
-        ...style,
-        "--gutter": safeGutter,
+        "--gutter": maybeGutter ?? "0px",
       },
       children: isFlexGapSupported ? (
         children
@@ -114,19 +108,13 @@ const InlineCluster = styled.div.attrs<InlineClusterProps>(
     };
   }
 )<InlineClusterProps>`
-  --gutter: 1rem;
-
   ${isFlexGapSupported ? gapSupportedCSS : fallbackCss}
 `;
 
 InlineCluster.displayName = "InlineCluster";
 
 InlineCluster.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   justify: PropTypes.oneOf<JustifyAlignOptions>(["start", "center", "end"]),
   align: PropTypes.oneOf<JustifyAlignOptions>(["start", "center", "end"]),
 };
-
-export default InlineCluster;

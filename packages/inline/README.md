@@ -30,10 +30,14 @@ For purposes of styling you can select `data-bedrock-layout-inline`.
 
 ## API
 
-| Property | Type                                          | Default |
-| -------- | --------------------------------------------- | ------- |
-| stretch  | One of: `all, start, end, index of the child` | -       |
-| gutter   | One of: `none, xs, sm, md, lg, xl, xxl`       | `lg`    |
-| justify  | One of: `start, end, center`                  | `start` |
-| align    | One of: `start, end, center`                  | `start` |
-| switchAt | One of: `CSS length, number`                  | -       |
+\* required
+
+| Property | Description                                                 | Type                                          | Default |
+| -------- | ----------------------------------------------------------- | --------------------------------------------- | ------- |
+| gutter\* | sets space inbetween each element                           | one of spacing\*\*                            | -       |
+| stretch  | child or children that will stretch to fill available space | One of: `all, start, end, index of the child` | -       |
+| justify  | Inline alignment                                            | One of: `start, end, center`                  | `start` |
+| align    | Block alignment                                             | One of: `start, end, center`                  | `start` |
+| switchAt | The width that the container will switch to stacking        | One of: `CSS length, number`                  | -       |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

@@ -1,4 +1,5 @@
-import InlineCluster, {
+import {
+  InlineCluster,
   InlineClusterProps,
   isFlexGapSupported,
 } from "@bedrock-layout/inline-cluster";
@@ -48,7 +49,7 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
   return false;
 }
 
-const Inline = styled(InlineCluster).attrs<InlineProps>(() => {
+export const Inline = styled(InlineCluster).attrs<InlineProps>(() => {
   return {
     "data-bedrock-layout-inline": "",
     "data-bedrock-layout-inline-cluster": undefined,
@@ -80,5 +81,3 @@ Inline.propTypes = {
     PropTypes.number,
   ]) as unknown) as React.Validator<SwitchAt>,
 };
-
-export default Inline;

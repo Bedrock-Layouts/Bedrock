@@ -1,6 +1,7 @@
-import Inline from "@bedrock-layout/inline";
 import React from "react";
 import { create } from "react-test-renderer";
+
+import { Inline } from "../src";
 
 const Lorem = () => (
   <>
@@ -24,19 +25,11 @@ describe("Inline", () => {
     test("Inline is not null", () => {
       expect(Inline).toBeTruthy();
     });
-    it("renders defaults", () => {
-      const inline = create(
-        <Inline>
-          <Lorem />
-        </Inline>
-      );
-      expect(inline.toJSON()).toMatchSnapshot();
-    });
 
     it("renders all the gutter options", () => {
       ["all", "start", "end", 0, 3].forEach((stretch) => {
         const inline = create(
-          <Inline stretch={stretch}>
+          <Inline gutter="lg" stretch={stretch}>
             <Lorem />
           </Inline>
         );
@@ -56,7 +49,7 @@ describe("Inline", () => {
     it("renders default with console error with wrong stretch input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <Inline stretch="incorrect">
+        <Inline gutter="lg" stretch="incorrect">
           <Lorem />
         </Inline>
       );
