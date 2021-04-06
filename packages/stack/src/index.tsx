@@ -1,32 +1,24 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface StackProps {
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
 }
 
-const Stack = styled.div.attrs<StackProps>(
-  ({ gutter = "lg", theme: { spacing = {} }, style }) => {
-    const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
-    return {
-      "data-bedrock-layout-stack": "",
-      style: {
-        ...style,
-        "--gutter": safeGutter,
-      },
-    };
-  }
-)<StackProps>`
+export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
+  const maybeGutter = getSpacingValue(theme, gutter);
+  return {
+    "data-bedrock-layout-stack": "",
+    style: {
+      "--gutter": maybeGutter ?? "0px",
+    },
+  };
+})<StackProps>`
   box-sizing: border-box;
-  --gutter: 1rem;
 
   display: grid;
   grid-auto-columns: 100%;
@@ -40,9 +32,5 @@ const Stack = styled.div.attrs<StackProps>(
 Stack.displayName = "Stack";
 
 Stack.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
 };
-
-export default Stack;

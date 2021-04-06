@@ -1,4 +1,4 @@
-import Stack, { StackProps } from "@bedrock-layout/stack";
+import { Stack, StackProps } from "@bedrock-layout/stack";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Stack";
 const name = "Basic";
 
-function Example(args: StackProps) {
+function Example(args: StackProps): React.ReactNode {
   return (
     <Stack {...args}>
       <BorderedBox>
@@ -45,7 +45,10 @@ Example.story = { name };
 Example.args = {
   gutter: "lg",
 };
+
 export const Comp = Example;
+
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title,
 };

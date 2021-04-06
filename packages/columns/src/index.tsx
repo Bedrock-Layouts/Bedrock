@@ -1,29 +1,24 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface ColumnsProps {
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
   columns?: number;
   dense?: boolean;
 }
 
 export const Columns = styled.div.attrs<ColumnsProps>(
-  ({ columns = 1, gutter = "lg", theme: { spacing = {} }, style }) => {
-    const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
+  ({ columns = 1, gutter = "lg", theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
     return {
       "data-bedrock-layout-columns": "",
       style: {
-        ...style,
         "--columns": columns > 0 ? columns : 1,
-        "--gutter": safeGutter,
+        "--gutter": maybeGutter ?? "0px",
       },
     };
   }
@@ -41,9 +36,7 @@ export const Columns = styled.div.attrs<ColumnsProps>(
 Columns.displayName = "Columns";
 
 Columns.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   columns: PropTypes.number,
   dense: PropTypes.bool,
 };

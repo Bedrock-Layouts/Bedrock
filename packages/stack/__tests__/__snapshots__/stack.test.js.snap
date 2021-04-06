@@ -1,9 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Stack correct usage renders 0px with theme overrides 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: var(--gutter);
+}
+
+.c0 > [data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-layout-stack=""
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
 exports[`Stack correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -40,7 +75,6 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
 exports[`Stack correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -77,7 +111,6 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
 exports[`Stack correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -114,7 +147,6 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
 exports[`Stack correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -151,7 +183,6 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
 exports[`Stack correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -188,7 +219,6 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
 exports[`Stack correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -225,7 +255,6 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
 exports[`Stack correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -262,7 +291,6 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
 exports[`Stack correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -299,7 +327,6 @@ exports[`Stack correct usage renders all the gutter options 8`] = `
 exports[`Stack correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -336,7 +363,6 @@ exports[`Stack correct usage renders all the gutter options 9`] = `
 exports[`Stack correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -373,7 +399,6 @@ exports[`Stack correct usage renders all the gutter options 10`] = `
 exports[`Stack correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -407,47 +432,9 @@ exports[`Stack correct usage renders all the gutter options 11`] = `
 </div>
 `;
 
-exports[`Stack correct usage renders default gutters 1`] = `
-.c0 {
-  box-sizing: border-box;
-  --gutter: 1rem;
-  display: grid;
-  grid-auto-columns: 100%;
-  grid-gap: var(--gutter);
-}
-
-.c0 > [data-bedrock-layout-column] {
-  grid-column: span 1 / auto;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-stack=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
 exports[`Stack correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -462,7 +449,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   data-bedrock-layout-stack=""
   style={
     Object {
-      "--gutter": "1rem",
+      "--gutter": "200px",
     }
   }
 >
@@ -481,10 +468,9 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
 </div>
 `;
 
-exports[`Stack incorrect usage renders default with console error with wrong input 1`] = `
+exports[`Stack incorrect usage renders default with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
   display: grid;
   grid-auto-columns: 100%;
   grid-gap: var(--gutter);
@@ -499,7 +485,7 @@ exports[`Stack incorrect usage renders default with console error with wrong inp
   data-bedrock-layout-stack=""
   style={
     Object {
-      "--gutter": "1rem",
+      "--gutter": "0px",
     }
   }
 >

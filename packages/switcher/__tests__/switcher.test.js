@@ -34,7 +34,7 @@ describe("Switcher", () => {
 
       it("renders default gutters", () => {
         const stack = create(
-          <SplitSwitcher>
+          <SplitSwitcher gutter="lg">
             <Lorem />
           </SplitSwitcher>
         );
@@ -54,8 +54,8 @@ describe("Switcher", () => {
 
       it("renders with theme overrides", () => {
         const stack = create(
-          <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-            <SplitSwitcher>
+          <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+            <SplitSwitcher gutter="1x">
               <Lorem />
             </SplitSwitcher>
           </ThemeProvider>
@@ -68,7 +68,7 @@ describe("Switcher", () => {
         const spy = jest.fn();
         act(() => {
           create(
-            <SplitSwitcher ref={spy}>
+            <SplitSwitcher gutter="lg" ref={spy}>
               <Lorem />
             </SplitSwitcher>
           );
@@ -82,7 +82,7 @@ describe("Switcher", () => {
         });
 
         const stack = create(
-          <SplitSwitcher>
+          <SplitSwitcher gutter="lg">
             <Lorem />
           </SplitSwitcher>
         );
@@ -98,7 +98,7 @@ describe("Switcher", () => {
         });
 
         const stack = create(
-          <SplitSwitcher switchAt={breakPoints.smallOnly + 1}>
+          <SplitSwitcher gutter="lg" switchAt={breakPoints.smallOnly + 1}>
             <Lorem />
           </SplitSwitcher>
         );
@@ -118,11 +118,11 @@ describe("Switcher", () => {
         console.error.mockRestore();
       });
 
-      it("renders default with console error with wrong input", () => {
+      it("renders default with console error with no input", () => {
         expect(console.error.mock.calls.length).toBe(0);
 
         const errorStack = create(
-          <SplitSwitcher gutter="incorrect">
+          <SplitSwitcher>
             <Lorem />
           </SplitSwitcher>
         );
@@ -131,11 +131,23 @@ describe("Switcher", () => {
         expect(errorStack.toJSON()).toMatchSnapshot();
       });
 
+      it("renders default with wrong input", () => {
+        expect(console.error.mock.calls.length).toBe(0);
+
+        const errorStack = create(
+          <SplitSwitcher gutter="incorrect">
+            <Lorem />
+          </SplitSwitcher>
+        );
+
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+
       it("renders default with console error with wrong fraction input", () => {
         expect(console.error.mock.calls.length).toBe(0);
 
         const errorStack = create(
-          <SplitSwitcher fraction="incorrect">
+          <SplitSwitcher gutter="lg" fraction="incorrect">
             <Lorem />
           </SplitSwitcher>
         );
@@ -148,7 +160,7 @@ describe("Switcher", () => {
         expect(console.error.mock.calls.length).toBe(0);
 
         const errorStack = create(
-          <SplitSwitcher switchAt={{ value: "incorrect" }}>
+          <SplitSwitcher gutter="lg" switchAt={{ value: "incorrect" }}>
             <Lorem />
           </SplitSwitcher>
         );
@@ -165,15 +177,6 @@ describe("Switcher", () => {
         expect(ColumnsSwitcher).toBeTruthy();
       });
 
-      it("renders default gutters", () => {
-        const stack = create(
-          <ColumnsSwitcher>
-            <Lorem />
-          </ColumnsSwitcher>
-        );
-        expect(stack.toJSON()).toMatchSnapshot();
-      });
-
       it("renders all the gutter options", () => {
         Object.keys(spacing).forEach((gutter) => {
           const stack = create(
@@ -187,7 +190,7 @@ describe("Switcher", () => {
 
       it("renders custom columns", () => {
         const columns = create(
-          <ColumnsSwitcher columns={5}>
+          <ColumnsSwitcher gutter="lg" columns={5}>
             <Lorem />
           </ColumnsSwitcher>
         );
@@ -196,7 +199,7 @@ describe("Switcher", () => {
 
       it("renders dense mode", () => {
         const columns = create(
-          <ColumnsSwitcher dense>
+          <ColumnsSwitcher gutter="lg" dense>
             <Lorem />
           </ColumnsSwitcher>
         );
@@ -205,8 +208,8 @@ describe("Switcher", () => {
 
       it("renders with theme overrides", () => {
         const stack = create(
-          <ThemeProvider theme={{ spacing: { md: "200px" } }}>
-            <ColumnsSwitcher>
+          <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+            <ColumnsSwitcher gutter="1x">
               <Lorem />
             </ColumnsSwitcher>
           </ThemeProvider>
@@ -218,7 +221,7 @@ describe("Switcher", () => {
         const spy = jest.fn();
         act(() => {
           create(
-            <ColumnsSwitcher ref={spy}>
+            <ColumnsSwitcher gutter="lg" ref={spy}>
               <Lorem />
             </ColumnsSwitcher>
           );
@@ -255,7 +258,7 @@ describe("Switcher", () => {
 
           act(() => {
             create(
-              <ColumnsSwitcher switchAt={switchAt}>
+              <ColumnsSwitcher gutter="lg" switchAt={switchAt}>
                 <Lorem />
               </ColumnsSwitcher>
             );
@@ -274,7 +277,7 @@ describe("Switcher", () => {
         });
 
         const stack = create(
-          <ColumnsSwitcher>
+          <ColumnsSwitcher gutter="lg">
             <Lorem />
           </ColumnsSwitcher>
         );
@@ -290,7 +293,7 @@ describe("Switcher", () => {
         });
 
         const stack = create(
-          <ColumnsSwitcher switchAt={breakPoints.smallOnly + 1}>
+          <ColumnsSwitcher gutter="lg" switchAt={breakPoints.smallOnly + 1}>
             <Lorem />
           </ColumnsSwitcher>
         );
@@ -309,16 +312,29 @@ describe("Switcher", () => {
       afterEach(() => {
         console.error.mockRestore();
       });
-      it("renders default with console error with wrong input", () => {
+
+      it("renders default with console error with no input", () => {
         expect(console.error.mock.calls.length).toBe(0);
         const errorStack = create(
-          <ColumnsSwitcher gutter="incorrect">
+          <ColumnsSwitcher>
             <Lorem />
           </ColumnsSwitcher>
         );
         expect(console.error).toBeCalled();
         expect(errorStack.toJSON()).toMatchSnapshot();
       });
+
+      it("renders default with wrong input", () => {
+        expect(console.error.mock.calls.length).toBe(0);
+        const errorStack = create(
+          <ColumnsSwitcher gutter="incorrect">
+            <Lorem />
+          </ColumnsSwitcher>
+        );
+
+        expect(errorStack.toJSON()).toMatchSnapshot();
+      });
+
       it("renders default with console error with wrong columns input", () => {
         expect(console.error.mock.calls.length).toBe(0);
         const errorStack = create(
@@ -329,6 +345,7 @@ describe("Switcher", () => {
         expect(console.error).toBeCalled();
         expect(errorStack.toJSON()).toMatchSnapshot();
       });
+
       it("renders default with console error with wrong dense input", () => {
         expect(console.error.mock.calls.length).toBe(0);
         const errorStack = create(
@@ -339,6 +356,7 @@ describe("Switcher", () => {
         expect(console.error).toBeCalled();
         expect(errorStack.toJSON()).toMatchSnapshot();
       });
+
       it("renders default with console error with wrong switchAt input", () => {
         expect(console.error.mock.calls.length).toBe(0);
         const errorStack = create(
