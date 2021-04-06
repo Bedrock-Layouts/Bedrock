@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import InlineCluster from "../src";
+import { InlineCluster } from "../src";
 
 const Lorem = () => (
   <>
@@ -27,24 +27,16 @@ describe("InlineCluster", () => {
     test("InlineCluster is not null", () => {
       expect(InlineCluster).toBeTruthy();
     });
-    it("renders defaults", () => {
-      const inlineCluster = create(
-        <InlineCluster>
-          <Lorem />
-        </InlineCluster>
-      );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
-    });
 
     it("renders check for the browser", async () => {
       const oldDocument = document;
       // eslint-disable-next-line no-native-reassign
       document = undefined;
 
-      const InlineCluster = await (await import("../src/index")).default;
+      const { InlineCluster } = await import("../src/index");
 
       const inlineCluster = create(
-        <InlineCluster>
+        <InlineCluster gutter="lg">
           <Lorem />
         </InlineCluster>
       );
@@ -65,20 +57,22 @@ describe("InlineCluster", () => {
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
     });
+
     it("renders all the justify options", () => {
       ["start", "center", "end"].forEach((justify) => {
         const inlineCluster = create(
-          <InlineCluster justify={justify}>
+          <InlineCluster gutter="lg" justify={justify}>
             <Lorem />
           </InlineCluster>
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
     });
+
     it("renders all the align options", () => {
       ["start", "center", "end"].forEach((align) => {
         const inlineCluster = create(
-          <InlineCluster align={align}>
+          <InlineCluster gutter="lg" align={align}>
             <Lorem />
           </InlineCluster>
         );
@@ -88,10 +82,8 @@ describe("InlineCluster", () => {
 
     it("renders with theme overrides", () => {
       const inlineCluster = create(
-        <ThemeProvider
-          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: "200px" } }}
-        >
-          <InlineCluster gutter="none">
+        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          <InlineCluster gutter="1x">
             <Lorem />
           </InlineCluster>
         </ThemeProvider>
@@ -102,7 +94,7 @@ describe("InlineCluster", () => {
     it("renders with theme overrides using numbers", () => {
       const inlineCluster = create(
         <ThemeProvider theme={{ spacing: { none: 0 } }}>
-          <InlineCluster>
+          <InlineCluster gutter="none">
             <Lorem />
           </InlineCluster>
         </ThemeProvider>
@@ -112,7 +104,7 @@ describe("InlineCluster", () => {
 
     it("accepts className prop", () => {
       const inlineCluster = create(
-        <InlineCluster className="CLASSNAME">
+        <InlineCluster gutter="lg" className="CLASSNAME">
           <Lorem />
         </InlineCluster>
       );
@@ -129,11 +121,11 @@ describe("InlineCluster", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong gutter input", () => {
+    it("renders default with console error with no gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster gutter="incorrect">
+        <InlineCluster>
           <Lorem />
         </InlineCluster>
       );
@@ -142,11 +134,23 @@ describe("InlineCluster", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
+    it("renders default with wrong gutter input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <InlineCluster gutter="incorrect">
+          <Lorem />
+        </InlineCluster>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders default with console error with incorrect justify", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster justify="incorrect">
+        <InlineCluster gutter="lg" justify="incorrect">
           <Lorem />
         </InlineCluster>
       );
@@ -158,7 +162,7 @@ describe("InlineCluster", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster align="incorrect">
+        <InlineCluster gutter="lg" align="incorrect">
           <Lorem />
         </InlineCluster>
       );

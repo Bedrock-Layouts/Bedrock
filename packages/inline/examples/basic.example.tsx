@@ -1,4 +1,4 @@
-import Inline from "@bedrock-layout/inline";
+import { Inline } from "@bedrock-layout/inline";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Inline";
 const name = "Basic";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <Inline {...args}>
       <BorderedBox style={{ height: 100 }}>Lorem ipsum dolor</BorderedBox>

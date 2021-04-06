@@ -2,7 +2,6 @@
 
 exports[`Inline correct usage renders all the gutter options 1`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 
@@ -75,7 +74,6 @@ exports[`Inline correct usage renders all the gutter options 1`] = `
 
 exports[`Inline correct usage renders all the gutter options 2`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 
@@ -148,7 +146,6 @@ exports[`Inline correct usage renders all the gutter options 2`] = `
 
 exports[`Inline correct usage renders all the gutter options 3`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 
@@ -221,7 +218,6 @@ exports[`Inline correct usage renders all the gutter options 3`] = `
 
 exports[`Inline correct usage renders all the gutter options 4`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 
@@ -294,7 +290,6 @@ exports[`Inline correct usage renders all the gutter options 4`] = `
 
 exports[`Inline correct usage renders all the gutter options 5`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 
@@ -365,76 +360,8 @@ exports[`Inline correct usage renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Inline correct usage renders defaults 1`] = `
-.c0 {
-  --gutter: 1rem;
-  overflow: hidden;
-}
-
-.c0 > * {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-block-size: calc(100% + var(--gutter));
-  -ms-flex-block-size: calc(100% + var(--gutter));
-  block-size: calc(100% + var(--gutter));
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  margin: calc(var(--gutter) / 2 * -1);
-}
-
-.c0 > * > * {
-  margin: calc(var(--gutter) / 2);
-}
-
-.c1 > * {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-<div
-  className="c0 c1"
-  data-bedrock-layout-inline=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
->
-  <div>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Inline incorrect usage renders default with console error with wrong stretch input 1`] = `
 .c0 {
-  --gutter: 1rem;
   overflow: hidden;
 }
 

@@ -1,4 +1,4 @@
-import InlineCluster from "@bedrock-layout/inline-cluster";
+import { InlineCluster } from "@bedrock-layout/inline-cluster";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "InlineCluster";
 const name = "Basic";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: Record<string, unknown>): React.ReactNode {
   return (
     <InlineCluster {...args}>
       <BorderedBox style={{ height: 100 }}>Lorem ipsum dolor</BorderedBox>
