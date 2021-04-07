@@ -1,5 +1,8 @@
-import Grid, { GridProps } from "@bedrock-layout/grid";
-import { SpacingTypes, mergeSpacings } from "@bedrock-layout/spacing-constants";
+import { Grid, GridProps } from "@bedrock-layout/grid";
+import {
+  SpacingOptions,
+  getSpacingValue,
+} from "@bedrock-layout/spacing-constants";
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
@@ -20,31 +23,33 @@ const RowSpanner = styled.div`
   }
 `;
 
-const safeTheme = { spacing: {} };
+const safeTheme = {};
 
-const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
+const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
+  children,
+  gutter,
+}) => {
   const [rowSpan, setRowSpan] = useState(1);
 
   const childRef = useStatefulRef<HTMLDivElement>(null);
   const observerRef = useStatefulRef<ResizeObserver>(null);
 
-  const { spacing = {} } = React.useContext(ThemeContext) || safeTheme;
-  const { current: spacingMap } = React.useRef(mergeSpacings(spacing));
+  const theme = React.useContext(ThemeContext) || safeTheme;
 
   const getRowHeight = React.useCallback(
     (node: Element) => {
-      const gapString = spacingMap[gutter] ?? "1rem";
+      const gapString = getSpacingValue(theme, gutter) ?? "1px";
 
       const maybeGap = isBrowser ? toPX(gapString, childRef.current) : null;
 
-      const gap: number = maybeGap ? maybeGap : 0;
+      const gap: number = Math.max(maybeGap ?? 1, 1);
 
       const [child] = Array.from(node.children);
       const height = 1 + Math.min(node.scrollHeight, child.scrollHeight);
 
       return Math.ceil((height + gap) / gap);
     },
-    [childRef, spacingMap, gutter]
+    [theme, gutter, childRef]
   );
 
   React.useEffect(() => {
@@ -82,7 +87,7 @@ const Resizer: React.FC<{ gutter: SpacingTypes }> = ({ children, gutter }) => {
   );
 };
 
-const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
+export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
   delete ((props as unknown) as Record<string, unknown>)[
     "data-bedrock-layout-grid"
   ];
@@ -100,8 +105,6 @@ const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
 MasonryGrid.displayName = "MasonryGrid";
 
 MasonryGrid.propTypes = Grid.propTypes;
-
-export default MasonryGrid;
 
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js

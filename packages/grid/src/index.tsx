@@ -1,14 +1,13 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
+  SpacingOptions,
+  getSpacingValue,
   mergeBreakpoints,
-  mergeSpacings,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface GridProps {
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
   minItemWidth?: number | string;
 }
 
@@ -40,25 +39,20 @@ function getSafeMinItemWidth(
     : mergeBreakpoints(breakPoints).smallOnly + "px";
 }
 
-const Grid = styled.div.attrs<GridProps>(
-  ({
-    minItemWidth,
-    gutter = "lg",
-    theme: { spacing = {}, breakPoints = {} },
-    style,
-  }) => {
-    const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
+export const Grid = styled.div.attrs<GridProps>(
+  ({ minItemWidth, gutter = "lg", theme, style }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
 
-    const safeMinItemWidth = getSafeMinItemWidth(breakPoints, minItemWidth);
+    const safeMinItemWidth = getSafeMinItemWidth(
+      theme.breakPoints ?? {},
+      minItemWidth
+    );
 
     return {
       "data-bedrock-layout-grid": "",
       style: {
         ...style,
-        "--gutter": safeGutter,
+        "--gutter": maybeGutter ?? "0px",
         "--minItemWidth": safeMinItemWidth,
       },
     };
@@ -81,10 +75,6 @@ const Grid = styled.div.attrs<GridProps>(
 Grid.displayName = "Grid";
 
 Grid.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   minItemWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
-
-export default Grid;
