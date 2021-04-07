@@ -89,7 +89,7 @@ export function flexGapSupported(): boolean {
 export const isFlexGapSupported = flexGapSupported();
 
 export const InlineCluster = styled.div.attrs<InlineClusterProps>(
-  ({ children, gutter = "lg", theme }) => {
+  ({ children, gutter, theme }) => {
     const maybeGutter = getSpacingValue(theme, gutter);
     return {
       "data-bedrock-layout-inline-cluster": "",
