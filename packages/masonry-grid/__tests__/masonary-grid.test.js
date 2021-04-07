@@ -3,23 +3,12 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import MasonryGrid from "../src";
+import { MasonryGrid } from "../src";
 
 describe("MasonryGrid", () => {
   describe("correct usage", () => {
     test("MasonryGrid is not null", () => {
       expect(MasonryGrid).toBeTruthy();
-    });
-
-    it("renders default gutters", () => {
-      const masonryGrid = create(
-        <MasonryGrid>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-        </MasonryGrid>
-      );
-      expect(masonryGrid.toJSON()).toMatchSnapshot();
     });
 
     it("renders all the gutter options", () => {
@@ -38,7 +27,7 @@ describe("MasonryGrid", () => {
 
     it("renders custom minItemWidth", () => {
       const masonryGrid = create(
-        <MasonryGrid minItemWidth={320}>
+        <MasonryGrid gutter="lg" minItemWidth={320}>
           <div>1</div>
           <div>1</div>
           <div>1</div>
@@ -50,7 +39,7 @@ describe("MasonryGrid", () => {
     it("renders custom minItemWidth as string", () => {
       CSS.supports.mockImplementation(() => true);
       const masonryGrid = create(
-        <MasonryGrid minItemWidth="32rem">
+        <MasonryGrid gutter="lg" minItemWidth="32rem">
           <div>1</div>
           <div>1</div>
           <div>1</div>
@@ -62,9 +51,12 @@ describe("MasonryGrid", () => {
     it("renders with theme overrides", () => {
       const masonryGrid = create(
         <ThemeProvider
-          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: "200px" } }}
+          theme={{
+            breakPoints: { smallOnly: 320 },
+            spacing: { "1x": "200px" },
+          }}
         >
-          <MasonryGrid>
+          <MasonryGrid gutter="1x">
             <div>1</div>
             <div>1</div>
             <div>1</div>
@@ -83,10 +75,11 @@ describe("MasonryGrid", () => {
     afterEach(() => {
       console.error.mockRestore();
     });
-    it("renders default with console error with wrong gutter input", () => {
+
+    it("renders default with console error with no gutter input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <MasonryGrid gutter="incorrect">
+        <MasonryGrid>
           <div>1</div>
           <div>1</div>
           <div>1</div>
@@ -96,10 +89,23 @@ describe("MasonryGrid", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
+    it("renders default with wrong gutter input", () => {
+      expect(console.error).not.toBeCalled();
+      const errorStack = create(
+        <MasonryGrid gutter="incorrect">
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+        </MasonryGrid>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders default with console error with minItemWidth input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <MasonryGrid minItemWidth={{ value: "incorrect" }}>
+        <MasonryGrid gutter="lg" minItemWidth={{ value: "incorrect" }}>
           <div>1</div>
           <div>1</div>
           <div>1</div>

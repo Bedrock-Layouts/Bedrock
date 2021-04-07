@@ -33,9 +33,11 @@ For purposes of styling you can select `data-bedrock-layout-masonry-grid`.
 
 ## API
 
+\* required
+
 | Property     | Description                       | Type                                   | Default               |
 | ------------ | --------------------------------- | -------------------------------------- | --------------------- |
-| gutter       | sets space inbetween each element | one of spacings                        | `lg`                  |
+| gutter\*     | sets space inbetween each element | one of spacing\*\*                     | -                     |
 | minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
 
-- The spacing and breakPoints can be found at [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants)
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

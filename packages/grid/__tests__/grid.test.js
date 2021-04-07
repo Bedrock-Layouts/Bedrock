@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import Grid from "../src";
+import { Grid } from "../src";
 
 const Lorem = () => (
   <>
@@ -28,15 +28,6 @@ describe("Grid", () => {
       expect(Grid).toBeTruthy();
     });
 
-    it("renders default gutters", () => {
-      const grid = create(
-        <Grid>
-          <Lorem />
-        </Grid>
-      );
-      expect(grid.toJSON()).toMatchSnapshot();
-    });
-
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const grid = create(
@@ -50,7 +41,7 @@ describe("Grid", () => {
 
     it("renders custom minItemWidth", () => {
       const grid = create(
-        <Grid minItemWidth={320}>
+        <Grid gutter="lg" minItemWidth={320}>
           <Lorem />
         </Grid>
       );
@@ -60,7 +51,7 @@ describe("Grid", () => {
     it("renders custom minItemWidth as string", () => {
       CSS.supports.mockImplementation(() => true);
       const grid = create(
-        <Grid minItemWidth="32rem">
+        <Grid gutter="lg" minItemWidth="32rem">
           <Lorem />
         </Grid>
       );
@@ -70,9 +61,12 @@ describe("Grid", () => {
     it("renders with theme overrides", () => {
       const grid = create(
         <ThemeProvider
-          theme={{ breakPoints: { smallOnly: 320 }, spacing: { md: "200px" } }}
+          theme={{
+            breakPoints: { smallOnly: 320 },
+            spacing: { "1x": "200px" },
+          }}
         >
-          <Grid>
+          <Grid gutter="1x">
             <Lorem />
           </Grid>
         </ThemeProvider>
@@ -90,11 +84,23 @@ describe("Grid", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong gutter input", () => {
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Grid gutter="incorrect">
+          <Lorem />
+        </Grid>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with no gutter input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Grid>
           <Lorem />
         </Grid>
       );
@@ -107,7 +113,7 @@ describe("Grid", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Grid minItemWidth={{ value: "incorrect" }}>
+        <Grid gutter="lg" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>
       );

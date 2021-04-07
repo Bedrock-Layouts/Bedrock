@@ -1,4 +1,4 @@
-import Grid from "@bedrock-layout/grid";
+import { Grid } from "@bedrock-layout/grid";
 import React from "react";
 import styled from "styled-components";
 

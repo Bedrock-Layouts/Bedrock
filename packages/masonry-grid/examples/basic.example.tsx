@@ -1,4 +1,4 @@
-import MasonryGrid from "@bedrock-layout/masonry-grid";
+import { MasonryGrid } from "@bedrock-layout/masonry-grid";
 import React from "react";
 import styled from "styled-components";
 
