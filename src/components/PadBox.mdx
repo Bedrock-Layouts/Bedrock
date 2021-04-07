@@ -4,7 +4,7 @@ menu: Components
 ---
 
 import { Playground, Props } from 'docz';
-import PadBox from '@bedrock-layout/padbox';
+import { PadBox } from '@bedrock-layout/padbox';
 
 # PadBox
 
@@ -84,8 +84,12 @@ For purposes of styling you can select `data-bedrock-layout-padbox`.
 
 ## Properties
 
-| Property         | Type                                                                   | Default |
-| ---------------- | ---------------------------------------------------------------------- | ------- |
-| padding          | One of: `none, xxs, xs, sm, md, lg, xl, xxl`                           | `lg`    |
-| padding (array)  | Array of padding options                                               | `lg`    |
-| padding (object) | Object of with padding locations as keys and padding options as values | `lg`    |
+\* required
+
+| Property (one of the following) | Type                                                                       | Default |
+| ------------------------------- | -------------------------------------------------------------------------- | ------- |
+| padding\*                       | spacing\*\*                                                                | -       |
+| padding\* (array)               | Array of spacing options\*\*                                               | -       |
+| padding\* (object)              | Object of with padding locations as keys and spacing\*\* options as values | -       |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

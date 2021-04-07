@@ -1,26 +1,12 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  spacing as defaultSpacing,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const keyToProperty = (key: string, val: string) => {
-  type map = { [s: string]: string };
-  const modernMap: map = {
-    left: `padding-inline-start:${val};`,
-    right: `padding-inline-end:${val};`,
-    top: `padding-block-start:${val};`,
-    bottom: `padding-block-end:${val};`,
-    inlineStart: `padding-inline-start:${val};`,
-    inlineEnd: `padding-inline-end:${val};`,
-    blockStart: `padding-block-start:${val};`,
-    blockEnd: `padding-block-end:${val};`,
-  };
-
-  return modernMap[key];
-};
+type SpacingTypes = keyof SpacingOptions;
 
 type PaddingObj =
   | { left: SpacingTypes }
@@ -40,9 +26,9 @@ type PaddingTypes =
   | [SpacingTypes, SpacingTypes, SpacingTypes]
   | [SpacingTypes, SpacingTypes, SpacingTypes, SpacingTypes];
 
-type PaddingToString = (
-  spacing: Record<string, unknown>
-) => (padding?: PaddingTypes) => string;
+type Theme = {
+  spacing?: Record<string, string | number>;
+};
 
 const validKeys = new Set([
   "left",
@@ -55,73 +41,88 @@ const validKeys = new Set([
   "blockEnd",
 ]);
 
-const validSpacings = new Set(Object.keys(defaultSpacings));
+const keyToProperty = (key: string, val: string) => {
+  type map = { [s: string]: string };
+  const modernMap: map = {
+    left: `padding-inline-start:${val};`,
+    right: `padding-inline-end:${val};`,
+    top: `padding-block-start:${val};`,
+    bottom: `padding-block-end:${val};`,
+    inlineStart: `padding-inline-start:${val};`,
+    inlineEnd: `padding-inline-end:${val};`,
+    blockStart: `padding-block-start:${val};`,
+    blockEnd: `padding-block-end:${val};`,
+  };
 
-const paddingToString: PaddingToString = (spacing = {}) => (padding = "lg") => {
+  return modernMap[key];
+};
+
+function paddingOrDefault(theme: Theme) {
+  return (key: SpacingTypes) => {
+    const maybePadding = getSpacingValue(theme, key);
+    return maybePadding ?? "0px";
+  };
+}
+
+const paddingToString = (theme: Theme) => (padding: PaddingTypes) => {
+  if (typeof padding === undefined)
+    throw new Error("padding cannot be undefined");
+
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
   }
 
-  const spacingMap = mergeSpacings(spacing);
+  const validSpacings = new Set(Object.keys(theme.spacing ?? defaultSpacing));
+
+  const isValidPadding = () => {
+    if (typeof padding === "string") return true;
+
+    if (Array.isArray(padding)) {
+      return padding.every((val) => validSpacings.has(val));
+    }
+
+    return (
+      padding &&
+      Object.keys(padding).every((key) => validKeys.has(key)) &&
+      Object.values(padding).every((val) => validSpacings.has(val))
+    );
+  };
+
+  if (!isValidPadding()) {
+    console.error("Invalid padding Type");
+  }
+
+  const getPadding = paddingOrDefault(theme);
 
   return typeof padding === "object" && !Array.isArray(padding)
-    ? paddingObjToString(padding)
-    : paddingArrToString(padding);
-
-  function paddingArrToString(padArr: SpacingTypes | SpacingTypes[]) {
-    if (
-      Array.isArray(padArr) &&
-      !padArr.every((val) => validSpacings.has(val))
-    ) {
-      console.error("Invalid padding Type");
-    }
-    const safePadArr = Array.isArray(padArr) ? padArr : [padArr];
-    return `padding: ${safePadArr
-      .map((pad: SpacingTypes) => spacingMap[pad])
-      .join(" ")};`;
-  }
-
-  function paddingObjToString(padObj: PaddingObj) {
-    const padObjKeys = Object.keys(padObj);
-    const padObjVals = Object.values(padObj);
-
-    if (
-      !padObjKeys.every((key) => validKeys.has(key)) ||
-      !padObjVals.every((val) => validSpacings.has(val))
-    ) {
-      console.error("Invalid padding Type");
-    }
-
-    return Object.entries(padObj).reduce(
-      (acc, [key, val]) =>
-        validKeys.has(key) ? acc + keyToProperty(key, spacingMap[val]) : acc,
-      ""
-    );
-  }
+    ? Object.entries(padding).reduce(
+        (acc, [key, val]) =>
+          validKeys.has(key) ? acc + keyToProperty(key, getPadding(val)) : acc,
+        ""
+      )
+    : `padding: ${Array.from(Array.isArray(padding) ? padding : [padding])
+        .map((pad: SpacingTypes) => getPadding(pad))
+        .join(" ")}`;
 };
 
 export interface PadBoxProps {
-  padding?: PaddingTypes;
+  padding: PaddingTypes;
 }
 
-const PadBox = styled.div.attrs<PadBoxProps>(() => ({
+export const PadBox = styled.div.attrs<PadBoxProps>(() => ({
   "data-bedrock-layout-padbox": "",
 }))<PadBoxProps>`
   box-sizing: border-box;
-  ${(props) => paddingToString(props.theme.spacing)(props.padding)}
+  ${(props) => paddingToString(props.theme)(props.padding)}
 `;
 
 PadBox.displayName = "PadBox";
 
-const spacingOptionsTypes = PropTypes.oneOf(Object.keys(defaultSpacings));
-
 PadBox.propTypes = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   padding: PropTypes.oneOfType<any>([
-    spacingOptionsTypes,
-    PropTypes.objectOf(spacingOptionsTypes),
-    PropTypes.arrayOf(spacingOptionsTypes),
-  ]),
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.string),
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
 };
-
-export default PadBox;

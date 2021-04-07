@@ -1,4 +1,4 @@
-import PadBox from "@bedrock-layout/padbox";
+import { PadBox } from "@bedrock-layout/padbox";
 import React from "react";
 import styled from "styled-components";
 

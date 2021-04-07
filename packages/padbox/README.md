@@ -26,6 +26,10 @@ For purposes of styling you can select `data-bedrock-layout-padbox`.
 
 ## API
 
-| Property | Description  | Type                                                    | Default |
-| -------- | ------------ | ------------------------------------------------------- | ------- |
-| padding  | sets padding | spacing, array of spacings, or object of spacing values | `lg`    |
+\* required
+
+| Property  | Description  | Type                                                         | Default |
+| --------- | ------------ | ------------------------------------------------------------ | ------- |
+| padding\* | sets padding | spacing, array of spacings, or object of spacing values \*\* | -       |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

@@ -275,131 +275,10 @@ exports[`PadBox correct usage renders all the padding options 11`] = `
 </div>
 `;
 
-exports[`PadBox correct usage renders default padding 1`] = `
-.c0 {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 1`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-inline-start: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 2`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-inline-end: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 3`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-block-start: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 4`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-block-end: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 5`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-inline-start: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 6`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-inline-end: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 7`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-block-start: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
-exports[`PadBox correct usage renders with classic css properties for old browser 8`] = `
-.c0 {
-  box-sizing: border-box;
-  padding-block-end: 0.5rem;
-}
-
-<div
-  className="c0"
-  data-bedrock-layout-padbox=""
-/>
-`;
-
 exports[`PadBox correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 200px;
 }
 
 <div
@@ -721,9 +600,10 @@ exports[`PadBox correct usage use padding object 8`] = `
 </div>
 `;
 
-exports[`PadBox incorrect usage renders default with console error with wrong input 1`] = `
+exports[`PadBox incorrect usage renders default with console error with no input 1`] = `
 .c0 {
   box-sizing: border-box;
+  padding: 0px;
 }
 
 <div
@@ -745,9 +625,10 @@ exports[`PadBox incorrect usage renders default with console error with wrong in
 </div>
 `;
 
-exports[`PadBox incorrect usage renders with console error with wrong input in array 1`] = `
+exports[`PadBox incorrect usage renders default with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
+  padding: 0px;
 }
 
 <div
@@ -769,9 +650,35 @@ exports[`PadBox incorrect usage renders with console error with wrong input in a
 </div>
 `;
 
-exports[`PadBox incorrect usage renders with console error with wrong input in object 1`] = `
+exports[`PadBox incorrect usage renders defaults with wrong input in array 1`] = `
 .c0 {
   box-sizing: border-box;
+  padding: 0px 0px;
+}
+
+<div
+  className="c0"
+  data-bedrock-layout-padbox=""
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`PadBox incorrect usage renders defaults with wrong input in object 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-inline-start: 0px;
 }
 
 <div
