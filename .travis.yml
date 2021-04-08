@@ -9,11 +9,13 @@ after_failure:
 after_success:
   - echo "//registry.npmjs.org/:_authToken=${NPM_AUTH}" > ~/.npmrc
   - git remote add pub https://${GH_TOKEN}@github.com/Bedrock-Layouts/Bedrock.git
+  - git fetch pub master
   - git checkout master
+
 deploy:
-  provider: script
-  script: npm run publish:ci
-  skip_cleanup: true
-  keep_history: true
-  on:
-    branch: master
+  - provider: script
+    script: npx lerna publish --no-commit-hooks --git-remote pub
+    skip_cleanup: true
+    keep_history: true
+    on:
+      branch: master

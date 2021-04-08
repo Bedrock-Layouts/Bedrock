@@ -5,6 +5,11 @@
     "version": {
       "conventionalCommits": true,
       "allowBranch": ["master"]
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": ["master"],
+      "yes": true
     }
   }
 }
