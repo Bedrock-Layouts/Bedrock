@@ -89,25 +89,18 @@ export function flexGapSupported(): boolean {
 export const isFlexGapSupported = flexGapSupported();
 
 export const InlineCluster = styled.div.attrs<InlineClusterProps>(
-  ({ children, gutter = "lg", theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
+  ({ children }) => {
     return {
       "data-bedrock-layout-inline-cluster": "",
-      style: {
-        "--gutter": maybeGutter ?? "0px",
-      },
-      children: isFlexGapSupported ? (
-        children
-      ) : (
-        <div>
-          {React.Children.map(children, (child) => (
-            <div>{child}</div>
-          ))}
-        </div>
-      ),
+      children: isFlexGapSupported ? children : <div>{children}</div>,
     };
   }
 )<InlineClusterProps>`
+  --gutter: ${({ gutter, theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
+    return maybeGutter ?? "0px";
+  }};
+
   ${isFlexGapSupported ? gapSupportedCSS : fallbackCss}
 `;
 
