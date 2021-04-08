@@ -3,6 +3,7 @@
 ## Foundational Layout Primitives for your React App
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 

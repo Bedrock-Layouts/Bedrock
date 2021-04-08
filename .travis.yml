@@ -1,6 +1,17 @@
 language: node_js
 node_js:
-  - 14
+- 14
 script: npm run verify
+notifications:
+  email: true
 after_failure:
-  - cd /home/travis/.npm/_logs/ &&  cat `ls -rt |tail -1`
+- cd /home/travis/.npm/_logs/ &&  cat `ls -rt |tail -1`
+before_deploy: npm run build
+deploy:
+- npm run publish:ci
+  provider: npm
+  email: travis.mair@gmail.com
+  on:
+    branch: master
+  api_key:
+    secure: ku+DGAZojDxgfOn7kmvEpMmKui9XYTcSF5AwWJAZtWpD1bsnV9NLzfUpG8q1MuDxSGhUXVlm5l0z77QNTICDeFibiR7pWvaYjYuJqx89BNLYr68m/AK439xy9zK1OPy+OcP5Iil8K1Z4U8lnoUaOHTKCJQ82JcuK8GNaEZKyqKDt1HWazLwoMN4llNVmK+Sib+hRYNn/vfRqQhxs3Ab81DZs1y73JpjWDLxu4USPpK3VNG+UM4H+JiO2X8i6JXC+U8VSBTv7wBSm0Lg7QyWcjIv+QZL7Mq5VHV6SHkN4aDStqWY8ouZfMJL74KzQfIHwz/FJub6c4D8GxoKwyO/msK0lH0C9WPZa/NOLxdu9Xls4acXTAG1PK98bQ4iUhzzRH9wbSnVafcjU0XNc+z/NXuNiUJZuOX5TBUUYy6LmykNRf+LfUm4ZcKarty2pXfdA/N/Rw4eBBLHQy2fF6AfDdvBlPq88Q7sfrNku//PZ8Nv7yF9g2zmWtkIiRmbTHplQLXsjfZgIr7HMaxJbNDBwhruUT5eKISpaF35HYu3TRkCPKiHRKhmEuPjJvXdqbdZBD/jOqrBB6k/pq3cEVjRcPiIXqIjf9ac89t6ePPJNtp9eJea9GZeOG+xy1K3ee2WPMfwct15zDiP0YQz4L7j2X5pP35OLiaoHjj+WkRsi1MY=

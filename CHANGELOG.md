@@ -1,4 +1,12 @@
-## Released
+## Unreleased
+
+### Refactor
+
+- **inline-cluster**: refactor custom gutter property
+
+### Fix
+
+- **inline-cluster**: remove default gutter value
 
 ### Feat
 

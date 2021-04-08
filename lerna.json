@@ -1,6 +1,10 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "allowBranch": ["master"]
+    }
+  }
 }
