@@ -2,5 +2,15 @@ language: node_js
 node_js:
   - 14
 script: npm run verify
+notifications:
+  email: true
 after_failure:
   - cd /home/travis/.npm/_logs/ &&  cat `ls -rt |tail -1`
+
+before_deploy: npm run build
+deploy:
+  provider: npm
+  email: "YOUR_EMAIL_ADDRESS"
+  api_key: "YOUR_AUTH_TOKEN"
+  on:
+    branch: master

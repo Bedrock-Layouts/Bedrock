@@ -22,13 +22,14 @@
     "fix-format": "lerna run fix-format --parallel",
     "serve": "docz serve",
     "bootstrap": "lerna bootstrap --hoist",
-    "changes": "dotenv lerna-changelog",
+    "cz": "cz",
     "clean": "lerna clean",
     "build": "lerna run clean:build --parallel && lerna run build",
     "build:watch": "lerna run build:watch --stream",
     "build:storybook": "build-storybook",
     "prepublish": "npm run build",
     "publish": "lerna publish",
+    "publish:ci": "lerna version --conventional-commits && npm run publish:fix",
     "publish:fix": "lerna publish from-package",
     "verify": "npm-run-all check-types lint check-format test:coverage",
     "postinstall": "husky install"
@@ -88,7 +89,9 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
+    "commitizen": "^4.2.3",
     "cssom": "^0.4.4",
+    "cz-conventional-changelog": "^3.2.0",
     "docz": "latest",
     "dotenv": "^8.2.0",
     "dotenv-cli": "^4.0.0",
@@ -142,5 +145,10 @@
     ],
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
