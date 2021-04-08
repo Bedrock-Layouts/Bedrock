@@ -29,7 +29,7 @@
     "build:storybook": "build-storybook",
     "prepublish": "npm run build",
     "publish": "lerna publish",
-    "publish:ci": "lerna version -y --conventional-commits && npm run publish:fix -- --git-remote pub",
+    "publish:ci": "lerna version -y --conventional-commits && lerna publish from-package --git-remote pub",
     "publish:fix": "lerna publish from-package",
     "verify": "npm-run-all check-types lint check-format test:coverage",
     "postinstall": "husky install"
