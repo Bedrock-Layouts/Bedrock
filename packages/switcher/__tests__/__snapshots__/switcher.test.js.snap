@@ -3,7 +3,7 @@
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -15,12 +15,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -40,7 +34,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.0625rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -52,12 +46,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 2
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0.0625rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -77,7 +65,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 2
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.125rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -89,12 +77,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 3
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0.125rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -114,7 +96,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 3
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.25rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -126,12 +108,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 4
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0.25rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -151,7 +127,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 4
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.5rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -163,12 +139,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 5
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -188,7 +158,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 5
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -200,12 +170,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 6
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0.75rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -237,12 +201,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 7
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -262,7 +220,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 7
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 1.5rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -274,12 +232,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 8
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -299,7 +251,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 8
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 2rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -311,12 +263,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 9
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "2rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -336,7 +282,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 9
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 3rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -348,12 +294,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "3rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -373,7 +313,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1
 exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 4rem;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -385,12 +325,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders all the gutter options 1
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "4rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -411,7 +345,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders custom columns 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
-  --columns: 1;
+  --columns: 5;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
   gap: var(--gutter);
@@ -422,12 +356,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders custom columns 1`] = `
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 5,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -459,12 +387,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders dense mode 1`] = `
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -484,7 +406,7 @@ exports[`Switcher ColumnsSwitcher correct usage renders dense mode 1`] = `
 exports[`Switcher ColumnsSwitcher correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 200px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -496,12 +418,6 @@ exports[`Switcher ColumnsSwitcher correct usage renders with theme overrides 1`]
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "200px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -533,12 +449,6 @@ exports[`Switcher ColumnsSwitcher correct usage should render a columns if conta
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -595,7 +505,7 @@ exports[`Switcher ColumnsSwitcher correct usage should render a stack if contain
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with no input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -607,12 +517,6 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -632,7 +536,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong columns input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -644,12 +548,6 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -669,7 +567,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong dense input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -681,12 +579,6 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -706,7 +598,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with console error with wrong switchAt input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -718,12 +610,6 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -743,7 +629,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with console e
 exports[`Switcher ColumnsSwitcher incorrect usage renders default with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
@@ -755,12 +641,6 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with wrong inp
   className="c0"
   data-bedrock-layout-columns=""
   data-bedrock-layout-columns-switcher=""
-  style={
-    Object {
-      "--columns": 1,
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

@@ -11,21 +11,18 @@ export interface ColumnsProps {
   dense?: boolean;
 }
 
-export const Columns = styled.div.attrs<ColumnsProps>(
-  ({ columns = 1, gutter = "lg", theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-    return {
-      "data-bedrock-layout-columns": "",
-      style: {
-        "--columns": columns > 0 ? columns : 1,
-        "--gutter": maybeGutter ?? "0px",
-      },
-    };
-  }
-)<ColumnsProps>`
+export const Columns = styled.div.attrs<ColumnsProps>(() => ({
+  "data-bedrock-layout-columns": "",
+}))<ColumnsProps>`
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
+  --gutter: ${({ gutter, theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
+    return maybeGutter ?? "0px";
+  }};
+
+  --columns: ${({ columns = 1 }) => {
+    return columns > 0 ? columns : 1;
+  }};
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -45,25 +42,31 @@ export interface ColumnProps {
   span?: number;
 }
 
-type SafeSpan = (span: unknown) => number;
-const safeSpan: SafeSpan = (span) => {
+const safeSpan = (span: unknown) => {
   return typeof span === "number" ? span : 1;
 };
 
-//ColumnsProps passed twice to make propTypes work
-export const Column = styled.div.attrs<ColumnProps>((props) => {
-  const { span, style } = props;
+/**
+ * ColumnsProps passed twice to make propTypes work.
+ *
+ * span is remaped to colSpan due to span being an attribute that gets
+ * passed to the underlying element.  This can cause issues with Grid layout.
+ *
+ * In a future breaking change, colSpan should be the public API.
+ * */
+export const Column = styled.div.attrs<ColumnProps, { colSpan?: number }>(
+  (props) => {
+    const { span } = props;
 
-  return {
-    "data-bedrock-layout-column": "",
-    span: undefined,
-    style: {
-      ...style,
-      "--span": Math.max(safeSpan(span), 1),
-    },
-  };
-})<ColumnProps>`
-  --span: 1;
+    return {
+      "data-bedrock-layout-column": "",
+      span: undefined,
+      colSpan: span,
+    };
+  }
+)<ColumnProps>`
+  --span: ${(props) => Math.max(safeSpan(props.colSpan), 1)};
+
   grid-column: span min(var(--span), var(--columns)) / auto;
 `;
 

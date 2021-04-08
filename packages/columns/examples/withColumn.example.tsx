@@ -1,4 +1,4 @@
-import { Column, Columns } from "@bedrock-layout/columns";
+import { Column, Columns, ColumnsProps } from "@bedrock-layout/columns";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Columns";
 const name = "With Column Component";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: ColumnsProps): React.ReactNode {
   return (
     <Columns {...args}>
       <Column span={2}>
@@ -52,6 +52,7 @@ function Example(args: Record<string, unknown>) {
 Example.story = { name };
 Example.args = {
   columns: 3,
+  gutter: "lg",
   dense: false,
 };
 export const Comp = Example;
