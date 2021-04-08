@@ -10,7 +10,6 @@ after_success:
   - echo "//registry.npmjs.org/:_authToken=${NPM_AUTH}" > ~/.npmrc
   - git remote add pub https://${GH_TOKEN}@github.com/Bedrock-Layouts/Bedrock.git
   - git checkout master
-before_deploy: npm run build
 deploy:
   provider: script
   script: npm run publish:ci
