@@ -660,7 +660,7 @@ exports[`Switcher ColumnsSwitcher incorrect usage renders default with wrong inp
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -670,11 +670,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 1`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -694,7 +689,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 1`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.0625rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -704,11 +699,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 2`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0.0625rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -728,7 +718,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 2`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.125rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -738,11 +728,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 3`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0.125rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -762,7 +747,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 3`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.25rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -772,11 +757,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 4`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0.25rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -796,7 +776,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 4`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.5rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -806,11 +786,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 5`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -830,7 +805,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 5`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -840,11 +815,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 6`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0.75rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -874,11 +844,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 7`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -898,7 +863,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 7`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 1.5rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -908,11 +873,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 8`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -932,7 +892,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 8`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 2rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -942,11 +902,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 9`]
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "2rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -966,7 +921,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 9`]
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 3rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -976,11 +931,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 10`
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "3rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1000,7 +950,7 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 10`
 exports[`Switcher SplitSwitcher correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 4rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -1010,11 +960,6 @@ exports[`Switcher SplitSwitcher correct usage renders all the gutter options 11`
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "4rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1044,11 +989,6 @@ exports[`Switcher SplitSwitcher correct usage renders default gutters 1`] = `
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1068,7 +1008,7 @@ exports[`Switcher SplitSwitcher correct usage renders default gutters 1`] = `
 exports[`Switcher SplitSwitcher correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 200px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -1078,11 +1018,6 @@ exports[`Switcher SplitSwitcher correct usage renders with theme overrides 1`] =
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "200px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1112,11 +1047,6 @@ exports[`Switcher SplitSwitcher correct usage should render a split if container
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1173,7 +1103,7 @@ exports[`Switcher SplitSwitcher correct usage should render a stack if container
 exports[`Switcher SplitSwitcher incorrect usage renders default with console error with no input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -1183,11 +1113,6 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1217,11 +1142,6 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1251,11 +1171,6 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1275,7 +1190,7 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with console err
 exports[`Switcher SplitSwitcher incorrect usage renders default with wrong input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -1285,11 +1200,6 @@ exports[`Switcher SplitSwitcher incorrect usage renders default with wrong input
   className="c0"
   data-bedrock-layout-split=""
   data-bedrock-layout-split-switcher=""
-  style={
-    Object {
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

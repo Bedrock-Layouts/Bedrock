@@ -12,11 +12,6 @@ exports[`Split correct usage renders all the fraction options 1`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -45,11 +40,6 @@ exports[`Split correct usage renders all the fraction options 2`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -78,11 +68,6 @@ exports[`Split correct usage renders all the fraction options 3`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -111,11 +96,6 @@ exports[`Split correct usage renders all the fraction options 4`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -144,11 +124,6 @@ exports[`Split correct usage renders all the fraction options 5`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -177,11 +152,6 @@ exports[`Split correct usage renders all the fraction options 6`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -210,11 +180,6 @@ exports[`Split correct usage renders all the fraction options 7`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -234,7 +199,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
 exports[`Split correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -243,11 +208,6 @@ exports[`Split correct usage renders all the gutter options 1`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -267,7 +227,7 @@ exports[`Split correct usage renders all the gutter options 1`] = `
 exports[`Split correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.0625rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -276,11 +236,6 @@ exports[`Split correct usage renders all the gutter options 2`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0.0625rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -300,7 +255,7 @@ exports[`Split correct usage renders all the gutter options 2`] = `
 exports[`Split correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.125rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -309,11 +264,6 @@ exports[`Split correct usage renders all the gutter options 3`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0.125rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -333,7 +283,7 @@ exports[`Split correct usage renders all the gutter options 3`] = `
 exports[`Split correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.25rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -342,11 +292,6 @@ exports[`Split correct usage renders all the gutter options 4`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0.25rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -366,7 +311,7 @@ exports[`Split correct usage renders all the gutter options 4`] = `
 exports[`Split correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.5rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -375,11 +320,6 @@ exports[`Split correct usage renders all the gutter options 5`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -399,7 +339,7 @@ exports[`Split correct usage renders all the gutter options 5`] = `
 exports[`Split correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -408,11 +348,6 @@ exports[`Split correct usage renders all the gutter options 6`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0.75rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -441,11 +376,6 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -465,7 +395,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 exports[`Split correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 1.5rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -474,11 +404,6 @@ exports[`Split correct usage renders all the gutter options 8`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1.5rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -498,7 +423,7 @@ exports[`Split correct usage renders all the gutter options 8`] = `
 exports[`Split correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 2rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -507,11 +432,6 @@ exports[`Split correct usage renders all the gutter options 9`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "2rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -531,7 +451,7 @@ exports[`Split correct usage renders all the gutter options 9`] = `
 exports[`Split correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 3rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -540,11 +460,6 @@ exports[`Split correct usage renders all the gutter options 10`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "3rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -564,7 +479,7 @@ exports[`Split correct usage renders all the gutter options 10`] = `
 exports[`Split correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 4rem;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -573,11 +488,6 @@ exports[`Split correct usage renders all the gutter options 11`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "4rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -597,7 +507,7 @@ exports[`Split correct usage renders all the gutter options 11`] = `
 exports[`Split correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 200px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -606,11 +516,6 @@ exports[`Split correct usage renders with theme overrides 1`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "200px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -630,7 +535,7 @@ exports[`Split correct usage renders with theme overrides 1`] = `
 exports[`Split incorrect usage renders default with console error with fraction input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -639,11 +544,6 @@ exports[`Split incorrect usage renders default with console error with fraction 
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -663,7 +563,7 @@ exports[`Split incorrect usage renders default with console error with fraction 
 exports[`Split incorrect usage renders default with console error with no gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -672,11 +572,6 @@ exports[`Split incorrect usage renders default with console error with no gutter
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -696,7 +591,7 @@ exports[`Split incorrect usage renders default with console error with no gutter
 exports[`Split incorrect usage renders default with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   display: grid;
   gap: var(--gutter);
   grid-template-columns: 1fr 1fr;
@@ -705,11 +600,6 @@ exports[`Split incorrect usage renders default with wrong gutter input 1`] = `
 <div
   className="c0"
   data-bedrock-layout-split=""
-  style={
-    Object {
-      "--gutter": "0px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

@@ -33,20 +33,12 @@ export interface SplitProps {
   fraction?: FractionTypes;
 }
 
-export const Split = styled.div.attrs<SplitProps>(
-  ({ gutter = "lg", theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-    return {
-      "data-bedrock-layout-split": "",
-      style: {
-        "--gutter": maybeGutter ?? "0px",
-      },
-    };
-  }
-)<SplitProps>`
+export const Split = styled.div.attrs<SplitProps>(() => ({
+  "data-bedrock-layout-split": "",
+}))<SplitProps>`
   box-sizing: border-box;
 
-  --gutter: 1rem;
+  --gutter:${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
 
   display: grid;
   gap: var(--gutter);
