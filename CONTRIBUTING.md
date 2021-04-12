@@ -4,9 +4,9 @@
 
 Thank you for taking the time to contribute! 🎉
 
-When contributing to commitizen, please first create an [issue](https://github.com/Bedrock-Layouts/Bedrock/issues) to discuss the change you wish to make before making a change.
+When contributing to Bedrock Layout Primitives, please first create an [issue](https://github.com/Bedrock-Layouts/Bedrock/issues) to discuss the change you wish to make before making a change.
 
-Bedrock Layout Primitives is a monorepo of packages that currently are versioned independantly of eachother as well as a documentation website at the root. To manage this Bedrock utilizes 3 important tools. First it uses Lerna to manage all the repos into one monorepo. This includes publishing to NPM, taging releases to Github, and processing change logs under each repo. To make automating the above possible in CI, Bedrock has adopted conventional commits and uses commitizen and husky to enforce it.
+Bedrock Layout Primitives is a monorepo of packages that currently are versioned independently of each other. It also includes a documentation website at the root. To manage all of these things, Bedrock utilizes three important tools. First, it uses Lerna to manage all the repos into one monorepo. Lerna is used to publish to NPM, tag releases to Github, and process change logs under each package. To make the above possible in CI, Bedrock has adopted conventional commits and uses commitizen and husky to enforce it.
 
 Before making a pull request
 
@@ -17,6 +17,6 @@ Before making a pull request
 5. Add test cases for all your changes.
 6. Use commitizen to do git commit by running `npm run cz` (be sure to stage your changes first).
 7. This will run `npm run verify` automatically as a pre-commit hook. If anything fails, fix and follow step 6 again.
-8. Update README.md and/or Doc site under `src/` in the root.
+8. Update README.md and Doc site under `src/` in the root.
 9. **DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG**.
 10. Send a pull request 🙏
