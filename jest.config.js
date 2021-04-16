@@ -53,10 +53,10 @@ module.exports = {
     },
     //TODO Fix the below coverage
     "./packages/inline/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      lines: 0,
-      functions: 0,
+      statements: 73,
+      branches: 58,
+      functions: 66,
+      lines: 73,
     },
     "./packages/masonry-grid/src/index.tsx": {
       statements: 58,
