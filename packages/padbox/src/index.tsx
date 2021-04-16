@@ -65,9 +65,6 @@ function paddingOrDefault(theme: Theme) {
 }
 
 const paddingToString = (theme: Theme) => (padding: PaddingTypes) => {
-  if (typeof padding === undefined)
-    throw new Error("padding cannot be undefined");
-
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
   }
