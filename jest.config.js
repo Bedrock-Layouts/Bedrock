@@ -47,7 +47,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 99,
-      branches: 96,
+      branches: 96.5,
       functions: 100,
       lines: 99,
     },
@@ -63,18 +63,6 @@ module.exports = {
       branches: 31,
       functions: 75,
       lines: 61,
-    },
-    "./packages/grid/src/index.tsx": {
-      statements: 90,
-      branches: 93,
-      functions: 66,
-      lines: 90,
-    },
-    "./packages/center/src/index.tsx": {
-      statements: 91,
-      branches: 91,
-      functions: 80,
-      lines: 91,
     },
     "./packages/switcher/src/index.tsx": {
       statements: 95,
