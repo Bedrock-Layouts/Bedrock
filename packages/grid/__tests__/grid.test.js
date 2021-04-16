@@ -49,7 +49,6 @@ describe("Grid", () => {
     });
 
     it("renders custom minItemWidth as string", () => {
-      CSS.supports.mockImplementation(() => true);
       const grid = create(
         <Grid gutter="lg" minItemWidth="32rem">
           <Lorem />

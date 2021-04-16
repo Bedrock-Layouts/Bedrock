@@ -46,7 +46,6 @@ describe("Center", () => {
     });
 
     it("renders custom width as string", () => {
-      CSS.supports.mockImplementation(() => true);
       const center = create(
         <Center maxWidth="320px">
           <Lorem />
@@ -56,7 +55,6 @@ describe("Center", () => {
     });
 
     it("renders default width if invalid CSS length", () => {
-      CSS.supports.mockImplementation(() => true);
       const center = create(
         <Center maxWidth="320pixels">
           <Lorem />

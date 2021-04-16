@@ -37,7 +37,6 @@ describe("MasonryGrid", () => {
     });
 
     it("renders custom minItemWidth as string", () => {
-      CSS.supports.mockImplementation(() => true);
       const masonryGrid = create(
         <MasonryGrid gutter="lg" minItemWidth="32rem">
           <div>1</div>

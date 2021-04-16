@@ -56,7 +56,6 @@ describe("PadBox", () => {
     });
 
     it("use padding object", () => {
-      window.CSS.supports.mockReturnValue(true);
       [
         { left: "md" },
         { right: "md" },
