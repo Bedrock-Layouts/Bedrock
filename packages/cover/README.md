@@ -17,7 +17,7 @@ It will optionally take a `top` and/or a `bottom` element to put above or below 
 ## Usage
 
 ```javascript
-import Cover from '@bedrock-layout/cover';
+import { Cover } from '@bedrock-layout/cover';
 
 <Cover>
   <div>1</div>
@@ -30,10 +30,14 @@ For purposes of styling, the outer wrapper as the `data-bedrock-layout-cover` da
 
 ## API
 
-| Property  | Description                       | Type                                                                      | Default |
-| --------- | --------------------------------- | ------------------------------------------------------------------------- | ------- |
-| minHeight | minHeight of the cover            | any valid css size unit as a string (will revert to default if not valid) | "100vh" |
-| gutter    | sets space inbetween each element | `"none" , "xxs" ,"xs" , "sm", "md", "lg", "lg", "xl", "xxl"`              | `lg`    |
-| children  | takes a single child              | ReactNode                                                                 | -       |
-| top       | takes a single child              | ReactNode                                                                 | -       |
-| bottom    | takes a single child              | ReactNode                                                                 | -       |
+\* required
+
+| Property  | Description                     | Type                                                                      | Default |
+| --------- | ------------------------------- | ------------------------------------------------------------------------- | ------- |
+| minHeight | minHeight of the cover          | any valid css size unit as a string (will revert to default if not valid) | "100vh" |
+| gutter\*  | sets space between each element | one of spacing\*\*                                                        | -       |
+| children  | takes a single child            | ReactNode                                                                 | -       |
+| top       | takes a single child            | ReactNode                                                                 | -       |
+| bottom    | takes a single child            | ReactNode                                                                 | -       |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

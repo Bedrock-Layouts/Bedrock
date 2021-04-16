@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import Cover from "../src";
+import { Cover } from "../src";
 
 const Lorem = () => (
   <p>
@@ -26,7 +26,7 @@ describe("Cover", () => {
 
     it("renders default", () => {
       const cover = create(
-        <Cover>
+        <Cover gutter="lg">
           <Lorem />
         </Cover>
       );
@@ -35,7 +35,7 @@ describe("Cover", () => {
 
     it("renders custom height", () => {
       const cover = create(
-        <Cover minHeight="500px">
+        <Cover gutter="lg" minHeight="500px">
           <Lorem />
         </Cover>
       );
@@ -43,7 +43,7 @@ describe("Cover", () => {
     });
     it("renders with top", () => {
       const cover = create(
-        <Cover top={<Lorem />}>
+        <Cover gutter="lg" top={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -52,7 +52,7 @@ describe("Cover", () => {
 
     it("renders with bottom", () => {
       const cover = create(
-        <Cover bottom={<Lorem />}>
+        <Cover gutter="lg" bottom={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -61,7 +61,7 @@ describe("Cover", () => {
 
     it("renders with top and bottom", () => {
       const cover = create(
-        <Cover top={<Lorem />} bottom={<Lorem />}>
+        <Cover gutter="lg" top={<Lorem />} bottom={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -82,7 +82,7 @@ describe("Cover", () => {
     it("renders all the padding options", () => {
       Object.keys(spacing).forEach((padding) => {
         const cover = create(
-          <Cover padding={padding}>
+          <Cover gutter="lg" padding={padding}>
             <Lorem />
           </Cover>
         );
@@ -98,7 +98,7 @@ describe("Cover", () => {
         ["md", "lg", "xs", "sm"],
       ].forEach((padding) => {
         const cover = create(
-          <Cover padding={padding}>
+          <Cover gutter="lg" padding={padding}>
             <Lorem />
           </Cover>
         );
@@ -118,7 +118,7 @@ describe("Cover", () => {
         { blockEnd: "md" },
       ].forEach((padding) => {
         const cover = create(
-          <Cover padding={padding}>
+          <Cover gutter="lg" padding={padding}>
             <Lorem />
           </Cover>
         );
@@ -128,8 +128,8 @@ describe("Cover", () => {
 
     it("renders with theme overrides", () => {
       const cover = create(
-        <ThemeProvider theme={{ spacing: { md: 1600 } }}>
-          <Cover>
+        <ThemeProvider theme={{ spacing: { "1x": 200 } }}>
+          <Cover gutter="1x">
             <Lorem />
           </Cover>
         </ThemeProvider>
@@ -147,7 +147,7 @@ describe("Cover", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with wrong gutter", () => {
+    it("renders default with wrong gutter", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -156,12 +156,25 @@ describe("Cover", () => {
         </Cover>
       );
 
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with no gutter", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Cover>
+          <Lorem />
+        </Cover>
+      );
+
       expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
+
     it("renders with min-height incorrect with invalid minHeight", () => {
       const errorStack = create(
-        <Cover minHeight="incorrect">
+        <Cover gutter="lg" minHeight="incorrect">
           <Lorem />
         </Cover>
       );

@@ -1,7 +1,6 @@
 import {
-  SpacingTypes,
-  spacing as defaultSpacings,
-  mergeSpacings,
+  SpacingOptions,
+  getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import React, { Children } from "react";
@@ -10,40 +9,14 @@ import styled from "styled-components";
 export interface CoverProps {
   top?: React.ReactNode;
   bottom?: React.ReactNode;
-  gutter?: SpacingTypes;
+  gutter: keyof SpacingOptions;
   minHeight?: string;
 }
 
-const Cover = styled.div.attrs<CoverProps>(
-  ({
-    style,
-    gutter = "lg",
-    theme: { spacing = {} },
-    children,
-    top,
-    bottom,
-  }) => {
-    const safeGutter =
-      gutter && mergeSpacings(spacing)[gutter]
-        ? mergeSpacings(spacing)[gutter]
-        : mergeSpacings(spacing).lg;
-
-    const rows: string =
-      top && bottom
-        ? "auto 1fr auto"
-        : top
-        ? "auto 1fr"
-        : bottom
-        ? "1fr auto"
-        : "1fr";
-
+export const Cover = styled.div.attrs<CoverProps>(
+  ({ children, top, bottom }) => {
     return {
       "data-bedrock-layout-cover": "",
-      style: {
-        ...style,
-        "--gutter": safeGutter,
-        "--rows": rows,
-      },
       children: (
         <React.Fragment>
           {top && (
@@ -62,8 +35,16 @@ const Cover = styled.div.attrs<CoverProps>(
     };
   }
 )<CoverProps>`
-  --gutter: 1rem;
-  --rows: 1fr;
+  --minHeight: ${(props) => props.minHeight ?? ""};
+  --gutter: ${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
+  --rows: ${({ top, bottom }) =>
+    top && bottom
+      ? "auto 1fr auto"
+      : top
+      ? "auto 1fr"
+      : bottom
+      ? "1fr auto"
+      : "1fr"};
 
   display: grid;
   gap: var(--gutter);
@@ -75,19 +56,15 @@ const Cover = styled.div.attrs<CoverProps>(
   }
 
   @supports (min-block-size: ${(props) => props.minHeight}) {
-    min-block-size: ${(props) => props.minHeight};
+    min-block-size: var(--minHeight);
   }
 `;
 
 Cover.displayName = "Cover";
 
 Cover.propTypes = {
-  gutter: PropTypes.oneOf<SpacingTypes>(
-    Object.keys(defaultSpacings) as SpacingTypes[]
-  ),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   minHeight: PropTypes.string,
   top: PropTypes.element,
   bottom: PropTypes.element,
 };
-
-export default Cover;
