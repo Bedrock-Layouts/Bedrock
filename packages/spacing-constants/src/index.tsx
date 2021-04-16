@@ -52,27 +52,11 @@ function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
   }, {});
 }
 
-export type SpacingTypes = keyof Spacing;
-
-type MergeSpacings = (spacing: Record<string, unknown>) => Spacing;
-export const mergeSpacings: MergeSpacings = (newSpacings = {}) => {
-  const safeSpacings = fromEntries(
-    Object.entries(newSpacings).map(([spaceKey, value]) => [
-      spaceKey,
-      typeof value === "number" ? `${value}px` : value,
-    ])
-  );
-  return ({
-    ...spacing,
-    ...safeSpacings,
-  } as unknown) as Spacing;
-};
-
 type MaybeValue = string | undefined;
 
 type GetSpacingValue = <T>(
   theme: T & { spacing?: Record<string, string | number> },
-  spacingKey: SpacingTypes | keyof SpacingOptions
+  spacingKey: keyof Spacing | keyof SpacingOptions
 ) => MaybeValue;
 
 export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
