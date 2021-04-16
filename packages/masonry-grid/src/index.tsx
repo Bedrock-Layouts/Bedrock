@@ -47,7 +47,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
       const [child] = Array.from(node.children);
       const height = 1 + Math.min(node.scrollHeight, child.scrollHeight);
 
-      return Math.ceil((height + gap) / gap);
+      return Math.ceil(height / gap);
     },
     [theme, gutter, childRef]
   );

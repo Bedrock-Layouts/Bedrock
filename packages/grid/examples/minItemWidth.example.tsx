@@ -12,7 +12,7 @@ const name = "minItemWidth";
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
-    <Grid {...args}>
+    <Grid gutter="lg" {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident

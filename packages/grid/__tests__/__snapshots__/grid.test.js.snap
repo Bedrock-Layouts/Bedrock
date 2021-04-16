@@ -3,22 +3,22 @@
 exports[`Grid correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0px",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -38,22 +38,26 @@ exports[`Grid correct usage renders all the gutter options 1`] = `
 exports[`Grid correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.0625rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0.0625rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -73,22 +77,30 @@ exports[`Grid correct usage renders all the gutter options 2`] = `
 exports[`Grid correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.125rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0.125rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -108,22 +120,34 @@ exports[`Grid correct usage renders all the gutter options 3`] = `
 exports[`Grid correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.25rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0.25rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -143,22 +167,38 @@ exports[`Grid correct usage renders all the gutter options 4`] = `
 exports[`Grid correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.5rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0.5rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -178,22 +218,42 @@ exports[`Grid correct usage renders all the gutter options 5`] = `
 exports[`Grid correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0.75rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -217,18 +277,42 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -248,22 +332,50 @@ exports[`Grid correct usage renders all the gutter options 7`] = `
 exports[`Grid correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 1.5rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1.5rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -283,22 +395,54 @@ exports[`Grid correct usage renders all the gutter options 8`] = `
 exports[`Grid correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 2rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "2rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -318,22 +462,58 @@ exports[`Grid correct usage renders all the gutter options 9`] = `
 exports[`Grid correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 3rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "3rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -353,22 +533,62 @@ exports[`Grid correct usage renders all the gutter options 10`] = `
 exports[`Grid correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 4rem;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "4rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -389,21 +609,21 @@ exports[`Grid correct usage renders custom minItemWidth 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
-  --minItemWidth: 639px;
+  --minItemWidth: 320px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 320px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--minItemWidth": "320px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -424,21 +644,21 @@ exports[`Grid correct usage renders custom minItemWidth as string 1`] = `
 .c0 {
   box-sizing: border-box;
   --gutter: 1rem;
-  --minItemWidth: 639px;
+  --minItemWidth: 32rem;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 32rem ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--minItemWidth": "32rem",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -458,22 +678,22 @@ exports[`Grid correct usage renders custom minItemWidth as string 1`] = `
 exports[`Grid correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --minItemWidth: 639px;
+  --gutter: 200px;
+  --minItemWidth: 320px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 320px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "200px",
-      "--minItemWidth": "320px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -497,18 +717,18 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -528,22 +748,22 @@ exports[`Grid incorrect usage renders default with console error with minItemWid
 exports[`Grid incorrect usage renders default with console error with no gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -563,22 +783,22 @@ exports[`Grid incorrect usage renders default with console error with no gutter 
 exports[`Grid incorrect usage renders default with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
+  --gutter: 0px;
   --minItemWidth: 639px;
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  grid-template-columns: repeat(auto-fit,minmax(min(639,100%),1fr));
+}
+
+@supports (width: 639px ) {
+  .c0 {
+    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-grid=""
-  style={
-    Object {
-      "--gutter": "0px",
-      "--minItemWidth": "639px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.

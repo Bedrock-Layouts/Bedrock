@@ -1,4 +1,4 @@
-import Cover from "@bedrock-layout/cover";
+import { Cover, CoverProps } from "@bedrock-layout/cover";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ BorderedBox.displayName = "BorderedBox";
 const title = "Cover";
 const name = "With bottom";
 
-function Example(args: Record<string, unknown>) {
+function Example(args: CoverProps): React.ReactNode {
   return (
     <Cover {...args} bottom={<div>I am on Bottom</div>}>
       <BorderedBox>

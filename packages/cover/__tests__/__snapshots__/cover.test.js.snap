@@ -2,7 +2,7 @@
 
 exports[`Cover correct usage renders all the gutter options 1`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0px;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -17,18 +17,14 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0px",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -42,7 +38,7 @@ exports[`Cover correct usage renders all the gutter options 1`] = `
 
 exports[`Cover correct usage renders all the gutter options 2`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.0625rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -60,15 +56,15 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
 
 }
 
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0.0625rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -82,7 +78,7 @@ exports[`Cover correct usage renders all the gutter options 2`] = `
 
 exports[`Cover correct usage renders all the gutter options 3`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.125rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -100,15 +96,19 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0.125rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -122,7 +122,7 @@ exports[`Cover correct usage renders all the gutter options 3`] = `
 
 exports[`Cover correct usage renders all the gutter options 4`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.25rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -140,15 +140,23 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0.25rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -162,7 +170,7 @@ exports[`Cover correct usage renders all the gutter options 4`] = `
 
 exports[`Cover correct usage renders all the gutter options 5`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.5rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -180,15 +188,27 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0.5rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -202,7 +222,7 @@ exports[`Cover correct usage renders all the gutter options 5`] = `
 
 exports[`Cover correct usage renders all the gutter options 6`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0.75rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -220,15 +240,31 @@ exports[`Cover correct usage renders all the gutter options 6`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "0.75rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -260,15 +296,35 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -282,7 +338,7 @@ exports[`Cover correct usage renders all the gutter options 7`] = `
 
 exports[`Cover correct usage renders all the gutter options 8`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 1.5rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -300,15 +356,39 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1.5rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -322,7 +402,7 @@ exports[`Cover correct usage renders all the gutter options 8`] = `
 
 exports[`Cover correct usage renders all the gutter options 9`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 2rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -340,15 +420,43 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "2rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -362,7 +470,7 @@ exports[`Cover correct usage renders all the gutter options 9`] = `
 
 exports[`Cover correct usage renders all the gutter options 10`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 3rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -380,15 +488,47 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "3rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -402,7 +542,7 @@ exports[`Cover correct usage renders all the gutter options 10`] = `
 
 exports[`Cover correct usage renders all the gutter options 11`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 4rem;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -420,15 +560,51 @@ exports[`Cover correct usage renders all the gutter options 11`] = `
 
 }
 
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "4rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -457,18 +633,14 @@ exports[`Cover correct usage renders all the padding options 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -497,18 +669,14 @@ exports[`Cover correct usage renders all the padding options 2`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -537,18 +705,14 @@ exports[`Cover correct usage renders all the padding options 3`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -577,18 +741,14 @@ exports[`Cover correct usage renders all the padding options 4`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -617,18 +777,14 @@ exports[`Cover correct usage renders all the padding options 5`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -657,18 +813,14 @@ exports[`Cover correct usage renders all the padding options 6`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -697,18 +849,14 @@ exports[`Cover correct usage renders all the padding options 7`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -737,18 +885,14 @@ exports[`Cover correct usage renders all the padding options 8`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -777,18 +921,14 @@ exports[`Cover correct usage renders all the padding options 9`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -817,18 +957,14 @@ exports[`Cover correct usage renders all the padding options 10`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -857,18 +993,14 @@ exports[`Cover correct usage renders all the padding options 11`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -882,6 +1014,7 @@ exports[`Cover correct usage renders all the padding options 11`] = `
 
 exports[`Cover correct usage renders custom height 1`] = `
 .c0 {
+  --minHeight: 500px;
   --gutter: 1rem;
   --rows: 1fr;
   display: grid;
@@ -898,19 +1031,13 @@ exports[`Cover correct usage renders custom height 1`] = `
 
 @supports (min-block-size:500px) {
   .c0 {
-    min-block-size: 500px;
+    min-block-size: var(--minHeight);
   }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -939,18 +1066,14 @@ exports[`Cover correct usage renders default 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -965,7 +1088,7 @@ exports[`Cover correct usage renders default 1`] = `
 exports[`Cover correct usage renders with bottom 1`] = `
 .c0 {
   --gutter: 1rem;
-  --rows: 1fr;
+  --rows: 1fr auto;
   display: grid;
   gap: var(--gutter);
   min-block-size: 100vh;
@@ -979,18 +1102,14 @@ exports[`Cover correct usage renders with bottom 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr auto",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1011,7 +1130,7 @@ exports[`Cover correct usage renders with bottom 1`] = `
 
 exports[`Cover correct usage renders with theme overrides 1`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 200px;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -1026,18 +1145,14 @@ exports[`Cover correct usage renders with theme overrides 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1052,7 +1167,7 @@ exports[`Cover correct usage renders with theme overrides 1`] = `
 exports[`Cover correct usage renders with top 1`] = `
 .c0 {
   --gutter: 1rem;
-  --rows: 1fr;
+  --rows: auto 1fr;
   display: grid;
   gap: var(--gutter);
   min-block-size: 100vh;
@@ -1066,18 +1181,14 @@ exports[`Cover correct usage renders with top 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "auto 1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-top=""
@@ -1099,7 +1210,7 @@ exports[`Cover correct usage renders with top 1`] = `
 exports[`Cover correct usage renders with top and bottom 1`] = `
 .c0 {
   --gutter: 1rem;
-  --rows: 1fr;
+  --rows: auto 1fr auto;
   display: grid;
   gap: var(--gutter);
   min-block-size: 100vh;
@@ -1113,18 +1224,14 @@ exports[`Cover correct usage renders with top and bottom 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "auto 1fr auto",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-top=""
@@ -1167,18 +1274,14 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1207,18 +1310,14 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 2`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1247,18 +1346,14 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 3`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1287,18 +1382,14 @@ exports[`Cover correct usage use 1, 2, 3, 4 items arrays 4`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1327,18 +1418,14 @@ exports[`Cover correct usage use padding object 1`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1367,18 +1454,14 @@ exports[`Cover correct usage use padding object 2`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1407,18 +1490,14 @@ exports[`Cover correct usage use padding object 3`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1447,18 +1526,14 @@ exports[`Cover correct usage use padding object 4`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1487,18 +1562,14 @@ exports[`Cover correct usage use padding object 5`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1527,18 +1598,14 @@ exports[`Cover correct usage use padding object 6`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1567,18 +1634,14 @@ exports[`Cover correct usage use padding object 7`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1607,18 +1670,14 @@ exports[`Cover correct usage use padding object 8`] = `
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1630,9 +1689,9 @@ exports[`Cover correct usage use padding object 8`] = `
 </div>
 `;
 
-exports[`Cover incorrect usage renders default with console error with wrong gutter 1`] = `
+exports[`Cover incorrect usage renders default with console error with no gutter 1`] = `
 .c0 {
-  --gutter: 1rem;
+  --gutter: 0px;
   --rows: 1fr;
   display: grid;
   gap: var(--gutter);
@@ -1647,18 +1706,50 @@ exports[`Cover incorrect usage renders default with console error with wrong gut
 }
 
 @supports (min-block-size:) {
-
+  .c0 {
+    min-block-size: var(--minHeight);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
+>
+  <div
+    data-bedrock-layout-cover-child=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover incorrect usage renders default with wrong gutter 1`] = `
+.c0 {
+  --gutter: 0px;
+  --rows: 1fr;
+  display: grid;
+  gap: var(--gutter);
+  min-block-size: 100vh;
+  grid-template-rows: var(--rows);
+}
+
+.c0 > [data-bedrock-layout-cover-child] {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@supports (min-block-size:) {
+  .c0 {
+    min-block-size: var(--minHeight);
   }
+}
+
+<div
+  className="c0"
+  data-bedrock-layout-cover=""
 >
   <div
     data-bedrock-layout-cover-child=""
@@ -1672,6 +1763,7 @@ exports[`Cover incorrect usage renders default with console error with wrong gut
 
 exports[`Cover incorrect usage renders with min-height incorrect with invalid minHeight 1`] = `
 .c0 {
+  --minHeight: incorrect;
   --gutter: 1rem;
   --rows: 1fr;
   display: grid;
@@ -1688,19 +1780,13 @@ exports[`Cover incorrect usage renders with min-height incorrect with invalid mi
 
 @supports (min-block-size:incorrect) {
   .c0 {
-    min-block-size: incorrect;
+    min-block-size: var(--minHeight);
   }
 }
 
 <div
   className="c0"
   data-bedrock-layout-cover=""
-  style={
-    Object {
-      "--gutter": "1rem",
-      "--rows": "1fr",
-    }
-  }
 >
   <div
     data-bedrock-layout-cover-child=""

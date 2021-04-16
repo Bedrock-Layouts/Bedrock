@@ -8,23 +8,11 @@ export interface CenterProps {
   centerChildren?: boolean;
 }
 
-//Logic forked from is-in-browser npm package
-const isBrowser =
-  typeof window === "object" &&
-  typeof document === "object" &&
-  document.nodeType === 9;
-
-const CSS = isBrowser
-  ? window.CSS
-  : {
-      supports: () => false,
-    };
-
 function getSafeMaxWidth(
   breakPoints: Record<string, unknown>,
   maxWidth?: number | string
 ) {
-  if (typeof maxWidth === "string" && CSS.supports(`max-width:${maxWidth}`)) {
+  if (typeof maxWidth === "string") {
     return maxWidth;
   }
 
@@ -33,24 +21,18 @@ function getSafeMaxWidth(
     : mergeBreakpoints(breakPoints).medium + "px";
 }
 
-const Center = styled.div.attrs<CenterProps>(
-  ({ maxWidth, theme: { breakPoints }, style }) => {
-    const safeMaxWidth = getSafeMaxWidth(breakPoints, maxWidth);
-    return {
-      "data-bedrock-layout-center": "",
-      style: {
-        ...style,
-        "--maxWidth": safeMaxWidth,
-      },
-    };
-  }
-)<CenterProps>`
+const Center = styled.div.attrs<CenterProps>(() => {
+  return {
+    "data-bedrock-layout-center": "",
+  };
+})<CenterProps>`
   @property --maxWidth {
     syntax: "<length>";
     inherits: false;
     initial-value: 1023px;
   }
-  --maxWidth: 1023px;
+  --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
+    getSafeMaxWidth(breakPoints, maxWidth)};
 
   box-sizing: content-box;
 
@@ -59,7 +41,14 @@ const Center = styled.div.attrs<CenterProps>(
   margin-inline: auto;
 
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth, 1023px);
+
+  @supports (
+    max-inline-size:
+      ${({ maxWidth, theme: { breakPoints } }) =>
+        getSafeMaxWidth(breakPoints, maxWidth)}
+  ) {
+    max-inline-size: var(--maxWidth, 1023px);
+  }
 
   ${(props) => (props.centerText ? "text-align: center;" : "")}
 

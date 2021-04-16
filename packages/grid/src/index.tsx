@@ -11,26 +11,11 @@ export interface GridProps {
   minItemWidth?: number | string;
 }
 
-//Logic forked from is-in-browser npm package
-const isBrowser =
-  typeof window === "object" &&
-  typeof document === "object" &&
-  document.nodeType === 9;
-
-const CSS = isBrowser
-  ? window.CSS
-  : {
-      supports: () => false,
-    };
-
 function getSafeMinItemWidth(
   breakPoints: Record<string, unknown>,
   minItemWidth?: number | string
 ) {
-  if (
-    typeof minItemWidth === "string" &&
-    CSS.supports(`width:${minItemWidth}`)
-  ) {
+  if (typeof minItemWidth === "string") {
     return minItemWidth;
   }
 
@@ -39,37 +24,37 @@ function getSafeMinItemWidth(
     : mergeBreakpoints(breakPoints).smallOnly + "px";
 }
 
-export const Grid = styled.div.attrs<GridProps>(
-  ({ minItemWidth, gutter = "lg", theme, style }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-
-    const safeMinItemWidth = getSafeMinItemWidth(
-      theme.breakPoints ?? {},
-      minItemWidth
-    );
-
-    return {
-      "data-bedrock-layout-grid": "",
-      style: {
-        ...style,
-        "--gutter": maybeGutter ?? "0px",
-        "--minItemWidth": safeMinItemWidth,
-      },
-    };
-  }
-)<GridProps>`
+export const Grid = styled.div.attrs<GridProps>(() => {
+  return {
+    "data-bedrock-layout-grid": "",
+  };
+})<GridProps>`
   box-sizing: border-box;
+  @property --minItemWidth {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 639px;
+  }
 
-  --gutter: 1rem;
-  --minItemWidth: 639px;
+  --gutter: ${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
+  --minItemWidth: ${({ minItemWidth, theme }) =>
+    getSafeMinItemWidth(theme.breakPoints ?? {}, minItemWidth)};
 
   display: grid;
   gap: var(--gutter);
 
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--minItemWidth), 100%), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(min(639, 100%), 1fr));
+
+  @supports (
+    width:
+      ${({ minItemWidth, theme }) =>
+        getSafeMinItemWidth(theme.breakPoints ?? {}, minItemWidth)}
+  ) {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--minItemWidth), 100%), 1fr)
+    );
+  }
 `;
 
 Grid.displayName = "Grid";

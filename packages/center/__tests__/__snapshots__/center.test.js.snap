@@ -2,23 +2,23 @@
 
 exports[`Center correct usage renders custom width 1`] = `
 .c0 {
-  --maxWidth: 1023px;
+  --maxWidth: 320px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 320px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "320px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -37,23 +37,23 @@ exports[`Center correct usage renders custom width 1`] = `
 
 exports[`Center correct usage renders custom width as string 1`] = `
 .c0 {
-  --maxWidth: 1023px;
+  --maxWidth: 320px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 320px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "320px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -78,17 +78,17 @@ exports[`Center correct usage renders default width 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 1023px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "1023px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -107,23 +107,23 @@ exports[`Center correct usage renders default width 1`] = `
 
 exports[`Center correct usage renders default width if invalid CSS length 1`] = `
 .c0 {
-  --maxWidth: 1023px;
+  --maxWidth: 320pixels;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 320pixels ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "320pixels",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -148,7 +148,6 @@ exports[`Center correct usage renders with centered children 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,14 +161,15 @@ exports[`Center correct usage renders with centered children 1`] = `
   align-items: center;
 }
 
+@supports (max-inline-size: 1023px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
+}
+
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "1023px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -194,18 +194,18 @@ exports[`Center correct usage renders with centered text 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
   text-align: center;
+}
+
+@supports (max-inline-size: 1023px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "1023px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -224,23 +224,23 @@ exports[`Center correct usage renders with centered text 1`] = `
 
 exports[`Center correct usage renders with theme overrides 1`] = `
 .c0 {
-  --maxWidth: 1023px;
+  --maxWidth: 1600px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 1600px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "1600px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -265,17 +265,17 @@ exports[`Center incorrect usage renders default with console error with no child
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-  max-inline-size: var(--maxWidth,1023px);
+}
+
+@supports (max-inline-size: 1023px ) {
+  .c0 {
+    max-inline-size: var(--maxWidth,1023px);
+  }
 }
 
 <div
   className="c0"
   data-bedrock-layout-center=""
-  style={
-    Object {
-      "--maxWidth": "1023px",
-    }
-  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
