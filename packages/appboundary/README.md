@@ -15,7 +15,7 @@ Used to control the width of the app on xlarge screens
 ## Usage
 
 ```javascript
-import AppBoundary from '@bedrock-layout/appboundary';
+import { AppBoundary } from '@bedrock-layout/appboundary';
 
 <AppBoundary>
   <div>1</div>

@@ -2,7 +2,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import AppBoundary from "../src";
+import { AppBoundary } from "../src";
 
 const Lorem = () => {
   return (
