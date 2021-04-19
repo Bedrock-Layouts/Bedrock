@@ -6,36 +6,29 @@ export interface FrameProps {
   position?: string;
 }
 
-const Frame = styled.div.attrs<FrameProps>((props) => {
-  const d =
-    props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
-      ? props.ratio[0]
-      : 1;
-
-  const n =
-    props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
-      ? props.ratio[1]
-      : 1;
+export const Frame = styled.div.attrs<FrameProps>(() => {
   return {
     "data-bedrock-layout-frame": "",
-    style: {
-      ...props.style,
-      "--d": d,
-      "--n": n,
-    },
   };
 })<FrameProps>`
-  --d: 1;
-  --n: 1;
+  --n: ${(props) =>
+    props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
+      ? props.ratio[0]
+      : 1};
+
+  --d: ${(props) =>
+    props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
+      ? props.ratio[1]
+      : 1};
 
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
-  aspect-ratio: var(--d) / var(--n);
+  aspect-ratio: var(--n) / var(--d);
 
   @supports not (aspect-ratio: 1/1) {
-    padding-block-end: calc(var(--n) / var(--d) * 100%);
+    padding-block-end: calc(var(--d) / var(--n) * 100%);
   }
 
   > * {
@@ -89,5 +82,3 @@ Frame.propTypes = {
   ratio: (twoNumbers as unknown) as React.Validator<[number, number]>,
   position: PropTypes.string,
 };
-
-export default Frame;
