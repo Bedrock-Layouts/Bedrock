@@ -8,7 +8,7 @@ export interface ReelProps {
   proximity?: boolean;
 }
 
-const Reel = styled.div.attrs<ReelProps>(() => ({
+export const Reel = styled.div.attrs<ReelProps>(() => ({
   "data-bedrock-layout-reel": "",
 }))<ReelProps>`
   overflow: scroll;
@@ -38,5 +38,3 @@ Reel.propTypes = {
   snapX: PropTypes.bool,
   proximity: PropTypes.bool,
 };
-
-export default Reel;

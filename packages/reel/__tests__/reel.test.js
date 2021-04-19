@@ -1,7 +1,7 @@
 import React from "react";
 import { create } from "react-test-renderer";
 
-import Reel from "../src";
+import { Reel } from "../src";
 
 const Lorem = () => (
   <>
