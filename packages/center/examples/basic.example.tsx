@@ -1,4 +1,4 @@
-import Center from "@bedrock-layout/center";
+import { Center } from "@bedrock-layout/center";
 import React from "react";
 import styled from "styled-components";
 

@@ -1,4 +1,4 @@
-import Center from "@bedrock-layout/center";
+import { Center } from "@bedrock-layout/center";
 import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import styled, { ThemeContext } from "styled-components";

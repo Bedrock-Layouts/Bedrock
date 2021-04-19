@@ -15,7 +15,7 @@ Used to center content on the screen
 ## Usage
 
 ```javascript
-import Center from '@bedrock-layout/center';
+import { Center } from '@bedrock-layout/center';
 
 <Center>
   <div>1</div>
