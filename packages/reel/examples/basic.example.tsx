@@ -1,4 +1,4 @@
-import Reel from "@bedrock-layout/reel";
+import { Reel } from "@bedrock-layout/reel";
 import React from "react";
 import styled from "styled-components";
 

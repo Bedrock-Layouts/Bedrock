@@ -15,7 +15,7 @@ Used to frame content on the screen
 ## Usage
 
 ```javascript
-import Frame from '@bedrock-layout/frame';
+import { Frame } from '@bedrock-layout/frame';
 
 <Frame>
   <img src='...' />

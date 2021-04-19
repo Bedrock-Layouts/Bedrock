@@ -21,7 +21,7 @@ function getSafeMaxWidth(
     : mergeBreakpoints(breakPoints).medium + "px";
 }
 
-const Center = styled.div.attrs<CenterProps>(() => {
+export const Center = styled.div.attrs<CenterProps>(() => {
   return {
     "data-bedrock-layout-center": "",
   };
@@ -68,5 +68,3 @@ Center.propTypes = {
   maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   centerText: PropTypes.bool,
 };
-
-export default Center;

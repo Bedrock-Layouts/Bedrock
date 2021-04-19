@@ -17,7 +17,7 @@ Used to provide convenient scrolling for lists of media (i.e carousel).
 ## Usage
 
 ```javascript
-import Reel from '@bedrock-layout/reel';
+import { Reel } from '@bedrock-layout/reel';
 
 <Reel maxHeight={300}>
   <div>1</div>

@@ -1,4 +1,4 @@
-import AppBoundary from "@bedrock-layout/appboundary";
+import { AppBoundary } from "@bedrock-layout/appboundary";
 import React from "react";
 import styled from "styled-components";
 

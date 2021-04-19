@@ -1,4 +1,4 @@
-import Frame from "@bedrock-layout/frame";
+import { Frame, FrameProps } from "@bedrock-layout/frame";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,10 +11,7 @@ Center.displayName = "Center";
 const title = "Frame";
 const name = "Basic";
 
-function Example({ ratio = [], ...args }: Record<string, unknown>) {
-  ratio = (ratio as unknown[]).map((x) =>
-    typeof x === "string" ? parseInt(x) : x
-  );
+function Example({ ratio, ...args }: FrameProps): React.ReactNode {
   return (
     <Center>
       <Frame ratio={ratio as [number, number]} {...args}>
