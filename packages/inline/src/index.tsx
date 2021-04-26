@@ -31,8 +31,10 @@ const inlineStyles = css<InlineProps>`
 const responsive = css<InlineProps>`
   --switchAt: ${({ switchAt }) =>
     typeof switchAt === "string" ? switchAt : `${switchAt}px`};
+
   flex-wrap: wrap;
   & > * {
+    min-inline-size: fit-content;
     flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
   }
 `;
