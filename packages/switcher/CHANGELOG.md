@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.0.3...@bedrock-layout/switcher@2.0.4) (2021-05-09)
+
+
+### Performance Improvements
+
+* **use-container-query:** use a resize observer singleton to improve performance ([fd8d825](https://github.com/Bedrock-Layouts/Bedrock/commit/fd8d825edc8d082aaa91f5e1e8826f6fd369bb04)), closes [#511](https://github.com/Bedrock-Layouts/Bedrock/issues/511)
+
+
+
+
+
 ## [2.0.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.0.2...@bedrock-layout/switcher@2.0.3) (2021-04-16)
 
 **Note:** Version bump only for package @bedrock-layout/switcher
