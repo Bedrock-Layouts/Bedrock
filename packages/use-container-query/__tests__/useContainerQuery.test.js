@@ -6,12 +6,32 @@ import useContainerQuery from "../src";
 
 jest.spyOn(console, "error").mockImplementation(() => void 0);
 
+let createNode = jest.fn((node) => ({
+  target: node,
+  contentRect: { width: 300 },
+}));
+
+let onChange;
+let reset = () => void 0;
 ResizeObserver.mockImplementation(
-  jest.fn((impl) => ({
-    observe: jest.fn(() => impl([{ contentRect: { width: 300 } }])),
-    disconnect: jest.fn(),
-    unobserve: jest.fn(),
-  }))
+  jest.fn((impl) => {
+    const map = new Map();
+
+    onChange = () => {
+      impl([...map.values()]);
+    };
+
+    reset = () => map.clear();
+
+    return {
+      observe: jest.fn((node) => {
+        map.set(node, createNode(node));
+        onChange();
+      }),
+      disconnect: jest.fn(map.clear),
+      unobserve: jest.fn((node) => map.delete(node)),
+    };
+  })
 );
 
 let matches;
@@ -27,106 +47,91 @@ describe("useContainerQuery", () => {
   let container;
 
   beforeEach(() => {
+    reset();
+    matches = undefined;
+    container = null;
     container = document.createElement("div");
     document.body.appendChild(container);
   });
 
   afterEach(() => {
-    matches = undefined;
     document.body.removeChild(container);
-    container = null;
   });
 
   test("useContainerQuery is not null", () => {
     expect(useContainerQuery).toBeTruthy();
   });
 
-  test("ResizeObserver is called", () => {
-    act(() => {
+  test("ResizeObserver is called", async () => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={320} />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(true);
   });
 
-  it("should match when inbetween minWidth and maxWidth", () => {
-    act(() => {
+  it("should match when inbetween minWidth and maxWidth", async () => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={100} maxWidth={400} />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(true);
   });
 
-  it("should not match when below minWidth and maxWidth", () => {
-    act(() => {
+  it("should not match when below minWidth and maxWidth", async () => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={100} maxWidth={200} />, container);
     });
+    expect(matches).toBe(false);
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(false);
   });
 
-  it("should not match when above minWidth and maxWidth", () => {
-    act(() => {
+  it("should not match when above minWidth and maxWidth", async () => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={330} maxWidth={400} />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(false);
   });
 
-  it("should prefer borderBox over contentRect", () => {
-    ResizeObserver.mockImplementation(
-      jest.fn((impl) => ({
-        observe: jest.fn(() =>
-          impl([{ contentRect: { width: 2 }, borderBox: { inlineSize: 1 } }])
-        ),
-        disconnect: jest.fn(),
-        unobserve: jest.fn(),
-      }))
-    );
+  it("should prefer borderBox over contentRect", async () => {
+    createNode.mockImplementation((node) => ({
+      target: node,
+      contentRect: { width: 2 },
+      borderBox: { inlineSize: 1 },
+    }));
 
-    act(() => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={2} />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(true);
   });
 
-  test("Will match on 1px if no minWidth provided", () => {
-    ResizeObserver.mockImplementation(
-      jest.fn((impl) => ({
-        observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
-        disconnect: jest.fn(),
-        unobserve: jest.fn(),
-      }))
-    );
+  test("Will match on 1px if no minWidth provided", async () => {
+    createNode.mockImplementation((node) => ({
+      target: node,
+      contentRect: { width: 1 },
+    }));
 
-    act(() => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(true);
   });
 
-  test("Will return false if no node provided", () => {
-    ResizeObserver.mockImplementation(
-      jest.fn((impl) => ({
-        observe: jest.fn(() => impl([{ contentRect: { width: 1 } }])),
-        disconnect: jest.fn(),
-        unobserve: jest.fn(),
-      }))
-    );
+  test("Will return false if no node provided", async () => {
+    createNode.mockImplementation((node) => ({
+      target: node,
+      contentRect: { width: 1 },
+    }));
 
-    act(() => {
+    await act(async () => {
       ReactDOM.render(<HookWrapper withNode={false} />, container);
     });
 
-    expect(ResizeObserver).toBeCalled();
     expect(matches).toBe(false);
   });
 

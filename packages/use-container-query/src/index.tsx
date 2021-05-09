@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 
 type UseContainterQuery = (
-  node: Element,
+  node: Element | undefined,
   width: number,
   maxWidth?: number
 ) => boolean;
+
+let observer: ResizeObserver;
+
+const callBackMap = new WeakMap<Element, (r: ResizeObserverEntry) => void>();
 
 const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
   if (maxWidth !== undefined && maxWidth <= width) {
@@ -15,30 +19,39 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
 
   const [matches, setMatch] = useState(false);
 
-  useEffect(() => {
-    let observer: ResizeObserver | undefined;
-    if (node && window.ResizeObserver) {
-      observer = new ResizeObserver(([entry]) => {
-        //fix typings
-        const nodeWidth =
-          ((entry.borderBoxSize as unknown) as ResizeObserverSize)
-            ?.inlineSize ?? entry.contentRect.width;
+  if (node) {
+    callBackMap.set(node, (entry) => {
+      //fix typings
+      const nodeWidth =
+        ((entry.borderBoxSize as unknown) as ResizeObserverSize)?.inlineSize ??
+        entry.contentRect.width;
 
-        if (typeof maxWidth !== "undefined") {
-          setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
-        } else {
-          setMatch(nodeWidth <= width);
-        }
+      if (typeof maxWidth !== "undefined") {
+        setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
+      } else {
+        setMatch(nodeWidth <= width);
+      }
+    });
+  }
+
+  useEffect(() => {
+    if (!observer) {
+      observer = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+          const maybeCallback = callBackMap.get(entry.target);
+          if (maybeCallback) {
+            maybeCallback(entry);
+          }
+        });
       });
-      observer.observe(node);
-    } else {
-      setMatch(false);
     }
 
+    if (node) observer.observe(node);
+
     return () => {
-      observer?.disconnect();
+      if (node) observer.unobserve(node);
     };
-  }, [setMatch, node, width, maxWidth]);
+  }, [node]);
 
   return matches;
 };

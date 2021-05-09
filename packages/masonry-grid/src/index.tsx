@@ -25,6 +25,10 @@ const RowSpanner = styled.div`
 
 const safeTheme = {};
 
+let observer: ResizeObserver;
+
+const callBackMap = new WeakMap<Element, (r: ResizeObserverEntry) => void>();
+
 const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
   children,
   gutter,
@@ -32,7 +36,6 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
   const [rowSpan, setRowSpan] = useState(1);
 
   const childRef = useStatefulRef<HTMLDivElement>(null);
-  const observerRef = useStatefulRef<ResizeObserver>(null);
 
   const theme = React.useContext(ThemeContext) || safeTheme;
 
@@ -56,26 +59,38 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
     if (childRef.current) setRowSpan(getRowHeight(childRef.current));
   }, [childRef, getRowHeight]);
 
-  React.useEffect(() => {
-    observerRef.current = new ResizeObserver(([{ target }]) => {
+  if (childRef.current) {
+    callBackMap.set(childRef.current, ({ target }) => {
       setRowSpan(1);
       const rowHeight = getRowHeight(target);
       setRowSpan(rowHeight);
     });
+  }
+
+  React.useEffect(() => {
+    if (!observer) {
+      observer = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+          const maybeCallback = callBackMap.get(entry.target);
+          if (maybeCallback) {
+            maybeCallback(entry);
+          }
+        });
+      });
+    }
 
     const { current: node } = childRef;
-    const { current: observer } = observerRef;
 
     if (node) {
       observer.observe(node);
     }
 
     return () => {
-      if (observer) {
+      if (node) {
         observer.unobserve(node);
       }
     };
-  }, [childRef, getRowHeight, observerRef]);
+  }, [childRef, getRowHeight]);
 
   return (
     <RowSpanner
