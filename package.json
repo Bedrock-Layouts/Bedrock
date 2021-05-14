@@ -32,7 +32,8 @@
     "publish:ci": "npm run publish -- --no-commit-hooks --ignore-scripts",
     "publish:fix": "lerna publish from-package",
     "verify": "npm-run-all check-types lint check-format test:coverage",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "chromatic": "npx chromatic build:storybook --project-token d4754f5354d2"
   },
   "dependencies": {
     "@bedrock-layout/appboundary": "file:./packages/appboundary",
@@ -80,6 +81,7 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@storybook/theming": "^6.2.9",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
@@ -89,6 +91,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.8.0",
     "commitizen": "^4.2.3",
     "cssom": "^0.4.4",
     "cz-conventional-changelog": "^3.2.0",

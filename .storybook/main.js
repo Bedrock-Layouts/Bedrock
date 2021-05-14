@@ -2,12 +2,15 @@ const { TsConfigPathsPlugin } = require("awesome-typescript-loader");
 const webpack = require("webpack");
 
 module.exports = {
-  // stories: ["../packages/**/examples/*.example.(js|ts|tsx)"],
+  stories: [
+    "./pages/Landing.stories.mdx",
+    "./pages/inspiration.stories.mdx",
+    "./pages/regardingIE11.stories.mdx",
+  ],
   addons: [
     "@storybook/addon-essentials",
-    //   "@storybook/addon-a11y/register",
-    //   "@storybook/addon-docs/register",
-    //   "@storybook/addon-links/register",
+    "@storybook/addon-a11y",
+    "@storybook/addon-links",
   ],
   webpackFinal: async (config) => {
     config.module.rules = [

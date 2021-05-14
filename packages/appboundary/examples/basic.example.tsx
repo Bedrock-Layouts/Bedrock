@@ -43,6 +43,9 @@ function Example(): React.ReactNode {
 
 Example.story = { name };
 export const Comp = Example;
-export default {
+const storyConfig = {
   title,
+  component: AppBoundary,
 };
+
+export default storyConfig;
