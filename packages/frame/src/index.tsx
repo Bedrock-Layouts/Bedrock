@@ -1,10 +1,17 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export interface FrameProps {
-  ratio: [number, number];
+  ratio?: [number, number];
   position?: string;
 }
+
+const ratioStyles = css`
+  aspect-ratio: var(--n) / var(--d);
+  @supports not (aspect-ratio: 1/1) {
+    padding-block-end: calc(var(--d) / var(--n) * 100%);
+  }
+`;
 
 export const Frame = styled.div.attrs<FrameProps>(() => {
   return {
@@ -25,11 +32,8 @@ export const Frame = styled.div.attrs<FrameProps>(() => {
   display: block;
   inline-size: 100%;
   position: relative;
-  aspect-ratio: var(--n) / var(--d);
 
-  @supports not (aspect-ratio: 1/1) {
-    padding-block-end: calc(var(--d) / var(--n) * 100%);
-  }
+  ${(props) => props.ratio && ratioStyles}
 
   > * {
     overflow: hidden;
