@@ -404,7 +404,6 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   display: block;
   inline-size: 100%;
   position: relative;
-  aspect-ratio: var(--n) / var(--d);
 }
 
 .c0 > * {
@@ -443,12 +442,6 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if no ratio provi
   size: 100%;
   object-fit: cover;
   object-position: 50%;
-}
-
-@supports not (aspect-ratio:1/1) {
-  .c0 {
-    padding-block-end: calc(var(--d) / var(--n) * 100%);
-  }
 }
 
 <div

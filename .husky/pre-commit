@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint-staged && npm run verify
+# npx lint-staged
+npm run verify
