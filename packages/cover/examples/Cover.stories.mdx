@@ -1,0 +1,128 @@
+import { Cover } from '@bedrock-layout/cover';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Cover" component={Cover} />
+
+# Cover
+
+## Use case
+
+The Cover is designed to cover a predefinded area, 100vh by default, and vertically center it's child. You can also conditionally render a top and bottom section as well.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the Cover component
+
+```bash
+  npm install @bedrock-layout/cover
+```
+
+## API
+
+<ArgsTable of={Cover} />
+
+## Basic Usage
+
+<Preview withToolbar>
+  <Story name="Basic">
+    <Cover minHeight="50vh" gutter="sm">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Preview>
+
+## With Top
+
+<Preview withToolbar>
+  <Story name="With top">
+    <Cover minHeight="50vh" gutter="sm" top={<span>I am on top.</span>}>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Preview>
+
+## With bottom
+
+<Preview withToolbar>
+  <Story name="With bottom">
+    <Cover minHeight="50vh" gutter="sm" bottom={<span>I am on bottom.</span>}>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Preview>
+
+## With top and bottom
+
+<Preview withToolbar>
+  <Story name="With top and bottom">
+    <Cover
+      minHeight="50vh"
+      gutter="sm"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling, the outer wrapper as the `data-bedrock-layout-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an elements with a data attributes of `data-bedrock-layout-cover-top`, `data-bedrock-layout-cover-child`, and `data-bedrock-layout-cover-bottom` respectively.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = ({top, bottom,...args}) =>  (
+    <Cover {...args} top={<span>{top}</span>} bottom={<span>{bottom}</span>}>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+);
+
+<Canvas withToolbar>
+  <Story
+    name="Controls"
+    args={{
+      minHeight: "50vh",
+      gutter: "lg",
+      top: "I'm on top.",
+      bottom: "I'm on bottom.",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls" />
