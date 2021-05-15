@@ -9,6 +9,7 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "AppBoundary";
 const name = "Basic";
+const component = AppBoundary;
 
 function Example(): React.ReactNode {
   return (
@@ -42,10 +43,16 @@ function Example(): React.ReactNode {
 }
 
 Example.story = { name };
-export const Comp = Example;
-const storyConfig = {
-  title,
-  component: AppBoundary,
+Example.parameters = {
+  viewMode: "docs",
 };
 
-export default storyConfig;
+Example.storyName = name;
+
+export const Comp = Example;
+
+const story = {
+  title: [title, name].join("/"),
+  component,
+};
+export default story;

@@ -8,11 +8,12 @@ const BorderedBox = styled.div`
 BorderedBox.displayName = "BorderedBox";
 
 const title = "Cover";
-const name = "Basic";
+const name = "With bottom";
+const component = Cover;
 
 function Example(args: CoverProps): React.ReactNode {
   return (
-    <Cover {...args}>
+    <Cover {...args} bottom={<div>I am on Bottom</div>}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -25,10 +26,16 @@ function Example(args: CoverProps): React.ReactNode {
 
 Example.story = { name };
 Example.args = {
-  minHeight: "100vh",
+  minHeight: "50vh",
   gutter: "lg",
 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: [title, name].join("/"),
+  component,
 };
+export default story;

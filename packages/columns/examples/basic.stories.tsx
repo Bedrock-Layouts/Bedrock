@@ -1,19 +1,20 @@
-import { Center } from "@bedrock-layout/center";
+import { Columns } from "@bedrock-layout/columns";
+//import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import styled from "styled-components";
 
 const BorderedBox = styled.div`
   border: 1px solid black;
-  width: 75%;
 `;
 BorderedBox.displayName = "BorderedBox";
 
-const title = "Center";
+const title = "Columns";
 const name = "Basic";
+const component = Columns;
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
-    <Center as={BorderedBox} {...args}>
+    <Columns {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -38,21 +39,21 @@ function Example(args: Record<string, unknown>): React.ReactNode {
         architecto doloribus aperiam sapiente, incidunt nihil suscipit
         voluptatibus tempore est dolor! Iusto, vero.
       </BorderedBox>
-    </Center>
+    </Columns>
   );
 }
 
+//const options = Object.keys(spacing);
+
 Example.story = { name };
-Example.args = {
-  maxWidth: "640px",
-  centerText: false,
-  centerChildren: false,
-};
+Example.args = { gutter: "xl", columns: 3 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
-  component: Center,
-  argTypes: {
-    maxWidth: "640px",
-  },
+
+const story = {
+  title: [title, name].join("/"),
+  component,
 };
+export default story;

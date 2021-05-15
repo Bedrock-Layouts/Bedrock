@@ -6,6 +6,7 @@ module.exports = {
     "./pages/Landing.stories.mdx",
     "./pages/inspiration.stories.mdx",
     "./pages/regardingIE11.stories.mdx",
+    "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
   ],
   addons: [
     "@storybook/addon-essentials",

@@ -9,6 +9,7 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "Columns";
 const name = "With Column Component";
+const component = Columns;
 
 function Example(args: ColumnsProps): React.ReactNode {
   return (
@@ -49,13 +50,18 @@ function Example(args: ColumnsProps): React.ReactNode {
   );
 }
 
-Example.story = { name };
 Example.args = {
   columns: 3,
   gutter: "lg",
   dense: false,
 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: [title, name].join("/"),
+  component,
 };
+export default story;
