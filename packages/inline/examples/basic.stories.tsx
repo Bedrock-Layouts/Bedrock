@@ -9,6 +9,7 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "Inline";
 const name = "Basic";
+const component = Inline;
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
@@ -30,7 +31,12 @@ Example.args = {
   switchAt: "40rem",
 };
 
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

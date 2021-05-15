@@ -10,6 +10,7 @@ Center.displayName = "Center";
 
 const title = "Frame";
 const name = "Basic";
+const component = Frame;
 
 function Example({ ratio, ...args }: FrameProps): React.ReactNode {
   return (
@@ -23,10 +24,13 @@ function Example({ ratio, ...args }: FrameProps): React.ReactNode {
 
 Example.story = { name };
 Example.args = { ratio: [16, 9], position: "50% 50%" };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
-  argTypes: {
-    ratio: { control: "array" },
-  },
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

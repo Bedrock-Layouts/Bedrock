@@ -10,6 +10,7 @@ Center.displayName = "Center";
 
 const title = "Frame";
 const name = "No ratio";
+const component = Frame;
 
 function Example(style: Record<string, string>): React.ReactNode {
   return (
@@ -23,7 +24,13 @@ function Example(style: Record<string, string>): React.ReactNode {
 
 Example.story = { name };
 Example.args = { height: "50vh", width: "50%" };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

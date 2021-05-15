@@ -35,7 +35,7 @@ Example.storyName = name;
 export const Comp = Example;
 
 const story = {
-  title: [title, name].join("/"),
+  title: ["Components", title, name].join("/"),
   component,
 };
 export default story;

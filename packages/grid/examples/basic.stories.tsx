@@ -8,11 +8,12 @@ const BorderedBox = styled.div`
 BorderedBox.displayName = "BorderedBox";
 
 const title = "Grid";
-const name = "minItemWidth";
+const name = "Basic";
+const component = Grid;
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
-    <Grid gutter="lg" {...args}>
+    <Grid {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -42,8 +43,14 @@ function Example(args: Record<string, unknown>): React.ReactNode {
 }
 
 Example.story = { name };
-Example.args = { minItemWidth: "640px" };
+Example.args = { gutter: "lg", minItemWidth: "15rem" };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;
