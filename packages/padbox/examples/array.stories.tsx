@@ -8,7 +8,8 @@ const BorderedBox = styled.div`
 BorderedBox.displayName = "BorderedBox";
 
 const title = "PadBox";
-const name = "Padding Object";
+const name = "Padding Array";
+const component = PadBox;
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
@@ -23,9 +24,15 @@ function Example(args: Record<string, unknown>): React.ReactNode {
 
 Example.story = { name };
 Example.args = {
-  padding: { left: "md", blockStart: "lg" },
+  padding: ["md", "lg"],
 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

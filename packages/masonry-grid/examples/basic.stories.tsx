@@ -9,6 +9,7 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "MasonryGrid";
 const name = "Basic";
+const component = MasonryGrid;
 
 function Example(args: Record<string, unknown>): React.ReactNode {
   return (
@@ -90,8 +91,14 @@ function Example(args: Record<string, unknown>): React.ReactNode {
 }
 
 Example.story = { name };
-Example.args = { gutter: "lg", minItemWidth: "30rem" };
+Example.args = { gutter: "lg", minItemWidth: "15rem" };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;
