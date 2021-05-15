@@ -1,0 +1,70 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { AppBoundary } from '@bedrock-layout/appboundary';
+
+<Meta title="Components/AppBoundary" />
+
+# AppBoundary
+
+When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger and allowing a page to grow to the same width as a 4K monitor is irresponsible. A website typically should clamp at an outer limit and stay centered on the screen.
+
+## Use case
+
+The AppBoundary is designed to wrap your entire app. It will clamp the width at the `xxlarge` breakpoint.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the AppBoundary component
+
+```bash
+  npm install @bedrock-layout/appboundary
+```
+
+## Basic usage
+
+```jsx
+
+<AppBoundary>
+    <div>
+      Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+      porttitor magna id metus lacinia, quis posuere est ultrices. Cras et
+      massa eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a
+      molestie vitae, mattis et lectus. Aenean hendrerit bibendum turpis. Ut
+      auctor in nulla non dapibus. Pellentesque velit arcu, molestie sed
+      consectetur euismod, semper nec elit. Pellentesque quis ullamcorper
+      felis. Donec quis ex euismod, malesuada ex et, hendrerit lectus. Integer
+      accumsan sollicitudin accumsan. Aliquam nec ante viverra, congue ipsum
+      tincidunt, auctor eros. Morbi tempor eget dolor et hendrerit. Donec eget
+      placerat lorem. Phasellus a accumsan odio.
+    </div>
+</AppBoundary>
+
+```
+
+<Canvas>
+  <Story name="Basic">
+    <AppBoundary>
+      <div>
+        Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+        porttitor magna id metus lacinia, quis posuere est ultrices. Cras et
+        massa eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a
+        molestie vitae, mattis et lectus. Aenean hendrerit bibendum turpis. Ut
+        auctor in nulla non dapibus. Pellentesque velit arcu, molestie sed
+        consectetur euismod, semper nec elit. Pellentesque quis ullamcorper
+        felis. Donec quis ex euismod, malesuada ex et, hendrerit lectus. Integer
+        accumsan sollicitudin accumsan. Aliquam nec ante viverra, congue ipsum
+        tincidunt, auctor eros. Morbi tempor eget dolor et hendrerit. Donec eget
+        placerat lorem. Phasellus a accumsan odio.
+      </div>
+    </AppBoundary>
+  </Story>
+</Canvas>
+
+## data-attribute
+
+For purposes of styling, you can select `data-bedrock-layout-appboundary`.
