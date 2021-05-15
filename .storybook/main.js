@@ -6,6 +6,8 @@ module.exports = {
     "./pages/Landing.stories.mdx",
     "./pages/inspiration.stories.mdx",
     "./pages/regardingIE11.stories.mdx",
+    "./pages/layout-primitives.stories.mdx",
+    "./pages/styled-components.stories.mdx",
     "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
   ],
   addons: [
