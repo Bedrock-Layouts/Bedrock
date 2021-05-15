@@ -67,4 +67,5 @@ Center.displayName = "Center";
 Center.propTypes = {
   maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   centerText: PropTypes.bool,
+  centerChildren: PropTypes.bool,
 };
