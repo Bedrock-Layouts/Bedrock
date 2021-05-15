@@ -13,6 +13,7 @@ ColoredRect.displayName = "ColoredRect";
 
 const title = "Reel";
 const name = "Basic";
+const component = Reel;
 
 const colors: string[] = [
   "Lavender",
@@ -57,11 +58,13 @@ Example.args = {
   proximity: false,
   tabIndex: "0",
 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
-  component: Reel,
-  argTypes: {
-    maxHeight: { control: "number" },
-  },
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

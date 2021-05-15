@@ -1,5 +1,4 @@
-import { Column } from "@bedrock-layout/columns";
-import { ColumnSwitcherProps, ColumnsSwitcher } from "@bedrock-layout/switcher";
+import { Stack, StackProps } from "@bedrock-layout/stack";
 import React from "react";
 import styled from "styled-components";
 
@@ -8,19 +7,13 @@ const BorderedBox = styled.div`
 `;
 BorderedBox.displayName = "BorderedBox";
 
-const title = "Switcher";
-const name = "ColumnSwitcher";
+const title = "Stack";
+const name = "Basic";
+const component = Stack;
 
-function Example(args: ColumnSwitcherProps): React.ReactNode {
+function Example(args: StackProps): React.ReactNode {
   return (
-    <ColumnsSwitcher {...args}>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-
+    <Stack {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -33,26 +26,33 @@ function Example(args: ColumnSwitcherProps): React.ReactNode {
         architecto doloribus aperiam sapiente, incidunt nihil suscipit
         voluptatibus tempore est dolor! Iusto, vero.
       </BorderedBox>
-      <Column span={3}>
-        <BorderedBox>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          consequuntur corrupti beatae commodi vitae, perspiciatis totam
-          provident architecto doloribus aperiam sapiente, incidunt nihil
-          suscipit voluptatibus tempore est dolor! Iusto, vero.
-        </BorderedBox>
-      </Column>
-    </ColumnsSwitcher>
+      <BorderedBox>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </BorderedBox>
+      <BorderedBox>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </BorderedBox>
+    </Stack>
   );
 }
 
 Example.story = { name };
 Example.args = {
   gutter: "lg",
-  dense: false,
-  columns: 3,
-  switchAt: "639px",
 };
+
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

@@ -9,6 +9,7 @@ BorderedBox.displayName = "BorderedBox";
 
 const title = "Split";
 const name = "Basic";
+const component = Split;
 
 function Example(args: SplitProps): React.ReactNode {
   return (
@@ -47,7 +48,12 @@ Example.args = {
   fraction: "1/2",
 };
 
+Example.storyName = name;
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

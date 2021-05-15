@@ -1,4 +1,4 @@
-import { Stack, StackProps } from "@bedrock-layout/stack";
+import { SplitSwitcher, SplitSwitcherProps } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,12 +7,13 @@ const BorderedBox = styled.div`
 `;
 BorderedBox.displayName = "BorderedBox";
 
-const title = "Stack";
-const name = "Basic";
+const title = "Switcher";
+const name = "SplitSwitcher";
+const component = SplitSwitcher;
 
-function Example(args: StackProps): React.ReactNode {
+function Example(args: SplitSwitcherProps): React.ReactNode {
   return (
-    <Stack {...args}>
+    <SplitSwitcher {...args}>
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -37,18 +38,21 @@ function Example(args: StackProps): React.ReactNode {
         architecto doloribus aperiam sapiente, incidunt nihil suscipit
         voluptatibus tempore est dolor! Iusto, vero.
       </BorderedBox>
-    </Stack>
+    </SplitSwitcher>
   );
 }
 
 Example.story = { name };
 Example.args = {
   gutter: "lg",
+  fraction: "1/2",
+  switchAt: "639px",
 };
 
 export const Comp = Example;
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
-  title,
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

@@ -1,4 +1,5 @@
-import { SplitSwitcher, SplitSwitcherProps } from "@bedrock-layout/switcher";
+import { Column } from "@bedrock-layout/columns";
+import { ColumnSwitcherProps, ColumnsSwitcher } from "@bedrock-layout/switcher";
 import React from "react";
 import styled from "styled-components";
 
@@ -8,11 +9,19 @@ const BorderedBox = styled.div`
 BorderedBox.displayName = "BorderedBox";
 
 const title = "Switcher";
-const name = "SplitSwitcher";
+const name = "ColumnSwitcher";
+const component = ColumnsSwitcher;
 
-function Example(args: SplitSwitcherProps): React.ReactNode {
+function Example(args: ColumnSwitcherProps): React.ReactNode {
   return (
-    <SplitSwitcher {...args}>
+    <ColumnsSwitcher {...args}>
+      <BorderedBox>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </BorderedBox>
+
       <BorderedBox>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -25,29 +34,30 @@ function Example(args: SplitSwitcherProps): React.ReactNode {
         architecto doloribus aperiam sapiente, incidunt nihil suscipit
         voluptatibus tempore est dolor! Iusto, vero.
       </BorderedBox>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-      <BorderedBox>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
-      </BorderedBox>
-    </SplitSwitcher>
+      <Column span={3}>
+        <BorderedBox>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+          consequuntur corrupti beatae commodi vitae, perspiciatis totam
+          provident architecto doloribus aperiam sapiente, incidunt nihil
+          suscipit voluptatibus tempore est dolor! Iusto, vero.
+        </BorderedBox>
+      </Column>
+    </ColumnsSwitcher>
   );
 }
 
 Example.story = { name };
 Example.args = {
   gutter: "lg",
-  fraction: "1/2",
+  dense: false,
+  columns: 3,
   switchAt: "639px",
 };
+
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
+  component,
 };
+export default story;

@@ -55,6 +55,8 @@ function Example(): React.ReactNode {
 Example.story = { name };
 
 export const Comp = Example;
-export default {
-  title,
+
+const story = {
+  title: ["Components", title, name].join("/"),
 };
+export default story;
