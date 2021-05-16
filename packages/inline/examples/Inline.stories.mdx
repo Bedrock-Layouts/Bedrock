@@ -1,0 +1,188 @@
+import { Inline } from '@bedrock-layout/inline';
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+
+import { Box } from './Box';
+
+<Meta title="Components/Inline" component={Inline} />
+
+# Inline
+
+## Use case
+
+The Inline component is designed to create consistent spacing around inline elements of variable width. Unlike the InlineCluster component,
+the items in the Inline component will not wrap. The Inline component also allows you to specify a child that can stretch, filling the excess space.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the Inline component
+
+```bash
+  npm install @bedrock-layout/inline
+```
+
+Finally, you import the component.
+
+```javascript
+import { Inline } from '@bedrock-layout/inline';
+```
+
+## API
+
+<ArgsTable of={Inline} />
+
+## Basic usage
+
+<Preview withToolbar>
+  <Story name="Basic">
+    <Inline gutter="lg">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With x-large gutter
+
+<Preview withToolbar>
+  <Story name="With x-large gutter">
+    <Inline gutter="xl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With center justify
+
+<Preview withToolbar>
+  <Story name="With center justify">
+    <Inline justify="center" gutter="xl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With center align
+
+<Preview withToolbar>
+  <Story name="With center align">
+    <Inline align="center" gutter="xl">
+      <Box style={{ height: 200 }} />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With stretch start
+
+<Preview withToolbar>
+  <Story name="With stretch start">
+    <Inline gutter="lg" stretch="start">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With stretch end
+
+<Preview withToolbar>
+  <Story name="With stretch end">
+    <Inline gutter="lg" stretch="end">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With stretch all
+
+<Preview withToolbar>
+  <Story name="With stretch all">
+    <Inline gutter="lg" stretch="all">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With stretch at index
+
+<Preview withToolbar>
+  <Story name="With stretch at index">
+    <Inline gutter="lg" stretch={2}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## With switchAt
+
+<Preview withToolbar>
+  <Story name="With switchAt">
+    <Inline gutter="lg" switchAt="60rem">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling, you can select `data-bedrock-layout-inline`.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+   <Inline {...args}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+);
+
+<Canvas withToolbar>
+  <Story
+    name="Controls"
+    args={{
+      gutter: "lg",
+      justify: "start",
+      align: "start",
+      stretch: "end",
+      switchAt: "40rem",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls" />

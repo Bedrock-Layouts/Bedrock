@@ -1,0 +1,92 @@
+import { Reel } from '@bedrock-layout/reel';
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+
+import { colors, ColoredRect} from './colors'
+
+<Meta title="Components/Reel" component={Reel} />
+
+# Reel
+
+Note: **This is an experimental primitive and still not in v1 release, use with caution**
+
+## Use case
+
+Scrolling is a popular and natural way to interact with web content. The Reel is
+designed to organize content into scrollable flat lists with convenient scroll breakpoints.
+Optimally used with the `tabIndex` attribute.
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the Reel component
+
+```bash
+  npm install @bedrock-layout/reel
+```
+
+## API
+
+<ArgsTable of={Reel} />
+
+## Basic usage
+
+<Preview withToolbar>
+  <Story name="Basic">
+    <Reel
+      {...{
+        maxHeight: 250,
+        snapX: false,
+        proximity: false,
+      }}
+    >
+      {colors.map((color, ind) => {
+        return (
+          <ColoredRect key={ind} color={color}>
+            Lorem ipsum dolor sit amet.{" "}
+          </ColoredRect>
+        );
+      })}
+    </Reel>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-reel`.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+    <Reel {...args}>
+      {colors.map((color, ind) => {
+        return (
+          <ColoredRect key={ind} color={color}>
+            Lorem ipsum dolor sit amet.{" "}
+          </ColoredRect>
+        );
+      })}
+    </Reel>
+);
+
+<Canvas withToolbar>
+  <Story
+    name="Controls"
+    args={{
+      maxHeight: 250,
+      snapX: false,
+      proximity: false,
+      tabIndex: "0",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls" />
