@@ -1,0 +1,141 @@
+import { PadBox } from '@bedrock-layout/padbox';
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/PadBox" component={PadBox} />
+
+# PadBox
+
+## Use case
+
+The PadBox is designed to create consistent padding based of off the spacing constants.
+PadBox takes either a single value, an array of values, or an object of values for fine tuning the padding
+
+## How to install
+
+If you haven't already, install `styled-components`:
+
+```bash
+  npm install styled-components
+```
+
+Then install the PadBox component
+
+```bash
+  npm install @bedrock-layout/padbox
+```
+
+## API
+
+<ArgsTable of={PadBox} />
+
+## Basic Usage
+
+`padding` can take a single value for a consistent box shape padding
+
+<Preview withToolbar>
+  <Story name="Basic">
+    <PadBox style={{ border: "1px solid black" }} padding="lg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+  </Story>
+</Preview>
+
+## Usage With an Array
+
+`padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+
+<Preview withToolbar>
+  <Story name="With an array">
+    <PadBox
+      style={{ border: "1px solid black" }}
+      padding={["lg", "xs", "sm", "xl"]}
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+  </Story>
+</Preview>
+
+## Usage With an Object
+
+`padding` can take an object to specify which locations will have padding and which type.
+The properties support both traditional properties, `top, bottom, right, left` and logical properties in camelcase, `blockStart, blockEnd, inlineStart, inlineEnd`
+no matter which properties are given, logical properties are used, if supported.
+
+<Preview withToolbar>
+  <Story name="With an object">
+    <PadBox
+      style={{ border: "1px solid black" }}
+      padding={{ top: "lg", blockEnd: "sm" }}
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling you can select `data-bedrock-layout-padbox`.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+     <PadBox
+      style={{ border: "1px solid black" }}
+      {...args}
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+);
+
+<Canvas withToolbar>
+  <Story
+    name="Controls"
+    args={{
+      padding: "lg",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls" />
+
+<Canvas withToolbar>
+  <Story
+    name="Controls with array"
+    args={{
+      padding: ["md", "lg"],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls with array" />
+
+<Canvas withToolbar>
+  <Story
+    name="Controls with object"
+    args={{
+      padding: { left: "md", blockStart: "lg" },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls with object" />
