@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@2.0.6...@bedrock-layout/masonry-grid@2.0.7) (2021-05-17)
+
+
+### Bug Fixes
+
+* **frame:** fix required ratio console.error ([79ea5bb](https://github.com/Bedrock-Layouts/Bedrock/commit/79ea5bb1b89c4676e4009e91b87ee39dfd198bf6))
+
+
+
+
+
 ## [2.0.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@2.0.5...@bedrock-layout/masonry-grid@2.0.6) (2021-05-17)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
