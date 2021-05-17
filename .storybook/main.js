@@ -8,6 +8,7 @@ module.exports = {
     "./pages/regardingIE11.stories.mdx",
     "./pages/layout-primitives.stories.mdx",
     "./pages/styled-components.stories.mdx",
+    "./pages/installation.stories.mdx",
     "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
   ],
   addons: [
