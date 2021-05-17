@@ -36,3 +36,9 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | 🛠      | Reel                   |
 | ✅     | MasonryGrid            |
 | ✅     | CSS Reset              |
+
+## Contributors
+
+Thank you to everyone who has contributed code so far.
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=Bedrock-Layouts/Bedrock)

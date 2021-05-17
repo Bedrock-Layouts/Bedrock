@@ -1,57 +1,91 @@
 import { Split } from '@bedrock-layout/split';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
 
+import { Box } from './Box';
+
 <Meta title="Components/Split" component={Split} />
 
 # Split
 
 ## Use case
 
-The Split component is designed to create a split layout based on fraction
-
-## How to install
-
-If you haven't already, install `styled-components`:
-
-```bash
-  npm install styled-components
-```
-
-Then install the Split component
-
-```bash
-  npm install @bedrock-layout/split
-```
-
-Finally, you import the component.
-
-```javascript
-import { Split } from '@bedrock-layout/split';
-```
-
-## Basic usage
-
-<Preview withToolbar>
-  <Split gutter="lg" fraction="1/2">
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
-      corrupti beatae commodi vitae, perspiciatis totam provident architecto
-      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
-      est dolor! Iusto, vero.
-    </div>
-    <div>
-      Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum elementum
-      enim in pharetra. Curabitur eget urna cursus, imperdiet leo eu, elementum
-      leo. Proin laoreet eleifend nisl ut iaculis. Ut dictum est vitae rutrum
-      elementum. Donec dictum ex ac nibh auctor semper. Phasellus sed rhoncus
-      arcu, eu consectetur ipsum. Ut dictum a elit at sollicitudin. Quisque sed
-      augue molestie, auctor purus quis, luctus ipsum. Donec ultrices vel nisi
-      vehicula facilisis. Vestibulum cursus nisi tellus, sit amet sagittis nisl
-      luctus ut.
-    </div>
-  </Split>
-</Preview>
+The Split component is designed to create a split layout based on a fraction.
 
 ## API
 
 <ArgsTable of={Split} />
+
+## Basic usage
+
+<Preview withToolbar>
+  <Story name="Basic">
+    <h2>1/4 split</h2>
+    <Split gutter="lg" fraction="1/4">
+      <Box />
+      <Box />
+    </Split>
+    <h2>1/3 split</h2>
+    <Split gutter="lg" fraction="1/3">
+      <Box />
+      <Box />
+    </Split>
+    <h2>1/2 split</h2>
+    <Split gutter="lg" fraction="1/2">
+      <Box />
+      <Box />
+    </Split>
+    <h2>2/3 split</h2>
+    <Split gutter="lg" fraction="2/3">
+      <Box />
+      <Box />
+    </Split>
+    <h2>3/4 split</h2>
+    <Split gutter="lg" fraction="3/4">
+      <Box />
+      <Box />
+    </Split>
+    <h2>auto-start split</h2>
+    <p>(The first box has a width of 100px)</p>
+    <Split gutter="lg" fraction="auto-start">
+      <Box style={{ width: "100px" }} />
+      <Box />
+    </Split>
+    <h2>auto-end split</h2>
+    <p>(The second box has a width of 100px)</p>
+    <Split gutter="lg" fraction="auto-end">
+      <Box />
+      <Box style={{ width: "100px" }} />
+    </Split>
+  </Story>
+</Preview>
+
+## With xx-large gutters
+
+<Preview withToolbar>
+  <Story name="With xx-large gutters">
+    <h2>1/2 split</h2>
+    <Split gutter="xxl" fraction="1/2">
+      <Box />
+      <Box />
+    </Split>
+  </Story>
+</Preview>
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+        <Split {...args}>
+      <Box />
+      <Box />
+    </Split>
+);
+
+<Canvas withToolbar>
+  <Story name="Controls" args={{ fraction: "1/2", gutter: "lg" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Controls" />

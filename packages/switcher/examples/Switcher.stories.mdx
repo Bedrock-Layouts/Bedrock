@@ -1,0 +1,85 @@
+import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
+import { Column } from '@bedrock-layout/columns';
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+
+import { Box } from './Box';
+
+<Meta title="Components/Switcher" />
+
+# Switcher
+
+## Use case
+
+The SplitSwitcher component is designed to create a split layout based on a fraction but switches to a Stack layout at a `switchAt` size.
+
+The SplitSwitcher has the same API as the Split Component, plus a `switchAt` prop. When the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
+
+The ColumnsSwitcher component is designed to create a column layout and switch to a Stack layout at a `switchAt` size.
+
+The ColumnsSwitcher has the same API as the ColumnsSwitcher Component, plus a `switchAt` prop. When the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
+
+## API
+
+### SplitSwitcher props
+
+<ArgsTable of={SplitSwitcher} />
+
+### ColumnsSwitcher props
+
+<ArgsTable of={ColumnsSwitcher} />
+
+## Basic usage
+
+### SplitSwitcher
+
+The below switch will stack when it is less than `50rem`.
+
+<Preview withToolbar>
+  <Story name="SplitSwitcher">
+    <SplitSwitcher gutter="lg" fraction="1/2" switchAt="50rem">
+      <Box />
+      <Box />
+    </SplitSwitcher>
+  </Story>
+</Preview>
+
+### ColumnsSwitcher
+
+The below Columns layout will stack when it is less than `50rem`.
+
+<Preview withToolbar>
+  <Story name="ColumnsSwitcher">
+    <ColumnsSwitcher gutter="lg" columns={3} switchAt="50rem">
+      <Box />
+      <Box />
+      <Box />
+      <Column span={3}>
+        <Box />
+      </Column>
+    </ColumnsSwitcher>
+  </Story>
+</Preview>
+
+### Both Switchers together
+
+The split in the below layout will stack when it is less than `50rem`. The Columns layout will stack when it is less than `25rem`.
+
+<Preview withToolbar>
+  <Story name="Both Switchers together">
+    <SplitSwitcher gutter="lg" fraction="1/2" switchAt="50rem">
+      <Box />
+      <ColumnsSwitcher gutter="lg" columns={3} switchAt="25rem">
+        <Box />
+        <Box />
+        <Box />
+        <Column span={3}>
+          <Box />
+        </Column>
+      </ColumnsSwitcher>
+    </SplitSwitcher>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling, you can select `data-bedrock-layout-columns-switcher` and `data-bedrock-layout-split-switcher`.

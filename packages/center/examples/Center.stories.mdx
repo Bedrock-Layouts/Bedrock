@@ -9,20 +9,6 @@ import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/ad
 
 The Center component is designed to center and clamp the width at a defined width, the medium breakpoint by default. You can also center the children and text alignment as well.
 
-## How to install
-
-If you haven't already, install `styled-components`:
-
-```bash
-  npm install styled-components
-```
-
-Then install the Center component
-
-```bash
-  npm install @bedrock-layout/center
-```
-
 ## API
 
 <ArgsTable of={Center} />
@@ -50,7 +36,7 @@ The Center component will clamp the width at a defined `maxWidth` and center its
 
 ## Centering the children
 
-You can also center the children by adding the `centerChildren` prop.
+You can also center the children by adding the `centerChildren` prop. This time the children are set to a width of 75%.
 
 <Preview withToolbar>
   <Story name="Center children">
