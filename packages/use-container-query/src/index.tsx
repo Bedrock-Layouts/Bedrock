@@ -23,7 +23,7 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
     callBackMap.set(node, (entry) => {
       //fix typings
       const nodeWidth =
-        ((entry.borderBoxSize as unknown) as ResizeObserverSize)?.inlineSize ??
+        (entry.borderBoxSize as unknown as ResizeObserverSize)?.inlineSize ??
         entry.contentRect.width;
 
       if (typeof maxWidth !== "undefined") {
