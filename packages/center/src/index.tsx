@@ -27,7 +27,7 @@ export const Center = styled.div.attrs<CenterProps>(() => {
   };
 })<CenterProps>`
   @property --maxWidth {
-    syntax: "<length>";
+    syntax: "<length-percentage>";
     inherits: false;
     initial-value: 1023px;
   }
