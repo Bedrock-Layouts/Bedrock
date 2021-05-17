@@ -78,8 +78,8 @@ Inline.propTypes = {
     PropTypes.oneOf<Stretch>(["all", "start", "end"]),
     PropTypes.number,
   ]),
-  switchAt: (PropTypes.oneOfType([
+  switchAt: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-  ]) as unknown) as React.Validator<SwitchAt>,
+  ]) as unknown as React.Validator<SwitchAt>,
 };

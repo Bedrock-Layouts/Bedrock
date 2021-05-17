@@ -94,7 +94,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
 
   return (
     <RowSpanner
-      style={({ "--rows": rowSpan } as unknown) as CSSProperties}
+      style={{ "--rows": rowSpan } as unknown as CSSProperties}
       ref={childRef}
     >
       {children}
@@ -103,7 +103,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
 };
 
 export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
-  delete ((props as unknown) as Record<string, unknown>)[
+  delete (props as unknown as Record<string, unknown>)[
     "data-bedrock-layout-grid"
   ];
   return {

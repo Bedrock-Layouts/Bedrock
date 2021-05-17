@@ -69,8 +69,6 @@ Frame.displayName = "Frame";
 type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
 
 const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
-  if (typeof ratio === "undefined") return new Error(`${propName} is required`);
-
   if (
     !Array.isArray(ratio) ||
     ratio.length !== 2 ||
@@ -82,7 +80,7 @@ const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
 };
 
 Frame.propTypes = {
-  //It's valid propType but type of Validator<[number, number]> makes no sense
-  ratio: (twoNumbers as unknown) as React.Validator<[number, number]>,
+  //It's valid propType but can't get the type of Validator<[number, number]> to work
+  ratio: twoNumbers as unknown as React.Validator<[number, number]>,
   position: PropTypes.string,
 };
