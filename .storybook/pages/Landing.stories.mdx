@@ -1,8 +1,9 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import { Center } from '@bedrock-layout/center'
 
 <Meta title="Bedrock Layout Primitives" />
 
-<h1 style={{ width: "50%", margin: "auto" }}>
+<Center as="h1" style={{ width: "50%" }}>
   <img
     src="https://user-images.githubusercontent.com/5460770/77477816-8df68000-6de2-11ea-83be-9f12c8de7f0d.png"
     alt="Bedrock Layout Primitives"
@@ -13,12 +14,23 @@ import { Meta } from '@storybook/addon-docs/blocks';
       height: "auto",
     }}
   />
-</h1>
+</Center>
 
-<p style={{ textAlign: "center" }}>
+<Center as="p" centerText>
   <strong>Foundational Layout Primitives for your React App</strong>
-</p>
+</Center>
 
+<Center centerChildren>
+<span>Follow us on <strong><a href='https://github.com/Bedrock-Layouts/Bedrock'>Github</a></strong></span>
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social)](https://github.com/Bedrock-Layouts/Bedrock/stargazers)
+
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://travis-ci.org/Bedrock-Layouts/Bedrock.svg?branch=master)](https://travis-ci.org/Bedrock-Layouts/Bedrock)
+![GitHub](https://img.shields.io/github/license/Bedrock-Layouts/Bedrock)
+
+</Center>
 ## Overview
 
 Bedrock Layout Primitives are the foundational layout primitives your app or design system needs to satisfy almost any of your layout needs. Bedrock Layout Primitives are built on a few important principals:
