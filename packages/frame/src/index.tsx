@@ -69,6 +69,7 @@ Frame.displayName = "Frame";
 type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
 
 const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
+  if (ratio === undefined) return undefined;
   if (
     !Array.isArray(ratio) ||
     ratio.length !== 2 ||

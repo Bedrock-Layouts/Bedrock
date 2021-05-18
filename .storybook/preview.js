@@ -2,8 +2,6 @@ import "pepjs";
 
 import "./styles.css";
 
-import { addParameters } from "@storybook/client-api";
-
-addParameters({
+export const parameters = {
   viewMode: "docs",
-});
+};
