@@ -9,7 +9,7 @@
   "author": "Jarvis1010 <travis.mair@gmail.com>",
   "homepage": "https://bedrock-layout.dev/",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
+    "start": "start-storybook -p 9001 -c .storybook -s ./public",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --notify",
@@ -24,7 +24,7 @@
     "clean": "lerna clean",
     "build": "lerna run clean:build --parallel && lerna run build",
     "build:watch": "lerna run build:watch --stream",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -s ./public",
     "prepublish": "npm run build",
     "publish": "lerna publish",
     "publish:ci": "npm run publish -- --no-commit-hooks --ignore-scripts",
