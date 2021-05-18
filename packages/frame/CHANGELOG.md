@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.1.4...@bedrock-layout/frame@2.1.5) (2021-05-18)
+
+
+### Bug Fixes
+
+* **frame:** fix incorrect console error for undefined ratio ([3b71c2f](https://github.com/Bedrock-Layouts/Bedrock/commit/3b71c2f75d66125894de55a0cb7af30af614f3dc))
+
+
+
+
+
 ## [2.1.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.1.3...@bedrock-layout/frame@2.1.4) (2021-05-17)
 
 
