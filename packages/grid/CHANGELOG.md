@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@2.0.5...@bedrock-layout/grid@2.0.6) (2021-05-19)
+
+**Note:** Version bump only for package @bedrock-layout/grid
+
+
+
+
+
 ## [2.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@2.0.4...@bedrock-layout/grid@2.0.5) (2021-05-17)
 
 **Note:** Version bump only for package @bedrock-layout/grid
