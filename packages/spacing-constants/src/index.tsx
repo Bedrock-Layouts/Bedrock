@@ -16,6 +16,8 @@ export interface Spacing {
 
 type ThemeOrDefault<T> = T extends { spacing: Record<string, string | number> }
   ? T["spacing"]
+  : T extends { space: Record<string, string | number> }
+  ? T["space"]
   : Spacing;
 
 export type SpacingOptions = ThemeOrDefault<DefaultTheme>;
@@ -55,15 +57,20 @@ function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
 type MaybeValue = string | undefined;
 
 type GetSpacingValue = <T>(
-  theme: T & { spacing?: Record<string, string | number> },
+  theme: T & {
+    spacing?: Record<string, string | number>;
+    space?: Record<string, string | number>;
+  },
   spacingKey: keyof Spacing | keyof SpacingOptions
 ) => MaybeValue;
 
 export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
-  if (!theme.spacing) return spacing[spacingKey];
+  const maybeSpaceing = theme.spacing ?? theme.space;
+
+  if (!maybeSpaceing) return spacing[spacingKey];
 
   const safeSpacings = fromEntries(
-    Object.entries(theme.spacing).map(([spaceKey, value]) => [
+    Object.entries(maybeSpaceing).map(([spaceKey, value]) => [
       spaceKey,
       typeof value === "number" ? `${value}px` : value,
     ])

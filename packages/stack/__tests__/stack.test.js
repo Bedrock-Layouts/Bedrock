@@ -50,6 +50,17 @@ describe("Stack", () => {
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
+    it("renders with theme overrides using 'space' as key", () => {
+      const stack = create(
+        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+          <Stack gutter="1x">
+            <Lorem />
+          </Stack>
+        </ThemeProvider>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders 0px with theme overrides", () => {
       const stack = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
