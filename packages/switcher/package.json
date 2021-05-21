@@ -1,6 +1,6 @@
 {
   "name": "@bedrock-layout/switcher",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "bedrock-layout switcher layout primitive",
   "sideEffects": false,
   "private": false,
@@ -29,12 +29,12 @@
     "lib"
   ],
   "dependencies": {
-    "@bedrock-layout/columns": "^2.0.4",
-    "@bedrock-layout/spacing-constants": "^2.1.2",
-    "@bedrock-layout/split": "^2.0.5",
-    "@bedrock-layout/stack": "^2.0.4",
+    "@bedrock-layout/columns": "^2.0.5",
+    "@bedrock-layout/spacing-constants": "^2.2.0",
+    "@bedrock-layout/split": "^2.0.6",
+    "@bedrock-layout/stack": "^2.1.0",
     "@bedrock-layout/type-utils": "^0.0.7",
-    "@bedrock-layout/use-container-query": "^1.1.17",
+    "@bedrock-layout/use-container-query": "^1.1.18",
     "@bedrock-layout/use-forwarded-ref": "^1.1.4"
   },
   "peerDependencies": {
