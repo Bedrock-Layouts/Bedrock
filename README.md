@@ -4,7 +4,7 @@
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Build Status](https://travis-ci.org/Bedrock-Layouts/Bedrock.svg?branch=master)](https://travis-ci.org/Bedrock-Layouts/Bedrock)
+[![Build Status](https://travis-ci.com/Bedrock-Layouts/Bedrock.svg?branch=master)](https://travis-ci.com/Bedrock-Layouts/Bedrock)
 ![GitHub](https://img.shields.io/github/license/Bedrock-Layouts/Bedrock)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social)
 

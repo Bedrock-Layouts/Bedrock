@@ -1,16 +1,13 @@
 import { Center } from "@bedrock-layout/center";
-import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import styled, { ThemeContext } from "styled-components";
+import styled from "styled-components";
 
-const safeTheme = { breakPoints: {} };
+const XX_LARGE_BREAKPOINT = 1920;
 
 export const AppBoundary = styled.div.attrs((props) => {
-  const { breakPoints } = React.useContext(ThemeContext) ?? safeTheme;
-  const maxWidth = mergeBreakpoints(breakPoints).xxlarge;
   return {
     "data-bedrock-layout-appboundary": "",
-    children: <Center maxWidth={maxWidth}>{props.children}</Center>,
+    children: <Center maxWidth={XX_LARGE_BREAKPOINT}>{props.children}</Center>,
   };
 })`
   padding: 0;
