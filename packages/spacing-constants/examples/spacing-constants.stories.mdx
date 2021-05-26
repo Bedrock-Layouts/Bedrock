@@ -4,54 +4,76 @@ import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/b
 
 # Spacing Constants
 
-Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these in to your App Directly since the Layout Primitives already implement them, but these do exist incase you ever need the raw values.
+Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these into your App Directly since the Layout Primitives already implement them. Still, these do exist in case you ever need the raw values.
 
-The spacing is built simply on `1rem` as the starting mid point and then doubling the value at each step above and halfing the value each step below. This comes down to the following spacings: `0`,`0.0625`, `0.125rem`, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`. Each one of these spacing points are then named based on t-shirt size or `none`, `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, and `xxl` respectively. Middle point in between the larger spacings are also added to allow you to finely tune the points, e.g. `mdLg` is `0.75rem`.
+The spacing is built on `1rem` as the starting point. We then double the value at each step above `1rem` and half the value at each step below `1rem`. Each of these spacing points is then given a name based on a t-shirt size like `md`, `lg`, `xl`, and `xxl`. There are also middle point between the larger spacings, e.g. `mdLg`, that allow you to finely tune your spacings.
 
-For the breakpoints, we are adopting the foundation breakpoint values. All values are given in `rems`. There are two types of constants, single value and range values. `medium`, `large`, `xlarge`, and `xxlarge` are intended communicate that size or smaller. The constants are `smallOnly`, `mediumOnly`, `largeOnly`, and `xlargeOnly` and will be an array with the first value being the lowerbound and the second value being the upperbound;.
+## Spacing values
+
+| space   | size        |
+| ------- | ----------- |
+| `none`  | `0`         |
+| `xxs`   | `0.0625rem` |
+| `xs`    | `0.125rem`  |
+| `sm`    | `0.25rem`   |
+| `md`    | `0.5rem`    |
+| `mdLg`  | `0.75rem`   |
+| `lg`    | `1rem`      |
+| `lgXl`  | `1.5rem`    |
+| `xl`    | `2rem`      |
+| `xlXXl` | `3rem`      |
+| `xxl`   | `4rem`      |
 
 ## Usage
 
+These values are already built in to those that deal with spacing, like the `Stack` or `PadBox` components. In the unlikely senario that you do need to access the values directly, you can import the values like this:
+
 ```javascript
-import { spacing, breakpoints } from '@bedrock-layout/spacing-constants';
+import { spacing } from '@bedrock-layout/spacing-constants';
 
 spacing.sm; //0.25rem
 
-breakpoints.large; //64rem
+spacing.xxl; //4rem
 ```
 
-## Overriding the values
+## Integrating With Your Design System
 
-All of the Bedrock Layout Primitives are built using `styled-components`. In order to override the values of any or all of the constants,
-you can use the `ThemeProvider` to change the values. The `ThemeProvider` can be rendered at any level of the tree and will override the
-values at that point. [Check out the docs for `styled-components`](https://styled-components.com/docs/advanced#theming) for more details on
-how it works.
+Bedrock Layout Primitives is designed to be able to be integrated easily into any design system. Bedrock's Spacing values can be overridden using `styled-components` `ThemeProvider`. You can [Check out the docs for `styled-components`](https://styled-components.com/docs/advanced#theming). Bedrock Layout Primitives follow the [System UI Theme Specification](https://system-ui.com/theme/#:~:text=This%20specification%20is%20a%20work%2Din%2Dprogress.&text=The%20theme%20object%20is%20intended,%2C%20and%2For%20design%20tokens) when overriding theme values. To override Bedrock Layout's default space values, you will need to pass in your new spacing values as an object of key/value pairs to the `space` key of the theme. This
 
-```javascript
+```jsx
 import { ThemeProvider } from 'styled-components';
 
 const newSpacings = {
-    sm:'45px',
-    xxl:'100ch'
+    "0x": 0,
+    "1x":'45px',
+    "3x":'100ch'
 }
 
-<ThemeProvider theme={{ spacing: newSpacings }}>
-    <Stack gutter="sm">
+<ThemeProvider theme={{ space: newSpacings }}>
+    <Stack gutter="1x">
      {...}
     </Stack>
 </ThemeProvider>;
 ```
 
-| spacing | breakpoints  |
-| ------- | ------------ |
-| `none`  | `medium`     |
-| `xxs`   | `large`      |
-| `xs`    | `large`      |
-| `sm`    | `xlarge`     |
-| `md`    | `xxlarge`    |
-| `mdLg`  | `smallOnly`  |
-| `lg`    | `mediumOnly` |
-| `lgXl`  | `largeOnly`  |
-| `xl`    | `xlargeOnly` |
-| `xlXXl` | -            |
-| `xxl`   | -            |
+The spacing values can either be a CSS size unit, as a string, or a positive number for the number of pixels
+
+## Overriding Spacing Types in TypeScript
+
+In order to override the types, you must follow one additional step. `styled-components` allows you to [define your theme types through declaration merging](https://styled-components.com/docs/api#create-a-declarations-file). In your declaration file you will need to define your types like this:
+
+```typescript
+import 'styled-components';
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    space: {
+      '0x': number;
+      '1x': string;
+      '3x': string;
+    };
+  }
+}
+```
+
+Space values can only be of type `string` or `number`.

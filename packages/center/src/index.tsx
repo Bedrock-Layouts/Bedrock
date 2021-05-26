@@ -1,24 +1,19 @@
-import { mergeBreakpoints } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+const MEDIUM_BREAKPOINT = "1023px";
 export interface CenterProps {
   maxWidth?: number | string;
   centerText?: boolean;
   centerChildren?: boolean;
 }
 
-function getSafeMaxWidth(
-  breakPoints: Record<string, unknown>,
-  maxWidth?: number | string
-) {
+function getSafeMaxWidth(maxWidth?: number | string) {
   if (typeof maxWidth === "string") {
     return maxWidth;
   }
 
-  return typeof maxWidth === "number"
-    ? `${maxWidth}px`
-    : mergeBreakpoints(breakPoints).medium + "px";
+  return typeof maxWidth === "number" ? `${maxWidth}px` : MEDIUM_BREAKPOINT;
 }
 
 export const Center = styled.div.attrs<CenterProps>(() => {
@@ -29,10 +24,9 @@ export const Center = styled.div.attrs<CenterProps>(() => {
   @property --maxWidth {
     syntax: "<length-percentage>";
     inherits: false;
-    initial-value: 1023px;
+    initial-value: ${MEDIUM_BREAKPOINT};
   }
-  --maxWidth: ${({ maxWidth, theme: { breakPoints } }) =>
-    getSafeMaxWidth(breakPoints, maxWidth)};
+  --maxWidth: ${({ maxWidth }) => getSafeMaxWidth(maxWidth)};
 
   box-sizing: content-box;
 
@@ -40,14 +34,10 @@ export const Center = styled.div.attrs<CenterProps>(() => {
   margin-inline-end: auto;
   margin-inline: auto;
 
-  max-inline-size: 1023px;
+  max-inline-size: ${MEDIUM_BREAKPOINT};
 
-  @supports (
-    max-inline-size:
-      ${({ maxWidth, theme: { breakPoints } }) =>
-        getSafeMaxWidth(breakPoints, maxWidth)}
-  ) {
-    max-inline-size: var(--maxWidth, 1023px);
+  @supports (max-inline-size: ${({ maxWidth }) => getSafeMaxWidth(maxWidth)}) {
+    max-inline-size: var(--maxWidth, ${MEDIUM_BREAKPOINT});
   }
 
   ${(props) => (props.centerText ? "text-align: center;" : "")}
