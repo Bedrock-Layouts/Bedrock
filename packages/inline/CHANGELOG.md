@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.0.9...@bedrock-layout/inline@2.0.10) (2021-05-26)
+
+**Note:** Version bump only for package @bedrock-layout/inline
+
+
+
+
+
 ## [2.0.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.0.8...@bedrock-layout/inline@2.0.9) (2021-05-26)
 
 **Note:** Version bump only for package @bedrock-layout/inline
