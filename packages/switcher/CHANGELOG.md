@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.1.0...@bedrock-layout/switcher@2.1.1) (2021-05-26)
+
+**Note:** Version bump only for package @bedrock-layout/switcher
+
+
+
+
+
 # [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.0.11...@bedrock-layout/switcher@2.1.0) (2021-05-26)
 
 
