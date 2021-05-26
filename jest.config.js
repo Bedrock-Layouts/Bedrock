@@ -77,6 +77,12 @@ module.exports = {
       functions: 0,
       lines: 0,
     },
+    "./packages/use-media-query/src/index.tsx": {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
+    },
   },
 
   // A path to a custom dependency extractor
