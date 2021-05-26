@@ -1,68 +1,9 @@
-import { SplitSwitcher, ColumnsSwitcher } from '@bedrock-layout/switcher';
-import { Column } from '@bedrock-layout/columns';
-import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
-
-import { Box } from './Box';
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Switcher" />
 
 # Switcher
 
-## Use case
+## DEPRECATION WARNING
 
-The ColumnsSwitcher component is designed to create a column layout and switch to a Stack layout at a `switchAt` size.
-
-The ColumnsSwitcher has the same API as the ColumnsSwitcher Component, plus a `switchAt` prop. When the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
-
-## API
-
-### ColumnsSwitcher props
-
-<ArgsTable of={ColumnsSwitcher} />
-
-## Basic usage
-
-### SplitSwitcher
-
-The SplitSwitcher has been Deprecated, and the functionality has been added to [The Split Component](/docs/components-split--basic)
-
-### ColumnsSwitcher
-
-The below Columns layout will stack when it is less than `50rem`.
-
-<Preview withToolbar>
-  <Story name="ColumnsSwitcher">
-    <ColumnsSwitcher gutter="lg" columns={3} switchAt="50rem">
-      <Box />
-      <Box />
-      <Box />
-      <Column span={3}>
-        <Box />
-      </Column>
-    </ColumnsSwitcher>
-  </Story>
-</Preview>
-
-### Both Switchers together
-
-The split in the below layout will stack when it is less than `50rem`. The Columns layout will stack when it is less than `25rem`.
-
-<Preview withToolbar>
-  <Story name="Both Switchers together">
-    <SplitSwitcher gutter="lg" fraction="1/2" switchAt="50rem">
-      <Box />
-      <ColumnsSwitcher gutter="lg" columns={3} switchAt="25rem">
-        <Box />
-        <Box />
-        <Box />
-        <Column span={3}>
-          <Box />
-        </Column>
-      </ColumnsSwitcher>
-    </SplitSwitcher>
-  </Story>
-</Preview>
-
-## data-attribute
-
-For purposes of styling, you can select `data-bedrock-layout-columns-switcher` and `data-bedrock-layout-split-switcher`.
+The SplitSwitcher and ColumnSwitcher have been Deprecated, and the functionality has been added to [The Split Component](/docs/components-split--basic) and the [The Columns Component](/docs/components-columns--basic), respectively.

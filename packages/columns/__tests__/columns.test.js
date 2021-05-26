@@ -1,9 +1,12 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
+import useContainerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
 import { Column, Columns } from "../src";
+
+jest.mock("@bedrock-layout/use-container-query");
 
 const Lorem = () => (
   <>
@@ -144,6 +147,40 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
+    it("should render a stack if container is below switchAt", () => {
+      const widthToSwitchAt = 600;
+      useContainerQuery.mockImplementation((...[, width]) => {
+        return width <= widthToSwitchAt + 1;
+      });
+
+      const stack = create(
+        <Columns gutter="lg" switchAt={widthToSwitchAt - 1}>
+          <Lorem />
+        </Columns>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+
+      useContainerQuery.mockRestore();
+    });
+
+    it("should render a columns if container is above switchAt", () => {
+      const widthToSwitchAt = 600;
+      useContainerQuery.mockImplementation((...[, width]) => {
+        return width <= widthToSwitchAt + 1;
+      });
+
+      const stack = create(
+        <Columns gutter="lg" switchAt={widthToSwitchAt + 1}>
+          <Lorem />
+        </Columns>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+
+      useContainerQuery.mockRestore();
+    });
   });
 
   describe("incorrect usage", () => {
@@ -220,6 +257,17 @@ describe("Columns", () => {
         </Columns>
       );
 
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with wrong switchAt input", () => {
+      expect(console.error.mock.calls.length).toBe(0);
+      const errorStack = create(
+        <Columns gutter="lg" switchAt={{ value: "incorrect" }}>
+          <Lorem />
+        </Columns>
+      );
       expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });

@@ -93,6 +93,23 @@ The Columns component is designed to create a column layout
   </Story>
 </Preview>
 
+## With switchAt
+
+The below Columns layout will stack when it is less than `60rem`.
+
+<Preview withToolbar>
+  <Story name="With switchAt">
+    <Columns gutter="lg" columns={3} switchAt="60rem">
+      <Box />
+      <Box />
+      <Box />
+      <Column span={3}>
+        <Box />
+      </Column>
+    </Columns>
+  </Story>
+</Preview>
+
 ## data-attribute
 
 For purposes of styling you can select `data-bedrock-layout-columns` and `data-bedrock-layout-column`.
@@ -124,6 +141,7 @@ export const Template = (args) =>  (
       columns: 3,
       gutter: "lg",
       dense: false,
+      switchAt: "30rem",
     }}
   >
     {Template.bind({})}

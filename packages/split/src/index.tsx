@@ -33,12 +33,12 @@ const fractions: Fractions = {
   "auto-end": `1fr auto`,
 };
 
-export interface SplitBaseProps {
+interface SplitBaseProps {
   gutter: keyof SpacingOptions;
   fraction?: FractionTypes;
 }
 
-export const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
+const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
   "data-bedrock-layout-split": "",
 }))<SplitBaseProps>`
   box-sizing: border-box;
@@ -61,12 +61,14 @@ export const Split = forwardRefWithAs<SplitProps, "div">(
     const safeRef = useForwardedRef(ref);
     const [maybePx, setMaybePx] = React.useState<number | null>(null);
 
+    const node = safeRef.current;
+
     React.useEffect(() => {
       const maybePx =
-        typeof switchAt === "string" ? toPX(switchAt, safeRef.current) : null;
+        typeof switchAt === "string" ? toPX(switchAt, node) : null;
 
       setMaybePx(maybePx);
-    }, [safeRef, switchAt]);
+    }, [node, switchAt]);
 
     const widthToSwitchAt: number = maybePx
       ? maybePx
@@ -74,7 +76,7 @@ export const Split = forwardRefWithAs<SplitProps, "div">(
       ? switchAt
       : 0; //zero is used to make the switchAt a noop
 
-    const shouldSwitch = useContainerQuery(safeRef.current, widthToSwitchAt);
+    const shouldSwitch = useContainerQuery(node, widthToSwitchAt);
 
     return shouldSwitch ? (
       <Stack as={as} ref={safeRef} {...props} />
