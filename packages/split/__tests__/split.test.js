@@ -1,9 +1,12 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
+import useContainerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
 import { Split } from "../src";
+
+jest.mock("@bedrock-layout/use-container-query");
 
 const Lorem = () => (
   <>
@@ -54,13 +57,47 @@ describe("Split", () => {
 
     it("renders with theme overrides", () => {
       const split = create(
-        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
           <Split gutter="1x">
             <Lorem />
           </Split>
         </ThemeProvider>
       );
       expect(split.toJSON()).toMatchSnapshot();
+    });
+
+    it("should render a stack if container is below switchAt", () => {
+      const widthToSwitchAt = 600;
+      useContainerQuery.mockImplementation((...[, width]) => {
+        return width <= widthToSwitchAt + 1;
+      });
+
+      const stack = create(
+        <Split gutter="lg" switchAt={widthToSwitchAt}>
+          <Lorem />
+        </Split>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+
+      useContainerQuery.mockRestore();
+    });
+
+    it("should render a split if container is above switchAt", () => {
+      const widthToSwitchAt = 600;
+      useContainerQuery.mockImplementation((...[, width]) => {
+        return width <= widthToSwitchAt + 1;
+      });
+
+      const stack = create(
+        <Split gutter="lg" switchAt={widthToSwitchAt + 1}>
+          <Lorem />
+        </Split>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+
+      useContainerQuery.mockRestore();
     });
   });
 
@@ -103,6 +140,19 @@ describe("Split", () => {
 
       const errorStack = create(
         <Split fraction="incorrect">
+          <Lorem />
+        </Split>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with wrong switchAt input", () => {
+      expect(console.error.mock.calls.length).toBe(0);
+
+      const errorStack = create(
+        <Split gutter="lg" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Split>
       );

@@ -26,150 +26,150 @@ const Lorem = () => (
 );
 
 describe("Switcher", () => {
-  describe("SplitSwitcher", () => {
-    describe("correct usage", () => {
-      test("SplitSwitcher is not null", () => {
-        expect(SplitSwitcher).toBeTruthy();
-      });
+  // describe("SplitSwitcher", () => {
+  //   describe("correct usage", () => {
+  //     test("SplitSwitcher is not null", () => {
+  //       expect(SplitSwitcher).toBeTruthy();
+  //     });
 
-      it("renders default gutters", () => {
-        const stack = create(
-          <SplitSwitcher gutter="lg">
-            <Lorem />
-          </SplitSwitcher>
-        );
-        expect(stack.toJSON()).toMatchSnapshot();
-      });
+  //     it("renders default gutters", () => {
+  //       const stack = create(
+  //         <SplitSwitcher gutter="lg">
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
+  //       expect(stack.toJSON()).toMatchSnapshot();
+  //     });
 
-      it("renders all the gutter options", () => {
-        Object.keys(spacing).forEach((gutter) => {
-          const stack = create(
-            <SplitSwitcher gutter={gutter}>
-              <Lorem />
-            </SplitSwitcher>
-          );
-          expect(stack.toJSON()).toMatchSnapshot();
-        });
-      });
+  //     it("renders all the gutter options", () => {
+  //       Object.keys(spacing).forEach((gutter) => {
+  //         const stack = create(
+  //           <SplitSwitcher gutter={gutter}>
+  //             <Lorem />
+  //           </SplitSwitcher>
+  //         );
+  //         expect(stack.toJSON()).toMatchSnapshot();
+  //       });
+  //     });
 
-      it("renders with theme overrides", () => {
-        const stack = create(
-          <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
-            <SplitSwitcher gutter="1x">
-              <Lorem />
-            </SplitSwitcher>
-          </ThemeProvider>
-        );
+  //     it("renders with theme overrides", () => {
+  //       const stack = create(
+  //         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+  //           <SplitSwitcher gutter="1x">
+  //             <Lorem />
+  //           </SplitSwitcher>
+  //         </ThemeProvider>
+  //       );
 
-        expect(stack.toJSON()).toMatchSnapshot();
-      });
+  //       expect(stack.toJSON()).toMatchSnapshot();
+  //     });
 
-      it("forwards the ref", () => {
-        const spy = jest.fn();
-        act(() => {
-          create(
-            <SplitSwitcher gutter="lg" ref={spy}>
-              <Lorem />
-            </SplitSwitcher>
-          );
-        });
-        expect(spy).toBeCalled();
-      });
+  //     it("forwards the ref", () => {
+  //       const spy = jest.fn();
+  //       act(() => {
+  //         create(
+  //           <SplitSwitcher gutter="lg" ref={spy}>
+  //             <Lorem />
+  //           </SplitSwitcher>
+  //         );
+  //       });
+  //       expect(spy).toBeCalled();
+  //     });
 
-      it("should render a stack if container is below default", () => {
-        useContainerQuery.mockImplementation((...[, width]) => {
-          return width <= breakPoints.smallOnly;
-        });
+  //     it("should render a stack if container is below default", () => {
+  //       useContainerQuery.mockImplementation((...[, width]) => {
+  //         return width <= breakPoints.smallOnly;
+  //       });
 
-        const stack = create(
-          <SplitSwitcher gutter="lg">
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const stack = create(
+  //         <SplitSwitcher gutter="lg">
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(stack.toJSON()).toMatchSnapshot();
+  //       expect(stack.toJSON()).toMatchSnapshot();
 
-        useContainerQuery.mockRestore();
-      });
+  //       useContainerQuery.mockRestore();
+  //     });
 
-      it("should render a split if container is above switchAt", () => {
-        useContainerQuery.mockImplementation((...[, width]) => {
-          return width <= breakPoints.smallOnly;
-        });
+  //     it("should render a split if container is above switchAt", () => {
+  //       useContainerQuery.mockImplementation((...[, width]) => {
+  //         return width <= breakPoints.smallOnly;
+  //       });
 
-        const stack = create(
-          <SplitSwitcher gutter="lg" switchAt={breakPoints.smallOnly + 1}>
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const stack = create(
+  //         <SplitSwitcher gutter="lg" switchAt={breakPoints.smallOnly + 1}>
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(stack.toJSON()).toMatchSnapshot();
+  //       expect(stack.toJSON()).toMatchSnapshot();
 
-        useContainerQuery.mockRestore();
-      });
-    });
+  //       useContainerQuery.mockRestore();
+  //     });
+  //   });
 
-    describe("incorrect usage", () => {
-      beforeEach(() => {
-        jest.spyOn(console, "error");
-        console.error.mockImplementation(() => undefined);
-      });
-      afterEach(() => {
-        console.error.mockRestore();
-      });
+  //   describe("incorrect usage", () => {
+  //     beforeEach(() => {
+  //       jest.spyOn(console, "error");
+  //       console.error.mockImplementation(() => undefined);
+  //     });
+  //     afterEach(() => {
+  //       console.error.mockRestore();
+  //     });
 
-      it("renders default with console error with no input", () => {
-        expect(console.error.mock.calls.length).toBe(0);
+  //     it("renders default with console error with no input", () => {
+  //       expect(console.error.mock.calls.length).toBe(0);
 
-        const errorStack = create(
-          <SplitSwitcher>
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const errorStack = create(
+  //         <SplitSwitcher>
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(console.error).toBeCalled();
-        expect(errorStack.toJSON()).toMatchSnapshot();
-      });
+  //       expect(console.error).toBeCalled();
+  //       expect(errorStack.toJSON()).toMatchSnapshot();
+  //     });
 
-      it("renders default with wrong input", () => {
-        expect(console.error.mock.calls.length).toBe(0);
+  //     it("renders default with wrong input", () => {
+  //       expect(console.error.mock.calls.length).toBe(0);
 
-        const errorStack = create(
-          <SplitSwitcher gutter="incorrect">
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const errorStack = create(
+  //         <SplitSwitcher gutter="incorrect">
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(errorStack.toJSON()).toMatchSnapshot();
-      });
+  //       expect(errorStack.toJSON()).toMatchSnapshot();
+  //     });
 
-      it("renders default with console error with wrong fraction input", () => {
-        expect(console.error.mock.calls.length).toBe(0);
+  //     it("renders default with console error with wrong fraction input", () => {
+  //       expect(console.error.mock.calls.length).toBe(0);
 
-        const errorStack = create(
-          <SplitSwitcher gutter="lg" fraction="incorrect">
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const errorStack = create(
+  //         <SplitSwitcher gutter="lg" fraction="incorrect">
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(console.error).toBeCalled();
-        expect(errorStack.toJSON()).toMatchSnapshot();
-      });
+  //       expect(console.error).toBeCalled();
+  //       expect(errorStack.toJSON()).toMatchSnapshot();
+  //     });
 
-      it("renders default with console error with wrong switchAt input", () => {
-        expect(console.error.mock.calls.length).toBe(0);
+  //     it("renders default with console error with wrong switchAt input", () => {
+  //       expect(console.error.mock.calls.length).toBe(0);
 
-        const errorStack = create(
-          <SplitSwitcher gutter="lg" switchAt={{ value: "incorrect" }}>
-            <Lorem />
-          </SplitSwitcher>
-        );
+  //       const errorStack = create(
+  //         <SplitSwitcher gutter="lg" switchAt={{ value: "incorrect" }}>
+  //           <Lorem />
+  //         </SplitSwitcher>
+  //       );
 
-        expect(console.error).toBeCalled();
-        expect(errorStack.toJSON()).toMatchSnapshot();
-      });
-    });
-  });
+  //       expect(console.error).toBeCalled();
+  //       expect(errorStack.toJSON()).toMatchSnapshot();
+  //     });
+  //   });
+  // });
 
   describe("ColumnsSwitcher", () => {
     describe("correct usage", () => {

@@ -10,19 +10,11 @@ import { Box } from './Box';
 
 ## Use case
 
-The SplitSwitcher component is designed to create a split layout based on a fraction but switches to a Stack layout at a `switchAt` size.
-
-The SplitSwitcher has the same API as the Split Component, plus a `switchAt` prop. When the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
-
 The ColumnsSwitcher component is designed to create a column layout and switch to a Stack layout at a `switchAt` size.
 
 The ColumnsSwitcher has the same API as the ColumnsSwitcher Component, plus a `switchAt` prop. When the Switcher is less than or equal to that pixel width, it will switch to a `Stack` component.
 
 ## API
-
-### SplitSwitcher props
-
-<ArgsTable of={SplitSwitcher} />
 
 ### ColumnsSwitcher props
 
@@ -32,16 +24,7 @@ The ColumnsSwitcher has the same API as the ColumnsSwitcher Component, plus a `s
 
 ### SplitSwitcher
 
-The below switch will stack when it is less than `50rem`.
-
-<Preview withToolbar>
-  <Story name="SplitSwitcher">
-    <SplitSwitcher gutter="lg" fraction="1/2" switchAt="50rem">
-      <Box />
-      <Box />
-    </SplitSwitcher>
-  </Story>
-</Preview>
+The SplitSwitcher has been Deprecated, and the functionality has been added to [The Split Component](/docs/components-split--basic)
 
 ### ColumnsSwitcher
 

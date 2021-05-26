@@ -47,7 +47,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 99,
-      branches: 96.05,
+      branches: 95,
       functions: 100,
       lines: 99,
     },
@@ -65,10 +65,10 @@ module.exports = {
       lines: 58,
     },
     "./packages/switcher/src/index.tsx": {
-      statements: 95,
-      branches: 83,
-      functions: 100,
-      lines: 98,
+      statements: 0,
+      branches: 0,
+      functions: 0,
+      lines: 0,
     },
   },
 

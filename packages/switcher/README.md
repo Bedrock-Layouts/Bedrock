@@ -1,4 +1,8 @@
-# `@bedrock-layout/switcher`
+# DEPRECATION WARNING
+
+This package is deprecated and will no longer be maintained. All the functionality has been added to the `Split` and `Columns` components, respectively. It is recommended that you use those components going forward.
+
+## `@bedrock-layout/switcher`
 
 The switchers are layout primitive that start as either a `Split` or `Columns` primitive but will switch to a `Stack` when the container size is below the `switchAt` value.
 
