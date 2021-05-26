@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-container-query@1.1.19...@bedrock-layout/use-container-query@1.2.0) (2021-05-26)
+
+
+### Features
+
+* **use-container-query:** allow the same node to be passed into the query with it's own callback ([00d375f](https://github.com/Bedrock-Layouts/Bedrock/commit/00d375fc66d0c6d042c55cf1b224acd17d3c8105))
+
+
+
+
+
 ## [1.1.19](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-container-query@1.1.18...@bedrock-layout/use-container-query@1.1.19) (2021-05-26)
 
 **Note:** Version bump only for package @bedrock-layout/use-container-query
