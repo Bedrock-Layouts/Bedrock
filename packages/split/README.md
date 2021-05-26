@@ -29,15 +29,17 @@ import { Split } from '@bedrock-layout/split';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-split`.
+For purposes of styling, you can select `data-bedrock-layout-split`.
 
 ## API
 
 \* required
 
-| Property | Description                     | Type                                                                | Default |
-| -------- | ------------------------------- | ------------------------------------------------------------------- | ------- |
-| gutter\* | sets space between each element | one of spacing\*\*                                                  | -       |
-| fraction | sets the fractional split       | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+| Property | Description                                           | Type                                                                | Default |
+| -------- | ----------------------------------------------------- | ------------------------------------------------------------------- | ------- |
+| gutter\* | sets space between each element                       | one of spacing\*\*                                                  | -       |
+| fraction | sets the fractional split                             | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+| fraction | sets the fractional split                             | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+| switchAt | sets the width threshold that the split will switchAt | a number in pixels or valid CSS length as a string                  | -       |
 
 \*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
