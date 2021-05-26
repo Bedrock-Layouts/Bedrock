@@ -58,12 +58,19 @@ module.exports = {
       functions: 66,
       lines: 73,
     },
+    "./packages/use-container-query/src/index.tsx": {
+      statements: 97,
+      branches: 80,
+      functions: 90,
+      lines: 100,
+    },
     "./packages/masonry-grid/src/index.tsx": {
       statements: 55,
       branches: 31,
       functions: 64,
       lines: 58,
     },
+    // Deprecated packages
     "./packages/switcher/src/index.tsx": {
       statements: 0,
       branches: 0,
