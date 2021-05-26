@@ -4,12 +4,12 @@ const webpack = require("webpack");
 module.exports = {
   stories: [
     "./pages/Landing.stories.mdx",
+    "./pages/installation.stories.mdx",
+    "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
     "./pages/inspiration.stories.mdx",
     "./pages/regardingIE11.stories.mdx",
     "./pages/layout-primitives.stories.mdx",
     "./pages/styled-components.stories.mdx",
-    "./pages/installation.stories.mdx",
-    "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
   ],
   addons: [
     "@storybook/addon-essentials",
