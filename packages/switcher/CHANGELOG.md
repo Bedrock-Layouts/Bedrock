@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.0.11...@bedrock-layout/switcher@2.1.0) (2021-05-26)
+
+
+### Features
+
+* **columns:** add switchAt to Columns ([e2a0500](https://github.com/Bedrock-Layouts/Bedrock/commit/e2a050045bf407e4a407fb05ab2c083015857d8a))
+* **split:** add the switchAt to split ([9c5028b](https://github.com/Bedrock-Layouts/Bedrock/commit/9c5028ba2138863ae1926e06c10a8a53bd1273b4))
+
+
+
+
+
 ## [2.0.11](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/switcher@2.0.10...@bedrock-layout/switcher@2.0.11) (2021-05-21)
 
 **Note:** Version bump only for package @bedrock-layout/switcher
