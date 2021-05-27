@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.16](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-match-media@1.1.15...@bedrock-layout/use-match-media@1.1.16) (2021-05-27)
+
+**Note:** Version bump only for package @bedrock-layout/use-match-media
+
+
+
+
+
 ## [1.1.15](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-match-media@1.1.14...@bedrock-layout/use-match-media@1.1.15) (2021-05-26)
 
 **Note:** Version bump only for package @bedrock-layout/use-match-media
