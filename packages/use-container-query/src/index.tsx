@@ -30,10 +30,14 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
       (entry.borderBoxSize as unknown as ResizeObserverSize)?.inlineSize ??
       entry.contentRect.width;
 
-    if (typeof maxWidth !== "undefined") {
-      setMatch(nodeWidth >= width && nodeWidth <= maxWidth);
-    } else {
-      setMatch(nodeWidth <= width);
+    //nodeWidth can be zero when it is switching from one node to another.  This will ignore that.
+    if (nodeWidth > 0) {
+      const newMatch =
+        maxWidth === undefined
+          ? nodeWidth <= width
+          : nodeWidth >= width && nodeWidth <= maxWidth;
+
+      setMatch(newMatch);
     }
   };
 

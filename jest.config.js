@@ -60,7 +60,7 @@ module.exports = {
     },
     "./packages/use-container-query/src/index.tsx": {
       statements: 97,
-      branches: 80,
+      branches: 77,
       functions: 90,
       lines: 100,
     },
