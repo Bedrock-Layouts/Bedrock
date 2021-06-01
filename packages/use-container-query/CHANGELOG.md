@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-container-query@1.2.0...@bedrock-layout/use-container-query@1.2.1) (2021-06-01)
+
+
+### Bug Fixes
+
+* **use-container-query:** remove the flash that can happen when resizing ([3eebfbe](https://github.com/Bedrock-Layouts/Bedrock/commit/3eebfbe39392e4f5512548769cec4d8f8c0f30a1))
+
+
+
+
+
 # [1.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-container-query@1.1.19...@bedrock-layout/use-container-query@1.2.0) (2021-05-26)
 
 
