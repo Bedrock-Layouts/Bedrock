@@ -605,8 +605,45 @@ exports[`Split correct usage should render a stack if container is below switchA
 `;
 
 exports[`Split correct usage should render as a main 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 1rem;
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: 1fr 1fr;
+}
+
 <main
-  className=""
+  className="c0 "
+  data-bedrock-layout-split=""
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</main>
+`;
+
+exports[`Split correct usage should render as a main when wrapped in styled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 1rem;
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: 1fr 1fr;
+}
+
+<main
+  className="c0 "
+  data-bedrock-layout-split=""
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
