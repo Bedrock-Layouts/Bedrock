@@ -11,9 +11,11 @@ export function forwardRefWithAs<Props, ComponentType extends As>(
     Props
   >;
 }
-export type PropsFromAs<ComponentType extends As, ComponentProps> =
-  (PropsWithAs<ComponentType, ComponentProps> & { as: ComponentType }) &
-    PropsWithAs<ComponentType, ComponentProps>;
+export type PropsFromAs<
+  ComponentType extends As,
+  ComponentProps
+> = (PropsWithAs<ComponentType, ComponentProps> & { as: ComponentType }) &
+  PropsWithAs<ComponentType, ComponentProps>;
 
 export type ComponentWithForwardedRef<
   ElementType extends React.ElementType,
@@ -26,14 +28,16 @@ export type ComponentWithForwardedRef<
 
 export type As<BaseProps = any> = React.ElementType<BaseProps>;
 
-export type PropsWithAs<ComponentType extends As, ComponentProps> =
-  ComponentProps &
-    Omit<
-      React.ComponentPropsWithRef<ComponentType>,
-      "as" | keyof ComponentProps
-    > & {
-      as?: ComponentType;
-    };
+export type PropsWithAs<
+  ComponentType extends As,
+  ComponentProps
+> = ComponentProps &
+  Omit<
+    React.ComponentPropsWithRef<ComponentType>,
+    "as" | keyof ComponentProps
+  > & {
+    as?: ComponentType;
+  };
 
 export interface ComponentWithAs<ComponentType extends As, ComponentProps> {
   // These types are a bit of a hack, but cover us in cases where the `as` prop
