@@ -42,6 +42,17 @@ describe("Column", () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
+    it("renders as main", () => {
+      const columns = create(
+        <Columns gutter="lg" as="main">
+          <Column>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
     it("renders custom span", () => {
       const columns = create(
         <Columns gutter="lg">
