@@ -40,7 +40,7 @@ export interface ColumnsProps extends StackProps, ColumnsBaseProps {
   children?: React.ReactNode;
 }
 
-export const Columns = forwardRefWithAs<ColumnsProps, "div">(
+const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
   ({ columns, dense, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const [maybePx, setMaybePx] = React.useState<number | null>(null);
@@ -75,6 +75,10 @@ export const Columns = forwardRefWithAs<ColumnsProps, "div">(
     );
   }
 );
+
+export const Columns = styled(ColumnComp).attrs(({ as }) => ({
+  forwordedAs: as,
+}))``;
 
 Columns.displayName = "Columns";
 

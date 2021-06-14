@@ -83,6 +83,16 @@ describe("Split", () => {
       useContainerQuery.mockRestore();
     });
 
+    it("should render as a main", () => {
+      const stack = create(
+        <Split gutter="lg" as="main">
+          <Lorem />
+        </Split>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
+
     it("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
       useContainerQuery.mockImplementation((...[, width]) => {

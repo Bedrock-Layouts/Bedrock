@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Column correct usage renders as main 1`] = `
+.c0 {
+  --span: 1;
+  grid-column: span min(var(--span),var(--columns)) / auto;
+}
+
+<main
+  className=""
+>
+  <div
+    className="c0"
+    data-bedrock-layout-column=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</main>
+`;
+
 exports[`Column correct usage renders custom span 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -17,7 +46,7 @@ exports[`Column correct usage renders custom span 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <div
@@ -58,7 +87,7 @@ exports[`Column correct usage renders default gutters 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <div
@@ -98,7 +127,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <div
@@ -139,7 +168,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <div
@@ -180,7 +209,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <div
@@ -216,7 +245,7 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -246,7 +275,7 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -276,7 +305,7 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -306,7 +335,7 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -336,7 +365,7 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -366,7 +395,7 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -396,7 +425,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -426,7 +455,7 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -456,7 +485,7 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -486,7 +515,7 @@ exports[`Columns correct usage renders all the gutter options 10`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -516,7 +545,7 @@ exports[`Columns correct usage renders all the gutter options 11`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -546,7 +575,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -576,7 +605,7 @@ exports[`Columns correct usage renders dense mode 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -606,7 +635,7 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -637,7 +666,7 @@ exports[`Columns correct usage should render a columns if container is above swi
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-stack=""
   style={
     Object {
@@ -673,7 +702,7 @@ exports[`Columns correct usage should render a stack if container is below switc
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-stack=""
   style={
     Object {
@@ -708,7 +737,7 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -738,7 +767,7 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -768,7 +797,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -798,7 +827,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -828,7 +857,7 @@ exports[`Columns incorrect usage renders default with console error with no gutt
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -858,7 +887,7 @@ exports[`Columns incorrect usage renders default with console error with wrong s
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
@@ -888,7 +917,7 @@ exports[`Columns incorrect usage renders default with wrong gutter input 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-columns=""
 >
   <p>
