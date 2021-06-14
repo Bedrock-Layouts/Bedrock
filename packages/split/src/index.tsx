@@ -3,7 +3,7 @@ import {
   getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
@@ -36,6 +36,7 @@ const fractions: Fractions = {
 interface SplitBaseProps {
   gutter: keyof SpacingOptions;
   fraction?: FractionTypes;
+  forwardedAs?: As<unknown>;
 }
 
 const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
@@ -86,9 +87,12 @@ const Splitter = forwardRefWithAs<SplitProps, "div">(
   }
 );
 
-export const Split = styled(Splitter).attrs(({ as }) => ({
-  forwordedAs: as,
-}))``;
+export const Split = styled(Splitter).attrs(({ as, forwardedAs }) => {
+  return {
+    forwardedAs: as ?? forwardedAs,
+    as: Splitter,
+  };
+})``;
 
 Split.displayName = "Split";
 

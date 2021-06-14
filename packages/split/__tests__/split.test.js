@@ -2,7 +2,7 @@ import { spacing } from "@bedrock-layout/spacing-constants";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import { Split } from "../src";
 
@@ -91,6 +91,17 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
+    });
+
+    it("should render as a main when wrapped in styled", () => {
+      const WrappedSplit = styled(Split)``;
+      const split = create(
+        <WrappedSplit gutter="lg" as="main">
+          <Lorem />
+        </WrappedSplit>
+      );
+
+      expect(split.toJSON()).toMatchSnapshot();
     });
 
     it("should render a split if container is above switchAt", () => {

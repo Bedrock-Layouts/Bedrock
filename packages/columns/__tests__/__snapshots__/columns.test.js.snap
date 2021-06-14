@@ -2,15 +2,26 @@
 
 exports[`Column correct usage renders as main 1`] = `
 .c0 {
+  box-sizing: border-box;
+  --gutter: 1rem;
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  gap: var(--gutter);
+  grid-auto-flow: row;
+}
+
+.c1 {
   --span: 1;
   grid-column: span min(var(--span),var(--columns)) / auto;
 }
 
 <main
-  className=""
+  className="c0 "
+  data-bedrock-layout-columns=""
 >
   <div
-    className="c0"
+    className="c1"
     data-bedrock-layout-column=""
   >
     <p>

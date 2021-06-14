@@ -3,7 +3,7 @@ import {
   getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
@@ -14,6 +14,7 @@ interface ColumnsBaseProps {
   gutter: keyof SpacingOptions;
   columns?: number;
   dense?: boolean;
+  forwardedAs?: As<unknown>;
 }
 
 const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(() => ({
@@ -76,9 +77,12 @@ const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
   }
 );
 
-export const Columns = styled(ColumnComp).attrs(({ as }) => ({
-  forwordedAs: as,
-}))``;
+export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
+  return {
+    forwardedAs: as ?? forwardedAs,
+    as: ColumnComp,
+  };
+})``;
 
 Columns.displayName = "Columns";
 
