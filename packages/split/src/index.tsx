@@ -56,7 +56,7 @@ export interface SplitProps extends StackProps, SplitBaseProps {
   children?: React.ReactNode;
 }
 
-export const Split = forwardRefWithAs<SplitProps, "div">(
+const Splitter = forwardRefWithAs<SplitProps, "div">(
   ({ fraction, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
     const [maybePx, setMaybePx] = React.useState<number | null>(null);
@@ -85,6 +85,10 @@ export const Split = forwardRefWithAs<SplitProps, "div">(
     );
   }
 );
+
+export const Split = styled(Splitter).attrs(({ as }) => ({
+  forwordedAs: as,
+}))``;
 
 Split.displayName = "Split";
 

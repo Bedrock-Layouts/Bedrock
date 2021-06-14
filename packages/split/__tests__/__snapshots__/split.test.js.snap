@@ -10,7 +10,7 @@ exports[`Split correct usage renders all the fraction options 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -38,7 +38,7 @@ exports[`Split correct usage renders all the fraction options 2`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -66,7 +66,7 @@ exports[`Split correct usage renders all the fraction options 3`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -94,7 +94,7 @@ exports[`Split correct usage renders all the fraction options 4`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -122,7 +122,7 @@ exports[`Split correct usage renders all the fraction options 5`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -150,7 +150,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -178,7 +178,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -206,7 +206,7 @@ exports[`Split correct usage renders all the gutter options 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -234,7 +234,7 @@ exports[`Split correct usage renders all the gutter options 2`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -262,7 +262,7 @@ exports[`Split correct usage renders all the gutter options 3`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -290,7 +290,7 @@ exports[`Split correct usage renders all the gutter options 4`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -318,7 +318,7 @@ exports[`Split correct usage renders all the gutter options 5`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -346,7 +346,7 @@ exports[`Split correct usage renders all the gutter options 6`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -374,7 +374,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -402,7 +402,7 @@ exports[`Split correct usage renders all the gutter options 8`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -430,7 +430,7 @@ exports[`Split correct usage renders all the gutter options 9`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -458,7 +458,7 @@ exports[`Split correct usage renders all the gutter options 10`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -486,7 +486,7 @@ exports[`Split correct usage renders all the gutter options 11`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -514,7 +514,7 @@ exports[`Split correct usage renders with theme overrides 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -545,7 +545,7 @@ exports[`Split correct usage should render a split if container is above switchA
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-stack=""
   style={
     Object {
@@ -581,7 +581,7 @@ exports[`Split correct usage should render a stack if container is below switchA
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-stack=""
   style={
     Object {
@@ -604,6 +604,25 @@ exports[`Split correct usage should render a stack if container is below switchA
 </div>
 `;
 
+exports[`Split correct usage should render as a main 1`] = `
+<main
+  className=""
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</main>
+`;
+
 exports[`Split incorrect usage renders default with console error with fraction input 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -614,7 +633,7 @@ exports[`Split incorrect usage renders default with console error with fraction 
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -642,7 +661,7 @@ exports[`Split incorrect usage renders default with console error with no gutter
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -670,7 +689,7 @@ exports[`Split incorrect usage renders default with console error with wrong swi
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
@@ -698,7 +717,7 @@ exports[`Split incorrect usage renders default with wrong gutter input 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 "
   data-bedrock-layout-split=""
 >
   <p>
