@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.1.5...@bedrock-layout/split@2.1.6) (2021-06-14)
+
+
+### Bug Fixes
+
+* fix issue caused by fix ([ad66404](https://github.com/Bedrock-Layouts/Bedrock/commit/ad66404a9346733a6ff9d71be918f1b7a0ae0e5b))
+
+
+
+
+
 ## [2.1.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.1.4...@bedrock-layout/split@2.1.5) (2021-06-14)
 
 **Note:** Version bump only for package @bedrock-layout/split
