@@ -104,10 +104,10 @@ describe("Split", () => {
       expect(split.toJSON()).toMatchSnapshot();
     });
 
-    it("should render a split if container is above switchAt", () => {
+    fit("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
       useContainerQuery.mockImplementation((...[, width]) => {
-        return width <= widthToSwitchAt + 1;
+        return width <= widthToSwitchAt;
       });
 
       const stack = create(

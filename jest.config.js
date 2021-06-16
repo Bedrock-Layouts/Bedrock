@@ -46,10 +46,10 @@ module.exports = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
-      statements: 99,
-      branches: 94,
-      functions: 100,
-      lines: 99,
+      statements: 98,
+      branches: 91,
+      functions: 98,
+      lines: 98,
     },
     //TODO Fix the below coverage
     "./packages/inline/src/index.tsx": {
