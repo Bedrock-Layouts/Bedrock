@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.6 (2021-06-16)
+
+**Note:** Version bump only for package @bedrock-layout/reel
+
+
+
+
+
 ## 0.2.5 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/reel
