@@ -122,7 +122,7 @@ export const Column = styled.div.attrs<ColumnProps, { colSpan?: number }>(
 )<ColumnProps>`
   --span: ${(props) => Math.max(safeSpan(props.colSpan), 1)};
 
-  grid-column: span min(var(--span), var(--columns)) / auto;
+  grid-column: span min(var(--span), var(--columns));
 `;
 
 Column.displayName = "Column";

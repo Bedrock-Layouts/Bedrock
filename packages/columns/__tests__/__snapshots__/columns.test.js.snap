@@ -13,7 +13,7 @@ exports[`Column correct usage renders as main 1`] = `
 
 .c1 {
   --span: 1;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <main
@@ -53,7 +53,7 @@ exports[`Column correct usage renders custom span 1`] = `
 
 .c1 {
   --span: 2;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <div
@@ -94,7 +94,7 @@ exports[`Column correct usage renders default gutters 1`] = `
 
 .c1 {
   --span: 1;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <div
@@ -134,7 +134,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 
 .c1 {
   --span: 1;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <div
@@ -175,7 +175,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 
 .c1 {
   --span: 1;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <div
@@ -216,7 +216,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 
 .c1 {
   --span: 1;
-  grid-column: span min(var(--span),var(--columns)) / auto;
+  grid-column: span min(var(--span),var(--columns));
 }
 
 <div
