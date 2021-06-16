@@ -37,4 +37,4 @@ jobs:
       - run: git config --global user.name  'Jarvis1010'
       - run: git config --global user.email  'travis.mair@gmail.com'
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-        run: npx lerna publish --git-remote pub
+        run: npx lerna publish --git-remote pub --conventional-commits --yes

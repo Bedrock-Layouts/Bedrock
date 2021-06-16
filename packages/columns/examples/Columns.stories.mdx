@@ -9,7 +9,7 @@ import { Box } from './Box'
 
 ## Use case
 
-The Columns component is designed to create a column layout
+The `Columns` component is designed to create a n-column layout. The complimentary `Column` will allow elements to span and offset n-columns.
 
 ## API
 
@@ -22,6 +22,8 @@ The Columns component is designed to create a column layout
 <ArgsTable of={Column} />
 
 ## Basic usage
+
+The below example is a 4 column layout. Each box will take up one column by default.
 
 <Preview withToolbar>
   <Story name="Basic">
@@ -38,6 +40,8 @@ The Columns component is designed to create a column layout
 </Preview>
 
 ## With xx-large gutters
+
+Gutters are configured with the `gutter` prop
 
 <Preview withToolbar>
   <Story name="Gutters">
