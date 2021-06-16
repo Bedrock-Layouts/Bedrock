@@ -63,6 +63,28 @@ describe("Column", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
+    it("renders offsetStart span", () => {
+      const columns = create(
+        <Columns gutter="lg" columns={4}>
+          <Column span={2} offsetStart={2}>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders offsetEnd span", () => {
+      const columns = create(
+        <Columns gutter="lg" columns={4}>
+          <Column span={2} offsetEnd={2}>
+            <Lorem />
+          </Column>
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
   });
 
   describe("incorrect usage", () => {

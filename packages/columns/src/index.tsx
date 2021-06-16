@@ -8,7 +8,7 @@ import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface ColumnsBaseProps {
   gutter: keyof SpacingOptions;
@@ -95,6 +95,8 @@ Columns.propTypes = {
 
 export interface ColumnProps {
   span?: number;
+  offsetStart?: number;
+  offsetEnd?: number;
 }
 
 const safeSpan = (span: unknown) => {
@@ -122,7 +124,36 @@ export const Column = styled.div.attrs<ColumnProps, { colSpan?: number }>(
 )<ColumnProps>`
   --span: ${(props) => Math.max(safeSpan(props.colSpan), 1)};
 
-  grid-column: span min(var(--span), var(--columns));
+  ${({ offsetStart = 0, offsetEnd = 0 }) =>
+    offsetStart > 0 || offsetEnd > 0
+      ? css`
+          display: contents;
+
+          > * {
+            grid-column: span min(var(--span), var(--columns));
+          }
+        `
+      : css`
+          grid-column: span min(var(--span), var(--columns));
+        `}
+
+  ${({ offsetStart = 0 }) =>
+    offsetStart > 0 &&
+    css`
+      ::before {
+        content: "";
+        grid-column: span min(${offsetStart}, var(--columns));
+      }
+    `}
+
+  ${({ offsetEnd = 0 }) =>
+    offsetEnd > 0 &&
+    css`
+      ::after {
+        content: "";
+        grid-column: span min(${offsetEnd}, var(--columns));
+      }
+    `}
 `;
 
 Column.displayName = "Column";

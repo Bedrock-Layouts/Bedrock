@@ -93,6 +93,28 @@ The Columns component is designed to create a column layout
   </Story>
 </Preview>
 
+## With Column and offset
+
+In the below code, the blue box is offsetStart by 2 and the green box has an offsetEnd of 3
+
+<Preview withToolbar>
+  <Story name="With Column and offset">
+    <Columns gutter="lg" columns={5}>
+      <Box />
+      <Box />
+      <Column span={2} offsetStart={1}>
+        <Box style={{ background: "blue" }} />
+      </Column>
+      <Column span={2} offsetEnd={2}>
+        <Box style={{ background: "green" }} />
+      </Column>
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+  </Story>
+</Preview>
+
 ## With switchAt
 
 The below Columns layout will stack when it is less than `45rem`.
