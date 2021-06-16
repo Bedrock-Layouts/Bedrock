@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUSKY: 0
+      NPM_AUTH: ${{secrets.NPM_AUTH}}
+      GH_TOKEN: ${{secrets.GH_TOKEN}}
     strategy:
       matrix:
         node-version: [14.x]
@@ -36,6 +38,3 @@ jobs:
       - run: git config --global user.email  'travis.mair@gmail.com'
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: npx lerna publish --git-remote pub
-      env:
-        NPM_AUTH: ${{secrets.NPM_AUTH}}
-        GH_TOKEN: ${{secrets.GH_TOKEN}}
