@@ -12,10 +12,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      HUSKY: 0
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,3 +27,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run verify
+      - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH}}" > ~/.npmrc
+      - run: git remote add pub https://${{secrets.GH_TOKEN}}@github.com/Bedrock-Layouts/Bedrock.git
+      - run: git fetch pub master
+      - run: git checkout master
+      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        run: npx lerna publish --git-remote pub
