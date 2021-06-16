@@ -31,5 +31,7 @@ jobs:
       - run: git remote add pub https://${{secrets.GH_TOKEN}}@github.com/Bedrock-Layouts/Bedrock.git
       - run: git fetch pub master
       - run: git checkout master
+      - run: git config --global user.name  'Jarvis1010'
+      - run: git config --global user.email  'travis.mair@gmail.com'
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: npx lerna publish --git-remote pub
