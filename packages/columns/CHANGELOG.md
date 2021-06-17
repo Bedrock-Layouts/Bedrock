@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/columns@2.1.10...@bedrock-layout/columns@2.1.11) (2021-06-17)
+
+**Note:** Version bump only for package @bedrock-layout/columns
+
+
+
+
+
 ## 2.1.10 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/columns
