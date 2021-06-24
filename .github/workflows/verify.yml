@@ -32,7 +32,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run verify
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH}}" > ~/.npmrc
       - run: npm whoami
       # - run: git remote add pub https://$GH_TOKEN@github.com/Bedrock-Layouts/Bedrock.git
       # - run: git fetch pub master
