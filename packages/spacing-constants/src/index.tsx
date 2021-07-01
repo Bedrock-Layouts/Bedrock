@@ -14,13 +14,30 @@ export interface Spacing {
   xxl: string;
 }
 
-type ThemeOrDefault<T> = T extends { spacing: Record<string, string | number> }
-  ? T["spacing"]
-  : T extends { space: Record<string, string | number> }
+export interface Sizes {
+  small: string;
+  medium: string;
+  large: string;
+  xlarge: string;
+  xxlarge: string;
+}
+
+type ThemeOrDefaultSpace<T> = T extends {
+  space: Record<string, string | number>;
+}
   ? T["space"]
+  : T extends { spacing: Record<string, string | number> }
+  ? T["spacing"]
   : Spacing;
 
-export type SpacingOptions = ThemeOrDefault<DefaultTheme>;
+type ThemeOrDefaultSizes<T> = T extends {
+  sizes: Record<string, string | number>;
+}
+  ? T["sizes"]
+  : Sizes;
+
+export type SpacingOptions = ThemeOrDefaultSpace<DefaultTheme>;
+export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 
 const none = "0px";
 const xxs = "0.0625rem";
@@ -48,6 +65,20 @@ export const spacing: Record<string, string> = {
   xxl,
 };
 
+const small = 639;
+const medium = 1023;
+const large = 1199;
+const xlarge = 1439;
+const xxlarge = 1920;
+
+export const sizes: Sizes = {
+  small: small + "px",
+  medium: medium + "px",
+  large: large + "px",
+  xlarge: xlarge + "px",
+  xxlarge: xxlarge + "px",
+};
+
 function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
   return entries.reduce((acc, [key, value]) => {
     return { ...acc, [key]: value };
@@ -65,7 +96,7 @@ type GetSpacingValue = <T>(
 ) => MaybeValue;
 
 export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
-  const maybeSpaceing = theme.spacing ?? theme.space;
+  const maybeSpaceing = theme.space ?? theme.spacing;
 
   if (!maybeSpaceing) return spacing[spacingKey];
 
@@ -79,16 +110,34 @@ export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
   return safeSpacings[spacingKey];
 };
 
+type GetSizeValue = <T>(
+  theme: T & {
+    sizes?: Record<string, string | number>;
+  },
+  sizingKey: keyof Sizes | keyof SizesOptions
+) => MaybeValue;
+
+export const getSizeValue: GetSizeValue = (theme, sizeKey) => {
+  const maybeSizes = theme.sizes;
+
+  if (!maybeSizes) return sizes[sizeKey];
+
+  const safeSizes = fromEntries(
+    Object.entries(maybeSizes).map(([sizeKey, value]) => [
+      sizeKey,
+      typeof value === "number" ? `${value}px` : value,
+    ])
+  );
+
+  return safeSizes[sizeKey];
+};
+
 type NumberTuple = [number, number];
 /* Based on Foundations Break Points */
 const smallOnly = 639;
 const mediumOnly: NumberTuple = [640, 1023];
 const largeOnly: NumberTuple = [1024, 1199];
 const xlargeOnly: NumberTuple = [1200, 1439];
-const medium = 1023;
-const large = 1199;
-const xlarge = 1439;
-const xxlarge = 1920;
 
 export interface BreakPoints {
   smallOnly: number;
