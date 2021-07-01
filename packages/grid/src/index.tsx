@@ -1,11 +1,10 @@
 import {
   SpacingOptions,
   getSpacingValue,
+  sizes,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
-const SMALL_BREAKPOINT = "639px";
 
 export interface GridProps {
   gutter: keyof SpacingOptions;
@@ -17,9 +16,7 @@ function getSafeMinItemWidth(minItemWidth?: number | string) {
     return minItemWidth;
   }
 
-  return typeof minItemWidth === "number"
-    ? `${minItemWidth}px`
-    : SMALL_BREAKPOINT;
+  return typeof minItemWidth === "number" ? `${minItemWidth}px` : sizes.small;
 }
 
 export const Grid = styled.div.attrs<GridProps>(() => {
@@ -31,7 +28,7 @@ export const Grid = styled.div.attrs<GridProps>(() => {
   @property --minItemWidth {
     syntax: "<length-percentage>";
     inherits: false;
-    initial-value: ${SMALL_BREAKPOINT};
+    initial-value: ${sizes.small};
   }
 
   --gutter: ${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
@@ -42,7 +39,7 @@ export const Grid = styled.div.attrs<GridProps>(() => {
 
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(${SMALL_BREAKPOINT}, 100%), 1fr)
+    minmax(min(${sizes.small}, 100%), 1fr)
   );
 
   @supports (
