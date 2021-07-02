@@ -40,3 +40,29 @@ describe("Spacing Constants", () => {
     );
   });
 });
+
+describe("Size Constants", () => {
+  it("should return a string if no sizes provided", () => {
+    expect(constants.getSizeValue({}, "large")).toBe("1199px");
+  });
+
+  it("should return undefined if no sizes provided and incorrect key", () => {
+    expect(constants.getSizeValue({}, "noKey")).toBe(undefined);
+  });
+
+  it("should return a string if sizes provided", () => {
+    expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "1x")).toBe(
+      "1199px"
+    );
+  });
+
+  it("should return a string if sizes provided using number", () => {
+    expect(constants.getSizeValue({ sizes: { "1x": 1 } }, "1x")).toBe("1px");
+  });
+
+  it("should return a undefined if sizes provided with incorrect key", () => {
+    expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "lg")).toBe(
+      undefined
+    );
+  });
+});
