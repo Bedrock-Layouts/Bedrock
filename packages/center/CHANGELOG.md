@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@2.0.9...@bedrock-layout/center@2.1.0) (2021-07-02)
+
+
+### Features
+
+* **center:** add size options to maxWidth prop of center ([a66f2f4](https://github.com/Bedrock-Layouts/Bedrock/commit/a66f2f4cea4102a866153bbaba1105615cd94afa))
+
+
+
+
+
 ## 2.0.9 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/center

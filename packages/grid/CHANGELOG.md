@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@2.0.12...@bedrock-layout/grid@2.1.0) (2021-07-02)
+
+
+### Features
+
+* **grid:** add size options for grid minItemWidth ([78e7d87](https://github.com/Bedrock-Layouts/Bedrock/commit/78e7d87c113f1fd31b011749a5fecfc1a04b0748))
+
+
+
+
+
 ## 2.0.12 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/grid

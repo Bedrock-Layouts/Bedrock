@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.2.5...@bedrock-layout/spacing-constants@2.3.0) (2021-07-02)
+
+
+### Features
+
+* **center:** add size options to maxWidth prop of center ([a66f2f4](https://github.com/Bedrock-Layouts/Bedrock/commit/a66f2f4cea4102a866153bbaba1105615cd94afa))
+* **grid:** add size options for grid minItemWidth ([78e7d87](https://github.com/Bedrock-Layouts/Bedrock/commit/78e7d87c113f1fd31b011749a5fecfc1a04b0748))
+* **spacing-constants:** add a standard sizes option ([b139445](https://github.com/Bedrock-Layouts/Bedrock/commit/b13944504df089d453a631e7191dc9aa9c0347c7))
+
+
+
+
+
 ## 2.2.5 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

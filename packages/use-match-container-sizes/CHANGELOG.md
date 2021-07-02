@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.27](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-match-container-sizes@1.1.26...@bedrock-layout/use-match-container-sizes@1.1.27) (2021-07-02)
+
+**Note:** Version bump only for package @bedrock-layout/use-match-container-sizes
+
+
+
+
+
 ## 1.1.26 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/use-match-container-sizes

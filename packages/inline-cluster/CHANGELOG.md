@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.13](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@2.0.12...@bedrock-layout/inline-cluster@2.0.13) (2021-07-02)
+
+**Note:** Version bump only for package @bedrock-layout/inline-cluster
+
+
+
+
+
 ## 2.0.12 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/inline-cluster
