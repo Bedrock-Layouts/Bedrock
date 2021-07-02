@@ -1,17 +1,20 @@
 import {
+  SizesOptions,
   SpacingOptions,
+  getSizeValue,
   getSpacingValue,
   sizes,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+type MinItemWidth = number | string | SizesOptions;
 export interface GridProps {
   gutter: keyof SpacingOptions;
-  minItemWidth?: number | string;
+  minItemWidth?: MinItemWidth;
 }
 
-function getSafeMinItemWidth(minItemWidth?: number | string) {
+function getSafeMinItemWidth(minItemWidth?: MinItemWidth) {
   if (typeof minItemWidth === "string") {
     return minItemWidth;
   }
@@ -32,7 +35,8 @@ export const Grid = styled.div.attrs<GridProps>(() => {
   }
 
   --gutter: ${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
-  --minItemWidth: ${({ minItemWidth }) => getSafeMinItemWidth(minItemWidth)};
+  --minItemWidth: ${({ minItemWidth, theme }) =>
+    getSafeMinItemWidth(getSizeValue(theme, minItemWidth) ?? minItemWidth)};
 
   display: grid;
   gap: var(--gutter);
@@ -43,7 +47,9 @@ export const Grid = styled.div.attrs<GridProps>(() => {
   );
 
   @supports (
-    width: ${({ minItemWidth }) => getSafeMinItemWidth(minItemWidth)}
+    width:
+      ${({ minItemWidth, theme }) =>
+        getSafeMinItemWidth(getSizeValue(theme, minItemWidth) ?? minItemWidth)}
   ) {
     grid-template-columns: repeat(
       auto-fit,

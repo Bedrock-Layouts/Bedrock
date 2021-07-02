@@ -114,22 +114,22 @@ type GetSizeValue = <T>(
   theme: T & {
     sizes?: Record<string, string | number>;
   },
-  sizingKey: keyof Sizes | keyof SizesOptions
+  sizingKey: unknown
 ) => MaybeValue;
 
 export const getSizeValue: GetSizeValue = (theme, sizeKey) => {
-  const maybeSizes = theme.sizes;
+  if (typeof sizeKey === "number" || sizeKey === undefined) return undefined;
 
-  if (!maybeSizes) return sizes[sizeKey];
+  const maybeSizesOrDefault = theme.sizes ?? sizes;
 
   const safeSizes = fromEntries(
-    Object.entries(maybeSizes).map(([sizeKey, value]) => [
+    Object.entries(maybeSizesOrDefault).map(([sizeKey, value]) => [
       sizeKey,
       typeof value === "number" ? `${value}px` : value,
     ])
   );
 
-  return safeSizes[sizeKey];
+  return safeSizes[sizeKey as string];
 };
 
 type NumberTuple = [number, number];
