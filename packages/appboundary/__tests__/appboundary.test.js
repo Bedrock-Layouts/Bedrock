@@ -38,10 +38,19 @@ describe("AppBoundary", () => {
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
 
+    it("renders boundarySize", () => {
+      const appboundary = create(
+        <AppBoundary boundarySize="large">
+          <Lorem />
+        </AppBoundary>
+      );
+      expect(appboundary.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with theme overrides", () => {
       const appboundary = create(
-        <ThemeProvider theme={{ breakPoints: { xxlarge: 1600 } }}>
-          <AppBoundary>
+        <ThemeProvider theme={{ sizes: { ultraWide: 2400 } }}>
+          <AppBoundary boundarySize="ultraWide">
             <Lorem />
           </AppBoundary>
         </ThemeProvider>

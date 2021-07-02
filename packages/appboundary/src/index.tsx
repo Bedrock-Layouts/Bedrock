@@ -1,12 +1,28 @@
 import { Center } from "@bedrock-layout/center";
-import { sizes } from "@bedrock-layout/spacing-constants";
+import {
+  SizesOptions,
+  getSizeValue,
+  sizes,
+} from "@bedrock-layout/spacing-constants";
 import React from "react";
 import styled from "styled-components";
 
-export const AppBoundary = styled.div.attrs((props) => {
+export interface AppBoundaryProps {
+  boundarySize?: SizesOptions;
+}
+
+export const AppBoundary = styled.div.attrs<AppBoundaryProps>((props) => {
   return {
     "data-bedrock-layout-appboundary": "",
-    children: <Center maxWidth={sizes.xxlarge}>{props.children}</Center>,
+    children: (
+      <Center
+        maxWidth={
+          getSizeValue(props.theme, props.boundarySize) ?? sizes.xxlarge
+        }
+      >
+        {props.children}
+      </Center>
+    ),
   };
 })`
   padding: 0;
