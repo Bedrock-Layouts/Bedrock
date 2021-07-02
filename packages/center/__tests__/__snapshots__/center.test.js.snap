@@ -10,7 +10,7 @@ exports[`Center correct usage renders custom width 1`] = `
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:320px) {
+@supports (max-inline-size: 320px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -45,7 +45,7 @@ exports[`Center correct usage renders custom width as string 1`] = `
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:320px) {
+@supports (max-inline-size: 320px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -80,7 +80,7 @@ exports[`Center correct usage renders default width 1`] = `
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:1023px) {
+@supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -115,7 +115,7 @@ exports[`Center correct usage renders default width if invalid CSS length 1`] = 
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:320pixels) {
+@supports (max-inline-size: 320pixels ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -161,7 +161,7 @@ exports[`Center correct usage renders with centered children 1`] = `
   align-items: center;
 }
 
-@supports (max-inline-size:1023px) {
+@supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -197,7 +197,7 @@ exports[`Center correct usage renders with centered text 1`] = `
   text-align: center;
 }
 
-@supports (max-inline-size:1023px) {
+@supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -232,7 +232,7 @@ exports[`Center correct usage renders with theme overrides 1`] = `
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:1023px) {
+@supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -267,7 +267,7 @@ exports[`Center incorrect usage renders default with console error with no child
   max-inline-size: 1023px;
 }
 
-@supports (max-inline-size:1023px) {
+@supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
   }

@@ -1,14 +1,20 @@
-import { sizes } from "@bedrock-layout/spacing-constants";
+import {
+  SizesOptions,
+  getSizeValue,
+  sizes,
+} from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+type MaxWidth = number | string | SizesOptions;
+
 export interface CenterProps {
-  maxWidth?: number | string;
+  maxWidth?: MaxWidth;
   centerText?: boolean;
   centerChildren?: boolean;
 }
 
-function getSafeMaxWidth(maxWidth?: number | string) {
+function getSafeMaxWidth(maxWidth?: MaxWidth) {
   if (typeof maxWidth === "string") {
     return maxWidth;
   }
@@ -26,7 +32,8 @@ export const Center = styled.div.attrs<CenterProps>(() => {
     inherits: false;
     initial-value: ${sizes.medium};
   }
-  --maxWidth: ${({ maxWidth }) => getSafeMaxWidth(maxWidth)};
+  --maxWidth: ${({ maxWidth, theme }) =>
+    getSafeMaxWidth(getSizeValue(theme, maxWidth) ?? maxWidth)};
 
   box-sizing: content-box;
 
@@ -36,7 +43,11 @@ export const Center = styled.div.attrs<CenterProps>(() => {
 
   max-inline-size: ${sizes.medium};
 
-  @supports (max-inline-size: ${({ maxWidth }) => getSafeMaxWidth(maxWidth)}) {
+  @supports (
+    max-inline-size:
+      ${({ maxWidth, theme }) =>
+        getSafeMaxWidth(getSizeValue(theme, maxWidth) ?? maxWidth)}
+  ) {
     max-inline-size: var(--maxWidth, ${sizes.medium});
   }
 

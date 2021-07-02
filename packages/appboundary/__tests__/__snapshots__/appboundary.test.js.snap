@@ -17,7 +17,7 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
   height: 100%;
 }
 
-@supports (max-inline-size:1920px) {
+@supports (max-inline-size: 1920px ) {
   .c1 {
     max-inline-size: var(--maxWidth,1023px);
   }
@@ -64,7 +64,7 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
   height: 100%;
 }
 
-@supports (max-inline-size:1920px) {
+@supports (max-inline-size: 1920px ) {
   .c1 {
     max-inline-size: var(--maxWidth,1023px);
   }

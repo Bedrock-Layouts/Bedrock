@@ -15,6 +15,8 @@ export interface Spacing {
 }
 
 export interface Sizes {
+  xxsmall: string;
+  xsmall: string;
   small: string;
   medium: string;
   large: string;
@@ -65,6 +67,8 @@ export const spacing: Record<string, string> = {
   xxl,
 };
 
+const xxsmall = 159;
+const xsmall = 319;
 const small = 639;
 const medium = 1023;
 const large = 1199;
@@ -72,6 +76,8 @@ const xlarge = 1439;
 const xxlarge = 1920;
 
 export const sizes: Sizes = {
+  xxsmall: xxsmall + "px",
+  xsmall: xsmall + "px",
   small: small + "px",
   medium: medium + "px",
   large: large + "px",
