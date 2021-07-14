@@ -7,7 +7,7 @@ import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 type FractionTypes =
