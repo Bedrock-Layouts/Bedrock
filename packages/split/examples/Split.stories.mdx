@@ -1,19 +1,21 @@
 import { Split } from '@bedrock-layout/split';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
 
-import { Box } from './Box';
+import { Box, argTypes } from './Box';
 
-<Meta title="Components/Split" component={Split} />
+<Meta title="Components/Split" />
 
 # Split
 
 ## Use case
 
-The Split component is designed to create a split layout based on a fraction.
+The Split component is designed to create a split layout based on a fractional ratio. The Split will enforce a standard spacing scheme through the gutter prop and will optionally switch to a stack layout when the provided threshhold is reached.
 
 ## API
 
-<ArgsTable of={Split} />
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
 
 ## Split based on a fraction
 
@@ -21,42 +23,42 @@ The `fraction` prop defines the fraction of the container width to use for the s
 
 <Preview withToolbar>
   <Story name="Fraction">
-    <h2>1/4 split</h2>
+    <h2>1/4</h2>
     <Split gutter="lg" fraction="1/4">
       <Box />
       <Box />
     </Split>
-    <h2>1/3 split</h2>
+    <h2>1/3</h2>
     <Split gutter="lg" fraction="1/3">
       <Box />
       <Box />
     </Split>
-    <h2>1/2 split</h2>
+    <h2>1/2</h2>
     <Split gutter="lg" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>2/3 split</h2>
+    <h2>2/3</h2>
     <Split gutter="lg" fraction="2/3">
       <Box />
       <Box />
     </Split>
-    <h2>3/4 split</h2>
+    <h2>3/4</h2>
     <Split gutter="lg" fraction="3/4">
       <Box />
       <Box />
     </Split>
-    <h2>auto-start split</h2>
+    <h2>auto-start</h2>
     <p>(The first box has a width of 100px)</p>
     <Split gutter="lg" fraction="auto-start">
-      <Box style={{ width: "100px" }} />
+      <Box />
       <Box />
     </Split>
-    <h2>auto-end split</h2>
+    <h2>auto-end</h2>
     <p>(The second box has a width of 100px)</p>
     <Split gutter="lg" fraction="auto-end">
       <Box />
-      <Box style={{ width: "100px" }} />
+      <Box />
     </Split>
   </Story>
 </Preview>
@@ -69,52 +71,57 @@ The following values are available by default:
 
 <Preview withToolbar>
   <Story name="With Gutters">
-    <h2>xxs gutter</h2>
+    <h2>none</h2>
+    <Split gutter="none" fraction="1/2">
+      <Box />
+      <Box />
+    </Split>
+    <h2>xxs</h2>
     <Split gutter="xxs" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>xs gutter</h2>
+    <h2>xs</h2>
     <Split gutter="xs" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>sm gutter</h2>
+    <h2>sm</h2>
     <Split gutter="sm" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>md gutter</h2>
+    <h2>md</h2>
     <Split gutter="md" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>mdLg gutter</h2>
+    <h2>mdLg</h2>
     <Split gutter="mdLg" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>lg gutter</h2>
+    <h2>lg</h2>
     <Split gutter="lg" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>lgXl gutter</h2>
+    <h2>lgXl</h2>
     <Split gutter="lgXl" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>xl gutter</h2>
+    <h2>xl</h2>
     <Split gutter="xl" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>xlXXl gutter</h2>
+    <h2>xlXXl</h2>
     <Split gutter="xlXXl" fraction="1/2">
       <Box />
       <Box />
     </Split>
-    <h2>xxl gutter</h2>
+    <h2>xxl</h2>
     <Split gutter="xxl" fraction="1/2">
       <Box />
       <Box />
@@ -149,36 +156,7 @@ export const Template = (args) =>  (
 <Canvas withToolbar>
   <Story
     name="Playground"
-    argTypes={{
-      switchAt: {
-        type: "string",
-        description:
-          "Sets the width threshold that the split will switch to a Stack layout",
-      },
-      fraction: {
-        description: "Sets the fractional split",
-        default: "1/2",
-        control: "select",
-        options: ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"],
-      },
-      gutter: {
-        description: "Sets space between each element",
-        control: "select",
-        options: [
-          "none",
-          "xxs",
-          "xs",
-          "sm",
-          "md",
-          "mdLg",
-          "lg",
-          "lgXl",
-          "xl",
-          "xlXXl",
-          "xxl",
-        ],
-      },
-    }}
+    argTypes={argTypes}
     args={{ fraction: "1/2", gutter: "lg", switchAt: "30rem" }}
   >
     {Template.bind({})}
