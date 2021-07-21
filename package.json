@@ -29,7 +29,7 @@
     "publish": "lerna publish",
     "publish:ci": "npm run publish -- --no-commit-hooks --ignore-scripts",
     "publish:fix": "lerna publish from-package",
-    "verify": "npm-run-all check-types lint check-format test:coverage",
+    "verify": "npm-run-all check-types lint check-format test:coverage chromatic",
     "postinstall": "husky install",
     "chromatic": "npx chromatic build:storybook --project-token d4754f5354d2"
   },
