@@ -31,7 +31,7 @@
     "publish:fix": "lerna publish from-package",
     "verify": "npm-run-all check-types lint check-format test:coverage",
     "postinstall": "husky install",
-    "chromatic": "npx chromatic build:storybook --project-token d4754f5354d2"
+    "chromatic": "npx chromatic build:storybook --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@bedrock-layout/appboundary": "file:./packages/appboundary",
