@@ -71,18 +71,6 @@ module.exports = {
       lines: 58,
     },
     // Deprecated packages
-    "./packages/use-media-query/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
-    "./packages/use-match-media/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
     "./packages/use-match-container-sizes/src/index.tsx": {
       statements: 0,
       branches: 0,
