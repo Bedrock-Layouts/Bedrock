@@ -70,31 +70,6 @@ module.exports = {
       functions: 64,
       lines: 58,
     },
-    // Deprecated packages
-    "./packages/switcher/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
-    "./packages/use-media-query/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
-    "./packages/use-match-media/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
-    "./packages/use-match-container-sizes/src/index.tsx": {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
-    },
   },
 
   // A path to a custom dependency extractor

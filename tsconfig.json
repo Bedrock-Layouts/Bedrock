@@ -18,17 +18,11 @@
       "@bedrock-layout/stack": ["packages/stack/src"],
       "@bedrock-layout/spacing-constants": ["packages/spacing-constants/src"],
       "@bedrock-layout/split": ["packages/split/src"],
-      "@bedrock-layout/switcher": ["packages/switcher/src"],
       "@bedrock-layout/type-utils": ["packages/type-utils/src"],
       "@bedrock-layout/use-container-query": [
         "packages/use-container-query/src"
       ],
       "@bedrock-layout/use-forwarded-ref": ["packages/use-forwarded-ref/src"],
-      "@bedrock-layout/use-match-container-sizes": [
-        "packages/use-match-container-sizes/src"
-      ],
-      "@bedrock-layout/use-match-media": ["packages/use-match-media/src"],
-      "@bedrock-layout/use-media-query": ["packages/use-media-query/src"],
       "@bedrock-layout/use-stateful-ref": ["packages/use-stateful-ref/src"],
       "$test/*": ["test/*"]
     }
