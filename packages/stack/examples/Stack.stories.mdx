@@ -1,7 +1,7 @@
 import { Stack } from '@bedrock-layout/stack';
-import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-import { Box } from './Box'
+import { Box, argTypes } from './Box'
 
 <Meta title="Components/Stack" component={Stack} />
 
@@ -11,39 +11,73 @@ import { Box } from './Box'
 
 The Stack is designed to literally 'stack' items on top of each other while maintaining a consistent gutter between each item.
 
-## Basic usage
+## API
+
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
+
+## Gutters
 
 <Preview withToolbar>
-  <Story name="Basic">
-    <Stack gutter="lg">
-      <Box />
-      <Box />
+  <Story name="Gutters">
+    <h3>none</h3>
+    <Stack gutter="none">
       <Box />
       <Box />
     </Stack>
-  </Story>
-</Preview>
-
-## With xx-large gutters
-
-<Preview withToolbar>
-  <Story name="With xx-large gutters">
-    <Stack gutter="xxl">
-      <Box />
-      <Box />
+    <h3>xxs</h3>
+    <Stack gutter="xxs">
       <Box />
       <Box />
     </Stack>
-  </Story>
-</Preview>
-
-## With small gutters
-
-<Preview withToolbar>
-  <Story name="With small gutters">
+    <h3>xs</h3>
+    <Stack gutter="xs">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>sm</h3>
     <Stack gutter="sm">
       <Box />
       <Box />
+    </Stack>
+    <h3>md</h3>
+    <Stack gutter="md">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>mdLg</h3>
+    <Stack gutter="mdLg">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>lg</h3>
+    <Stack gutter="lg">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>lgXl</h3>
+    <Stack gutter="lgXl">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>xl</h3>
+    <Stack gutter="xl">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>xl</h3>
+    <Stack gutter="xl">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>xlXXl</h3>
+    <Stack gutter="xlXXl">
+      <Box />
+      <Box />
+    </Stack>
+    <h3>xxl</h3>
+    <Stack gutter="xxl">
       <Box />
       <Box />
     </Stack>
@@ -69,13 +103,14 @@ export const Template = (args) =>  (
 
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Playground"
     args={{
       gutter: "lg",
     }}
+    argTypes={argTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />{" "}
+<ArgsTable story="Playground" />{" "}
