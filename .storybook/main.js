@@ -10,6 +10,7 @@ module.exports = {
     "./pages/regardingIE11.stories.mdx",
     "./pages/layout-primitives.stories.mdx",
     "./pages/styled-components.stories.mdx",
+    "./pages/contributing.stories.mdx",
   ],
   addons: [
     "@storybook/addon-essentials",

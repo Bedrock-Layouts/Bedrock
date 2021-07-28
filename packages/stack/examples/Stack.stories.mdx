@@ -1,7 +1,7 @@
 import { Stack } from '@bedrock-layout/stack';
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-import { Box } from './Box'
+import { Box, argTypes } from './Box'
 
 <Meta title="Components/Stack" component={Stack} />
 
@@ -13,32 +13,7 @@ The Stack is designed to literally 'stack' items on top of each other while main
 
 ## API
 
-<Story
-  name="API"
-  argTypes={{
-    gutter: {
-      description: "Sets space between each element",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-      },
-      control: "select",
-      options: [
-        "none",
-        "xxs",
-        "xs",
-        "sm",
-        "md",
-        "mdLg",
-        "lg",
-        "lgXl",
-        "xl",
-        "xlXXl",
-        "xxl",
-      ],
-    },
-  }}
-/>
+<Story name="API" argTypes={argTypes} />
 
 <ArgsTable story="API" />
 
@@ -132,29 +107,7 @@ export const Template = (args) =>  (
     args={{
       gutter: "lg",
     }}
-    argTypes={{
-      gutter: {
-        description: "Sets space between each element",
-        type: { name: "string", required: true },
-        table: {
-          type: { summary: "string" },
-        },
-        control: "select",
-        options: [
-          "none",
-          "xxs",
-          "xs",
-          "sm",
-          "md",
-          "mdLg",
-          "lg",
-          "lgXl",
-          "xl",
-          "xlXXl",
-          "xxl",
-        ],
-      },
-    }}
+    argTypes={argTypes}
   >
     {Template.bind({})}
   </Story>
