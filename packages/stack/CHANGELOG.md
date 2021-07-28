@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.7 (2021-07-28)
+
+**Note:** Version bump only for package @bedrock-layout/stack
+
+
+
+
+
 ## [2.1.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/stack@2.1.5...@bedrock-layout/stack@2.1.6) (2021-07-02)
 
 **Note:** Version bump only for package @bedrock-layout/stack
