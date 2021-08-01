@@ -38,8 +38,7 @@ exports[`Frame correct usage renders custom position 1`] = `
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -104,8 +103,7 @@ exports[`Frame correct usage renders with ratio 1`] = `
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -169,8 +167,7 @@ exports[`Frame correct usage renders without ratio 1`] = `
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -229,8 +226,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length <1 
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -295,8 +291,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of length >2 
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -361,8 +356,7 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -427,8 +421,7 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;
@@ -493,8 +486,7 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
   align-items: center;
 }
 
-.c0 > img,
-.c0 > video {
+.c0 > :is(img,video) {
   inline-size: 100%;
   -webkit-block-size: 100%;
   -ms-flex-block-size: 100%;

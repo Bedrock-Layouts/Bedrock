@@ -52,8 +52,7 @@ export const Frame = styled.div.attrs<FrameProps>(() => {
     align-items: center;
   }
 
-  > img,
-  > video {
+  > :is(img, video) {
     inline-size: 100%;
     block-size: 100%;
     size: 100%;
