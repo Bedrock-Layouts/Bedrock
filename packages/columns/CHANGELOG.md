@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.14 (2021-08-04)
+
+
+### Bug Fixes
+
+* **stack:** fix layout bug where content was stretched ([f696a95](https://github.com/Bedrock-Layouts/Bedrock/commit/f696a955dc03d0c0ef2299e184816b9b7282f0b3))
+
+
+
+
+
 ## 2.1.13 (2021-07-28)
 
 **Note:** Version bump only for package @bedrock-layout/columns
