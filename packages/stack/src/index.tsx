@@ -10,19 +10,16 @@ export interface StackProps {
 }
 
 export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
-  const maybeGutter = getSpacingValue(theme, gutter);
   return {
     "data-bedrock-layout-stack": "",
-    style: {
-      "--gutter": maybeGutter ?? "0px",
-    },
   };
 })<StackProps>`
   box-sizing: border-box;
+  --gutter: ${(props) => getSpacingValue(props.theme, props.gutter) ?? "0px"};
 
   display: grid;
-  grid-auto-columns: 100%;
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
+  align-content: start;
 
   & > [data-bedrock-layout-column] {
     grid-column: span 1 / auto;
