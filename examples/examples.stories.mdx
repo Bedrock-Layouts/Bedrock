@@ -1,0 +1,33 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/';
+import { Stack } from '../packages/stack/src/';
+import { Split } from '../packages/split/src/';
+import jacketPic from '../.storybook/assets/jacket-pic.jpg'
+
+<Meta title="Examples/Basic" />
+
+# Basic Layout Composition
+
+In this page you'll find some examples of basic layout composition. Minimal styling has been applied to make the examples more readable.
+
+## Product Card
+
+A simple product card with an image and a description on the the right. Uses the `<Split>` and `<Stack>` components.
+
+<Preview withToolbar>
+  <Story name="Product Card">
+    <Split fraction="1/4">
+      <img src={jacketPic} alt="Computer" />
+      <Stack style={{ padding: "1rem" }} gutter="lg">
+        <header>
+          <span>Classic Utility Jacket</span>
+        </header>
+        <p>In Stock</p>
+        <div>
+          <button>Buy Now</button>
+          <button>Add To Bag</button>
+          <button>Like</button>
+        </div>
+      </Stack>
+    </Split>
+  </Story>
+</Preview>
