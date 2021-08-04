@@ -11,7 +11,7 @@ module.exports = {
     "./pages/layout-primitives.stories.mdx",
     "./pages/styled-components.stories.mdx",
     "./pages/contributing.stories.mdx",
-    "./pages/examples.stories.mdx",
+    "../examples/examples.stories.mdx",
   ],
   addons: [
     "@storybook/addon-essentials",
