@@ -1,7 +1,9 @@
 import { PadBox } from '@bedrock-layout/padbox';
-import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-<Meta title="Components/PadBox" component={PadBox} />
+import { argTypes } from './argTypes'
+
+<Meta title="Components/PadBox" component={PadBox}/>
 
 # PadBox
 
@@ -12,7 +14,9 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 ## API
 
-<ArgsTable of={PadBox} />
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
 
 ## Basic Usage
 
