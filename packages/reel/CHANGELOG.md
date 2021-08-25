@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2021-08-25)
+
+
+### Features
+
+* **reel:** finalize v1 of Reel ([c62faf8](https://github.com/Bedrock-Layouts/Bedrock/commit/c62faf8c7cf338557421da983b47a2bd319f3720))
+
+
+### BREAKING CHANGES
+
+* **reel:** All api's are new
+
+
+
+
+
 ## 0.2.7 (2021-06-16)
 
 **Note:** Version bump only for package @bedrock-layout/reel
