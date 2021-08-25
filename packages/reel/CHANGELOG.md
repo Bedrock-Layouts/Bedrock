@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/reel@0.3.0...@bedrock-layout/reel@1.0.1) (2021-08-25)
+
+
+### Bug Fixes
+
+* **reel:** fix readme ([efc1c05](https://github.com/Bedrock-Layouts/Bedrock/commit/efc1c053ec73c9e98d2147d685eccfe8d569f215))
+
+
+
+
+
 # 0.3.0 (2021-08-25)
 
 
