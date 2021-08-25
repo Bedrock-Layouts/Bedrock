@@ -14,7 +14,7 @@
     "react",
     "styled-components"
   ],
-  "author": "snimmagadda1 <saiguy@me.com>",
+  "author": "Bedrock Layout",
   "homepage": "https://bedrock-layout.dev/",
   "license": "MIT",
   "unpkg": "lib/index.umd.js",
@@ -30,6 +30,9 @@
   "files": [
     "lib"
   ],
+  "dependencies": {
+    "@bedrock-layout/spacing-constants": "^2.3.0"
+  },
   "peerDependencies": {
     "react": "^16.8 || ^17",
     "styled-components": ">=5"

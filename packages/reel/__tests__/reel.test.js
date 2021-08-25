@@ -1,3 +1,4 @@
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 
@@ -5,7 +6,7 @@ import { Reel } from "../src";
 
 const Lorem = () => (
   <>
-    {Array.from(Array(20).keys()).map((i) => (
+    {Array.from(Array(3).keys()).map((i) => (
       <p key={i}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non
         praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque
@@ -24,49 +25,26 @@ describe("Reel", () => {
       expect(Reel).toBeTruthy();
     });
 
-    it("renders custom width", () => {
-      const reel = create(
-        <Reel maxWidth={200}>
-          <Lorem />
-        </Reel>
-      );
-      expect(reel.toJSON()).toMatchSnapshot();
+    it("renders snapTypes", () => {
+      ["none", "mandatory", "proximity"].forEach((snapType) => {
+        const reel = create(
+          <Reel snapType={snapType}>
+            <Lorem />
+          </Reel>
+        );
+        expect(reel.toJSON()).toMatchSnapshot();
+      });
     });
 
-    it("renders custom height", () => {
-      const reel = create(
-        <Reel maxHeight={200}>
-          <Lorem />
-        </Reel>
-      );
-      expect(reel.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders horizontal scroll", () => {
-      const reel = create(
-        <Reel snapX>
-          <Lorem />
-        </Reel>
-      );
-      expect(reel.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders horizontal proximity snap", () => {
-      const reel = create(
-        <Reel proximity>
-          <Lorem />
-        </Reel>
-      );
-      expect(reel.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with maxWidth and maxHeight", () => {
-      const reel = create(
-        <Reel maxWidth={250} maxHeight={250}>
-          <Lorem />
-        </Reel>
-      );
-      expect(reel.toJSON()).toMatchSnapshot();
+    it("renders all the gutter options", () => {
+      Object.keys(spacing).forEach((gutter) => {
+        const reel = create(
+          <Reel gutter={gutter}>
+            <Lorem />
+          </Reel>
+        );
+        expect(reel.toJSON()).toMatchSnapshot();
+      });
     });
   });
 
@@ -79,11 +57,24 @@ describe("Reel", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error", () => {
+    it("renders with console error with incorrect snapType", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Reel maxWidth="incorrect">
+        <Reel gutter="lg" snapType="incorrect">
+          <Lorem />
+        </Reel>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with console error with incorrect gutter", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Reel gutter={{ value: "incorrect" }}>
           <Lorem />
         </Reel>
       );
