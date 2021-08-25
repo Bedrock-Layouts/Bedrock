@@ -1,40 +1,53 @@
+import {
+  SpacingOptions,
+  getSpacingValue,
+} from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface ReelProps {
-  maxHeight?: number;
-  maxWidth?: number;
-  snapX?: boolean;
-  proximity?: boolean;
+  snapType?: "none" | "proximity" | "mandatory";
+  gutter: keyof SpacingOptions;
 }
 
 export const Reel = styled.div.attrs<ReelProps>(() => ({
   "data-bedrock-layout-reel": "",
 }))<ReelProps>`
+  --gutter: ${({ gutter, theme }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
+    return maybeGutter ?? "0px";
+  }};
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--gutter);
+
   overflow: scroll;
 
-  ${(props) => (props.maxHeight ? `max-height: ${props.maxHeight}px;` : "")}
-  ${(props) => (props.maxWidth ? `max-width: ${props.maxWidth}px;` : "")}
-
-  ${(props) =>
-    props.snapX
-      ? `
-  scroll-snap-type: x ${props.proximity ? "proximity" : "mandatory"};
-  display: flex;
-  `
-      : `scroll-snap-type: y
-    ${props.proximity ? "proximity" : "mandatory"};`}
+  scroll-snap-type: ${({ snapType = "none" }) => {
+    switch (snapType) {
+      case "none": {
+        return "none";
+      }
+      case "proximity": {
+        return "both proximity";
+      }
+      case "mandatory": {
+        return "both mandatory";
+      }
+      default: {
+        return "none";
+      }
+    }
+  }};
 
   & > * {
-    scroll-snap-align: ${(props) => (props.snapX ? "center" : "start")};
+    scroll-snap-align: start;
   }
 `;
 
 Reel.displayName = "Reel";
 
 Reel.propTypes = {
-  maxHeight: PropTypes.number,
-  maxWidth: PropTypes.number,
-  snapX: PropTypes.bool,
-  proximity: PropTypes.bool,
+  snapType: PropTypes.oneOf(["none", "proximity", "mandatory"]),
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
 };
