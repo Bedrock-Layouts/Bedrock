@@ -36,7 +36,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | InlineCluster          |
 | ✅     | Cover                  |
 | ✅     | Frame                  |
-| 🛠      | Reel                   |
+| ✅     | Reel                   |
 | ✅     | MasonryGrid            |
 | ✅     | CSS Reset              |
 

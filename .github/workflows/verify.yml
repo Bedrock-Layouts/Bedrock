@@ -30,8 +30,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run verify
+      - run: yarn
+      - run: yarn verify
       - run: git checkout master
       - run: git config --global user.email  'travis.mair@gmail.com'
       - run: git config --global user.name  'Jarvis1010'
