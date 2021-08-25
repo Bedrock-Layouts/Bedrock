@@ -40,8 +40,8 @@
     "build": "microbundle build --jsx React.createElement",
     "build:watch": "microbundle build --jsx React.createElement --watch",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
-    "fix-format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
+    "fix-format": "yarn prettier -- --write",
+    "check-format": "yarn prettier -- --list-different",
     "check-types": "tsc --noEmit"
   },
   "bugs": {
