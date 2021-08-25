@@ -1,7 +1,5 @@
 # `@bedrock-layout/reel`
 
-Note: **This is an experimental primitive and still not in v1 release, use with caution**
-
 Layout helper for scrolling content
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
@@ -19,7 +17,7 @@ Used to provide convenient scrolling for lists of media (i.e carousel).
 ```javascript
 import { Reel } from '@bedrock-layout/reel';
 
-<Reel maxHeight={300}>
+<Reel gutter="lg" snapType='mandatory'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -35,9 +33,11 @@ For purposes of styling you can select `data-bedrock-layout-reel`.
 
 ## API
 
-| Property  | Description                                  | Type    | Default |
-| --------- | -------------------------------------------- | ------- | ------- |
-| maxHeight | maximum height of container                  | number  | N/A     |
-| maxWidth  | maximum width of container                   | number  | N/A     |
-| snapX     | controls horizontal snap and center position | boolean | false   |
-| proximity | allows for snapping only near item edges     | boolean | false   |
+\* required
+
+| Property | Description                                  | Type               | Default |
+| -------- | -------------------------------------------- | ------------------ | ------- |
+| gutter\* | sets space inbetween each element            | one of spacing\*\* | -       |
+| snapType | controls horizontal snap and center position | string             | 'none'  |
+
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
