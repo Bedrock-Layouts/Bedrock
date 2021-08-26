@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.15 (2021-08-26)
+
+**Note:** Version bump only for package @bedrock-layout/frame
+
+
+
+
+
 ## [2.1.14](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.1.13...@bedrock-layout/frame@2.1.14) (2021-08-04)
 
 
