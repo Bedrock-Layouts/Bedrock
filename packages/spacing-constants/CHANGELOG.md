@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.3.1...@bedrock-layout/spacing-constants@2.4.0) (2021-08-26)
+
+
+### Features
+
+* **spacing-constants:** export spacing-properties.css ([eb6ae72](https://github.com/Bedrock-Layouts/Bedrock/commit/eb6ae72a50e4c88d5d0890731795a3884cb3fe60))
+
+
+
+
+
 ## 2.3.1 (2021-08-26)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

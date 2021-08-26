@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css-reset@1.0.16...@bedrock-layout/css-reset@1.1.0) (2021-08-26)
+
+
+### Features
+
+* **css-reset:** minify css reset ([6eee386](https://github.com/Bedrock-Layouts/Bedrock/commit/6eee386be93f73471b6e74e4ac53b022e5df6b0b))
+
+
+
+
+
 ## 1.0.16 (2021-08-26)
 
 **Note:** Version bump only for package @bedrock-layout/css-reset
