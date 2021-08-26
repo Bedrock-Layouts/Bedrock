@@ -49,4 +49,8 @@ You can also just bring in the CSS Stylesheet directly from the `lib` folder:
 
 ```javascript
 import "@bedrock-layout/css-reset/lib/reset.css";
+
+/* or import the minified version */
+
+import "@bedrock-layout/css-reset/lib/reset.min.css";
 ```
