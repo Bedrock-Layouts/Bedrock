@@ -1,0 +1,11 @@
+[data-bedrock-layout-stack] {
+  --gutter: 0;
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter);
+  align-content: start;
+}
+
+[data-bedrock-layout-stack] > [data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
