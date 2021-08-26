@@ -39,7 +39,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
     "clean:build": "rimraf lib",
-    "build": "microbundle build --jsx React.createElement",
+    "build": "microbundle build --jsx React.createElement && node createProperties.js && minify lib/spacing-properties.css > lib/spacing-properties.min.css",
     "build:watch": "microbundle build --jsx React.createElement --watch",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
     "fix-format": "yarn prettier -- --write",
