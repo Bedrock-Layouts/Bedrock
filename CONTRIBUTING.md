@@ -15,8 +15,8 @@ Before making a pull request
 3. Set up your environment with `npm install` (not yarn at this time)
 4. Check out a new branch and add your modification.
 5. Add test cases for all your changes.
-6. Use commitizen to do git commit by running `npm run cz` (be sure to stage your changes first).
-7. This will run `npm run verify` automatically as a pre-commit hook. If anything fails, fix and follow step 6 again.
+6. Use commitizen to do git commit by running `yarn cz` (be sure to stage your changes first).
+7. This will run `yarn verify` automatically as a pre-commit hook. If anything fails, fix and follow step 6 again.
 8. Update README.md and documentation under the `examples` folder in the corresponding package.
 9. **DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG**.
 10. Send a pull request 🙏
