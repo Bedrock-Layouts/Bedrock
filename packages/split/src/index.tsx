@@ -49,7 +49,7 @@ const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
   display: grid;
   gap: var(--gutter);
   grid-template-columns: ${({ fraction = "1/2" }) =>
-    fractions[fraction] || fractions["1/2"]}};
+    fractions[fraction] ?? fractions["1/2"]}};
 `;
 
 export interface SplitProps extends StackProps, SplitBaseProps {

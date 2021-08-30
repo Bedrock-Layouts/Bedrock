@@ -135,6 +135,19 @@ describe("useContainerQuery", () => {
     expect(matches).toBe(false);
   });
 
+  test("Will return false if node has a width of 0px", async () => {
+    createNode.mockImplementation((node) => ({
+      target: node,
+      contentRect: { width: 0 },
+    }));
+
+    await act(async () => {
+      ReactDOM.render(<HookWrapper />, container);
+    });
+
+    expect(matches).toBe(false);
+  });
+
   test("Throws and error when called with a maxWidth less than minWidth", () => {
     const renderToThrow = () =>
       act(() => {

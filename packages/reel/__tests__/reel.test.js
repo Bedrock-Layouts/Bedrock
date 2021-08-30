@@ -28,7 +28,7 @@ describe("Reel", () => {
     it("renders snapTypes", () => {
       ["none", "mandatory", "proximity"].forEach((snapType) => {
         const reel = create(
-          <Reel snapType={snapType}>
+          <Reel gutter="lg" snapType={snapType}>
             <Lorem />
           </Reel>
         );
