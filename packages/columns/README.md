@@ -72,7 +72,7 @@ For purposes of styling you can select `data-bedrock-layout-columns` and `data-b
 | columns  | number of columns                         | number             | 1       |
 | dense    | used with `Column` to have a dense layout | boolean            | false   |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
 
 ### Column
 

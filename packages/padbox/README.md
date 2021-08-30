@@ -32,4 +32,4 @@ For purposes of styling you can select `data-bedrock-layout-padbox`.
 | --------- | ------------ | ------------------------------------------------------------ | ------- |
 | padding\* | sets padding | spacing, array of spacings, or object of spacing values \*\* | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

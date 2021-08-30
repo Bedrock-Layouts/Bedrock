@@ -39,4 +39,4 @@ For purposes of styling you can select `data-bedrock-layout-inline-cluster`.
 | align    | Block alignment                                      | One of: `start, end, center` | `start` |
 | switchAt | The width that the container will switch to stacking | One of: `CSS length, number` | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

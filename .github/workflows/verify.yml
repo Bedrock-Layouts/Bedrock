@@ -5,9 +5,9 @@ name: Build
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -32,12 +32,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn verify
-      - run: git checkout master
+      - run: git checkout main
       - run: git config --global user.email  'travis.mair@gmail.com'
       - run: git config --global user.name  'Jarvis1010'
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH}}" > ~/.npmrc
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npm whoami
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npx lerna publish --conventional-commits --yes
