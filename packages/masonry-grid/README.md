@@ -40,4 +40,4 @@ For purposes of styling you can select `data-bedrock-layout-masonry-grid`.
 | gutter\*     | sets space inbetween each element | one of spacing\*\*                     | -                     |
 | minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

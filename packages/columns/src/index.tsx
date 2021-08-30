@@ -163,7 +163,7 @@ Column.propTypes = {
 };
 
 /**
- * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
+ * This module is adapted from https://github.com/mikolalysenko/to-px/blob/main/browser.js
  */
 
 //Logic forked from is-in-browser npm package

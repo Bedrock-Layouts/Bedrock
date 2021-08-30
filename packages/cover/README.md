@@ -40,4 +40,4 @@ For purposes of styling, the outer wrapper as the `data-bedrock-layout-cover` da
 | top       | takes a single child            | ReactNode                                                                 | -       |
 | bottom    | takes a single child            | ReactNode                                                                 | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`

@@ -39,4 +39,4 @@ For purposes of styling you can select `data-bedrock-layout-stack`.
 | -------- | --------------------------------- | ------------------ | ------- |
 | gutter\* | sets space inbetween each element | one of spacing\*\* | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/master/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
