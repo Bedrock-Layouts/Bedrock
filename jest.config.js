@@ -47,7 +47,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 98,
-      branches: 91,
+      branches: 93,
       functions: 98,
       lines: 98,
     },
@@ -57,12 +57,6 @@ module.exports = {
       branches: 58,
       functions: 66,
       lines: 73,
-    },
-    "./packages/use-container-query/src/index.tsx": {
-      statements: 97,
-      branches: 77,
-      functions: 90,
-      lines: 100,
     },
     "./packages/masonry-grid/src/index.tsx": {
       statements: 55,
