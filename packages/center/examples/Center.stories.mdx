@@ -1,5 +1,7 @@
 import { Center } from '@bedrock-layout/center';
-import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+import { argTypes } from './argTypes'
 
 <Meta title="Components/Center" component={Center} />
 
@@ -11,14 +13,16 @@ The Center component is designed to center and clamp the width at a defined widt
 
 ## API
 
-<ArgsTable of={Center} />
+<Story name="API" argTypes={argTypes} />
 
-## Basic usage
+<ArgsTable story="API" />
+
+## maxWidth
 
 The Center component will clamp the width at a defined `maxWidth` and center itself in it's context. Please note that the `maxWidth` is the max-width of the children and not the Center component itself. The below `maxWidth` is set to `75%` of the parent component width.
 
 <Preview withToolbar>
-  <Story name="Basic">
+  <Story name="maxWidth">
     <Center maxWidth="75%" style={{ border: "1px solid black" }}>
       <div>
         Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum
@@ -34,12 +38,12 @@ The Center component will clamp the width at a defined `maxWidth` and center its
   </Story>
 </Preview>
 
-## Centering the children
+## centerChildren
 
 You can also center the children by adding the `centerChildren` prop. This time the children are set to a width of 75%.
 
 <Preview withToolbar>
-  <Story name="Center children">
+  <Story name="centerChildren">
     <Center centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
         Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum
@@ -55,12 +59,12 @@ You can also center the children by adding the `centerChildren` prop. This time 
   </Story>
 </Preview>
 
-## Centering text
+## centerText
 
 You can also center the text by adding the `centerText` prop.
 
 <Preview withToolbar>
-  <Story name="Center text">
+  <Story name="centerText">
     <Center centerText centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
         Nulla luctus nisl nec dui auctor volutpat. Phasellus condimentum
@@ -101,15 +105,16 @@ export const Template = (args) =>  (
 
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Playground"
     args={{
       maxWidth: "420px",
       centerText: false,
       centerChildren: false,
     }}
+    argTypes={argTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Playground" />
