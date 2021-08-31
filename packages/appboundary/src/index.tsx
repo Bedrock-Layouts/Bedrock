@@ -4,11 +4,12 @@ import {
   getSizeValue,
   sizes,
 } from "@bedrock-layout/spacing-constants";
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 export interface AppBoundaryProps {
-  boundarySize?: SizesOptions;
+  boundarySize?: keyof SizesOptions;
 }
 
 export const AppBoundary = styled.div.attrs<AppBoundaryProps>((props) => {
@@ -24,7 +25,7 @@ export const AppBoundary = styled.div.attrs<AppBoundaryProps>((props) => {
       </Center>
     ),
   };
-})`
+})<AppBoundaryProps>`
   padding: 0;
   max-width: 100%;
   overflow: hidden;
@@ -32,3 +33,7 @@ export const AppBoundary = styled.div.attrs<AppBoundaryProps>((props) => {
 `;
 
 AppBoundary.displayName = "AppBoundary";
+
+AppBoundary.propTypes = {
+  boundarySize: PropTypes.string as React.Validator<keyof SizesOptions>,
+};
