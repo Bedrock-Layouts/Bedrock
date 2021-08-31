@@ -1,7 +1,8 @@
 import { Columns, Column } from '@bedrock-layout/columns';
-import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
 import { Box } from './Box'
+import { columnsArgTypes, columnArgTypes } from './argTypes'
 
 <Meta title="Components/Columns" />
 
@@ -15,18 +16,22 @@ The `Columns` component is designed to create a n-column layout. The complimenta
 
 ### Columns props
 
-<ArgsTable of={Columns} />
+<Story name="Columns props" argTypes={columnsArgTypes} />
+
+<ArgsTable story="Columns props" />
 
 ### Column props
 
-<ArgsTable of={Column} />
+<Story name="Column props" argTypes={columnArgTypes} />
 
-## Basic usage
+<ArgsTable story="Column props" />
+
+## columns
 
 The below example is a 4 column layout. Each box will take up one column by default.
 
 <Preview withToolbar>
-  <Story name="Basic">
+  <Story name="columns">
     <Columns gutter="lg" columns={4}>
       <Box />
       <Box />
@@ -39,15 +44,102 @@ The below example is a 4 column layout. Each box will take up one column by defa
   </Story>
 </Preview>
 
-## With xx-large gutters
+## gutters
 
 Gutters are configured with the `gutter` prop
 
 <Preview withToolbar>
-  <Story name="Gutters">
+  <Story name="gutters">
+    <h3>none</h3>
+    <Columns gutter="none" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xxs</h3>
+    <Columns gutter="xxs" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xs</h3>
+    <Columns gutter="xs" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>sm</h3>
+    <Columns gutter="sm" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>md</h3>
+    <Columns gutter="md" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>mdLg</h3>
+    <Columns gutter="mdLg" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>lg</h3>
+    <Columns gutter="lg" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>lgXl</h3>
+    <Columns gutter="lgXl" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xl</h3>
+    <Columns gutter="xl" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xl</h3>
+    <Columns gutter="xl" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xlXXl</h3>
+    <Columns gutter="xlXXl" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>xxl</h3>
     <Columns gutter="xxl" columns={4}>
-      <Box />
-      <Box />
       <Box />
       <Box />
       <Box />
@@ -57,12 +149,12 @@ Gutters are configured with the `gutter` prop
   </Story>
 </Preview>
 
-## With Column component
+## span
 
 The column component is wrapping the blue and green boxes. It is then setting the blue box to span 3 columns and the green to span 2
 
 <Preview withToolbar>
-  <Story name="With Column">
+  <Story name="span">
     <Columns gutter="lg" columns={4}>
       <Box />
       <Box />
@@ -79,32 +171,34 @@ The column component is wrapping the blue and green boxes. It is then setting th
   </Story>
 </Preview>
 
-## With Column and dense
+## dense
+
+Setting the `dense` prop will layout the children so that the items will fill any blank space.
 
 <Preview withToolbar>
-  <Story name="With Column and dense">
+  <Story name="dense">
     <Columns dense gutter="lg" columns={4}>
-      <Box />
-      <Box />
+      <Box>1</Box>
+      <Box>2</Box>
       <Column span={3}>
-        <Box />
+        <Box>3</Box>
       </Column>
+      <Box>4</Box>
+      <Box>5</Box>
       <Column span={2}>
-        <Box />
+        <Box>6</Box>
       </Column>
-      <Box />
-      <Box />
-      <Box />
+      <Box>7</Box>
     </Columns>
   </Story>
 </Preview>
 
-## With Column and offset
+## offsetStart and offsetEnd
 
 In the below code, the blue box is offsetStart by 2 and the green box has an offsetEnd of 3
 
 <Preview withToolbar>
-  <Story name="With Column and offset">
+  <Story name="offsetStart and offsetEnd">
     <Columns gutter="lg" columns={5}>
       <Box />
       <Box />
@@ -121,12 +215,12 @@ In the below code, the blue box is offsetStart by 2 and the green box has an off
   </Story>
 </Preview>
 
-## With switchAt
+## switchAt
 
-The below Columns layout will stack when it is less than `45rem`.
+The below Columns layout will switch to a Stack layout when it is less than `45rem`.
 
 <Preview withToolbar>
-  <Story name="With switchAt">
+  <Story name="switchAt">
     <Columns gutter="lg" columns={3} switchAt="45rem">
       <Box />
       <Box />
@@ -162,18 +256,50 @@ export const Template = (args) =>  (
     </Columns>
 )
 
+export const ColumnsTemplate = (args) =>  (
+    <Columns gutter='lg' columns={5} >
+      <Box />
+      <Box />
+      <Column {...args}>
+        <Box style={{ background: "blue" }}/>
+      </Column>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+)
+
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Columns Playground"
     args={{
       columns: 3,
       gutter: "lg",
       dense: false,
       switchAt: "30rem",
     }}
+    argTypes={columnsArgTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Columns Playground" />
+
+<Canvas withToolbar>
+  <Story
+    name="Column Playground"
+    args={{
+      span: 1,
+      offsetStart: 1,
+      offsetEnd: 1,
+    }}
+    argTypes={columnArgTypes}
+  >
+    {ColumnsTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Column Playground" />
