@@ -46,21 +46,21 @@ module.exports = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
-      statements: 98,
-      branches: 93,
-      functions: 98,
-      lines: 98,
+      statements: 100,
+      branches: 98,
+      functions: 100,
+      lines: 100,
     },
     //TODO Fix the below coverage
     "./packages/inline/src/index.tsx": {
-      statements: 73,
-      branches: 58,
-      functions: 66,
-      lines: 73,
+      statements: 76,
+      branches: 65,
+      functions: 80,
+      lines: 76,
     },
     "./packages/masonry-grid/src/index.tsx": {
       statements: 55,
-      branches: 31,
+      branches: 33,
       functions: 64,
       lines: 58,
     },

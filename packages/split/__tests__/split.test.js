@@ -104,7 +104,7 @@ describe("Split", () => {
       expect(split.toJSON()).toMatchSnapshot();
     });
 
-    fit("should render a split if container is above switchAt", () => {
+    it("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
@@ -112,6 +112,23 @@ describe("Split", () => {
 
       const stack = create(
         <Split gutter="lg" switchAt={widthToSwitchAt + 1}>
+          <Lorem />
+        </Split>
+      );
+
+      expect(stack.toJSON()).toMatchSnapshot();
+
+      useContainerQuery.mockRestore();
+    });
+
+    it("should render a split if container is above switchAt using a css string", () => {
+      const widthToSwitchAt = 600;
+      useContainerQuery.mockImplementation((...[, width]) => {
+        return width <= widthToSwitchAt;
+      });
+
+      const stack = create(
+        <Split gutter="lg" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
           <Lorem />
         </Split>
       );

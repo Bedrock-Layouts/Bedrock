@@ -1,7 +1,6 @@
 import {
   InlineCluster,
   InlineClusterProps,
-  isFlexGapSupported,
 } from "@bedrock-layout/inline-cluster";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
@@ -13,20 +12,6 @@ export interface InlineProps extends InlineClusterProps {
   stretch?: Stretch;
   switchAt?: SwitchAt;
 }
-
-const inlineStyles = css<InlineProps>`
-  flex-wrap: nowrap;
-  ${({ stretch }) =>
-    stretch === "all"
-      ? `> *  { flex: 1 }`
-      : stretch === "start"
-      ? `> :first-child { flex: 1 }`
-      : stretch === "end"
-      ? `> :last-child { flex: 1 }`
-      : typeof stretch === "number"
-      ? `> :nth-child(${stretch + 1}) { flex: 1 }`
-      : null}
-`;
 
 const responsive = css<InlineProps>`
   --switchAt: ${({ switchAt }) =>
@@ -57,17 +42,18 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(() => {
     "data-bedrock-layout-inline-cluster": undefined,
   };
 })<InlineProps>`
-  ${isFlexGapSupported
-    ? css`
-        ${inlineStyles}
-        ${(props) => shouldUseSwitch(props.switchAt) && responsive}
-      `
-    : css`
-        & > * {
-          ${inlineStyles}
-          ${(props) => shouldUseSwitch(props.switchAt) && responsive}
-        }
-      `}
+  flex-wrap: nowrap;
+  ${({ stretch }) =>
+    stretch === "all"
+      ? `> *  { flex: 1 }`
+      : stretch === "start"
+      ? `> :first-child { flex: 1 }`
+      : stretch === "end"
+      ? `> :last-child { flex: 1 }`
+      : typeof stretch === "number"
+      ? `> :nth-child(${stretch + 1}) { flex: 1 }`
+      : null}
+  ${(props) => shouldUseSwitch(props.switchAt) && responsive}
 `;
 
 Inline.displayName = "Inline";
