@@ -60,6 +60,10 @@ describe("Size Constants", () => {
     expect(constants.getSizeValue({ sizes: { "1x": 1 } }, "1x")).toBe("1px");
   });
 
+  it("should return undefined if sizekey is a number", () => {
+    expect(constants.getSizeValue({ sizes: { "1x": 1 } }, 1)).toBe(undefined);
+  });
+
   it("should return a undefined if sizes provided with incorrect key", () => {
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "lg")).toBe(
       undefined

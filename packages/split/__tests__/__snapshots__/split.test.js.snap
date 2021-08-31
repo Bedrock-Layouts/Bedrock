@@ -560,12 +560,15 @@ exports[`Split correct usage should render a split if container is above switchA
 </div>
 `;
 
-exports[`Split correct usage should render a stack if container is below switchAt 1`] = `
+exports[`Split correct usage should render a split if container is above switchAt using a css string 1`] = `
 .c0 {
   box-sizing: border-box;
+  --gutter: 1rem;
   display: grid;
-  grid-auto-columns: 100%;
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -575,11 +578,40 @@ exports[`Split correct usage should render a stack if container is below switchA
 <div
   className="c0 "
   data-bedrock-layout-stack=""
-  style={
-    Object {
-      "--gutter": "1rem",
-    }
-  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Split correct usage should render a stack if container is below switchAt 1`] = `
+.c0 {
+  box-sizing: border-box;
+  --gutter: 1rem;
+  display: grid;
+  gap: var(--gutter);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+}
+
+.c0 > [data-bedrock-layout-column] {
+  grid-column: span 1 / auto;
+}
+
+<div
+  className="c0 "
+  data-bedrock-layout-stack=""
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
