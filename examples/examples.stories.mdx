@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/';
 import { Stack } from '../packages/stack/src/';
+import { Columns, Column } from '../packages/columns/src/';
 import { Split } from '../packages/split/src/';
 import { PadBox } from '../packages/padbox/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
@@ -30,5 +31,58 @@ A simple product card with an image and a description on the the right. Uses the
         </div>
       </Stack>
     </Split>
+  </Story>
+</Preview>
+
+## Basic Form
+
+A basic form with inputs that span multiple columns. Uses the `<Stack>`, `<Columns>` and the `<Column>` components.
+
+<Preview withToolbar>
+  <Story name="Form">
+    <Columns as="form" gutter="lg" columns={6}>
+      <Column span={3}>
+        <Stack as="label" gutter="md">
+          First Name
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={3}>
+        <Stack as="label" gutter="md">
+          Last Name
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={4}>
+        <Stack as="label" gutter="md">
+          Email
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={6}>
+        <Stack as="label" gutter="md">
+          Street Address
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={2}>
+        <Stack as="label" gutter="md">
+          City
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={2}>
+        <Stack as="label" gutter="md">
+          State
+          <input type="text" />
+        </Stack>
+      </Column>
+      <Column span={2}>
+        <Stack as="label" gutter="md">
+          Zip Code
+          <input type="text" />
+        </Stack>
+      </Column>
+    </Columns>
   </Story>
 </Preview>
