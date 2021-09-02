@@ -1,68 +1,72 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { Center } from '@bedrock-layout/center'
+import { PadBox } from '@bedrock-layout/padbox'
+import { Grid } from '@bedrock-layout/grid'
+import { Cover } from '@bedrock-layout/cover'
+import { Stack } from '@bedrock-layout/stack'
+import { Split } from '@bedrock-layout/split'
+import { Frame } from '@bedrock-layout/frame'
 import { Inline } from '@bedrock-layout/inline'
 import { Button } from '../ui-components/Button'
+import { Heading } from '../ui-components/Heading'
+import justLogo from '../assets/Logo only.png'
 
 <Meta title="Bedrock Layout Primitives" />
 
-<Center as="h1" style={{ width: "50%" }}>
-  <img
-    src="https://user-images.githubusercontent.com/5460770/77477816-8df68000-6de2-11ea-83be-9f12c8de7f0d.png"
-    alt="Bedrock Layout Primitives"
-    style={{
-      objectFit: "cover",
-      width: "100%",
-      display: "block",
-      height: "auto",
-    }}
-  />
-</Center>
+<Stack gutter="xxl">
+<Cover minHeight="40vh">
+  <Split gutter="lg" switchAt="60rem">
+    <Stack gutter='lg'>
+      <Heading>
+        BEDROCK{" "}
+        <span style={{fontSize:'clamp(0.7rem, 10vw, 1.7rem)', lineHeight: "2rem", letterSpacing: "0.5ch" }}>
+          LAYOUT PRIMITIVES
+        </span>
+      </Heading>
+      <Center
+        as="p"
+        centerText
+        style={{ fontSize: "clamp(0.7rem, 10vw, 1.5rem)" }}
+      >
+        <strong>Foundational Layout Primitives for your React App</strong>
+      </Center>
+      <Center as='a' href='https://github.com/Bedrock-Layouts/Bedrock/stargazers'>
+        <img src='https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social' alt='GitHub Repo stars'/>
+      </Center>
+      <Inline gutter="lg" justify="center">
+        <Button primary as="a" href="/?path=/story/installation--page">
+          Get Started
+        </Button>
+        <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock">
+          GitHub
+        </Button>
+      </Inline>
+    </Stack>
+    <Frame>
+      <img src={justLogo} alt="Bedrock Layout Primitives" />
+    </Frame>
 
-<Center as="p" centerText style={{ fontSize: "clamp(1rem, 10vw, 2rem)" }}>
-  <strong>Foundational Layout Primitives for your React App</strong>
-</Center>
+  </Split>
+</Cover>
 
-<Center centerChildren>
-
-<Inline gutter="lg" justify="center">
-  <Button primary as="a" href="/?path=/story/installation--page">
-    Get Started
-  </Button>
-  <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock">
-    GitHub
-  </Button>
-</Inline>
-
-</Center>
-
-<Center centerChildren>
-
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-[![Commitizen
-  friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-![Build
-  Status](https://github.com/Bedrock-Layouts/Bedrock/actions/workflows/verify.yml/badge.svg)
-![GitHub](https://img.shields.io/github/license/Bedrock-Layouts/Bedrock)
-
-[![GitHub Repo stars](https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social)](https://github.com/Bedrock-Layouts/Bedrock/stargazers)
-
-</Center>
-
-## Overview
-
-Bedrock Layout Primitives are the foundational layout primitives your app or design system needs to satisfy almost any of your layout needs. Bedrock Layout Primitives are built on a few important principals:
-
-1. Components should have a single responsibility, i.e., they do one thing, and they do it well
-2. More complicated layouts are achieved through the composition of these components
-3. Components should be built with modern CSS in mind while maintaining support for older browsers through progressive enhancement.
+<PadBox as={Grid} minItemWidth='25rem' gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
+<div>
 
 ## Zero Config
 
 Bedrock Layout Primitives are built using a CSS-in-JS library called [`styled-components`](https://styled-components.com/). This allows all the components to be dropped into any app with no extra setup.
 
-## Integrates With Any Design System
+</div>
+<div>
+
+## Integrate With Any Design System
 
 You can use Bedrock layouts with any design system. [Check out the instructions on how to integrate the Bedrock Layout Primitives into your Design System.](/docs/spacing--page#integrating-with-your-design-system)
+
+</div>
+</PadBox>
+
+<PadBox padding='xl'>
 
 ## Contributors
 
@@ -78,18 +82,16 @@ Made with [contributors-img](https://contrib.rocks).
 
 You can sponsor Bedrock Layouts on Github Sponsors.
 
-<a href="https://github.com/sponsors/Bedrock-Layouts?o=sd&sc=t ">
-  <button
-    style={{
-      borderRadius: 6,
-      padding: "5px 16px",
-      background: "white",
-      border: "1px solid rgba(27, 31, 35, 0.15",
-      fontSize: "1rem",
-      color: "#24292e",
-      cursor: "pointer",
-    }}
-  >
-    Sponsor
-  </button>
-</a>
+  <a href="https://github.com/sponsors/Bedrock-Layouts?o=sd&sc=t ">
+    <Button
+      style={{
+        cursor: "pointer",
+        maxWidth: "min-content",
+      }}
+    >
+      Sponsor
+    </Button>
+  </a>
+</PadBox>
+
+</Stack>
