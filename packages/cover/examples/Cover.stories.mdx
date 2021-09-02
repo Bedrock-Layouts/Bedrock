@@ -1,5 +1,7 @@
 import { Cover } from '@bedrock-layout/cover';
-import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+import { argTypes } from './argTypes'
 
 <Meta title="Components/Cover" component={Cover} />
 
@@ -11,12 +13,18 @@ The Cover is designed to cover a predefined area, 100vh by default, and vertical
 
 ## API
 
-<ArgsTable of={Cover} />
+<Story name="API" argTypes={argTypes} />
 
-## Basic Usage
+<ArgsTable story="API" />
+
+## With a React Node as the child.
+
+(All examples below are with the `minHeight` prop set to `50vh`)
+
+The `Cover` component can be used with any React node as its child. The child will be vertically centered.
 
 <Preview withToolbar>
-  <Story name="Basic">
+  <Story name="With children">
     <Cover minHeight="50vh" gutter="sm">
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -28,10 +36,12 @@ The Cover is designed to cover a predefined area, 100vh by default, and vertical
   </Story>
 </Preview>
 
-## With Top
+## top
+
+The `top` prop can be used to render a top section.
 
 <Preview withToolbar>
-  <Story name="With top">
+  <Story name="top">
     <Cover minHeight="50vh" gutter="sm" top={<span>I am on top.</span>}>
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -43,10 +53,12 @@ The Cover is designed to cover a predefined area, 100vh by default, and vertical
   </Story>
 </Preview>
 
-## With bottom
+## bottom
+
+The `bottom` prop can be used to render a bottom section.
 
 <Preview withToolbar>
-  <Story name="With bottom">
+  <Story name="bottom">
     <Cover minHeight="50vh" gutter="sm" bottom={<span>I am on bottom.</span>}>
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -58,10 +70,12 @@ The Cover is designed to cover a predefined area, 100vh by default, and vertical
   </Story>
 </Preview>
 
-## With top and bottom
+## top and bottom
+
+Both the `top` and `bottom` props can be used to render a top and bottom section.
 
 <Preview withToolbar>
-  <Story name="With top and bottom">
+  <Story name="top and bottom">
     <Cover
       minHeight="50vh"
       gutter="sm"
@@ -99,16 +113,17 @@ export const Template = ({top, bottom,...args}) =>  (
 
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Playground"
     args={{
       minHeight: "50vh",
       gutter: "lg",
       top: "I'm on top.",
       bottom: "I'm on bottom.",
     }}
+    argTypes={argTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Playground" />
