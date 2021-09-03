@@ -2,6 +2,7 @@ import { Inline } from '@bedrock-layout/inline';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
 
 import { Box } from './Box';
+import { argTypes } from './argTypes'
 
 <Meta title="Components/Inline" component={Inline} />
 
@@ -14,7 +15,9 @@ the items in the Inline component will not wrap. The Inline component also allow
 
 ## API
 
-<ArgsTable of={Inline} />
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
 
 ## Basic usage
 
@@ -160,6 +163,7 @@ export const Template = (args) =>  (
       stretch: "end",
       switchAt: "40rem",
     }}
+    argTypes={argTypes}
   >
     {Template.bind({})}
   </Story>
