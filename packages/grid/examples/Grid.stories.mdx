@@ -1,7 +1,8 @@
 import { Grid } from '@bedrock-layout/grid';
-import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-import { Box } from './Box';
+import { Box } from './Box'
+import { argTypes } from './argTypes'
 
 <Meta title="Components/Grid" component={Grid} />
 
@@ -9,51 +10,102 @@ import { Box } from './Box';
 
 ## Use case
 
-The Grid component is designed to create a grid of items that will automatically wrap based on the `minItemWidth`
+The Grid component is designed to create a responsive grid of items that will automatically wrap based on the quantity of children and the `minItemWidth` value.
 
 ## API
 
-<ArgsTable of={Grid} />
+<Story name="API" argTypes={argTypes} />
 
-## Basic usage
+<ArgsTable story="API" />
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+
+The following values are available by default:
+
+(The `minItemWidth` is set to `25rem` in all the examples)
 
 <Preview withToolbar>
-  <Story name="Basic">
+  <Story name="gutter">
+    <h3>none</h3>
+    <Grid gutter="none" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>xxs</h3>
+    <Grid gutter="xxs" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>xs</h3>
+    <Grid gutter="xs" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>sm</h3>
+    <Grid gutter="sm" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>md</h3>
+    <Grid gutter="md" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>mdLg</h3>
+    <Grid gutter="mdLg" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>lg</h3>
+    <Grid gutter="lg" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>lgXl</h3>
+    <Grid gutter="lgXl" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>xl</h3>
+    <Grid gutter="xl" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>xlXXl</h3>
+    <Grid gutter="xlXXl" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>xxl</h3>
+    <Grid gutter="xxl" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+  </Story>
+</Preview>
+
+## minItemWidth
+
+The `minItemWidth` prop defines the minimum width of each of the children. The Grid will the optimize how many columns and rows are needed based on that value.
+
+In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Preview withToolbar>
+  <Story name="minItemWidth">
     <Grid gutter="lg" minItemWidth="15rem">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-    </Grid>
-  </Story>
-</Preview>
-
-## With XX-large gutter
-
-<Preview withToolbar>
-  <Story name="With x-large gutter">
-    <Grid gutter="xxl" minItemWidth="15rem">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-    </Grid>
-  </Story>
-</Preview>
-
-## With small gutter
-
-<Preview withToolbar>
-  <Story name="With small gutter">
-    <Grid gutter="sm" minItemWidth="15rem">
       <Box />
       <Box />
       <Box />
@@ -88,9 +140,13 @@ export const Template = (args) =>  (
 );
 
 <Canvas withToolbar>
-  <Story name="Controls" args={{ minItemWidth: "20rem", gutter: "lg" }}>
+  <Story
+    name="Playground"
+    args={{ minItemWidth: "20rem", gutter: "lg" }}
+    argTypes={argTypes}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Playground" />
