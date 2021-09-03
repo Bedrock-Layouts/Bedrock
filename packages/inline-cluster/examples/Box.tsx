@@ -1,6 +1,6 @@
 import styled from "styled-components";
-export const Box = styled.div`
+export const Box = styled.div<{ widthLevel?: number }>`
   background: black;
   min-height: 100px;
-  min-width: 200px;
+  min-width: ${({ widthLevel = 2 }) => widthLevel * 100}px;
 `;
