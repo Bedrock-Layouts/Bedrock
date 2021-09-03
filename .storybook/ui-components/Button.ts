@@ -11,4 +11,5 @@ export const Button = styled(PadBox).attrs(() => ({ padding: ["lg", "xl"] }))<{
   background-color: ${({ primary }) => (primary ? "black" : "white")};
   color: ${({ primary }) => (primary ? "white" : "black")};
   text-decoration: none;
+  text-align: center;
 `;

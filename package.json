@@ -26,7 +26,7 @@
     "clean": "lerna clean",
     "build": "lerna run clean:build --parallel && lerna run build",
     "build:watch": "lerna run build:watch --stream",
-    "build:storybook": "build-storybook -s ./public",
+    "build:storybook": "build-storybook --docs -s ./public",
     "prepublish": "yarn build",
     "publish": "lerna publish",
     "publish:ci": "yarn publish -- --no-commit-hooks --ignore-scripts",
