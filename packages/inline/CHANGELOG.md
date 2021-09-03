@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.21 (2021-09-03)
+
+**Note:** Version bump only for package @bedrock-layout/inline
+
+
+
+
+
 ## 2.0.20 (2021-08-31)
 
 **Note:** Version bump only for package @bedrock-layout/inline
