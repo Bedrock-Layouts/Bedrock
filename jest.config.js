@@ -47,16 +47,9 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 100,
-      branches: 98,
+      branches: 97,
       functions: 100,
       lines: 100,
-    },
-    //TODO Fix the below coverage
-    "./packages/masonry-grid/src/index.tsx": {
-      statements: 55,
-      branches: 33,
-      functions: 64,
-      lines: 58,
     },
   },
 
