@@ -52,12 +52,6 @@ module.exports = {
       lines: 100,
     },
     //TODO Fix the below coverage
-    "./packages/inline/src/index.tsx": {
-      statements: 76,
-      branches: 65,
-      functions: 80,
-      lines: 76,
-    },
     "./packages/masonry-grid/src/index.tsx": {
       statements: 55,
       branches: 33,
