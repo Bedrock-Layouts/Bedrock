@@ -19,50 +19,15 @@ the items in the Inline component will not wrap. The Inline component also allow
 
 <ArgsTable story="API" />
 
-## Basic usage
+## InlineCluster Props
+
+The Inline component has all the same props as the InlineCluster component. (check the [InlineCluster component for more details](/?path=/docs/components-inlinecluster--api))
+
+Below is an example of the Inline component with the `gutter` set to `xl` and both `justify` and `align` props set to `center`.
 
 <Preview withToolbar>
-  <Story name="Basic">
-    <Inline gutter="lg">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-    </Inline>
-  </Story>
-</Preview>
-
-## With x-large gutter
-
-<Preview withToolbar>
-  <Story name="With x-large gutter">
-    <Inline gutter="xl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-    </Inline>
-  </Story>
-</Preview>
-
-## With center justify
-
-<Preview withToolbar>
-  <Story name="With center justify">
-    <Inline justify="center" gutter="xl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-    </Inline>
-  </Story>
-</Preview>
-
-## With center align
-
-<Preview withToolbar>
-  <Story name="With center align">
-    <Inline align="center" gutter="xl">
+  <Story name="InlineCluster Props">
+    <Inline gutter="xl" justify="center" align="center">
       <Box style={{ height: 200 }} />
       <Box />
       <Box />
@@ -73,47 +38,32 @@ the items in the Inline component will not wrap. The Inline component also allow
 
 ## With stretch start
 
+The `stretch` prop can be used to specify a child that will stretch to fill the remaining space.
+
 <Preview withToolbar>
   <Story name="With stretch start">
+    <h3>start</h3>
     <Inline gutter="lg" stretch="start">
       <Box />
       <Box />
       <Box />
       <Box />
     </Inline>
-  </Story>
-</Preview>
-
-## With stretch end
-
-<Preview withToolbar>
-  <Story name="With stretch end">
+    <h3>end</h3>
     <Inline gutter="lg" stretch="end">
       <Box />
       <Box />
       <Box />
       <Box />
     </Inline>
-  </Story>
-</Preview>
-
-## With stretch all
-
-<Preview withToolbar>
-  <Story name="With stretch all">
+    <h3>all</h3>
     <Inline gutter="lg" stretch="all">
       <Box />
       <Box />
       <Box />
       <Box />
     </Inline>
-  </Story>
-</Preview>
-
-## With stretch at index
-
-<Preview withToolbar>
-  <Story name="With stretch at index">
+    <h3>2 index</h3>
     <Inline gutter="lg" stretch={2}>
       <Box />
       <Box />
@@ -123,10 +73,12 @@ the items in the Inline component will not wrap. The Inline component also allow
   </Story>
 </Preview>
 
-## With switchAt
+## switchAt
+
+The below example will switch to a stack when it is less than `45rem`. (Resize your window to see this in action.)
 
 <Preview withToolbar>
-  <Story name="With switchAt">
+  <Story name="switchAt">
     <Inline gutter="lg" switchAt="45rem">
       <Box />
       <Box />
@@ -155,7 +107,7 @@ export const Template = (args) =>  (
 
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Playground"
     args={{
       gutter: "lg",
       justify: "start",
@@ -169,4 +121,4 @@ export const Template = (args) =>  (
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Playground" />

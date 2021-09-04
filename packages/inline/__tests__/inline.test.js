@@ -26,10 +26,21 @@ describe("Inline", () => {
       expect(Inline).toBeTruthy();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the stretch options", () => {
       ["all", "start", "end", 0, 3].forEach((stretch) => {
         const inline = create(
           <Inline gutter="lg" stretch={stretch}>
+            <Lorem />
+          </Inline>
+        );
+        expect(inline.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it("renders with switchAt", () => {
+      [42, "42rem"].forEach((switchAt) => {
+        const inline = create(
+          <Inline gutter="lg" switchAt={switchAt}>
             <Lorem />
           </Inline>
         );

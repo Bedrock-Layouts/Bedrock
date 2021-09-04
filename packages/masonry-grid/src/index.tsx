@@ -8,6 +8,7 @@ import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
 
 //Logic forked from is-in-browser npm package
+/* istanbul ignore next */
 const isBrowser =
   typeof window === "object" &&
   typeof document === "object" &&
@@ -39,6 +40,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
 
   const theme = React.useContext(ThemeContext) || safeTheme;
 
+  /* istanbul ignore next */
   const getRowHeight = React.useCallback(
     (node: Element) => {
       const gapString = getSpacingValue(theme, gutter) ?? "1px";
@@ -56,10 +58,12 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
   );
 
   React.useEffect(() => {
+    /* istanbul ignore next */
     if (childRef.current) setRowSpan(getRowHeight(childRef.current));
   }, [childRef, getRowHeight]);
 
   if (childRef.current) {
+    /* istanbul ignore next */
     callBackMap.set(childRef.current, ({ target }) => {
       setRowSpan(1);
       const rowHeight = getRowHeight(target);
@@ -67,6 +71,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
     });
   }
 
+  /* istanbul ignore next */
   React.useEffect(() => {
     if (!observer) {
       observer = new ResizeObserver((entries) => {
@@ -124,6 +129,7 @@ MasonryGrid.propTypes = Grid.propTypes;
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
  */
+/* istanbul ignore next */
 function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
@@ -133,10 +139,12 @@ function parseUnit(str: string): [number, string] {
   return [num, unit];
 }
 
+/* istanbul ignore next */
 const PIXELS_PER_INCH: number = isBrowser
   ? getSizeBrutal("in", document.body)
   : 96; // 96
 
+/* istanbul ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)
@@ -144,6 +152,7 @@ function getPropertyInPX(element: Element, prop: string): number {
   return value * (toPX(units, element) ?? 1);
 }
 
+/* istanbul ignore next */
 function getSizeBrutal(unit: string, element: Element) {
   const testDIV = document.createElement("div");
   testDIV.style["height"] = "128" + unit;
@@ -153,6 +162,7 @@ function getSizeBrutal(unit: string, element: Element) {
   return size;
 }
 
+/* istanbul ignore next */
 export function toPX(str: string, element?: Element): number | null {
   if (!str) return null;
 

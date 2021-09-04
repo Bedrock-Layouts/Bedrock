@@ -40,4 +40,22 @@ export const argTypes = {
     control: "select",
     options: ["start", "end", "center"],
   },
+  stretch: {
+    description: "Sets which child will stretch in the inline direction",
+    type: { name: "string" },
+    table: {
+      type: { summary: "string or index of child" },
+    },
+    control: "select",
+    options: ["all", "start", "end"],
+  },
+  switchAt: {
+    type: "string | number",
+    table: {
+      type: { summary: ["string | number"] },
+    },
+    description:
+      "Sets the width threshold that the split will switch to a Stack layout",
+    control: "text",
+  },
 };
