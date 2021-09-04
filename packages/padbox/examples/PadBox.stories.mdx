@@ -1,9 +1,9 @@
 import { PadBox } from '@bedrock-layout/padbox';
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-import { argTypes } from './argTypes'
+import { argTypes, singleArgTypes, arrayArgTypes, objArgTypes } from './argTypes'
 
-<Meta title="Components/PadBox" component={PadBox}/>
+<Meta title="Components/PadBox" component={PadBox} />
 
 # PadBox
 
@@ -18,13 +18,84 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 <ArgsTable story="API" />
 
-## Basic Usage
+## padding
 
-`padding` can take a single value for a consistent box shape padding
+`padding` can take a single value for a consistent box shape padding.
 
 <Preview withToolbar>
   <Story name="Basic">
+    <h3>none</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="none">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>xxs</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="xxs">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>xs</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="xs">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>sm</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="sm">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>md</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="md">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>mdLg</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="mdLg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>lg</h3>
     <PadBox style={{ border: "1px solid black" }} padding="lg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>lgXl</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="lgXl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>xl</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="xl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>xlXXl</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="xlXXl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>xxl</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="xxl">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
       doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
@@ -33,12 +104,30 @@ PadBox takes either a single value, an array of values (like the css shorthand f
   </Story>
 </Preview>
 
-## Usage With an Array
+## padd as an Array
 
 `padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
 
 <Preview withToolbar>
   <Story name="With an array">
+    <h3>With 2 values</h3>
+    <pre>["md", "xl"]</pre>
+    <PadBox style={{ border: "1px solid black" }} padding={["md", "xl"]}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>With 3 values</h3>
+    <pre>["lg", "sm", "xl"]</pre>
+    <PadBox style={{ border: "1px solid black" }} padding={["lg", "sm", "xl"]}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>With 4 values</h3>
+    <pre>["lg", "xs", "sm", "xl"]</pre>
     <PadBox
       style={{ border: "1px solid black" }}
       padding={["lg", "xs", "sm", "xl"]}
@@ -55,13 +144,23 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 `padding` can take an object to specify which locations will have padding and which type.
 The properties support both traditional properties, `top, bottom, right, left` and logical properties in camelcase, `blockStart, blockEnd, inlineStart, inlineEnd`
-no matter which properties are given, logical properties are used, if supported.
+no matter which properties are given, logical properties are used.
 
 <Preview withToolbar>
   <Story name="With an object">
+    <h3>With an object of values</h3>
+    <pre>
+      <code>
+        {JSON.stringify(
+          { top: "lg", inlineEnd: "xl", blockEnd: "sm" },
+          null,
+          3
+        )}
+      </code>
+    </pre>
     <PadBox
       style={{ border: "1px solid black" }}
-      padding={{ top: "lg", blockEnd: "sm" }}
+      padding={{ top: "lg", inlineEnd: "xl", blockEnd: "sm" }}
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
@@ -93,39 +192,42 @@ export const Template = (args) =>  (
 
 <Canvas withToolbar>
   <Story
-    name="Controls"
+    name="Playground"
     args={{
       padding: "lg",
     }}
+    argTypes={singleArgTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls" />
+<ArgsTable story="Playground" />
 
 <Canvas withToolbar>
   <Story
-    name="Controls with array"
+    name="Playground with array"
     args={{
       padding: ["md", "lg"],
     }}
+    argTypes={arrayArgTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls with array" />
+<ArgsTable story="Playground with array" />
 
 <Canvas withToolbar>
   <Story
-    name="Controls with object"
+    name="Playground with object"
     args={{
       padding: { left: "md", blockStart: "lg" },
     }}
+    argTypes={objArgTypes}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Controls with object" />
+<ArgsTable story="Playground with object" />
