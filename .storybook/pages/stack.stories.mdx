@@ -1,0 +1,97 @@
+import { Meta } from '@storybook/addon-docs/';
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
+import newsletter from '../assets/newsletter.png'
+
+<Meta title="Your First Component" />
+
+# Your First Component
+
+One of the simplest and yet most common layout patterns found on the web is putting one element on top of another element with consistent space between the elements. This problem is precisely what the [**Stack** primitive](http://localhost:9001/?path=/docs/components-stack) solves.
+
+Let's take this component design as an example:
+
+<img
+  src={newsletter}
+  alt="wire from of a subscribe to our newsletter component"
+/>
+
+In the above design we have headings, paragraphs, labels, input fields, and buttons. Though the all have their own visual styles, they are all laid out in a consistent way: stacked on top of each other with a consistent space between them.
+
+To create this we would could start by creating a new component with the following jsx:
+
+```jsx
+export default function Subscribe() {
+  return (
+    <form>
+      <div>
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>
+          Subscribe to our newsletter to keep up to date on all our amazing
+          products.
+        </p>
+      </div>
+
+      <div>
+        <label>
+          Name
+          <input type="text" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" />
+        </label>
+
+        <button>Subscribe</button>
+      </div>
+    </form>
+  );
+}
+```
+
+From there, we simply use the `Stack` primitive to lay out the elements in a consistent way:
+
+```jsx
+export default function Subscribe() {
+  return (
+    <Stack as='form' gutter='xl'>
+      <Stack gutter='md'>
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>
+          Subscribe to our newsletter to keep up to date on all our amazing
+          products.
+        </p>
+      </Stack>
+
+      <Stack gutter='lg'>
+        <Stack as='label' gutter='sm'>
+          Name
+          <input type="text" />
+        </Stack>
+
+        <Stack as='label' gutter='sm'>
+          Email
+          <input type="email" />
+        </Stack>
+
+        <button>Subscribe</button>
+      </Stack>
+    </Stack>
+  );
+}
+```
+
+In the above example have taken advantage of two import parts of Bedrock Layout Primitives. The first is that all Bedrock Layout Primitives expose the `as` prop. This allows you to control exactly which element is rendered on to your page. In the above code, we have used the `Stack` primitive to create a `form` element, which is a container for the all the elements. We have also used the `Stack` primitive to create a `label` element, to stack the input label text above its corresponding input field.
+
+The other part of the Stack primitive is the `gutter` prop. This allows you to control the space between the elements. Bedrock Layout Primitives has implemented a default spacing scheme, but this can be adjusted to fit any style guide. So click on the **Spacing** link below to learn more about Bedrock Layout Primitives spacing.
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <Button as="a" href="/?path=/story/installation--page">
+    Installation
+  </Button>
+  <span />
+  <Button as="a" href="/?path=/docs/spacing--page">
+    Spacing
+  </Button>
+</Inline>
