@@ -1,28 +1,19 @@
-import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
+import { Meta } from '@storybook/addon-docs/';
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
 
 <Meta title="Spacing" />
 
 # Spacing Constants
 
-Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these into your App Directly since the Layout Primitives already implement them. Still, these do exist in case you ever need the raw values.
-
-The spacing is built on `1rem` as the starting point. We then double the value at each step above `1rem` and half the value at each step below `1rem`. Each of these spacing points is then given a name based on a t-shirt size like `md`, `lg`, `xl`, and `xxl`. There are also middle point between the larger spacings, e.g. `mdLg`, that allow you to finely tune your spacings.
+Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. The spacing is built on `1rem` as the starting point. We then double the value at each step above `1rem` and half the value at each step below `1rem`. Each of these spacing points is then given a name based on a t-shirt size like `md`, `lg`, `xl`, and `xxl`. There are also middle point between the larger spacings, e.g. `mdLg`, that allow you to finely tune your spacings.
 
 ## Spacing values
 
-| space   | size        |
-| ------- | ----------- |
-| `none`  | `0`         |
-| `xxs`   | `0.0625rem` |
-| `xs`    | `0.125rem`  |
-| `sm`    | `0.25rem`   |
-| `md`    | `0.5rem`    |
-| `mdLg`  | `0.75rem`   |
-| `lg`    | `1rem`      |
-| `lgXl`  | `1.5rem`    |
-| `xl`    | `2rem`      |
-| `xlXXl` | `3rem`      |
-| `xxl`   | `4rem`      |
+|           |        |             |            |           |          |           |        |          |        |         |        |
+| --------- | ------ | ----------- | ---------- | --------- | -------- | --------- | ------ | -------- | ------ | ------- | ------ |
+| **space** | `none` | `xxs`       | `xs`       | `sm`      | `md`     | `mdLg`    | `lg`   | `lgXl`   | `xl`   | `xlXXl` | `xxl`  |
+| **size**  | `0`    | `0.0625rem` | `0.125rem` | `0.25rem` | `0.5rem` | `0.75rem` | `1rem` | `1.5rem` | `2rem` | `3rem`  | `4rem` |
 
 ## Usage
 
@@ -83,11 +74,11 @@ Space values can only be of type `string` or `number`.
 You can also just bring in the CSS Stylesheet directly from the `lib` folder:
 
 ```javascript
-import "@bedrock-layout/css-reset/lib/spacing-properties.css";
+import "@bedrock-layout/spacing-constants/lib/spacing-properties.css";
 
 /* or import the minified version */
 
-import "@bedrock-layout/css-reset/lib/spacing-properties.min.css";
+import "@bedrock-layout/spacing-constants/lib/spacing-properties.min.css";
 ```
 
 This will add the following custom properties to your stylesheets:
@@ -115,3 +106,13 @@ This will add the following custom properties to your stylesheets:
   --size-xxlarge: 1920px;
 }
 ```
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <Button as="a" href="/?path=/story/your-first-component--page">
+    Your First Component
+  </Button>
+  <span />
+  {/* <Button as="a" href="/?path=/story/your-first-component--page">
+    Your First Component
+  </Button> */}
+</Inline>
