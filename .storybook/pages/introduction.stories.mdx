@@ -1,0 +1,77 @@
+import { Meta } from '@storybook/addon-docs/';
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
+import heroExample from '../assets/hero-example.png'
+import heroBreakdown from '../assets/hero-breakdown.png'
+
+<Meta title="Introduction" />
+
+# Introduction
+
+We have entered the age of components. Most front-end frameworks, like React, use components as their foundation. There are several reasons for this, but crucially, components allow applications to be broken into simple, single-purpose parts that can then be composed together to solve more complex needs. This is especially true when considering the layout of your web application.
+
+## What is composition?
+
+Composition, simply put, is when you build something greater than the sum of its parts. For example, an organism is composed of organs, which are composed of organ parts, which are composed of cells, which are composed of atoms. A musical composition can be broken down to nothing more than masterfully applying rhythm and tempo to 12 unique notes, creating all of our musical masterpieces.
+
+Composition also applies to web layout. Complex layouts can be broken down into simpler "layout primitives," as [described by Heydon Pickering](https://every-layout.dev/rudiments/composition/). These layout primitives are single-purpose layout components that do one thing and one thing well. It is by strategically combining these primitives that we achieve more complex layout structures.
+
+## An Example of Layout Composition
+
+Let's take the below hero layout, for example:
+
+<img src={heroExample} alt="A wire frame of a hero layout" />
+
+Naively we might choose to lay it out as a single component, but it is not the only way to do this. We can also break it down into smaller composable components, like the following:
+
+<img
+  src={heroBreakdown}
+  alt="A breakdown of the hero layout wire frame as composable components"
+/>
+
+In code, this would translate to something like this:
+
+```jsx
+export function Hero() {
+  return (
+    <Stack>
+      <Inline>{/* */}</Inline>
+      <Split>
+        <Cover>
+          <Stack>
+            <h1>{/* */}</h1>
+            <p>{/* */}</p>
+            <Inline>
+              <button>{/* */}</button>
+              <button>{/* */}</button>
+            </Inline>
+          </Stack>
+        </Cover>
+        <Frame>
+          <img />
+        </Frame>
+      </Split>
+    </Stack>
+  );
+}
+```
+
+This is the why Bedrock Layout is called the "Foundational Layout Primitives for your React App." By strategically combining these primitives, we can create complex layouts that are easy to understand and maintain.
+
+## Prior Art
+
+Prior to creating Bedrock Layout Primitives, I have worked on two internal-only design systems. In addition to that experiance, I would have to say the resource that has inspired me the most has got to be [every-layout.dev](https://every-layout.dev/). This resource is fantastic and worth the money for the time and energy they have spent making it.
+
+## Okay, I am ready to start
+
+If you would like to take a deeper dive into layout composition, I would recommend taking my course, [Composing Layouts in React](https://www.newline.co/courses/composing-layouts-in-react/).
+
+Otherwise, I would recommend continuing to the next section to learn how to to start using Bedrock Layout Primitives.
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <span />
+  <span />
+  <Button as="a" href="/?path=/story/installation--page">
+    Installation
+  </Button>
+</Inline>

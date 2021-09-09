@@ -1,10 +1,14 @@
 import { Meta } from '@storybook/addon-docs/';
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
 
 <Meta title="Installation" />
 
 # How to install
 
-If you haven't already, install `styled-components`:
+Bedrock Layouts is built on top of [styled-components](https://styled-components.com). If you would like to learn more about how to use styled-components, please refer to the [styled-components documentation](https://styled-components.com/docs)
+
+Before you install any of the Bedrock Layout Primitives, you will need to install `styled-components` first:
 
 ```bash
 npm install styled-components
@@ -14,7 +18,7 @@ npm install styled-components
 yarn add styled-components
 ```
 
-Then install the component; for example, to install the Stack:
+Then can install any of the layout primitives you need; for example, to install the `Stack` component, you would run:
 
 ```bash
 npm install @bedrock-layout/stack
@@ -24,8 +28,18 @@ npm install @bedrock-layout/stack
 yarn add @bedrock-layout/stack
 ```
 
-Finally, you import the component.
+Finally, you import the component into your app like this:
 
 ```javascript
 import { Stack } from '@bedrock-layout/stack';
 ```
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <Button as="a" href="/?path=/story/introduction--page">
+    Introduction
+  </Button>
+  <span />
+  {/* <Button as="a" href="/?path=/story/installation--page">
+    Your First Component
+  </Button> */}
+</Inline>
