@@ -12,5 +12,7 @@ addons.setConfig({
       "https://user-images.githubusercontent.com/5460770/77477816-8df68000-6de2-11ea-83be-9f12c8de7f0d.png",
     textColor: "#161e2e",
     fontBase: '"Roboto", sans-serif',
+    appBg: "white",
+    appBorderColor: "white",
   }),
 });
