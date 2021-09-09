@@ -43,7 +43,10 @@ const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
   "data-bedrock-layout-split": "",
 }))<SplitBaseProps>`
   box-sizing: border-box;
-
+  > * {
+    margin: 0;
+  }
+  
   --gutter:${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
 
   display: grid;

@@ -22,6 +22,10 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
   align-items: flex-start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c1 {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -73,6 +77,10 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c1 {
@@ -128,6 +136,10 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
   align-items: flex-start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c1 {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -179,6 +191,10 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c1 {
@@ -234,6 +250,10 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
   align-items: flex-start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c1 {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -285,6 +305,10 @@ exports[`Inline correct usage renders with switchAt 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c1 {
@@ -347,6 +371,10 @@ exports[`Inline correct usage renders with switchAt 2`] = `
   align-items: flex-start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c1 {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -392,6 +420,10 @@ exports[`Inline incorrect usage renders default with console error with wrong st
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c1 {

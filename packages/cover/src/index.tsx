@@ -46,6 +46,10 @@ export const Cover = styled.div.attrs<CoverProps>(
       ? "1fr auto"
       : "1fr"};
 
+  > * {
+    margin: 0;
+  }
+
   display: grid;
   gap: var(--gutter);
   min-block-size: 100vh;

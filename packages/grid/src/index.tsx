@@ -28,6 +28,10 @@ export const Grid = styled.div.attrs<GridProps>(() => {
   };
 })<GridProps>`
   box-sizing: border-box;
+  > * {
+    margin: 0;
+  }
+
   @property --minItemWidth {
     syntax: "<length-percentage>";
     inherits: false;
