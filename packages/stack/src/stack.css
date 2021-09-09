@@ -6,6 +6,10 @@
   align-content: start;
 }
 
+[data-bedrock-layout-stack] > * {
+  margin: 0;
+}
+
 [data-bedrock-layout-stack] > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }

@@ -11,6 +11,10 @@ exports[`Stack correct usage renders 0px with theme overrides 1`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -43,6 +47,10 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -79,6 +87,10 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -111,6 +123,10 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -147,6 +163,10 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -179,6 +199,10 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -215,6 +239,10 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -247,6 +275,10 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -283,6 +315,10 @@ exports[`Stack correct usage renders all the gutter options 8`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -315,6 +351,10 @@ exports[`Stack correct usage renders all the gutter options 9`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -351,6 +391,10 @@ exports[`Stack correct usage renders all the gutter options 10`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -383,6 +427,10 @@ exports[`Stack correct usage renders all the gutter options 11`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {
@@ -419,6 +467,10 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -453,6 +505,10 @@ exports[`Stack correct usage renders with theme overrides using 'space' as key 1
   align-content: start;
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c0 > [data-bedrock-layout-column] {
   grid-column: span 1 / auto;
 }
@@ -485,6 +541,10 @@ exports[`Stack incorrect usage renders default with wrong input 1`] = `
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c0 > [data-bedrock-layout-column] {

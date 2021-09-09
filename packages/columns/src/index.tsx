@@ -21,6 +21,9 @@ const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(() => ({
   "data-bedrock-layout-columns": "",
 }))<ColumnsBaseProps>`
   box-sizing: border-box;
+  > * {
+    margin: 0;
+  }
   --gutter: ${({ gutter, theme }) => {
     const maybeGutter = getSpacingValue(theme, gutter);
     return maybeGutter ?? "0px";

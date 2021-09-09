@@ -34,6 +34,10 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
   }};
 
   box-sizing: border-box;
+  > * {
+    margin: 0;
+  }
+
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter);

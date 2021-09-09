@@ -18,6 +18,10 @@ export const Reel = styled.div.attrs<ReelProps>(() => ({
     return maybeGutter ?? "0px";
   }};
   box-sizing: border-box;
+  > * {
+    margin: 0;
+  }
+
   display: flex;
   gap: var(--gutter);
 

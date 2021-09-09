@@ -10,6 +10,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 1`] = `
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c2 {
   --rows: 1;
   grid-row: span var(--rows);
@@ -81,6 +85,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 2`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -158,6 +166,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 3`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -239,6 +251,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 4`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -324,6 +340,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 5`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -413,6 +433,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 6`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -506,6 +530,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 7`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -603,6 +631,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 8`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -704,6 +736,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 9`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -809,6 +845,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 10`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -918,6 +958,10 @@ exports[`MasonryGrid correct usage renders all the gutter options 11`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -1033,6 +1077,10 @@ exports[`MasonryGrid correct usage renders custom minItemWidth 1`] = `
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c2 {
   --rows: 1;
   grid-row: span var(--rows);
@@ -1104,6 +1152,10 @@ exports[`MasonryGrid correct usage renders custom minItemWidth as string 1`] = `
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -1179,6 +1231,10 @@ exports[`MasonryGrid correct usage renders with theme overrides 1`] = `
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c2 {
   --rows: 1;
   grid-row: span var(--rows);
@@ -1250,6 +1306,10 @@ exports[`MasonryGrid incorrect usage renders default with console error with min
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
@@ -1325,6 +1385,10 @@ exports[`MasonryGrid incorrect usage renders default with console error with no 
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
 }
 
+.c0 > * {
+  margin: 0;
+}
+
 .c2 {
   --rows: 1;
   grid-row: span var(--rows);
@@ -1396,6 +1460,10 @@ exports[`MasonryGrid incorrect usage renders default with wrong gutter input 1`]
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
 }
 
 .c2 {
