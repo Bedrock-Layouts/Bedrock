@@ -1,38 +1,59 @@
 import { Meta } from '@storybook/addon-docs/';
+import { Center } from '@bedrock-layout/center'
 import { Inline } from '@bedrock-layout/inline'
 import { Button } from '../ui-components/Button'
+import initialSetup from '../assets/initial-setup.png'
 
 <Meta title="Installation" />
 
-# How to install
+## Getting Started
+
+Lets start by creating our boilerplate React application
+
+```bash
+yarn create react-app bedrock-layouts
+cd bedrock-layouts
+```
 
 Bedrock Layouts is built on top of [styled-components](https://styled-components.com). If you would like to learn more about how to use styled-components, please refer to the [styled-components documentation](https://styled-components.com/docs)
 
-Before you install any of the Bedrock Layout Primitives, you will need to install `styled-components` first:
+Before you install any of the Bedrock Layout Primitives, you will need to install `styled-components` first. Let's start out by installing our the `Stack` component:
 
 ```bash
-npm install styled-components
-
-# or
-
-yarn add styled-components
+yarn add styled-components @bedrock-layout/stack
 ```
 
-Then can install any of the layout primitives you need; for example, to install the `Stack` component, you would run:
+## App.js
 
-```bash
-npm install @bedrock-layout/stack
+Replace the code in App.js with the following example:
 
-# or
+```jsx
+import { Stack } from "@bedrock-layout/stack";
 
-yarn add @bedrock-layout/stack
+function App() {
+  return (
+    <Stack gutter="md">
+      <header>
+        <h1>Coco Le Belle</h1>
+      </header>
+    </Stack>
+  );
+}
+
+export default App;
 ```
 
-Finally, you import the component into your app like this:
+Finally, let's start the development server by running `yarn start`. Navigate to `http://localhost:3000/` in your browser and you should see the following output:
 
-```javascript
-import { Stack } from '@bedrock-layout/stack';
-```
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 500 }}
+    src={initialSetup}
+    alt="initial setup of landing page for Coco le Belle"
+  />
+</Center>
+
+We are now ready to start building our layout. In the next section, we will learn how to use the `Stack` component to create our first component in our landing page.
 
 <Inline switchAt="25rem" stretch={1} gutter="md">
   <Button as="a" href="/?path=/story/introduction--page">
