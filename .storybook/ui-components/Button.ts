@@ -1,7 +1,10 @@
 import { PadBox } from "@bedrock-layout/padbox";
 import styled from "styled-components";
 
-export const Button = styled(PadBox).attrs(() => ({ padding: ["lg", "xl"] }))<{
+export const Button = styled(PadBox).attrs((props) => ({
+  padding: ["lg", "xl"],
+  as: props?.as ?? "button",
+}))<{
   primary?: boolean;
 }>`
   border-radius: 0.5rem;
@@ -12,4 +15,8 @@ export const Button = styled(PadBox).attrs(() => ({ padding: ["lg", "xl"] }))<{
   color: ${({ primary }) => (primary ? "white" : "black")};
   text-decoration: none;
   text-align: center;
+  :disabled {
+    opacity: 0.5;
+    font-size: 1rem;
+  }
 `;
