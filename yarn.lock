@@ -11098,13 +11098,14 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minify@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-7.0.2.tgz#8ac33a490c907b581a6cb4970dc656bb6d59ac11"
-  integrity sha512-qWFzieSULBAKTLbTqaXY5OLFbFNuEa1b0M+piLkpgJ6pHrMyvvCw6H7WM5/d+HJIwgUCLMI0uEAAyhawAF6cbA==
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-7.1.0.tgz#f34dc086c25c232cf03605a2da70ed7fb893a098"
+  integrity sha512-6iRRaCoJ6+SuPK9rzzoxDNxhy7opI/ZvEi6y9ZG5d9QIJZ7yjG5GaIwn9BfV1dLxP34Ih9vn6b6fu/n3xycobA==
   dependencies:
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
+    find-up "^5.0.0"
     html-minifier-terser "^5.1.1"
     terser "^5.3.2"
     try-to-catch "^3.0.0"
