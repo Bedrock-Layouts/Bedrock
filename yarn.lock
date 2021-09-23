@@ -5360,9 +5360,9 @@ chownr@^2.0.0:
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
 chromatic@^5.9.2:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-5.10.0.tgz#be4b5c2f264e2ff1ceee4a1032cbe52613a78f97"
-  integrity sha512-9D0kbd/+L6hpkXxFazYWIjmNMBnWtYpoD//aTpwS8iH/IbjAV4RxH+oiBkZTYPNXMyvsX7Gt8w5jj39yhTefQg==
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-5.10.1.tgz#24df7393ce7373fd65346c979351576cb93e6808"
+  integrity sha512-A+etILovO5wyuYs77K6VPq2vDXVbGUeYP4wNyRs/RFXToayE9EwoaUJKC7SqnE/05JWSjYENt98THYDVK/iEmQ==
   dependencies:
     "@actions/core" "^1.5.0"
     "@actions/github" "^5.0.0"
@@ -5386,7 +5386,7 @@ chromatic@^5.9.2:
     meow "^8.0.0"
     no-proxy "^1.0.3"
     node-ask "^1.0.1"
-    node-fetch "^2.6.0"
+    node-fetch "2.6.0"
     node-loggly-bulk "^2.2.4"
     p-limit "3.1.0"
     picomatch "2.2.2"
@@ -11459,7 +11459,12 @@ node-dir@^0.1.10:
   dependencies:
     minimatch "^3.0.2"
 
-node-fetch@^2.6.0, node-fetch@^2.6.1:
+node-fetch@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-fetch@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.2.tgz#986996818b73785e47b1965cc34eb093a1d464d0"
   integrity sha512-aLoxToI6RfZ+0NOjmWAgn9+LEd30YCkJKFSyWacNZdEKTit/ZMcKjGkTRo8uWEsnIb/hfKecNPEbln02PdWbcA==
