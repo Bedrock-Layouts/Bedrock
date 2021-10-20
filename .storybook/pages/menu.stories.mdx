@@ -1,0 +1,167 @@
+import { Meta } from '@storybook/addon-docs/';
+import { Center } from '@bedrock-layout/center'
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
+import menuStart from '../assets/menu-start.png'
+import menuMobile from '../assets/menu-mobile.png'
+import menuInline from '../assets/menu-just-inline.png'
+
+<Meta title="The Menu Component" />
+
+# The Menu Component
+
+After the stack layout, the next most common layout pattern on the web is putting one thing next to another. Putting two or more things has never been that simple. In the past, this was partially due to the lack of layout options in CSS. Currently, it mostly comes down to the fact that laying out items inline is only one of the variables.
+
+Do we want the items to grow or shrink? What about responsiveness? Should the items wrap or switch to a stack layout? There are so many questions that need to be answered about inline layouts. Bedrock Layout has solutions for many of these problems, but for now, we are going to focus on two of them: `Inline` and `InlineCluster`.
+
+## Let's Get Started
+
+In this lesson we are going to build this menu component:
+
+Let's start by creating a new file called `Menu.js` and add the following code:
+
+```jsx
+export function Menu() {
+  return (
+    <div>
+      <p>CLB</p>
+      <nav>
+        <a href="/#">Product</a>
+        <a href="/#">Features</a>
+        <a href="/#">Marketplace</a>
+        <a href="/#">Company</a>
+      </nav>
+      <div>
+        <a href="/#">Search</a>
+        <a href="/#">Cart</a>
+      </div>
+    </div>
+  );
+}
+
+```
+
+We can now import our Menu component into our `App.js` file:
+
+```jsx
+import { Stack } from "@bedrock-layout/stack";
+
+import { Subscribe } from "./Subscribe";
+import { Menu } from "./Menu";
+
+function App() {
+  return (
+    <Stack gutter="md">
+      <Menu />
+      <Subscribe />
+    </Stack>
+  );
+}
+
+export default App;
+```
+
+Your browser should now show the following:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={menuStart}
+    alt="The Menu component before layout styles have been applied."
+  />
+</Center>
+
+## Adding the Inline and InlineCluster
+
+Let's start by installing the `Inline` and `InlineCluster` components:
+
+```bash
+yarn add @bedrock-layout/inline @bedrock-layout/inline-cluster
+```
+
+And then let's start by adding the `Inline` component to our `Menu`
+
+```jsx
+import { Inline } from "@bedrock-layout/inline";
+
+export function Menu() {
+  return (
+    <Inline stretch={1} gutter="lg">
+      <p>CLB</p>
+      <Inline gutter="md" justify="center">
+        <a href="/#">Product</a>
+        <a href="/#">Features</a>
+        <a href="/#">Marketplace</a>
+        <a href="/#">Company</a>
+      </Inline>
+      <Inline gutter="md">
+        <a href="/#">Search</a>
+        <a href="/#">Cart</a>
+      </Inline>
+    </Inline>
+  );
+}
+```
+
+Now we can restart the app and your browser should show the following:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={menuInline}
+    alt="The Menu component with the Inline"
+  />
+</Center>
+
+In the above `Menu` component, we are taking advantage Inline's `gutter` prop to set the spacing. We are also using it's `stretch` prop to set the 2nd child to stetch itself so it takes up all remaining space. We are also using the `justify` prop to center middle `nav`.
+
+## Responsive Layouts
+
+Typically, inline layouts need to be able to be responsive to the screen size. There are a few solutions that one can adopt to make the layout responsive. One is to allow the items to wrap and cluster, like how words in a paragraph will wrap and cluster according to the justification setting. This is what the InlineCluster primitive is used for. It will automatically wrap the children to a new row if there is not enough space in the inline direction, and it will cluster at the start, center, or end, depending on what is set for the `justify` prop.
+
+The other typical pattern is to switch to a stack layout if the inline size is smaller than a set threshold. The Inline Component has a `switchAt` prop that lets you set a point to switch to a stacked layout.
+
+So let's make one final update to our menu:
+
+```jsx
+import { Inline } from "@bedrock-layout/inline";
+import { InlineCluster } from "@bedrock-layout/inline-cluster";
+
+export function Menu() {
+  return (
+    <Inline stretch={1} gutter="lg" switchAt="40rem">
+      <p>CLB</p>
+      <InlineCluster gutter="md" justify="center">
+        <a href="/#">Product</a>
+        <a href="/#">Features</a>
+        <a href="/#">Marketplace</a>
+        <a href="/#">Company</a>
+      </InlineCluster>
+      <Inline gutter="md" justify="end">
+        <a href="/#">Search</a>
+        <a href="/#">Cart</a>
+      </Inline>
+    </Inline>
+  );
+}
+```
+
+And if we resize to a small mobile screen size, it will look something like this:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={menuMobile}
+    alt="The Menu component on a small screen size"
+  />
+</Center>
+
+In the next section we will start to fill out our landing page by adding a Hero section using the `Cover` component. I'll see you there.
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <Button as="a" href="/?path=/docs/spacing--page">
+    Spacing
+  </Button>
+  <span />
+  <Button disabled>The Hero</Button>
+</Inline>
