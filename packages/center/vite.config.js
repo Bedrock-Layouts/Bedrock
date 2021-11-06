@@ -10,7 +10,9 @@ module.exports = defineConfig({
       entry: path.resolve(__dirname, "src/index.tsx"),
       name: "center",
       formats: ["cjs", "umd", "es"],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => {
+        return `index.${format === "es" ? "m" : format}.js`;
+      },
     },
     rollupOptions: {
       external: [

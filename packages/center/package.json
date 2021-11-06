@@ -19,12 +19,12 @@
   "unpkg": "lib/index.umd.js",
   "main": "lib/index.umd.js",
   "umd:main": "lib/index.umd.js",
-  "module": "lib/index.es.js",
+  "module": "lib/index.m.js",
   "source": "src/index.tsx",
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.es.js",
+      "import": "./lib/index.m.js",
       "require": "./lib/index.umd.js"
     }
   },
