@@ -4,6 +4,7 @@ import {
   getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import PropTypes from "prop-types";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
 
@@ -124,7 +125,10 @@ export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
 
 MasonryGrid.displayName = "MasonryGrid";
 
-MasonryGrid.propTypes = Grid.propTypes;
+MasonryGrid.propTypes = {
+  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  minItemWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};
 
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
