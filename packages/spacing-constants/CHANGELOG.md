@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.4.3 (2021-11-06)
+
+**Note:** Version bump only for package @bedrock-layout/spacing-constants
+
+
+
+
+
 ## 2.4.2 (2021-09-09)
 
 
