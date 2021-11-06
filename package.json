@@ -24,8 +24,7 @@
     "bootstrap": "lerna bootstrap",
     "cz": "cz",
     "clean": "lerna clean",
-    "build": "lerna run clean:build --parallel && lerna run build",
-    "build:watch": "lerna run build:watch --stream",
+    "build": "lerna run build",
     "build:storybook": "build-storybook --docs -s ./public",
     "prepublish": "yarn build",
     "publish": "lerna publish",
@@ -102,7 +101,6 @@
     "lerna": "^4.0.0",
     "lerna-changelog": "^2.1.0",
     "lint-staged": "^11.1.2",
-    "microbundle": "^0.14.0",
     "npm-run-all": "^4.1.5",
     "pepjs": "^0.5.2",
     "prettier": "^2.3.1",
@@ -118,7 +116,10 @@
     "react": "^17.0.2",
     "browserslist": "^4.16.5",
     "glob-parent": "^5.1.2",
-    "trim": "^0.0.3"
+    "trim": "^0.0.3",
+    "immer": "^9.0.6",
+    "ansi-regex": "^5.0.1",
+    "set-value": "^4.0.1"
   },
   "prettier": {
     "semi": true,

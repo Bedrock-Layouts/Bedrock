@@ -8,18 +8,14 @@ module.exports = defineConfig({
     outDir: "./lib",
     lib: {
       entry: path.resolve(__dirname, "src/index.tsx"),
-      name: "center",
+      name: "css-reset",
       formats: ["cjs", "umd", "es"],
       fileName: (format) => {
         return `index.${format === "es" ? "m" : format}.js`;
       },
     },
     rollupOptions: {
-      external: [
-        "react",
-        "styled-components",
-        "@bedrock-layout/spacing-constants",
-      ],
+      external: ["react", "styled-components"],
     },
   },
 });

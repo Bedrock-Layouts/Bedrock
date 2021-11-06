@@ -8,7 +8,7 @@ module.exports = defineConfig({
     outDir: "./lib",
     lib: {
       entry: path.resolve(__dirname, "src/index.tsx"),
-      name: "center",
+      name: "padbox",
       formats: ["cjs", "umd", "es"],
       fileName: (format) => {
         return `index.${format === "es" ? "m" : format}.js`;

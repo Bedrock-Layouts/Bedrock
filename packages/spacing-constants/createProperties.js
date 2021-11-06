@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs");
 const path = require("path");
-const { sizes, spacing } = require("./lib/index.js");
+const { sizes, spacing } = require("./lib/index.umd.js");
 
 const lib = path.join(__dirname, "lib/spacing-properties.css");
 
