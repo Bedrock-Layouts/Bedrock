@@ -22,7 +22,11 @@ const sizeVars = Object.entries(sizes).reduce(
   ""
 );
 
-const rootVars = `:root{${spaceVars}${sizeVars}
+const rootVars = `/*
+  spacing properties.css
+*/
+
+:root{${spaceVars}${sizeVars}
 }`;
 
 const removeDir = promisify(fs.rmdir);
@@ -41,17 +45,22 @@ const readDir = promisify(fs.readdir);
     rootVars
   );
 
-  const result = await concat([
-    path.join(srcComponentPath, "spacing-properties.css"),
-    path.join(srcComponentPath, "reset.css"),
-    path.join(srcComponentPath, "stack.css"),
-  ]);
-  assertIsString(result);
-  await writeFile(path.join(srcPath, "bedrock-layout.css"), result);
-
   const files = await readDir(srcComponentPath);
+
+  const filesSorted = Array.from(
+    new Set(["spacing-properties.css", "reset.css", ...files])
+  );
+
+  const result = await concat(
+    filesSorted.map((file) => path.join(srcComponentPath, file))
+  );
+
+  assertIsString(result);
+
+  await writeFile(path.join(libPath, "bedrock-layout.css"), result);
+
   await Promise.all(
-    files.map(async (file) => {
+    filesSorted.map(async (file) => {
       console.info(`Copying ${file}`);
       copyFile(
         path.join(srcComponentPath, file),
