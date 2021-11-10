@@ -1,0 +1,38 @@
+{
+  "name": "@bedrock-layout/bedrock-layout-css",
+  "version": "0.0.0",
+  "description": "bedrock-layout css version",
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "css",
+    "layout",
+    "react"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "homepage": "https://bedrock-layout.dev/",
+  "license": "MIT",
+  "source": "src/index.tsx",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "clean:build": "rimraf lib",
+    "build": "ts-node build.ts && minify src/bedrock-layout.css > lib/bedrock-layout.min.css"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
+  }
+}
