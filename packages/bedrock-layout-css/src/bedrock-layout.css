@@ -1,3 +1,7 @@
+/*
+  spacing properties.css
+*/
+
 :root{
   --space-none: 0px;
   --space-xxs: 0.0625rem;
@@ -18,6 +22,10 @@
   --size-xlarge: 1439px;
   --size-xxlarge: 1920px;
 }
+/*
+  reset.css
+*/
+
 *,
 *::before,
 *::after {
@@ -105,6 +113,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/*
+  stack.css
+*/
 
 [data-bedrock-layout-stack] {
   --gutter: 0;

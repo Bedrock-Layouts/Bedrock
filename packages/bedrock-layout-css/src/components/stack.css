@@ -1,8 +1,17 @@
+/*
+  stack.css
+*/
+
 [data-bedrock-layout-stack] {
-  --gutter: 0;
+  @property --gutter {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+
   box-sizing: border-box;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter, 0);
   align-content: start;
 }
 
