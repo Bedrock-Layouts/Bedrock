@@ -15,30 +15,28 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 ✅ - Released
 🛠 - Building
 
-| Status | Name                   |
-| ------ | ---------------------- |
-| ✅     | Stack                  |
-| ✅     | Grid                   |
-| ✅     | Split                  |
-| ✅     | AppBoundary            |
-| ✅     | Columns                |
-| ✅     | Center                 |
-| ✅     | PadBox                 |
-| ✅     | SplitSwitcher          |
-| ✅     | ColumnSwitcher         |
-| ✅     | useForwardedRef        |
-| ✅     | useStatefulRef         |
-| ✅     | useMatchContainerSizes |
-| ✅     | useMediaQuery          |
-| ✅     | useMatchMedia          |
-| ✅     | useContainerQuery      |
-| ✅     | Inline                 |
-| ✅     | InlineCluster          |
-| ✅     | Cover                  |
-| ✅     | Frame                  |
-| ✅     | Reel                   |
-| ✅     | MasonryGrid            |
-| ✅     | CSS Reset              |
+| Status | Name              |
+| ------ | ----------------- |
+| ✅     | Stack             |
+| ✅     | Grid              |
+| ✅     | Split             |
+| ✅     | AppBoundary       |
+| ✅     | Columns           |
+| ✅     | Center            |
+| ✅     | PadBox            |
+| ✅     | SplitSwitcher     |
+| ✅     | ColumnSwitcher    |
+| ✅     | useForwardedRef   |
+| ✅     | useStatefulRef    |
+| ✅     | useContainerQuery |
+| ✅     | Inline            |
+| ✅     | InlineCluster     |
+| ✅     | Cover             |
+| ✅     | Frame             |
+| ✅     | Reel              |
+| ✅     | MasonryGrid       |
+| ✅     | CSS Reset         |
+| 🛠      | CSS Only          |
 
 ## Contributors
 
