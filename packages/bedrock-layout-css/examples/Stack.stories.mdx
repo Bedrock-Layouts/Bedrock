@@ -1,0 +1,34 @@
+import { Stack } from '@bedrock-layout/stack';
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+import { Box } from './Box'
+import { argTypes } from './argTypes'
+
+<Meta title="Pure-CSS/Bedrock-Layout-CSS" />
+
+# CSS Only
+
+## EXPERIMENTAL
+
+I am currently working on a CSS-only version of this library. More details will be added soon.
+
+## Example
+
+To import
+
+```jsx
+import "@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.min.css"
+//or
+import "@bedrock-layout/bedrock-layout-css/lib/components/stack.css"
+```
+
+## Usage
+
+```jsx
+const App = () => (
+  <main data-bedrock-layout-stack style={{'--gutter':'2rem'}}>
+    {/* ... */}
+  </main>
+)
+
+```
