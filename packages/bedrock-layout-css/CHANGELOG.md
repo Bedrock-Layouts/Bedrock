@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.1.0...@bedrock-layout/bedrock-layout-css@0.2.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* **bedrock-layout-css:** fix build process ([8315b08](https://github.com/Bedrock-Layouts/Bedrock/commit/8315b08d6e8c3ddf6c2b3280fe254f3c80b113aa))
+
+
+### Features
+
+* **bedrock-layout-css:** add center css ([175c7ea](https://github.com/Bedrock-Layouts/Bedrock/commit/175c7ea1f97c100a31bb5ad97e163ed015fa437f))
+
+
+
+
+
 # 0.1.0 (2021-11-10)
 
 
