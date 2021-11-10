@@ -57,12 +57,7 @@ const readDir = promisify(fs.readdir);
 
   assertIsString(result);
 
-  await writeFile(path.join(srcPath, "bedrock-layout.css"), result);
-
-  copyFile(
-    path.join(srcPath, "bedrock-layout.css"),
-    path.join(libPath, "bedrock-layout.css")
-  );
+  await writeFile(path.join(libPath, "bedrock-layout.css"), result);
 
   await Promise.all(
     filesSorted.map(async (file) => {

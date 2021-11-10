@@ -34,7 +34,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
     "clean:build": "rimraf lib",
-    "build": "ts-node build.ts && minify src/bedrock-layout.css > lib/bedrock-layout.min.css"
+    "build": "ts-node build.ts && minify lib/bedrock-layout.css > lib/bedrock-layout.min.css"
   },
   "bugs": {
     "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
