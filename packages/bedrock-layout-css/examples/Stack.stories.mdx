@@ -1,34 +1,27 @@
-import { Stack } from '@bedrock-layout/stack';
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
 
-import { Box } from './Box'
-import { argTypes } from './argTypes'
+<Meta title="Pure-CSS/components/stack.css" />
 
-<Meta title="Pure-CSS/Bedrock-Layout-CSS" />
-
-# CSS Only
+# CSS Reset
 
 ## EXPERIMENTAL
 
-I am currently working on a CSS-only version of this library. More details will be added soon.
+This is a pure-css version of the [Stack package](/?path=/docs/components-stack--api).
 
-## Example
-
-To import
-
-```jsx
-import "@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.min.css"
-//or
-import "@bedrock-layout/bedrock-layout-css/lib/components/stack.css"
+```javascript
+import "@bedrock-layout/css-reset/lib/components/stack.css";
 ```
 
 ## Usage
 
-```jsx
-const App = () => (
-  <main data-bedrock-layout-stack style={{'--gutter':'2rem'}}>
-    {/* ... */}
-  </main>
-)
+By adding the `data-bedrock-layout-stack` attribute to an element, it will be styled as a stack. You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
+```html
+<div data-bedrock-layout-stack style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div data-bedrock-layout-stack style="--gutter:var(--space-mdLg)">
+  <!-- content goes here -->
+</div>
 ```
