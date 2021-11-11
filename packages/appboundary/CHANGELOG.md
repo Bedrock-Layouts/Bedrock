@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.9 (2021-11-11)
+
+
+### Bug Fixes
+
+* **app-boundry:** fix broken tests ([a2617d0](https://github.com/Bedrock-Layouts/Bedrock/commit/a2617d02eee2fc0f7ce24f2e1f1f33e2634d91d8))
+
+
+
+
+
 ## [2.1.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/appboundary@2.1.7...@bedrock-layout/appboundary@2.1.8) (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/appboundary
