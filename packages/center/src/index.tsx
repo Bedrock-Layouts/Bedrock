@@ -22,11 +22,20 @@ function getSafeMaxWidth(maxWidth?: MaxWidth) {
   return typeof maxWidth === "number" ? `${maxWidth}px` : sizes.medium;
 }
 
-export const Center = styled.div.attrs<CenterProps>(() => {
-  return {
-    "data-bedrock-layout-center": "",
-  };
-})<CenterProps>`
+export const Center = styled.div.attrs<CenterProps>(
+  ({ centerChildren, centerText }) => {
+    const centerProps = [
+      centerText && "center-text",
+      centerChildren && "center-children",
+    ]
+      .filter((x) => x)
+      .join(" ");
+
+    return {
+      "data-bedrock-layout-center": centerProps,
+    };
+  }
+)<CenterProps>`
   @property --maxWidth {
     syntax: "<length-percentage>";
     inherits: false;
@@ -51,16 +60,15 @@ export const Center = styled.div.attrs<CenterProps>(() => {
     max-inline-size: var(--maxWidth, ${sizes.medium});
   }
 
-  ${(props) => (props.centerText ? "text-align: center;" : "")}
+  [data-bedrock-layout-center~="center-children"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  ${(props) =>
-    props.centerChildren
-      ? `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  `
-      : ""}
+  [data-bedrock-layout-center~="center-text"] {
+    text-align: center;
+  }
 `;
 
 Center.displayName = "Center";

@@ -10,6 +10,24 @@ exports[`AppBoundary correct usage renders boundarySize 1`] = `
   max-inline-size: 1023px;
 }
 
+.c1 [data-bedrock-layout-center~="center-children"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 [data-bedrock-layout-center~="center-text"] {
+  text-align: center;
+}
+
 .c0 {
   padding: 0;
   max-width: 100%;
@@ -57,6 +75,24 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
   max-inline-size: 1023px;
 }
 
+.c1 [data-bedrock-layout-center~="center-children"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 [data-bedrock-layout-center~="center-text"] {
+  text-align: center;
+}
+
 .c0 {
   padding: 0;
   max-width: 100%;
@@ -102,6 +138,24 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
+}
+
+.c1 [data-bedrock-layout-center~="center-children"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 [data-bedrock-layout-center~="center-text"] {
+  text-align: center;
 }
 
 .c0 {
