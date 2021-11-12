@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.3.1...@bedrock-layout/bedrock-layout-css@0.4.0) (2021-11-12)
+
+
+### Features
+
+* **bedrock-layout-css:** add split component to css ([9e18867](https://github.com/Bedrock-Layouts/Bedrock/commit/9e1886773e52e6d4724fc26db1fb8764ff181f35))
+
+
+
+
+
 ## [0.3.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.3.0...@bedrock-layout/bedrock-layout-css@0.3.1) (2021-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css
