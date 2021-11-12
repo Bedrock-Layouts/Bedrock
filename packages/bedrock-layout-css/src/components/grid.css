@@ -1,0 +1,29 @@
+/*
+  grid.css
+*/
+
+[data-bedrock-layout-grid] {
+  @property --gutter {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+
+  @property --minItemWidth {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 639px;
+  }
+
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter, 0);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--minItemWidth, 639px), 100%), 1fr)
+  );
+}
+
+[data-bedrock-layout-grid] > * {
+  margin: 0;
+}
