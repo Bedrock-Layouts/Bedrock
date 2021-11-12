@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+<Meta title="Pure-CSS/components/grid.css" />
+
+# CSS Reset
+
+## EXPERIMENTAL
+
+This is a pure-css version of the [Grid package](/?path=/docs/components-grid--api).
+
+```javascript
+import "@bedrock-layout/css-reset/lib/components/grid.css";
+```
+
+## Usage
+
+By adding the `data-bedrock-layout-grid` attribute to an element, it will be styled as a grid.
+
+You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+```html
+<div data-bedrock-layout-grid style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div data-bedrock-layout-grid style="--gutter:var(--space-mdLg)">
+  <!-- content goes here -->
+</div>
+```
+
+The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--minItemWidth` property. By default this is set to `639px`, but you can change this value by setting the `--minItemWidth` property in the style.
+
+```html
+<div data-bedrock-layout-grid style="--minItemWidth:40rem">
+  <!-- Children will automatically be optimized to the best number of columns -->
+</div>
+```

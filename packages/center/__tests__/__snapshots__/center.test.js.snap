@@ -10,24 +10,6 @@ exports[`Center correct usage renders custom width 1`] = `
   max-inline-size: 1023px;
 }
 
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
-}
-
 @supports (max-inline-size: 320px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
@@ -61,24 +43,6 @@ exports[`Center correct usage renders custom width as string 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-}
-
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
 }
 
 @supports (max-inline-size: 320px ) {
@@ -116,24 +80,6 @@ exports[`Center correct usage renders default width 1`] = `
   max-inline-size: 1023px;
 }
 
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
-}
-
 @supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
@@ -169,24 +115,6 @@ exports[`Center correct usage renders default width if invalid CSS length 1`] = 
   max-inline-size: 1023px;
 }
 
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
-}
-
 @supports (max-inline-size: 320pixels ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
@@ -220,9 +148,6 @@ exports[`Center correct usage renders with centered children 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-}
-
-.c0 [data-bedrock-layout-center~="center-children"] {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -234,10 +159,6 @@ exports[`Center correct usage renders with centered children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
 }
 
 @supports (max-inline-size: 1023px ) {
@@ -273,23 +194,6 @@ exports[`Center correct usage renders with centered text 1`] = `
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-}
-
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
   text-align: center;
 }
 
@@ -328,24 +232,6 @@ exports[`Center correct usage renders with theme overrides 1`] = `
   max-inline-size: 1023px;
 }
 
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
-}
-
 @supports (max-inline-size: 1023px ) {
   .c0 {
     max-inline-size: var(--maxWidth,1023px);
@@ -379,24 +265,6 @@ exports[`Center incorrect usage renders default with console error with no child
   margin-inline-end: auto;
   margin-inline: auto;
   max-inline-size: 1023px;
-}
-
-.c0 [data-bedrock-layout-center~="center-children"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 [data-bedrock-layout-center~="center-text"] {
-  text-align: center;
 }
 
 @supports (max-inline-size: 1023px ) {

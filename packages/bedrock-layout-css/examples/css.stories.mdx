@@ -28,3 +28,38 @@ import '@bedrock-layout/bedrock-layout-css/lib/components/reset.css';
 import '@bedrock-layout/bedrock-layout-css/lib/components/stack.css';
 import '@bedrock-layout/bedrock-layout-css/lib/components/center.css';
 ```
+
+In lieu of the above, you can also use the `<link>` tag with it's source set to the UNPKG version:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css"
+/>
+```
+
+or
+
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/lib/components/stack.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/lib/components/center.css"
+/>
+```
+
+Please note that the CSS is not minified at this time.
+
+## Not included
+
+There are a few components/APIs that are not included in the pure CSS version. These are:
+
+- `MasonryGrid`
+- `PadBox`
+- `AppBoundary`
+- The `switchAt` API for `Split` and `Columns`
+
+They are left out either because they require additional JavaScript to work or the developer experience is lost in the CSS-only version.
