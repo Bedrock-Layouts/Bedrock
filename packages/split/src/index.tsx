@@ -39,8 +39,11 @@ interface SplitBaseProps {
   forwardedAs?: As<unknown>;
 }
 
-const SplitBase = styled.div.attrs<SplitBaseProps>(() => ({
-  "data-bedrock-layout-split": "",
+const SplitBase = styled.div.attrs<SplitBaseProps>((props) => ({
+  "data-bedrock-layout-split":
+    props.fraction && fractions[props.fraction]
+      ? `fraction:${props.fraction}`
+      : "",
 }))<SplitBaseProps>`
   box-sizing: border-box;
   > * {

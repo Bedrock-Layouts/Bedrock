@@ -25,7 +25,7 @@
     "cz": "cz",
     "clean": "lerna clean",
     "build": "lerna run build",
-    "build:storybook": "build-storybook --docs -s ./public",
+    "build:storybook": "build-storybook -s ./public",
     "prepublish": "yarn build",
     "publish": "lerna publish",
     "publish:ci": "yarn publish -- --no-commit-hooks --ignore-scripts",
