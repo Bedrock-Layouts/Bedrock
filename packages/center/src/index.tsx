@@ -60,15 +60,13 @@ export const Center = styled.div.attrs<CenterProps>(
     max-inline-size: var(--maxWidth, ${sizes.medium});
   }
 
-  [data-bedrock-layout-center~="center-children"] {
-    display: flex;
+  ${(props) =>
+    props.centerChildren &&
+    `display: flex;
     flex-direction: column;
-    align-items: center;
-  }
+    align-items: center;`}
 
-  [data-bedrock-layout-center~="center-text"] {
-    text-align: center;
-  }
+  ${(props) => props.centerText && `text-align: center;`}
 `;
 
 Center.displayName = "Center";
