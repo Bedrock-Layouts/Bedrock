@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.10 (2021-11-12)
+
+
+### Bug Fixes
+
+* **center:** fix regression in center component ([8601950](https://github.com/Bedrock-Layouts/Bedrock/commit/86019505fc18bcc9198d450088b3709291694fed))
+
+
+
+
+
 ## 2.1.9 (2021-11-11)
 
 

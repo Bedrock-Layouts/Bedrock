@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2021-11-12)
+
+
+### Features
+
+* **split:** add fractions to data attribute ([92a396a](https://github.com/Bedrock-Layouts/Bedrock/commit/92a396a33c7062d18062ffa1d21139a7b73b610a))
+
+
+
+
+
 ## 2.1.25 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/split

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.4.0...@bedrock-layout/bedrock-layout-css@0.5.0) (2021-11-12)
+
+
+### Features
+
+* **bedrock-layout-css:** add grid component ([069e2f4](https://github.com/Bedrock-Layouts/Bedrock/commit/069e2f4017e76cc666917cd4b139c32c4b7b0a07))
+
+
+
+
+
 # [0.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.3.1...@bedrock-layout/bedrock-layout-css@0.4.0) (2021-11-12)
 
 
