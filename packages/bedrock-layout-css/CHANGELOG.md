@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.5.0...@bedrock-layout/bedrock-layout-css@0.6.0) (2021-11-13)
+
+
+### Features
+
+* **bedrock-layout-css:** add inline-cluster to CSS ([0af5f8e](https://github.com/Bedrock-Layouts/Bedrock/commit/0af5f8ed36f7640f6d097e31c1cd32ab06c51026))
+
+
+
+
+
 # [0.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.4.0...@bedrock-layout/bedrock-layout-css@0.5.0) (2021-11-12)
 
 
