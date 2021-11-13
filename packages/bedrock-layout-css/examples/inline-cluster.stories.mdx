@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+<Meta title="Pure-CSS/components/inline-cluster.css" />
+
+# CSS Reset
+
+## EXPERIMENTAL
+
+This is a pure-css version of the [InlineCluster package](/?path=/docs/components-inlinecluster--api).
+
+```javascript
+import "@bedrock-layout/css-reset/lib/components/inline-cluster.css";
+```
+
+## Usage
+
+By adding the `data-bedrock-layout-inline-cluster` attribute to an element, it will be styled as a inline-cluster.
+
+You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+```html
+<div data-bedrock-layout-inline-cluster style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div data-bedrock-layout-inline-cluster style="--gutter:var(--space-mdLg)">
+  <!-- content goes here -->
+</div>
+```
+
+You can set the justification and alignment of the inline-cluster's children by setting the `justify` and `align` property on the `data-bedrock-layout-inline-cluster` attribute.
+
+Both the `justify` and `align` properties can be set to `start`, `end`, `center`.
+
+```html
+<div data-bedrock-layout-inline-cluster="jusitfy:start" style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div
+  data-bedrock-layout-inline-cluster="align:center"
+  style="--gutter:var(--space-mdLg)"
+>
+  <!-- content goes here -->
+</div>
+```

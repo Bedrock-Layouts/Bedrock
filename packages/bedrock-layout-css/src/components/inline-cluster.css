@@ -1,0 +1,41 @@
+/*
+  inline-cluster.css
+*/
+
+[data-bedrock-layout-inline-cluster] {
+  @property --gutter {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+[data-bedrock-layout-inline-cluster] > * {
+  margin: 0;
+}
+
+[data-bedrock-layout-inline-cluster~="justify:start"] {
+  justify-content: flex-start;
+}
+[data-bedrock-layout-inline-cluster~="justify:center"] {
+  justify-content: center;
+}
+[data-bedrock-layout-inline-cluster~="justify:end"] {
+  justify-content: flex-end;
+}
+
+[data-bedrock-layout-inline-cluster~="align:start"] {
+  align-items: flex-start;
+}
+[data-bedrock-layout-inline-cluster~="align:center"] {
+  align-items: center;
+}
+[data-bedrock-layout-inline-cluster~="align:end"] {
+  align-items: flex-end;
+}
