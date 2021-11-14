@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2021-11-14)
+
+
+### Features
+
+* **inline-cluster:** align with pure css version ([15020d1](https://github.com/Bedrock-Layouts/Bedrock/commit/15020d165178bdfe111092a6675ac167799ca847))
+
+
+
+
+
 ## 2.0.20 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/inline-cluster

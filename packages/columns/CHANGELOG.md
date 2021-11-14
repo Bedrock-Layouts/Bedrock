@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2021-11-14)
+
+
+### Features
+
+* **columns:** align with css ([3834d00](https://github.com/Bedrock-Layouts/Bedrock/commit/3834d00116ee95a052a2cb19d71607b10a532f18))
+
+
+
+
+
 ## 2.1.24 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/columns
