@@ -17,8 +17,8 @@ interface ColumnsBaseProps {
   forwardedAs?: As<unknown>;
 }
 
-const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(() => ({
-  "data-bedrock-layout-columns": "",
+const ColumnsBase = styled.div.attrs<ColumnsBaseProps>((props) => ({
+  "data-bedrock-layout-columns": props.dense ? "dense" : "",
 }))<ColumnsBaseProps>`
   box-sizing: border-box;
   > * {
