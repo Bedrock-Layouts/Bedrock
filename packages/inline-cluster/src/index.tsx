@@ -22,9 +22,11 @@ export interface InlineClusterProps {
 }
 
 export const InlineCluster = styled.div.attrs<InlineClusterProps>(
-  ({ children }) => {
+  ({ justify, align }) => {
+    const justifyValue = justify ? `justify:${justify}` : "justify:start";
+    const alignValue = align ? `align:${align}` : "align:start";
     return {
-      "data-bedrock-layout-inline-cluster": "",
+      "data-bedrock-layout-inline-cluster": `${justifyValue} ${alignValue}`,
     };
   }
 )<InlineClusterProps>`
