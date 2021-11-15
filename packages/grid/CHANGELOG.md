@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2021-11-15)
+
+
+### Features
+
+* update attribute name ([5b779e2](https://github.com/Bedrock-Layouts/Bedrock/commit/5b779e2d539e94c94464204039126efbb7d12f2c))
+
+
+
+
+
 ## 2.1.7 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/grid
