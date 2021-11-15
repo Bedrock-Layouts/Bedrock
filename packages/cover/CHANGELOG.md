@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2021-11-15)
+
+
+### Features
+
+* **cover:** add cover ([f20392f](https://github.com/Bedrock-Layouts/Bedrock/commit/f20392fd1f805d4cf826c0b1625306d433d0d9bc))
+
+
+
+
+
 ## 2.0.21 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/cover

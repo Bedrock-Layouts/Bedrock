@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.0.25...@bedrock-layout/inline@2.1.0) (2021-11-15)
+
+
+### Features
+
+* **inline:** align inline with css ([468af0b](https://github.com/Bedrock-Layouts/Bedrock/commit/468af0babf783f912e98d5e98a88466df6e29397))
+
+
+
+
+
 ## 2.0.25 (2021-11-14)
 
 **Note:** Version bump only for package @bedrock-layout/inline

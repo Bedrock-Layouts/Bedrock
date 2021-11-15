@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.7.0...@bedrock-layout/bedrock-layout-css@0.8.0) (2021-11-15)
+
+
+### Features
+
+* **add reel:** add reel css ([ad88b19](https://github.com/Bedrock-Layouts/Bedrock/commit/ad88b19dc4608ef272b3f654a2ede708c117e299))
+* **bedrock-layout-css:** add inline ([dd93f61](https://github.com/Bedrock-Layouts/Bedrock/commit/dd93f612f7a3d906a0c4ad6b4ce1c86d44bfaa14))
+* **bedrock-layout-css:** frame ([c93f8d4](https://github.com/Bedrock-Layouts/Bedrock/commit/c93f8d4ed6040b2be2ba108db6093bd3db1e3f0d))
+* **cover:** add cover ([f20392f](https://github.com/Bedrock-Layouts/Bedrock/commit/f20392fd1f805d4cf826c0b1625306d433d0d9bc))
+
+
+
+
+
 # [0.7.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.6.0...@bedrock-layout/bedrock-layout-css@0.7.0) (2021-11-14)
 
 

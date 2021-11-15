@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-11-15)
+
+
+### Features
+
+* **reel:** align with css ([bc4e064](https://github.com/Bedrock-Layouts/Bedrock/commit/bc4e0641c626511fad71b6738826df1d6d95396a))
+
+
+
+
+
 ## 1.0.8 (2021-11-06)
 
 **Note:** Version bump only for package @bedrock-layout/reel
