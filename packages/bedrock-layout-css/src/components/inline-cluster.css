@@ -8,7 +8,7 @@
   initial-value: 0;
 }
 
-[data-bedrock-layout-inline-cluster] {
+[data-bedrock-inline-cluster] {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter);
@@ -16,26 +16,26 @@
   align-items: flex-start;
 }
 
-[data-bedrock-layout-inline-cluster] > * {
+[data-bedrock-inline-cluster] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-inline-cluster~="justify:start"] {
+[data-bedrock-inline-cluster~="justify:start"] {
   justify-content: flex-start;
 }
-[data-bedrock-layout-inline-cluster~="justify:center"] {
+[data-bedrock-inline-cluster~="justify:center"] {
   justify-content: center;
 }
-[data-bedrock-layout-inline-cluster~="justify:end"] {
+[data-bedrock-inline-cluster~="justify:end"] {
   justify-content: flex-end;
 }
 
-[data-bedrock-layout-inline-cluster~="align:start"] {
+[data-bedrock-inline-cluster~="align:start"] {
   align-items: flex-start;
 }
-[data-bedrock-layout-inline-cluster~="align:center"] {
+[data-bedrock-inline-cluster~="align:center"] {
   align-items: center;
 }
-[data-bedrock-layout-inline-cluster~="align:end"] {
+[data-bedrock-inline-cluster~="align:end"] {
   align-items: flex-end;
 }

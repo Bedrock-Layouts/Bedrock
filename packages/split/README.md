@@ -29,7 +29,7 @@ import { Split } from '@bedrock-layout/split';
 
 ## data-attribute
 
-For purposes of styling, you can select `data-bedrock-layout-split`.
+For purposes of styling, you can select `data-bedrock-split`.
 
 ## API
 

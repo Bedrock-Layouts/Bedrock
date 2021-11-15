@@ -8,22 +8,23 @@
   initial-value: 100%;
 }
 
-[data-bedrock-layout-center] {
+[data-bedrock-center] {
   box-sizing: content-box;
-
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
 
   max-inline-size: var(--maxWidth, 100%);
 }
+[data-bedrock-center][data-bedrock-center] {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-inline: auto;
+}
 
-[data-bedrock-layout-center~="center-children"] {
+[data-bedrock-center~="center-children"] {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-[data-bedrock-layout-center~="center-text"] {
+[data-bedrock-center~="center-text"] {
   text-align: center;
 }

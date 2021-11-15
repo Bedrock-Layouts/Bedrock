@@ -107,7 +107,7 @@ export interface PadBoxProps {
 }
 
 export const PadBox = styled.div.attrs<PadBoxProps>(() => ({
-  "data-bedrock-layout-padbox": "",
+  "data-bedrock-padbox": "",
 }))<PadBoxProps>`
   box-sizing: border-box;
   ${(props) => paddingToString(props.theme)(props.padding)}

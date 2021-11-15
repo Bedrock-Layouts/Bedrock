@@ -109,12 +109,10 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
 };
 
 export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
-  delete (props as unknown as Record<string, unknown>)[
-    "data-bedrock-layout-grid"
-  ];
+  delete (props as unknown as Record<string, unknown>)["data-bedrock-grid"];
   return {
-    "data-bedrock-layout-masonry-grid": "",
-    "data-bedrock-layout-grid": undefined,
+    "data-bedrock-masonry-grid": "",
+    "data-bedrock-grid": undefined,
     children: Children.map(props.children, (child) => (
       <Resizer gutter={props.gutter ?? "lg"}>{child}</Resizer>
     )),

@@ -16,19 +16,13 @@ export interface CoverProps {
 export const Cover = styled.div.attrs<CoverProps>(
   ({ children, top, bottom }) => {
     return {
-      "data-bedrock-layout-cover": "",
+      "data-bedrock-cover": "",
       children: (
         <React.Fragment>
-          {top && (
-            <div data-bedrock-layout-cover-top="">{Children.only(top)}</div>
-          )}
-          <div data-bedrock-layout-cover-centered="">
-            {Children.only(children)}
-          </div>
+          {top && <div data-bedrock-cover-top="">{Children.only(top)}</div>}
+          <div data-bedrock-cover-centered="">{Children.only(children)}</div>
           {bottom && (
-            <div data-bedrock-layout-cover-bottom="">
-              {Children.only(bottom)}
-            </div>
+            <div data-bedrock-cover-bottom="">{Children.only(bottom)}</div>
           )}
         </React.Fragment>
       ),
@@ -55,7 +49,7 @@ export const Cover = styled.div.attrs<CoverProps>(
   min-block-size: 100vh;
   grid-template-rows: var(--rows);
 
-  > [data-bedrock-layout-cover-centered] {
+  > [data-bedrock-cover-centered] {
     align-self: center;
   }
 

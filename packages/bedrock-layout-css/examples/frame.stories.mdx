@@ -14,16 +14,16 @@ import "@bedrock-layout/css-reset/lib/components/frame.css";
 
 ## Usage
 
-By adding the `data-bedrock-layout-frame` attribute to an element, it will be styled as a frame.
+By adding the `data-bedrock-frame` attribute to an element, it will be styled as a frame.
 
 The frame is designed to crop the children of an element to the size of the element, while maintaining the content's aspect ratio. The frame does not have an intrinsic size and can either be sized by the parent element, directly using class or inline styles, or by setting the `--ratio` value in the inline style.
 
 ```html
-<div data-bedrock-layout-stack style="--ratio:16/9">
+<div data-bedrock-stack style="--ratio:16/9">
   <video src="/video.mp4" />
 </div>
 
-<div data-bedrock-layout-stack style="height:100px; width:50%;">
+<div data-bedrock-stack style="height:100px; width:50%;">
   <img src="/image.png" />
 </div>
 ```
@@ -31,7 +31,7 @@ The frame is designed to crop the children of an element to the size of the elem
 The content is centered within the frame by default, but this can be overridden by setting the `--position` value in the inline style.
 
 ```html
-<div data-bedrock-layout-stack style="--ratio:16/9; --postion:top left;">
+<div data-bedrock-stack style="--ratio:16/9; --postion:top left;">
   <video src="/video.mp4" />
 </div>
 ```

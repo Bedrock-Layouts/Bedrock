@@ -8,17 +8,17 @@
   initial-value: 0;
 }
 
-[data-bedrock-layout-stack] {
+[data-bedrock-stack] {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
   align-content: start;
 }
 
-[data-bedrock-layout-stack] > * {
+[data-bedrock-stack] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-stack] > [data-bedrock-layout-column] {
+[data-bedrock-stack] > [data-bedrock-column] {
   grid-column: span 1 / auto;
 }

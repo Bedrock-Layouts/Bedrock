@@ -7,41 +7,41 @@
   initial-value: 0;
 }
 
-[data-bedrock-layout-split] {
+[data-bedrock-split] {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
   grid-template-columns: 1fr 1fr;
 }
 
-[data-bedrock-layout-split] > * {
+[data-bedrock-split] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-split~="fraction:1/4"] {
+[data-bedrock-split~="fraction:1/4"] {
   grid-template-columns: 1fr 3fr;
 }
 
-[data-bedrock-layout-split~="fraction:1/3"] {
+[data-bedrock-split~="fraction:1/3"] {
   grid-template-columns: 1fr 2fr;
 }
 
-[data-bedrock-layout-split~="fraction:1/2"] {
+[data-bedrock-split~="fraction:1/2"] {
   grid-template-columns: 1fr 1fr;
 }
 
-[data-bedrock-layout-split~="fraction:2/3"] {
+[data-bedrock-split~="fraction:2/3"] {
   grid-template-columns: 3fr 1fr;
 }
 
-[data-bedrock-layout-split~="fraction:3/4"] {
+[data-bedrock-split~="fraction:3/4"] {
   grid-template-columns: 3fr 1fr;
 }
 
-[data-bedrock-layout-split~="fraction:auto-start"] {
+[data-bedrock-split~="fraction:auto-start"] {
   grid-template-columns: auto 1fr;
 }
 
-[data-bedrock-layout-split~="fraction:auto-end"] {
+[data-bedrock-split~="fraction:auto-end"] {
   grid-template-columns: 1fr auto;
 }

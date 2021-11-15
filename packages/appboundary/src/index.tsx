@@ -14,7 +14,7 @@ export interface AppBoundaryProps {
 
 export const AppBoundary = styled.div.attrs<AppBoundaryProps>((props) => {
   return {
-    "data-bedrock-layout-appboundary": "",
+    "data-bedrock-appboundary": "",
     children: (
       <Center
         maxWidth={

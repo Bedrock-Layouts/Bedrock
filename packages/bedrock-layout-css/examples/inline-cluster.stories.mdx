@@ -14,31 +14,31 @@ import "@bedrock-layout/css-reset/lib/components/inline-cluster.css";
 
 ## Usage
 
-By adding the `data-bedrock-layout-inline-cluster` attribute to an element, it will be styled as a inline-cluster.
+By adding the `data-bedrock-inline-cluster` attribute to an element, it will be styled as a inline-cluster.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
 ```html
-<div data-bedrock-layout-inline-cluster style="--gutter:2rem">
+<div data-bedrock-inline-cluster style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-layout-inline-cluster style="--gutter:var(--space-mdLg)">
+<div data-bedrock-inline-cluster style="--gutter:var(--space-mdLg)">
   <!-- content goes here -->
 </div>
 ```
 
-You can set the justification and alignment of the inline-cluster's children by setting the `justify` and `align` property on the `data-bedrock-layout-inline-cluster` attribute.
+You can set the justification and alignment of the inline-cluster's children by setting the `justify` and `align` property on the `data-bedrock-inline-cluster` attribute.
 
 Both the `justify` and `align` properties can be set to `start`, `end`, `center`.
 
 ```html
-<div data-bedrock-layout-inline-cluster="jusitfy:start" style="--gutter:2rem">
+<div data-bedrock-inline-cluster="jusitfy:start" style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
 <div
-  data-bedrock-layout-inline-cluster="align:center"
+  data-bedrock-inline-cluster="align:center"
   style="--gutter:var(--space-mdLg)"
 >
   <!-- content goes here -->

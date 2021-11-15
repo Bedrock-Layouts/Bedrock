@@ -26,7 +26,7 @@ import Inline from '@bedrock-layout/inline';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-inline`.
+For purposes of styling you can select `data-bedrock-inline`.
 
 ## API
 

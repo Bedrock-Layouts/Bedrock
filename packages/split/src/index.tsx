@@ -40,7 +40,7 @@ interface SplitBaseProps {
 }
 
 const SplitBase = styled.div.attrs<SplitBaseProps>((props) => ({
-  "data-bedrock-layout-split":
+  "data-bedrock-split":
     props.fraction && fractions[props.fraction]
       ? `fraction:${props.fraction}`
       : "",

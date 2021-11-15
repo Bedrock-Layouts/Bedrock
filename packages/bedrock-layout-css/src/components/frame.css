@@ -2,14 +2,14 @@
   frame.css
 */
 
-[data-bedrock-layout-frame] {
+[data-bedrock-frame] {
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
 }
 
-[data-bedrock-layout-frame] > * {
+[data-bedrock-frame] > * {
   overflow: hidden;
   position: absolute;
 
@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-[data-bedrock-layout-frame] > :is(img, video) {
+[data-bedrock-frame] > :is(img, video) {
   inline-size: 100%;
   block-size: 100%;
   size: 100%;
@@ -36,6 +36,6 @@
   object-position: var(--position, "50%");
 }
 
-[data-bedrock-layout-frame][style*="--ratio"] {
+[data-bedrock-frame][style*="--ratio"] {
   aspect-ratio: --ratio;
 }

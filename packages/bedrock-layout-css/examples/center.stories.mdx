@@ -14,35 +14,35 @@ import "@bedrock-layout/css-reset/lib/components/center.css";
 
 ## Usage
 
-By adding the `data-bedrock-layout-center` attribute to an element, it will be styled as a center.
+By adding the `data-bedrock-center` attribute to an element, it will be styled as a center.
 
 You can adjust the max-width by setting the `--maxWidth` property in the inline style.
 
 ```html
-<div data-bedrock-layout-center style="--maxWidth:50vw">
+<div data-bedrock-center style="--maxWidth:50vw">
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-layout-center style="--maxWidth:var(--size-medium)">
+<div data-bedrock-center style="--maxWidth:var(--size-medium)">
   <!-- content goes here -->
 </div>
 ```
 
-You can also set the text to center by adding `center-text` to the `data-bedrock-layout-center` attribute. This will center the text within the element.
-You can also set the children to center by adding `center-children` to the `data-bedrock-layout-center` attribute. This will center the children within the element.
+You can also set the text to center by adding `center-text` to the `data-bedrock-center` attribute. This will center the text within the element.
+You can also set the children to center by adding `center-children` to the `data-bedrock-center` attribute. This will center the children within the element.
 
 Both properties can be combined in any order.
 
 ```html
-<div data-bedrock-layout-center="center-text">
+<div data-bedrock-center="center-text">
   <!-- text alignment will be centered -->
 </div>
 
-<div data-bedrock-layout-center="center-children">
+<div data-bedrock-center="center-children">
   <!-- children will be centered -->
 </div>
 
-<div data-bedrock-layout-center="center-text center-children">
+<div data-bedrock-center="center-text center-children">
   <!-- text alignment and children will be centered -->
 </div>
 ```

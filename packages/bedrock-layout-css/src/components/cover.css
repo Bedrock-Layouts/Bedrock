@@ -14,7 +14,7 @@
   initial-value: 100vh;
 }
 
-[data-bedrock-layout-cover] {
+[data-bedrock-cover] {
   display: flex;
   flex-direction: column;
   gap: var(--gutter);
@@ -22,11 +22,11 @@
   min-block-size: var(--minHeight, 100vh);
 }
 
-[data-bedrock-layout-cover] > * {
+[data-bedrock-cover] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-cover] > [data-bedrock-layout-cover-centered] {
+[data-bedrock-cover] > [data-bedrock-cover-centered] {
   margin-block-start: auto;
   margin-block-end: auto;
 }

@@ -29,7 +29,7 @@ import Grid from '@bedrock-layout/grid';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-grid`.
+For purposes of styling you can select `data-bedrock-grid`.
 
 ## API
 

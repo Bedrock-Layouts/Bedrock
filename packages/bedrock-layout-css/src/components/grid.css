@@ -14,7 +14,7 @@
   initial-value: 639px;
 }
 
-[data-bedrock-layout-grid] {
+[data-bedrock-grid] {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
@@ -24,6 +24,6 @@
   );
 }
 
-[data-bedrock-layout-grid] > * {
+[data-bedrock-grid] > * {
   margin: 0;
 }

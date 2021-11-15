@@ -26,7 +26,7 @@ import InlineCluster from '@bedrock-layout/inline-cluster';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-inline-cluster`.
+For purposes of styling you can select `data-bedrock-inline-cluster`.
 
 ## API
 
