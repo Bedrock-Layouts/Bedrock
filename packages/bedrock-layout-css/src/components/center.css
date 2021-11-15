@@ -2,13 +2,13 @@
   center.css
 */
 
-[data-bedrock-layout-center] {
-  @property --maxWidth {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 100%;
-  }
+@property --maxWidth {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 
+[data-bedrock-layout-center] {
   box-sizing: content-box;
 
   margin-inline-start: auto;

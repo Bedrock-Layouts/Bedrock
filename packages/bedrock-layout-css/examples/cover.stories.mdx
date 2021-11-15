@@ -1,0 +1,72 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+<Meta title="Pure-CSS/components/cover.css" />
+
+# CSS Reset
+
+## EXPERIMENTAL
+
+This is a pure-css version of the [Cover package](/?path=/docs/components-cover--api).
+
+```javascript
+import "@bedrock-layout/css-reset/lib/components/cover.css";
+```
+
+## Usage
+
+By adding the `data-bedrock-layout-cover` attribute to an element, it will be styled as a cover.
+
+The cover lets you center an element vertically in a container. To achieve that, you need to add the `data-bedrock-layout-cover-centered` attribute to the element that needs to be vertically centered.
+You can add content above the centered element, below it, or both. In that case the element will be centered between the content above and below.
+
+```html
+<div data-bedrock-layout-cover>
+  <div data-bedrock-layout-cover-centered>
+    <!-- centered content goes here -->
+  </div>
+</div>
+
+<div data-bedrock-layout-cover>
+  <div>
+    <!-- content on top content goes here -->
+  </div>
+  <div data-bedrock-layout-cover-centered>
+    <!-- centered content goes here -->
+  </div>
+  <div>
+    <!-- content on below content goes here -->
+  </div>
+</div>
+```
+
+You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+```html
+<div data-bedrock-layout-cover style="--gutter:2rem">
+  <div>
+    <!-- content on top content goes here -->
+  </div>
+  <div data-bedrock-layout-cover-centered>
+    <!-- centered content goes here -->
+  </div>
+  <div>
+    <!-- content on below content goes here -->
+  </div>
+</div>
+```
+
+By default, the minimum height of the `data-bedrock-layout-cover` element is `100vh`. You can update this by setting the `--minHeight` property in the inline style.
+
+```html
+<div data-bedrock-layout-cover style="--minHeight:50vh">
+  <div>
+    <!-- content on top content goes here -->
+  </div>
+  <div data-bedrock-layout-cover-centered>
+    <!-- centered content goes here -->
+  </div>
+  <div>
+    <!-- content on below content goes here -->
+  </div>
+</div>
+```

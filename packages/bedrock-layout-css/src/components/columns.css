@@ -6,19 +6,37 @@
   columns component
 */
 
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --columns {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --span {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --offsetStart {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --offsetEnd {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
 [data-bedrock-layout-columns] {
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  @property --columns {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 1;
-  }
-
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
@@ -39,22 +57,6 @@
 */
 
 [data-bedrock-layout-column] {
-  @property --span {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 1;
-  }
-  @property --offsetStart {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 1;
-  }
-  @property --offsetEnd {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 1;
-  }
-
   grid-column: span min(var(--span, 1), var(--columns, 1));
 }
 

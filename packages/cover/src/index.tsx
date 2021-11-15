@@ -22,7 +22,7 @@ export const Cover = styled.div.attrs<CoverProps>(
           {top && (
             <div data-bedrock-layout-cover-top="">{Children.only(top)}</div>
           )}
-          <div data-bedrock-layout-cover-child="">
+          <div data-bedrock-layout-cover-centered="">
             {Children.only(children)}
           </div>
           {bottom && (
@@ -55,7 +55,7 @@ export const Cover = styled.div.attrs<CoverProps>(
   min-block-size: 100vh;
   grid-template-rows: var(--rows);
 
-  > [data-bedrock-layout-cover-child] {
+  > [data-bedrock-layout-cover-centered] {
     align-self: center;
   }
 
