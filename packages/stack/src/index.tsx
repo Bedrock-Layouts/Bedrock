@@ -11,7 +11,7 @@ export interface StackProps {
 
 export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
   return {
-    "data-bedrock-layout-stack": "",
+    "data-bedrock-stack": "",
   };
 })<StackProps>`
   box-sizing: border-box;
@@ -24,7 +24,7 @@ export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
   gap: var(--gutter);
   align-content: start;
 
-  & > [data-bedrock-layout-column] {
+  & > [data-bedrock-column] {
     grid-column: span 1 / auto;
   }
 `;

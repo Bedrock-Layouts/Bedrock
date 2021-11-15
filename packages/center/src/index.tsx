@@ -32,7 +32,7 @@ export const Center = styled.div.attrs<CenterProps>(
       .join(" ");
 
     return {
-      "data-bedrock-layout-center": centerProps,
+      "data-bedrock-center": centerProps,
     };
   }
 )<CenterProps>`

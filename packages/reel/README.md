@@ -29,7 +29,7 @@ import { Reel } from '@bedrock-layout/reel';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-reel`.
+For purposes of styling you can select `data-bedrock-reel`.
 
 ## API
 

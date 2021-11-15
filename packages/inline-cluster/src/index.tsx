@@ -26,8 +26,8 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
     const justifyValue = justify ? `justify:${justify}` : "justify:start";
     const alignValue = align ? `align:${align}` : "align:start";
     return {
-      "data-bedrock-layout-inline": `${justifyValue} ${alignValue}`,
-      "data-bedrock-layout-inline-cluster": undefined,
+      "data-bedrock-inline": `${justifyValue} ${alignValue}`,
+      "data-bedrock-inline-cluster": undefined,
     };
   }
 )<InlineClusterProps>`

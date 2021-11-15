@@ -15,7 +15,7 @@ const ratioStyles = css`
 
 export const Frame = styled.div.attrs<FrameProps>(() => {
   return {
-    "data-bedrock-layout-frame": "",
+    "data-bedrock-frame": "",
   };
 })<FrameProps>`
   --n: ${(props) =>

@@ -58,7 +58,7 @@ import { Columns, Column } from '@bedrock-layout/columns';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-columns` and `data-bedrock-layout-column`.
+For purposes of styling you can select `data-bedrock-columns` and `data-bedrock-column`.
 
 ## API
 

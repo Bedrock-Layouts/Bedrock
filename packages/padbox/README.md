@@ -22,7 +22,7 @@ import Stack from '@bedrock-layout/padbox';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-padbox`.
+For purposes of styling you can select `data-bedrock-padbox`.
 
 ## API
 

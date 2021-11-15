@@ -14,55 +14,52 @@ import "@bedrock-layout/css-reset/lib/components/inline.css";
 
 ## Usage
 
-By adding the `data-bedrock-layout-inline` attribute to an element, it will be styled as a inline.
+By adding the `data-bedrock-inline` attribute to an element, it will be styled as a inline.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
 ```html
-<div data-bedrock-layout-inline style="--gutter:2rem">
+<div data-bedrock-inline style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-layout-inline style="--gutter:var(--space-mdLg)">
+<div data-bedrock-inline style="--gutter:var(--space-mdLg)">
   <!-- content goes here -->
 </div>
 ```
 
-You can set the justification and alignment of the inline's children by setting the `justify` and `align` property on the `data-bedrock-layout-inline` attribute.
+You can set the justification and alignment of the inline's children by setting the `justify` and `align` property on the `data-bedrock-inline` attribute.
 
 Both the `justify` and `align` properties can be set to `start`, `end`, `center`.
 
 ```html
-<div data-bedrock-layout-inline="jusitfy:start" style="--gutter:2rem">
+<div data-bedrock-inline="jusitfy:start" style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
-<div
-  data-bedrock-layout-inline="align:center"
-  style="--gutter:var(--space-mdLg)"
->
+<div data-bedrock-inline="align:center" style="--gutter:var(--space-mdLg)">
   <!-- content goes here -->
 </div>
 ```
 
-You can set one or all of the children to stretch and fill the available space in the inline direction by setting the `stretch` property on the `data-bedrock-layout-inline` attribute.
+You can set one or all of the children to stretch and fill the available space in the inline direction by setting the `stretch` property on the `data-bedrock-inline` attribute.
 
 The stretch property can be set to `start`, `end`, `all`, or an integer that represents the index of the child. Unlike the `Inline` component, the `stretch` property can't be set to any integer value. The `stretch` property can only be set to 0-4 to represent the first, second, third, fourth, or fifth child respectively.
 
 ```html
-<div data-bedrock-layout-inline="stretch:start" style="--gutter:2rem">
+<div data-bedrock-inline="stretch:start" style="--gutter:2rem">
   <!-- The first item will stretch -->
 </div>
-<div data-bedrock-layout-inline="stretch:end" style="--gutter:2rem">
+<div data-bedrock-inline="stretch:end" style="--gutter:2rem">
   <!-- The last item will stretch -->
 </div>
-<div data-bedrock-layout-inline="stretch:all" style="--gutter:2rem">
+<div data-bedrock-inline="stretch:all" style="--gutter:2rem">
   <!-- The all the items will stretch -->
 </div>
-<div data-bedrock-layout-inline="stretch:0" style="--gutter:2rem">
+<div data-bedrock-inline="stretch:0" style="--gutter:2rem">
   <!-- The first item will stretch -->
 </div>
-<div data-bedrock-layout-inline="stretch:3" style="--gutter:2rem">
+<div data-bedrock-inline="stretch:3" style="--gutter:2rem">
   <!-- The fourth item will stretch -->
 </div>
 ```
@@ -70,7 +67,7 @@ The stretch property can be set to `start`, `end`, `all`, or an integer that rep
 If you set the `--switchAt` property, the inline will switch to a stacking layout if the width of the element is below the threshold set by the `--switchAt` property.
 
 ```html
-<div data-bedrock-layout-inline style="--switchAt:320px">
+<div data-bedrock-inline style="--switchAt:320px">
   <!-- The content will switch to a stacking layout if the width is below 320px -->
 </div>
 ```

@@ -29,7 +29,7 @@ import { Stack } from '@bedrock-layout/stack';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-stack`.
+For purposes of styling you can select `data-bedrock-stack`.
 
 ## API
 

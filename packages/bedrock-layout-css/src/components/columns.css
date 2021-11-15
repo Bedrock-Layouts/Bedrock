@@ -36,7 +36,7 @@
   initial-value: 1;
 }
 
-[data-bedrock-layout-columns] {
+[data-bedrock-columns] {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
@@ -44,11 +44,11 @@
   grid-auto-flow: row;
 }
 
-[data-bedrock-layout-columns] > * {
+[data-bedrock-columns] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-columns="dense"] {
+[data-bedrock-columns="dense"] {
   grid-auto-flow: row dense;
 }
 
@@ -56,20 +56,20 @@
   column component
 */
 
-[data-bedrock-layout-column] {
+[data-bedrock-column] {
   grid-column: span min(var(--span, 1), var(--columns, 1));
 }
 
-[data-bedrock-layout-column][style*="--offset"] > * {
+[data-bedrock-column][style*="--offset"] > * {
   grid-column: span min(var(--span, 1), var(--columns, 1));
 }
 
-[data-bedrock-layout-column][style~="--offsetStart"]::before {
+[data-bedrock-column][style~="--offsetStart"]::before {
   content: "";
   grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
 }
 
-[data-bedrock-layout-column][style~="--offsetEnd"]::before {
+[data-bedrock-column][style~="--offsetEnd"]::before {
   content: "";
   grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
 }

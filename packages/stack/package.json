@@ -49,7 +49,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
     "clean:build": "rimraf lib",
-    "build": "vite build && tsc --emitDeclarationOnly && node copyCSS.js && minify src/stack.css > lib/stack.min.css"
+    "build": "vite build && tsc --emitDeclarationOnly"
   },
   "bugs": {
     "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"

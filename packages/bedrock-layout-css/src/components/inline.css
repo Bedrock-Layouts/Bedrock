@@ -13,7 +13,7 @@
   initial-value: 0;
 }
 
-[data-bedrock-layout-inline] {
+[data-bedrock-inline] {
   display: flex;
   flex-wrap: nowrap;
   gap: var(--gutter);
@@ -21,60 +21,60 @@
   align-items: flex-start;
 }
 
-[data-bedrock-layout-inline] > * {
+[data-bedrock-inline] > * {
   margin: 0;
 }
 
-[data-bedrock-layout-inline][style*="--switchAt"] {
+[data-bedrock-inline][style*="--switchAt"] {
   flex-wrap: wrap;
 }
-[data-bedrock-layout-inline][style*="--switchAt"] > * {
+[data-bedrock-inline][style*="--switchAt"] > * {
   min-inline-size: fit-content;
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
 }
 
-[data-bedrock-layout-inline~="justify:start"] {
+[data-bedrock-inline~="justify:start"] {
   justify-content: flex-start;
 }
-[data-bedrock-layout-inline~="justify:center"] {
+[data-bedrock-inline~="justify:center"] {
   justify-content: center;
 }
-[data-bedrock-layout-inline~="justify:end"] {
+[data-bedrock-inline~="justify:end"] {
   justify-content: flex-end;
 }
 
-[data-bedrock-layout-inline~="align:start"] {
+[data-bedrock-inline~="align:start"] {
   align-items: flex-start;
 }
-[data-bedrock-layout-inline~="align:center"] {
+[data-bedrock-inline~="align:center"] {
   align-items: center;
 }
-[data-bedrock-layout-inline~="align:end"] {
+[data-bedrock-inline~="align:end"] {
   align-items: flex-end;
 }
 
-[data-bedrock-layout-inline~="stretch:all"] > * {
+[data-bedrock-inline~="stretch:all"] > * {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:start"] > :first-child {
+[data-bedrock-inline~="stretch:start"] > :first-child {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:end"] > :last-child {
+[data-bedrock-inline~="stretch:end"] > :last-child {
   flex: 1;
 }
 
-[data-bedrock-layout-inline~="stretch:0"] > :nth-child(1) {
+[data-bedrock-inline~="stretch:0"] > :nth-child(1) {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:1"] > :nth-child(2) {
+[data-bedrock-inline~="stretch:1"] > :nth-child(2) {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:2"] > :nth-child(3) {
+[data-bedrock-inline~="stretch:2"] > :nth-child(3) {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:3"] > :nth-child(4) {
+[data-bedrock-inline~="stretch:3"] > :nth-child(4) {
   flex: 1;
 }
-[data-bedrock-layout-inline~="stretch:4"] > :nth-child(5) {
+[data-bedrock-inline~="stretch:4"] > :nth-child(5) {
   flex: 1;
 }

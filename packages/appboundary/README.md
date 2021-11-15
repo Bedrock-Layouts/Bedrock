@@ -29,7 +29,7 @@ import { AppBoundary } from '@bedrock-layout/appboundary';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-appboundary`.
+For purposes of styling you can select `data-bedrock-appboundary`.
 
 ## API
 

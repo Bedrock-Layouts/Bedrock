@@ -18,7 +18,7 @@ interface ColumnsBaseProps {
 }
 
 const ColumnsBase = styled.div.attrs<ColumnsBaseProps>((props) => ({
-  "data-bedrock-layout-columns": props.dense ? "dense" : "",
+  "data-bedrock-columns": props.dense ? "dense" : "",
 }))<ColumnsBaseProps>`
   box-sizing: border-box;
   > * {
@@ -119,7 +119,7 @@ export const Column = styled.div.attrs<ColumnProps, { colSpan?: number }>(
     const { span } = props;
 
     return {
-      "data-bedrock-layout-column": "",
+      "data-bedrock-column": "",
       span: undefined,
       colSpan: span,
     };

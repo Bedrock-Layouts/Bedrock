@@ -14,48 +14,48 @@ import "@bedrock-layout/css-reset/lib/components/split.css";
 
 ## Usage
 
-By adding the `data-bedrock-layout-split` attribute to an element, it will be styled as a split.
+By adding the `data-bedrock-split` attribute to an element, it will be styled as a split.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
 ```html
-<div data-bedrock-layout-split style="--gutter:2rem">
+<div data-bedrock-split style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-layout-split style="--gutter:var(--space-mdLg)">
+<div data-bedrock-split style="--gutter:var(--space-mdLg)">
   <!-- content goes here -->
 </div>
 ```
 
-By default the split will be a 1/2 split. You can change this by setting the `fraction:` value on the `data-bedrock-layout-split` attribute.
+By default the split will be a 1/2 split. You can change this by setting the `fraction:` value on the `data-bedrock-split` attribute.
 
 ```html
-<div data-bedrock-layout-split="fraction:1/4">
+<div data-bedrock-split="fraction:1/4">
   <!-- The first column will be 1/4 of the container -->
 </div>
 
-<div data-bedrock-layout-split="fraction:1/3">
+<div data-bedrock-split="fraction:1/3">
   <!-- The first column will be 1/3 of the container -->
 </div>
 
-<div data-bedrock-layout-split="fraction:1/2">
+<div data-bedrock-split="fraction:1/2">
   <!-- The first column will be 1/2 of the container -->
 </div>
 
-<div data-bedrock-layout-split="fraction:2/3">
+<div data-bedrock-split="fraction:2/3">
   <!-- The first column will be 2/3 of the container -->
 </div>
 
-<div data-bedrock-layout-split="fraction:3/4">
+<div data-bedrock-split="fraction:3/4">
   <!-- The first column will be 3/4 of the container -->
 </div>
 
-<div data-bedrock-layout-split="fraction:auto-start">
+<div data-bedrock-split="fraction:auto-start">
   <!-- The first column will be auto sized to the content -->
 </div>
 
-<div data-bedrock-layout-split="fraction:auto-end">
+<div data-bedrock-split="fraction:auto-end">
   <!-- The second column will be auto sized to the content -->
 </div>
 ```

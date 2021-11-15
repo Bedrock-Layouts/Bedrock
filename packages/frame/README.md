@@ -24,7 +24,7 @@ import { Frame } from '@bedrock-layout/frame';
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-layout-frame`.
+For purposes of styling you can select `data-bedrock-frame`.
 
 ## API
 

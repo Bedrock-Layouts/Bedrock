@@ -16,16 +16,16 @@ import "@bedrock-layout/css-reset/lib/components/columns.css";
 
 ### Columns
 
-By adding the `data-bedrock-layout-columns` attribute to an element, it will be styled as a columns component.
+By adding the `data-bedrock-columns` attribute to an element, it will be styled as a columns component.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
 ```html
-<div data-bedrock-layout-columns style="--gutter:2rem">
+<div data-bedrock-columns style="--gutter:2rem">
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-layout-columns style="--gutter:var(--space-mdLg)">
+<div data-bedrock-columns style="--gutter:var(--space-mdLg)">
   <!-- content goes here -->
 </div>
 ```
@@ -33,28 +33,28 @@ You can adjust the space between the child elements by setting the `--gutter` pr
 By default, the number of columns will be one. You can set the number of columns by setting the `--columns` property in the inline style.
 
 ```html
-<div data-bedrock-layout-columns style="--columns:4">
+<div data-bedrock-columns style="--columns:4">
   <!-- The columns will be placed in the most dense layout possible -->
 </div>
 ```
 
-You can choose to have a dense layout by setting the `dense` value on the `data-bedrock-layout-columns` attribute.
+You can choose to have a dense layout by setting the `dense` value on the `data-bedrock-columns` attribute.
 
 ```html
-<div data-bedrock-layout-columns="dense">
+<div data-bedrock-columns="dense">
   <!-- The columns will be placed in the most dense layout possible -->
 </div>
 ```
 
 ### Column
 
-By adding the `data-bedrock-layout-column` attribute to an element, it will be styled as a column component.
+By adding the `data-bedrock-column` attribute to an element, it will be styled as a column component.
 
 You can adjust the number of columns that the element spans by setting the `--span` property in the inline style.
 
 ```html
-<div data-bedrock-layout-columns style="--columns: 4;">
-  <div data-bedrock-layout-column style="--span: 2;">
+<div data-bedrock-columns style="--columns: 4;">
+  <div data-bedrock-column style="--span: 2;">
     <!-- This content will span 2 columns -->
   </div>
 </div>
@@ -63,8 +63,8 @@ You can adjust the number of columns that the element spans by setting the `--sp
 If you want the have the element offset by `n` number of columns, before or after , you can set the `--offsetStart` or `--offsetEnd` property in the inline style.
 
 ```html
-<div data-bedrock-layout-columns style="--columns: 4;">
-  <div data-bedrock-layout-column style="--span: 2; --offsetStart:1; ">
+<div data-bedrock-columns style="--columns: 4;">
+  <div data-bedrock-column style="--span: 2; --offsetStart:1; ">
     <!-- This content will offset by 1 column before it and span 2 columns -->
   </div>
 </div>

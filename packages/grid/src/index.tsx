@@ -24,7 +24,7 @@ function getSafeMinItemWidth(minItemWidth?: MinItemWidth) {
 
 export const Grid = styled.div.attrs<GridProps>(() => {
   return {
-    "data-bedrock-layout-grid": "",
+    "data-bedrock-grid": "",
   };
 })<GridProps>`
   box-sizing: border-box;
