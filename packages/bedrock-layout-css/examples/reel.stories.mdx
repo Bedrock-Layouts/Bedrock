@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+<Meta title="Pure-CSS/components/reel.css" />
+
+# CSS Reset
+
+## EXPERIMENTAL
+
+This is a pure-css version of the [Reel package](/?path=/docs/components-reel--api).
+
+```javascript
+import "@bedrock-layout/css-reset/lib/components/reel.css";
+```
+
+## Usage
+
+By adding the `data-bedrock-layout-reel` attribute to an element, it will be styled as a reel.
+
+You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+```html
+<div data-bedrock-layout-reel style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div data-bedrock-layout-reel style="--gutter:var(--space-mdLg)">
+  <!-- content goes here -->
+</div>
+```
+
+The default snap type is `none`, but you can set it to `proximity` or `mandatory` by setting the `snapType:` value on the `data-bedrock-layout-reel` attribute.
+
+```html
+<div data-bedrock-layout-reel="snapType:proximity" style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+```

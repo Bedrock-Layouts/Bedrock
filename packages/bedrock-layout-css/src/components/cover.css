@@ -1,0 +1,32 @@
+/*
+  cover.css
+*/
+
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --minHeight {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100vh;
+}
+
+[data-bedrock-layout-cover] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+
+  min-block-size: var(--minHeight, 100vh);
+}
+
+[data-bedrock-layout-cover] > * {
+  margin: 0;
+}
+
+[data-bedrock-layout-cover] > [data-bedrock-layout-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}

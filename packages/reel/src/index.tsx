@@ -10,8 +10,10 @@ export interface ReelProps {
   gutter: keyof SpacingOptions;
 }
 
-export const Reel = styled.div.attrs<ReelProps>(() => ({
-  "data-bedrock-layout-reel": "",
+export const Reel = styled.div.attrs<ReelProps>((props) => ({
+  "data-bedrock-layout-reel": props.snapType
+    ? `snapType:${props.snapType}`
+    : "",
 }))<ReelProps>`
   --gutter: ${({ gutter, theme }) => {
     const maybeGutter = getSpacingValue(theme, gutter);

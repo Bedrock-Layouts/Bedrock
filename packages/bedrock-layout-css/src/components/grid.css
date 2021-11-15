@@ -2,19 +2,19 @@
   grid.css
 */
 
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --minItemWidth {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 639px;
+}
+
 [data-bedrock-layout-grid] {
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  @property --minItemWidth {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 639px;
-  }
-
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);

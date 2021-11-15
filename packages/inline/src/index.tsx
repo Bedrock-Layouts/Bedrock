@@ -36,12 +36,22 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
   return false;
 }
 
-export const Inline = styled(InlineCluster).attrs<InlineProps>(() => {
-  return {
-    "data-bedrock-layout-inline": "",
-    "data-bedrock-layout-inline-cluster": undefined,
-  };
-})<InlineProps>`
+export const Inline = styled(InlineCluster).attrs<InlineProps>(
+  ({ justify, align, stretch }) => {
+    const justifyValue = justify ? `justify:${justify}` : "justify:start";
+    const alignValue = align ? `align:${align}` : "align:start";
+    const stretchValue = stretch ? `stretch:${stretch}` : undefined;
+    return {
+      "data-bedrock-layout-inline-cluster": [
+        justifyValue,
+        alignValue,
+        stretchValue,
+      ]
+        .filter((x) => x)
+        .join(" "),
+    };
+  }
+)<InlineProps>`
   flex-wrap: nowrap;
   ${({ stretch }) =>
     stretch === "all"

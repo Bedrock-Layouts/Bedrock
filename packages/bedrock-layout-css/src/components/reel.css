@@ -1,0 +1,29 @@
+/*
+  reel.css
+*/
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+[data-bedrock-layout-reel] {
+  display: flex;
+  gap: var(--gutter, 0);
+  overflow: scroll;
+  scroll-snap-type: none;
+}
+
+[data-bedrock-layout-reel] > * {
+  margin: 0;
+}
+
+[data-bedrock-layout-reel~="snapType:none"] {
+  scroll-snap-type: none;
+}
+[data-bedrock-layout-reel~="snapType:proximity"] {
+  scroll-snap-type: both proximity;
+}
+[data-bedrock-layout-reel~="snapType:mandatory"] {
+  scroll-snap-type: both mandatory;
+}
