@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.9.0...@bedrock-layout/bedrock-layout-css@0.10.0) (2021-11-16)
+
+
+### Features
+
+* full Release of Pure CSS Version ([2f62433](https://github.com/Bedrock-Layouts/Bedrock/commit/2f624337f071252e55aed2b449511432e891bd4a))
+
+
+### BREAKING CHANGES
+
+* bedrock-layout-css is now stable
+
+
+
+
+
 # [0.9.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@0.8.0...@bedrock-layout/bedrock-layout-css@0.9.0) (2021-11-15)
 
 
