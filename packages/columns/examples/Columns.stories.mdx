@@ -30,7 +30,7 @@ The `Columns` component is designed to create a n-column layout. The complimenta
 
 The below example is a 4 column layout. Each box will take up one column by default.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="columns">
     <Columns gutter="lg" columns={4}>
       <Box />
@@ -48,7 +48,7 @@ The below example is a 4 column layout. Each box will take up one column by defa
 
 Gutters are configured with the `gutter` prop
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="gutters">
     <h3>none</h3>
     <Columns gutter="none" columns={4}>
@@ -153,7 +153,7 @@ Gutters are configured with the `gutter` prop
 
 The column component is wrapping the blue and green boxes. It is then setting the blue box to span 3 columns and the green to span 2
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="span">
     <Columns gutter="lg" columns={4}>
       <Box />
@@ -175,7 +175,7 @@ The column component is wrapping the blue and green boxes. It is then setting th
 
 Setting the `dense` prop will layout the children so that the items will fill any blank space.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="dense">
     <Columns dense gutter="lg" columns={4}>
       <Box>1</Box>
@@ -197,7 +197,7 @@ Setting the `dense` prop will layout the children so that the items will fill an
 
 In the below code, the blue box is offsetStart by 2 and the green box has an offsetEnd of 3
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="offsetStart and offsetEnd">
     <Columns gutter="lg" columns={5}>
       <Box />
@@ -219,7 +219,7 @@ In the below code, the blue box is offsetStart by 2 and the green box has an off
 
 The below Columns layout will switch to a Stack layout when it is less than `45rem`.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="switchAt">
     <Columns gutter="lg" columns={3} switchAt="45rem">
       <Box />

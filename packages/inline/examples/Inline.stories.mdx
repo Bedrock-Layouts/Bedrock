@@ -25,7 +25,7 @@ The Inline component has all the same props as the InlineCluster component. (che
 
 Below is an example of the Inline component with the `gutter` set to `xl` and both `justify` and `align` props set to `center`.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="InlineCluster Props">
     <Inline gutter="xl" justify="center" align="center">
       <Box style={{ height: 200 }} />
@@ -40,7 +40,7 @@ Below is an example of the Inline component with the `gutter` set to `xl` and bo
 
 The `stretch` prop can be used to specify a child that will stretch to fill the remaining space.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="With stretch start">
     <h3>start</h3>
     <Inline gutter="lg" stretch="start">
@@ -77,7 +77,7 @@ The `stretch` prop can be used to specify a child that will stretch to fill the 
 
 The below example will switch to a stack when it is less than `45rem`. (Resize your window to see this in action.)
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="switchAt">
     <Inline gutter="lg" switchAt="45rem">
       <Box />

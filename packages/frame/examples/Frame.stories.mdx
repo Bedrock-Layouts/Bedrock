@@ -25,7 +25,7 @@ The `ratio` prop takes a tuple of two numbers, which prepresent the ratio of wid
 
 In the example below, the frame will maintain a 4:3 aspect ratio and will crop the image to fit.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="ratio">
     <Frame ratio={[4, 3]}>
       <img src={imgSrc} alt="computer with data" />
@@ -39,7 +39,7 @@ By default, the media will be centered in the frame, but you can specify the pos
 
 In the example below, the frame will maintain a 4:3 aspect ratio and will crop the image to fit, but the image will be positioned at the top-left of the frame.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="position">
     <Frame ratio={[4, 3]} position="left top">
       <img src={imgSrc} alt="computer with data" />
@@ -53,7 +53,7 @@ You can also use the Frame without a ratio. This will allow you to specify the w
 
 In the example below, the frame's height is set to `50vh` and its width is set to `50%`. The image will be cropped to fit the frame.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="Without an Aspect Ratio">
     <Frame style={{ height: "50vh", width: "50%" }}>
       <img src={imgSrc} alt="computer with data" />
