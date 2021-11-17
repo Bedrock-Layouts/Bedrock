@@ -22,7 +22,7 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 `padding` can take a single value for a consistent box shape padding.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="Basic">
     <h3>none</h3>
     <PadBox style={{ border: "1px solid black" }} padding="none">
@@ -108,7 +108,7 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 `padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="With an array">
     <h3>With 2 values</h3>
     <pre>["md", "xl"]</pre>
@@ -146,7 +146,7 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 The properties support both traditional properties, `top, bottom, right, left` and logical properties in camelcase, `blockStart, blockEnd, inlineStart, inlineEnd`
 no matter which properties are given, logical properties are used.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="With an object">
     <h3>With an object of values</h3>
     <pre>

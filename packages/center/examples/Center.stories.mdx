@@ -21,7 +21,7 @@ The Center component is designed to center and clamp the width at a defined widt
 
 The Center component will clamp the width at a defined `maxWidth` and center itself in it's context. Please note that the `maxWidth` is the max-width of the children and not the Center component itself. The below `maxWidth` is set to `75%` of the parent component width.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="maxWidth">
     <Center maxWidth="75%" style={{ border: "1px solid black" }}>
       <div>
@@ -42,7 +42,7 @@ The Center component will clamp the width at a defined `maxWidth` and center its
 
 You can also center the children by adding the `centerChildren` prop. This time the children are set to a width of 75%.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="centerChildren">
     <Center centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
@@ -63,7 +63,7 @@ You can also center the children by adding the `centerChildren` prop. This time 
 
 You can also center the text by adding the `centerText` prop.
 
-<Preview withToolbar>
+<Preview withToolbar withSource="open">
   <Story name="centerText">
     <Center centerText centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
