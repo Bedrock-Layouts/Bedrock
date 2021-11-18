@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.14 (2021-11-18)
+
+**Note:** Version bump only for package @bedrock-layout/use-container-query
+
+
+
+
+
 ## 1.2.13 (2021-11-15)
 
 **Note:** Version bump only for package @bedrock-layout/use-container-query
