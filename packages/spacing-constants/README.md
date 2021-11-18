@@ -42,11 +42,11 @@ const newSpacings = {
 You can also just bring in the CSS Stylesheet directly from the `lib` folder:
 
 ```javascript
-import "@bedrock-layout/css-reset/lib/spacing-properties.css";
+import "@bedrock-layout/bedrock-layout-css/lib/spacing-properties.css";
 
 /* or import the minified version */
 
-import "@bedrock-layout/css-reset/lib/spacing-properties.min.css";
+import "@bedrock-layout/bedrock-layout-css/lib/spacing-properties.min.css";
 ```
 
 This will add the following custom properties to your stylesheets:

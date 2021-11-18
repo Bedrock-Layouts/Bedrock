@@ -14,25 +14,25 @@
 
 @property --columns {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 1;
 }
 
 @property --span {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 1;
 }
 
 @property --offsetStart {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 1;
 }
 
 @property --offsetEnd {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 1;
 }
 
@@ -60,16 +60,20 @@
   grid-column: span min(var(--span, 1), var(--columns, 1));
 }
 
+[data-bedrock-column][style*="--offset"] {
+  display: contents;
+}
+
 [data-bedrock-column][style*="--offset"] > * {
   grid-column: span min(var(--span, 1), var(--columns, 1));
 }
 
-[data-bedrock-column][style~="--offsetStart"]::before {
+[data-bedrock-column][style*="--offsetStart"]::before {
   content: "";
   grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
 }
 
-[data-bedrock-column][style~="--offsetEnd"]::before {
+[data-bedrock-column][style*="--offsetEnd"]::after {
   content: "";
   grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
 }
