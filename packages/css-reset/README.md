@@ -48,9 +48,9 @@ const App = () => {
 You can also just bring in the CSS Stylesheet directly from the `lib` folder:
 
 ```javascript
-import "@bedrock-layout/css-reset/lib/reset.css";
+import "@bedrock-layout/bedrock-layout-css/lib/reset.css";
 
 /* or import the minified version */
 
-import "@bedrock-layout/css-reset/lib/reset.min.css";
+import "@bedrock-layout/bedrock-layout-css/lib/reset.min.css";
 ```
