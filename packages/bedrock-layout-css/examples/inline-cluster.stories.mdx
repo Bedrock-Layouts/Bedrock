@@ -1,44 +1,185 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+import { Box } from './Box';
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/inline-cluster.css"
+import "@bedrock-layout/bedrock-layout-css/lib/components/spacing-properties.css"
 
 <Meta title="CSS Only/components/inline-cluster.css" />
 
-# CSS Reset
+# inline-cluster.css
 
 This is a CSS Only version of the [InlineCluster package](/?path=/docs/components-inlinecluster--api).
 
-```javascript
-import "@bedrock-layout/bedrock-layout-css/lib/components/inline-cluster.css";
-```
+## Use case
+
+The InlineCluster component is used to display a group of elements in a row. When the group is too large to fit on a single line, the elements are displayed in a cluster based on the width of the container and the justification of the cluster.
 
 ## Usage
 
-By adding the `data-bedrock-inline-cluster` attribute to an element, it will be styled as a inline-cluster.
+First you need to import the appropriate stylesheet. The inline is part of the main CSS bundle or you can import it in individually from the components directory.
 
-You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+```javascript
+import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
 
-```html
-<div data-bedrock-inline-cluster style="--gutter:2rem">
-  <!-- content goes here -->
-</div>
+// or
 
-<div data-bedrock-inline-cluster style="--gutter:var(--space-mdLg)">
-  <!-- content goes here -->
-</div>
+import "@bedrock-layout/bedrock-layout-css/lib/components/inline-cluster.css";
 ```
 
-You can set the justification and alignment of the inline-cluster's children by setting the `justify` and `align` property on the `data-bedrock-inline-cluster` attribute.
+Then you add the `data-bedrock-inline-cluster` attribute to the desired element.
 
-Both the `justify` and `align` properties can be set to `start`, `end`, `center`.
+## --gutter
+
+The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
+
+<Preview withToolbar withSource="open">
+  <Story name="--gutter">
+    <h3>Bedrock Layout Spacing Property</h3>
+    <div data-bedrock-inline-cluster style={{ "--gutter": "var(--space-md)" }}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-inline-cluster style={{ "--gutter": "2rem" }}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>
+
+## justify
+
+The `justify` prop defines the inline justification of the elements within the cluster. It accepts the following values: `justify:start`, `justify:end`, `justify:center`.
+
+You set the justification by setting the `justify` property on the `data-bedrock-inline` attribute.
+
+<Preview withToolbar withSource="open">
+  <Story name="justify">
+    <h3>justify:start</h3>
+    <div
+      data-bedrock-inline-cluster="justify:start"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>justify:center</h3>
+    <div
+      data-bedrock-inline-cluster="justify:center"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>justify:end</h3>
+    <div
+      data-bedrock-inline-cluster="justify:end"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>
+
+## align
+
+The `align` prop defines the block alignment of the elements within the cluster. It accepts the following values: `align:start`, `align:end`, `align:center`.
+
+You can set the alignment of the inline's children by setting the `align` property on the `data-bedrock-inline` attribute.
+
+<Preview withToolbar withSource="open">
+  <Story name="align">
+    <h3>align:start</h3>
+    <div
+      data-bedrock-inline-cluster="align:start"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box style={{ height: 200 }} />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>align:center</h3>
+    <div
+      data-bedrock-inline-cluster="align:center"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box style={{ height: 200 }} />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>align:end</h3>
+    <div data-bedrock-inline-cluster="align:end" style={{ "--gutter": "2rem" }}>
+      <Box style={{ height: 200 }} />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>
+
+Both the `justify` and `align` properties can be set to at the same time.
 
 ```html
-<div data-bedrock-inline-cluster="jusitfy:start" style="--gutter:2rem">
-  <!-- content goes here -->
-</div>
-
 <div
-  data-bedrock-inline-cluster="align:center"
+  data-bedrock-inline-cluster="justify:start align:center"
   style="--gutter:var(--space-mdLg)"
 >
   <!-- content goes here -->
 </div>
 ```
+
+## clustering
+
+The behavior of the inline-cluster component is to cluster according to the justification property set the `justify` prop. Much like words in a sentence, the cluster will cluster based on the width of the container.
+
+The below example will stay inline unless they no longer have room in the container, in which case they will wrap to a new row and cluster according to the `justify` prop.
+
+(Resize your window to see this in action.)
+
+<Preview withToolbar withSource="open">
+  <Story name="clustering">
+    <h3>start</h3>
+    <div
+      data-bedrock-inline-cluster="justify:start"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box style={{ width: "25rem" }} />
+      <Box style={{ width: "10rem" }} />
+      <Box style={{ width: "15rem" }} />
+    </div>
+    <h3>center</h3>
+    <div
+      data-bedrock-inline-cluster="justify:center"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box style={{ width: "25rem" }} />
+      <Box style={{ width: "10rem" }} />
+      <Box style={{ width: "15rem" }} />
+    </div>
+    <h3>end</h3>
+    <div
+      data-bedrock-inline-cluster="justify:end"
+      style={{ "--gutter": "2rem" }}
+    >
+      <Box />
+      <Box style={{ width: "25rem" }} />
+      <Box style={{ width: "10rem" }} />
+      <Box style={{ width: "15rem" }} />
+    </div>
+  </Story>
+</Preview>
