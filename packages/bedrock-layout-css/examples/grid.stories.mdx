@@ -1,35 +1,90 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+import { Box } from './Box';
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/grid.css"
+import "@bedrock-layout/bedrock-layout-css/lib/components/spacing-properties.css"
 
 <Meta title="CSS Only/components/grid.css" />
 
-# CSS Reset
+# grid.css
 
 This is a CSS Only version of the [Grid package](/?path=/docs/components-grid--api).
 
-```javascript
-import "@bedrock-layout/bedrock-layout-css/lib/components/grid.css";
-```
+## Use case
+
+The Grid component is designed to create a responsive grid of items that will automatically wrap based on the quantity of children and the `--minItemWidth` value.
 
 ## Usage
 
-By adding the `data-bedrock-grid` attribute to an element, it will be styled as a grid.
+First you need to import the appropriate stylesheet. The grid is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+
+// or
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/grid.css";
+```
+
+Then you add the `data-bedrock-grid` attribute to the desired element.
+
+## --gutter
+
+The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
-```html
-<div data-bedrock-grid style="--gutter:2rem">
-  <!-- content goes here -->
-</div>
+<Preview withToolbar withSource="open">
+  <Story name="--gutter">
+    <h3>Bedrock Layout Spacing Property</h3>
+    <div
+      data-bedrock-grid
+      style={{ "--gutter": "var(--space-md)", "--minItemWidth": "25rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div
+      data-bedrock-grid
+      style={{ "--gutter": "2rem", "--minItemWidth": "25rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>
 
-<div data-bedrock-grid style="--gutter:var(--space-mdLg)">
-  <!-- content goes here -->
-</div>
-```
+## --minItemWidth
 
 The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--minItemWidth` property. By default this is set to `639px`, but you can change this value by setting the `--minItemWidth` property in the style.
 
-```html
-<div data-bedrock-grid style="--minItemWidth:40rem">
-  <!-- Children will automatically be optimized to the best number of columns -->
-</div>
-```
+In the below example, The `--minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Preview withToolbar withSource="open">
+  <Story name="minItemWidth">
+    <div
+      data-bedrock-grid
+      style={{ "--gutter": "1rem", "--minItemWidth": "15rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>

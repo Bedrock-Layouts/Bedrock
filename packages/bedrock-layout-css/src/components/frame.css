@@ -37,5 +37,5 @@
 }
 
 [data-bedrock-frame][style*="--ratio"] {
-  aspect-ratio: --ratio;
+  aspect-ratio: var(--ratio);
 }
