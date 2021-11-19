@@ -27,3 +27,7 @@
 [data-bedrock-reel~="snapType:mandatory"] {
   scroll-snap-type: both mandatory;
 }
+
+[data-bedrock-reel] > * {
+  scroll-snap-align: start;
+}

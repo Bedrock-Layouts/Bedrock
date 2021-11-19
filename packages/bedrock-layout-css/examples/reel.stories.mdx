@@ -1,20 +1,56 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+import { Box, colors } from './Box';
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/reel.css"
+import "@bedrock-layout/bedrock-layout-css/lib/components/spacing-properties.css"
 
 <Meta title="CSS Only/components/reel.css" />
 
-# CSS Reset
+# reel.css
 
 This is a CSS Only version of the [Reel package](/?path=/docs/components-reel--api).
 
-```javascript
-import "@bedrock-layout/bedrock-layout-css/lib/components/reel.css";
-```
+## Use case
+
+Scrolling is a popular and natural way to interact with web content. The Reel is
+designed to organize content into scrollable flat lists with convenient scroll breakpoints.
 
 ## Usage
 
-By adding the `data-bedrock-reel` attribute to an element, it will be styled as a reel.
+First you need to import the appropriate stylesheet. The inline is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+
+// or
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/reel.css";
+```
+
+Then you add the `data-bedrock-reel` attribute to the desired element.
+
+## --gutter
+
+The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+<Preview withToolbar withSource="open">
+  <Story name="--gutter">
+    <h3>Bedrock Layout Spacing Property</h3>
+    <div data-bedrock-reel style={{ "--gutter": "var(--space-md)" }}>
+      {colors.map((color, i) => (
+        <Box key={i} color={color} />
+      ))}
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-reel style={{ "--gutter": "2rem" }}>
+      {colors.map((color, i) => (
+        <Box key={i} color={color} />
+      ))}
+    </div>
+  </Story>
+</Preview>
 
 ```html
 <div data-bedrock-reel style="--gutter:2rem">
@@ -26,10 +62,38 @@ You can adjust the space between the child elements by setting the `--gutter` pr
 </div>
 ```
 
-The default snap type is `none`, but you can set it to `proximity` or `mandatory` by setting the `snapType:` value on the `data-bedrock-reel` attribute.
+## snapType
 
-```html
-<div data-bedrock-reel="snapType:proximity" style="--gutter:2rem">
-  <!-- content goes here -->
-</div>
-```
+The `snapType` property sets the scroll snap type. The default snap type is `none`, but you can set it to `proximity` or `mandatory` by setting the `snapType:` value on the `data-bedrock-reel` attribute.
+
+<Preview withToolbar withSource="open">
+  <Story name="snapType">
+    <h3>none</h3>
+    <div
+      data-bedrock-reel="snapType:none"
+      style={{ "--gutter": "var(--space-md)" }}
+    >
+      {colors.map((color, i) => (
+        <Box key={i} color={color} style={{ minWidth: 300 }} />
+      ))}
+    </div>
+    <h3>mandatory</h3>
+    <div
+      data-bedrock-reel="snapType:mandatory"
+      style={{ "--gutter": "var(--space-md)" }}
+    >
+      {colors.map((color, i) => (
+        <Box key={i} color={color} style={{ minWidth: 300 }} />
+      ))}
+    </div>
+    <h3>proximity</h3>
+    <div
+      data-bedrock-reel="snapType:proximity"
+      style={{ "--gutter": "var(--space-md)" }}
+    >
+      {colors.map((color, i) => (
+        <Box key={i} color={color} style={{ minWidth: 300 }} />
+      ))}
+    </div>
+  </Story>
+</Preview>
