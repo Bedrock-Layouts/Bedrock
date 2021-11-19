@@ -18,12 +18,12 @@ The Split component is designed to create a split layout based on a fractional r
 
 <ArgsTable story="API" />
 
-## Split based on a fraction
+## fraction
 
 The `fraction` prop defines the fraction of the container width to use for the split. You can use the following values:
 
 <Preview withToolbar withSource="open">
-  <Story name="Fraction">
+  <Story name="fraction">
     <h3>1/4</h3>
     <Split gutter="lg" fraction="1/4">
       <Box />
@@ -64,14 +64,14 @@ The `fraction` prop defines the fraction of the container width to use for the s
   </Story>
 </Preview>
 
-## With Gutters
+## gutter
 
 The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
 
 The following values are available by default:
 
 <Preview withToolbar withSource="open">
-  <Story name="With Gutters">
+  <Story name="gutter">
     <h3>none</h3>
     <Split gutter="none" fraction="1/2">
       <Box />
