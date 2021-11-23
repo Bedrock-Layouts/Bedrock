@@ -1,0 +1,205 @@
+import { Meta } from '@storybook/addon-docs/';
+import { Center } from '@bedrock-layout/center'
+import { Inline } from '@bedrock-layout/inline'
+import { Button } from '../ui-components/Button'
+import heroPageInitial from '../assets/hero-page-initial.png'
+import heroPageWithCover from '../assets/hero-page-with-cover.png'
+import heroPageWithCenter from '../assets/hero-page-with-center.png'
+
+<Meta title="The Hero" />
+
+# The Hero
+
+A common landing page feature is the "Hero" layout. A Hero tends to be the first thing a user sees on a page, and is usually the most important thing to focus on. It is usually a large image and/or heading, with a short description of the page, and a call to action.
+
+The Hero layout is easily achieved using the [`Cover`](/?path=/docs/components-cover--api) component.
+
+## Building a Hero
+
+Let's start by stubbing out the markup we'll need. In our `App.js` file, we'll change it to add the following:
+
+```jsx
+import { Stack } from "@bedrock-layout/stack";
+import { Inline } from "@bedrock-layout/inline";
+
+import { Subscribe } from "./Subscribe";
+import { Menu } from "./Menu";
+
+function App() {
+  return (
+    <Stack gutter="md">
+      <Menu />
+      <Stack as="header" gutter="lg">
+        <h1>Coco Le Belle</h1>
+        <p>Elegant Feminine Fashion</p>
+        <Inline gutter="md">
+          <button>New Arrivals</button>
+        </Inline>
+      </Stack>
+      <Subscribe />
+    </Stack>
+  );
+}
+
+export default App;
+```
+
+Your browser should now show the following:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={heroPageInitial}
+    alt="The landing page before the hero layout styles have been applied."
+  />
+</Center>
+
+The Cover component is a wrapper component that will vertically center the content. It also let's you optionally render an item on above and/or below the content.
+
+So let's start by downloading the Cover component:
+
+```bash
+yarn add @bedrock-layout/cover
+```
+
+And then we'll add the following to our `App.js` file:
+
+```jsx
+import { Stack } from "@bedrock-layout/stack";
+import { Inline } from "@bedrock-layout/inline";
+import { Cover } from "@bedrock-layout/cover";
+
+import { Subscribe } from "./Subscribe";
+import { Menu } from "./Menu";
+
+function App() {
+  return (
+    <Stack gutter="md">
+      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
+        <Stack as="header" gutter="lg">
+          <h1>Coco Le Belle</h1>
+          <p>Elegant Feminine Fashion</p>
+          <Inline gutter="md">
+            <button>New Arrivals</button>
+          </Inline>
+        </Stack>
+      </Cover>
+      <Subscribe />
+    </Stack>
+  );
+}
+
+export default App;
+```
+
+Your browser should now show the following:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={heroPageWithCover}
+    alt="The landing page with the hero layout styles have been applied."
+  />
+</Center>
+
+## Adding the Center component
+
+Our layout could use some additional styling. Let's add the [`Center`](/?path=/docs/components-center--api) component to our `App.js` file. First, we need to install it:
+
+```bash
+yarn add @bedrock-layout/center
+```
+
+Then we can add it to our `App.js` file:
+
+```jsx
+import { Stack } from "@bedrock-layout/stack";
+import { Inline } from "@bedrock-layout/inline";
+import { Cover } from "@bedrock-layout/cover";
+import { Center } from "@bedrock-layout/center";
+
+import { Subscribe } from "./Subscribe";
+import { Menu } from "./Menu";
+
+function App() {
+  return (
+    <Stack gutter="md">
+      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
+        <Center maxWidth="40rem">
+          <Stack as="header" gutter="lg">
+            <h1>Coco Le Belle</h1>
+            <p>Elegant Feminine Fashion</p>
+            <Inline gutter="md">
+              <button>New Arrivals</button>
+            </Inline>
+          </Stack>
+        </Center>
+      </Cover>
+      <Center centerText>
+        <Subscribe />
+      </Center>
+    </Stack>
+  );
+}
+
+export default App;
+```
+
+Your browser should now show the following:
+
+<Center centerChildren>
+  <img
+    style={{ maxWidth: 800 }}
+    src={heroPageWithCenter}
+    alt="The landing page with the hero layout and center styles have been applied."
+  />
+</Center>
+
+## AppBoundary
+
+When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger and allowing a page to grow to the same width as a 4K monitor is irresponsible. A website typically should clamp at an outer limit and stay centered on the screen.
+
+The `AppBoundary` is built on the `Center` component and is designed to wrap your entire app. By default, it will clamp the width at the 1920px, the `xxlarge` size option, but can be set to any of the valid size options.
+
+Let's start by installing the AppBoundary:
+
+```bash
+yarn add @bedrock-layout/appboundary
+```
+
+Then we can update our `index.js` file to use the AppBoundary:
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { AppBoundary } from "@bedrock-layout/appboundary";
+import reportWebVitals from "./reportWebVitals";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AppBoundary boundarySize="xlarge">
+      <App />
+    </AppBoundary>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
+Now the AppBoundary will clamp the width of your app to the `xlarge` size option, or 1439px.
+
+Our landing page is coming along. In the next section, we'll be building cards and add them to a responsive grid layout.
+
+<Inline switchAt="25rem" stretch={1} gutter="md">
+  <Button as="a" href="/?path=/docs/the-menu-component--page">
+    The Menu Component
+  </Button>
+  <span />
+  <Button disabled>The New Arrivals</Button>
+</Inline>
