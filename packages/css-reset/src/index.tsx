@@ -1,26 +1,17 @@
 import { createGlobalStyle, css } from "styled-components";
 
 export const reset = css`
+  /*
+  reset.css
+*/
+
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
 
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul,
-  ol,
-  li,
-  figure,
-  figcaption,
-  blockquote,
-  dl,
-  dd {
+  * {
     margin: 0;
   }
 
@@ -39,13 +30,15 @@ export const reset = css`
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-size: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
 
-  img {
+  img,
+  picture {
     display: block;
     max-inline-size: 100%;
   }
@@ -60,6 +53,7 @@ export const reset = css`
   li,
   figcaption {
     max-inline-size: 60ch;
+    overflow-wrap: break-word;
   }
 
   input,
