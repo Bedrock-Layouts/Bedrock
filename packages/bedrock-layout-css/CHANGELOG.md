@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-11-23)
+
+
+### Features
+
+* **css-reset:** update the css reset ([eaa2055](https://github.com/Bedrock-Layouts/Bedrock/commit/eaa2055cace1cf84b1182feb43350bb513c87eff))
+
+
+
+
+
 ## [1.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.0.4...@bedrock-layout/bedrock-layout-css@1.0.5) (2021-11-19)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css
