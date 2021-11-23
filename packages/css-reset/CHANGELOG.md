@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css-reset@1.2.2...@bedrock-layout/css-reset@1.2.3) (2021-11-23)
+
+**Note:** Version bump only for package @bedrock-layout/css-reset
+
+
+
+
+
 ## 1.2.2 (2021-11-18)
 
 **Note:** Version bump only for package @bedrock-layout/css-reset
