@@ -1,0 +1,77 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/';
+import { Stack } from '../packages/stack/src/';
+import { Columns, Column } from '../packages/columns/src/';
+import { Split } from '../packages/split/src/';
+import { PadBox } from '../packages/padbox/src/';
+import { Frame } from '../packages/frame/src/';
+import { Center } from '../packages/center/src/';
+import jacketPic from '../.storybook/assets/jacket-pic.jpg'
+
+<Meta title="Examples/web.dev" />
+
+# Layout patterns
+
+In this page we are recreated some of the patterns from the [web.dev](https://web.dev/layout) site using Bedrock Layout Primitives.
+
+Minimal styling has been applied to make the examples more readable.
+
+## Aspect ratio image card
+
+Maintains the aspect ratio of an image in a card, while letting you resize the card. Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
+
+(The `<Center` component is used to center and clamp the width of the card in the example.)
+
+<Preview withToolbar withSource="open">
+  <Story name="Aspect ratio image card">
+    <Center maxWidth="50%">
+      <PadBox
+        as={Stack}
+        gutter="lg"
+        padding="xl"
+        style={{ border: "1px solid black" }}
+      >
+        <h1>Video Title</h1>
+        <Frame ratio={[16, 9]}>
+          <img src={jacketPic} alt="Computer" />
+        </Frame>
+        <p>Descriptive Text goes here</p>
+      </PadBox>
+    </Center>
+  </Story>
+</Preview>
+
+## Clamping card
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Deconstructed pancake
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Holy grail layout
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Line up
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Pancake stack
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## RAM (Repeat, Auto, Minmax)
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Sidbar says
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## Super centered
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)
+
+## 12-span grid
+
+**TODO** [I am open to help.](/?path=/story/contributing--page)

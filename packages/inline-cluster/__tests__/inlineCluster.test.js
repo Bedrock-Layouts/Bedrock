@@ -70,7 +70,7 @@ describe("InlineCluster", () => {
     });
 
     it("renders all the align options", () => {
-      ["start", "center", "end"].forEach((align) => {
+      ["start", "center", "end", "stretch"].forEach((align) => {
         const inlineCluster = create(
           <InlineCluster gutter="lg" align={align}>
             <Lorem />

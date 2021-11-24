@@ -38,7 +38,7 @@ export const argTypes = {
       defaultValue: { summary: "start" },
     },
     control: "select",
-    options: ["start", "end", "center"],
+    options: ["start", "end", "center", "stretch"],
   },
   stretch: {
     description: "Sets which child will stretch in the inline direction",
