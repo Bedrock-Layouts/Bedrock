@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2021-11-24)
+
+
+### Features
+
+* **inline-cluster:** add stretch to alignment ([7a1a11f](https://github.com/Bedrock-Layouts/Bedrock/commit/7a1a11fb55b54c6cf2c459e04aaa30b132f11c6d))
+
+
+
+
+
 ## 2.3.2 (2021-11-18)
 
 **Note:** Version bump only for package @bedrock-layout/inline-cluster

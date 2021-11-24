@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.1.0...@bedrock-layout/bedrock-layout-css@1.2.0) (2021-11-24)
+
+
+### Features
+
+* **inline-cluster:** add stretch to alignment ([7a1a11f](https://github.com/Bedrock-Layouts/Bedrock/commit/7a1a11fb55b54c6cf2c459e04aaa30b132f11c6d))
+
+
+
+
+
 # 1.1.0 (2021-11-23)
 
 
