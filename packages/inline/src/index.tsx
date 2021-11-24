@@ -42,9 +42,10 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
     const alignValue = align ? `align:${align}` : "align:start";
     const stretchValue = stretch ? `stretch:${stretch}` : undefined;
     return {
-      "data-bedrock-inline-cluster": [justifyValue, alignValue, stretchValue]
+      "data-bedrock-inline": [justifyValue, alignValue, stretchValue]
         .filter((x) => x)
         .join(" "),
+      "data-bedrock-inline-cluster": undefined,
     };
   }
 )<InlineProps>`
