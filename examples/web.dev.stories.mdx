@@ -1,11 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/';
 import { Stack } from '../packages/stack/src/';
+import { Grid } from '../packages/grid/src/';
 import { Columns, Column } from '../packages/columns/src/';
-import { Split } from '../packages/split/src/';
+import { Inline } from '../packages/inline/src/';
 import { PadBox } from '../packages/padbox/src/';
 import { Frame } from '../packages/frame/src/';
 import { Center } from '../packages/center/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
+import { Box } from './Box'
 
 <Meta title="Examples/web.dev" />
 
@@ -50,7 +52,23 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 ## Holy grail layout
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the `<Stack>` and `<Inline>` components.
+
+<Preview withToolbar withSource="open">
+  <Story name="Holy grail layout">
+    <Stack gutter="sm">
+      <Box as="header">Header</Box>
+      <Inline align="stretch" gutter="sm" stretch={1}>
+        <Box>Left Sidebar</Box>
+        <Box as="main" style={{ minHeight: "50vh" }}>
+          Main Content
+        </Box>
+        <Box>Right Sidebar</Box>
+      </Inline>
+      <Box as="footer">Footer</Box>
+    </Stack>
+  </Story>
+</Preview>
 
 ## Line up
 
@@ -62,7 +80,22 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 ## RAM (Repeat, Auto, Minmax)
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+A responsive layout with automatically-placed and flexible children. Uses the `<Grid>` component.
+
+(The `<Center` component is used to center and clamp the width of the card in the example.)
+
+<Preview withToolbar withSource="open">
+  <Story name="RAM (Repeat, Auto, Minmax)">
+    <Center maxWidth="50%">
+      <Grid gutter="lg" minItemWidth="150px">
+        <Box>1</Box>
+        <Box>2</Box>
+        <Box>3</Box>
+        <Box>4</Box>
+      </Grid>
+    </Center>
+  </Story>
+</Preview>
 
 ## Sidbar says
 
@@ -74,4 +107,23 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 ## 12-span grid
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+A grid broken up into 12 segments where you can place areas onto the tracks evenly. Uses the `<Columns>` and `<Column>` components.
+
+<Preview withToolbar withSource="open">
+  <Story name="12-span grid">
+    <Columns gutter="lg" columns={12}>
+      <Column span={12}>
+        <Box>Span 12</Box>
+      </Column>
+      <Column span={6} offsetEnd={6}>
+        <Box>Span 6 (offsetEnd 6)</Box>
+      </Column>
+      <Column offsetStart={3} offsetEnd={5} span={4}>
+        <Box>Span 4 (offsetStart 3, offsetEnd 5)</Box>
+      </Column>
+      <Column offsetStart={2} span={2}>
+        <Box>Span 2 (offsetStart 2)</Box>
+      </Column>
+    </Columns>
+  </Story>
+</Preview>
