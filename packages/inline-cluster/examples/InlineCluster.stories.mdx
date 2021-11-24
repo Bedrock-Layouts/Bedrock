@@ -108,10 +108,25 @@ The following values are available by default:
 
 ## justify
 
-The `justify` prop defines the inline justification of the elements within the cluster. It accepts the following values: `start`, `end`, `center`.
+The `justify` prop defines the inline justification of the elements within the cluster. It accepts the following values: `start`, `end`, `center`, `stretch`.
 
 <Preview withToolbar withSource="open">
   <Story name="justify">
+    <h3>start</h3>
+    <InlineCluster justify="start" gutter="xl">
+      <Box widthLevel={5} />
+      <Box widthLevel={0.5} />
+      <Box />
+      <Box widthLevel={4} />
+    </InlineCluster>
+    <h3>end</h3>
+    <InlineCluster justify="end" gutter="xl">
+      <Box widthLevel={5} />
+      <Box widthLevel={0.5} />
+      <Box />
+      <Box widthLevel={4} />
+    </InlineCluster>
+    <h3>center</h3>
     <InlineCluster justify="center" gutter="xl">
       <Box widthLevel={5} />
       <Box widthLevel={0.5} />
@@ -123,14 +138,32 @@ The `justify` prop defines the inline justification of the elements within the c
 
 ## align
 
-The `align` prop defines the block alignment of the elements within the cluster. It accepts the following values: `start`, `end`, `center`.
+The `align` prop defines the block alignment of the elements within the cluster. It accepts the following values: `start`, `end`, `center`, `stretch`.
 
 <Preview withToolbar withSource="open">
   <Story name="align">
+    <h3>start</h3>
+    <InlineCluster align="start" gutter="xl">
+      <Box style={{ height: 200 }} widthLevel={5} />
+      <Box widthLevel={0.5} />
+      <Box />
+    </InlineCluster>
+    <h3>end</h3>
+    <InlineCluster align="end" gutter="xl">
+      <Box style={{ height: 200 }} widthLevel={5} />
+      <Box widthLevel={0.5} />
+      <Box />
+    </InlineCluster>
+    <h3>center</h3>
     <InlineCluster align="center" gutter="xl">
-      <Box style={{ height: 200 }} />
-      <Box widthLevel={3} />
-      <Box widthLevel={1} />
+      <Box style={{ height: 200 }} widthLevel={5} />
+      <Box widthLevel={0.5} />
+      <Box />
+    </InlineCluster>
+    <h3>stretch</h3>
+    <InlineCluster align="stretch" gutter="xl">
+      <Box style={{ height: 200 }} widthLevel={5} />
+      <Box widthLevel={0.5} />
       <Box />
     </InlineCluster>
   </Story>

@@ -6,18 +6,20 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-type JustifyAlignOptions = "start" | "center" | "end";
-
-type JustifyAlignMap = { [key in JustifyAlignOptions]: string };
-const justifyAlignMap: JustifyAlignMap = {
+const justifyMap = {
   start: "flex-start",
   end: "flex-end",
   center: "center",
-};
+} as const;
+
+const alignMap = {
+  ...justifyMap,
+  stretch: "stretch",
+} as const;
 
 export interface InlineClusterProps {
-  justify?: JustifyAlignOptions;
-  align?: JustifyAlignOptions;
+  justify?: keyof typeof justifyMap;
+  align?: keyof typeof alignMap;
   gutter: keyof SpacingOptions;
 }
 
@@ -46,20 +48,25 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
   gap: var(--gutter);
 
   justify-content: ${(props) =>
-    typeof props.justify !== "undefined" && justifyAlignMap[props.justify]
-      ? justifyAlignMap[props.justify]
-      : justifyAlignMap.start};
+    typeof props.justify !== "undefined" && justifyMap[props.justify]
+      ? justifyMap[props.justify]
+      : justifyMap.start};
 
   align-items: ${(props) =>
-    typeof props.align !== "undefined" && justifyAlignMap[props.align]
-      ? justifyAlignMap[props.align]
-      : justifyAlignMap.start};
+    typeof props.align !== "undefined" && alignMap[props.align]
+      ? alignMap[props.align]
+      : alignMap.start};
 `;
 
 InlineCluster.displayName = "InlineCluster";
 
 InlineCluster.propTypes = {
   gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
-  justify: PropTypes.oneOf<JustifyAlignOptions>(["start", "center", "end"]),
-  align: PropTypes.oneOf<JustifyAlignOptions>(["start", "center", "end"]),
+  justify: PropTypes.oneOf<keyof typeof justifyMap>(["start", "center", "end"]),
+  align: PropTypes.oneOf<keyof typeof alignMap>([
+    "start",
+    "center",
+    "end",
+    "stretch",
+  ]),
 };

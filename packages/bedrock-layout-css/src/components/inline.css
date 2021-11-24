@@ -52,6 +52,9 @@
 [data-bedrock-inline~="align:end"] {
   align-items: flex-end;
 }
+[data-bedrock-inline~="align:stretch"] {
+  align-items: stretch;
+}
 
 [data-bedrock-inline~="stretch:all"] > * {
   flex: 1;

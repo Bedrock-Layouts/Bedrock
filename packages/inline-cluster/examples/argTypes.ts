@@ -38,6 +38,6 @@ export const argTypes = {
       defaultValue: { summary: "start" },
     },
     control: "select",
-    options: ["start", "end", "center"],
+    options: ["start", "end", "center", "stretch"],
   },
 };
