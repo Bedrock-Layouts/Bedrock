@@ -5,6 +5,7 @@ import { Columns, Column } from '../packages/columns/src/';
 import { Inline } from '../packages/inline/src/';
 import { PadBox } from '../packages/padbox/src/';
 import { Frame } from '../packages/frame/src/';
+import { Cover } from '../packages/cover/src/';
 import { Center } from '../packages/center/src/';
 import { ColumnDrop } from '../packages/column-drop/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
@@ -118,7 +119,17 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 
 ## Super centered
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cover>` component.
+
+<Preview withToolbar withSource="open">
+  <Story name="Super centered">
+    <Cover minHeight="25vh">
+      <Center centerChildren>
+        <Box>:)</Box>
+      </Center>
+    </Cover>
+  </Story>
+</Preview>
 
 ## 12-span grid
 
