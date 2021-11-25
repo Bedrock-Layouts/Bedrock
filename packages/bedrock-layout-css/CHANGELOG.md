@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.2.0...@bedrock-layout/bedrock-layout-css@1.3.0) (2021-11-25)
+
+
+### Features
+
+* **bedrock-layout-css:** add column-drop.css ([4059c85](https://github.com/Bedrock-Layouts/Bedrock/commit/4059c85527b5750a8b5a1a5a0118541d4c434e2c))
+
+
+
+
+
 # [1.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.1.0...@bedrock-layout/bedrock-layout-css@1.2.0) (2021-11-24)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-11-25)
+
+
+### Features
+
+* **bedrock-layout-css:** add column-drop.css ([4059c85](https://github.com/Bedrock-Layouts/Bedrock/commit/4059c85527b5750a8b5a1a5a0118541d4c434e2c))
+* **column-drop:** add column-drop package ([56dba93](https://github.com/Bedrock-Layouts/Bedrock/commit/56dba937ad984d7a8bbee077f9f4fbdc262e6426))
+
+
+
+
+
 # 2.3.0 (2021-11-24)
 
 

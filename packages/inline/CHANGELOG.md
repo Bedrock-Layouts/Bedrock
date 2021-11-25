@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.3.0...@bedrock-layout/inline@2.3.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **inline:** fixed data attribute ([933fde2](https://github.com/Bedrock-Layouts/Bedrock/commit/933fde27877dea67270eb3b11415194f823a15a2))
+
+
+
+
+
 # 2.3.0 (2021-11-24)
 
 
