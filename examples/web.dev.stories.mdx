@@ -6,6 +6,7 @@ import { Inline } from '../packages/inline/src/';
 import { PadBox } from '../packages/padbox/src/';
 import { Frame } from '../packages/frame/src/';
 import { Center } from '../packages/center/src/';
+import { ColumnDrop } from '../packages/column-drop/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
 import { Box } from './Box'
 
@@ -48,7 +49,21 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 ## Deconstructed pancake
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+Create a layout that stretches to fit the space, and snaps to the next line at a minimum size. Uses the `<ColumnDrop>` component.
+
+(The `<Center` component is used to center and clamp the width of the card in the example.)
+
+<Preview withToolbar withSource="open">
+  <Story name="Deconstructed pancake">
+    <Center maxWidth="25rem">
+      <ColumnDrop gutter="sm" basis="150px">
+        <Box>1</Box>
+        <Box>2</Box>
+        <Box>3</Box>
+      </ColumnDrop>
+    </Center>
+  </Story>
+</Preview>
 
 ## Holy grail layout
 
