@@ -1,0 +1,163 @@
+import { ColumnDrop } from '@bedrock-layout/column-drop';
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
+
+import { Box } from './Box';
+import { argTypes } from './argTypes'
+
+<Meta title="Components/ColumnDrop" component={ColumnDrop} />
+
+# Inline
+
+## Use case
+
+The ColumnDrop component is used to create a layout of columns that stretch to fit the space, and snaps to the next line at a minimum size.
+
+## API
+
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+
+The following values are available by default:
+
+<Preview withToolbar withSource="open">
+  <Story name="gutter">
+    <h3>none</h3>
+    <ColumnDrop gutter="none">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>xxs</h3>
+    <ColumnDrop gutter="xxs">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>xs</h3>
+    <ColumnDrop gutter="xs">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>sm</h3>
+    <ColumnDrop gutter="sm">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>md</h3>
+    <ColumnDrop gutter="md">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>mdLg</h3>
+    <ColumnDrop gutter="mdLg">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>lg</h3>
+    <ColumnDrop gutter="lg">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>lgXl</h3>
+    <ColumnDrop gutter="lgXl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>xl</h3>
+    <ColumnDrop gutter="xl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>xlXXl</h3>
+    <ColumnDrop gutter="xlXXl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+    <h3>xxl</h3>
+    <ColumnDrop gutter="xxl">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+  </Story>
+</Preview>
+
+## basis
+
+The `basis` prop defines the width basis of each of the children. The `ColumnDrop` will the optimize how many columns and rows are needed based on that value.
+
+In the below example, The `basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Preview withToolbar withSource="open">
+  <Story name="basis">
+    <ColumnDrop gutter="lg" basis="15rem">
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+  </Story>
+</Preview>
+
+## data-attribute
+
+For purposes of styling, you can select `data-bedrock-column-drop`.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+   <ColumnDrop {...args}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </ColumnDrop>
+);
+
+<Canvas withToolbar>
+  <Story
+    name="Playground"
+    args={{
+      gutter: "lg",
+      basis: "15rem",
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

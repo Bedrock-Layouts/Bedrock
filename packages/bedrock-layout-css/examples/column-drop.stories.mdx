@@ -1,0 +1,90 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+import { Box } from './Box';
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/column-drop.css"
+import "@bedrock-layout/bedrock-layout-css/lib/components/spacing-properties.css"
+
+<Meta title="CSS Only/components/column-drop.css" />
+
+# column-drop.css
+
+This is a CSS Only version of the [ColumnDrop package](/?path=/docs/components-columndrop--api).
+
+## Use case
+
+The ColumnDrop component is used to create a layout of columns that stretch to fit the space, and snaps to the next line at a minimum size.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The grid is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+
+// or
+
+import "@bedrock-layout/bedrock-layout-css/lib/components/column-drop.css";
+```
+
+Then you add the `data-bedrock-column-drop` attribute to the desired element.
+
+## --gutter
+
+The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
+
+You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+<Preview withToolbar withSource="open">
+  <Story name="--gutter">
+    <h3>Bedrock Layout Spacing Property</h3>
+    <div
+      data-bedrock-column-drop
+      style={{ "--gutter": "var(--space-md)", "--minItemWidth": "25rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div
+      data-bedrock-column-drop
+      style={{ "--gutter": "2rem", "--minItemWidth": "25rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>
+
+## --basis
+
+The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--basis` property. By default this is set to `159px`, but you can change this value by setting the `--basis` property in the style.
+
+In the below example, The `--basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Preview withToolbar withSource="open">
+  <Story name="--basis">
+    <div
+      data-bedrock-column-drop
+      style={{ "--gutter": "1rem", "--basis": "15rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Preview>

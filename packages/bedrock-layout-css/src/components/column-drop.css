@@ -1,0 +1,27 @@
+/*
+  column-drop.css
+*/
+
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --basis {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: $159px;
+}
+
+[data-bedrock-column-drop] {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
+
+[data-bedrock-column-drop] > * {
+  margin: 0;
+  flex: 1 1 var(--basis, 159px);
+}
