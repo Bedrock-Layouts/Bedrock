@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/';
 import { Stack } from '../packages/stack/src/';
+import { Split } from '../packages/split/src/';
 import { Grid } from '../packages/grid/src/';
 import { Columns, Column } from '../packages/columns/src/';
 import { Inline } from '../packages/inline/src/';
@@ -46,7 +47,32 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 ## Clamping card
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+Sets an absolute min and max size, and an actual size for the card.
+
+You can learn more about this pattern in the [clamping card](https://web.dev/layout/clamping-card) page of web.dev, but to summarize: This pattern uses the `clamp` function in CSS to clamp the width of the card between a min and max width.
+
+At this time, Bedrock Layout Primitives does not have a layout component that would provide a benefit beyond what you can already do in CSS.
+
+<Preview withToolbar withSource="open">
+  <Story name="Clamping card">
+    <Center centerChildren>
+      <PadBox
+        as={Stack}
+        gutter="lg"
+        padding="xl"
+        style={{ border: "1px solid black", width: "clamp(23ch, 60%, 46ch)" }}
+      >
+        <h1>Video Title</h1>
+        <Frame ratio={[16, 9]}>
+          <img src={jacketPic} alt="Computer" />
+        </Frame>
+        <p>Descriptive Text goes here</p>
+      </PadBox>
+    </Center>
+  </Story>
+</Preview>
+
+[I am open to suggestions.](/?path=/story/contributing--page)
 
 ## Deconstructed pancake
 
@@ -88,11 +114,76 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
 
 ## Line up
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Cover>` component.
+
+(The `<Columns` component is used to create the 3 column layout.)
+
+<Preview withToolbar withSource="open">
+  <Story name="Line up">
+    <Columns columns={3} gutter="xxl">
+      <Cover
+        as={Box}
+        minHeight="100%"
+        gutter="md"
+        top={<h3>Title - Card 1</h3>}
+        bottom={
+          <Frame ratio={[16, 9]}>
+            <img src={jacketPic} alt="Computer" />
+          </Frame>
+        }
+      >
+        <p contenteditable>
+          Medium length description with a few more words here.
+        </p>
+      </Cover>
+      <Cover
+        as={Box}
+        minHeight="100%"
+        gutter="md"
+        top={<h3>Title - Card 2</h3>}
+        bottom={
+          <Frame ratio={[16, 9]}>
+            <img src={jacketPic} alt="Computer" />
+          </Frame>
+        }
+      >
+        <p contenteditable>
+          Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+      </Cover>
+      <Cover
+        as={Box}
+        minHeight="100%"
+        gutter="md"
+        top={<h3>Title - Card 3</h3>}
+        bottom={
+          <Frame ratio={[16, 9]}>
+            <img src={jacketPic} alt="Computer" />
+          </Frame>
+        }
+      >
+        <p contenteditable>Short Description.</p>
+      </Cover>
+    </Columns>
+  </Story>
+</Preview>
 
 ## Pancake stack
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the `<Stack>` component.
+
+<Preview withToolbar withSource="open">
+  <Story name="Pancake stack">
+    <Stack gutter="md" x>
+      <Box as="header">Header</Box>
+      <Box as="main" style={{ minHeight: "25vh" }}>
+        Main
+      </Box>
+      <Box as="footer">Footer Content</Box>
+    </Stack>
+  </Story>
+</Preview>
 
 ## RAM (Repeat, Auto, Minmax)
 
@@ -115,7 +206,21 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 
 ## Sidbar says
 
-**TODO** [I am open to help.](/?path=/story/contributing--page)
+A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Inline>` component.
+
+<Preview withToolbar withSource="open">
+  <Story name="Sidbar says">
+    <Inline gutter="md" stretch={1} align="stretch">
+      <Box contentEditable style={{ width: "max(100px, 25%)" }}>
+        Min: 100px / Max: 25%
+      </Box>
+      <Box contentEditable>
+        This element takes the second position (stretch:1), meaning it takes up
+        the rest of the remaining space.
+      </Box>
+    </Inline>
+  </Story>
+</Preview>
 
 ## Super centered
 
