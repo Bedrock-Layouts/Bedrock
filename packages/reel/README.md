@@ -1,16 +1,24 @@
 # `@bedrock-layout/reel`
 
-Layout helper for scrolling content
+A layout helper for scrolling content
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to provide convenient scrolling for lists of media (i.e carousel).
+`Reel` component designs and organizes your content into scrollable flatlists, A.K.A Carousels. It also adds convenient breakpoints in the flatlists, hence providing a natural way to scroll through content.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/reel`
+
+or
+
+`yarn add @bedrock-layout/reel`
 
 ## Usage
 
@@ -27,17 +35,21 @@ import { Reel } from '@bedrock-layout/reel';
 </Reel>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-reel`.
+For styling purposes, you can select `data-bedrock-reel`.
+
+---
 
 ## API
 
 \* required
 
-| Property | Description                                  | Type               | Default |
-| -------- | -------------------------------------------- | ------------------ | ------- |
-| gutter\* | sets space inbetween each element            | one of spacing\*\* | -       |
-| snapType | controls horizontal snap and center position | string             | 'none'  |
+| Property | Description                                  | Type                               | Default |
+| :------: | :------------------------------------------: | :--------------------------------: | :-----: |
+| gutter\* | Sets the space between each child element    | one of `Spacing`\*\*               | -       |
+| snapType | Controls horizontal snap type                | `none`, `mandatory` or `proximity` | 'none'  |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`

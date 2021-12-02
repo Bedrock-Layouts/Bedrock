@@ -1,21 +1,31 @@
 # `@bedrock-layout/inline-cluster`
 
-Layout helper that creates inline-cluster of items
+InlineCluster is a layout helper component that displays items in a row.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to create a inline-cluster layouts
+The `InclineCluster` component can be used to create inline-cluster layouts where items are displayed in a single row. If the number of items is too large, then they are displayed in a cluster with respect to the container's width and the cluster's justification (start, end, or center).
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/inline-cluster`
 
+or
+
+`yarn add @bedrock-layout/inline-cluster`
+
+---
+
 ## Usage
 
 ```javascript
-import InlineCluster from '@bedrock-layout/inline-cluster';
+import { InlineCluster } from '@bedrock-layout/inline-cluster';
 
 <InlineCLuster gutter='lg' justify='start' align='start'>
   <span>Lorem ipsum dolor</span>
@@ -24,19 +34,22 @@ import InlineCluster from '@bedrock-layout/inline-cluster';
 </InlineCLuster>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-inline-cluster`.
+For styling purposes, you can select `data-bedrock-inline-cluster`.
+
+---
 
 ## API
 
 \* required
 
 | Property | Description                                          | Type                         | Default |
-| -------- | ---------------------------------------------------- | ---------------------------- | ------- |
-| gutter\* | sets space between each element                      | one of spacing\*\*           | -       |
-| justify  | Inline alignment                                     | One of: `start, end, center` | `start` |
-| align    | Block alignment                                      | One of: `start, end, center` | `start` |
-| switchAt | The width that the container will switch to stacking | One of: `CSS length, number` | -       |
+| :------: | :--------------------------------------------------: | :--------------------------: | :-----: |
+| gutter\* | Sets the space between each child element            | one of `Spacing`\*\*         | -       |
+| justify  | Sets the inline justification of the children        | One of: `start, end, center` | `start` |
+| align    | Sets the block alignment of the children             | One of: `start, end, center` | `start` |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`

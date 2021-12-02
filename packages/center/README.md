@@ -1,16 +1,26 @@
 # `@bedrock-layout/center`
 
-Layout helper that centers the content
+A layout helper component that centers the content
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to center content on the screen
+Use the `Center` component when you want to center the content and clamp it at the desired width, and can also center the children and text alignment.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/center`
+
+or
+
+`yarn add @bedrock-layout/center`
+
+---
 
 ## Usage
 
@@ -27,14 +37,18 @@ import { Center } from '@bedrock-layout/center';
 </Center>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-center`.
+For styling purposes, you can select `data-bedrock-center`.
+
+---
 
 ## API
 
-| Property       | Description             | Type           | Default           |
-| -------------- | ----------------------- | -------------- | ----------------- |
-| maxWidth       | maxWidth of the content | number, string | medium breakpoint |
-| centerText     | center align text       | boolean        | false             |
-| centerChildren | centers the children    | boolean        | false             |
+| Property       | Description                       | Type           | Default           |
+| :------------: | :-------------------------------: | :------------: | :---------------: |
+| maxWidth       | Max width of the content          | number, string | medium (1023px)   |
+| centerText     | Center align the text             | boolean        | false             |
+| centerChildren | Center align the child components | boolean        | false             |
