@@ -1,16 +1,26 @@
 # `@bedrock-layout/appboundary`
 
-Layout helper that clamps that app at the xxlarge breakpoint
+A layout helper component that clamps the app at the `XXL` breakpoint and keeps the app centered on the screen.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to control the width of the app on xlarge screens
+Use `AppBoundary` when you want to control the width of the application on larger screens.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/appboundary`
+
+or
+
+`yarn add @bedrock-laylock/appboundary`
+
+---
 
 ## Usage
 
@@ -27,12 +37,20 @@ import { AppBoundary } from '@bedrock-layout/appboundary';
 </AppBoundary>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-appboundary`.
+For styling purposes, you can select `data-bedrock-appboundary`.
+
+---
 
 ## API
 
-| Property | Description | Type      | Default |
-| -------- | ----------- | --------- | ------- |
-| children |             | ReactNode | -       |
+| Property     | Description                               | Type               | Default   |
+| :----------: | :---------------------------------------: | :------------:     | :-------: |
+| boundarySize | Sets the max inline size of the component | One of `Sizes`\*\* | xxlarge   |
+
+\*\* `Sizes` value can be one of: `xxsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `xxlarge`
+
+

@@ -9,7 +9,7 @@ import { argTypes } from './argTypes'
 
 ## Use case
 
-The Center component is designed to center and clamp the width at a defined width, the medium breakpoint by default. You can also center the children and text alignment as well.
+The `Center` component is designed to center and clamp its width at a predefined value. By default, this value is set to the `medium` breakpoint. You can also center the children and text alignment as well.
 
 ## API
 
@@ -19,7 +19,7 @@ The Center component is designed to center and clamp the width at a defined widt
 
 ## maxWidth
 
-The Center component will clamp the width at a defined `maxWidth` and center itself in it's context. Please note that the `maxWidth` is the max-width of the children and not the Center component itself. The below `maxWidth` is set to `75%` of the parent component width.
+The Center component will clamp the width at a defined `maxWidth` and center itself in its context. Please note that the `maxWidth` prop represents the  `max-width` of the children and not the Center component itself. In the example shown below, the `maxWidth` is set to `75%` of the parent component's width.
 
 <Preview withToolbar withSource="open">
   <Story name="maxWidth">
@@ -40,7 +40,7 @@ The Center component will clamp the width at a defined `maxWidth` and center its
 
 ## centerChildren
 
-You can also center the children by adding the `centerChildren` prop. This time the children are set to a width of 75%.
+You can also center the children by adding a `centerChildren` prop. Also, the max width of the children is set to 75%.
 
 <Preview withToolbar withSource="open">
   <Story name="centerChildren">
@@ -61,7 +61,7 @@ You can also center the children by adding the `centerChildren` prop. This time 
 
 ## centerText
 
-You can also center the text by adding the `centerText` prop.
+You can also center the text by adding a `centerText` prop.
 
 <Preview withToolbar withSource="open">
   <Story name="centerText">
@@ -82,7 +82,7 @@ You can also center the text by adding the `centerText` prop.
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-center`.
+For styling purposes, you can select `data-bedrock-center`.
 
 ## Playground
 

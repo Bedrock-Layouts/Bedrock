@@ -1,21 +1,31 @@
 # `@bedrock-layout/grid`
 
-Layout helper that creates Grid of items
+Grid is a layout helper that creates a responsive grid of items.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to create a grid layouts
+`Grid` can be used to create a responsive grid layouts that can automatically wrap depending on the number of child elements and a `minItemWidth` value.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/grid`
 
+or
+
+`yarn add @bedrock-layout/grid`
+
+---
+
 ## Usage
 
 ```javascript
-import Grid from '@bedrock-layout/grid';
+import { Grid } from '@bedrock-layout/grid';
 
 <Grid minItemWidth={300}>
   <div>1</div>
@@ -27,17 +37,21 @@ import Grid from '@bedrock-layout/grid';
 </Grid>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-grid`.
+For styling purposes, you can select `data-bedrock-grid`.
+
+---
 
 ## API
 
 \* required
 
-| Property     | Description                       | Type                                   | Default               |
-| ------------ | --------------------------------- | -------------------------------------- | --------------------- |
-| gutter\*     | sets space inbetween each element | one of spacing\*\*                     | -                     |
-| minItemWidth | min width in px of each grid item | number or valid CSS length as a string | breakPoints.smallOnly |
+| Property     | Description                                   | Type                                   | Default               |
+| :----------: | :-------------------------------:             | :------------------------------------: | :-------------------: |
+| gutter\*     | sets the space between each child element     | One of `Spacing`\*\*                   | -                     |
+| minItemWidth | sets the min width size of each child element | number or valid CSS length as a string |  small (639px)        |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`

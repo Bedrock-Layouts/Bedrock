@@ -8,11 +8,11 @@ import { argTypes } from './argTypes'
 
 # AppBoundary
 
-When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger and allowing a page to grow to the same width as a 4K monitor is irresponsible. A website typically should clamp at an outer limit and stay centered on the screen.
+When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and allowing a page to grow to the same width as a 4K monitor is irresponsible. A website should clamp at an outer limit and stay centered on the screen.
 
 ## Use case
 
-The AppBoundary is designed to wrap your entire app. By default, it will clamp the width at the `xxlarge` size option, but can be set to any of the valid size options.
+The `AppBoundary` component is designed to wrap your entire app. By default, it will clamp the width at the `xxlarge` size option, but can also be set to other the valid size options using the `boundarySize` prop.
 
 ## API
 
@@ -99,7 +99,7 @@ The AppBoundary is designed to wrap your entire app. By default, it will clamp t
 
 ## data-attribute
 
-For purposes of styling, you can select `data-bedrock-appboundary`.
+For styling purposes, you can select `data-bedrock-appboundary`.
 
 ## Playground
 

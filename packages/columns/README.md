@@ -1,20 +1,32 @@
 # `@bedrock-layout/columns`
 
-Layout helper that creates columns of items
+A layout helper component that creates an n-column layout.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to create a Columned layouts
+The `Columns` can be used to create a columned layout consisting of `n` number of columns.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/columns`
 
+or
+
+`yarn add @bedrock-layout/columns`
+
+---
+
 ## Usage
 
 ### Basic Usage
+
+The following example creates a simple columned layout containing `5` columns of equal size.
 
 ```javascript
 import { Columns } from '@bedrock-layout/columns';
@@ -29,7 +41,11 @@ import { Columns } from '@bedrock-layout/columns';
 </Columns>;
 ```
 
+---
+
 ### Usage with `Column`
+
+`@bedrock-layout/columns` also contains a `Column` component which can be used within `Columns` to define individual sizes of the columns, using the `span` props, as shown below:
 
 ```javascript
 import { Columns, Column } from '@bedrock-layout/columns';
@@ -56,9 +72,13 @@ import { Columns, Column } from '@bedrock-layout/columns';
 </Columns>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-columns` and `data-bedrock-column`.
+For styling purposes, you can select `data-bedrock-columns` and `data-bedrock-column` for `Columns` and `Column` respectively.
+
+---
 
 ## API
 
@@ -66,16 +86,19 @@ For purposes of styling you can select `data-bedrock-columns` and `data-bedrock-
 
 \* required
 
-| Property | Description                               | Type               | Default |
-| -------- | ----------------------------------------- | ------------------ | ------- |
-| gutter\* | sets space between each element           | one of spacing\*\* | -       |
-| columns  | number of columns                         | number             | 1       |
-| dense    | used with `Column` to have a dense layout | boolean            | false   |
+| Property | Description                                                            | Type                         | Default |
+| :------: | :--------------------------------------------------------------------: | :--------------------------: | :-----: |
+| gutter\* | sets the space between the elements                                    | One of `Spacing`\*\*         | -       |
+| columns  | number of columns to create                                            | number                       | 1       |
+| dense    | used with `Column` to have a dense layout                              | boolean                      | false   |
+| switchAt | The width threshold at which the container will switch to stack layout | One of: `CSS length, number` | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacings` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
 
 ### Column
 
-| Property | Description               | Type   | Default |
-| -------- | ------------------------- | ------ | ------- |
-| span     | number of columns to span | number | 1       |
+| Property        | Description                                    | Type   | Default |
+| :-------------: | :--------------------------------------------: | :----: | :-----: |
+| span            | number of columns the element should span      | number | 1       |
+| offsetStart     | number of columns to offset before the element | number | -       |
+| offsetEnd       | number of columns to offset after the element  | number | -       |

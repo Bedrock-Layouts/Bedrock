@@ -1,16 +1,26 @@
 # `@bedrock-layout/split`
 
-A layout primitive that creates a split view of various fractional amounts
+A layout primitive that creates a split layout based on a `fraction` value.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to create a split layouts
+`Split` Component is to be used when you want to create a split layout based on a `fraction` value. It will also enforce a spacing between child components with the help of the `gutter` prop and can also switch to a stack layout when the provided threshold is reached.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/split`
+
+or 
+
+`yarn add @bedrock-layout/split`
+
+---
 
 ## Usage
 
@@ -27,19 +37,22 @@ import { Split } from '@bedrock-layout/split';
 </Split>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling, you can select `data-bedrock-split`.
+For styling purposes, you can select `data-bedrock-split`.
+
+---
 
 ## API
 
 \* required
 
-| Property | Description                                           | Type                                                                | Default |
-| -------- | ----------------------------------------------------- | ------------------------------------------------------------------- | ------- |
-| gutter\* | sets space between each element                       | one of spacing\*\*                                                  | -       |
-| fraction | sets the fractional split                             | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
-| fraction | sets the fractional split                             | `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
-| switchAt | sets the width threshold that the split will switchAt | a number in pixels or valid CSS length as a string                  | -       |
+| Property | Description                                                   | Type                                                                       | Default |
+| :------: | :-----------------------------------------------------------: | :------------------------------------------------------------------------: | :-----: |
+| gutter\* | Sets the space between each child component                   | one of `Spacing`\*\*                                                       | -       |
+| fraction | Sets the fractional split                                     | one of `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
+| switchAt | Sets the width threshold at which layout will change to Stack | a number in pixels or valid CSS length as a string                         | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`

@@ -10,8 +10,8 @@ import { argTypes } from './argTypes'
 
 ## Use case
 
-The Inline component is designed to create consistent spacing around inline elements of variable width. Unlike the InlineCluster component,
-the items in the Inline component will not wrap. The Inline component also allows you to specify a child that can stretch, filling the excess space.
+The `Inline` component is designed to create consistent spacing around inline elements of variable width. Unlike the `InlineCluster` component,
+the items in the `Inline` component will not wrap. The `Inline` component also allows you to specify a component that can stretch and fill the excess space.
 
 ## API
 
@@ -21,9 +21,9 @@ the items in the Inline component will not wrap. The Inline component also allow
 
 ## InlineCluster Props
 
-The Inline component has all the same props as the InlineCluster component. (check the [InlineCluster component for more details](/?path=/docs/components-inlinecluster--api))
+The `Inline` component has all the same props as the `InlineCluster` component. (check the [InlineCluster component for more details](/?path=/docs/components-inlinecluster--api))
 
-Below is an example of the Inline component with the `gutter` set to `xl` and both `justify` and `align` props set to `center`.
+Below is an example of the `Inline` component with the `gutter` prop set to `xl` and both `justify` and `align` props set to `center`.
 
 <Preview withToolbar withSource="open">
   <Story name="InlineCluster Props">
@@ -38,7 +38,7 @@ Below is an example of the Inline component with the `gutter` set to `xl` and bo
 
 ## stretch
 
-The `stretch` prop can be used to specify a child that will stretch to fill the remaining space.
+The `stretch` prop can be used to specify a child component that will stretch to fill the excess space.
 
 <Preview withToolbar withSource="open">
   <Story name="stretch">
@@ -75,7 +75,7 @@ The `stretch` prop can be used to specify a child that will stretch to fill the 
 
 ## switchAt
 
-The below example will switch to a stack when it is less than `45rem`. (Resize your window to see this in action.)
+In the below example, the layout will switch to stack when its width becomes less than `45rem`. (Resize your window to see this in action.)
 
 <Preview withToolbar withSource="open">
   <Story name="switchAt">
@@ -90,7 +90,7 @@ The below example will switch to a stack when it is less than `45rem`. (Resize y
 
 ## data-attribute
 
-For purposes of styling, you can select `data-bedrock-inline`.
+For styling purposes, you can select `data-bedrock-inline`.
 
 ## Playground
 

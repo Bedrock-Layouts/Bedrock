@@ -1,18 +1,30 @@
 # `@bedrock-layout/cover`
 
-Layout helper that covers a certain height and vertically center's it's child
+A layout helper components that covers a pre-defined height and vertically centers its child component.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
+---
+
 ## When to Use
 
-Used to cover on the screen and center it's child. It takes a single child only and will throw an error if you try to add more than one child.
+The `Cover` component should be used to cover a predefined height on the screen and center its child component. 
 
-It will optionally take a `top` and/or a `bottom` element to put above or below the centered element. Both the `top` and `bottom` prop will only take a singluar ReactNode.
+Please note that `Cover` can only have a single child and will throw an error if you try to add more than one child.
+
+Optionally, you can pass a `top` or `bottom` element as prop to it, and `Cover` will put them above or below the centered element. You can only assign a single ReactNode to both `top` and `bottom` props.
+
+---
 
 ## How to install
 
 `npm install @bedrock-layout/cover`
+
+or
+
+`yarn add @bedrock-layout/cover`
+
+---
 
 ## Usage
 
@@ -24,20 +36,24 @@ import { Cover } from '@bedrock-layout/cover';
 </Cover>;
 ```
 
+---
+
 ## data-attribute
 
-For purposes of styling, the outer wrapper as the `data-bedrock-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an elements with a data attributes of `data-bedrock-cover-top`, `data-bedrock-cover-child`, and `data-bedrock-cover-bottom` respectively.
+For purpose of styling, you can select the outer wrapper as `data-bedrock-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an element with the data attributes of `data-bedrock-cover-top`, `data-bedrock-cover-child`, and `data-bedrock-cover-bottom` respectively.
+
+---
 
 ## API
 
 \* required
 
-| Property  | Description                     | Type                                                                      | Default |
-| --------- | ------------------------------- | ------------------------------------------------------------------------- | ------- |
-| minHeight | minHeight of the cover          | any valid css size unit as a string (will revert to default if not valid) | "100vh" |
-| gutter\*  | sets space between each element | one of spacing\*\*                                                        | -       |
-| children  | takes a single child            | ReactNode                                                                 | -       |
-| top       | takes a single child            | ReactNode                                                                 | -       |
-| bottom    | takes a single child            | ReactNode                                                                 | -       |
+| Property  | Description                                                    | Type                                                                      | Default |
+| :-------: | :------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----: |
+| minHeight | minimum height you want to cover                               | any valid css size unit as a string (will revert to default if not valid) | 100vh   |
+| gutter\*  | space between each element                                     | One of `Spacing`\*\*                                                      | -       |
+| children  | takes a single child element                                   | ReactNode                                                                 | -       |
+| top       | takes a ReactNode and puts it before the child element         | ReactNode                                                                 | -       |
+| bottom    | takes a ReactNode and puts it after the child element          | ReactNode                                                                 | -       |
 
-\*\* By default, spacings are one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants), but can be overridden using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
