@@ -33,7 +33,7 @@ Then you add the `data-bedrock-inline` attribute to the desired element.
 
 The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-inline style={{ "--gutter": "var(--space-md)" }}>
@@ -50,7 +50,7 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ## justify
 
@@ -58,7 +58,7 @@ The `justify` prop defines the inline justification of the elements within the c
 
 You set the justification by setting the `justify` property on the `data-bedrock-inline` attribute.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="justify">
     <h3>justify:start</h3>
     <div data-bedrock-inline="justify:start" style={{ "--gutter": "2rem" }}>
@@ -82,7 +82,7 @@ You set the justification by setting the `justify` property on the `data-bedrock
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ## align
 
@@ -90,7 +90,7 @@ The `align` prop defines the block alignment of the elements within the cluster.
 
 You can set the alignment of the inline's children by setting the `align` property on the `data-bedrock-inline` attribute.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="align">
     <h3>align:start</h3>
     <div data-bedrock-inline="align:start" style={{ "--gutter": "2rem" }}>
@@ -121,7 +121,7 @@ You can set the alignment of the inline's children by setting the `align` proper
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Both the `justify` and `align` properties can be set to at the same time.
 
@@ -140,7 +140,7 @@ The `stretch` prop can be used to set one or all of the children to stretch and 
 
 The `stretch` prop accepts the following values: `stretch:start`, `stretch:end`, `stretch:all`.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="stretch">
     <h3>start</h3>
     <div data-bedrock-inline="stretch:start" style={{ "--gutter": "2rem" }}>
@@ -164,13 +164,13 @@ The `stretch` prop accepts the following values: `stretch:start`, `stretch:end`,
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 The `stretch` property can also be set with an integer that represents the index of the child.
 
 Unlike the `Inline` component, the `stretch` property can't be set to any integer value. The `stretch` property can only be set to 0-4 to represent the first, second, third, fourth, or fifth child respectively.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="stretch:index">
     <h3>0</h3>
     <div data-bedrock-inline="stretch:0" style={{ "--gutter": "2rem" }}>
@@ -213,7 +213,7 @@ Unlike the `Inline` component, the `stretch` property can't be set to any intege
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ## --switchAt
 
@@ -221,7 +221,7 @@ If you set the `--switchAt` property, the inline will switch to a stacking layou
 
 The below example will switch to a stack when it is less than `45rem`. (Resize your window to see this in action.)
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="--switchAt">
     <div
       data-bedrock-inline
@@ -233,4 +233,4 @@ The below example will switch to a stack when it is less than `45rem`. (Resize y
       <Box style={{ minWidth: 100 }} />
     </div>
   </Story>
-</Preview>
+</Canvas>

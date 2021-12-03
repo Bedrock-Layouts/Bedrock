@@ -17,7 +17,7 @@ Minimal styling has been applied to make the examples more readable.
 
 A simple product card with an image and a description on the the right. Uses the `<Split>`, the `<Stack>`, and the `<PadBox>` components.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="Product Card">
     <Split fraction="1/4" gutter="none">
       <img src={jacketPic} alt="Computer" />
@@ -34,13 +34,13 @@ A simple product card with an image and a description on the the right. Uses the
       </Stack>
     </Split>
   </Story>
-</Preview>
+</Canvas>
 
 ## Basic Form
 
 A basic form with inputs that span multiple columns. Uses the `<Stack>`, `<Columns>` and the `<Column>` components.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="Form">
     <Columns as="form" gutter="lg" columns={6}>
       <Column span={3}>
@@ -87,4 +87,4 @@ A basic form with inputs that span multiple columns. Uses the `<Stack>`, `<Colum
       </Column>
     </Columns>
   </Story>
-</Preview>
+</Canvas>

@@ -32,7 +32,7 @@ Then you add the `data-bedrock-inline-cluster` attribute to the desired element.
 
 The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-inline-cluster style={{ "--gutter": "var(--space-md)" }}>
@@ -49,7 +49,7 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ## justify
 
@@ -57,7 +57,7 @@ The `justify` prop defines the inline justification of the elements within the c
 
 You set the justification by setting the `justify` property on the `data-bedrock-inline` attribute.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="justify">
     <h3>justify:start</h3>
     <div
@@ -90,7 +90,7 @@ You set the justification by setting the `justify` property on the `data-bedrock
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ## align
 
@@ -98,7 +98,7 @@ The `align` prop defines the block alignment of the elements within the cluster.
 
 You can set the alignment of the inline's children by setting the `align` property on the `data-bedrock-inline` attribute.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="align">
     <h3>align:start</h3>
     <div
@@ -138,7 +138,7 @@ You can set the alignment of the inline's children by setting the `align` proper
       <Box />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Both the `justify` and `align` properties can be set to at the same time.
 
@@ -159,7 +159,7 @@ The below example will stay inline unless they no longer have room in the contai
 
 (Resize your window to see this in action.)
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="clustering">
     <h3>start</h3>
     <div
@@ -192,4 +192,4 @@ The below example will stay inline unless they no longer have room in the contai
       <Box style={{ width: "15rem" }} />
     </div>
   </Story>
-</Preview>
+</Canvas>
