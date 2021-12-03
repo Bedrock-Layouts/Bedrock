@@ -13,7 +13,12 @@ The `Cover` component is designed to cover a predefined area, 100vh by default, 
 
 ## API
 
-<Story name="API" argTypes={argTypes} />
+<Story
+  name="API"
+  argTypes={argTypes}
+  // This is preventing sorybook from rendering the component
+  args={{ minHeight: 0, top: "", bottom: "" }}
+/>
 
 <ArgsTable story="API" />
 
@@ -23,7 +28,7 @@ The `Cover` component is designed to cover a predefined area, 100vh by default, 
 
 The `Cover` component can be used with any React node as its child. The child will be vertically centered.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="With children">
     <Cover minHeight="50vh" gutter="sm">
       <div>
@@ -34,13 +39,13 @@ The `Cover` component can be used with any React node as its child. The child wi
       </div>
     </Cover>
   </Story>
-</Preview>
+</Canvas>
 
 ## top
 
 The `top` prop can be used to render a top section.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="top">
     <Cover minHeight="50vh" gutter="sm" top={<span>I am on top.</span>}>
       <div>
@@ -51,13 +56,13 @@ The `top` prop can be used to render a top section.
       </div>
     </Cover>
   </Story>
-</Preview>
+</Canvas>
 
 ## bottom
 
 The `bottom` prop can be used to render a bottom section.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="bottom">
     <Cover minHeight="50vh" gutter="sm" bottom={<span>I am on bottom.</span>}>
       <div>
@@ -68,13 +73,13 @@ The `bottom` prop can be used to render a bottom section.
       </div>
     </Cover>
   </Story>
-</Preview>
+</Canvas>
 
 ## top and bottom
 
 Both the `top` and `bottom` props can be used to render a top and bottom section.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="top and bottom">
     <Cover
       minHeight="50vh"
@@ -90,7 +95,7 @@ Both the `top` and `bottom` props can be used to render a top and bottom section
       </div>
     </Cover>
   </Story>
-</Preview>
+</Canvas>
 
 ## data-attribute
 

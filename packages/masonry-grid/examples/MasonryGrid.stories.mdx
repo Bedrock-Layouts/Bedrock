@@ -10,6 +10,7 @@ import { argTypes } from './argTypes'
 ## Use case
 
 The `MasonryGrid` component is almost identical to the [Grid component](/?path=/docs/components-grid--api) except that each item's vertical space will grow independant of each other. The `MasonryGrid` component will then optimize the number of columns based on the `minItemWidth` prop value passed in. `MasonryGrid` does not create standard rows. Instead, it will optimize for the most dense layout that it can achieve based on the space available.
+
 ## API
 
 <Story name="API" argTypes={argTypes} />
@@ -20,7 +21,7 @@ The `MasonryGrid` component is almost identical to the [Grid component](/?path=/
 
 In the below examples, the `minItemWidth` is set to `15rem` with `gutter` set to `lg`. (Resize your window to see the items update.)
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="Basic">
     <MasonryGrid gutter="lg" minItemWidth="15rem">
       <div>
@@ -81,7 +82,7 @@ In the below examples, the `minItemWidth` is set to `15rem` with `gutter` set to
       </div>
     </MasonryGrid>
   </Story>
-</Preview>
+</Canvas>
 
 ## data-attribute
 

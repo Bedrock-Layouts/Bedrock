@@ -16,11 +16,13 @@ The `AppBoundary` component is designed to wrap your entire app. By default, it 
 
 ## API
 
-<ArgsTable component={AppBoundary} argTypes={argTypes} />
+<Story name="API" argTypes={argTypes} />
+
+<ArgsTable story="API" />
 
 ## boundarySize
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="boundarySize">
     <h3>Default (xxlarge size)</h3>
     <AppBoundary>
@@ -95,7 +97,7 @@ The `AppBoundary` component is designed to wrap your entire app. By default, it 
       </div>
     </AppBoundary>
   </Story>
-</Preview>
+</Canvas>
 
 ## data-attribute
 

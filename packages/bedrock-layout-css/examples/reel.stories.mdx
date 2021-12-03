@@ -35,7 +35,7 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
 
 You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-reel style={{ "--gutter": "var(--space-md)" }}>
@@ -50,7 +50,7 @@ You can adjust the space between the child elements by setting the `--gutter` pr
       ))}
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 ```html
 <div data-bedrock-reel style="--gutter:2rem">
@@ -66,7 +66,7 @@ You can adjust the space between the child elements by setting the `--gutter` pr
 
 The `snapType` property sets the scroll snap type. The default snap type is `none`, but you can set it to `proximity` or `mandatory` by setting the `snapType:` value on the `data-bedrock-reel` attribute.
 
-<Preview withToolbar withSource="open">
+<Canvas withToolbar withSource="open">
   <Story name="snapType">
     <h3>none</h3>
     <div
@@ -96,4 +96,4 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
       ))}
     </div>
   </Story>
-</Preview>
+</Canvas>

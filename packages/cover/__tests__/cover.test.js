@@ -181,29 +181,5 @@ describe("Cover", () => {
 
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-
-    it("renders throws with more than one child", () => {
-      expect(console.error).not.toBeCalled();
-      class CatchError extends React.Component {
-        state = { isError: false };
-        componentDidCatch() {
-          this.setState({ isError: true });
-        }
-        render() {
-          return this.state.isError ? null : this.props.children;
-        }
-      }
-
-      create(
-        <CatchError>
-          <Cover>
-            <Lorem />
-            <Lorem />
-          </Cover>
-        </CatchError>
-      );
-
-      expect(console.error).toBeCalled();
-    });
   });
 });

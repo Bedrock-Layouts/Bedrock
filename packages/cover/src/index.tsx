@@ -3,7 +3,7 @@ import {
   getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
 
 export interface CoverProps {
@@ -19,11 +19,9 @@ export const Cover = styled.div.attrs<CoverProps>(
       "data-bedrock-cover": "",
       children: (
         <React.Fragment>
-          {top && <div data-bedrock-cover-top="">{Children.only(top)}</div>}
-          <div data-bedrock-cover-centered="">{Children.only(children)}</div>
-          {bottom && (
-            <div data-bedrock-cover-bottom="">{Children.only(bottom)}</div>
-          )}
+          {top && <div data-bedrock-cover-top="">{top}</div>}
+          <div data-bedrock-cover-centered="">{children}</div>
+          {bottom && <div data-bedrock-cover-bottom="">{bottom}</div>}
         </React.Fragment>
       ),
     };
