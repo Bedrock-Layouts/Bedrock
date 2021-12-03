@@ -9,7 +9,7 @@ import { argTypes, singleArgTypes, arrayArgTypes, objArgTypes } from './argTypes
 
 ## Use case
 
-The PadBox is designed to create consistent padding based on the spacing constants.
+The `PadBox` component is designed to create consistent padding based on the spacing constants.
 PadBox takes either a single value, an array of values (like the css shorthand for top / right / bottom / left), or an object of values (specifying each side individually) for fine tuning the padding.
 
 ## API
@@ -18,7 +18,7 @@ PadBox takes either a single value, an array of values (like the css shorthand f
 
 <ArgsTable story="API" />
 
-## padding
+## padding as a single value
 
 `padding` can take a single value for a consistent box shape padding.
 
@@ -104,7 +104,7 @@ PadBox takes either a single value, an array of values (like the css shorthand f
   </Story>
 </Preview>
 
-## padd as an Array
+## padding as an array
 
 `padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
 
@@ -140,11 +140,11 @@ PadBox takes either a single value, an array of values (like the css shorthand f
   </Story>
 </Preview>
 
-## Usage With an Object
+## Padding as an object
 
-`padding` can take an object to specify which locations will have padding and which type.
-The properties support both traditional properties, `top, bottom, right, left` and logical properties in camelcase, `blockStart, blockEnd, inlineStart, inlineEnd`
-no matter which properties are given, logical properties are used.
+The `padding` prop can also take an object to specify which locations will have padding and of which type.
+You can pass either traditional properties like `top, bottom, right, left`, or logical properties in camelcase such as `blockStart, blockEnd, inlineStart, inlineEnd`.
+No matter which properties are given, logical properties are used.
 
 <Preview withToolbar withSource="open">
   <Story name="With an object">
@@ -172,7 +172,7 @@ no matter which properties are given, logical properties are used.
 
 ## data-attribute
 
-For purposes of styling you can select `data-bedrock-padbox`.
+For styling purposes, you can select `data-bedrock-padbox`.
 
 ## Playground
 

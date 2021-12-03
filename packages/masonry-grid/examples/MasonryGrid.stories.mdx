@@ -9,8 +9,7 @@ import { argTypes } from './argTypes'
 
 ## Use case
 
-The MasonryGrid component is almost identical to the [Grid component](/?path=/docs/components-grid--api) except that each item's vertical space will grow independant of eachother. The MasonryGrid will then still optimize the number of columns based on the `minItemWidth` value passed in. But will not create standard rows. Instead, it will optimize for the most dense layout that it can achieve based on the space available.
-
+The `MasonryGrid` component is almost identical to the [Grid component](/?path=/docs/components-grid--api) except that each item's vertical space will grow independant of each other. The `MasonryGrid` component will then optimize the number of columns based on the `minItemWidth` prop value passed in. `MasonryGrid` does not create standard rows. Instead, it will optimize for the most dense layout that it can achieve based on the space available.
 ## API
 
 <Story name="API" argTypes={argTypes} />
@@ -19,7 +18,7 @@ The MasonryGrid component is almost identical to the [Grid component](/?path=/do
 
 ## Basic usage
 
-In the below examples, the `minItemWidth` is set to `15rem` with a `gutter` set to `lg`. (Resize your window to see the items update.)
+In the below examples, the `minItemWidth` is set to `15rem` with `gutter` set to `lg`. (Resize your window to see the items update.)
 
 <Preview withToolbar withSource="open">
   <Story name="Basic">
@@ -86,7 +85,7 @@ In the below examples, the `minItemWidth` is set to `15rem` with a `gutter` set 
 
 ## data-attribute
 
-For purposes of styling, you can select `data-bedrock-masonry-grid`.
+For styling purposes, you can select `data-bedrock-masonry-grid`.
 
 ## Playground
 

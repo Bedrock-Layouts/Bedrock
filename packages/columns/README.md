@@ -86,18 +86,19 @@ For styling purposes, you can select `data-bedrock-columns` and `data-bedrock-co
 
 \* required
 
-| Property | Description                               | Type                 | Default |
-| :------: | :---------------------------------------: | :------------------: | :-----: |
-| gutter\* | sets the space between the elements       | One of `Spacing`\*\* | -       |
-| columns  | number of columns to create               | number               | 1       |
-| dense    | used with `Column` to have a dense layout | boolean              | false   |
+| Property | Description                                                            | Type                         | Default |
+| :------: | :--------------------------------------------------------------------: | :--------------------------: | :-----: |
+| gutter\* | sets the space between the elements                                    | One of `Spacing`\*\*         | -       |
+| columns  | number of columns to create                                            | number                       | 1       |
+| dense    | used with `Column` to have a dense layout                              | boolean                      | false   |
+| switchAt | The width threshold at which the container will switch to stack layout | One of: `CSS length, number` | -       |
 
-\*\* By default, Spacings is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacings` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
 
 ### Column
 
 | Property        | Description                                    | Type   | Default |
-| :------:        | :-----------------------:                      | :----: | :-----: |
+| :-------------: | :--------------------------------------------: | :----: | :-----: |
 | span            | number of columns the element should span      | number | 1       |
 | offsetStart     | number of columns to offset before the element | number | -       |
 | offsetEnd       | number of columns to offset after the element  | number | -       |

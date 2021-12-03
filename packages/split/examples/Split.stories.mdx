@@ -10,7 +10,7 @@ import { argTypes } from './argTypes';
 
 ## Use case
 
-The Split component is designed to create a split layout based on a fractional ratio. The Split will enforce a standard spacing scheme through the gutter prop and will optionally switch to a stack layout when the provided threshhold is reached.
+The `Split` component is designed to create a split layout based on a fractional ratio. The `Split` component will enforce a standard spacing scheme through the `gutter` prop and will optionally switch to a stack layout when the provided threshhold is reached.
 
 ## API
 
@@ -66,7 +66,7 @@ The `fraction` prop defines the fraction of the container width to use for the s
 
 ## gutter
 
-The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the spacing between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
 
 The following values are available by default:
 
@@ -132,7 +132,7 @@ The following values are available by default:
 
 ### With switchAt
 
-The below example will switch to a stack when it is less than `45rem`. (Resize your window to see this in action.)
+The below example will switch the layout to stack when the width is less than `45rem`. (Resize your window to see this in action.)
 
 <Preview withToolbar withSource="open">
   <Story name="With switchAt">
