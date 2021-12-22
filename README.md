@@ -22,6 +22,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Split             |
 | ✅     | AppBoundary       |
 | ✅     | Columns           |
+| ✅     | ColumnDrop        |
 | ✅     | Center            |
 | ✅     | PadBox            |
 | ✅     | SplitSwitcher     |
@@ -36,7 +37,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 | ✅     | Reel              |
 | ✅     | MasonryGrid       |
 | ✅     | CSS Reset         |
-| 🛠      | CSS Only          |
+| ✅     | CSS Only          |
 
 ## Contributors
 
