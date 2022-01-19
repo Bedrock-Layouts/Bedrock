@@ -48,6 +48,15 @@ describe("ColumnDrop", () => {
       expect(columnDrop.toJSON()).toMatchSnapshot();
     });
 
+    it("renders with no stretch columns", () => {
+      const columnDrop = create(
+        <ColumnDrop gutter="lg" noStretchedColumns>
+          <Lorem />
+        </ColumnDrop>
+      );
+      expect(columnDrop.toJSON()).toMatchSnapshot();
+    });
+
     it("renders custom basis as string", () => {
       const columnDrop = create(
         <ColumnDrop gutter="lg" basis="32rem">
@@ -106,11 +115,25 @@ describe("ColumnDrop", () => {
 
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
+
     it("renders default with console error with basis input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <ColumnDrop gutter="lg" basis={{ value: "incorrect" }}>
+          <Lorem />
+        </ColumnDrop>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with incorrect noStretchColumns input", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <ColumnDrop gutter="lg" noStretchedColumns={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );

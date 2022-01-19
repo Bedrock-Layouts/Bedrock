@@ -13,16 +13,21 @@ type Basis = string | number | SizesOptions;
 export interface ColumnDropProps {
   gutter: keyof SpacingOptions;
   basis?: Basis;
+  noStretchedColumns?: boolean;
 }
 
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
-  ({ gutter, theme, style = {}, basis }) => {
+  ({ gutter, theme, style = {}, basis, noStretchedColumns = false }) => {
     const maybeGutter = getSpacingValue(theme, gutter);
     const gutterValue = maybeGutter ?? "0px";
 
+    const attributeValue =
+      noStretchedColumns === true ? "no-stretched-columns" : "";
+
     const safeBasis = getSizeValue(theme, basis) ?? basis ?? sizes.xxsmall;
+
     return {
-      "data-bedrock-column-drop": "",
+      "data-bedrock-column-drop": attributeValue,
       style: { ...style, "--gutter": gutterValue, "--basis": safeBasis },
     };
   }
@@ -42,7 +47,9 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
   box-sizing: border-box;
   > * {
     margin: 0;
-    flex: 1 1 var(--basis, ${sizes.xxsmall});
+    flex-basis: var(--basis, ${sizes.xxsmall});
+    flex-grow: ${(props) => (props.noStretchedColumns ? "0" : "1")};
+    flex-shrink: 1;
   }
 
   display: flex;
@@ -55,4 +62,5 @@ ColumnDrop.displayName = "ColumnDrop";
 ColumnDrop.propTypes = {
   gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
   basis: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  noStretchedColumns: PropTypes.bool,
 };
