@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@1.1.2...@bedrock-layout/column-drop@1.2.0) (2022-01-19)
+
+
+### Features
+
+* **column-drop:** add noStretchedColumns prop to ColumnDrop component ([722cf30](https://github.com/Bedrock-Layouts/Bedrock/commit/722cf30fd92b95a895ffb2d2e7e6d206c1fa9abc))
+
+
+
+
+
 ## 1.1.2 (2021-12-22)
 
 **Note:** Version bump only for package @bedrock-layout/column-drop

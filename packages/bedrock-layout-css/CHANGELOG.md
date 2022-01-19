@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2022-01-19)
+
+
+### Features
+
+* **bedrock-layout-css:** add no-stretched-columns option to column-drop css ([e134d01](https://github.com/Bedrock-Layouts/Bedrock/commit/e134d01094f58b1af1bd6fe63b1cdebe9af6f7ef))
+
+
+
+
+
 ## [1.3.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.3.1...@bedrock-layout/bedrock-layout-css@1.3.2) (2021-12-22)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css
