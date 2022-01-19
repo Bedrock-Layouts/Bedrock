@@ -18,10 +18,17 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--gutter);
 }
 
 [data-bedrock-column-drop] > * {
   margin: 0;
-  flex: 1 1 var(--basis, 159px);
+  flex-basis: var(--basis, 159px);
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+[data-bedrock-column-drop~="no-stretched-columns"] > * {
+  flex-grow: 0;
 }

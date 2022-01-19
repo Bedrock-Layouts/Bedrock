@@ -88,3 +88,27 @@ In the below example, The `--basis` is set to `15rem`. As you resize the window,
     </div>
   </Story>
 </Canvas>
+
+## no-stretched-columns
+
+By default, the column-drop component will stretch the columns to fit the container. If you want to prevent this behavior, you can set the `no-stretched-columns` property on the `data-bedrock-column-drop` attribute.
+
+In the below example, The `--basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Canvas withToolbar withSource="open">
+  <Story name="no-stretched-columns">
+    <div
+      data-bedrock-column-drop="no-stretched-columns"
+      style={{ "--gutter": "1rem", "--basis": "15rem" }}
+    >
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </div>
+  </Story>
+</Canvas>
