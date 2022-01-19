@@ -2,6 +2,7 @@ import { Meta } from '@storybook/addon-docs/';
 import { Center } from '@bedrock-layout/center'
 import { PadBox } from '@bedrock-layout/padbox'
 import { Grid } from '@bedrock-layout/grid'
+import { ColumnDrop } from '@bedrock-layout/column-drop'
 import { Cover } from '@bedrock-layout/cover'
 import { Stack } from '@bedrock-layout/stack'
 import { Split } from '@bedrock-layout/split'
@@ -50,7 +51,7 @@ import justLogo from '../assets/Logo only.png'
   </Split>
 </Cover>
 
-<PadBox as={Grid} minItemWidth='25rem' gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
+<PadBox as={ColumnDrop} noStretchedColumns basis='25rem'  gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
 <div>
 
 ## Zero Config

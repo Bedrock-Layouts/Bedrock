@@ -28,4 +28,13 @@ export const argTypes = {
     },
     control: "text",
   },
+  noStretchedColumns: {
+    description:
+      "If true, the columns will not be stretched to fill the container",
+    type: { name: "boolean" },
+    table: {
+      type: { summary: "boolean" },
+    },
+    control: "boolean",
+  },
 };
