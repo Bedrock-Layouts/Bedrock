@@ -10,22 +10,23 @@ export interface ReelProps {
   gutter: keyof SpacingOptions;
 }
 
-export const Reel = styled.div.attrs<ReelProps>((props) => ({
-  "data-bedrock-reel": props.snapType ? `snapType:${props.snapType}` : "",
-}))<ReelProps>`
-  --gutter: ${({ gutter, theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-    return maybeGutter ?? "0px";
-  }};
+export const Reel = styled.div.attrs<ReelProps>((props) => {
+  const maybeGutter = getSpacingValue(props.theme, props.gutter);
+  return {
+    "data-bedrock-reel": props.snapType ? `snapType:${props.snapType}` : "",
+    style: { ...props.style, "--gutter": maybeGutter ?? "0px" },
+  };
+})<ReelProps>`
   box-sizing: border-box;
   > * {
     margin: 0;
+    scroll-snap-align: start;
   }
 
   display: flex;
   gap: var(--gutter);
 
-  overflow: scroll;
+  overflow-x: scroll;
 
   scroll-snap-type: ${({ snapType = "none" }) => {
     switch (snapType) {
@@ -33,20 +34,16 @@ export const Reel = styled.div.attrs<ReelProps>((props) => ({
         return "none";
       }
       case "proximity": {
-        return "both proximity";
+        return "x proximity";
       }
       case "mandatory": {
-        return "both mandatory";
+        return "x mandatory";
       }
       default: {
         return "none";
       }
     }
   }};
-
-  & > * {
-    scroll-snap-align: start;
-  }
 `;
 
 Reel.displayName = "Reel";

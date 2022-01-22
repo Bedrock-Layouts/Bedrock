@@ -69,30 +69,33 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
 <Canvas withToolbar withSource="open">
   <Story name="snapType">
     <h3>none</h3>
+    <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:none"
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: 300 }} />
+        <Box key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>mandatory</h3>
+    <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:mandatory"
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: 300 }} />
+        <Box key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>proximity</h3>
+    <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:proximity"
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: 300 }} />
+        <Box key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
   </Story>

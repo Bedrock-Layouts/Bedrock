@@ -2,14 +2,13 @@
 
 exports[`Reel correct usage renders all the gutter options 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -18,9 +17,6 @@ exports[`Reel correct usage renders all the gutter options 1`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -30,6 +26,11 @@ exports[`Reel correct usage renders all the gutter options 1`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -45,14 +46,13 @@ exports[`Reel correct usage renders all the gutter options 1`] = `
 
 exports[`Reel correct usage renders all the gutter options 2`] = `
 .c0 {
-  --gutter: 0.0625rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -61,9 +61,6 @@ exports[`Reel correct usage renders all the gutter options 2`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -73,6 +70,11 @@ exports[`Reel correct usage renders all the gutter options 2`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0.0625rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -88,14 +90,13 @@ exports[`Reel correct usage renders all the gutter options 2`] = `
 
 exports[`Reel correct usage renders all the gutter options 3`] = `
 .c0 {
-  --gutter: 0.125rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -104,9 +105,6 @@ exports[`Reel correct usage renders all the gutter options 3`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -116,6 +114,11 @@ exports[`Reel correct usage renders all the gutter options 3`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0.125rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -131,14 +134,13 @@ exports[`Reel correct usage renders all the gutter options 3`] = `
 
 exports[`Reel correct usage renders all the gutter options 4`] = `
 .c0 {
-  --gutter: 0.25rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -147,9 +149,6 @@ exports[`Reel correct usage renders all the gutter options 4`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -159,6 +158,11 @@ exports[`Reel correct usage renders all the gutter options 4`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0.25rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -174,14 +178,13 @@ exports[`Reel correct usage renders all the gutter options 4`] = `
 
 exports[`Reel correct usage renders all the gutter options 5`] = `
 .c0 {
-  --gutter: 0.5rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -190,9 +193,6 @@ exports[`Reel correct usage renders all the gutter options 5`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -202,6 +202,11 @@ exports[`Reel correct usage renders all the gutter options 5`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -217,14 +222,13 @@ exports[`Reel correct usage renders all the gutter options 5`] = `
 
 exports[`Reel correct usage renders all the gutter options 6`] = `
 .c0 {
-  --gutter: 0.75rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -233,9 +237,6 @@ exports[`Reel correct usage renders all the gutter options 6`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -245,6 +246,11 @@ exports[`Reel correct usage renders all the gutter options 6`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0.75rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -260,14 +266,13 @@ exports[`Reel correct usage renders all the gutter options 6`] = `
 
 exports[`Reel correct usage renders all the gutter options 7`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -276,9 +281,6 @@ exports[`Reel correct usage renders all the gutter options 7`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -288,6 +290,11 @@ exports[`Reel correct usage renders all the gutter options 7`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -303,14 +310,13 @@ exports[`Reel correct usage renders all the gutter options 7`] = `
 
 exports[`Reel correct usage renders all the gutter options 8`] = `
 .c0 {
-  --gutter: 1.5rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -319,9 +325,6 @@ exports[`Reel correct usage renders all the gutter options 8`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -331,6 +334,11 @@ exports[`Reel correct usage renders all the gutter options 8`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "1.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -346,14 +354,13 @@ exports[`Reel correct usage renders all the gutter options 8`] = `
 
 exports[`Reel correct usage renders all the gutter options 9`] = `
 .c0 {
-  --gutter: 2rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -362,9 +369,6 @@ exports[`Reel correct usage renders all the gutter options 9`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -374,6 +378,11 @@ exports[`Reel correct usage renders all the gutter options 9`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "2rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -389,14 +398,13 @@ exports[`Reel correct usage renders all the gutter options 9`] = `
 
 exports[`Reel correct usage renders all the gutter options 10`] = `
 .c0 {
-  --gutter: 3rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -405,9 +413,6 @@ exports[`Reel correct usage renders all the gutter options 10`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -417,6 +422,11 @@ exports[`Reel correct usage renders all the gutter options 10`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "3rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -432,14 +442,13 @@ exports[`Reel correct usage renders all the gutter options 10`] = `
 
 exports[`Reel correct usage renders all the gutter options 11`] = `
 .c0 {
-  --gutter: 4rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -448,9 +457,6 @@ exports[`Reel correct usage renders all the gutter options 11`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -460,6 +466,11 @@ exports[`Reel correct usage renders all the gutter options 11`] = `
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "4rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -475,14 +486,13 @@ exports[`Reel correct usage renders all the gutter options 11`] = `
 
 exports[`Reel correct usage renders snapTypes 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -491,9 +501,6 @@ exports[`Reel correct usage renders snapTypes 1`] = `
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -503,6 +510,11 @@ exports[`Reel correct usage renders snapTypes 1`] = `
 <div
   className="c0"
   data-bedrock-reel="snapType:none"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -518,25 +530,21 @@ exports[`Reel correct usage renders snapTypes 1`] = `
 
 exports[`Reel correct usage renders snapTypes 2`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
-  -webkit-scroll-snap-type: both mandatory;
-  -moz-scroll-snap-type: both mandatory;
-  -ms-scroll-snap-type: both mandatory;
-  scroll-snap-type: both mandatory;
+  overflow-x: scroll;
+  -webkit-scroll-snap-type: x mandatory;
+  -moz-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -546,6 +554,11 @@ exports[`Reel correct usage renders snapTypes 2`] = `
 <div
   className="c0"
   data-bedrock-reel="snapType:mandatory"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -561,25 +574,21 @@ exports[`Reel correct usage renders snapTypes 2`] = `
 
 exports[`Reel correct usage renders snapTypes 3`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
-  -webkit-scroll-snap-type: both proximity;
-  -moz-scroll-snap-type: both proximity;
-  -ms-scroll-snap-type: both proximity;
-  scroll-snap-type: both proximity;
+  overflow-x: scroll;
+  -webkit-scroll-snap-type: x proximity;
+  -moz-scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
 }
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -589,6 +598,11 @@ exports[`Reel correct usage renders snapTypes 3`] = `
 <div
   className="c0"
   data-bedrock-reel="snapType:proximity"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -604,14 +618,13 @@ exports[`Reel correct usage renders snapTypes 3`] = `
 
 exports[`Reel incorrect usage renders with console error with incorrect gutter 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -620,9 +633,6 @@ exports[`Reel incorrect usage renders with console error with incorrect gutter 1
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -632,6 +642,11 @@ exports[`Reel incorrect usage renders with console error with incorrect gutter 1
 <div
   className="c0"
   data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
@@ -647,14 +662,13 @@ exports[`Reel incorrect usage renders with console error with incorrect gutter 1
 
 exports[`Reel incorrect usage renders with console error with incorrect snapType 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter);
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -663,9 +677,6 @@ exports[`Reel incorrect usage renders with console error with incorrect snapType
 
 .c0 > * {
   margin: 0;
-}
-
-.c0 > * {
   -webkit-scroll-snap-align: start;
   -moz-scroll-snap-align: start;
   -ms-scroll-snap-align: start;
@@ -675,6 +686,11 @@ exports[`Reel incorrect usage renders with console error with incorrect snapType
 <div
   className="c0"
   data-bedrock-reel="snapType:incorrect"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?

@@ -21,8 +21,8 @@ export const colors: string[] = [
   "Indigo",
 ];
 
-export const ColoredRect = styled.div`
-  ${(props) => (props.color ? `background-color: ${props.color};` : "")}
+export const ColoredRect = styled.div<{ bgColor: string }>`
+  ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : "")}
   padding: 100px;
   text-align: center;
 `;

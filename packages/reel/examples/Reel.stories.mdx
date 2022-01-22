@@ -31,30 +31,33 @@ The `snapType` prop sets the scroll snap type.
 <Canvas withToolbar withSource="open">
   <Story name="snapType">
     <h3>none</h3>
+    <p>scroll to the right to see the next item</p>
     <Reel snapType="none" gutter="lg">
-      {colors.map((color, ind) => {
+      {colors.map((color, i) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={i} bgColor={color} style={{ minWidth: "100%" }}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
       })}
     </Reel>
     <h3>mandatory</h3>
+    <p>scroll to the right to see the next item</p>
     <Reel snapType="mandatory" gutter="lg">
-      {colors.map((color, ind) => {
+      {colors.map((color, i) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={i} bgColor={color} style={{ minWidth: "100%" }}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
       })}
     </Reel>
     <h3>proximity</h3>
+    <p>scroll to the right to see the next item</p>
     <Reel snapType="proximity" gutter="lg">
-      {colors.map((color, ind) => {
+      {colors.map((color, i) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={i} bgColor={color} style={{ minWidth: "100%" }}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -75,7 +78,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="none">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -85,7 +88,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="xxs">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -95,7 +98,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="xs">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -105,7 +108,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="sm">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -115,7 +118,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="md">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -125,7 +128,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="mdLg">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -135,7 +138,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="lg">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -145,7 +148,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="lgXl">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -155,7 +158,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="xl">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -165,7 +168,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="xlXXl">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -175,7 +178,7 @@ The following values are available by default:
     <Reel snapType="none" gutter="xxl">
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.{" "}
           </ColoredRect>
         );
@@ -196,7 +199,7 @@ export const Template = (args) =>  (
     <Reel  {...args}>
       {colors.map((color, ind) => {
         return (
-          <ColoredRect key={ind} color={color}>
+          <ColoredRect key={ind} bgColor={color}>
             Lorem ipsum dolor sit amet.
           </ColoredRect>
         );
