@@ -10,7 +10,7 @@
 [data-bedrock-reel] {
   display: flex;
   gap: var(--gutter, 0);
-  overflow: scroll;
+  overflow-x: scroll;
   scroll-snap-type: none;
 }
 
@@ -22,10 +22,10 @@
   scroll-snap-type: none;
 }
 [data-bedrock-reel~="snapType:proximity"] {
-  scroll-snap-type: both proximity;
+  scroll-snap-type: x proximity;
 }
 [data-bedrock-reel~="snapType:mandatory"] {
-  scroll-snap-type: both mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 [data-bedrock-reel] > * {
