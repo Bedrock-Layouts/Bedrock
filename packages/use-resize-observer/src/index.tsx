@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 type ResizeFunc = (r: ResizeObserverEntry) => void;
 
@@ -9,6 +10,7 @@ const callBackMap = new WeakMap<
   React.MutableRefObject<ResizeFunc>[]
 >();
 
+/* istanbul ignore next */
 function init() {
   if (observer) return;
   observer = new ResizeObserver((entries) => {
@@ -25,27 +27,32 @@ function init() {
   });
 }
 
-export function useResizeObserver(
-  node: Element | undefined,
-  callback: ResizeFunc
-): void {
+export default function useResizeObserver<T extends Element>(
+  callback: ResizeFunc,
+  node?: T
+): React.MutableRefObject<T> {
   /**
    * initialize callbackRef with noop function
    */
   /* istanbul ignore next */
-  const callbackRef = useRef<ResizeFunc>(() => void 0);
+  const callbackRef = useRef<ResizeFunc>(callback);
 
-  callbackRef.current = callback;
+  const nodeRef = useStatefulRef<T>();
 
-  useEffect(init, []);
+  useLayoutEffect(() => {
+    callbackRef.current = callback;
+  });
+
+  const currentNode = nodeRef.current ?? node;
 
   useEffect(() => {
+    init();
     /**
      * node is undefined when the component is unmounted or not yet mounted
      */
     /* istanbul ignore next */
-    if (node) {
-      const maybeCallBacks = callBackMap.get(node);
+    if (currentNode) {
+      const maybeCallBacks = callBackMap.get(currentNode);
       /**
        * This is defensive code, but it's possible that get returns undefined
        */
@@ -53,9 +60,9 @@ export function useResizeObserver(
       const safeCallBacks = maybeCallBacks ?? [];
       const newCallbacks = safeCallBacks.concat(callbackRef);
 
-      callBackMap.set(node, newCallbacks);
+      callBackMap.set(currentNode, newCallbacks);
 
-      observer.observe(node);
+      observer.observe(currentNode);
     }
 
     return () => {
@@ -63,8 +70,8 @@ export function useResizeObserver(
        * node is undefined when the component is unmounted or not yet mounted
        */
       /* istanbul ignore next */
-      if (node) {
-        const maybeCallBacks = callBackMap.get(node);
+      if (currentNode) {
+        const maybeCallBacks = callBackMap.get(currentNode);
         /**
          * This is defensive code, but it's possible that get returns undefined
          */
@@ -72,12 +79,14 @@ export function useResizeObserver(
         const safeCallBacks = maybeCallBacks ?? [];
         const newCallbacks = safeCallBacks.filter((ref) => ref !== callbackRef);
 
-        callBackMap.set(node, newCallbacks);
+        callBackMap.set(currentNode, newCallbacks);
 
         if (newCallbacks.length === 0) {
-          observer.unobserve(node);
+          observer.unobserve(currentNode);
         }
       }
     };
-  }, [node]);
+  }, [currentNode]);
+
+  return nodeRef;
 }
