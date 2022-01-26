@@ -3,7 +3,7 @@ import {
   SpacingOptions,
   getSpacingValue,
 } from "@bedrock-layout/spacing-constants";
-import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
@@ -16,8 +16,7 @@ const isBrowser =
   document.nodeType === 9;
 
 const RowSpanner = styled.div`
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows, 1);
 
   > * {
     display: block;
@@ -27,76 +26,30 @@ const RowSpanner = styled.div`
 
 const safeTheme = {};
 
-let observer: ResizeObserver;
-
-const callBackMap = new WeakMap<Element, (r: ResizeObserverEntry) => void>();
-
 const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
   children,
   gutter,
 }) => {
   const [rowSpan, setRowSpan] = useState(1);
 
-  const childRef = useStatefulRef<HTMLDivElement>(null);
-
   const theme = React.useContext(ThemeContext) || safeTheme;
 
   /* istanbul ignore next */
-  const getRowHeight = React.useCallback(
-    (node: Element) => {
-      const gapString = getSpacingValue(theme, gutter) ?? "1px";
+  const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
+    setRowSpan(1);
+    const gapString = getSpacingValue(theme, gutter) ?? "1px";
 
-      const maybeGap = isBrowser ? toPX(gapString, childRef.current) : null;
+    const maybeGap = isBrowser ? toPX(gapString, target) : null;
 
-      const gap: number = Math.max(maybeGap ?? 1, 1);
+    const gap: number = Math.max(maybeGap ?? 1, 1);
 
-      const [child] = Array.from(node.children);
-      const height = 1 + Math.min(node.scrollHeight, child.scrollHeight);
+    const [child] = Array.from(target.children);
+    const height = 1 + Math.min(target.scrollHeight, child.scrollHeight);
 
-      return Math.ceil(height / gap);
-    },
-    [theme, gutter, childRef]
-  );
+    const rowHeight = Math.ceil(height / gap);
 
-  React.useEffect(() => {
-    /* istanbul ignore next */
-    if (childRef.current) setRowSpan(getRowHeight(childRef.current));
-  }, [childRef, getRowHeight]);
-
-  if (childRef.current) {
-    /* istanbul ignore next */
-    callBackMap.set(childRef.current, ({ target }) => {
-      setRowSpan(1);
-      const rowHeight = getRowHeight(target);
-      setRowSpan(rowHeight);
-    });
-  }
-
-  /* istanbul ignore next */
-  React.useEffect(() => {
-    if (!observer) {
-      observer = new ResizeObserver((entries) => {
-        entries.forEach((entry) => {
-          const maybeCallback = callBackMap.get(entry.target);
-          if (maybeCallback) {
-            maybeCallback(entry);
-          }
-        });
-      });
-    }
-
-    const { current: node } = childRef;
-
-    if (node) {
-      observer.observe(node);
-    }
-
-    return () => {
-      if (node) {
-        observer.unobserve(node);
-      }
-    };
-  }, [childRef, getRowHeight]);
+    setRowSpan(rowHeight);
+  });
 
   return (
     <RowSpanner
@@ -109,12 +62,11 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
 };
 
 export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
-  delete (props as unknown as Record<string, unknown>)["data-bedrock-grid"];
   return {
     "data-bedrock-masonry-grid": "",
     "data-bedrock-grid": undefined,
     children: Children.map(props.children, (child) => (
-      <Resizer gutter={props.gutter ?? "lg"}>{child}</Resizer>
+      <Resizer gutter={props.gutter}>{child}</Resizer>
     )),
   };
 })`

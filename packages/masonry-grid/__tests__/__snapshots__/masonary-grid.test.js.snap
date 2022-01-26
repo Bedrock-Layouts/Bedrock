@@ -15,8 +15,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 1`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -92,8 +91,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 2`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -173,8 +171,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 3`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -258,8 +255,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 4`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -347,8 +343,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 5`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -440,8 +435,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 6`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -537,8 +531,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 7`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -638,8 +631,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 8`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -743,8 +735,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 9`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -852,8 +843,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 10`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -965,8 +955,7 @@ exports[`MasonryGrid correct usage renders all the gutter options 11`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1082,8 +1071,7 @@ exports[`MasonryGrid correct usage renders custom minItemWidth 1`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1159,8 +1147,7 @@ exports[`MasonryGrid correct usage renders custom minItemWidth as string 1`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1236,8 +1223,7 @@ exports[`MasonryGrid correct usage renders with theme overrides 1`] = `
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1313,8 +1299,7 @@ exports[`MasonryGrid incorrect usage renders default with console error with min
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1390,8 +1375,7 @@ exports[`MasonryGrid incorrect usage renders default with console error with no 
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
@@ -1467,8 +1451,7 @@ exports[`MasonryGrid incorrect usage renders default with wrong gutter input 1`]
 }
 
 .c2 {
-  --rows: 1;
-  grid-row: span var(--rows);
+  grid-row: span var(--rows,1);
 }
 
 .c2 > * {
