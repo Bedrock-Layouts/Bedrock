@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2022-01-26)
+
+
+### Features
+
+* **masonary-grid:** refactor to use resize observer hook ([9d12d4e](https://github.com/Bedrock-Layouts/Bedrock/commit/9d12d4e9e751509b6ae2481092b4d2d829be6199))
+
+
+
+
+
 ## 2.2.5 (2021-12-22)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
