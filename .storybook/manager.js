@@ -1,5 +1,7 @@
 // .storybook/manager.js
 
+import "./manager-styles.css";
+
 import { addons } from "@storybook/addons";
 import { create } from "@storybook/theming";
 
