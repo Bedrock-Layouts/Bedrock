@@ -2,21 +2,16 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "grammarly.overrides": [
     {
-      "files": [
-        "**/packages/appboundary/examples/AppBoundary.stories.mdx"
-      ],
+      "files": ["**/packages/appboundary/examples/AppBoundary.stories.mdx"],
       "config": {
         "audience": "knowledgeable",
         "dialect": "american",
         "domain": "technical",
-        "emotions": [
-          "neutral",
-          "confident"
-        ],
-        "goals": [
-          "inform"
-        ]
+        "emotions": ["neutral", "confident"],
+        "goals": ["inform"]
       }
     }
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }

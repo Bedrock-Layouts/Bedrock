@@ -1,6 +1,5 @@
+import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import React from "react";
-
-import { useResizeObserver } from "./useResizeObserver";
 
 type UseContainterQuery = (
   node: Element | undefined,
@@ -17,7 +16,7 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
 
   const [matches, setMatch] = React.useState(false);
 
-  const callBack = (entry: ResizeObserverEntry) => {
+  useResizeObserver((entry: ResizeObserverEntry) => {
     //fix typings
     const nodeWidth =
       (entry.borderBoxSize as unknown as ResizeObserverSize)?.inlineSize ??
@@ -32,9 +31,7 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
 
       setMatch(newMatch);
     }
-  };
-
-  useResizeObserver(node, callBack);
+  }, node);
 
   return matches;
 };
