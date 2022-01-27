@@ -7,6 +7,8 @@ export const parameters = {
   options: {
     storySort: {
       order: [
+        "Overview",
+        "Getting Started",
         "Components",
         "CSS Only",
         ["A CSS Only Version", "reset.css", "spacing-properties.css"],
