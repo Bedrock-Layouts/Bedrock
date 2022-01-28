@@ -10,7 +10,8 @@ addons.setConfig({
     base: "light",
     brandTitle: "Bedrock Layout Primitives",
     brandUrl: "/",
-    brandImage: "/static/media/.storybook/assets/Full logo.png",
+    brandImage:
+      "https://user-images.githubusercontent.com/5460770/151467002-7da5559f-0cf6-424f-bd61-4fb5ea7fff2d.png",
     textColor: "#161e2e",
     fontBase: '"Roboto", sans-serif',
     appBg: "white",
