@@ -10,9 +10,9 @@ import menuInline from '../assets/menu-just-inline.png'
 
 # The Menu Component
 
-After the stack layout, the next most common layout pattern on the web is putting one thing next to another. Putting two or more things has never been that simple. In the past, this was partially due to the lack of layout options in CSS. Currently, it mostly comes down to the fact that laying out items inline is only one of the variables.
+After the stack layout, the next most common layout pattern on the web is putting one thing next to another in the inline direction. Putting two or more things has never been that simple. In the past, this was partially due to the lack of layout options in CSS. Currently, it mostly comes down to the fact that laying out items inline is only one of the variables we need to consider.
 
-Do we want the items to grow or shrink? What about responsiveness? Should the items wrap or switch to a stack layout? There are so many questions that need to be answered about inline layouts. Bedrock Layout has solutions for many of these problems, but for now, we are going to focus on two of them: [`Inline`](/docs/components-inline--api) and [`InlineCluster`](/docs/components-inlinecluster--api).
+Do we want the items to grow or shrink? What about responsiveness? Should the items wrap or switch to a stack layout? There are so many questions that need to be answered about inline layouts. Bedrock Layout has solutions for many of these problems, but for now, we are going to focus on two of them: [`Inline`](/docs/spacer-components-inline--api) and [`InlineCluster`](/docs/spacer-components-inlinecluster--api).
 
 ## Let's Get Started
 
@@ -113,13 +113,13 @@ Now we can restart the app and your browser should show the following:
   />
 </Center>
 
-In the above `Menu` component, we are taking advantage Inline's `gutter` prop to set the spacing. We are also using it's `stretch` prop to set the 2nd child to stetch itself so it takes up all remaining space. We are also using the `justify` prop to center middle `nav`.
+In the above `Menu` component, we are taking advantage Inline's `gutter` prop to set the spacing. We are also using it's `stretch` prop to set the 2nd child to stetch itself so it takes up all remaining space. We are also using the `justify` prop to center middle `nav` element.
 
 ## Responsive Layouts
 
-Typically, inline layouts need to be able to be responsive to the screen size. There are a few solutions that one can adopt to make the layout responsive. One is to allow the items to wrap and cluster, like how words in a paragraph will wrap and cluster according to the justification setting. This is what the InlineCluster primitive is used for. It will automatically wrap the children to a new row if there is not enough space in the inline direction, and it will cluster at the start, center, or end, depending on what is set for the `justify` prop.
+Typically, inline layouts need to be able to be responsive to the screen size. There are a few solutions that one can adopt to make the layout responsive. One is to allow the items to wrap and cluster according to the justification setting, much like how words in a paragraph will wrap and cluster. This is what the `InlineCluster` primitive is used for. It will automatically wrap the children to a new row if there is not enough space in the inline direction, and it will cluster at the `start`, `center`, or `end`, depending on what the `justify` prop is set to.
 
-The other typical pattern is to switch to a stack layout if the inline size is smaller than a set threshold. The Inline Component has a `switchAt` prop that lets you set a point to switch to a stacked layout.
+Another typical pattern is to switch from an inline layout to a stack layout if the inline size is smaller than a set threshold. The `Inline` primitive has a `switchAt` prop that lets you set a threshold that if it's width is below that threshold, it will switch to a stacked layout.
 
 So let's make one final update to our menu:
 
@@ -146,7 +146,7 @@ export function Menu() {
 }
 ```
 
-And if we resize to a small mobile screen size, it will look something like this:
+Now if we resize to a small mobile screen size, it will look something like this:
 
 <Center centerChildren>
   <img

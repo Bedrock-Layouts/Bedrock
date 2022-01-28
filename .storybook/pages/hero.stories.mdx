@@ -10,13 +10,13 @@ import heroPageWithCenter from '../assets/hero-page-with-center.png'
 
 # The Hero
 
-A common landing page feature is the "Hero" layout. A Hero tends to be the first thing a user sees on a page, and is usually the most important thing to focus on. It is usually a large image and/or heading, with a short description of the page, and a call to action.
+A common landing page feature is the "Hero" layout. A Hero tends to be the first thing a user sees on a page, and is the most important thing to focus on. It is usually has a large image and/or heading, a short description of the page, and one or more call to actions.
 
-The Hero layout is easily achieved using the [`Cover`](/?path=/docs/components-cover--api) component.
+The Hero layout is easily achieved using the [`Cover`](/?path=/docs/wrapper-components-cover--api) component.
 
 ## Building a Hero
 
-Let's start by stubbing out the markup we'll need. In our `App.js` file, we'll change it to add the following:
+Let's start by stubbing out the markup we'll need. In our `App.js` file, let's make the following changes:
 
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
@@ -44,7 +44,7 @@ function App() {
 export default App;
 ```
 
-Your browser should now show the following:
+Your browser should now show something like this:
 
 <Center centerChildren>
   <img
@@ -54,7 +54,7 @@ Your browser should now show the following:
   />
 </Center>
 
-The Cover component is a wrapper component that will vertically center the content. It also let's you optionally render an item on above and/or below the content.
+The Cover component is a wrapper component that will vertically center it's content. It also let's you optionally render an item on above and/or below the content.
 
 So let's start by downloading the Cover component:
 
@@ -62,7 +62,7 @@ So let's start by downloading the Cover component:
 yarn add @bedrock-layout/cover
 ```
 
-And then we'll add the following to our `App.js` file:
+And then we'll update our `App.js` file to look like this:
 
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
@@ -104,7 +104,7 @@ Your browser should now show the following:
 
 ## Adding the Center component
 
-Our layout could use some additional styling. Let's add the [`Center`](/?path=/docs/components-center--api) component to our `App.js` file. First, we need to install it:
+Let's address so width problems our website is having. Both our `Subscribe` component and header take up the entire width of their containers. This isn't ideal. Optimally, we want them to be stop growing after a certain width and then remain centered in their parent container. To do this, let's add the [`Center`](/?path=/docs/wrapper-components-center--api) component to our `App.js` file. First, we need to install it:
 
 ```bash
 yarn add @bedrock-layout/center
@@ -157,17 +157,17 @@ Your browser should now show the following:
 
 ## AppBoundary
 
-When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger and allowing a page to grow to the same width as a 4K monitor is irresponsible. A website typically should clamp at an outer limit and stay centered on the screen.
+When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger. Allowing our page to grow to the same width as a 4K monitor is irresponsible. A website typically will want to clamp at an outer limit and stay centered on the screen.
 
-The `AppBoundary` is built on the `Center` component and is designed to wrap your entire app. By default, it will clamp the width at the 1920px, the `xxlarge` size option, but can be set to any of the valid size options.
+The `AppBoundary` is built on the `Center` component and is designed to wrap your entire app. By default, it will clamp the width at the `1920px`, which is the `xxlarge` size option. This can also be set via the `boundarySize` prop to any of the valid size options.
 
-Let's start by installing the AppBoundary:
+Let's start by installing the `AppBoundary` primitive:
 
 ```bash
 yarn add @bedrock-layout/appboundary
 ```
 
-Then we can update our `index.js` file to use the AppBoundary:
+Then we can update our `index.js` file to use the `AppBoundary` primitive:
 
 ```jsx
 import React from "react";
@@ -185,14 +185,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 ```
 
-Now the AppBoundary will clamp the width of your app to the `xlarge` size option, or 1439px.
+Now the `AppBoundary` will clamp the width of your app to the `xlarge` size option, or `1439px`.
 
 Our landing page is coming along. In the next section, we'll be building cards and add them to a responsive grid layout.
 
@@ -204,5 +199,10 @@ Our landing page is coming along. In the next section, we'll be building cards a
     The Menu Component
   </Button>
   <span />
-  <Button disabled>The New Arrivals</Button>
+  <Button
+    as="a"
+    href="/?path=/docs/getting-started-lesson-6-the-new-arrivals--page"
+  >
+    The New Arrivals
+  </Button>
 </Inline>
