@@ -9,7 +9,8 @@ export const parameters = {
       order: [
         "Overview",
         "Getting Started",
-        "Components",
+        "Spacer Components",
+        "Wrapper Components",
         "CSS Only",
         ["A CSS Only Version", "reset.css", "spacing-properties.css"],
         "Hooks",
