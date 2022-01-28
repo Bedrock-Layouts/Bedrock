@@ -17,4 +17,11 @@ addons.setConfig({
     appBg: "white",
     appBorderColor: "white",
   }),
+  toolbar: {
+    title: { hidden: true },
+    zoom: { hidden: true },
+    eject: { hidden: true },
+    copy: { hidden: true },
+    fullscreen: { hidden: true },
+  },
 });
