@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/addon-docs/';
 import { Inline } from '@bedrock-layout/inline'
 import { Button } from '../ui-components/Button'
+import { Reel } from '@bedrock-layout/reel'
 
 <Meta title="Getting Started/Lesson 3: Spacing" />
 
@@ -10,13 +11,19 @@ Spacing constants are the standard by which all spacing and layout decisions are
 
 ## Spacing values
 
+<Reel gutter='none'>
+
 | **space** | `none` | `xxs`       | `xs`       | `sm`      | `md`     | `mdLg`    | `lg`   | `lgXl`   | `xl`   | `xlXXl` | `xxl`  |
 | --------- | ------ | ----------- | ---------- | --------- | -------- | --------- | ------ | -------- | ------ | ------- | ------ |
 | **size**  | `0`    | `0.0625rem` | `0.125rem` | `0.25rem` | `0.5rem` | `0.75rem` | `1rem` | `1.5rem` | `2rem` | `3rem`  | `4rem` |
 
+</Reel>
+
 ## Integrating With Your Design System
 
-Bedrock Layout Primitives is designed to be able to be integrated easily into any design system. Bedrock's Spacing values can be overridden using `styled-components` `ThemeProvider`. You can [Check out the docs for `styled-components`](https://styled-components.com/docs/advanced#theming). Bedrock Layout Primitives follow the [System UI Theme Specification](https://system-ui.com/theme/#:~:text=This%20specification%20is%20a%20work%2Din%2Dprogress.&text=The%20theme%20object%20is%20intended,%2C%20and%2For%20design%20tokens) when overriding theme values. To override Bedrock Layout's default space values, you will need to pass in your new spacing values as an object of key/value pairs to the `space` key of the theme. This
+Bedrock Layout Primitives is designed to be able to be integrated easily into any design system or style guide. Bedrock's Spacing values can be overridden using the `styled-components` `ThemeProvider`. If you are not familiar with the `ThemeProvider`, you can [check out the docs on how to use the `styled-components` `ThemeProvider` at their website](https://styled-components.com/docs/advanced#theming).
+
+Bedrock Layout Primitives follow the [System UI Theme Specification](https://system-ui.com/theme/#:~:text=This%20specification%20is%20a%20work%2Din%2Dprogress.&text=The%20theme%20object%20is%20intended,%2C%20and%2For%20design%20tokens) when overriding theme values. To override Bedrock Layout's default space values, you will need to pass in your new spacing values as an object of key/value pairs to the `space` key of the theme. For example, you can pass in the following object to override the default spacing values:
 
 ```jsx
 import { ThemeProvider } from 'styled-components';
@@ -34,11 +41,11 @@ const newSpacings = {
 </ThemeProvider>;
 ```
 
-The spacing values can either be a CSS size unit, as a string, or a positive number for the number of pixels
+The spacing values can either be any valid CSS size unit or percentage written as a string, or a positive number for the number of pixels
 
 ## Overriding Spacing Types in TypeScript
 
-In order to override the types, you must follow one additional step. `styled-components` allows you to [define your theme types through declaration merging](https://styled-components.com/docs/api#create-a-declarations-file). In your declaration file you will need to define your types like this:
+If you are in a TypeScript project you will also need to override the default types. [The spacing types are overridden by defining your theme types through declaration merging](https://styled-components.com/docs/api#create-a-declarations-file). For example, to define the types of you `newSpacings` from the example above, we need to create a file called `styled.d.ts` in the same directory as your `index.tsx` file where we define our new spacing types. This file will look something like this:
 
 ```typescript
 import 'styled-components';
@@ -54,9 +61,9 @@ declare module 'styled-components' {
 }
 ```
 
-Space values can only be of type `string` or `number`.
+It is important to note that space values can only be of type `string` or `number`. If you use any other type, the types will revert back to the default spacing types.
 
-Through the remaining parts of this tutorial we will be sticking with the default spacing scheme, but I wanted to take this short detour to show you how to incorporate your app's spacing scheme into Bedrock Layout's Primitives.
+Through the remaining parts of this tutorial we will be sticking with the default spacing scheme defined by Bedrock Layout, but I wanted to take this short detour to show you how to incorporate your app's spacing scheme into Bedrock Layout's Primitives.
 
 Now that we have our first component that stacks elements in the block direction, let's start tackling the inline direction.
 
