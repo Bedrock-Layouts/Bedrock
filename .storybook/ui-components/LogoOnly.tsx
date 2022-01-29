@@ -1,4 +1,8 @@
-    <svg height="256.8306010928962" viewBox="0, 0, 400, 256.8306010928962">
+import React from "react";
+
+export function LogoOnly({ style = {} }) {
+  return (
+    <svg height="256" viewBox="0, 0, 400, 256" style={style}>
       <g id="svgg">
         <path
           id="path1"
@@ -9,3 +13,5 @@
         ></path>
       </g>
     </svg>
+  );
+}
