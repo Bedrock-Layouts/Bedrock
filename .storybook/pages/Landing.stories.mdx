@@ -13,12 +13,16 @@ import { Heading } from '../ui-components/Heading'
 import { Avatar } from '../ui-components/Avatar'
 import justLogo from '../assets/Logo only.svg'
 import fullLogo from '../assets/Full logo.png'
+import { LogoOnly } from '../ui-components/LogoOnly'
 
 <Meta title="Overview/Bedrock Layout Primitives" />
 
 <Stack gutter="xxl">
 <Cover minHeight="40vh">
   <Split gutter="lg" switchAt="60rem">
+     <Center>
+      <LogoOnly />
+    </Center>
     <Stack gutter='lg'>
       <Heading>
         BEDROCK
@@ -45,10 +49,6 @@ import fullLogo from '../assets/Full logo.png'
         </Button>
       </Inline>
     </Stack>
-    <Frame style={{transform:'scale(0.8)'}}>
-      <img src={justLogo} alt="Bedrock Layout Primitives" />
-    </Frame>
-
   </Split>
 </Cover>
 
