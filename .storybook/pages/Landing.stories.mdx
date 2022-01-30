@@ -8,6 +8,7 @@ import { Stack } from '@bedrock-layout/stack'
 import { Split } from '@bedrock-layout/split'
 import { Frame } from '@bedrock-layout/frame'
 import { Inline } from '@bedrock-layout/inline'
+import { InlineCluster } from '@bedrock-layout/inline-cluster'
 import { Button } from '../ui-components/Button'
 import { Heading } from '../ui-components/Heading'
 import { Avatar } from '../ui-components/Avatar'
@@ -18,9 +19,9 @@ import { LogoOnly } from '../ui-components/LogoOnly'
 <Meta title="Overview/Bedrock Layout Primitives" />
 
 <Stack gutter="xxl">
-<Cover minHeight="40vh">
-  <Split gutter="lg" switchAt="60rem">
-     <Center>
+<Cover as={Center} maxWidth='90vw' minHeight="40vh">
+  <Split gutter="lgXl" switchAt="50rem">
+     <Center maxWidth='90%'>
       <LogoOnly />
     </Center>
     <Stack gutter='lg'>
@@ -52,7 +53,7 @@ import { LogoOnly } from '../ui-components/LogoOnly'
   </Split>
 </Cover>
 
-<PadBox as={ColumnDrop} noStretchedColumns basis='25rem'  gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
+<PadBox as={ColumnDrop} forwardedAs={Center} maxWidth='90vw' noStretchedColumns basis='25rem'  gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
 <div>
 
 ## Zero Config
@@ -83,7 +84,7 @@ Don't want to use React or styled-components? Bedrock Layout Primitives can be u
 </div>
 </PadBox>
 
-<PadBox padding='xl'>
+<PadBox as={Center} maxWidth='90vw' padding='xl'>
 
 ## Contributors
 
@@ -95,7 +96,7 @@ Thank you to everyone who has contributed code so far. [Get Involved yourself!](
 
 In addition to the above, the following have provided feedback, ideas, and documentation:
 
-<Inline gutter="md">
+<InlineCluster gutter="md">
   <a href="https://github.com/ajcwebdev" target="_blank">
     <Avatar
       src="https://avatars.githubusercontent.com/u/12433465?v=4"
@@ -126,7 +127,7 @@ In addition to the above, the following have provided feedback, ideas, and docum
       alt="Michael Chan"
     />
   </a>
-</Inline>
+</InlineCluster>
 
 ## Sponsor Bedrock Layouts
 

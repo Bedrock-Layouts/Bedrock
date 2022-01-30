@@ -13,9 +13,5 @@ module.exports = {
     "../examples/examples.stories.mdx",
     "../examples/web.dev.stories.mdx",
   ],
-  addons: [
-    "@storybook/addon-essentials",
-    "@storybook/addon-a11y",
-    "@storybook/addon-links",
-  ],
+  addons: ["@storybook/addon-essentials"],
 };
