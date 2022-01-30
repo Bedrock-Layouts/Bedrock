@@ -1,8 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+
+const SVG = styled.svg`
+  width: 100%;
+  height: auto;
+`;
 
 export function LogoOnly({ style = {} }) {
   return (
-    <svg height="256" viewBox="0, 0, 400, 256" style={style}>
+    <SVG viewBox="40, 30, 325, 197" style={style}>
       <g id="svgg">
         <path
           id="path1"
@@ -12,6 +18,6 @@ export function LogoOnly({ style = {} }) {
           fill-rule="evenodd"
         ></path>
       </g>
-    </svg>
+    </SVG>
   );
 }

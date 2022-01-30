@@ -1,8 +1,9 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-  margin: 0 !important;
+  margin: 0 auto !important;
   padding: 0 !important;
+  max-width: 90vw;
 }
 
 :focus:not(:focus-visible) {
@@ -24,4 +25,8 @@ li,
 figcaption {
   max-inline-size: 60ch;
   overflow-wrap: break-word;
+}
+
+.sbdocs-content.sbdocs-content {
+  width: revert;
 }
