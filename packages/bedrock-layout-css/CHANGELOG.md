@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.5 (2022-02-03)
+
+
+### Bug Fixes
+
+* **frame:** fix bug where border-radius was not masking the image ([1a28b23](https://github.com/Bedrock-Layouts/Bedrock/commit/1a28b239d0d2b7961d9318536c1a1d1e1b1ffda8))
+
+
+
+
+
 ## [1.4.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.4.3...@bedrock-layout/bedrock-layout-css@1.4.4) (2022-01-27)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css

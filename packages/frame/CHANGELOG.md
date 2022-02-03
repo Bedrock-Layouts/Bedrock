@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.2.6...@bedrock-layout/frame@2.2.7) (2022-02-03)
+
+
+### Bug Fixes
+
+* **frame:** fix bug where border-radius was not masking the image ([1a28b23](https://github.com/Bedrock-Layouts/Bedrock/commit/1a28b239d0d2b7961d9318536c1a1d1e1b1ffda8))
+
+
+
+
+
 ## 2.2.6 (2022-01-28)
 
 **Note:** Version bump only for package @bedrock-layout/frame
