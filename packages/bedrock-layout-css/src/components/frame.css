@@ -7,10 +7,10 @@
   display: block;
   inline-size: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 [data-bedrock-frame] > * {
-  overflow: hidden;
   position: absolute;
 
   inset-block-start: 0;

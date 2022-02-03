@@ -6,13 +6,6 @@ export interface FrameProps {
   position?: string;
 }
 
-const ratioStyles = css`
-  aspect-ratio: var(--n) / var(--d);
-  @supports not (aspect-ratio: 1/1) {
-    padding-block-end: calc(var(--d) / var(--n) * 100%);
-  }
-`;
-
 export const Frame = styled.div.attrs<FrameProps>(() => {
   return {
     "data-bedrock-frame": "",
@@ -32,11 +25,16 @@ export const Frame = styled.div.attrs<FrameProps>(() => {
   display: block;
   inline-size: 100%;
   position: relative;
+  overflow: hidden;
 
-  ${(props) => props.ratio && ratioStyles}
+  ${(props) =>
+    props.ratio === undefined
+      ? ""
+      : css`
+          aspect-ratio: var(--n) / var(--d);
+        `}
 
   > * {
-    overflow: hidden;
     position: absolute;
 
     inset-block-start: 0;
