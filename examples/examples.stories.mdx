@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/';
 import { Stack } from '../packages/stack/src/';
+import { Frame } from '../packages/frame/src/';
 import { Columns, Column } from '../packages/columns/src/';
 import { Split } from '../packages/split/src/';
 import { PadBox } from '../packages/padbox/src/';
@@ -86,5 +87,23 @@ A basic form with inputs that span multiple columns. Uses the `<Stack>`, `<Colum
         </Stack>
       </Column>
     </Columns>
+  </Story>
+</Canvas>
+
+## Avatar
+
+A simple Avatar component. Uses the `<Frame>` component.
+
+<Canvas withToolbar withSource="open">
+  <Story name="Avatar">
+    <Frame
+      ratio={[1, 1]}
+      style={{ borderRadius: "50%", width: "100px", height: "100px" }}
+    >
+      <img
+        src="https://avatars.githubusercontent.com/u/5460770?v=4"
+        alt="The most handsome developer in the world: Travis Waith-Mair."
+      />
+    </Frame>
   </Story>
 </Canvas>
