@@ -3,7 +3,7 @@ export const argTypes = {
     description: "Sets the max inline size of the component",
     type: { name: "string" },
     table: {
-      type: { summary: "css length-percentage" },
+      type: { summary: "CSSLength" },
     },
     control: "text",
   },

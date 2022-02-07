@@ -2,12 +2,11 @@
 
 exports[`AppBoundary correct usage renders boundarySize 1`] = `
 .c1 {
-  --maxWidth: 1199px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {
@@ -17,12 +16,6 @@ exports[`AppBoundary correct usage renders boundarySize 1`] = `
   height: 100%;
 }
 
-@supports (max-inline-size: 1199px ) {
-  .c1 {
-    max-inline-size: var(--maxWidth,1023px);
-  }
-}
-
 <div
   className="c0"
   data-bedrock-appboundary=""
@@ -30,6 +23,11 @@ exports[`AppBoundary correct usage renders boundarySize 1`] = `
   <div
     className="c1"
     data-bedrock-center=""
+    style={
+      Object {
+        "--maxWidth": "1199px",
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -49,12 +47,11 @@ exports[`AppBoundary correct usage renders boundarySize 1`] = `
 
 exports[`AppBoundary correct usage renders default gutters 1`] = `
 .c1 {
-  --maxWidth: 1920px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {
@@ -64,12 +61,6 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
   height: 100%;
 }
 
-@supports (max-inline-size: 1920px ) {
-  .c1 {
-    max-inline-size: var(--maxWidth,1023px);
-  }
-}
-
 <div
   className="c0"
   data-bedrock-appboundary=""
@@ -77,6 +68,11 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
   <div
     className="c1"
     data-bedrock-center=""
+    style={
+      Object {
+        "--maxWidth": "1920px",
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -96,12 +92,11 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
 
 exports[`AppBoundary correct usage renders with theme overrides 1`] = `
 .c1 {
-  --maxWidth: 2400px;
   box-sizing: content-box;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: 1023px;
+  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {
@@ -111,12 +106,6 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
   height: 100%;
 }
 
-@supports (max-inline-size: 2400px ) {
-  .c1 {
-    max-inline-size: var(--maxWidth,1023px);
-  }
-}
-
 <div
   className="c0"
   data-bedrock-appboundary=""
@@ -124,6 +113,11 @@ exports[`AppBoundary correct usage renders with theme overrides 1`] = `
   <div
     className="c1"
     data-bedrock-center=""
+    style={
+      Object {
+        "--maxWidth": "2400px",
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
