@@ -70,3 +70,38 @@ describe("Size Constants", () => {
     );
   });
 });
+
+describe("checkIsCSSLength", () => {
+  it.each`
+    value                | expected
+    ${"garbage"}         | ${false}
+    ${{ value: "1rem" }} | ${false}
+    ${"px"}              | ${false}
+    ${1}                 | ${false}
+    ${"1"}               | ${false}
+    ${"em1"}             | ${false}
+    ${"1me"}             | ${false}
+    ${" "}               | ${false}
+    ${"1em"}             | ${true}
+    ${"0.25em"}          | ${true}
+    ${"11em"}            | ${true}
+    ${"110000000em"}     | ${true}
+    ${"1vmin"}           | ${true}
+    ${"1vmax"}           | ${true}
+    ${"1vh"}             | ${true}
+    ${"1vw"}             | ${true}
+    ${"1%"}              | ${true}
+    ${"1ch"}             | ${true}
+    ${"1ex"}             | ${true}
+    ${"1em"}             | ${true}
+    ${"1rem"}            | ${true}
+    ${"1in"}             | ${true}
+    ${"1cm"}             | ${true}
+    ${"1mm"}             | ${true}
+    ${"1pt"}             | ${true}
+    ${"1pc"}             | ${true}
+    ${"1px"}             | ${true}
+  `("should return correct response", ({ value, expected }) => {
+    expect(constants.checkIsCSSLength(value)).toBe(expected);
+  });
+});

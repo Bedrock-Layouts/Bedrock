@@ -1,4 +1,5 @@
 import {
+  BaseTheme,
   SpacingOptions,
   spacing as defaultSpacing,
   getSpacingValue,
@@ -27,7 +28,7 @@ type PaddingTypes =
   | [SpacingTypes, SpacingTypes, SpacingTypes, SpacingTypes];
 
 type Theme = {
-  spacing?: Record<string, string | number>;
+  spacing?: BaseTheme;
 };
 
 const validKeys = new Set([

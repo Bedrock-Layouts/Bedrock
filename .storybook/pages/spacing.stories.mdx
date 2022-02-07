@@ -49,19 +49,22 @@ If you are in a TypeScript project you will also need to override the default ty
 
 ```typescript
 import 'styled-components';
+import type { CSSLength } from "@bedrock-layout/spacing-constants";
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     space: {
       '0x': number;
-      '1x': string;
-      '3x': string;
+      '1x': CSSLength;
+      '3x': CSSLength;
     };
   }
 }
 ```
 
-It is important to note that space values can only be of type `string` or `number`. If you use any other type, the types will revert back to the default spacing types.
+It is important to note that space values can only be of type `string`, `CSSLength` or `number`. `CSSLength` is the prefered type over `string` since it will validate that your string is in the format of `${number}${length-unit}`. You can import the `CSSLength` type from the`@bedrock-layout/spacing-constants` package.
+
+**Note: If you use any other type for your space values, the types will revert back to Bedrock's default spacing types.**
 
 Through the remaining parts of this tutorial we will be sticking with the default spacing scheme defined by Bedrock Layout, but I wanted to take this short detour to show you how to incorporate your app's spacing scheme into Bedrock Layout's Primitives.
 

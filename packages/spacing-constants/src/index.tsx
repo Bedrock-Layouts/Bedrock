@@ -1,39 +1,68 @@
 import { DefaultTheme } from "styled-components";
 
+type LengthUnit =
+  | "vmin"
+  | "vmax"
+  | "vh"
+  | "vw"
+  | "%"
+  | "ch"
+  | "ex"
+  | "em"
+  | "rem"
+  | "in"
+  | "cm"
+  | "mm"
+  | "pt"
+  | "pc"
+  | "px";
+
+export type CSSLength = `${number}${LengthUnit}`;
+
+export function checkIsCSSLength(str: string): str is CSSLength {
+  if (typeof str !== "string") return false;
+
+  return /^[0-9]*\.?[0-9]+(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/.test(
+    str
+  );
+}
+
 export interface Spacing {
-  none: string;
-  xxs: string;
-  xs: string;
-  sm: string;
-  md: string;
-  mdLg: string;
-  lg: string;
-  lgXl: string;
-  xl: string;
-  xlXXl: string;
-  xxl: string;
+  none: CSSLength;
+  xxs: CSSLength;
+  xs: CSSLength;
+  sm: CSSLength;
+  md: CSSLength;
+  mdLg: CSSLength;
+  lg: CSSLength;
+  lgXl: CSSLength;
+  xl: CSSLength;
+  xlXXl: CSSLength;
+  xxl: CSSLength;
 }
 
 export interface Sizes {
-  xxsmall: string;
-  xsmall: string;
-  small: string;
-  medium: string;
-  large: string;
-  xlarge: string;
-  xxlarge: string;
+  xxsmall: CSSLength;
+  xsmall: CSSLength;
+  small: CSSLength;
+  medium: CSSLength;
+  large: CSSLength;
+  xlarge: CSSLength;
+  xxlarge: CSSLength;
 }
 
+export type BaseTheme = Record<string, CSSLength | string | number>;
+
 type ThemeOrDefaultSpace<T> = T extends {
-  space: Record<string, string | number>;
+  space: BaseTheme;
 }
   ? T["space"]
-  : T extends { spacing: Record<string, string | number> }
+  : T extends { spacing: BaseTheme }
   ? T["spacing"]
   : Spacing;
 
 type ThemeOrDefaultSizes<T> = T extends {
-  sizes: Record<string, string | number>;
+  sizes: BaseTheme;
 }
   ? T["sizes"]
   : Sizes;
@@ -53,7 +82,7 @@ const xl = "2rem";
 const xlXXl = "3rem";
 const xxl = "4rem";
 
-export const spacing: Record<string, string> = {
+export const spacing: Record<string, CSSLength> = {
   none,
   xxs,
   xs,
@@ -76,13 +105,13 @@ const xlarge = 1439;
 const xxlarge = 1920;
 
 export const sizes: Sizes = {
-  xxsmall: xxsmall + "px",
-  xsmall: xsmall + "px",
-  small: small + "px",
-  medium: medium + "px",
-  large: large + "px",
-  xlarge: xlarge + "px",
-  xxlarge: xxlarge + "px",
+  xxsmall: `${xxsmall}px`,
+  xsmall: `${xsmall}px`,
+  small: `${small}px`,
+  medium: `${medium}px`,
+  large: `${large}px`,
+  xlarge: `${xlarge}px`,
+  xxlarge: `${xxlarge}px`,
 };
 
 function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
@@ -91,34 +120,36 @@ function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
   }, {});
 }
 
-type MaybeValue = string | undefined;
+type MaybeValue = CSSLength | undefined;
 
 type GetSpacingValue = <T>(
   theme: T & {
-    spacing?: Record<string, string | number>;
-    space?: Record<string, string | number>;
+    spacing?: BaseTheme;
+    space?: BaseTheme;
   },
   spacingKey: keyof Spacing | keyof SpacingOptions
 ) => MaybeValue;
 
 export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
-  const maybeSpaceing = theme.space ?? theme.spacing;
-
-  if (!maybeSpaceing) return spacing[spacingKey];
+  const maybeSpaceingOrDefault = theme.space ?? theme.spacing ?? spacing;
 
   const safeSpacings = fromEntries(
-    Object.entries(maybeSpaceing).map(([spaceKey, value]) => [
+    Object.entries(maybeSpaceingOrDefault).map(([spaceKey, value]) => [
       spaceKey,
       typeof value === "number" ? `${value}px` : value,
     ])
   );
 
-  return safeSpacings[spacingKey];
+  const spacingVal = safeSpacings[spacingKey];
+
+  const isCSSLength = checkIsCSSLength(spacingVal);
+
+  return isCSSLength ? spacingVal : undefined;
 };
 
 type GetSizeValue = <T>(
   theme: T & {
-    sizes?: Record<string, string | number>;
+    sizes?: BaseTheme;
   },
   sizingKey: unknown
 ) => MaybeValue;
@@ -128,7 +159,7 @@ export const getSizeValue: GetSizeValue = (theme, sizeKey) => {
 
   const maybeSizesOrDefault = theme.sizes ?? sizes;
 
-  const safeSizes = fromEntries(
+  const safeSizes = fromEntries<CSSLength>(
     Object.entries(maybeSizesOrDefault).map(([sizeKey, value]) => [
       sizeKey,
       typeof value === "number" ? `${value}px` : value,
