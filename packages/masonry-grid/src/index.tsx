@@ -7,7 +7,6 @@ import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
-
 //Logic forked from is-in-browser npm package
 /* istanbul ignore next */
 const isBrowser =
@@ -76,8 +75,8 @@ export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
 MasonryGrid.displayName = "MasonryGrid";
 
 MasonryGrid.propTypes = {
+  ...Grid.propTypes,
   gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
-  minItemWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 /**

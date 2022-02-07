@@ -3,11 +3,9 @@
 exports[`MasonryGrid correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -27,15 +25,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 1`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0px",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -79,11 +77,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 1`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.0625rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -103,19 +99,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 2`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0.0625rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -159,11 +151,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 2`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.125rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -183,23 +173,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 3`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0.125rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -243,11 +225,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 3`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.25rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -267,27 +247,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 4`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0.25rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -331,11 +299,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 4`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -355,31 +321,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 5`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0.5rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -423,11 +373,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 5`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.75rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -447,35 +395,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 6`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0.75rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -519,11 +447,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 6`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -543,39 +469,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 7`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "1rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -619,11 +521,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 7`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1.5rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -643,43 +543,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 8`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "1.5rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -723,11 +595,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 8`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 2rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -747,47 +617,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 9`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "2rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -831,11 +669,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 9`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 3rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -855,51 +691,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 10`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "3rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -943,11 +743,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 10`] = `
 exports[`MasonryGrid correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 4rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -967,55 +765,15 @@ exports[`MasonryGrid correct usage renders all the gutter options 11`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-
-}
-
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "4rem",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -1059,11 +817,9 @@ exports[`MasonryGrid correct usage renders all the gutter options 11`] = `
 exports[`MasonryGrid correct usage renders custom minItemWidth 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --minItemWidth: 320px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1083,15 +839,15 @@ exports[`MasonryGrid correct usage renders custom minItemWidth 1`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 320px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "1rem",
+      "--minItemWidth": 320,
+    }
+  }
 >
   <div
     className="c2"
@@ -1135,11 +891,9 @@ exports[`MasonryGrid correct usage renders custom minItemWidth 1`] = `
 exports[`MasonryGrid correct usage renders custom minItemWidth as string 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --minItemWidth: 32rem;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1159,15 +913,15 @@ exports[`MasonryGrid correct usage renders custom minItemWidth as string 1`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 32rem ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "1rem",
+      "--minItemWidth": "32rem",
+    }
+  }
 >
   <div
     className="c2"
@@ -1211,11 +965,9 @@ exports[`MasonryGrid correct usage renders custom minItemWidth as string 1`] = `
 exports[`MasonryGrid correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1235,15 +987,15 @@ exports[`MasonryGrid correct usage renders with theme overrides 1`] = `
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "200px",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -1287,11 +1039,9 @@ exports[`MasonryGrid correct usage renders with theme overrides 1`] = `
 exports[`MasonryGrid incorrect usage renders default with console error with minItemWidth input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1311,15 +1061,17 @@ exports[`MasonryGrid incorrect usage renders default with console error with min
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "1rem",
+      "--minItemWidth": Object {
+        "value": "incorrect",
+      },
+    }
+  }
 >
   <div
     className="c2"
@@ -1363,11 +1115,9 @@ exports[`MasonryGrid incorrect usage renders default with console error with min
 exports[`MasonryGrid incorrect usage renders default with console error with no gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1387,15 +1137,15 @@ exports[`MasonryGrid incorrect usage renders default with console error with no 
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0px",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
@@ -1439,11 +1189,9 @@ exports[`MasonryGrid incorrect usage renders default with console error with no 
 exports[`MasonryGrid incorrect usage renders default with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --minItemWidth: 639px;
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat( auto-fit, minmax(min(639px,100%),1fr) );
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
 }
 
 .c0 > * {
@@ -1463,15 +1211,15 @@ exports[`MasonryGrid incorrect usage renders default with wrong gutter input 1`]
   grid-template-rows: 1px;
 }
 
-@supports (width: 639px ) {
-  .c0 {
-    grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth),100%),1fr) );
-  }
-}
-
 <div
   className="c0 c1"
   data-bedrock-masonry-grid=""
+  style={
+    Object {
+      "--gutter": "0px",
+      "--minItemWidth": undefined,
+    }
+  }
 >
   <div
     className="c2"
