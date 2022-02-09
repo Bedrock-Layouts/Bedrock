@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@2.3.0...@bedrock-layout/center@2.4.0) (2022-02-09)
+
+
+### Features
+
+* **adopt css length:** adopt CSS Length in all the Cover component for better type safety ([765bfae](https://github.com/Bedrock-Layouts/Bedrock/commit/765bfaeae14b6f86fd903b5190682c430e4abc9b))
+
+
+
+
+
 # 2.3.0 (2022-02-09)
 
 

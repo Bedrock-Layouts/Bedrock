@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.4.6...@bedrock-layout/bedrock-layout-css@1.5.0) (2022-02-09)
+
+
+### Features
+
+* **adopt css length:** adopt CSS Length in all the Cover component for better type safety ([765bfae](https://github.com/Bedrock-Layouts/Bedrock/commit/765bfaeae14b6f86fd903b5190682c430e4abc9b))
+
+
+
+
+
 ## [1.4.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.4.5...@bedrock-layout/bedrock-layout-css@1.4.6) (2022-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css
