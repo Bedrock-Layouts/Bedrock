@@ -14,13 +14,11 @@ One of the simplest and yet most common layout patterns found on the web is putt
 
 Let's take the following component design mock up as an example:
 
-<Center centerChildren>
-  <img
-    style={{ maxWidth: 800 }}
-    src={newsletter}
-    alt="Design mock of a subscribe to our newsletter component with each element stacked on top of the other"
-  />
-</Center>
+<img
+  style={{ maxWidth: "60ch" }}
+  src={newsletter}
+  alt="Design mock of a subscribe to our newsletter component with each element stacked on top of the other"
+/>
 
 In the above design we have headings, paragraphs, labels, input fields, and buttons. Though the all have their own visual styles, they are all laid out in a consistent way: stacked on top of each other with a consistent space between them.
 
@@ -83,13 +81,11 @@ export default App;
 
 Your browser should now show the following:
 
-<Center centerChildren>
-  <img
-    style={{ maxWidth: 800 }}
-    src={newsletterBefore}
-    alt="Subscribe to newletter component before adding the Stack"
-  />
-</Center>
+<img
+  style={{ maxWidth: "60ch" }}
+  src={newsletterBefore}
+  alt="Subscribe to newletter component before adding the Stack"
+/>
 
 ## Adding the Stack
 
@@ -131,13 +127,11 @@ And now your browser should show the following:
 
 Your browser should now show the following:
 
-<Center centerChildren>
-  <img
-    style={{ maxWidth: 800 }}
-    src={newsletterAfter}
-    alt="Subscribe to newletter component after adding the Stack"
-  />
-</Center>
+<img
+  style={{ maxWidth: "60ch" }}
+  src={newsletterAfter}
+  alt="Subscribe to newletter component after adding the Stack"
+/>
 
 In the above `Subscribe` component, we are taking advantage of two import parts of Bedrock Layout Primitives. The first is that all Bedrock Layout Primitives expose the polymorphic `as` prop. This prop allows us to control exactly which element is rendered on to our page. We have used the `Stack` as a `form` element, which is a container for the all the elements. We have also used the `Stack` primitive as a `label` element, to stack the input label text above its corresponding input field.
 

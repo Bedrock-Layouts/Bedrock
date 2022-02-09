@@ -14,4 +14,8 @@ module.exports = {
     "../examples/web.dev.stories.mdx",
   ],
   addons: ["@storybook/addon-essentials"],
+  framework: "@storybook/react",
+  core: {
+    builder: "webpack5",
+  },
 };

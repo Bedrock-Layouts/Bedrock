@@ -9,7 +9,6 @@ export const argTypes = {
   },
   fraction: {
     description: "Sets the fractional split",
-    defaultValue: "1/2",
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "1/2" },

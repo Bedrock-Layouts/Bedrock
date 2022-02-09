@@ -30,7 +30,6 @@ export const columnsArgTypes = {
   },
   dense: {
     description: "Toggle for is the layout should use a dense layout or not",
-    defaultValue: false,
     type: { name: "boolean" },
     table: {
       type: { summary: "boolean" },

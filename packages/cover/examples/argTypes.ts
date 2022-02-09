@@ -23,7 +23,6 @@ export const argTypes = {
   minHeight: {
     description: "Sets the minimum block size of the component",
     type: { name: "string" },
-    defaultValue: "100vh",
     table: {
       type: { summary: "css length-percentage" },
       defaultValue: { summary: "100vh" },
@@ -33,7 +32,6 @@ export const argTypes = {
   top: {
     description: "renders an React Node before the children",
     type: { name: "React Node" },
-    defaultValue: "100vh",
     table: {
       type: { summary: "React Node" },
     },
@@ -41,7 +39,6 @@ export const argTypes = {
   bottom: {
     description: "renders an React Node after the children",
     type: { name: "React Node" },
-    defaultValue: "100vh",
     table: {
       type: { summary: "React Node" },
     },
