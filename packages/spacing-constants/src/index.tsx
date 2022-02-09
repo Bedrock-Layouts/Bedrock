@@ -22,7 +22,7 @@ export type CSSLength = `${number}${LengthUnit}`;
 export function checkIsCSSLength(str: string): str is CSSLength {
   if (typeof str !== "string") return false;
 
-  return /^[0-9]*\.?[0-9]+(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/.test(
+  return /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/.test(
     str
   );
 }
