@@ -101,6 +101,10 @@ describe("checkIsCSSLength", () => {
     ${"1pt"}             | ${true}
     ${"1pc"}             | ${true}
     ${"1px"}             | ${true}
+    ${"var(--yellow)"}   | ${true}
+    ${"var(--x)"}        | ${true}
+    ${"var(--)"}         | ${false}
+    ${"var(--1)"}        | ${false}
   `("should return correct response", ({ value, expected }) => {
     expect(constants.checkIsCSSLength(value)).toBe(expected);
   });
