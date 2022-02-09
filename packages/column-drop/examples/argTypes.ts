@@ -24,7 +24,7 @@ export const argTypes = {
     description: "Sets the basis of each of the children",
     type: { name: "string" },
     table: {
-      type: { summary: "css length-percentage" },
+      type: { summary: "CSSLength" },
     },
     control: "text",
   },

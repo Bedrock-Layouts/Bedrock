@@ -1,6 +1,8 @@
 import {
+  CSSLength,
   SizesOptions,
   SpacingOptions,
+  checkIsCSSLength,
   getSizeValue,
   getSpacingValue,
   sizes,
@@ -8,7 +10,7 @@ import {
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-type Basis = string | number | SizesOptions;
+type Basis = CSSLength | number | SizesOptions;
 
 export interface ColumnDropProps {
   gutter: keyof SpacingOptions;
@@ -16,19 +18,27 @@ export interface ColumnDropProps {
   noStretchedColumns?: boolean;
 }
 
+function getSafeBasis<T extends Record<string, unknown>>(
+  theme: T,
+  basis?: Basis
+) {
+  if (typeof basis === "number") return `${basis}px`;
+  if (checkIsCSSLength(basis as string)) return basis;
+  return getSizeValue(theme, basis as string);
+}
+
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
   ({ gutter, theme, style = {}, basis, noStretchedColumns = false }) => {
     const maybeGutter = getSpacingValue(theme, gutter);
-    const gutterValue = maybeGutter ?? "0px";
 
     const attributeValue =
       noStretchedColumns === true ? "no-stretched-columns" : "";
 
-    const safeBasis = getSizeValue(theme, basis) ?? basis ?? sizes.xxsmall;
+    const safeBasis = getSafeBasis(theme, basis);
 
     return {
       "data-bedrock-column-drop": attributeValue,
-      style: { ...style, "--gutter": gutterValue, "--basis": safeBasis },
+      style: { ...style, "--gutter": maybeGutter, "--basis": safeBasis },
     };
   }
 )<ColumnDropProps>`
@@ -54,13 +64,29 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
 `;
 
 ColumnDrop.displayName = "ColumnDrop";
 
+function validateBasis({ basis }: ColumnDropProps, propName: string) {
+  if (basis === undefined) return;
+
+  const isValid =
+    typeof basis === "number" ||
+    checkIsCSSLength(basis as string) ||
+    Object.keys(sizes).includes(basis as string);
+
+  if (!isValid) {
+    console.error(
+      `${propName} needs to be an number, CSSLength or SizesOptions`
+    );
+  }
+  return;
+}
+
 ColumnDrop.propTypes = {
   gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
-  basis: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  basis: validateBasis as unknown as React.Validator<Basis>,
   noStretchedColumns: PropTypes.bool,
 };

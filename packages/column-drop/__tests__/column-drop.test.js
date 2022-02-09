@@ -141,5 +141,18 @@ describe("ColumnDrop", () => {
       expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
+
+    it("renders default with console error with an invalid CSS String", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <ColumnDrop gutter="lg" basis="garbage">
+          <Lorem />
+        </ColumnDrop>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
   });
 });
