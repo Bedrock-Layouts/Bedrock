@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.6.0...@bedrock-layout/spacing-constants@2.7.0) (2022-02-09)
+
+
+### Features
+
+* **spaceing-constants:** add update to CSSlength to allow CSS custom properties ([b9e9849](https://github.com/Bedrock-Layouts/Bedrock/commit/b9e9849dc3db0e695c17c14c99545e96a87ebe61))
+
+
+
+
+
 # 2.6.0 (2022-02-09)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@1.2.2...@bedrock-layout/column-drop@1.3.0) (2022-02-09)
+
+
+### Features
+
+* **column-drop:** adopt CSSLength instead of string for the Basis type ([c603056](https://github.com/Bedrock-Layouts/Bedrock/commit/c6030560f984787e81e6eec51f982f9d22467eb1))
+
+
+
+
+
 ## 1.2.2 (2022-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/column-drop
