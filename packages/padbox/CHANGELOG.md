@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2022-02-09)
+
+
+### Features
+
+* **spacing-option:** add CSSLength type checking ([b08e2cc](https://github.com/Bedrock-Layouts/Bedrock/commit/b08e2cc959aeeb6f3c4e0f68cd904e5a51eab8db))
+
+
+
+
+
 ## 2.1.6 (2022-01-28)
 
 **Note:** Version bump only for package @bedrock-layout/padbox

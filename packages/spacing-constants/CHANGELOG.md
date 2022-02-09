@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.6.0 (2022-02-09)
+
+
+### Bug Fixes
+
+* **spaceing-constants:** fix regex bug ([bc1246d](https://github.com/Bedrock-Layouts/Bedrock/commit/bc1246d2c9e5202943473b34132d6794381f6216))
+
+
+### Features
+
+* **spacing-option:** add CSSLength type checking ([b08e2cc](https://github.com/Bedrock-Layouts/Bedrock/commit/b08e2cc959aeeb6f3c4e0f68cd904e5a51eab8db))
+
+
+
+
+
 ## 2.5.1 (2021-11-18)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

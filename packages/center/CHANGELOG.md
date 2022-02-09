@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2022-02-09)
+
+
+### Features
+
+* **center:** adopt CSSLength in center ([dccb9d8](https://github.com/Bedrock-Layouts/Bedrock/commit/dccb9d8598c3fe0a8e2942be3b23ad275dd6336e))
+
+
+
+
+
 ## 2.2.6 (2022-01-28)
 
 **Note:** Version bump only for package @bedrock-layout/center
