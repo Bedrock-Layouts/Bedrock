@@ -118,3 +118,62 @@ This will ensure space between the elements if the content is larger than the `-
     </div>
   </Story>
 </Canvas>
+
+## --minHeight
+
+The `--minHeight` custom property can be used to set the minimum height of the cover. The default is `100vh`.
+
+(The below example, the `--minHeight` prop is set to `500px` and the `--gutter` prop is set to `2rem`)
+
+<Canvas withToolbar withSource="open">
+  <Story name="--minHeight">
+    <div
+      data-bedrock-cover
+      style={{
+        "--gutter": "2rem",
+        "--minHeight": "500px",
+        border: "1px solid black",
+      }}
+    >
+      <span>I am on top.</span>
+      <div data-bedrock-cover-centered>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>
+
+## stretch-content
+
+Setting the `stretch-content` prop on the `data-bedrock-cover` attribute will stretch the centered content to fill the remaining height of the cover.
+
+(The below example, the `--minHeight` prop is set to `50vh` and the `--gutter` prop is set to `2rem`)
+
+<Canvas withToolbar withSource="open">
+  <Story name="stretch-content">
+    <div
+      data-bedrock-cover="stretch-content"
+      style={{
+        "--gutter": "2rem",
+        "--minHeight": "500px",
+        border: "1px solid black",
+      }}
+    >
+      <span>I am on top.</span>
+      <div
+        data-bedrock-cover-centered
+        style={{ background: "rgba(0,0,0,0.85)", color: "white" }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>

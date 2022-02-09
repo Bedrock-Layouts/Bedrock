@@ -94,21 +94,23 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
 
 ## Holy grail layout
 
-Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the `<Stack>` and `<Inline>` components.
+Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the `<Cover>` and `<Inline>` components.
 
 <Canvas withToolbar withSource="open">
   <Story name="Holy grail layout">
-    <Stack gutter="sm">
-      <Box as="header">Header</Box>
+    <Cover
+      gutter="sm"
+      stretchContent
+      minHeight="50vh"
+      top={<Box as="header">Header</Box>}
+      bottom={<Box as="footer">Footer</Box>}
+    >
       <Inline align="stretch" gutter="sm" stretch={1}>
         <Box>Left Sidebar</Box>
-        <Box as="main" style={{ minHeight: "50vh" }}>
-          Main Content
-        </Box>
+        <Box as="main">Main Content</Box>
         <Box>Right Sidebar</Box>
       </Inline>
-      <Box as="footer">Footer</Box>
-    </Stack>
+    </Cover>
   </Story>
 </Canvas>
 
@@ -171,17 +173,21 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 ## Pancake stack
 
-Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the `<Stack>` component.
+Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the `<Cover>` component.
 
 <Canvas withToolbar withSource="open">
   <Story name="Pancake stack">
-    <Stack gutter="md" x>
-      <Box as="header">Header</Box>
+    <Cover
+      minHeight="25vh"
+      stretchContent
+      gutter="md"
+      top={<Box as="header">Header</Box>}
+      bottom={<Box as="footer">Footer Content</Box>}
+    >
       <Box as="main" style={{ minHeight: "25vh" }}>
         Main
       </Box>
-      <Box as="footer">Footer Content</Box>
-    </Stack>
+    </Cover>
   </Story>
 </Canvas>
 

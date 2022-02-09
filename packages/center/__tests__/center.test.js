@@ -54,15 +54,6 @@ describe("Center", () => {
       expect(center.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default width if invalid CSS length", () => {
-      const center = create(
-        <Center maxWidth="320pixels">
-          <Lorem />
-        </Center>
-      );
-      expect(center.toJSON()).toMatchSnapshot();
-    });
-
     it("renders with centered text", () => {
       const center = create(
         <Center centerText>
@@ -100,6 +91,15 @@ describe("Center", () => {
     });
     afterEach(() => {
       console.error.mockRestore();
+    });
+
+    it("renders default width if invalid CSS length", () => {
+      const center = create(
+        <Center maxWidth="320pixels">
+          <Lorem />
+        </Center>
+      );
+      expect(center.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with no children", () => {

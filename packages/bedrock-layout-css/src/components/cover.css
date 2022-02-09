@@ -30,3 +30,13 @@
   margin-block-start: auto;
   margin-block-end: auto;
 }
+
+[data-bedrock-cover="stretch-content"] > [data-bedrock-cover-centered] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+[data-bedrock-cover="stretch-content"] > [data-bedrock-cover-centered] > * {
+  flex: 1;
+}

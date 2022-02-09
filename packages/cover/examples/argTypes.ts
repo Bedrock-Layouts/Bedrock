@@ -24,23 +24,23 @@ export const argTypes = {
     description: "Sets the minimum block size of the component",
     type: { name: "string" },
     table: {
-      type: { summary: "css length-percentage" },
+      type: { summary: "CSSLength" },
       defaultValue: { summary: "100vh" },
     },
     control: "text",
   },
   top: {
     description: "renders an React Node before the children",
-    type: { name: "React Node" },
+    type: { name: "ReactNode" },
     table: {
-      type: { summary: "React Node" },
+      type: { summary: "ReactNode" },
     },
   },
   bottom: {
     description: "renders an React Node after the children",
-    type: { name: "React Node" },
+    type: { name: "ReactNode" },
     table: {
-      type: { summary: "React Node" },
+      type: { summary: "ReactNode" },
     },
   },
 };

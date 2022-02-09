@@ -1,4 +1,4 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { sizes, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
@@ -79,10 +79,37 @@ describe("Cover", () => {
       });
     });
 
-    it("renders all the padding options", () => {
-      Object.keys(spacing).forEach((padding) => {
+    it("renders with custom minHeight as string", () => {
+      const cover = create(
+        <Cover gutter="lg" minHeight="50vh">
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with custom minHeight as custom property", () => {
+      const cover = create(
+        <Cover gutter="lg" minHeight="var(--size-xl)">
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with custom minHeight as number", () => {
+      const cover = create(
+        <Cover gutter="lg" minHeight={300}>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with minHeight as a size property", () => {
+      Object.keys(sizes).forEach((size) => {
         const cover = create(
-          <Cover gutter="lg" padding={padding}>
+          <Cover gutter="lg" minHeight={size}>
             <Lorem />
           </Cover>
         );
@@ -90,40 +117,13 @@ describe("Cover", () => {
       });
     });
 
-    it("use 1, 2, 3, 4 items arrays", () => {
-      [
-        ["md"],
-        ["md", "lg"],
-        ["md", "lg", "xs"],
-        ["md", "lg", "xs", "sm"],
-      ].forEach((padding) => {
-        const cover = create(
-          <Cover gutter="lg" padding={padding}>
-            <Lorem />
-          </Cover>
-        );
-        expect(cover.toJSON()).toMatchSnapshot();
-      });
-    });
-
-    it("use padding object", () => {
-      [
-        { left: "md" },
-        { right: "md" },
-        { top: "md" },
-        { bottom: "md" },
-        { inlineStart: "md" },
-        { inlineEnd: "md" },
-        { blockStart: "md" },
-        { blockEnd: "md" },
-      ].forEach((padding) => {
-        const cover = create(
-          <Cover gutter="lg" padding={padding}>
-            <Lorem />
-          </Cover>
-        );
-        expect(cover.toJSON()).toMatchSnapshot();
-      });
+    it("renders with stretched content", () => {
+      const cover = create(
+        <Cover gutter="lg" stretchContent>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
     });
 
     it("renders with theme overrides", () => {
@@ -178,7 +178,17 @@ describe("Cover", () => {
           <Lorem />
         </Cover>
       );
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
 
+    it("renders without stretched conent with invalid stretchContent prop", () => {
+      const errorStack = create(
+        <Cover gutter="lg" stretchContent="incorrect">
+          <Lorem />
+        </Cover>
+      );
+      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

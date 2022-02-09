@@ -103,6 +103,51 @@ Both the `top` and `bottom` props can be used to render a top and bottom section
   </Story>
 </Canvas>
 
+## minHeight
+
+The `minHeight` prop can be used to set the minimum height of the cover. The default is `100vh`.
+
+<Canvas withToolbar withSource="open">
+  <Story name="minHeight">
+    <Cover
+      minHeight="500px"
+      gutter="sm"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Canvas>
+
+## stretchContent
+
+The `stretchContent` prop can be used to stretch the content to the full height of the `Cover` component. If there is a top or bottom section, the content will fill the remaining vertical space.
+
+<Canvas withToolbar withSource="open">
+  <Story name="stretchContent">
+    <Cover
+      minHeight="50vh"
+      gutter="sm"
+      stretchContent
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div style={{ border: "1px solid black" }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
+        architecto doloribus aperiam sapiente, incidunt nihil suscipit
+        voluptatibus tempore est dolor! Iusto, vero.
+      </div>
+    </Cover>
+  </Story>
+</Canvas>
+
 ## data-attribute
 
 For styling purposes, you can select the outer wrapper with the `data-bedrock-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in elements with a data attributes of `data-bedrock-cover-top`, `data-bedrock-cover-centered`, and `data-bedrock-cover-bottom` respectively.
