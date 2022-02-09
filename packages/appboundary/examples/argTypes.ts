@@ -6,7 +6,6 @@ export const argTypes = {
       type: { summary: "string" },
     },
     control: "select",
-    defaultValue: "xxlarge",
     options: [
       "xxsmall",
       "xsmall",

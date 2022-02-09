@@ -1,12 +1,14 @@
 import {
+  CSSLength,
   SizesOptions,
+  checkIsCSSLength,
   getSizeValue,
   sizes,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-type MaxWidth = number | string | SizesOptions;
+type MaxWidth = number | CSSLength | SizesOptions;
 
 export interface CenterProps {
   maxWidth?: MaxWidth;
@@ -14,16 +16,8 @@ export interface CenterProps {
   centerChildren?: boolean;
 }
 
-function getSafeMaxWidth(maxWidth?: MaxWidth) {
-  if (typeof maxWidth === "string") {
-    return maxWidth;
-  }
-
-  return typeof maxWidth === "number" ? `${maxWidth}px` : sizes.medium;
-}
-
 export const Center = styled.div.attrs<CenterProps>(
-  ({ centerChildren, centerText }) => {
+  ({ centerChildren, centerText, maxWidth, theme, style }) => {
     const centerProps = [
       centerText && "center-text",
       centerChildren && "center-children",
@@ -33,16 +27,18 @@ export const Center = styled.div.attrs<CenterProps>(
 
     return {
       "data-bedrock-center": centerProps,
+      style: {
+        ...style,
+        "--maxWidth": getSizeValue(theme, maxWidth) ?? maxWidth,
+      },
     };
   }
 )<CenterProps>`
   @property --maxWidth {
     syntax: "<length-percentage>";
     inherits: false;
-    initial-value: ${sizes.medium};
+    initial-value: 100%;
   }
-  --maxWidth: ${({ maxWidth, theme }) =>
-    getSafeMaxWidth(getSizeValue(theme, maxWidth) ?? maxWidth)};
 
   box-sizing: content-box;
 
@@ -50,15 +46,7 @@ export const Center = styled.div.attrs<CenterProps>(
   margin-inline-end: auto;
   margin-inline: auto;
 
-  max-inline-size: ${sizes.medium};
-
-  @supports (
-    max-inline-size:
-      ${({ maxWidth, theme }) =>
-        getSafeMaxWidth(getSizeValue(theme, maxWidth) ?? maxWidth)}
-  ) {
-    max-inline-size: var(--maxWidth, ${sizes.medium});
-  }
+  max-inline-size: var(--maxWidth, 100%);
 
   ${(props) =>
     props.centerChildren &&
@@ -71,8 +59,24 @@ export const Center = styled.div.attrs<CenterProps>(
 
 Center.displayName = "Center";
 
+function validateMaxWidth({ maxWidth }: CenterProps, propName: string) {
+  if (maxWidth === undefined) return undefined;
+
+  const isValid =
+    typeof maxWidth === "number" ||
+    checkIsCSSLength(maxWidth as string) ||
+    Object.keys(sizes).includes(maxWidth as string);
+
+  if (!isValid) {
+    console.error(
+      `${propName} needs to be an number, CSSLength or SizesOptions`
+    );
+  }
+  return undefined;
+}
+
 Center.propTypes = {
-  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  maxWidth: validateMaxWidth as unknown as React.Validator<MaxWidth>,
   centerText: PropTypes.bool,
   centerChildren: PropTypes.bool,
 };

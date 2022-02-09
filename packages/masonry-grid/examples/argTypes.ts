@@ -3,7 +3,7 @@ export const argTypes = {
     description: "Sets space between each element",
     type: { name: "string", required: true },
     table: {
-      type: { summary: "string" },
+      type: { summary: "SpacingOptions" },
     },
     control: "select",
     options: [
@@ -22,7 +22,7 @@ export const argTypes = {
   },
   minItemWidth: {
     description: "Sets the min inline size of each of the children",
-    type: { name: "string" },
+    type: { name: "CSSLength" },
     table: {
       type: { summary: "css length-percentage" },
     },

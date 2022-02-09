@@ -52,7 +52,6 @@ export const argTypes = {
   },
   snapType: {
     description: "Sets the scroll snap type",
-    defaultValue: "none",
     type: { name: "string" },
     table: {
       type: { summary: "string" },
