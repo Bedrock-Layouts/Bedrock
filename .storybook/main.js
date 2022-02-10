@@ -8,7 +8,7 @@ module.exports = {
     "./pages/menu.stories.mdx",
     "./pages/hero.stories.mdx",
     "./pages/new-arrivals.stories.mdx",
-    "../packages/**/examples/*.stories.(js|ts|tsx|mdx)",
+    "../packages/**/examples/*.stories.@(js|ts|tsx|mdx)",
     "./pages/contributing.stories.mdx",
     "../examples/examples.stories.mdx",
     "../examples/web.dev.stories.mdx",
@@ -18,4 +18,5 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  staticDirs: ["../public"],
 };

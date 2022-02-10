@@ -12,7 +12,7 @@
   "author": "Jarvis1010 <travis.mair@gmail.com>",
   "homepage": "https://bedrock-layout.dev/",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook -s ./public",
+    "start": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --notify",
