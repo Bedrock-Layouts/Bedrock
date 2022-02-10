@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Controls } from '@storybook/addon-docs/';
+
+<Meta title="Primitives/A single package" />
+
+# A Single Package of All The Primitives
+
+Each of the primitives are independantly versioned and installable. There are many benefits to doing this, but it is also nice to have a single install point if you know that you will be using all or most of the primitives.
+
+The `@bedrock-layout/primitives` package includes all the primitives, hooks, and spacing-contants utilities in a single package as named exports.
+
+## How to install
+
+`npm install @bedrock-layout/primitives`
+
+or
+
+`yarn add @bedrock-laylock/primitives`
+
+---
+
+## Usage
+
+```javascript
+import { Stack, Inline, Split, Cover, Frame } from '@bedrock-layout/primitives';
+
+export function Hero() {
+  return (
+    <Stack>
+      <Inline>{/* */}</Inline>
+      <Split>
+        <Cover>
+          <Stack>
+            <h1>{/* */}</h1>
+            <p>{/* */}</p>
+            <Inline>
+              <button>{/* */}</button>
+              <button>{/* */}</button>
+            </Inline>
+          </Stack>
+        </Cover>
+        <Frame>
+          <img />
+        </Frame>
+      </Split>
+    </Stack>
+  );
+}
+```

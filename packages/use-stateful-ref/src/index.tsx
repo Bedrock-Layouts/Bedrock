@@ -1,6 +1,6 @@
 import React from "react";
 
-function useStatefulRef<T>(initialVal = null) {
+function useStatefulRef<T>(initialVal = null): React.MutableRefObject<T> {
   // eslint-disable-next-line prefer-const
   let [cur, setCur] = React.useState<T | null>(initialVal);
 
