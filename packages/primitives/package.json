@@ -1,0 +1,86 @@
+{
+  "name": "@bedrock-layout/primitives",
+  "version": "1.0.0",
+  "description": "bedrock-layout primitives",
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "primitives",
+    "layout",
+    "bedrock",
+    "bedrock-layout",
+    "bedrock-layout-primitives",
+    "composition",
+    "react"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "homepage": "https://bedrock-layout.dev/",
+  "license": "MIT",
+  "unpkg": "lib/index.umd.js",
+  "main": "lib/index.umd.js",
+  "umd:main": "lib/index.umd.js",
+  "module": "lib/index.m.js",
+  "source": "src/index.tsx",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.m.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@bedrock-layout/appboundary": "^2.1.0",
+    "@bedrock-layout/center": "^2.1.0",
+    "@bedrock-layout/column-drop": "^1.0.0",
+    "@bedrock-layout/columns": "^2.1.15",
+    "@bedrock-layout/cover": "^2.0.13",
+    "@bedrock-layout/css-reset": "^1.0.15",
+    "@bedrock-layout/frame": "^2.1.14",
+    "@bedrock-layout/grid": "^2.1.0",
+    "@bedrock-layout/inline": "^2.0.16",
+    "@bedrock-layout/inline-cluster": "^2.0.13",
+    "@bedrock-layout/masonry-grid": "^2.1.0",
+    "@bedrock-layout/padbox": "^2.0.13",
+    "@bedrock-layout/reel": "^1.0.1",
+    "@bedrock-layout/spacing-constants": "^2.3.0",
+    "@bedrock-layout/split": "^2.1.16",
+    "@bedrock-layout/stack": "^2.1.9",
+    "@bedrock-layout/type-utils": "^0.0.12",
+    "@bedrock-layout/use-container-query": "^1.2.6",
+    "@bedrock-layout/use-forwarded-ref": "^1.1.8",
+    "@bedrock-layout/use-resize-observer": "^1.0.0",
+    "@bedrock-layout/use-stateful-ref": "^1.1.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17",
+    "styled-components": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "clean:build": "rimraf lib",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
+    "fix-format": "yarn prettier -- --write",
+    "check-format": "yarn prettier -- --list-different",
+    "check-types": "tsc --noEmit"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Bedrock/issues"
+  },
+  "gitHead": "1ac6f1bbee09a2fae8ca4fd3b3a2b1086b3b64ec"
+}

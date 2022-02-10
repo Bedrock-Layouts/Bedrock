@@ -11,6 +11,7 @@ export const parameters = {
         "Getting Started",
         "Spacer Components",
         "Wrapper Components",
+        "Primitives",
         "CSS Only",
         ["A CSS Only Version", "reset.css", "spacing-properties.css"],
         "Hooks",
