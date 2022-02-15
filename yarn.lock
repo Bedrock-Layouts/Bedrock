@@ -13046,7 +13046,7 @@ postcss@^7.0.14, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.15, postcss@^8.4.5, postcss@^8.4.6:
+postcss@^8.2.15, postcss@^8.4.6:
   version "8.4.6"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
   integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
@@ -15936,12 +15936,12 @@ vfile@^4.0.0:
     vfile-message "^2.0.0"
 
 vite@^2.6.13:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.0.tgz#0646ab9eee805fb24b667889644ac04bc516d0d3"
-  integrity sha512-ed5rjyeysttuPJX/aKSA0gTB/8ZKLM5xF6FtEuKy1B9DiQbDNFMVMQxnb9JesgBPUMMIJxC8w5KZ/KNWLKFXoA==
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.2.tgz#6bced4a0a8b0db24636f5159c3f371c156521a58"
+  integrity sha512-zawfykcPVPYva4KusIWORNLr324Qx86/3NpfQSIOJdjnL5pYhwDoImLYMOh4lFLcP/7//tNuWM2vx2F5OSVC9w==
   dependencies:
     esbuild "^0.14.14"
-    postcss "^8.4.5"
+    postcss "^8.4.6"
     resolve "^1.22.0"
     rollup "^2.59.0"
   optionalDependencies:
