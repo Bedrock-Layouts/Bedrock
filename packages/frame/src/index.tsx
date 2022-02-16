@@ -15,7 +15,7 @@ function checkIsRatio(ratio: unknown): ratio is Ratio {
     Array.isArray(ratio) && ratio.length === 2 && ratio.every(Number.isFinite);
   return (
     isCorrectArray ||
-    (typeof ratio === "string" && /^\d{1,1000}\\\d{1,1000}$/.test(ratio))
+    (typeof ratio === "string" && /^\d{1,1000}\/\d{1,1000}$/.test(ratio))
   );
 }
 
