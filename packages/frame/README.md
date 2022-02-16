@@ -42,7 +42,8 @@ For styling purposes, you can select `data-bedrock-frame`.
 
 ## API
 
-| Property | Description                                                                                                                   | Type               | Default           |
-| :------: | :---------------------------------------------------------------------------------------------------------------------------: | :----------------: | :---------------: |
-| ratio    | Aspect ratio that you want the child element to maintain                                                                      | `[number, number]` | medium breakpoint |
-| position | Alignment of the child element. Use [object-position value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) | string             | `50%`             |
+∏
+| Property | Description | Type | Default |
+| :------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------: | :-------------------: | ----------------- |
+| ratio | Aspect ratio that you want the child element to maintain | `[number, number] | ${number}/${number}` | medium breakpoint |
+| position | Alignment of the child element. Use [object-position value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) | string | `50%` |

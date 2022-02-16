@@ -1,38 +1,50 @@
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+
+type Ratio = [number, number] | `${number}/${number}`;
 
 export interface FrameProps {
-  ratio?: [number, number];
+  ratio?: Ratio;
   position?: string;
 }
 
-export const Frame = styled.div.attrs<FrameProps>(() => {
+type RatioString = `${number}/${number}`;
+
+function checkIsRatio(ratio: unknown): ratio is Ratio {
+  const isCorrectArray =
+    Array.isArray(ratio) && ratio.length === 2 && ratio.every(Number.isFinite);
+  return (
+    isCorrectArray ||
+    (typeof ratio === "string" && /^\d{1,1000}\/\d{1,1000}$/.test(ratio))
+  );
+}
+
+function getRatioString(ratio: Ratio): RatioString {
+  return Array.isArray(ratio) ? (ratio.join("/") as RatioString) : ratio;
+}
+
+function getSafeRatio(ratio: unknown): RatioString | undefined {
+  const isRatio = checkIsRatio(ratio);
+
+  return isRatio ? getRatioString(ratio) : undefined;
+}
+
+export const Frame = styled.div.attrs<FrameProps>(({ ratio, style }) => {
+  const safeRatio = getSafeRatio(ratio);
   return {
     "data-bedrock-frame": "",
+    style: { ...style, "--ratio": safeRatio },
   };
 })<FrameProps>`
-  --n: ${(props) =>
-    props.ratio && props.ratio[0] && Number.isInteger(props.ratio[0])
-      ? props.ratio[0]
-      : 1};
-
-  --d: ${(props) =>
-    props.ratio && props.ratio[1] && Number.isInteger(props.ratio[1])
-      ? props.ratio[1]
-      : 1};
-
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
 
-  ${(props) =>
-    props.ratio === undefined
-      ? ""
-      : css`
-          aspect-ratio: var(--n) / var(--d);
-        `}
+  &[style*="--ratio"] {
+    aspect-ratio: var(--ratio);
+  }
 
   > * {
     position: absolute;
@@ -63,22 +75,18 @@ export const Frame = styled.div.attrs<FrameProps>(() => {
 
 Frame.displayName = "Frame";
 
-type TwoNumbers = (props: FrameProps, propName: string) => Error | undefined;
-
-const twoNumbers: TwoNumbers = ({ ratio }, propName) => {
+function validateIsArray({ ratio }: FrameProps, propName: string) {
   if (ratio === undefined) return undefined;
-  if (
-    !Array.isArray(ratio) ||
-    ratio.length !== 2 ||
-    !ratio.every(Number.isInteger)
-  ) {
-    console.error(`${propName} needs to be an array of two numbers`);
+  const isRatio = checkIsRatio(ratio);
+  if (!isRatio) {
+    console.error(
+      `${propName} needs to be an array of two numbers or a string in the form of "width/height"`
+    );
   }
   return undefined;
-};
+}
 
 Frame.propTypes = {
-  //It's valid propType but can't get the type of Validator<[number, number]> to work
-  ratio: twoNumbers as unknown as React.Validator<[number, number]>,
+  ratio: validateIsArray as unknown as React.Validator<Ratio>,
   position: PropTypes.string,
 };

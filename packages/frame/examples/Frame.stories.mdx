@@ -25,14 +25,28 @@ yarn add @bedrock-layout/frame
 
 <ArgsTable story="API" />
 
-## ratio
+## ratio as string
 
-The `ratio` prop takes an array of two numbers, which prepresent the ratio of width to height of the desired aspect ratio.
+The `ratio` prop takes a string the is in the format of `${number}/${number}`, which represents the ratio of width to height of the desired aspect ratio.
+
+In the example below, the frame will maintain a 16:9 aspect ratio and will crop the image to fit.
+
+<Canvas withToolbar withSource="open">
+  <Story name="ratio as string">
+    <Frame ratio="16/9">
+      <img src={imgSrc} alt="computer with data" />
+    </Frame>
+  </Story>
+</Canvas>
+
+## ratio as array
+
+The `ratio` prop can also take an array of two numbers, which represent the ratio of width to height of the desired aspect ratio.
 
 In the example below, the frame will maintain a 4:3 aspect ratio and will crop the image to fit.
 
 <Canvas withToolbar withSource="open">
-  <Story name="ratio">
+  <Story name="ratio as array">
     <Frame ratio={[4, 3]}>
       <img src={imgSrc} alt="computer with data" />
     </Frame>

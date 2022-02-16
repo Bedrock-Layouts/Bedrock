@@ -294,23 +294,15 @@ Object {
       "isStatic": false,
       "rules": Array [
         "
-  --n: ",
-        [Function],
-        ";
-
-  --d: ",
-        [Function],
-        ";
-
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
 
-  ",
-        [Function],
-        "
+  &[style*=\\"--ratio\\"] {
+    aspect-ratio: var(--ratio);
+  }
 
   > * {
     position: absolute;

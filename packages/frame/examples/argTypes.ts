@@ -3,7 +3,8 @@ export const argTypes = {
     description: "Aspect ratio that you want the child element to maintain",
     type: { name: "[number, number]" },
     table: {
-      type: { summary: "[number, number]" },
+      // eslint-disable-next-line no-template-curly-in-string
+      type: { summary: "[number, number] | `${number}/${number}`" },
     },
     control: "array",
   },
