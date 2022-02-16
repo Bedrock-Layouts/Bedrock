@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2022-02-16)
+
+
+### Bug Fixes
+
+* **frame:** fix bug in regex ([97b2fca](https://github.com/Bedrock-Layouts/Bedrock/commit/97b2fca451d3c67cbe6b40a3e1e5fe798a2ba320))
+
+
+### Features
+
+* **frame:** allow ratio string in `ratio` prop ([e6d37b1](https://github.com/Bedrock-Layouts/Bedrock/commit/e6d37b165702ac8f27e021644afa29b6e7797cc7))
+
+
+
+
+
 ## [2.2.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.2.8...@bedrock-layout/frame@2.2.9) (2022-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/frame
