@@ -9,9 +9,18 @@ describe("Frame", () => {
       expect(Frame).toBeTruthy();
     });
 
-    it("renders with ratio", () => {
+    it("renders with ratio as an array", () => {
       const frame = create(
         <Frame ratio={[16, 9]}>
+          <img src="https://picsum.photos/5000" alt="random thing" />
+        </Frame>
+      );
+      expect(frame.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with ratio as a string", () => {
+      const frame = create(
+        <Frame ratio="16/9">
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>
       );
@@ -59,7 +68,7 @@ describe("Frame", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders ratio of 1:1 with error if ratio is not an array", () => {
+    it("renders without ratio if ratio is not correct type", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -72,7 +81,7 @@ describe("Frame", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("falls back to 1 with error if array of length <1 provided", () => {
+    it("renders without ratio with error if array of length <1 provided", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -85,7 +94,7 @@ describe("Frame", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("falls back to 1 with error if array of length >2 provided", () => {
+    it("renders without ratio with error if array of length >2 provided", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
@@ -98,11 +107,24 @@ describe("Frame", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("falls back to 1 with error if array of not numbers provided", () => {
+    it("renders without ratio with error if array of not numbers provided", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
         <Frame ratio={["16", "9"]}>
+          <img src="https://picsum.photos/5000" alt="random thing" />
+        </Frame>
+      );
+
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders without ratio with error if ratio string is not correct format", () => {
+      expect(console.error).not.toBeCalled();
+
+      const errorStack = create(
+        <Frame ratio="16:9">
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>
       );

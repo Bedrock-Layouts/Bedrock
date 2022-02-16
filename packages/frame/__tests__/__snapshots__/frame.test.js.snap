@@ -2,14 +2,15 @@
 
 exports[`Frame correct usage renders custom position 1`] = `
 .c0 {
-  --n: 16;
-  --d: 9;
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
 }
 
 .c0 > * {
@@ -51,6 +52,11 @@ exports[`Frame correct usage renders custom position 1`] = `
 <div
   className="c0"
   data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": "16/9",
+    }
+  }
 >
   <img
     alt="random thing"
@@ -59,16 +65,17 @@ exports[`Frame correct usage renders custom position 1`] = `
 </div>
 `;
 
-exports[`Frame correct usage renders with ratio 1`] = `
+exports[`Frame correct usage renders with ratio as a string 1`] = `
 .c0 {
-  --n: 16;
-  --d: 9;
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
 }
 
 .c0 > * {
@@ -110,6 +117,76 @@ exports[`Frame correct usage renders with ratio 1`] = `
 <div
   className="c0"
   data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame correct usage renders with ratio as an array 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}
+
+.c0 > * {
+  position: absolute;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > :is(img,video) {
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  size: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": "16/9",
+    }
+  }
 >
   <img
     alt="random thing"
@@ -120,13 +197,15 @@ exports[`Frame correct usage renders with ratio 1`] = `
 
 exports[`Frame correct usage renders without ratio 1`] = `
 .c0 {
-  --n: 1;
-  --d: 1;
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
 }
 
 .c0 > * {
@@ -168,183 +247,11 @@ exports[`Frame correct usage renders without ratio 1`] = `
 <div
   className="c0"
   data-bedrock-frame=""
->
-  <img
-    alt="random thing"
-    src="https://picsum.photos/5000"
-  />
-</div>
-`;
-
-exports[`Frame incorrect usage falls back to 1 with error if array of length <1 provided 1`] = `
-.c0 {
-  --n: 16;
-  --d: 1;
-  box-sizing: border-box;
-  display: block;
-  inline-size: 100%;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
-}
-
-.c0 > * {
-  position: absolute;
-  -webkit-inset-block-start: 0;
-  -ms-intb-rlock-start: 0;
-  inset-block-start: 0;
-  -webkit-inset-block-end: 0;
-  -ms-inlrock-end: 0;
-  inset-block-end: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  inset-block: 0;
-  inset-inline: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 > :is(img,video) {
-  inline-size: 100%;
-  -webkit-block-size: 100%;
-  -ms-flex-block-size: 100%;
-  block-size: 100%;
-  size: 100%;
-  object-fit: cover;
-  object-position: 50%;
-}
-
-<div
-  className="c0"
-  data-bedrock-frame=""
->
-  <img
-    alt="random thing"
-    src="https://picsum.photos/5000"
-  />
-</div>
-`;
-
-exports[`Frame incorrect usage falls back to 1 with error if array of length >2 provided 1`] = `
-.c0 {
-  --n: 16;
-  --d: 9;
-  box-sizing: border-box;
-  display: block;
-  inline-size: 100%;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
-}
-
-.c0 > * {
-  position: absolute;
-  -webkit-inset-block-start: 0;
-  -ms-intb-rlock-start: 0;
-  inset-block-start: 0;
-  -webkit-inset-block-end: 0;
-  -ms-inlrock-end: 0;
-  inset-block-end: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  inset-block: 0;
-  inset-inline: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 > :is(img,video) {
-  inline-size: 100%;
-  -webkit-block-size: 100%;
-  -ms-flex-block-size: 100%;
-  block-size: 100%;
-  size: 100%;
-  object-fit: cover;
-  object-position: 50%;
-}
-
-<div
-  className="c0"
-  data-bedrock-frame=""
->
-  <img
-    alt="random thing"
-    src="https://picsum.photos/5000"
-  />
-</div>
-`;
-
-exports[`Frame incorrect usage falls back to 1 with error if array of not numbers provided 1`] = `
-.c0 {
-  --n: 1;
-  --d: 1;
-  box-sizing: border-box;
-  display: block;
-  inline-size: 100%;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
-}
-
-.c0 > * {
-  position: absolute;
-  -webkit-inset-block-start: 0;
-  -ms-intb-rlock-start: 0;
-  inset-block-start: 0;
-  -webkit-inset-block-end: 0;
-  -ms-inlrock-end: 0;
-  inset-block-end: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  inset-block: 0;
-  inset-inline: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 > :is(img,video) {
-  inline-size: 100%;
-  -webkit-block-size: 100%;
-  -ms-flex-block-size: 100%;
-  block-size: 100%;
-  size: 100%;
-  object-fit: cover;
-  object-position: 50%;
-}
-
-<div
-  className="c0"
-  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
 >
   <img
     alt="random thing"
@@ -355,14 +262,15 @@ exports[`Frame incorrect usage falls back to 1 with error if array of not number
 
 exports[`Frame incorrect usage renders default position with incorrect value 1`] = `
 .c0 {
-  --n: 16;
-  --d: 9;
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
 }
 
 .c0 > * {
@@ -404,6 +312,11 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
 <div
   className="c0"
   data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": "16/9",
+    }
+  }
 >
   <img
     alt="random thing"
@@ -412,16 +325,17 @@ exports[`Frame incorrect usage renders default position with incorrect value 1`]
 </div>
 `;
 
-exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not an array 1`] = `
+exports[`Frame incorrect usage renders without ratio if ratio is not correct type 1`] = `
 .c0 {
-  --n: 16;
-  --d: 9;
   box-sizing: border-box;
   display: block;
   inline-size: 100%;
   position: relative;
   overflow: hidden;
-  aspect-ratio: var(--n) / var(--d);
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
 }
 
 .c0 > * {
@@ -463,6 +377,271 @@ exports[`Frame incorrect usage renders ratio of 1:1 with error if ratio is not a
 <div
   className="c0"
   data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders without ratio with error if array of length <1 provided 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}
+
+.c0 > * {
+  position: absolute;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > :is(img,video) {
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  size: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders without ratio with error if array of length >2 provided 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}
+
+.c0 > * {
+  position: absolute;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > :is(img,video) {
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  size: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders without ratio with error if array of not numbers provided 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}
+
+.c0 > * {
+  position: absolute;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > :is(img,video) {
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  size: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame incorrect usage renders without ratio with error if ratio string is not correct format 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0[style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}
+
+.c0 > * {
+  position: absolute;
+  -webkit-inset-block-start: 0;
+  -ms-intb-rlock-start: 0;
+  inset-block-start: 0;
+  -webkit-inset-block-end: 0;
+  -ms-inlrock-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inset-inline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > :is(img,video) {
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  size: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+<div
+  className="c0"
+  data-bedrock-frame=""
+  style={
+    Object {
+      "--ratio": undefined,
+    }
+  }
 >
   <img
     alt="random thing"
