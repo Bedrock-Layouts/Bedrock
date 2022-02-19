@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.1 (2022-02-19)
+
+
+### Bug Fixes
+
+* **inline:** don't force min-width ([829ff3e](https://github.com/Bedrock-Layouts/Bedrock/commit/829ff3e0cf50c1c0016c0dc091602329d7ac5fd9))
+
+
+
+
+
 # [1.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@1.2.2...@bedrock-layout/column-drop@1.3.0) (2022-02-09)
 
 

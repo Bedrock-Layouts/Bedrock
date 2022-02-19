@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.12 (2022-02-19)
+
+
+### Bug Fixes
+
+* **inline:** don't force min-width ([829ff3e](https://github.com/Bedrock-Layouts/Bedrock/commit/829ff3e0cf50c1c0016c0dc091602329d7ac5fd9))
+
+
+
+
+
 ## [2.3.11](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/columns@2.3.10...@bedrock-layout/columns@2.3.11) (2022-02-10)
 
 **Note:** Version bump only for package @bedrock-layout/columns

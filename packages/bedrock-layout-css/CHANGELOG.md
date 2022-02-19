@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.1 (2022-02-19)
+
+
+### Bug Fixes
+
+* **inline:** don't force min-width ([829ff3e](https://github.com/Bedrock-Layouts/Bedrock/commit/829ff3e0cf50c1c0016c0dc091602329d7ac5fd9))
+
+
+
+
+
 # [1.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.4.6...@bedrock-layout/bedrock-layout-css@1.5.0) (2022-02-09)
 
 
