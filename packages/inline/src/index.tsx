@@ -3,7 +3,7 @@ import {
   InlineClusterProps,
 } from "@bedrock-layout/inline-cluster";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 type Stretch = "all" | "start" | "end" | number;
 type SwitchAt = string | number;
@@ -12,17 +12,6 @@ export interface InlineProps extends InlineClusterProps {
   stretch?: Stretch;
   switchAt?: SwitchAt;
 }
-
-const responsive = css<InlineProps>`
-  --switchAt: ${({ switchAt }) =>
-    typeof switchAt === "string" ? switchAt : `${switchAt}px`};
-
-  flex-wrap: wrap;
-  & > * {
-    min-inline-size: fit-content;
-    flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  }
-`;
 
 function shouldUseSwitch(switchAt?: SwitchAt) {
   if (switchAt && switchAt > -1) {
@@ -37,15 +26,21 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
 }
 
 export const Inline = styled(InlineCluster).attrs<InlineProps>(
-  ({ justify, align, stretch }) => {
+  ({ justify, align, stretch, style, switchAt }) => {
     const justifyValue = justify ? `justify:${justify}` : "justify:start";
     const alignValue = align ? `align:${align}` : "align:start";
     const stretchValue = stretch ? `stretch:${stretch}` : undefined;
+    const switchAtValue = shouldUseSwitch(switchAt)
+      ? typeof switchAt === "string"
+        ? switchAt
+        : `${switchAt}px`
+      : undefined;
     return {
       "data-bedrock-inline": [justifyValue, alignValue, stretchValue]
         .filter((x) => x)
         .join(" "),
       "data-bedrock-inline-cluster": undefined,
+      style: { ...style, "--switchAt": switchAtValue },
     };
   }
 )<InlineProps>`
@@ -60,7 +55,13 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
       : typeof stretch === "number"
       ? `> :nth-child(${stretch + 1}) { flex: 1 }`
       : null}
-  ${(props) => shouldUseSwitch(props.switchAt) && responsive}
+
+  &[style*="--switchAt"] {
+    flex-wrap: wrap;
+    > * {
+      flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+    }
+  }
 `;
 
 Inline.displayName = "Inline";

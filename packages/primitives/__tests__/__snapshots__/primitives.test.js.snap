@@ -456,9 +456,13 @@ Object {
   ",
         [Function],
         "
-  ",
-        [Function],
-        "
+
+  &[style*=\\"--switchAt\\"] {
+    flex-wrap: wrap;
+    > * {
+      flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+    }
+  }
 ",
       ],
       "staticRulesId": "",
