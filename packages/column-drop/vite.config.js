@@ -8,7 +8,7 @@ module.exports = defineConfig({
     outDir: "./lib",
     lib: {
       entry: path.resolve(__dirname, "src/index.tsx"),
-      name: "inline",
+      name: "column-drop",
       formats: ["cjs", "umd", "es"],
       fileName: (format) => {
         return `index.${format === "es" ? "m" : format}.js`;
@@ -19,7 +19,6 @@ module.exports = defineConfig({
         "react",
         "styled-components",
         "@bedrock-layout/spacing-constants",
-        "@bedrock-layout/inline-cluster",
       ],
     },
   },
