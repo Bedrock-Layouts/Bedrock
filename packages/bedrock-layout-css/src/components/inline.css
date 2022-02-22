@@ -9,14 +9,14 @@
 
 @property --switchAt {
   syntax: "<length-percentage>";
-  inherits: false;
+  inherits: true;
   initial-value: 0;
 }
 
 [data-bedrock-inline] {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -29,7 +29,7 @@
   flex-wrap: wrap;
 }
 [data-bedrock-inline][style*="--switchAt"] > * {
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
 }
 
 [data-bedrock-inline~="justify:start"] {

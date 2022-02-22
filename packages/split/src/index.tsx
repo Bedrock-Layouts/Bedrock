@@ -53,7 +53,7 @@ const SplitBase = styled.div.attrs<SplitBaseProps>((props) => ({
   --gutter:${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
 
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   grid-template-columns: ${({ fraction = "1/2" }) =>
     fractions[fraction] ?? fractions["1/2"]}};
 `;

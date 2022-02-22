@@ -32,7 +32,7 @@ Then you add the `data-bedrock-inline-cluster` attribute to the desired element.
 
 The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-inline-cluster style={{ "--gutter": "var(--space-md)" }}>
@@ -57,7 +57,7 @@ The `justify` prop defines the inline justification of the elements within the c
 
 You set the justification by setting the `justify` property on the `data-bedrock-inline` attribute.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="justify">
     <h3>justify:start</h3>
     <div
@@ -98,7 +98,7 @@ The `align` prop defines the block alignment of the elements within the cluster.
 
 You can set the alignment of the inline's children by setting the `align` property on the `data-bedrock-inline` attribute.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="align">
     <h3>align:start</h3>
     <div
@@ -159,7 +159,7 @@ The below example will stay inline unless they no longer have room in the contai
 
 (Resize your window to see this in action.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="clustering">
     <h3>start</h3>
     <div

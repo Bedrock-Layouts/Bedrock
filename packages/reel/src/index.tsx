@@ -24,7 +24,7 @@ export const Reel = styled.div.attrs<ReelProps>((props) => {
   }
 
   display: flex;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
 
   overflow-x: scroll;
 

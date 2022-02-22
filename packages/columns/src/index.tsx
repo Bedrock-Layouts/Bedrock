@@ -35,7 +35,7 @@ const ColumnsBase = styled.div.attrs<ColumnsBaseProps>((props) => ({
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
 `;
 

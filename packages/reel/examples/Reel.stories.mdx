@@ -28,7 +28,7 @@ yarn add @bedrock-layout/reel
 
 The `snapType` prop sets the scroll snap type.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="snapType">
     <h3>none</h3>
     <p>scroll to the right to see the next item</p>
@@ -72,7 +72,7 @@ The `gutter` prop defines the spacing between elements. Bedrock has implemented 
 
 The following values are available by default:
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="gutter">
     <h3>none</h3>
     <Reel snapType="none" gutter="none">
@@ -207,7 +207,7 @@ export const Template = (args) =>  (
     </Reel>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     argTypes={argTypes}

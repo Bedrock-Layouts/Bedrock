@@ -32,7 +32,7 @@ Then you add the `data-bedrock-columns` and `data-bedrock-column` attributes to 
 
 The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div
@@ -66,7 +66,7 @@ By default, the number of columns will be one. You can set the number of columns
 
 The below example is a 4 column layout. Each box will take up one column by default.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="--columns">
     <div
       data-bedrock-columns
@@ -91,7 +91,7 @@ You can adjust the number of columns that the element spans by setting the `--sp
 
 The column component is wrapping the blue and green boxes. It is then setting the blue box to span 3 columns and the green to span 2
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="--span">
     <div data-bedrock-columns style={{ "--gutter": "1rem", "--columns": 4 }}>
       <Box />
@@ -113,7 +113,7 @@ The column component is wrapping the blue and green boxes. It is then setting th
 
 You can choose to have a dense layout by setting the `dense` value on the `data-bedrock-columns` attribute.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="dense">
     <div
       data-bedrock-columns="dense"
@@ -140,7 +140,7 @@ If you want the have the element offset by `n` number of columns, before or afte
 
 In the below code, the blue box is `--offsetStart` of 1 and the green box has an `--offsetEnd` of 2
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="offsetStart and offsetEnd">
     <div data-bedrock-columns style={{ "--gutter": "1rem", "--columns": 4 }}>
       <Box />

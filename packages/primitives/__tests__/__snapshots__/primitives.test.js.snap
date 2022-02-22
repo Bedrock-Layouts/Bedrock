@@ -435,7 +435,7 @@ Object {
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
 
   justify-content: ",
           [Function],
@@ -452,6 +452,11 @@ Object {
       "isStatic": false,
       "rules": Array [
         "
+  @property --switchAt {
+    syntax: \\"<length-percentage>\\";
+    inherits: true;
+    initial-value: 0;
+  }
   flex-wrap: nowrap;
   ",
         [Function],
@@ -460,7 +465,7 @@ Object {
   &[style*=\\"--switchAt\\"] {
     flex-wrap: wrap;
     > * {
-      flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+      flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
     }
   }
 ",
@@ -508,7 +513,7 @@ Object {
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
 
   justify-content: ",
         [Function],
@@ -691,7 +696,7 @@ Object {
         ";
 
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   align-content: start;
 
   & > [data-bedrock-column] {

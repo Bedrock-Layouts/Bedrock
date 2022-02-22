@@ -26,7 +26,7 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
 
 (The `<Center` component is used to center and clamp the width of the card in the example.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Aspect ratio image card">
     <Center maxWidth="25rem">
       <PadBox
@@ -53,7 +53,7 @@ You can learn more about this pattern in the [clamping card](https://web.dev/lay
 
 At this time, Bedrock Layout Primitives does not have a layout component that would provide a benefit beyond what you can already do in CSS.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Clamping card">
     <Center centerChildren>
       <PadBox
@@ -80,7 +80,7 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
 
 (The `<Center` component is used to center and clamp the width of the card in the example.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Deconstructed pancake">
     <Center maxWidth="25rem">
       <ColumnDrop gutter="sm" basis="150px">
@@ -96,7 +96,7 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
 
 Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the `<Cover>` and `<Inline>` components.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Holy grail layout">
     <Cover
       gutter="sm"
@@ -120,7 +120,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 (The `<Columns` component is used to create the 3 column layout.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Line up">
     <Columns columns={3} gutter="xxl">
       <Cover
@@ -175,7 +175,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the `<Cover>` component.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Pancake stack">
     <Cover
       minHeight="25vh"
@@ -197,7 +197,7 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 
 (The `<Center` component is used to center and clamp the width of the card in the example.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="RAM (Repeat, Auto, Minmax)">
     <Center maxWidth="25rem">
       <Grid gutter="lg" minItemWidth="150px">
@@ -214,7 +214,7 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 
 A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Inline>` component.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Sidbar says">
     <Inline gutter="md" stretch={1} align="stretch">
       <Box contentEditable style={{ width: "max(100px, 25%)" }}>
@@ -232,7 +232,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cover>` component.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Super centered">
     <Cover minHeight="25vh">
       <Center centerChildren>
@@ -246,7 +246,7 @@ Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cov
 
 A grid broken up into 12 segments where you can place areas onto the tracks evenly. Uses the `<Columns>` and `<Column>` components.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="12-span grid">
     <Columns gutter="lg" columns={12}>
       <Column span={12}>

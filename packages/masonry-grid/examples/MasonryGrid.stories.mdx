@@ -27,7 +27,7 @@ yarn add @bedrock-layout/masonry-grid
 
 In the below examples, the `minItemWidth` is set to `15rem` with `gutter` set to `lg`. (Resize your window to see the items update.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Basic">
     <MasonryGrid gutter="lg" minItemWidth="15rem">
       <div>
@@ -159,7 +159,7 @@ export const Template = (args) =>  (
     </MasonryGrid>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{ minItemWidth: "25rem", gutter: "lg" }}

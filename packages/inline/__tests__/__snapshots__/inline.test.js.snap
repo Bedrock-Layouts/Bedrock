@@ -11,7 +11,7 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -45,9 +45,9 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -85,7 +85,7 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -119,9 +119,9 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -159,7 +159,7 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -193,9 +193,9 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -233,7 +233,7 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -267,9 +267,9 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -307,7 +307,7 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -341,9 +341,9 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -381,7 +381,7 @@ exports[`Inline correct usage renders with switchAt 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -409,9 +409,9 @@ exports[`Inline correct usage renders with switchAt 1`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -449,7 +449,7 @@ exports[`Inline correct usage renders with switchAt 2`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -477,9 +477,9 @@ exports[`Inline correct usage renders with switchAt 2`] = `
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
@@ -517,7 +517,7 @@ exports[`Inline incorrect usage renders default with console error with wrong st
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -545,9 +545,9 @@ exports[`Inline incorrect usage renders default with console error with wrong st
 }
 
 .c1[style*="--switchAt"] > * {
-  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
-  flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div

@@ -31,7 +31,7 @@ The `Inline` component has all the same props as the `InlineCluster` component. 
 
 Below is an example of the `Inline` component with the `gutter` prop set to `xl` and both `justify` and `align` props set to `center`.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="InlineCluster Props">
     <Inline gutter="xl" justify="center" align="center">
       <Box style={{ height: 200 }} />
@@ -46,7 +46,7 @@ Below is an example of the `Inline` component with the `gutter` prop set to `xl`
 
 The `stretch` prop can be used to specify a child component that will stretch to fill the excess space.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="stretch">
     <h3>start</h3>
     <Inline gutter="lg" stretch="start">
@@ -83,7 +83,7 @@ The `stretch` prop can be used to specify a child component that will stretch to
 
 In the below example, the layout will switch to stack when its width becomes less than `45rem`. (Resize your window to see this in action.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="switchAt">
     <Inline gutter="lg" switchAt="45rem">
       <Box />
@@ -111,7 +111,7 @@ export const Template = (args) =>  (
     </Inline>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{

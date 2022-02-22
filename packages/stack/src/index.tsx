@@ -21,7 +21,7 @@ export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
   --gutter: ${(props) => getSpacingValue(props.theme, props.gutter) ?? "0px"};
 
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   align-content: start;
 
   & > [data-bedrock-column] {
