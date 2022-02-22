@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@2.4.7...@bedrock-layout/inline-cluster@2.4.8) (2022-02-22)
+
+
+### Bug Fixes
+
+* **inline:** fix the bug with inline where switchAt wasn't working ([65357c2](https://github.com/Bedrock-Layouts/Bedrock/commit/65357c2f8990c56d964cd528ce8dd1baf5842abc))
+
+
+
+
+
 ## 2.4.7 (2022-02-19)
 
 

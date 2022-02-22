@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@1.3.1...@bedrock-layout/column-drop@1.3.2) (2022-02-22)
+
+
+### Bug Fixes
+
+* **inline:** fix the bug with inline where switchAt wasn't working ([65357c2](https://github.com/Bedrock-Layouts/Bedrock/commit/65357c2f8990c56d964cd528ce8dd1baf5842abc))
+
+
+
+
+
 ## 1.3.1 (2022-02-19)
 
 

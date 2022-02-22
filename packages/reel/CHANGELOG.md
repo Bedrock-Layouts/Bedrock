@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.11 (2022-02-22)
+
+
+### Bug Fixes
+
+* **inline:** fix the bug with inline where switchAt wasn't working ([65357c2](https://github.com/Bedrock-Layouts/Bedrock/commit/65357c2f8990c56d964cd528ce8dd1baf5842abc))
+
+
+
+
+
 ## [1.2.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/reel@1.2.9...@bedrock-layout/reel@1.2.10) (2022-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/reel
