@@ -44,6 +44,11 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
     };
   }
 )<InlineProps>`
+  @property --switchAt {
+    syntax: "<length-percentage>";
+    inherits: true;
+    initial-value: 0;
+  }
   flex-wrap: nowrap;
   ${({ stretch }) =>
     stretch === "all"
@@ -59,7 +64,7 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
   &[style*="--switchAt"] {
     flex-wrap: wrap;
     > * {
-      flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+      flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
     }
   }
 `;

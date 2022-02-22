@@ -40,7 +40,7 @@ yarn add @bedrock-layout/columns
 
 The below example gives us a 4 column layout. By default, each box will take up one column.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="columns">
     <Columns gutter="lg" columns={4}>
       <Box />
@@ -58,7 +58,7 @@ The below example gives us a 4 column layout. By default, each box will take up 
 
 Gutters are configured with the `gutter` prop
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="gutters">
     <h3>none</h3>
     <Columns gutter="none" columns={4}>
@@ -163,7 +163,7 @@ Gutters are configured with the `gutter` prop
 
 Here, the `Column` component is wrapping the blue and green boxes. It is then setting the blue box to span 3 columns and the green to span 2
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="span">
     <Columns gutter="lg" columns={4}>
       <Box />
@@ -185,7 +185,7 @@ Here, the `Column` component is wrapping the blue and green boxes. It is then se
 
 Setting the `dense` prop will layout the children so that the items will fill any blank space.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="dense">
     <Columns dense gutter="lg" columns={4}>
       <Box>1</Box>
@@ -207,7 +207,7 @@ Setting the `dense` prop will layout the children so that the items will fill an
 
 In the example, the blue box has `offsetStart` prop with value of 1 and the green box has an `offsetEnd` prop with value of 2
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="offsetStart and offsetEnd">
     <Columns gutter="lg" columns={5}>
       <Box />
@@ -229,7 +229,7 @@ In the example, the blue box has `offsetStart` prop with value of 1 and the gree
 
 The below Columns layout will switch to a Stack layout when its less than `45rem`.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="switchAt">
     <Columns gutter="lg" columns={3} switchAt="45rem">
       <Box />
@@ -281,7 +281,7 @@ export const ColumnsTemplate = (args) =>  (
     </Columns>
 )
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Columns Playground"
     args={{
@@ -298,7 +298,7 @@ export const ColumnsTemplate = (args) =>  (
 
 <ArgsTable story="Columns Playground" />
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Column Playground"
     args={{

@@ -28,7 +28,7 @@ yarn add @bedrock-layout/padbox
 
 `padding` can take a single value for a consistent box shape padding.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="Basic">
     <h3>none</h3>
     <PadBox style={{ border: "1px solid black" }} padding="none">
@@ -114,7 +114,7 @@ yarn add @bedrock-layout/padbox
 
 `padding` can take an array that follows the [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="With an array">
     <h3>With 2 values</h3>
     <pre>["md", "xl"]</pre>
@@ -152,7 +152,7 @@ The `padding` prop can also take an object to specify which locations will have 
 You can pass either traditional properties like `top, bottom, right, left`, or logical properties in camelcase such as `blockStart, blockEnd, inlineStart, inlineEnd`.
 No matter which properties are given, logical properties are used.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="With an object">
     <h3>With an object of values</h3>
     <pre>
@@ -196,7 +196,7 @@ export const Template = (args) =>  (
     </PadBox>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{
@@ -210,7 +210,7 @@ export const Template = (args) =>  (
 
 <ArgsTable story="Playground" />
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground with array"
     args={{
@@ -224,7 +224,7 @@ export const Template = (args) =>  (
 
 <ArgsTable story="Playground with array" />
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground with object"
     args={{

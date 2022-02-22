@@ -34,7 +34,7 @@ yarn add @bedrock-layout/cover
 
 The `Cover` component can be used with any React node as its child. The child will be vertically centered.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="With children">
     <Cover minHeight="50vh" gutter="sm">
       <div>
@@ -51,7 +51,7 @@ The `Cover` component can be used with any React node as its child. The child wi
 
 The `top` prop can be used to render a top section.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="top">
     <Cover minHeight="50vh" gutter="sm" top={<span>I am on top.</span>}>
       <div>
@@ -68,7 +68,7 @@ The `top` prop can be used to render a top section.
 
 The `bottom` prop can be used to render a bottom section.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="bottom">
     <Cover minHeight="50vh" gutter="sm" bottom={<span>I am on bottom.</span>}>
       <div>
@@ -85,7 +85,7 @@ The `bottom` prop can be used to render a bottom section.
 
 Both the `top` and `bottom` props can be used to render a top and bottom section.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="top and bottom">
     <Cover
       minHeight="50vh"
@@ -107,7 +107,7 @@ Both the `top` and `bottom` props can be used to render a top and bottom section
 
 The `minHeight` prop can be used to set the minimum height of the cover. The default is `100vh`.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="minHeight">
     <Cover
       minHeight="500px"
@@ -129,7 +129,7 @@ The `minHeight` prop can be used to set the minimum height of the cover. The def
 
 The `stretchContent` prop can be used to stretch the content to the full height of the `Cover` component. If there is a top or bottom section, the content will fill the remaining vertical space.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="stretchContent">
     <Cover
       minHeight="50vh"
@@ -167,7 +167,7 @@ export const Template = ({top, bottom,...args}) =>  (
     </Cover>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{

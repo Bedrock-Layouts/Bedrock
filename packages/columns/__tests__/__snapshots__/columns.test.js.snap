@@ -7,7 +7,7 @@ exports[`Column correct usage renders as main 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -51,7 +51,7 @@ exports[`Column correct usage renders custom span 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -96,7 +96,7 @@ exports[`Column correct usage renders default gutters 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -140,7 +140,7 @@ exports[`Column correct usage renders offsetEnd span 1`] = `
   --columns: 4;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -194,7 +194,7 @@ exports[`Column correct usage renders offsetStart span 1`] = `
   --columns: 4;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -248,7 +248,7 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -293,7 +293,7 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -338,7 +338,7 @@ exports[`Column incorrect usage renders default with console error with wrong sp
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -383,7 +383,7 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -417,7 +417,7 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -451,7 +451,7 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -485,7 +485,7 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -519,7 +519,7 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -553,7 +553,7 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -587,7 +587,7 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -621,7 +621,7 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -655,7 +655,7 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -689,7 +689,7 @@ exports[`Columns correct usage renders all the gutter options 10`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -723,7 +723,7 @@ exports[`Columns correct usage renders all the gutter options 11`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -757,7 +757,7 @@ exports[`Columns correct usage renders custom columns 1`] = `
   --columns: 5;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -791,7 +791,7 @@ exports[`Columns correct usage renders dense mode 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row dense;
 }
 
@@ -825,7 +825,7 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -857,7 +857,7 @@ exports[`Columns correct usage should render a columns if container is above swi
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -895,7 +895,7 @@ exports[`Columns correct usage should render a stack if container is below switc
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -935,7 +935,7 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -969,7 +969,7 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -1003,7 +1003,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -1037,7 +1037,7 @@ exports[`Columns incorrect usage renders default with console error with incorre
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -1071,7 +1071,7 @@ exports[`Columns incorrect usage renders default with console error with no gutt
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -1105,7 +1105,7 @@ exports[`Columns incorrect usage renders default with console error with wrong s
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 
@@ -1139,7 +1139,7 @@ exports[`Columns incorrect usage renders default with wrong gutter input 1`] = `
   --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns),1fr);
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
 

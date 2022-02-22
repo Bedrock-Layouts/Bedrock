@@ -27,7 +27,7 @@ yarn add @bedrock-layout/center
 
 The Center component will clamp the width at a defined `maxWidth` and center itself in its context. Please note that the `maxWidth` prop represents the `max-width` of the children and not the Center component itself. In the example shown below, the `maxWidth` is set to `75%` of the parent component's width.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="maxWidth">
     <Center maxWidth="75%" style={{ border: "1px solid black" }}>
       <div>
@@ -48,7 +48,7 @@ The Center component will clamp the width at a defined `maxWidth` and center its
 
 You can also center the children by adding a `centerChildren` prop. Also, the max width of the children is set to 75%.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="centerChildren">
     <Center centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
@@ -69,7 +69,7 @@ You can also center the children by adding a `centerChildren` prop. Also, the ma
 
 You can also center the text by adding a `centerText` prop.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="centerText">
     <Center centerText centerChildren style={{ border: "1px solid black" }}>
       <div style={{ width: "75%" }}>
@@ -109,7 +109,7 @@ export const Template = (args) =>  (
   </Center>
 )
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{

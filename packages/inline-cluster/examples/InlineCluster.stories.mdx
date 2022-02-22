@@ -30,7 +30,7 @@ The `gutter` prop defines the space between elements. Bedrock has implemented a 
 
 The following values are available by default:
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="gutter">
     <h3>none</h3>
     <InlineCluster gutter="none">
@@ -116,7 +116,7 @@ The following values are available by default:
 
 The `justify` prop defines the inline justification of the elements within the cluster. It accepts the following values: `start`, `end`, `center`, `stretch`.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="justify">
     <h3>start</h3>
     <InlineCluster justify="start" gutter="xl">
@@ -146,7 +146,7 @@ The `justify` prop defines the inline justification of the elements within the c
 
 The `align` prop defines the block alignment of the elements within the cluster. It accepts the following values: `start`, `end`, `center`, `stretch`.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="align">
     <h3>start</h3>
     <InlineCluster align="start" gutter="xl">
@@ -192,7 +192,7 @@ export const Template = (args) =>  (
     </InlineCluster>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{

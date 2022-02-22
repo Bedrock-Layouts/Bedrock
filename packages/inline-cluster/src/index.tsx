@@ -45,7 +45,7 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
 
   justify-content: ${(props) =>
     typeof props.justify !== "undefined" && justifyMap[props.justify]

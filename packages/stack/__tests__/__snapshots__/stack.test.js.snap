@@ -5,7 +5,7 @@ exports[`Stack correct usage renders 0px with theme overrides 1`] = `
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -43,7 +43,7 @@ exports[`Stack correct usage renders all the gutter options 1`] = `
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -81,7 +81,7 @@ exports[`Stack correct usage renders all the gutter options 2`] = `
   box-sizing: border-box;
   --gutter: 0.0625rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -119,7 +119,7 @@ exports[`Stack correct usage renders all the gutter options 3`] = `
   box-sizing: border-box;
   --gutter: 0.125rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -157,7 +157,7 @@ exports[`Stack correct usage renders all the gutter options 4`] = `
   box-sizing: border-box;
   --gutter: 0.25rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -195,7 +195,7 @@ exports[`Stack correct usage renders all the gutter options 5`] = `
   box-sizing: border-box;
   --gutter: 0.5rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -233,7 +233,7 @@ exports[`Stack correct usage renders all the gutter options 6`] = `
   box-sizing: border-box;
   --gutter: 0.75rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -271,7 +271,7 @@ exports[`Stack correct usage renders all the gutter options 7`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -309,7 +309,7 @@ exports[`Stack correct usage renders all the gutter options 8`] = `
   box-sizing: border-box;
   --gutter: 1.5rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -347,7 +347,7 @@ exports[`Stack correct usage renders all the gutter options 9`] = `
   box-sizing: border-box;
   --gutter: 2rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -385,7 +385,7 @@ exports[`Stack correct usage renders all the gutter options 10`] = `
   box-sizing: border-box;
   --gutter: 3rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -423,7 +423,7 @@ exports[`Stack correct usage renders all the gutter options 11`] = `
   box-sizing: border-box;
   --gutter: 4rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -461,7 +461,7 @@ exports[`Stack correct usage renders with theme overrides 1`] = `
   box-sizing: border-box;
   --gutter: 200px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -499,7 +499,7 @@ exports[`Stack correct usage renders with theme overrides using 'space' as key 1
   box-sizing: border-box;
   --gutter: 200px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -537,7 +537,7 @@ exports[`Stack incorrect usage renders default with wrong input 1`] = `
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;

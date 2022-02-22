@@ -5,7 +5,7 @@ exports[`Split correct usage renders all the fraction options 1`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: auto 1fr;
 }
 
@@ -37,7 +37,7 @@ exports[`Split correct usage renders all the fraction options 2`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr auto;
 }
 
@@ -69,7 +69,7 @@ exports[`Split correct usage renders all the fraction options 3`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 3fr;
 }
 
@@ -101,7 +101,7 @@ exports[`Split correct usage renders all the fraction options 4`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 2fr;
 }
 
@@ -133,7 +133,7 @@ exports[`Split correct usage renders all the fraction options 5`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -165,7 +165,7 @@ exports[`Split correct usage renders all the fraction options 6`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 2fr 1fr;
 }
 
@@ -197,7 +197,7 @@ exports[`Split correct usage renders all the fraction options 7`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 3fr 1fr;
 }
 
@@ -229,7 +229,7 @@ exports[`Split correct usage renders all the gutter options 1`] = `
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -261,7 +261,7 @@ exports[`Split correct usage renders all the gutter options 2`] = `
   box-sizing: border-box;
   --gutter: 0.0625rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -293,7 +293,7 @@ exports[`Split correct usage renders all the gutter options 3`] = `
   box-sizing: border-box;
   --gutter: 0.125rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -325,7 +325,7 @@ exports[`Split correct usage renders all the gutter options 4`] = `
   box-sizing: border-box;
   --gutter: 0.25rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -357,7 +357,7 @@ exports[`Split correct usage renders all the gutter options 5`] = `
   box-sizing: border-box;
   --gutter: 0.5rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -389,7 +389,7 @@ exports[`Split correct usage renders all the gutter options 6`] = `
   box-sizing: border-box;
   --gutter: 0.75rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -421,7 +421,7 @@ exports[`Split correct usage renders all the gutter options 7`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -453,7 +453,7 @@ exports[`Split correct usage renders all the gutter options 8`] = `
   box-sizing: border-box;
   --gutter: 1.5rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -485,7 +485,7 @@ exports[`Split correct usage renders all the gutter options 9`] = `
   box-sizing: border-box;
   --gutter: 2rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -517,7 +517,7 @@ exports[`Split correct usage renders all the gutter options 10`] = `
   box-sizing: border-box;
   --gutter: 3rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -549,7 +549,7 @@ exports[`Split correct usage renders all the gutter options 11`] = `
   box-sizing: border-box;
   --gutter: 4rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -581,7 +581,7 @@ exports[`Split correct usage renders with theme overrides 1`] = `
   box-sizing: border-box;
   --gutter: 200px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -613,7 +613,7 @@ exports[`Split correct usage should render a split if container is above switchA
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -645,7 +645,7 @@ exports[`Split correct usage should render a split if container is above switchA
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -683,7 +683,7 @@ exports[`Split correct usage should render a stack if container is below switchA
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   -webkit-align-content: start;
   -ms-flex-line-pack: start;
   align-content: start;
@@ -721,7 +721,7 @@ exports[`Split correct usage should render as a main 1`] = `
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -753,7 +753,7 @@ exports[`Split correct usage should render as a main when wrapped in styled 1`] 
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -785,7 +785,7 @@ exports[`Split incorrect usage renders default with console error with fraction 
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -817,7 +817,7 @@ exports[`Split incorrect usage renders default with console error with no gutter
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -849,7 +849,7 @@ exports[`Split incorrect usage renders default with console error with wrong swi
   box-sizing: border-box;
   --gutter: 1rem;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 
@@ -881,7 +881,7 @@ exports[`Split incorrect usage renders default with wrong gutter input 1`] = `
   box-sizing: border-box;
   --gutter: 0px;
   display: grid;
-  gap: var(--gutter);
+  gap: var(--gutter,0px);
   grid-template-columns: 1fr 1fr;
 }
 

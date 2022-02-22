@@ -28,7 +28,7 @@ yarn add @bedrock-layout/split
 
 The `fraction` prop defines the fraction of the container width to use for the split. You can use the following values:
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="fraction">
     <h3>1/4</h3>
     <Split gutter="lg" fraction="1/4">
@@ -76,7 +76,7 @@ The `gutter` prop defines the spacing between elements. Bedrock has implemented 
 
 The following values are available by default:
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="gutter">
     <h3>none</h3>
     <Split gutter="none" fraction="1/2">
@@ -140,7 +140,7 @@ The following values are available by default:
 
 The below example will switch the layout to stack when the width is less than `45rem`. (Resize your window to see this in action.)
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="With switchAt">
     <Split gutter="lg" fraction="1/2" switchAt="45rem">
       <Box />
@@ -160,7 +160,7 @@ export const Template = (args) =>  (
     </Split>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     argTypes={argTypes}

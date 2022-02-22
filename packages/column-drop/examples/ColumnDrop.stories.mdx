@@ -30,7 +30,7 @@ The `gutter` prop defines the gutter size between elements. Bedrock has implemen
 
 The following values are available by default:
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="gutter">
     <h3>none</h3>
     <ColumnDrop gutter="none">
@@ -118,7 +118,7 @@ The `basis` prop defines the width basis of each of the children. The `ColumnDro
 
 In the below example, The `basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="basis">
     <ColumnDrop gutter="lg" basis="15rem">
       <Box />
@@ -139,7 +139,7 @@ By default, the column-drop component will stretch the columns to fit the contai
 
 In the below example, The `basis` is set to `15rem`. As you resize the window, the ColumnDrop will recalculate and potentially change the count of columns and rows.
 
-<Canvas withToolbar withSource="open">
+<Canvas withSource="open">
   <Story name="noStretchedColumns">
     <ColumnDrop noStretchedColumns gutter="lg" basis="15rem">
       <Box />
@@ -174,7 +174,7 @@ export const Template = (args) =>  (
     </ColumnDrop>
 );
 
-<Canvas withToolbar>
+<Canvas>
   <Story
     name="Playground"
     args={{

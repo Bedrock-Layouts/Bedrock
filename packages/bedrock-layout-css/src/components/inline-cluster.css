@@ -11,7 +11,7 @@
 [data-bedrock-inline-cluster] {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: var(--gutter, 0px);
   justify-content: flex-start;
   align-items: flex-start;
 }
