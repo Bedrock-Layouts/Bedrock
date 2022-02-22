@@ -29,6 +29,7 @@
   flex-wrap: wrap;
 }
 [data-bedrock-inline][style*="--switchAt"] > * {
+  min-inline-size: fit-content;
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
 }
 

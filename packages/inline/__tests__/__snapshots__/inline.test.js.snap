@@ -45,6 +45,9 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -119,6 +122,9 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -193,6 +199,9 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -267,6 +276,9 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -341,6 +353,9 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -409,6 +424,9 @@ exports[`Inline correct usage renders with switchAt 1`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -477,6 +495,9 @@ exports[`Inline correct usage renders with switchAt 2`] = `
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
@@ -545,6 +566,9 @@ exports[`Inline incorrect usage renders default with console error with wrong st
 }
 
 .c1[style*="--switchAt"] > * {
+  min-inline-size: -webkit-fit-content;
+  min-inline-size: -moz-fit-content;
+  min-inline-size: fit-content;
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
