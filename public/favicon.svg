@@ -1,8 +1,14 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0, 0, 400, 256">
     <style>
-      color: black;
+      #svgg{
+        color: black;
+        background-color:white
+      }
       @media (prefers-color-scheme: dark) {
-       color: white;
+        #svgg{
+          background-color:transparent;
+          color: white;
+        }
       }
     </style>
       <g id="svgg">
