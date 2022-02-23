@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.3.9...@bedrock-layout/inline@2.3.10) (2022-02-23)
+
+
+### Bug Fixes
+
+* **inline:** make content fit by default ([0b5bc17](https://github.com/Bedrock-Layouts/Bedrock/commit/0b5bc179153eac102b28bcd3b08736c4cf3fab13))
+
+
+
+
+
 ## [2.3.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.3.8...@bedrock-layout/inline@2.3.9) (2022-02-22)
 
 

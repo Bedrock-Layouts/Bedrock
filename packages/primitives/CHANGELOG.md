@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.2.2...@bedrock-layout/primitives@1.2.3) (2022-02-23)
+
+
+### Bug Fixes
+
+* **inline:** make content fit by default ([0b5bc17](https://github.com/Bedrock-Layouts/Bedrock/commit/0b5bc179153eac102b28bcd3b08736c4cf3fab13))
+
+
+
+
+
 ## [1.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.2.1...@bedrock-layout/primitives@1.2.2) (2022-02-22)
 
 

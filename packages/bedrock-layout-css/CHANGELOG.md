@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.5.2...@bedrock-layout/bedrock-layout-css@1.5.3) (2022-02-23)
+
+
+### Bug Fixes
+
+* **inline:** make content fit by default ([0b5bc17](https://github.com/Bedrock-Layouts/Bedrock/commit/0b5bc179153eac102b28bcd3b08736c4cf3fab13))
+
+
+
+
+
 ## [1.5.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.5.1...@bedrock-layout/bedrock-layout-css@1.5.2) (2022-02-22)
 
 
