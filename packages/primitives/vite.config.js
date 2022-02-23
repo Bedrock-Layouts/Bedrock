@@ -38,7 +38,7 @@ module.exports = defineConfig({
         "@bedrock-layout/use-container-query",
         "@bedrock-layout/use-forwarded-ref",
         "@bedrock-layout/use-resize-observer",
-        "@bedrock-layout/use-stateful-",
+        "@bedrock-layout/use-stateful-ref",
       ],
     },
   },
