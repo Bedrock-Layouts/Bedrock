@@ -64,6 +64,7 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
   &[style*="--switchAt"] {
     flex-wrap: wrap;
     > * {
+      min-inline-size: fit-content;
       flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
     }
   }

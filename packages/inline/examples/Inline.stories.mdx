@@ -86,10 +86,10 @@ In the below example, the layout will switch to stack when its width becomes les
 <Canvas withSource="open">
   <Story name="switchAt">
     <Inline gutter="lg" switchAt="45rem">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Box style={{ minWidth: 100 }} />
+      <Box style={{ minWidth: 100 }} />
+      <Box style={{ minWidth: 100 }} />
+      <Box style={{ minWidth: 100 }} />
     </Inline>
   </Story>
 </Canvas>
@@ -104,10 +104,10 @@ Experiment with this story with the Controls addon in the Canvas tab.
 
 export const Template = (args) =>  (
    <Inline {...args}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Box style={{minWidth:100}} />
+      <Box style={{minWidth:100}} />
+      <Box style={{minWidth:100}} />
+      <Box style={{minWidth:100}} />
     </Inline>
 );
 
