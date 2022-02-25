@@ -10,34 +10,7 @@
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
-## Road Map
-
-✅ - Released
-🛠 - Building
-
-| Status | Name              |
-| ------ | ----------------- |
-| ✅     | Stack             |
-| ✅     | Grid              |
-| ✅     | Split             |
-| ✅     | AppBoundary       |
-| ✅     | Columns           |
-| ✅     | ColumnDrop        |
-| ✅     | Center            |
-| ✅     | PadBox            |
-| ✅     | SplitSwitcher     |
-| ✅     | ColumnSwitcher    |
-| ✅     | useForwardedRef   |
-| ✅     | useStatefulRef    |
-| ✅     | useContainerQuery |
-| ✅     | Inline            |
-| ✅     | InlineCluster     |
-| ✅     | Cover             |
-| ✅     | Frame             |
-| ✅     | Reel              |
-| ✅     | MasonryGrid       |
-| ✅     | CSS Reset         |
-| ✅     | CSS Only          |
+![Visualization of the codebase](./diagram.svg)
 
 ## Contributors
 

@@ -27,6 +27,15 @@ describe("Frame", () => {
       expect(frame.toJSON()).toMatchSnapshot();
     });
 
+    it("renders with ratio as a string with spaces", () => {
+      const frame = create(
+        <Frame ratio="16 / 9">
+          <img src="https://picsum.photos/5000" alt="random thing" />
+        </Frame>
+      );
+      expect(frame.toJSON()).toMatchSnapshot();
+    });
+
     it("renders without ratio", () => {
       const frame = create(
         <Frame>
