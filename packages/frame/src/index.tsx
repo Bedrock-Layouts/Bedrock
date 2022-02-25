@@ -1,21 +1,21 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-type Ratio = [number, number] | `${number}/${number}`;
+type RatioString = `${number}/${number}` | `${number} / ${number}`;
 
+type Ratio = [number, number] | RatioString;
 export interface FrameProps {
   ratio?: Ratio;
   position?: string;
 }
-
-type RatioString = `${number}/${number}`;
 
 function checkIsRatio(ratio: unknown): ratio is Ratio {
   const isCorrectArray =
     Array.isArray(ratio) && ratio.length === 2 && ratio.every(Number.isFinite);
   return (
     isCorrectArray ||
-    (typeof ratio === "string" && /^\d{1,1000}\/\d{1,1000}$/.test(ratio))
+    (typeof ratio === "string" &&
+      /^\d{1,1000} {0,1}\/ {0,1}\d{1,1000}$/.test(ratio))
   );
 }
 
