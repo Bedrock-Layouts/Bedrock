@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2022-02-25)
+
+
+### Features
+
+* **frame:** extend ratio type ([04c53c8](https://github.com/Bedrock-Layouts/Bedrock/commit/04c53c82ce38821c59d74ac1ea3fc274bc4dafdd))
+
+
+
+
+
 ## 2.3.1 (2022-02-22)
 
 
