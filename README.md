@@ -10,7 +10,9 @@
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
-![Visualization of the codebase](./diagram.svg)
+## Visualization of the repo
+
+![Visualization of the codebase](./images/diagram.svg)
 
 ## Contributors
 
