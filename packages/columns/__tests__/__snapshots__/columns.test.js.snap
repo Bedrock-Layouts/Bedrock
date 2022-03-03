@@ -3,10 +3,8 @@
 exports[`Column correct usage renders as main 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -16,17 +14,47 @@ exports[`Column correct usage renders as main 1`] = `
 }
 
 .c1 {
-  --span: 1;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <main
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -47,10 +75,8 @@ exports[`Column correct usage renders as main 1`] = `
 exports[`Column correct usage renders custom span 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -60,18 +86,47 @@ exports[`Column correct usage renders custom span 1`] = `
 }
 
 .c1 {
-  --span: 2;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan={2}
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 2,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -92,10 +147,8 @@ exports[`Column correct usage renders custom span 1`] = `
 exports[`Column correct usage renders default gutters 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -105,17 +158,47 @@ exports[`Column correct usage renders default gutters 1`] = `
 }
 
 .c1 {
-  --span: 1;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -136,10 +219,8 @@ exports[`Column correct usage renders default gutters 1`] = `
 exports[`Column correct usage renders offsetEnd span 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 4;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -149,27 +230,47 @@ exports[`Column correct usage renders offsetEnd span 1`] = `
 }
 
 .c1 {
-  --span: 2;
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
   display: contents;
 }
 
-.c1 > * {
-  grid-column: span min(var(--span),var(--columns));
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
 }
 
-.c1::after {
+.c1[style*="--offsetStart"]::before {
   content: "";
-  grid-column: span min(2,var(--columns));
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 4,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan={2}
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": 2,
+        "--offsetStart": undefined,
+        "--span": 2,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -190,10 +291,8 @@ exports[`Column correct usage renders offsetEnd span 1`] = `
 exports[`Column correct usage renders offsetStart span 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 4;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -203,27 +302,47 @@ exports[`Column correct usage renders offsetStart span 1`] = `
 }
 
 .c1 {
-  --span: 2;
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
   display: contents;
 }
 
-.c1 > * {
-  grid-column: span min(var(--span),var(--columns));
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
 }
 
-.c1::before {
+.c1[style*="--offsetStart"]::before {
   content: "";
-  grid-column: span min(2,var(--columns));
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 4,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan={2}
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": 2,
+        "--span": 2,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -244,10 +363,8 @@ exports[`Column correct usage renders offsetStart span 1`] = `
 exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -257,18 +374,47 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 }
 
 .c1 {
-  --span: 1;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan={0}
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -289,10 +435,8 @@ exports[`Column incorrect usage renders a span of 1 if given 0 1`] = `
 exports[`Column incorrect usage renders a span of 1 if given negative number 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -302,18 +446,47 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 }
 
 .c1 {
-  --span: 1;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan={-1}
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -334,10 +507,8 @@ exports[`Column incorrect usage renders a span of 1 if given negative number 1`]
 exports[`Column incorrect usage renders default with console error with wrong span input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -347,18 +518,47 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 }
 
 .c1 {
-  --span: 1;
-  grid-column: span min(var(--span),var(--columns));
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offset"] {
+  display: contents;
+}
+
+.c1[style*="--offset"] > * {
+  grid-column: span min(var(--span,1),var(--columns,1));
+}
+
+.c1[style*="--offsetStart"]::before {
+  content: "";
+  grid-column: span min(var(--offsetStart,1),var(--columns,1));
+}
+
+.c1[style*="--offsetEnd"]::after {
+  content: "";
+  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
 }
 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <div
     className="c1"
-    colSpan="incorrect"
     data-bedrock-column=""
+    style={
+      Object {
+        "--offsetEnd": undefined,
+        "--offsetStart": undefined,
+        "--span": 1,
+      }
+    }
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -379,10 +579,8 @@ exports[`Column incorrect usage renders default with console error with wrong sp
 exports[`Columns correct usage renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -394,6 +592,12 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -413,10 +617,8 @@ exports[`Columns correct usage renders all the gutter options 1`] = `
 exports[`Columns correct usage renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.0625rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -428,6 +630,12 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.0625rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -447,10 +655,8 @@ exports[`Columns correct usage renders all the gutter options 2`] = `
 exports[`Columns correct usage renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.125rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -462,6 +668,12 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.125rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -481,10 +693,8 @@ exports[`Columns correct usage renders all the gutter options 3`] = `
 exports[`Columns correct usage renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.25rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -496,6 +706,12 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.25rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -515,10 +731,8 @@ exports[`Columns correct usage renders all the gutter options 4`] = `
 exports[`Columns correct usage renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.5rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -530,6 +744,12 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -549,10 +769,8 @@ exports[`Columns correct usage renders all the gutter options 5`] = `
 exports[`Columns correct usage renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0.75rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -564,6 +782,12 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "0.75rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -583,10 +807,8 @@ exports[`Columns correct usage renders all the gutter options 6`] = `
 exports[`Columns correct usage renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -598,6 +820,12 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -617,10 +845,8 @@ exports[`Columns correct usage renders all the gutter options 7`] = `
 exports[`Columns correct usage renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1.5rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -632,6 +858,12 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -651,10 +883,8 @@ exports[`Columns correct usage renders all the gutter options 8`] = `
 exports[`Columns correct usage renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 2rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -666,6 +896,12 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "2rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -685,10 +921,8 @@ exports[`Columns correct usage renders all the gutter options 9`] = `
 exports[`Columns correct usage renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 3rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -700,6 +934,12 @@ exports[`Columns correct usage renders all the gutter options 10`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "3rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -719,10 +959,8 @@ exports[`Columns correct usage renders all the gutter options 10`] = `
 exports[`Columns correct usage renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 4rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -734,6 +972,12 @@ exports[`Columns correct usage renders all the gutter options 11`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "4rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -753,10 +997,8 @@ exports[`Columns correct usage renders all the gutter options 11`] = `
 exports[`Columns correct usage renders custom columns 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 5;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -768,6 +1010,12 @@ exports[`Columns correct usage renders custom columns 1`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 5,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -787,10 +1035,8 @@ exports[`Columns correct usage renders custom columns 1`] = `
 exports[`Columns correct usage renders dense mode 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row dense;
 }
@@ -802,6 +1048,12 @@ exports[`Columns correct usage renders dense mode 1`] = `
 <div
   className="c0 "
   data-bedrock-columns="dense"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -821,10 +1073,8 @@ exports[`Columns correct usage renders dense mode 1`] = `
 exports[`Columns correct usage renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 200px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -836,6 +1086,12 @@ exports[`Columns correct usage renders with theme overrides 1`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "200px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -931,10 +1187,8 @@ exports[`Columns correct usage should render a stack if container is below switc
 exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -946,6 +1200,12 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -965,10 +1225,8 @@ exports[`Columns incorrect usage renders 1 columns if given 0 1`] = `
 exports[`Columns incorrect usage renders 1 columns if given negative number 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -980,6 +1238,12 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -999,10 +1263,8 @@ exports[`Columns incorrect usage renders 1 columns if given negative number 1`] 
 exports[`Columns incorrect usage renders default with console error with incorrect column type 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -1014,6 +1276,12 @@ exports[`Columns incorrect usage renders default with console error with incorre
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1033,10 +1301,8 @@ exports[`Columns incorrect usage renders default with console error with incorre
 exports[`Columns incorrect usage renders default with console error with incorrect dense type 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -1048,6 +1314,12 @@ exports[`Columns incorrect usage renders default with console error with incorre
 <div
   className="c0 "
   data-bedrock-columns="dense"
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1067,10 +1339,8 @@ exports[`Columns incorrect usage renders default with console error with incorre
 exports[`Columns incorrect usage renders default with console error with no gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -1082,6 +1352,12 @@ exports[`Columns incorrect usage renders default with console error with no gutt
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1101,10 +1377,8 @@ exports[`Columns incorrect usage renders default with console error with no gutt
 exports[`Columns incorrect usage renders default with console error with wrong switchAt input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 1rem;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -1116,6 +1390,12 @@ exports[`Columns incorrect usage renders default with console error with wrong s
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1135,10 +1415,8 @@ exports[`Columns incorrect usage renders default with console error with wrong s
 exports[`Columns incorrect usage renders default with wrong gutter input 1`] = `
 .c0 {
   box-sizing: border-box;
-  --gutter: 0px;
-  --columns: 1;
   display: grid;
-  grid-template-columns: repeat(var(--columns),1fr);
+  grid-template-columns: repeat(var(--columns,1),1fr);
   gap: var(--gutter,0px);
   grid-auto-flow: row;
 }
@@ -1150,6 +1428,12 @@ exports[`Columns incorrect usage renders default with wrong gutter input 1`] = `
 <div
   className="c0 "
   data-bedrock-columns=""
+  style={
+    Object {
+      "--columns": 1,
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
