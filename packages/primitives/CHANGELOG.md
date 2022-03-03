@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.2.5...@bedrock-layout/primitives@1.3.0) (2022-03-03)
+
+
+### Features
+
+* **columns:** bring it more in line with css ([f85b0ab](https://github.com/Bedrock-Layouts/Bedrock/commit/f85b0ab910779bd3feab13a4793ce4a8c235989e))
+* **register-resize-callback:** publish resize callback package ([20943fd](https://github.com/Bedrock-Layouts/Bedrock/commit/20943fde350628bbb4e721e95d2025db3d4a8c2b))
+
+
+
+
+
 ## [1.2.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.2.4...@bedrock-layout/primitives@1.2.5) (2022-02-25)
 
 **Note:** Version bump only for package @bedrock-layout/primitives
