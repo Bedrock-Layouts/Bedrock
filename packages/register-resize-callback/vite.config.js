@@ -7,21 +7,15 @@ module.exports = defineConfig({
   build: {
     outDir: "./lib",
     lib: {
-      entry: path.resolve(__dirname, "src/index.tsx"),
-      name: "masonry-grid",
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "use-resize-observer",
       formats: ["cjs", "umd", "es"],
       fileName: (format) => {
         return `index.${format === "es" ? "m" : format}.js`;
       },
     },
     rollupOptions: {
-      external: [
-        "react",
-        "styled-components",
-        "@bedrock-layout/spacing-constants",
-        "@bedrock-layout/grid",
-        "@bedrock-layout/use-resize-observer",
-      ],
+      external: [],
     },
   },
 });

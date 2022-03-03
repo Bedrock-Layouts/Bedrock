@@ -54,9 +54,11 @@ Object {
 
   box-sizing: content-box;
 
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
+  && {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-inline: auto;
+  }
 
   max-inline-size: var(--maxWidth, 100%);
 
@@ -424,10 +426,6 @@ Object {
         "isStatic": false,
         "rules": Array [
           "
-  --gutter: ",
-          [Function],
-          ";
-
   box-sizing: border-box;
   > * {
     margin: 0;
@@ -503,10 +501,6 @@ Object {
       "isStatic": false,
       "rules": Array [
         "
-  --gutter: ",
-        [Function],
-        ";
-
   box-sizing: border-box;
   > * {
     margin: 0;
@@ -644,15 +638,58 @@ Object {
     "warnTooManyClasses": [Function],
     "withComponent": [Function],
   },
+  "Reel": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [
+      [Function],
+    ],
+    "componentStyle": e {
+      "baseHash": -22428885,
+      "baseStyle": undefined,
+      "componentId": "sc-bqiRlB",
+      "isStatic": false,
+      "rules": Array [
+        "
+  box-sizing: border-box;
+  > * {
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  display: flex;
+  gap: var(--gutter, 0px);
+
+  overflow-x: scroll;
+
+  scroll-snap-type: ",
+        [Function],
+        ";
+",
+      ],
+      "staticRulesId": "",
+    },
+    "foldedComponentIds": Array [],
+    "propTypes": Object {
+      "gutter": [Function],
+      "snapType": [Function],
+    },
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "sc-bqiRlB",
+    "target": "div",
+    "toString": [Function],
+    "warnTooManyClasses": [Function],
+    "withComponent": [Function],
+  },
   "Split": Object {
     "$$typeof": Symbol(react.forward_ref),
     "attrs": Array [
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -1947125077,
+      "baseHash": -1557103741,
       "baseStyle": undefined,
-      "componentId": "sc-ksdxgE",
+      "componentId": "sc-hBUSln",
       "isStatic": false,
       "rules": Array [
         "",
@@ -667,7 +704,7 @@ Object {
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ksdxgE",
+    "styledComponentId": "sc-hBUSln",
     "target": Object {
       "$$typeof": Symbol(react.forward_ref),
       "render": [Function],
@@ -741,7 +778,9 @@ Object {
   "checkIsCSSLength": [Function],
   "getSizeValue": [Function],
   "getSpacingValue": [Function],
+  "init": [Function],
   "mergeBreakpoints": [Function],
+  "registerCallback": [Function],
   "reset": Array [
     "
   /*

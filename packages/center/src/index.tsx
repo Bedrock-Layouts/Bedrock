@@ -42,9 +42,11 @@ export const Center = styled.div.attrs<CenterProps>(
 
   box-sizing: content-box;
 
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
+  && {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-inline: auto;
+  }
 
   max-inline-size: var(--maxWidth, 100%);
 

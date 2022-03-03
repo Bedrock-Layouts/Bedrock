@@ -2,7 +2,6 @@
 
 exports[`Inline correct usage renders all the stretch options 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,6 +57,7 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
   data-bedrock-inline="justify:start align:start stretch:all"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -79,7 +79,6 @@ exports[`Inline correct usage renders all the stretch options 1`] = `
 
 exports[`Inline correct usage renders all the stretch options 2`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,6 +134,7 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
   data-bedrock-inline="justify:start align:start stretch:start"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -156,7 +156,6 @@ exports[`Inline correct usage renders all the stretch options 2`] = `
 
 exports[`Inline correct usage renders all the stretch options 3`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,6 +211,7 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
   data-bedrock-inline="justify:start align:start stretch:end"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -233,7 +233,6 @@ exports[`Inline correct usage renders all the stretch options 3`] = `
 
 exports[`Inline correct usage renders all the stretch options 4`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -289,6 +288,7 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
   data-bedrock-inline="justify:start align:start"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -310,7 +310,6 @@ exports[`Inline correct usage renders all the stretch options 4`] = `
 
 exports[`Inline correct usage renders all the stretch options 5`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -366,6 +365,7 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
   data-bedrock-inline="justify:start align:start stretch:3"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -387,7 +387,6 @@ exports[`Inline correct usage renders all the stretch options 5`] = `
 
 exports[`Inline correct usage renders with switchAt 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -437,6 +436,7 @@ exports[`Inline correct usage renders with switchAt 1`] = `
   data-bedrock-inline="justify:start align:start"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": "42px",
     }
   }
@@ -458,7 +458,6 @@ exports[`Inline correct usage renders with switchAt 1`] = `
 
 exports[`Inline correct usage renders with switchAt 2`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -508,6 +507,7 @@ exports[`Inline correct usage renders with switchAt 2`] = `
   data-bedrock-inline="justify:start align:start"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
@@ -529,7 +529,6 @@ exports[`Inline correct usage renders with switchAt 2`] = `
 
 exports[`Inline incorrect usage renders default with console error with wrong stretch input 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -579,6 +578,7 @@ exports[`Inline incorrect usage renders default with console error with wrong st
   data-bedrock-inline="justify:start align:start stretch:incorrect"
   style={
     Object {
+      "--gutter": "1rem",
       "--switchAt": undefined,
     }
   }
