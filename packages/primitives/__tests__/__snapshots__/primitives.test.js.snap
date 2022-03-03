@@ -99,21 +99,43 @@ Object {
       "isStatic": false,
       "rules": Array [
         "
-  --span: ",
-        [Function],
-        ";
+  @property --span {
+    syntax: \\"<number>\\";
+    inherits: true;
+    initial-value: 1;
+  }
 
-  ",
-        [Function],
-        "
+  @property --offsetStart {
+    syntax: \\"<number>\\";
+    inherits: true;
+    initial-value: 1;
+  }
 
-  ",
-        [Function],
-        "
+  @property --offsetEnd {
+    syntax: \\"<number>\\";
+    inherits: true;
+    initial-value: 1;
+  }
 
-  ",
-        [Function],
-        "
+  grid-column: span min(var(--span, 1), var(--columns, 1));
+
+  &[style*=\\"--offset\\"] {
+    display: contents;
+  }
+
+  &[style*=\\"--offset\\"] > * {
+    grid-column: span min(var(--span, 1), var(--columns, 1));
+  }
+
+  &[style*=\\"--offsetStart\\"]::before {
+    content: \\"\\";
+    grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
+  }
+
+  &[style*=\\"--offsetEnd\\"]::after {
+    content: \\"\\";
+    grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
+  }
 ",
       ],
       "staticRulesId": "",

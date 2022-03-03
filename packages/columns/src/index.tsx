@@ -17,24 +17,35 @@ interface ColumnsBaseProps {
   forwardedAs?: As<unknown>;
 }
 
-const ColumnsBase = styled.div.attrs<ColumnsBaseProps>((props) => ({
-  "data-bedrock-columns": props.dense ? "dense" : "",
-}))<ColumnsBaseProps>`
+const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
+  ({ dense, theme, gutter, columns = 1, style }) => {
+    const maybeGutter = getSpacingValue(theme, gutter);
+    const safeColumns = columns > 0 ? columns : 1;
+    return {
+      "data-bedrock-columns": dense ? "dense" : "",
+      style: { ...style, "--gutter": maybeGutter, "--columns": safeColumns },
+    };
+  }
+)<ColumnsBaseProps>`
+  @property --gutter {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+
+  @property --columns {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+  }
+
   box-sizing: border-box;
   > * {
     margin: 0;
   }
-  --gutter: ${({ gutter, theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-    return maybeGutter ?? "0px";
-  }};
-
-  --columns: ${({ columns = 1 }) => {
-    return columns > 0 ? columns : 1;
-  }};
 
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns, 1), 1fr);
   gap: var(--gutter, 0px);
   grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
 `;
@@ -114,49 +125,59 @@ const safeSpan = (span: unknown) => {
  *
  * In a future breaking change, colSpan should be the public API.
  * */
-export const Column = styled.div.attrs<ColumnProps, { colSpan?: number }>(
-  (props) => {
-    const { span } = props;
-
+export const Column = styled.div.attrs<ColumnProps>(
+  ({ span, style, offsetStart = 0, offsetEnd = 0 }) => {
+    const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
+    const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;
     return {
       "data-bedrock-column": "",
       span: undefined,
-      colSpan: span,
+      style: {
+        ...style,
+        "--span": Math.max(safeSpan(span), 1),
+        "--offsetStart": safeOffsetStart,
+        "--offsetEnd": safeOffsetEnd,
+      },
     };
   }
 )<ColumnProps>`
-  --span: ${(props) => Math.max(safeSpan(props.colSpan), 1)};
+  @property --span {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+  }
 
-  ${({ offsetStart = 0, offsetEnd = 0 }) =>
-    offsetStart > 0 || offsetEnd > 0
-      ? css`
-          display: contents;
+  @property --offsetStart {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+  }
 
-          > * {
-            grid-column: span min(var(--span), var(--columns));
-          }
-        `
-      : css`
-          grid-column: span min(var(--span), var(--columns));
-        `}
+  @property --offsetEnd {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+  }
 
-  ${({ offsetStart = 0 }) =>
-    offsetStart > 0 &&
-    css`
-      ::before {
-        content: "";
-        grid-column: span min(${offsetStart}, var(--columns));
-      }
-    `}
+  grid-column: span min(var(--span, 1), var(--columns, 1));
 
-  ${({ offsetEnd = 0 }) =>
-    offsetEnd > 0 &&
-    css`
-      ::after {
-        content: "";
-        grid-column: span min(${offsetEnd}, var(--columns));
-      }
-    `}
+  &[style*="--offset"] {
+    display: contents;
+  }
+
+  &[style*="--offset"] > * {
+    grid-column: span min(var(--span, 1), var(--columns, 1));
+  }
+
+  &[style*="--offsetStart"]::before {
+    content: "";
+    grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
+  }
+
+  &[style*="--offsetEnd"]::after {
+    content: "";
+    grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
+  }
 `;
 
 Column.displayName = "Column";
