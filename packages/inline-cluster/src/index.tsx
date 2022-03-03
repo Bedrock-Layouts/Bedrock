@@ -24,20 +24,18 @@ export interface InlineClusterProps {
 }
 
 export const InlineCluster = styled.div.attrs<InlineClusterProps>(
-  ({ justify, align }) => {
+  ({ justify, align, style, theme, gutter }) => {
     const justifyValue = justify ? `justify:${justify}` : "justify:start";
     const alignValue = align ? `align:${align}` : "align:start";
     return {
-      "data-bedrock-inline": `${justifyValue} ${alignValue}`,
-      "data-bedrock-inline-cluster": undefined,
+      "data-bedrock-inline-cluster": `${justifyValue} ${alignValue}`,
+      style: {
+        ...style,
+        "--gutter": getSpacingValue(theme, gutter),
+      },
     };
   }
 )<InlineClusterProps>`
-  --gutter: ${({ gutter, theme }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
-    return maybeGutter ?? "0px";
-  }};
-
   box-sizing: border-box;
   > * {
     margin: 0;

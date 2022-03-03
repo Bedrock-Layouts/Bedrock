@@ -2,11 +2,12 @@ import {
   InlineCluster,
   InlineClusterProps,
 } from "@bedrock-layout/inline-cluster";
+import { CSSLength } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 type Stretch = "all" | "start" | "end" | number;
-type SwitchAt = string | number;
+type SwitchAt = CSSLength | number;
 
 export interface InlineProps extends InlineClusterProps {
   stretch?: Stretch;
@@ -37,7 +38,7 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
       : undefined;
     return {
       "data-bedrock-inline": [justifyValue, alignValue, stretchValue]
-        .filter((x) => x)
+        .filter(Boolean)
         .join(" "),
       "data-bedrock-inline-cluster": undefined,
       style: { ...style, "--switchAt": switchAtValue },

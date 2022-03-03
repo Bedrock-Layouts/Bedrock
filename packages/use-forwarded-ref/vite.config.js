@@ -15,7 +15,7 @@ module.exports = defineConfig({
       },
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "@bedrock-layout/use-stateful-ref"],
     },
   },
 });

@@ -15,7 +15,11 @@ module.exports = defineConfig({
       },
     },
     rollupOptions: {
-      external: ["react"],
+      external: [
+        "react",
+        "@bedrock-layout/use-stateful-ref",
+        "@bedrock-layout/register-resize-callback",
+      ],
     },
   },
 });

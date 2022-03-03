@@ -3,10 +3,13 @@
 exports[`AppBoundary correct usage renders boundarySize 1`] = `
 .c1 {
   box-sizing: content-box;
+  max-inline-size: var(--maxWidth,100%);
+}
+
+.c1.c1 {
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {
@@ -48,10 +51,13 @@ exports[`AppBoundary correct usage renders boundarySize 1`] = `
 exports[`AppBoundary correct usage renders default gutters 1`] = `
 .c1 {
   box-sizing: content-box;
+  max-inline-size: var(--maxWidth,100%);
+}
+
+.c1.c1 {
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {
@@ -93,10 +99,13 @@ exports[`AppBoundary correct usage renders default gutters 1`] = `
 exports[`AppBoundary correct usage renders with theme overrides 1`] = `
 .c1 {
   box-sizing: content-box;
+  max-inline-size: var(--maxWidth,100%);
+}
+
+.c1.c1 {
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-inline: auto;
-  max-inline-size: var(--maxWidth,100%);
 }
 
 .c0 {

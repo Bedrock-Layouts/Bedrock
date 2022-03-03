@@ -2,7 +2,6 @@
 
 exports[`InlineCluster correct usage accepts className prop 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,7 +27,12 @@ exports[`InlineCluster correct usage accepts className prop 1`] = `
 
 <div
   className="c0 CLASSNAME"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -47,7 +51,6 @@ exports[`InlineCluster correct usage accepts className prop 1`] = `
 
 exports[`InlineCluster correct usage renders all the align options 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -73,7 +76,12 @@ exports[`InlineCluster correct usage renders all the align options 1`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -92,7 +100,6 @@ exports[`InlineCluster correct usage renders all the align options 1`] = `
 
 exports[`InlineCluster correct usage renders all the align options 2`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,7 +125,12 @@ exports[`InlineCluster correct usage renders all the align options 2`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:center"
+  data-bedrock-inline-cluster="justify:start align:center"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -137,7 +149,6 @@ exports[`InlineCluster correct usage renders all the align options 2`] = `
 
 exports[`InlineCluster correct usage renders all the align options 3`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -163,7 +174,12 @@ exports[`InlineCluster correct usage renders all the align options 3`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:end"
+  data-bedrock-inline-cluster="justify:start align:end"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -182,7 +198,6 @@ exports[`InlineCluster correct usage renders all the align options 3`] = `
 
 exports[`InlineCluster correct usage renders all the align options 4`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -208,7 +223,12 @@ exports[`InlineCluster correct usage renders all the align options 4`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:stretch"
+  data-bedrock-inline-cluster="justify:start align:stretch"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -227,7 +247,6 @@ exports[`InlineCluster correct usage renders all the align options 4`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -253,7 +272,12 @@ exports[`InlineCluster correct usage renders all the gutter options 1`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -272,7 +296,6 @@ exports[`InlineCluster correct usage renders all the gutter options 1`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 2`] = `
 .c0 {
-  --gutter: 0.0625rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -298,7 +321,12 @@ exports[`InlineCluster correct usage renders all the gutter options 2`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0.0625rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -317,7 +345,6 @@ exports[`InlineCluster correct usage renders all the gutter options 2`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 3`] = `
 .c0 {
-  --gutter: 0.125rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -343,7 +370,12 @@ exports[`InlineCluster correct usage renders all the gutter options 3`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0.125rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -362,7 +394,6 @@ exports[`InlineCluster correct usage renders all the gutter options 3`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 4`] = `
 .c0 {
-  --gutter: 0.25rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -388,7 +419,12 @@ exports[`InlineCluster correct usage renders all the gutter options 4`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0.25rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -407,7 +443,6 @@ exports[`InlineCluster correct usage renders all the gutter options 4`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 5`] = `
 .c0 {
-  --gutter: 0.5rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -433,7 +468,12 @@ exports[`InlineCluster correct usage renders all the gutter options 5`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -452,7 +492,6 @@ exports[`InlineCluster correct usage renders all the gutter options 5`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 6`] = `
 .c0 {
-  --gutter: 0.75rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -478,7 +517,12 @@ exports[`InlineCluster correct usage renders all the gutter options 6`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0.75rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -497,7 +541,6 @@ exports[`InlineCluster correct usage renders all the gutter options 6`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 7`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -523,7 +566,12 @@ exports[`InlineCluster correct usage renders all the gutter options 7`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -542,7 +590,6 @@ exports[`InlineCluster correct usage renders all the gutter options 7`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 8`] = `
 .c0 {
-  --gutter: 1.5rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -568,7 +615,12 @@ exports[`InlineCluster correct usage renders all the gutter options 8`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1.5rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -587,7 +639,6 @@ exports[`InlineCluster correct usage renders all the gutter options 8`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 9`] = `
 .c0 {
-  --gutter: 2rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -613,7 +664,12 @@ exports[`InlineCluster correct usage renders all the gutter options 9`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "2rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -632,7 +688,6 @@ exports[`InlineCluster correct usage renders all the gutter options 9`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 10`] = `
 .c0 {
-  --gutter: 3rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -658,7 +713,12 @@ exports[`InlineCluster correct usage renders all the gutter options 10`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "3rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -677,7 +737,6 @@ exports[`InlineCluster correct usage renders all the gutter options 10`] = `
 
 exports[`InlineCluster correct usage renders all the gutter options 11`] = `
 .c0 {
-  --gutter: 4rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -703,7 +762,12 @@ exports[`InlineCluster correct usage renders all the gutter options 11`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "4rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -722,7 +786,6 @@ exports[`InlineCluster correct usage renders all the gutter options 11`] = `
 
 exports[`InlineCluster correct usage renders all the justify options 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -748,7 +811,12 @@ exports[`InlineCluster correct usage renders all the justify options 1`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -767,7 +835,6 @@ exports[`InlineCluster correct usage renders all the justify options 1`] = `
 
 exports[`InlineCluster correct usage renders all the justify options 2`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -793,7 +860,12 @@ exports[`InlineCluster correct usage renders all the justify options 2`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:center align:start"
+  data-bedrock-inline-cluster="justify:center align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -812,7 +884,6 @@ exports[`InlineCluster correct usage renders all the justify options 2`] = `
 
 exports[`InlineCluster correct usage renders all the justify options 3`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -838,7 +909,12 @@ exports[`InlineCluster correct usage renders all the justify options 3`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:end align:start"
+  data-bedrock-inline-cluster="justify:end align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -857,7 +933,6 @@ exports[`InlineCluster correct usage renders all the justify options 3`] = `
 
 exports[`InlineCluster correct usage renders check for the browser 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -883,7 +958,12 @@ exports[`InlineCluster correct usage renders check for the browser 1`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -902,7 +982,6 @@ exports[`InlineCluster correct usage renders check for the browser 1`] = `
 
 exports[`InlineCluster correct usage renders with theme overrides 1`] = `
 .c0 {
-  --gutter: 200px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -928,7 +1007,12 @@ exports[`InlineCluster correct usage renders with theme overrides 1`] = `
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "200px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -947,7 +1031,6 @@ exports[`InlineCluster correct usage renders with theme overrides 1`] = `
 
 exports[`InlineCluster correct usage renders with theme overrides using numbers 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -973,7 +1056,12 @@ exports[`InlineCluster correct usage renders with theme overrides using numbers 
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": "0px",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -992,7 +1080,6 @@ exports[`InlineCluster correct usage renders with theme overrides using numbers 
 
 exports[`InlineCluster incorrect usage renders default with console error with incorrect align 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1018,7 +1105,12 @@ exports[`InlineCluster incorrect usage renders default with console error with i
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:incorrect"
+  data-bedrock-inline-cluster="justify:start align:incorrect"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1037,7 +1129,6 @@ exports[`InlineCluster incorrect usage renders default with console error with i
 
 exports[`InlineCluster incorrect usage renders default with console error with incorrect justify 1`] = `
 .c0 {
-  --gutter: 1rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1063,7 +1154,12 @@ exports[`InlineCluster incorrect usage renders default with console error with i
 
 <div
   className="c0"
-  data-bedrock-inline="justify:incorrect align:start"
+  data-bedrock-inline-cluster="justify:incorrect align:start"
+  style={
+    Object {
+      "--gutter": "1rem",
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1082,7 +1178,6 @@ exports[`InlineCluster incorrect usage renders default with console error with i
 
 exports[`InlineCluster incorrect usage renders default with console error with no gutter input 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1108,7 +1203,12 @@ exports[`InlineCluster incorrect usage renders default with console error with n
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -1127,7 +1227,6 @@ exports[`InlineCluster incorrect usage renders default with console error with n
 
 exports[`InlineCluster incorrect usage renders default with wrong gutter input 1`] = `
 .c0 {
-  --gutter: 0px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1153,7 +1252,12 @@ exports[`InlineCluster incorrect usage renders default with wrong gutter input 1
 
 <div
   className="c0"
-  data-bedrock-inline="justify:start align:start"
+  data-bedrock-inline-cluster="justify:start align:start"
+  style={
+    Object {
+      "--gutter": undefined,
+    }
+  }
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
