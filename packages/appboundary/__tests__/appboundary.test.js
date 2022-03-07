@@ -38,9 +38,20 @@ describe("AppBoundary", () => {
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
 
-    it("renders boundarySize", () => {
+    it.each`
+      boundary
+      ${639}
+      ${"60ch"}
+      ${"xxsmall"}
+      ${"xsmall"}
+      ${"small"}
+      ${"medium"}
+      ${"large"}
+      ${"xlarge"}
+      ${"xxlarge"}
+    `("renders boundarySize", ({ boundary }) => {
       const appboundary = create(
-        <AppBoundary boundarySize="large">
+        <AppBoundary boundarySize={boundary}>
           <Lorem />
         </AppBoundary>
       );

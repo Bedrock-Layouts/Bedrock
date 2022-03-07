@@ -47,10 +47,8 @@ For styling purposes, you can select `data-bedrock-appboundary`.
 
 ## API
 
-| Property     | Description                               | Type               | Default   |
-| :----------: | :---------------------------------------: | :------------:     | :-------: |
-| boundarySize | Sets the max inline size of the component | One of `Sizes`\*\* | xxlarge   |
+|   Property   |                Description                |        Type        | Default |
+| :----------: | :---------------------------------------: | :----------------: | :-----: |
+| boundarySize | Sets the max inline size of the component | One of `Sizes`\*\* | xxlarge |
 
 \*\* `Sizes` value can be one of: `xxsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `xxlarge`
-
-

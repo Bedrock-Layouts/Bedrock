@@ -8,7 +8,7 @@ import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 interface ColumnsBaseProps {
   gutter: keyof SpacingOptions;
