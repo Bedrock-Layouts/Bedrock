@@ -47,6 +47,15 @@ describe("InlineCluster", () => {
       document = oldDocument;
     });
 
+    it("renders default gutter when none provided", () => {
+      const inlineCluster = create(
+        <InlineCluster>
+          <Lorem />
+        </InlineCluster>
+      );
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const inlineCluster = create(
@@ -56,6 +65,24 @@ describe("InlineCluster", () => {
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter as number", () => {
+      const inlineCluster = create(
+        <InlineCluster gutter={20}>
+          <Lorem />
+        </InlineCluster>
+      );
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter as string", () => {
+      const inlineCluster = create(
+        <InlineCluster gutter="3ch">
+          <Lorem />
+        </InlineCluster>
+      );
+      expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
     it("renders all the justify options", () => {
@@ -121,28 +148,16 @@ describe("InlineCluster", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with no gutter input", () => {
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster>
+        <InlineCluster gutter={{ value: "incorrect" }}>
           <Lorem />
         </InlineCluster>
       );
 
       expect(console.error).toBeCalled();
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
-      const errorStack = create(
-        <InlineCluster gutter="incorrect">
-          <Lorem />
-        </InlineCluster>
-      );
-
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

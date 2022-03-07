@@ -188,6 +188,16 @@ describe("Split", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
+    it("renders default with negative number for gutter", () => {
+      const errorStack = create(
+        <Split gutter={-1}>
+          <Lorem />
+        </Split>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders default with console error with fraction input", () => {
       expect(console.error).not.toBeCalled();
 
