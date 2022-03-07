@@ -28,6 +28,15 @@ describe("Grid", () => {
       expect(Grid).toBeTruthy();
     });
 
+    it("renders default with no gutter", () => {
+      const grid = create(
+        <Grid>
+          <Lorem />
+        </Grid>
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const grid = create(
@@ -37,6 +46,24 @@ describe("Grid", () => {
         );
         expect(grid.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter with number", () => {
+      const grid = create(
+        <Grid grid={20}>
+          <Lorem />
+        </Grid>
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter with string", () => {
+      const grid = create(
+        <Grid grid="3ch">
+          <Lorem />
+        </Grid>
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
     });
 
     it("renders custom minItemWidth", () => {
@@ -87,19 +114,7 @@ describe("Grid", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Grid gutter="incorrect">
-          <Lorem />
-        </Grid>
-      );
-
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with console error with no gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
-      const errorStack = create(
-        <Grid>
+        <Grid gutter={{ value: "incorrect" }}>
           <Lorem />
         </Grid>
       );

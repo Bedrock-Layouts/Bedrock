@@ -27,13 +27,26 @@ yarn add @bedrock-layout/grid
 ## gutter
 
 The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
 
-The following values are available by default:
+Here are the possible values for `gutter` by default:
 
 (The `minItemWidth` is set to `25rem` in all the examples)
 
 <Canvas withSource="open">
   <Story name="gutter">
+    <h3>Custom gutter as number (20)</h3>
+    <Grid gutter={20} minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <Grid gutter="3ch" minItemWidth="25rem">
+      <Box />
+      <Box />
+      <Box />
+    </Grid>
     <h3>none</h3>
     <Grid gutter="none" minItemWidth="25rem">
       <Box />
