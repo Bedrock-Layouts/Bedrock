@@ -56,10 +56,29 @@ The below example gives us a 4 column layout. By default, each box will take up 
 
 ## gutters
 
-Gutters are configured with the `gutter` prop
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
+
+Here are the possible values for `gutter` by default:
 
 <Canvas withSource="open">
   <Story name="gutters">
+    <h3>Custom gutter as number (20)</h3>
+    <Columns gutter={20} columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <Columns gutter="3ch" columns={4}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+    </Columns>
     <h3>none</h3>
     <Columns gutter="none" columns={4}>
       <Box />

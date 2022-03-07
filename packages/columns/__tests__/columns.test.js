@@ -141,6 +141,15 @@ describe("Columns", () => {
       expect(Columns).toBeTruthy();
     });
 
+    it("renders default gutter when none provided", () => {
+      const columns = create(
+        <Columns>
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const columns = create(
@@ -150,6 +159,24 @@ describe("Columns", () => {
         );
         expect(columns.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter with number", () => {
+      const columns = create(
+        <Columns gutter={20}>
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter with string", () => {
+      const columns = create(
+        <Columns gutter="3ch">
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
     });
 
     it("renders custom columns", () => {
@@ -225,28 +252,16 @@ describe("Columns", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with no gutter input", () => {
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Columns>
+        <Columns gutter={{ value: "incorrect" }}>
           <Lorem />
         </Columns>
       );
 
       expect(console.error).toBeCalled();
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
-      const errorStack = create(
-        <Columns gutter="incorrect">
-          <Lorem />
-        </Columns>
-      );
-
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

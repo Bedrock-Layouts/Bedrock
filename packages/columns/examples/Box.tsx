@@ -4,7 +4,7 @@ export const Box = styled.div`
   place-content: center;
   place-items: center;
   background: black;
-  min-height: 100px;
+  min-height: 50px;
   color: white;
   text-align: center;
   padding: 1rem;
