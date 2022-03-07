@@ -39,6 +39,36 @@ describe("ColumnDrop", () => {
       });
     });
 
+    it("renders default gutter of 0px when no gutter supplied", () => {
+      const errorStack = create(
+        <ColumnDrop>
+          <Lorem />
+        </ColumnDrop>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter with number", () => {
+      const errorStack = create(
+        <ColumnDrop gutter={320}>
+          <Lorem />
+        </ColumnDrop>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter with number", () => {
+      const errorStack = create(
+        <ColumnDrop gutter="60ch">
+          <Lorem />
+        </ColumnDrop>
+      );
+
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders custom basis", () => {
       const columnDrop = create(
         <ColumnDrop gutter="lg" basis={320}>
@@ -91,28 +121,16 @@ describe("ColumnDrop", () => {
     afterEach(() => {
       console.error.mockRestore();
     });
-    it("renders default with console error with no gutter input", () => {
-      expect(console.error).not.toBeCalled();
 
+    it("renders default with wrong gutter input", () => {
+      expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <ColumnDrop>
+        <ColumnDrop gutter={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
 
       expect(console.error).toBeCalled();
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
-      const errorStack = create(
-        <ColumnDrop gutter="incorrect">
-          <Lorem />
-        </ColumnDrop>
-      );
-
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

@@ -29,7 +29,10 @@ export const Center = styled.div.attrs<CenterProps>(
       "data-bedrock-center": centerProps,
       style: {
         ...style,
-        "--maxWidth": getSizeValue(theme, maxWidth) ?? maxWidth,
+        "--maxWidth":
+          typeof maxWidth === "number" && maxWidth > 0
+            ? `${maxWidth}px`
+            : getSizeValue(theme, maxWidth) ?? maxWidth,
       },
     };
   }

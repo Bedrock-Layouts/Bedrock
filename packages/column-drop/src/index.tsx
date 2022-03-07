@@ -11,9 +11,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 type Basis = CSSLength | number | SizesOptions;
+type Gutter = CSSLength | number | keyof SpacingOptions;
 
 export interface ColumnDropProps {
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
   basis?: Basis;
   noStretchedColumns?: boolean;
 }
@@ -27,9 +28,20 @@ function getSafeBasis<T extends Record<string, unknown>>(
   return getSizeValue(theme, basis as string);
 }
 
+function getSafeGutter<T extends Record<string, unknown>>(
+  theme: T,
+  gutter?: Gutter
+) {
+  if (typeof gutter === "number") return `${gutter}px`;
+  if (checkIsCSSLength(gutter as string)) return gutter;
+  return gutter !== undefined
+    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
+    : undefined;
+}
+
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
   ({ gutter, theme, style = {}, basis, noStretchedColumns = false }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
+    const maybeGutter = getSafeGutter(theme, gutter);
 
     const attributeValue =
       noStretchedColumns === true ? "no-stretched-columns" : "";
@@ -77,16 +89,22 @@ function validateBasis({ basis }: ColumnDropProps, propName: string) {
     checkIsCSSLength(basis as string) ||
     Object.keys(sizes).includes(basis as string);
 
-  if (!isValid) {
-    console.error(
-      `${propName} needs to be an number, CSSLength or SizesOptions`
-    );
-  }
-  return;
+  if (isValid) return;
+
+  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
+}
+
+function validateGutter({ gutter }: ColumnDropProps, propName: string) {
+  if (gutter === undefined) return;
+
+  const isValid = typeof gutter === "number" || typeof gutter === "string";
+  if (isValid) return;
+
+  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
 }
 
 ColumnDrop.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter as unknown as React.Validator<keyof SpacingOptions>,
   basis: validateBasis as unknown as React.Validator<Basis>,
   noStretchedColumns: PropTypes.bool,
 };
