@@ -484,6 +484,138 @@ exports[`Reel correct usage renders all the gutter options 11`] = `
 </div>
 `;
 
+exports[`Reel correct usage renders custom gutter as number 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: scroll;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "20px",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel correct usage renders custom gutter as string 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: scroll;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": "3ch",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel correct usage renders default gutter when none supplied 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: scroll;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    Object {
+      "--gutter": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
 exports[`Reel correct usage renders snapTypes 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -644,7 +776,7 @@ exports[`Reel incorrect usage renders with console error with incorrect gutter 1
   data-bedrock-reel=""
   style={
     Object {
-      "--gutter": "0px",
+      "--gutter": undefined,
     }
   }
 >

@@ -36,6 +36,15 @@ describe("Reel", () => {
       });
     });
 
+    it("renders default gutter when none supplied", () => {
+      const reel = create(
+        <Reel>
+          <Lorem />
+        </Reel>
+      );
+      expect(reel.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const reel = create(
@@ -45,6 +54,24 @@ describe("Reel", () => {
         );
         expect(reel.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter as number", () => {
+      const reel = create(
+        <Reel gutter={20}>
+          <Lorem />
+        </Reel>
+      );
+      expect(reel.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter as string", () => {
+      const reel = create(
+        <Reel gutter="3ch">
+          <Lorem />
+        </Reel>
+      );
+      expect(reel.toJSON()).toMatchSnapshot();
     });
   });
 

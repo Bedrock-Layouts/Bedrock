@@ -68,12 +68,33 @@ The `snapType` prop sets the scroll snap type.
 
 ## gutter
 
-The `gutter` prop defines the spacing between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
 
-The following values are available by default:
+Here are the possible values for `gutter` by default:
 
 <Canvas withSource="open">
   <Story name="gutter">
+    <h3>Custom gutter as number (20)</h3>
+    <Reel snapType="none" gutter={20}>
+      {colors.map((color, ind) => {
+        return (
+          <ColoredRect key={ind} bgColor={color}>
+            Lorem ipsum dolor sit amet.{" "}
+          </ColoredRect>
+        );
+      })}
+    </Reel>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <Reel snapType="none" gutter="3ch">
+      {colors.map((color, ind) => {
+        return (
+          <ColoredRect key={ind} bgColor={color}>
+            Lorem ipsum dolor sit amet.{" "}
+          </ColoredRect>
+        );
+      })}
+    </Reel>
     <h3>none</h3>
     <Reel snapType="none" gutter="none">
       {colors.map((color, ind) => {
