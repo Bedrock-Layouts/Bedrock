@@ -1,8 +1,7 @@
 import {
-  CSSLength,
-  SpacingOptions,
-  checkIsCSSLength,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
@@ -12,23 +11,11 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-type Gutter = CSSLength | number | keyof SpacingOptions;
 interface ColumnsBaseProps {
   gutter?: Gutter;
   columns?: number;
   dense?: boolean;
   forwardedAs?: As<unknown>;
-}
-
-function getSafeGutter<T extends Record<string, unknown>>(
-  theme: T,
-  gutter?: Gutter
-) {
-  if (typeof gutter === "number") return `${gutter}px`;
-  if (checkIsCSSLength(gutter as string)) return gutter;
-  return gutter !== undefined
-    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
-    : undefined;
 }
 
 const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
@@ -114,17 +101,8 @@ export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
 
 Columns.displayName = "Columns";
 
-function validateGutter({ gutter }: ColumnsProps, propName: string) {
-  if (gutter === undefined) return;
-
-  const isValid = typeof gutter === "number" || typeof gutter === "string";
-  if (isValid) return;
-
-  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
-}
-
 Columns.propTypes = {
-  gutter: validateGutter as unknown as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   columns: PropTypes.number,
   dense: PropTypes.bool,
   switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

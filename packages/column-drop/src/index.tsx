@@ -1,17 +1,17 @@
 import {
   CSSLength,
+  Gutter,
   SizesOptions,
-  SpacingOptions,
   checkIsCSSLength,
+  getSafeGutter,
   getSizeValue,
-  getSpacingValue,
   sizes,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 type Basis = CSSLength | number | SizesOptions;
-type Gutter = CSSLength | number | keyof SpacingOptions;
 
 export interface ColumnDropProps {
   gutter?: Gutter;
@@ -26,17 +26,6 @@ function getSafeBasis<T extends Record<string, unknown>>(
   if (typeof basis === "number") return `${basis}px`;
   if (checkIsCSSLength(basis as string)) return basis;
   return getSizeValue(theme, basis as string);
-}
-
-function getSafeGutter<T extends Record<string, unknown>>(
-  theme: T,
-  gutter?: Gutter
-) {
-  if (typeof gutter === "number") return `${gutter}px`;
-  if (checkIsCSSLength(gutter as string)) return gutter;
-  return gutter !== undefined
-    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
-    : undefined;
 }
 
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
@@ -94,17 +83,8 @@ function validateBasis({ basis }: ColumnDropProps, propName: string) {
   console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
 }
 
-function validateGutter({ gutter }: ColumnDropProps, propName: string) {
-  if (gutter === undefined) return;
-
-  const isValid = typeof gutter === "number" || typeof gutter === "string";
-  if (isValid) return;
-
-  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
-}
-
 ColumnDrop.propTypes = {
-  gutter: validateGutter as unknown as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   basis: validateBasis as unknown as React.Validator<Basis>,
   noStretchedColumns: PropTypes.bool,
 };

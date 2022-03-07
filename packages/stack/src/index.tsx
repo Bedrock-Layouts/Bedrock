@@ -1,25 +1,12 @@
 import {
-  CSSLength,
-  SpacingOptions,
-  checkIsCSSLength,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import styled from "styled-components";
 
-type Gutter = CSSLength | number | keyof SpacingOptions;
 export interface StackProps {
   gutter?: Gutter;
-}
-
-function getSafeGutter<T extends Record<string, unknown>>(
-  theme: T,
-  gutter?: Gutter
-) {
-  if (typeof gutter === "number") return `${gutter}px`;
-  if (checkIsCSSLength(gutter as string)) return gutter;
-  return gutter !== undefined
-    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
-    : undefined;
 }
 
 export const Stack = styled.div.attrs<StackProps>(
@@ -52,15 +39,6 @@ export const Stack = styled.div.attrs<StackProps>(
 
 Stack.displayName = "Stack";
 
-function validateGutter({ gutter }: StackProps, propName: string) {
-  if (gutter === undefined) return;
-
-  const isValid = typeof gutter === "number" || typeof gutter === "string";
-  if (isValid) return;
-
-  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
-}
-
 Stack.propTypes = {
-  gutter: validateGutter as unknown as React.Validator<Gutter>,
+  gutter: validateGutter,
 };

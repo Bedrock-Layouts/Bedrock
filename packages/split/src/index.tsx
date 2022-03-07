@@ -1,8 +1,7 @@
 import {
-  CSSLength,
-  SpacingOptions,
-  checkIsCSSLength,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
@@ -35,22 +34,10 @@ const fractions: Fractions = {
   "auto-end": `1fr auto`,
 };
 
-type Gutter = CSSLength | number | keyof SpacingOptions;
-
 interface SplitBaseProps {
   gutter?: Gutter;
   fraction?: FractionTypes;
   forwardedAs?: As<unknown>;
-}
-function getSafeGutter<T extends Record<string, unknown>>(
-  theme: T,
-  gutter?: Gutter
-) {
-  if (typeof gutter === "number") return `${gutter}px`;
-  if (checkIsCSSLength(gutter as string)) return gutter;
-  return gutter !== undefined
-    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
-    : undefined;
 }
 
 const SplitBase = styled.div.attrs<SplitBaseProps>(
@@ -121,17 +108,8 @@ export const Split = styled(Splitter).attrs(({ as, forwardedAs }) => {
 
 Split.displayName = "Split";
 
-function validateGutter({ gutter }: SplitProps, propName: string) {
-  if (gutter === undefined) return;
-
-  const isValid = typeof gutter === "number" || typeof gutter === "string";
-  if (isValid) return;
-
-  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
-}
-
 Split.propTypes = {
-  gutter: validateGutter as unknown as React.Validator<Gutter>,
+  gutter: validateGutter,
   fraction: PropTypes.oneOf<FractionTypes>(
     Object.keys(fractions) as FractionTypes[]
   ),

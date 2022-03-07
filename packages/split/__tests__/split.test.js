@@ -53,7 +53,7 @@ describe("Split", () => {
 
     it("renders custom gutter with number", () => {
       const split = create(
-        <Split gutter={0}>
+        <Split gutter={1}>
           <Lorem />
         </Split>
       );

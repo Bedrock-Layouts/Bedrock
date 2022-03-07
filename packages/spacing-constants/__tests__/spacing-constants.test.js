@@ -41,6 +41,117 @@ describe("Spacing Constants", () => {
   });
 });
 
+describe("gutter helpers", () => {
+  describe("getSafeGutter", () => {
+    const theme = { space: constants.spacing };
+
+    it.each`
+      gutter               | expected
+      ${undefined}         | ${undefined}
+      ${0}                 | ${undefined}
+      ${"garbage"}         | ${undefined}
+      ${{ value: "1rem" }} | ${undefined}
+      ${"px"}              | ${undefined}
+      ${"1"}               | ${undefined}
+      ${"em1"}             | ${undefined}
+      ${"1me"}             | ${undefined}
+      ${" "}               | ${undefined}
+      ${"var(--)"}         | ${undefined}
+      ${"var(--1)"}        | ${undefined}
+      ${1}                 | ${"1px"}
+      ${100}               | ${"100px"}
+      ${"1em"}             | ${"1em"}
+      ${"0.25em"}          | ${"0.25em"}
+      ${"11em"}            | ${"11em"}
+      ${"110000000em"}     | ${"110000000em"}
+      ${"1vmin"}           | ${"1vmin"}
+      ${"1vmax"}           | ${"1vmax"}
+      ${"1vh"}             | ${"1vh"}
+      ${"1vw"}             | ${"1vw"}
+      ${"1%"}              | ${"1%"}
+      ${"1ch"}             | ${"1ch"}
+      ${"1ex"}             | ${"1ex"}
+      ${"1em"}             | ${"1em"}
+      ${"1rem"}            | ${"1rem"}
+      ${"1in"}             | ${"1in"}
+      ${"1cm"}             | ${"1cm"}
+      ${"1mm"}             | ${"1mm"}
+      ${"1pt"}             | ${"1pt"}
+      ${"1pc"}             | ${"1pc"}
+      ${"1px"}             | ${"1px"}
+      ${"var(--yellow)"}   | ${"var(--yellow)"}
+      ${"var(--x)"}        | ${"var(--x)"}
+      ${"lg"}              | ${constants.spacing["lg"]}
+    `("returns correct value", ({ gutter, expected }) => {
+      expect(constants.getSafeGutter(theme, gutter)).toBe(expected);
+    });
+  });
+
+  describe("gutterValidator", () => {
+    beforeEach(() => {
+      jest.spyOn(console, "error");
+      console.error.mockImplementation(() => undefined);
+    });
+    afterEach(() => {
+      console.error.mockRestore();
+    });
+    it.each`
+      gutter
+      ${undefined}
+      ${0}
+      ${"garbage"}
+      ${"px"}
+      ${"1"}
+      ${"em1"}
+      ${"1me"}
+      ${" "}
+      ${"var(--)"}
+      ${"var(--1)"}
+      ${1}
+      ${100}
+      ${"1em"}
+      ${"0.25em"}
+      ${"11em"}
+      ${"110000000em"}
+      ${"1vmin"}
+      ${"1vmax"}
+      ${"1vh"}
+      ${"1vw"}
+      ${"1%"}
+      ${"1ch"}
+      ${"1ex"}
+      ${"1em"}
+      ${"1rem"}
+      ${"1in"}
+      ${"1cm"}
+      ${"1mm"}
+      ${"1pt"}
+      ${"1pc"}
+      ${"1px"}
+      ${"var(--yellow)"}
+      ${"var(--x)"}
+      ${"lg"}
+    `("returns undefined", ({ gutter }) => {
+      expect(console.error).not.toBeCalled();
+      const props = { gutter };
+      constants.validateGutter(props, "gutter");
+      expect(console.error).not.toBeCalled();
+    });
+
+    it.each`
+      gutter
+      ${{ value: "garbage" }}
+      ${["garbage"]}
+      ${null}
+    `("calls console.error on incorrect usage", ({ gutter }) => {
+      expect(console.error).not.toBeCalled();
+      const props = { gutter };
+      constants.validateGutter(props, "gutter");
+      expect(console.error).toBeCalled();
+    });
+  });
+});
+
 describe("Size Constants", () => {
   it("should return a string if no sizes provided", () => {
     expect(constants.getSizeValue({}, "large")).toBe("1199px");
