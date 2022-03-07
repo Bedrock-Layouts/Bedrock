@@ -4,7 +4,11 @@ export const argTypes = {
     type: { name: "string", required: true },
     table: {
       type: {
-        summary: ["string", "array of strings", "object of strings"],
+        summary: [
+          "number, CSSLength, SpacingOption",
+          "array of valid Padding values",
+          "object of valid Padding values",
+        ],
       },
     },
     control: "select",
@@ -30,7 +34,7 @@ export const singleArgTypes = {
     type: { name: "string", required: true },
     table: {
       type: {
-        summary: ["string"],
+        summary: ["number, CSSLength, SpacingOption"],
       },
     },
     control: "select",
@@ -56,7 +60,7 @@ export const arrayArgTypes = {
     type: { name: "string", required: true },
     table: {
       type: {
-        summary: ["string"],
+        summary: ["array of number, CSSLength, SpacingOption"],
       },
     },
     control: "array",
@@ -69,7 +73,7 @@ export const objArgTypes = {
     type: { name: "string", required: true },
     table: {
       type: {
-        summary: ["string"],
+        summary: ["Object of number, CSSLength, SpacingOption"],
       },
     },
     control: "array",

@@ -1,35 +1,33 @@
 import {
   BaseTheme,
-  SpacingOptions,
+  Gutter,
+  checkIsCSSLength,
   spacing as defaultSpacing,
-  getSpacingValue,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-type SpacingTypes = keyof SpacingOptions;
+type PaddingValue = Gutter;
 
 type PaddingObj =
-  | { left: SpacingTypes }
-  | { right: SpacingTypes }
-  | { top: SpacingTypes }
-  | { bottom: SpacingTypes }
-  | { inlineStart: SpacingTypes }
-  | { inlineEnd: SpacingTypes }
-  | { blockStart: SpacingTypes }
-  | { blockEnd: SpacingTypes };
+  | { left: PaddingValue }
+  | { right: PaddingValue }
+  | { top: PaddingValue }
+  | { bottom: PaddingValue }
+  | { inlineStart: PaddingValue }
+  | { inlineEnd: PaddingValue }
+  | { blockStart: PaddingValue }
+  | { blockEnd: PaddingValue };
 
 type PaddingTypes =
-  | SpacingTypes
+  | PaddingValue
   | PaddingObj
-  | [SpacingTypes]
-  | [SpacingTypes, SpacingTypes]
-  | [SpacingTypes, SpacingTypes, SpacingTypes]
-  | [SpacingTypes, SpacingTypes, SpacingTypes, SpacingTypes];
-
-type Theme = {
-  spacing?: BaseTheme;
-};
+  | [PaddingValue]
+  | [PaddingValue, PaddingValue]
+  | [PaddingValue, PaddingValue, PaddingValue]
+  | [PaddingValue, PaddingValue, PaddingValue, PaddingValue];
 
 const validKeys = new Set([
   "left",
@@ -58,14 +56,7 @@ const keyToProperty = (key: string, val: string) => {
   return modernMap[key];
 };
 
-function paddingOrDefault(theme: Theme) {
-  return (key: SpacingTypes) => {
-    const maybePadding = getSpacingValue(theme, key);
-    return maybePadding ?? "0px";
-  };
-}
-
-const paddingToString = (theme: Theme) => (padding: PaddingTypes) => {
+const paddingToString = (theme: BaseTheme, padding: PaddingTypes) => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
   }
@@ -73,16 +64,34 @@ const paddingToString = (theme: Theme) => (padding: PaddingTypes) => {
   const validSpacings = new Set(Object.keys(theme.spacing ?? defaultSpacing));
 
   const isValidPadding = () => {
-    if (typeof padding === "string") return true;
+    if (typeof padding === "number" || typeof padding === "string") {
+      return (
+        padding > 0 ||
+        validSpacings.has(padding.toString()) ||
+        checkIsCSSLength(padding.toString())
+      );
+    }
 
     if (Array.isArray(padding)) {
-      return padding.every((val) => validSpacings.has(val));
+      return padding.every((val) => {
+        return (
+          val > 0 ||
+          validSpacings.has(val.toString()) ||
+          checkIsCSSLength(val.toString())
+        );
+      });
     }
 
     return (
-      padding &&
+      padding !== undefined &&
       Object.keys(padding).every((key) => validKeys.has(key)) &&
-      Object.values(padding).every((val) => validSpacings.has(val))
+      Object.values(padding).every((val) => {
+        return (
+          val > 0 ||
+          validSpacings.has(val.toString()) ||
+          checkIsCSSLength(val.toString())
+        );
+      })
     );
   };
 
@@ -90,28 +99,29 @@ const paddingToString = (theme: Theme) => (padding: PaddingTypes) => {
     console.error("Invalid padding Type");
   }
 
-  const getPadding = paddingOrDefault(theme);
-
   return typeof padding === "object" && !Array.isArray(padding)
     ? Object.entries(padding).reduce(
         (acc, [key, val]) =>
-          validKeys.has(key) ? acc + keyToProperty(key, getPadding(val)) : acc,
+          acc + keyToProperty(key, getSafeGutter(theme, val) ?? "0px"),
         ""
       )
     : `padding: ${Array.from(Array.isArray(padding) ? padding : [padding])
-        .map((pad: SpacingTypes) => getPadding(pad))
-        .join(" ")}`;
+        .map((pad: Gutter) => getSafeGutter(theme, pad) ?? "0px")
+        .join(" ")};`;
 };
 
 export interface PadBoxProps {
-  padding: PaddingTypes;
+  padding?: PaddingTypes;
 }
 
 export const PadBox = styled.div.attrs<PadBoxProps>(() => ({
   "data-bedrock-padbox": "",
 }))<PadBoxProps>`
   box-sizing: border-box;
-  ${(props) => paddingToString(props.theme)(props.padding)}
+  ${(props) =>
+    props.padding !== undefined
+      ? paddingToString(props.theme, props.padding)
+      : ""}
 `;
 
 PadBox.displayName = "PadBox";
@@ -119,8 +129,8 @@ PadBox.displayName = "PadBox";
 PadBox.propTypes = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   padding: PropTypes.oneOfType<any>([
-    PropTypes.string,
-    PropTypes.objectOf(PropTypes.string),
-    PropTypes.arrayOf(PropTypes.string),
+    validateGutter,
+    PropTypes.objectOf(validateGutter),
+    PropTypes.arrayOf(validateGutter),
   ]).isRequired,
 };

@@ -12,6 +12,8 @@ import { argTypes, singleArgTypes, arrayArgTypes, objArgTypes } from './argTypes
 The `PadBox` component is designed to create consistent padding based on the spacing constants.
 PadBox takes either a single value, an array of values (like the css shorthand for top / right / bottom / left), or an object of values (specifying each side individually) for fine tuning the padding.
 
+Padding values can either be `SpacingOptions` defined in the theme (or the default bedrock `SpacingOptions`), a positive `number` of pixels, or a valid `CSSLength`. If you provided an invalid value (such as a negative number), the padding will be set to `0px`.
+
 ## Installation
 
 ```bash
@@ -30,6 +32,20 @@ yarn add @bedrock-layout/padbox
 
 <Canvas withSource="open">
   <Story name="Basic">
+    <h3>Custom padding as number (20)</h3>
+    <PadBox style={{ border: "1px solid black" }} padding={20}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>Custom padding as a string (3ch)</h3>
+    <PadBox style={{ border: "1px solid black" }} padding="3ch">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
     <h3>none</h3>
     <PadBox style={{ border: "1px solid black" }} padding="none">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
@@ -143,6 +159,17 @@ yarn add @bedrock-layout/padbox
       doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
       est dolor! Iusto, vero.
     </PadBox>
+    <h3>With 4 mixed custom values</h3>
+    <pre>[20, "xs", "3ch", "xl"]</pre>
+    <PadBox
+      style={{ border: "1px solid black" }}
+      padding={[20, "xs", "3ch", "xl"]}
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
   </Story>
 </Canvas>
 
@@ -167,6 +194,21 @@ No matter which properties are given, logical properties are used.
     <PadBox
       style={{ border: "1px solid black" }}
       padding={{ top: "lg", inlineEnd: "xl", blockEnd: "sm" }}
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      corrupti beatae commodi vitae, perspiciatis totam provident architecto
+      doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore
+      est dolor! Iusto, vero.
+    </PadBox>
+    <h3>With an object of mixed custom values</h3>
+    <pre>
+      <code>
+        {JSON.stringify({ top: 20, inlineEnd: "xl", blockEnd: "3ch" }, null, 3)}
+      </code>
+    </pre>
+    <PadBox
+      style={{ border: "1px solid black" }}
+      padding={{ top: 20, inlineEnd: "xl", blockEnd: "3ch" }}
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
       corrupti beatae commodi vitae, perspiciatis totam provident architecto
