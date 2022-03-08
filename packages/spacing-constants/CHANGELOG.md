@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.8.0 (2022-03-08)
+
+
+### Features
+
+* **cover:** change cover to use number or CSSlength as Gutter as well ([6768cc4](https://github.com/Bedrock-Layouts/Bedrock/commit/6768cc4662d315989a07ad2a7586167f67a783bb))
+
+
+
+
+
 # [2.7.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.6.0...@bedrock-layout/spacing-constants@2.7.0) (2022-02-09)
 
 

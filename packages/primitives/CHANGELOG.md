@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.3.0...@bedrock-layout/primitives@1.4.0) (2022-03-08)
+
+
+### Features
+
+* add number and CSSLength as valid gutter options for stack, split, and columns components ([2d4b6a9](https://github.com/Bedrock-Layouts/Bedrock/commit/2d4b6a94d8aac2b3a842feca2959cb6b0535405b))
+* **appboundary:** make Appboundary accept number or CSSLength ([5a9af41](https://github.com/Bedrock-Layouts/Bedrock/commit/5a9af41d16c94620c21267160f23a204afbc7022))
+* **cover:** change cover to use number or CSSlength as Gutter as well ([6768cc4](https://github.com/Bedrock-Layouts/Bedrock/commit/6768cc4662d315989a07ad2a7586167f67a783bb))
+
+
+
+
+
 # [1.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.2.5...@bedrock-layout/primitives@1.3.0) (2022-03-03)
 
 

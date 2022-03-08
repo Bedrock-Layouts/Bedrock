@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@2.5.0...@bedrock-layout/masonry-grid@2.6.0) (2022-03-08)
+
+
+### Features
+
+* **grid:** align the gutter usage for Grid ([932dd80](https://github.com/Bedrock-Layouts/Bedrock/commit/932dd80021640cffc917589734f7ea480a7ae2e7))
+
+
+
+
+
 # 2.5.0 (2022-03-03)
 
 

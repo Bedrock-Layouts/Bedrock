@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.4.0...@bedrock-layout/inline@2.5.0) (2022-03-08)
+
+
+### Features
+
+* **inline:** make inline and inline-cluster accept and valid gutter length ([4e68d03](https://github.com/Bedrock-Layouts/Bedrock/commit/4e68d03969ebc4aeb317e05dd199ac6095a0bf9d))
+
+
+
+
+
 # 2.4.0 (2022-03-03)
 
 

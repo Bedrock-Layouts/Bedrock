@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2022-03-08)
+
+
+### Features
+
+* **reel:** align the reel component to use any valid Gutter value ([a18d89a](https://github.com/Bedrock-Layouts/Bedrock/commit/a18d89a0b9c4a1e4b6c0c83e4904a95ba34dcfef))
+
+
+
+
+
 ## 1.2.11 (2022-02-22)
 
 

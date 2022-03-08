@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.3.15...@bedrock-layout/split@2.4.0) (2022-03-08)
+
+
+### Features
+
+* add number and CSSLength as valid gutter options for stack, split, and columns components ([2d4b6a9](https://github.com/Bedrock-Layouts/Bedrock/commit/2d4b6a94d8aac2b3a842feca2959cb6b0535405b))
+* **cover:** change cover to use number or CSSlength as Gutter as well ([6768cc4](https://github.com/Bedrock-Layouts/Bedrock/commit/6768cc4662d315989a07ad2a7586167f67a783bb))
+* **inline:** make inline and inline-cluster accept and valid gutter length ([4e68d03](https://github.com/Bedrock-Layouts/Bedrock/commit/4e68d03969ebc4aeb317e05dd199ac6095a0bf9d))
+
+
+
+
+
 ## 2.3.15 (2022-03-03)
 
 **Note:** Version bump only for package @bedrock-layout/split

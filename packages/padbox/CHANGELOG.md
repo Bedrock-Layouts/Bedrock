@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2022-03-08)
+
+
+### Features
+
+* **padbox:** align padding to support numbers and CSSLength Strings ([4ab4333](https://github.com/Bedrock-Layouts/Bedrock/commit/4ab43339b206df7420c85f60be01dd18029d8059))
+
+
+
+
+
 ## 2.2.2 (2022-02-22)
 
 

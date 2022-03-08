@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2022-03-08)
+
+
+### Features
+
+* **grid:** align the gutter usage for Grid ([932dd80](https://github.com/Bedrock-Layouts/Bedrock/commit/932dd80021640cffc917589734f7ea480a7ae2e7))
+
+
+
+
+
 ## 2.3.2 (2022-02-22)
 
 

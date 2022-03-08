@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@2.5.0...@bedrock-layout/center@2.6.0) (2022-03-08)
+
+
+### Features
+
+* **column-drop:** make gutter open to any number of csslength ([e25de64](https://github.com/Bedrock-Layouts/Bedrock/commit/e25de64dd912fa32b6a2d51e02f2fcc3914e3196))
+
+
+
+
+
 # 2.5.0 (2022-03-03)
 
 
