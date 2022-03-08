@@ -1142,7 +1142,7 @@ exports[`MasonryGrid incorrect usage renders default with console error with no 
   data-bedrock-masonry-grid=""
   style={
     Object {
-      "--gutter": "0px",
+      "--gutter": undefined,
       "--minItemWidth": undefined,
     }
   }
@@ -1216,7 +1216,7 @@ exports[`MasonryGrid incorrect usage renders default with wrong gutter input 1`]
   data-bedrock-masonry-grid=""
   style={
     Object {
-      "--gutter": "0px",
+      "--gutter": undefined,
       "--minItemWidth": undefined,
     }
   }

@@ -28,6 +28,15 @@ describe("Stack", () => {
       expect(Stack).toBeTruthy();
     });
 
+    it("renders 0px default with no gutter provided", () => {
+      const stack = create(
+        <Stack>
+          <Lorem />
+        </Stack>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const stack = create(
@@ -37,6 +46,24 @@ describe("Stack", () => {
         );
         expect(stack.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter with number", () => {
+      const stack = create(
+        <Stack gutter={20}>
+          <Lorem />
+        </Stack>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders cutom gutter with string", () => {
+      const stack = create(
+        <Stack gutter="3ch">
+          <Lorem />
+        </Stack>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
     });
 
     it("renders with theme overrides", () => {
@@ -82,28 +109,16 @@ describe("Stack", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with wrong input", () => {
+    it("renders default with wrong gutter value", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Stack gutter="incorrect">
+        <Stack gutter={{ value: "incorrect" }}>
           <Lorem />
         </Stack>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with console.error with no", () => {
-      expect(console.error).not.toBeCalled();
-
-      create(
-        <Stack>
-          <Lorem />
-        </Stack>
-      );
-
-      expect(console.error).toHaveBeenCalled();
     });
   });
 });

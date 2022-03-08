@@ -23,7 +23,7 @@ export const colors: string[] = [
 
 export const ColoredRect = styled.div<{ bgColor: string }>`
   ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : "")}
-  padding: 100px;
+  padding: 50px;
   text-align: center;
 `;
 ColoredRect.displayName = "ColoredRect";
@@ -33,7 +33,7 @@ export const argTypes = {
     description: "Sets space between each element",
     type: { name: "string", required: true },
     table: {
-      type: { summary: "string" },
+      type: { summary: "number, CSSLength, SpacingOption" },
     },
     control: "select",
     options: [

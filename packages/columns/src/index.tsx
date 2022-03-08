@@ -1,6 +1,7 @@
 import {
-  SpacingOptions,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
@@ -8,10 +9,10 @@ import useContainerQuery from "@bedrock-layout/use-container-query";
 import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 interface ColumnsBaseProps {
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
   columns?: number;
   dense?: boolean;
   forwardedAs?: As<unknown>;
@@ -19,7 +20,7 @@ interface ColumnsBaseProps {
 
 const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
   ({ dense, theme, gutter, columns = 1, style }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
+    const maybeGutter = getSafeGutter(theme, gutter);
     const safeColumns = columns > 0 ? columns : 1;
     return {
       "data-bedrock-columns": dense ? "dense" : "",
@@ -101,7 +102,7 @@ export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
 Columns.displayName = "Columns";
 
 Columns.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   columns: PropTypes.number,
   dense: PropTypes.bool,
   switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

@@ -603,7 +603,6 @@ exports[`PadBox correct usage use padding object 8`] = `
 exports[`PadBox incorrect usage renders default with console error with no input 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 0px;
 }
 
 <div
@@ -678,7 +677,9 @@ exports[`PadBox incorrect usage renders defaults with wrong input in array 1`] =
 exports[`PadBox incorrect usage renders defaults with wrong input in object 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding-inline-start: 0px;
+  -webkit-undefinedpadding-inline-start: 0px;
+  -ms-flex-undefinedpadding-inline-start: 0px;
+  undefinedpadding-inline-start: 0px;
 }
 
 <div

@@ -1,7 +1,8 @@
 import { Grid, GridProps } from "@bedrock-layout/grid";
 import {
+  Gutter,
   SpacingOptions,
-  getSpacingValue,
+  getSafeGutter,
 } from "@bedrock-layout/spacing-constants";
 import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
@@ -25,10 +26,7 @@ const RowSpanner = styled.div`
 
 const safeTheme = {};
 
-const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
-  children,
-  gutter,
-}) => {
+const Resizer: React.FC<{ gutter?: Gutter }> = ({ children, gutter }) => {
   const [rowSpan, setRowSpan] = useState(1);
 
   const theme = React.useContext(ThemeContext) || safeTheme;
@@ -36,7 +34,7 @@ const Resizer: React.FC<{ gutter: keyof SpacingOptions }> = ({
   /* istanbul ignore next */
   const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
     setRowSpan(1);
-    const gapString = getSpacingValue(theme, gutter) ?? "1px";
+    const gapString = getSafeGutter(theme, gutter) ?? "1px";
 
     const maybeGap = isBrowser ? toPX(gapString, target) : null;
 

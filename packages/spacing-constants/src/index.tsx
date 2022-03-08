@@ -153,7 +153,7 @@ function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
   }, {});
 }
 
-type MaybeValue = CSSLength | undefined;
+type MaybeCSSLength = CSSLength | undefined;
 
 type GetSpacingValue = <T>(
   theme: T & {
@@ -161,7 +161,7 @@ type GetSpacingValue = <T>(
     space?: BaseTheme;
   },
   spacingKey: keyof Spacing | keyof SpacingOptions
-) => MaybeValue;
+) => MaybeCSSLength;
 
 export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
   const maybeSpaceingOrDefault = theme.space ?? theme.spacing ?? spacing;
@@ -180,12 +180,43 @@ export const getSpacingValue: GetSpacingValue = (theme, spacingKey) => {
   return isCSSLength ? spacingVal : undefined;
 };
 
+export type Gutter = CSSLength | number | keyof SpacingOptions;
+
+export function getSafeGutter<T extends BaseTheme>(
+  theme: T,
+  gutter?: Gutter
+): MaybeCSSLength {
+  if (typeof gutter === "number" && gutter > 0) return `${gutter}px`;
+
+  const isCSSLength = checkIsCSSLength(gutter as string);
+  if (isCSSLength) return gutter as CSSLength;
+
+  return gutter !== undefined
+    ? getSpacingValue(theme, gutter as keyof SpacingOptions)
+    : undefined;
+}
+
+function gutterValidator<T extends { gutter?: Gutter }>(
+  { gutter }: T,
+  propName: string
+): void {
+  if (gutter === undefined) return;
+
+  const isValid = typeof gutter === "number" || typeof gutter === "string";
+  if (isValid) return;
+
+  console.error(`${propName} needs to be a number, CSSLength or SizesOptions`);
+}
+
+export const validateGutter =
+  gutterValidator as unknown as React.Validator<Gutter>;
+
 type GetSizeValue = <T>(
   theme: T & {
     sizes?: BaseTheme;
   },
   sizingKey: unknown
-) => MaybeValue;
+) => MaybeCSSLength;
 
 export const getSizeValue: GetSizeValue = (theme, sizeKey) => {
   if (typeof sizeKey === "number" || sizeKey === undefined) return undefined;

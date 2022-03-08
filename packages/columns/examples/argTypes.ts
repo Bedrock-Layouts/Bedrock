@@ -3,7 +3,7 @@ export const columnsArgTypes = {
     description: "Sets space between each element",
     type: { name: "string", required: true },
     table: {
-      type: { summary: "string" },
+      type: { summary: "number, CSSLength, SpacingOption" },
     },
     control: "select",
     options: [

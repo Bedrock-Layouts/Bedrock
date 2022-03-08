@@ -68,6 +68,15 @@ describe("Cover", () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
+    it("renders default gutter when none provided", () => {
+      const cover = create(
+        <Cover>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const cover = create(
@@ -77,6 +86,24 @@ describe("Cover", () => {
         );
         expect(cover.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders with custom gutter as number", () => {
+      const cover = create(
+        <Cover gutter={20}>
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with custom gutter as string", () => {
+      const cover = create(
+        <Cover gutter="3ch">
+          <Lorem />
+        </Cover>
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
     });
 
     it("renders with custom minHeight as string", () => {
@@ -151,19 +178,7 @@ describe("Cover", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Cover gutter="incorrect">
-          <Lorem />
-        </Cover>
-      );
-
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders default with console error with no gutter", () => {
-      expect(console.error).not.toBeCalled();
-
-      const errorStack = create(
-        <Cover>
+        <Cover gutter={{ value: "incorrect" }}>
           <Lorem />
         </Cover>
       );

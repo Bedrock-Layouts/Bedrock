@@ -24,14 +24,25 @@ yarn add @bedrock-layout/stack
 
 <ArgsTable story="API" />
 
-## Gutters
+## gutter
 
-The `gutter` prop defines the spacing between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
 
-The following values are available by default:
+Here are the possible values for `gutter` by default:
 
 <Canvas withSource="open">
-  <Story name="Gutters">
+  <Story name="gutter">
+    <h3>Custom gutter as number (20)</h3>
+    <Stack gutter={20}>
+      <Box />
+      <Box />
+    </Stack>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <Stack gutter="3ch">
+      <Box />
+      <Box />
+    </Stack>
     <h3>none</h3>
     <Stack gutter="none">
       <Box />

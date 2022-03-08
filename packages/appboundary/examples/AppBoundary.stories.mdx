@@ -12,7 +12,7 @@ When we think of responsive design, we typically think of phones and tablets. Ho
 
 ## Use case
 
-The `AppBoundary` component is designed to wrap your entire app. By default, it will clamp the width at the `xxlarge` size option, but can also be set to other the valid size options using the `boundarySize` prop.
+The `AppBoundary` component is designed to wrap your entire app. By default, it will clamp the width at the `xxlarge` size option, but can also be set to other the valid size options using the `boundarySize` prop. The `boundarySize` prop can also accept any positive integer or CSSLength as a string.
 
 ## Installation
 
@@ -32,6 +32,24 @@ yarn add @bedrock-layout/appboundary
   <Story name="boundarySize">
     <h3>Default (xxlarge size)</h3>
     <AppBoundary>
+      <div>
+        Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+        porttitor magna id metus lacinia, quis posuere est ultrices. Cras et
+        massa eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a
+        molestie vitae, mattis et lectus.
+      </div>
+    </AppBoundary>
+    <h3>Custom boundary size as a number (320)</h3>
+    <AppBoundary boundarySize={320}>
+      <div>
+        Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
+        porttitor magna id metus lacinia, quis posuere est ultrices. Cras et
+        massa eu nulla elementum porttitor. Vestibulum sapien nunc, finibus a
+        molestie vitae, mattis et lectus.
+      </div>
+    </AppBoundary>
+    <h3>Custom boundary size as a string (60ch)</h3>
+    <AppBoundary boundarySize="60ch">
       <div>
         Aenean pulvinar sed turpis sagittis dapibus. Proin id nunc felis. Donec
         porttitor magna id metus lacinia, quis posuere est ultrices. Cras et

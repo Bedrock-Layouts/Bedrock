@@ -1,11 +1,12 @@
 import {
   CSSLength,
+  Gutter,
   SizesOptions,
-  SpacingOptions,
   checkIsCSSLength,
+  getSafeGutter,
   getSizeValue,
-  getSpacingValue,
   sizes,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import React from "react";
@@ -15,7 +16,7 @@ type MinHeight = CSSLength | number | SizesOptions;
 export interface CoverProps {
   top?: React.ReactNode;
   bottom?: React.ReactNode;
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
   minHeight?: MinHeight;
   stretchContent?: boolean;
 }
@@ -40,7 +41,7 @@ export const Cover = styled.div.attrs<CoverProps>(
     style,
     stretchContent,
   }) => {
-    const maybeGutter = getSpacingValue(theme, gutter);
+    const maybeGutter = getSafeGutter(theme, gutter);
     const safeMinHeight = getSafeMinHeight(theme, minHeight);
 
     const attributeVal = stretchContent === true ? "stretch-content" : "";
@@ -120,7 +121,7 @@ function validateMinHeight({ minHeight }: CoverProps, propName: string) {
 }
 
 Cover.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   minHeight: validateMinHeight as unknown as React.Validator<MinHeight>,
   top: PropTypes.element,
   bottom: PropTypes.element,

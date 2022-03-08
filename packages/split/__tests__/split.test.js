@@ -31,6 +31,15 @@ describe("Split", () => {
       expect(Split).toBeTruthy();
     });
 
+    it("renders default gutter when none provided", () => {
+      const split = create(
+        <Split>
+          <Lorem />
+        </Split>
+      );
+      expect(split.toJSON()).toMatchSnapshot();
+    });
+
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const split = create(
@@ -40,6 +49,24 @@ describe("Split", () => {
         );
         expect(split.toJSON()).toMatchSnapshot();
       });
+    });
+
+    it("renders custom gutter with number", () => {
+      const split = create(
+        <Split gutter={1}>
+          <Lorem />
+        </Split>
+      );
+      expect(split.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders custom gutter with string", () => {
+      const split = create(
+        <Split gutter="3ch">
+          <Lorem />
+        </Split>
+      );
+      expect(split.toJSON()).toMatchSnapshot();
     });
 
     it("renders all the fraction options", () => {
@@ -148,11 +175,11 @@ describe("Split", () => {
       console.error.mockRestore();
     });
 
-    it("renders default with console error with no gutter input", () => {
+    it("renders default with wrong gutter input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Split>
+        <Split gutter={{ value: "incorrect" }}>
           <Lorem />
         </Split>
       );
@@ -161,11 +188,9 @@ describe("Split", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
+    it("renders default with negative number for gutter", () => {
       const errorStack = create(
-        <Split gutter="incorrect">
+        <Split gutter={-1}>
           <Lorem />
         </Split>
       );

@@ -1,18 +1,20 @@
 import {
   CSSLength,
+  Gutter,
   SizesOptions,
   SpacingOptions,
   checkIsCSSLength,
+  getSafeGutter,
   getSizeValue,
-  getSpacingValue,
   sizes,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 type MinItemWidth = number | CSSLength | SizesOptions;
 export interface GridProps {
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
   minItemWidth?: MinItemWidth;
 }
 
@@ -20,7 +22,7 @@ export const Grid = styled.div.attrs<GridProps>(
   ({ style, theme, minItemWidth, gutter }) => {
     const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
 
-    const safeGutter = getSpacingValue(theme, gutter) ?? "0px";
+    const safeGutter = getSafeGutter(theme, gutter);
     return {
       "data-bedrock-grid": "",
       style: {
@@ -76,7 +78,7 @@ function validateMinItemWidth({ minItemWidth }: GridProps, propName: string) {
 }
 
 Grid.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   minItemWidth:
     validateMinItemWidth as unknown as PropTypes.Requireable<MinItemWidth>,
 };

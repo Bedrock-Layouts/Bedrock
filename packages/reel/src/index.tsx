@@ -1,20 +1,21 @@
 import {
-  SpacingOptions,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface ReelProps {
   snapType?: "none" | "proximity" | "mandatory";
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
 }
 
 export const Reel = styled.div.attrs<ReelProps>((props) => {
-  const maybeGutter = getSpacingValue(props.theme, props.gutter);
+  const maybeGutter = getSafeGutter(props.theme, props.gutter);
   return {
     "data-bedrock-reel": props.snapType ? `snapType:${props.snapType}` : "",
-    style: { ...props.style, "--gutter": maybeGutter ?? "0px" },
+    style: { ...props.style, "--gutter": maybeGutter },
   };
 })<ReelProps>`
   box-sizing: border-box;
@@ -50,5 +51,5 @@ Reel.displayName = "Reel";
 
 Reel.propTypes = {
   snapType: PropTypes.oneOf(["none", "proximity", "mandatory"]),
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
 };

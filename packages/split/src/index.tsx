@@ -1,6 +1,7 @@
 import {
-  SpacingOptions,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
@@ -34,23 +35,28 @@ const fractions: Fractions = {
 };
 
 interface SplitBaseProps {
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
   fraction?: FractionTypes;
   forwardedAs?: As<unknown>;
 }
 
-const SplitBase = styled.div.attrs<SplitBaseProps>((props) => ({
-  "data-bedrock-split":
-    props.fraction && fractions[props.fraction]
-      ? `fraction:${props.fraction}`
-      : "",
-}))<SplitBaseProps>`
+const SplitBase = styled.div.attrs<SplitBaseProps>(
+  ({ fraction, theme, gutter, style }) => {
+    const attrString =
+      fraction && fractions[fraction] ? `fraction:${fraction}` : "";
+
+    const maybeGutter = getSafeGutter(theme, gutter);
+
+    return {
+      "data-bedrock-split": attrString,
+      style: { ...style, "--gutter": maybeGutter },
+    };
+  }
+)<SplitBaseProps>`
   box-sizing: border-box;
   > * {
     margin: 0;
   }
-  
-  --gutter:${({ gutter, theme }) => getSpacingValue(theme, gutter) ?? "0px"};
 
   display: grid;
   gap: var(--gutter, 0px);
@@ -103,7 +109,7 @@ export const Split = styled(Splitter).attrs(({ as, forwardedAs }) => {
 Split.displayName = "Split";
 
 Split.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   fraction: PropTypes.oneOf<FractionTypes>(
     Object.keys(fractions) as FractionTypes[]
   ),

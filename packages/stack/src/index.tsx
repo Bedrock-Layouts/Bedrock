@@ -1,24 +1,32 @@
 import {
-  SpacingOptions,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 export interface StackProps {
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
 }
 
-export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
-  return {
-    "data-bedrock-stack": "",
-  };
-})<StackProps>`
+export const Stack = styled.div.attrs<StackProps>(
+  ({ gutter, theme, style }) => {
+    const maybeGutter = getSafeGutter(theme, gutter);
+    return {
+      "data-bedrock-stack": "",
+      style: { ...style, "--gutter": maybeGutter },
+    };
+  }
+)<StackProps>`
+  @property --gutter {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0px;
+  }
   box-sizing: border-box;
   > * {
     margin: 0;
   }
-  --gutter: ${(props) => getSpacingValue(props.theme, props.gutter) ?? "0px"};
 
   display: grid;
   gap: var(--gutter, 0px);
@@ -32,5 +40,5 @@ export const Stack = styled.div.attrs<StackProps>(({ gutter, theme }) => {
 Stack.displayName = "Stack";
 
 Stack.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
 };

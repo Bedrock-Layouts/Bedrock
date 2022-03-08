@@ -15,7 +15,7 @@ Object {
       "rules": Array [
         "
   padding: 0;
-  max-width: 100%;
+  max-inline-size: 100%;
   overflow: hidden;
   height: 100%;
 ",
@@ -747,13 +747,15 @@ Object {
       "isStatic": false,
       "rules": Array [
         "
+  @property --gutter {
+    syntax: \\"<length-percentage>\\";
+    inherits: false;
+    initial-value: 0px;
+  }
   box-sizing: border-box;
   > * {
     margin: 0;
   }
-  --gutter: ",
-        [Function],
-        ";
 
   display: grid;
   gap: var(--gutter, 0px);
@@ -798,6 +800,7 @@ Object {
     "xxlarge": 1920,
   },
   "checkIsCSSLength": [Function],
+  "getSafeGutter": [Function],
   "getSizeValue": [Function],
   "getSpacingValue": [Function],
   "init": [Function],
@@ -915,5 +918,6 @@ Object {
   "useForwardedRef": [Function],
   "useResizeObserver": [Function],
   "useStatefulRef": [Function],
+  "validateGutter": [Function],
 }
 `;

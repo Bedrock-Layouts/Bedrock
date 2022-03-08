@@ -125,6 +125,135 @@ The `minHeight` prop can be used to set the minimum height of the cover. The def
   </Story>
 </Canvas>
 
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
+
+Here are the possible values for `gutter` by default:
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom gutter as number (20)</h3>
+    <Cover
+      minHeight={0}
+      gutter={20}
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <Cover
+      minHeight={0}
+      gutter="3ch"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>none</h3>
+    <Cover
+      minHeight={0}
+      gutter="none"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>xxs</h3>
+    <Cover
+      minHeight={0}
+      gutter="xxs"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>xs</h3>
+    <Cover
+      minHeight={0}
+      gutter="xs"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>sm</h3>
+    <Cover
+      minHeight={0}
+      gutter="sm"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>md</h3>
+    <Cover
+      minHeight={0}
+      gutter="md"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>mdLg</h3>
+    <Cover
+      minHeight={0}
+      gutter="mdLg"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>lg</h3>
+    <Cover
+      minHeight={0}
+      gutter="lg"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>lgXl</h3>
+    <Cover
+      minHeight={0}
+      gutter="lgXl"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>xl</h3>
+    <Cover
+      minHeight={0}
+      gutter="xl"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>xlXXl</h3>
+    <Cover
+      minHeight={0}
+      gutter="xlXXL"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>xxl</h3>
+    <Cover
+      minHeight={0}
+      gutter="xxl"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+  </Story>
+</Canvas>
+
 ## stretchContent
 
 The `stretchContent` prop can be used to stretch the content to the full height of the `Cover` component. If there is a top or bottom section, the content will fill the remaining vertical space.

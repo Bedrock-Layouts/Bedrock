@@ -1,9 +1,9 @@
 import {
-  SpacingOptions,
-  getSpacingValue,
+  Gutter,
+  getSafeGutter,
+  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
-import React from "react";
 import styled from "styled-components";
 
 const justifyMap = {
@@ -20,7 +20,7 @@ const alignMap = {
 export interface InlineClusterProps {
   justify?: keyof typeof justifyMap;
   align?: keyof typeof alignMap;
-  gutter: keyof SpacingOptions;
+  gutter?: Gutter;
 }
 
 export const InlineCluster = styled.div.attrs<InlineClusterProps>(
@@ -31,7 +31,7 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
       "data-bedrock-inline-cluster": `${justifyValue} ${alignValue}`,
       style: {
         ...style,
-        "--gutter": getSpacingValue(theme, gutter),
+        "--gutter": getSafeGutter(theme, gutter),
       },
     };
   }
@@ -59,7 +59,7 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
 InlineCluster.displayName = "InlineCluster";
 
 InlineCluster.propTypes = {
-  gutter: PropTypes.string.isRequired as React.Validator<keyof SpacingOptions>,
+  gutter: validateGutter,
   justify: PropTypes.oneOf<keyof typeof justifyMap>(["start", "center", "end"]),
   align: PropTypes.oneOf<keyof typeof alignMap>([
     "start",
