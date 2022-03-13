@@ -7,6 +7,10 @@ let createNode = jest.fn((node) => ({
   contentRect: { width: 300 },
 }));
 
+async function awaitAnimationFrame() {
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+}
+
 let onChange;
 let unobserve;
 let reset = () => void 0;
@@ -44,6 +48,7 @@ describe("register-resize-callback", () => {
     const node = document.createElement("div");
     const callback = jest.fn();
     registerCallback(node, callback);
+    await awaitAnimationFrame();
 
     expect(callback).toHaveBeenCalledTimes(1);
   });
@@ -54,10 +59,15 @@ describe("register-resize-callback", () => {
     const callback = jest.fn();
 
     const cleanup = registerCallback(node, callback);
+    await awaitAnimationFrame();
+
     expect(callback).toHaveBeenCalledTimes(1);
 
     const cleanup2 = registerCallback(node, jest.fn());
+
     onChange();
+    await awaitAnimationFrame();
+
     expect(callback).toHaveBeenCalledTimes(3);
 
     cleanup();
@@ -81,12 +91,14 @@ describe("register-resize-callback", () => {
     };
 
     const cleanup = registerCallback(node, callbackObj);
+    await awaitAnimationFrame();
 
     expect(callback).toHaveBeenCalledTimes(1);
     expect(callback2).toHaveBeenCalledTimes(0);
 
     callbackObj.current = callback2;
     onChange();
+    await awaitAnimationFrame();
 
     expect(callback).toHaveBeenCalledTimes(1);
     expect(callback2).toHaveBeenCalledTimes(1);
