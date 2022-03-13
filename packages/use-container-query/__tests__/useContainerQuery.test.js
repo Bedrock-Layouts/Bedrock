@@ -11,7 +11,12 @@ let createNode = jest.fn((node) => ({
   contentRect: { width: 300 },
 }));
 
+async function awaitAnimationFrame() {
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+}
+
 let onChange;
+let unobserve;
 let reset = () => void 0;
 ResizeObserver.mockImplementation(
   jest.fn((impl) => {
@@ -22,14 +27,16 @@ ResizeObserver.mockImplementation(
     };
 
     reset = () => map.clear();
+    unobserve = jest.fn((node) => map.delete(node));
 
     return {
       observe: jest.fn((node) => {
-        map.set(node, createNode(node));
-        onChange();
+        const result = createNode(node);
+        map.set(node, result);
+        impl([result]);
       }),
       disconnect: jest.fn(map.clear),
-      unobserve: jest.fn((node) => map.delete(node)),
+      unobserve,
     };
   })
 );
@@ -46,7 +53,8 @@ const HookWrapper = ({ minWidth, maxWidth, withNode = true }) => {
 describe("useContainerQuery", () => {
   let container;
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    await awaitAnimationFrame();
     reset();
     matches = undefined;
     container = null;
@@ -65,6 +73,7 @@ describe("useContainerQuery", () => {
   test("ResizeObserver is called", async () => {
     await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={320} />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(true);
@@ -73,6 +82,7 @@ describe("useContainerQuery", () => {
   it("should match when inbetween minWidth and maxWidth", async () => {
     await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={100} maxWidth={400} />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(true);
@@ -81,6 +91,7 @@ describe("useContainerQuery", () => {
   it("should not match when below minWidth and maxWidth", async () => {
     await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={100} maxWidth={200} />, container);
+      await awaitAnimationFrame();
     });
     expect(matches).toBe(false);
 
@@ -90,6 +101,7 @@ describe("useContainerQuery", () => {
   it("should not match when above minWidth and maxWidth", async () => {
     await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={330} maxWidth={400} />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(false);
@@ -104,6 +116,7 @@ describe("useContainerQuery", () => {
 
     await act(async () => {
       ReactDOM.render(<HookWrapper minWidth={2} />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(true);
@@ -117,12 +130,13 @@ describe("useContainerQuery", () => {
 
     await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(true);
   });
 
-  test("Will return false if no node provided", async () => {
+  it("Will return false if no node provided", async () => {
     createNode.mockImplementation((node) => ({
       target: node,
       contentRect: { width: 1 },
@@ -130,12 +144,13 @@ describe("useContainerQuery", () => {
 
     await act(async () => {
       ReactDOM.render(<HookWrapper withNode={false} />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(false);
   });
 
-  test("Will return false if node has a width of 0px", async () => {
+  it("Will return false if node has a width of 0px", async () => {
     createNode.mockImplementation((node) => ({
       target: node,
       contentRect: { width: 0 },
@@ -143,12 +158,13 @@ describe("useContainerQuery", () => {
 
     await act(async () => {
       ReactDOM.render(<HookWrapper />, container);
+      await awaitAnimationFrame();
     });
 
     expect(matches).toBe(false);
   });
 
-  test("Throws and error when called with a maxWidth less than minWidth", () => {
+  it("Throws and error when called with a maxWidth less than minWidth", () => {
     const renderToThrow = () =>
       act(() => {
         ReactDOM.render(

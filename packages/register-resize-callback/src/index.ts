@@ -15,7 +15,7 @@ const callBackMap = new WeakMap<Element, ObserverCallback[]>();
 export function init(): void {
   if (observer) return;
   observer = new ResizeObserver((entries) => {
-    entries.forEach((entry) => {
+    for (const entry of entries) {
       const maybeCallBacks = callBackMap.get(entry.target);
       /**
        * This is defensive code, but it's possible that get returns undefined
@@ -23,14 +23,17 @@ export function init(): void {
       /* istanbul ignore next */
       const safeCallBacks = maybeCallBacks ?? [];
 
-      safeCallBacks.forEach((cb) => {
-        if (typeof cb === "function") {
-          cb(entry);
-        } else {
-          cb.current(entry);
+      if (safeCallBacks.length === 0) return;
+      requestAnimationFrame(() => {
+        for (const callback of safeCallBacks) {
+          if (typeof callback === "function") {
+            callback(entry);
+          } else {
+            callback.current(entry);
+          }
         }
       });
-    });
+    }
   });
 }
 
