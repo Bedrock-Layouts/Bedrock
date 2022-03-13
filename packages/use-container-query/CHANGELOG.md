@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2022-03-13)
+
+
+### Bug Fixes
+
+* **register-resize-callback:** fix bug where not all callback run ([348407a](https://github.com/Bedrock-Layouts/Bedrock/commit/348407abc3e46be62aace224585ef898de87c8b7))
+
+
+
+
+
 # 1.4.0 (2022-03-03)
 
 
