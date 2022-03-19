@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-resize-observer@1.2.1...@bedrock-layout/use-resize-observer@1.2.2) (2022-03-19)
+
+
+### Bug Fixes
+
+* **bedrock:** small fixes all over ([1edb82d](https://github.com/Bedrock-Layouts/Bedrock/commit/1edb82d50f8ad09972cd44f886849d68889b32c7))
+
+
+
+
+
 ## 1.2.1 (2022-03-13)
 
 
