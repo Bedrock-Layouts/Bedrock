@@ -4,7 +4,7 @@ import {
   registerCallback,
 } from "@bedrock-layout/register-resize-callback";
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
@@ -14,7 +14,7 @@ export default function useResizeObserver<T extends Element>(
 
   const nodeRef = useStatefulRef<T>();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     callbackRef.current = callback;
   });
 
