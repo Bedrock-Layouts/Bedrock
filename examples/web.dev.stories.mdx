@@ -20,6 +20,29 @@ In this page we are recreated some of the patterns from the [web.dev](https://we
 
 Minimal styling has been applied to make the examples more readable.
 
+## 12-span grid
+
+A grid broken up into 12 segments where you can place areas onto the tracks evenly. Uses the `<Columns>` and `<Column>` components.
+
+<Canvas withSource="open">
+  <Story name="12-span grid">
+    <Columns gutter="lg" columns={12}>
+      <Column span={12}>
+        <Box>Span 12</Box>
+      </Column>
+      <Column span={6} offsetEnd={6}>
+        <Box>Span 6 (offsetEnd 6)</Box>
+      </Column>
+      <Column offsetStart={3} offsetEnd={5} span={4}>
+        <Box>Span 4 (offsetStart 3, offsetEnd 5)</Box>
+      </Column>
+      <Column offsetStart={2} span={2}>
+        <Box>Span 2 (offsetStart 2)</Box>
+      </Column>
+    </Columns>
+  </Story>
+</Canvas>
+
 ## Aspect ratio image card
 
 Maintains the aspect ratio of an image in a card, while letting you resize the card. Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
@@ -239,28 +262,5 @@ Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cov
         <Box>:)</Box>
       </Center>
     </Cover>
-  </Story>
-</Canvas>
-
-## 12-span grid
-
-A grid broken up into 12 segments where you can place areas onto the tracks evenly. Uses the `<Columns>` and `<Column>` components.
-
-<Canvas withSource="open">
-  <Story name="12-span grid">
-    <Columns gutter="lg" columns={12}>
-      <Column span={12}>
-        <Box>Span 12</Box>
-      </Column>
-      <Column span={6} offsetEnd={6}>
-        <Box>Span 6 (offsetEnd 6)</Box>
-      </Column>
-      <Column offsetStart={3} offsetEnd={5} span={4}>
-        <Box>Span 4 (offsetStart 3, offsetEnd 5)</Box>
-      </Column>
-      <Column offsetStart={2} span={2}>
-        <Box>Span 2 (offsetStart 2)</Box>
-      </Column>
-    </Columns>
   </Story>
 </Canvas>

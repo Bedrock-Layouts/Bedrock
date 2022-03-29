@@ -45,3 +45,7 @@ html:focus-within {
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
+
+.sbdocs-content.sbdocs-content {
+  max-width: var(--size-xxlarge);
+}
