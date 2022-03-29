@@ -68,6 +68,14 @@ It is important to note that space values can only be of type `string`, `CSSLeng
 
 **Note: If you use any other type for your space values, the types will revert back to Bedrock's default spacing types.**
 
+If you prefer to not to use the `styled-components` `ThemeProvider` and instead use CSS custom properties, you can simply pass in any custom property wrapped in `var()` to the `gutter` or `padding` prop, like this:
+
+```typescript
+  <Stack gutter="var(--space-xxl)">
+    {...}
+  </Stack>
+```
+
 ## No spacing in your design system
 
 In a perfect world we would only work on applications that have a well defined spacing system. However, there are many applications that do not have a well defined spacing system. For these applications, you can use any positive integer or valid `CSSLength` value for the spacing values.

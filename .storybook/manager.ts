@@ -1,26 +1,22 @@
 // .storybook/manager.js
+import "open-props/style";
 
 import "./manager-styles.css";
 
 import { addons } from "@storybook/addons";
 import { create } from "@storybook/theming";
+import openProps from "open-props";
 
 addons.setConfig({
   theme: create({
     base: "light",
     brandTitle: "Bedrock Layout Primitives",
     brandUrl: "/",
-    brandImage: "/Full logo.png",
-    textColor: "#161e2e",
+    brandImage: "/Logo only.png",
+    textColor: openProps.gray9,
     fontBase: '"Roboto", sans-serif',
+    appBorderColor: openProps.gray9,
     appBg: "white",
-    appBorderColor: "white",
   }),
-  toolbar: {
-    title: { hidden: true },
-    zoom: { hidden: true },
-    eject: { hidden: true },
-    copy: { hidden: true },
-    fullscreen: { hidden: true },
-  },
+  isToolshown: false,
 });

@@ -1,14 +1,5 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { PadBox } from '@bedrock-layout/padbox'
-import { Grid } from '@bedrock-layout/grid'
-import { ColumnDrop } from '@bedrock-layout/column-drop'
-import { Cover } from '@bedrock-layout/cover'
-import { Stack } from '@bedrock-layout/stack'
-import { Split } from '@bedrock-layout/split'
-import { Frame } from '@bedrock-layout/frame'
-import { Inline } from '@bedrock-layout/inline'
-import { InlineCluster } from '@bedrock-layout/inline-cluster'
+import { Meta, Preview } from '@storybook/addon-docs/';
+import { Center, PadBox, Grid, ColumnDrop, Cover, Stack, Split, Frame, Reel, Inline, InlineCluster } from '@bedrock-layout/primitives'
 import { Button } from '../ui-components/Button'
 import { Heading } from '../ui-components/Heading'
 import { Avatar } from '../ui-components/Avatar'
@@ -18,7 +9,7 @@ import { LogoOnly } from '../ui-components/LogoOnly'
 
 <Meta title="Overview/Bedrock Layout Primitives" />
 
-<Stack gutter="xxl">
+<Stack gutter="lg">
 <Cover as={Center} maxWidth='90vw' minHeight="40vh">
   <Split gutter="lgXl" switchAt="50rem">
      <Center maxWidth='90%'>
@@ -27,16 +18,20 @@ import { LogoOnly } from '../ui-components/LogoOnly'
     <Stack gutter='lg'>
       <Heading>
         BEDROCK
-        <span style={{fontSize:'clamp(0.7rem, 10vw, 1.7rem)', lineHeight: "2rem", letterSpacing: "0.5ch" }}>
+        <span style={{fontSize:'var(--font-size-fluid-1)', lineHeight: "2rem", letterSpacing: "0.5ch" }}>
           LAYOUT PRIMITIVES
         </span>
       </Heading>
       <Center
         as="p"
         centerText
-        style={{ fontSize: "clamp(0.7rem, 10vw, 1.5rem)" }}
+        style={{ fontSize: "var(--font-size-fluid-0)" }}
       >
-        <strong>Foundational layout building blocks for your React app</strong>
+        <strong>The Lodash of Web Layouts</strong>
+        <p style={{fontSize:"var(--font-weight-fluid-1)"}}>
+          A collection of utility components that are designed to be used as building blocks for
+          your web application's layout.
+        </p>
       </Center>
       <Center centerChildren as='a' href='https://github.com/Bedrock-Layouts/Bedrock/stargazers'>
         <img src='https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social' alt='GitHub Repo stars'/>
@@ -50,41 +45,142 @@ import { LogoOnly } from '../ui-components/LogoOnly'
         </Button>
       </Inline>
     </Stack>
+
   </Split>
 </Cover>
 
-<PadBox as={ColumnDrop} forwardedAs={Center} maxWidth='90vw' noStretchedColumns basis='25rem'  gutter='lg' padding='xl' style={{background:'rgb(249, 250, 251)'}}>
-<div>
-
-## Zero Config
-
-Bedrock Layout Primitives are built using [styled-components](https://styled-components.com/). This allows Bedrock Layout Primitives to be used in any app without any extra setup. Just `yarn add` the desired package(s) and start using them.
-
-</div>
-<div>
+<PadBox padding='xxl' >
 
 ## Composable Layouts
 
-Bedrock Layout Primitives are built to allow you to compose them together to create your own custom layouts. Many "complex" layouts can be created by composing Bedrock Layout Primitives. Learn more about layout composition in the [Introduction](/docs/getting-started-introduction--page#what-is-composition) section.
+<Split fraction='1/3' gutter='xxl' switchAt="42rem" >
+    <div>
 
-</div>
-<div>
+```jsx
+export function Hero() {
+  return (
+    <Stack>
+      <Inline>{/* */}</Inline>
+      <Split>
+        <Cover>
+          <Stack>
+            <h1>{/* */}</h1>
+            <p>{/* */}</p>
+            <Inline>
+              <button>{/* */}</button>
+              <button>{/* */}</button>
+            </Inline>
+          </Stack>
+        </Cover>
+        <Frame>
+          <img />
+        </Frame>
+      </Split>
+    </Stack>
+  );
+}
 
-## Use With Any Design System
+```
 
-You can use Bedrock Layout Primitives with any design system. Bedrock Layout's' spacing scheme can be easily overridden to match your design system. [Check out the instructions on how to integrate the Bedrock Layout Primitives into your Design System.](/docs/getting-started-spacing--page#integrating-with-your-design-system)
+  </div>
+  <section>
 
-</div>
-<div>
+Most of the layouts we use on the web are not that unique. They often can be broken down into just a handful of layout patterns. It is the combination of these patterns that make up the overall layout.
 
-## CSS Only Version
+Bedrock Layout Primitives are built with this in mind. Each component is built to do one layout pattern well. By composing these individual components together you can create your own custom layouts. Many of the "complex" layouts that we make on the web can be created by composing together a handful of the Bedrock Layout Primitives. There are [more examples of layout recipes in our examples section.](/docs/examples-web-dev--12-span-grid#layout-patterns)
 
-Don't want to use React or styled-components? Bedrock Layout Primitives can be used in any app with just CSS. [Check out the instructions on how to use Bedrock Layout Primitives in your app.](/docs/css-only-a-css-only-version--page)
+You can learn more about layout composition in the the [Getting Started Introduction](/docs/getting-started-introduction--page).
 
-</div>
+  </section>
+  </Split>
 </PadBox>
 
-<PadBox as={Center} maxWidth='90vw' padding='xl'>
+<PadBox padding='xxl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-1)'}}>
+
+## Your Design System's Missing Components
+
+<Split gutter='xl' switchAt="40rem">
+  <section>
+
+Your typical design system will have a lot of components, but only a few of them are dedicated to placing those components in your page. Bedrock Layout Primitives are designed to help you augment your design system, by giving you a set of layout primitives that can be composed together to create a complete layout.
+
+You can use Bedrock Layout Primitives with any design system. Bedrock Layout's spacing scheme can be easily overridden to match your design system. [Check out the instructions on how to integrate the Bedrock Layout Primitives into your Design System.](/docs/getting-started-spacing--page#integrating-with-your-design-system)
+
+  </section>
+  <div>
+
+```jsx
+<Grid minItemWidth="30rem">
+  <Card/>
+  <Card/>
+  <Card/>
+</Grid>
+<InlineCluster justify="end">
+  <Button primary>
+    Primary
+  </Button>
+  <Button>
+    Secondary
+  </Button>
+</InlineCluster>
+```
+
+  </div>
+  </Split>
+</PadBox>
+<PadBox padding='xxl' >
+
+## Not Just For React
+
+<Split fraction='2/3' gutter='xl' switchAt="43rem">
+    <div>
+
+```jsx
+<header data-bedrock-cover>
+  <nav data-bedrock-inline-cluster>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div
+    data-bedrock-cover-centered
+    data-bedrock-stack
+  >
+    <h1>Coco Le Belle</h1>
+    <div
+      data-bedrock-split='fraction:1/3'
+    >
+      <p>
+        <strong>Coco Le Belle</strong>
+        is an online fashion boutique.
+      </p>
+      <img src='logo.png' />
+    </div>
+  </div>
+</header>
+
+```
+
+  </div>
+  <section>
+
+Don't want to use React? We have you covered. Bedrock Layout Primitives is also a CSS Framework. Built using data attributes, you still retain that component like developer experience without polluting the your class names. Any app that utilizes html and CSS can take advantage of Bedrock Layouts. [Check out the instructions on how to use Bedrock Layout Primitives in your app.](/docs/css-only-a-css-only-version--page)
+
+A solid.js version is also in the works. You can checkout Solid-Bedrock over at [solid.bedrock-layout.dev](https://solid.bedrock-layout.dev)
+
+  </section>
+  </Split>
+</PadBox>
+<PadBox as={Center} maxWidth='90vw' padding='xxl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-4)'}}>
+
+## Ready to Get Started?
+
+You can start by going through the tutorial over in our [Getting Started Introduction](/docs/getting-started-introduction--page) to learn the basics of how to use Bedrock Layout Primitives.
+
+You can also check out the API of any of our individual components, for example [the Stack component.](/docs/spacer-components-stack--api)
+
+</PadBox>
+<PadBox padding='xxl'>
 
 ## Contributors
 
