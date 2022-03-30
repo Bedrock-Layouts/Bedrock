@@ -49,12 +49,12 @@ import { LogoOnly } from '../ui-components/LogoOnly'
   </Split>
 </Cover>
 
-<PadBox padding='xxl' >
+<PadBox as={Center} maxWidth='90vw' padding='xxl' >
 
 ## Composable Layouts
 
 <Split fraction='1/3' gutter='xxl' switchAt="42rem" >
-    <div>
+    <Reel>
 
 ```jsx
 export function Hero() {
@@ -82,7 +82,7 @@ export function Hero() {
 
 ```
 
-  </div>
+  </Reel>
   <section>
 
 Most of the layouts we use on the web are not that unique. They often can be broken down into just a handful of layout patterns. It is the combination of these patterns that make up the overall layout.
@@ -95,7 +95,7 @@ You can learn more about layout composition in the the [Getting Started Introduc
   </Split>
 </PadBox>
 
-<PadBox padding='xxl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-1)'}}>
+<PadBox as={Center} maxWidth='90vw' padding='xxl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-1)'}}>
 
 ## Your Design System's Missing Components
 
@@ -128,12 +128,12 @@ You can use Bedrock Layout Primitives with any design system. Bedrock Layout's s
   </div>
   </Split>
 </PadBox>
-<PadBox padding='xxl' >
+<PadBox as={Center} maxWidth='90vw' padding='xxl' >
 
 ## Not Just For React
 
 <Split fraction='2/3' gutter='xl' switchAt="43rem">
-    <div>
+    <Reel>
 
 ```jsx
 <header data-bedrock-cover>
@@ -161,7 +161,7 @@ You can use Bedrock Layout Primitives with any design system. Bedrock Layout's s
 
 ```
 
-  </div>
+  </Reel>
   <section>
 
 Don't want to use React? We have you covered. Bedrock Layout Primitives is also a CSS Framework. Built using data attributes, you still retain that component like developer experience without polluting the your class names. Any app that utilizes html and CSS can take advantage of Bedrock Layouts. [Check out the instructions on how to use Bedrock Layout Primitives in your app.](/docs/css-only-a-css-only-version--page)
@@ -180,7 +180,7 @@ You can start by going through the tutorial over in our [Getting Started Introdu
 You can also check out the API of any of our individual components, for example [the Stack component.](/docs/spacer-components-stack--api)
 
 </PadBox>
-<PadBox padding='xxl'>
+<PadBox as={Center} maxWidth='90vw' padding='xxl'>
 
 ## Contributors
 

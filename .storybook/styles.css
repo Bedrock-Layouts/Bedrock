@@ -4,6 +4,7 @@ body {
   margin: 0 auto !important;
   padding: 0 !important;
   max-width: 90vw;
+  font-size: 100%;
 }
 
 :focus:not(:focus-visible) {
@@ -48,4 +49,8 @@ html:focus-within {
 
 .sbdocs-content.sbdocs-content {
   max-width: var(--size-xxlarge);
+}
+
+:is(body, p, .sbdocs-p.sbdocs-p) {
+  font-size: 100%;
 }
