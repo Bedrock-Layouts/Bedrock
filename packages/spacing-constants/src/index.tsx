@@ -1,3 +1,4 @@
+import type React from "react";
 import { DefaultTheme } from "styled-components";
 
 type LowercaseCharacter =

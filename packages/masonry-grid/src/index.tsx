@@ -26,10 +26,13 @@ const RowSpanner = styled.div`
 
 const safeTheme = {};
 
-const Resizer: React.FC<{ gutter?: Gutter }> = ({ children, gutter }) => {
+const Resizer = ({
+  children,
+  gutter,
+}: React.PropsWithChildren<{ gutter?: Gutter }>) => {
   const [rowSpan, setRowSpan] = useState(1);
 
-  const theme = React.useContext(ThemeContext) || safeTheme;
+  const theme = React.useContext(ThemeContext) ?? safeTheme;
 
   /* istanbul ignore next */
   const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
