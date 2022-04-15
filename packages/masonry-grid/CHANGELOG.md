@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.6.3 (2022-04-15)
+
+
+### Bug Fixes
+
+* **fix in types:** fixing types ([db6417a](https://github.com/Bedrock-Layouts/Bedrock/commit/db6417ac40d8ebc40978007f103c3c1be523a61e))
+
+
+
+
+
 ## [2.6.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@2.6.1...@bedrock-layout/masonry-grid@2.6.2) (2022-03-19)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
