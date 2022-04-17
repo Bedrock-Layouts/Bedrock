@@ -1,39 +1,23 @@
+/**
+ * @jest-environment jsdom
+ */
 import "jest-styled-components";
 import "regenerator-runtime/runtime";
 
-Object.defineProperty(window, "CSS", {
+import { vi } from "vitest";
+
+Object.defineProperty(global, "CSS", {
   writable: true,
   value: {
-    supports: jest.fn(),
+    supports: vi.fn(),
   },
 });
 
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(global, "ResizeObserver", {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: true,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-Object.defineProperty(window, "CSS", {
-  writable: true,
-  value: {
-    supports: jest.fn(),
-  },
-});
-
-Object.defineProperty(window, "ResizeObserver", {
-  writable: true,
-  value: jest.fn().mockImplementation(() => ({
-    disconnect: jest.fn(),
-    observe: jest.fn(),
-    unobserve: jest.fn(),
+  value: vi.fn().mockImplementation(() => ({
+    disconnect: vi.fn(),
+    observe: vi.fn(),
+    unobserve: vi.fn(),
   })),
 });

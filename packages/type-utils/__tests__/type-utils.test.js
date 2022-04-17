@@ -1,9 +1,10 @@
-import React from "react";
+import * as React from "react";
+import { vi } from "vitest";
 
 import { forwardRefWithAs } from "../src";
 
-jest.mock("react", () => ({
-  forwardRef: jest.fn(),
+vi.mock("react", () => ({
+  forwardRef: vi.fn(),
 }));
 
 describe("forwardRefWithAs", () => {
@@ -14,6 +15,6 @@ describe("forwardRefWithAs", () => {
   it("should call React.forwardRef", () => {
     forwardRefWithAs(() => null);
 
-    expect(React.forwardRef.mock.calls.length).toBe(1);
+    expect(React.forwardRef).toBeCalled();
   });
 });

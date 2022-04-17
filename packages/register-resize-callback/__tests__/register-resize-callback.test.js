@@ -1,8 +1,10 @@
+import { vi } from "vitest";
+
 import { init, registerCallback } from "../src";
 
-jest.spyOn(console, "error").mockImplementation(() => void 0);
+vi.spyOn(console, "error").mockImplementation(() => void 0);
 
-let createNode = jest.fn((node) => ({
+let createNode = vi.fn((node) => ({
   target: node,
   contentRect: { width: 300 },
 }));
@@ -15,7 +17,7 @@ let onChange;
 let unobserve;
 let reset = () => void 0;
 ResizeObserver.mockImplementation(
-  jest.fn((impl) => {
+  vi.fn((impl) => {
     const map = new Map();
 
     onChange = () => {
@@ -23,15 +25,15 @@ ResizeObserver.mockImplementation(
     };
 
     reset = () => map.clear();
-    unobserve = jest.fn((node) => map.delete(node));
+    unobserve = vi.fn((node) => map.delete(node));
 
     return {
-      observe: jest.fn((node) => {
+      observe: vi.fn((node) => {
         const result = createNode(node);
         map.set(node, result);
         impl([result]);
       }),
-      disconnect: jest.fn(map.clear),
+      disconnect: vi.fn(map.clear),
       unobserve,
     };
   })
@@ -46,7 +48,7 @@ describe("register-resize-callback", () => {
   test("ResizeObserver is called", async () => {
     init();
     const node = document.createElement("div");
-    const callback = jest.fn();
+    const callback = vi.fn();
     registerCallback(node, callback);
     await awaitAnimationFrame();
 
@@ -56,14 +58,14 @@ describe("register-resize-callback", () => {
   test("register and cleanup using callback", async () => {
     init();
     const node = document.createElement("div");
-    const callback = jest.fn();
+    const callback = vi.fn();
 
     const cleanup = registerCallback(node, callback);
     await awaitAnimationFrame();
 
     expect(callback).toHaveBeenCalledTimes(1);
 
-    const cleanup2 = registerCallback(node, jest.fn());
+    const cleanup2 = registerCallback(node, vi.fn());
 
     onChange();
     await awaitAnimationFrame();
@@ -83,8 +85,8 @@ describe("register-resize-callback", () => {
   test("register and cleanup using object", async () => {
     init();
     const node = document.createElement("div");
-    const callback = jest.fn();
-    const callback2 = jest.fn();
+    const callback = vi.fn();
+    const callback2 = vi.fn();
 
     const callbackObj = {
       current: callback,

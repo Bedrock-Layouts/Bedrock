@@ -2,7 +2,7 @@ import {
   InlineCluster,
   InlineClusterProps,
 } from "@bedrock-layout/inline-cluster";
-import { CSSLength } from "@bedrock-layout/spacing-constants";
+import { CSSLength, checkIsCSSLength } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -15,15 +15,13 @@ export interface InlineProps extends InlineClusterProps {
 }
 
 function shouldUseSwitch(switchAt?: SwitchAt) {
-  if (switchAt && switchAt > -1) {
-    return true;
+  if (switchAt === undefined) {
+    return false;
   }
 
-  if (typeof switchAt === "string" && typeof CSS !== undefined) {
-    return CSS.supports(`height: ${switchAt}`);
-  }
-
-  return false;
+  return typeof switchAt === "string"
+    ? checkIsCSSLength(switchAt)
+    : switchAt > -1;
 }
 
 export const Inline = styled(InlineCluster).attrs<InlineProps>(
