@@ -83,6 +83,9 @@ MasonryGrid.propTypes = {
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
  */
+
+const PIXELS_PER_INCH = 96;
+
 /* istanbul ignore next */
 function parseUnit(str: string): [number, string] {
   str = String(str);
@@ -94,34 +97,11 @@ function parseUnit(str: string): [number, string] {
 }
 
 /* istanbul ignore next */
-const PIXELS_PER_INCH: number = isBrowser
-  ? getSizeBrutal("in", document.body)
-  : 96; // 96
-
-/* istanbul ignore next */
-function getPropertyInPX(element: Element, prop: string): number {
-  const [value, units] = parseUnit(
-    getComputedStyle(element).getPropertyValue(prop)
-  );
-  return value * (toPX(units, element) ?? 1);
-}
-
-/* istanbul ignore next */
-function getSizeBrutal(unit: string, element: Element) {
-  const testDIV = document.createElement("div");
-  testDIV.style["height"] = "128" + unit;
-  element.appendChild(testDIV);
-  const size = getPropertyInPX(testDIV, "height") / 128;
-  element.removeChild(testDIV);
-  return size;
-}
-
-/* istanbul ignore next */
-export function toPX(str: string, element?: Element): number | null {
+function toPX(str: string, element?: Element): number | null {
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
-  const safeStr = (str || "px").trim().toLowerCase();
+  const safeStr = (str ?? "px").trim().toLowerCase();
 
   switch (safeStr) {
     case "vmin":
@@ -160,4 +140,21 @@ export function toPX(str: string, element?: Element): number | null {
       return typeof px === "number" ? value * px : null;
     }
   }
+}
+
+/* istanbul ignore next */
+function getPropertyInPX(element: Element, prop: string): number {
+  const [value, units] = parseUnit(
+    getComputedStyle(element).getPropertyValue(prop)
+  );
+  return value * (toPX(units, element) ?? 1);
+}
+
+function getSizeBrutal(unit: string, element: Element) {
+  const testDIV = document.createElement("div");
+  testDIV.style["height"] = "128" + unit;
+  element.appendChild(testDIV);
+  const size = getPropertyInPX(testDIV, "height") / 128;
+  element.removeChild(testDIV);
+  return size;
 }

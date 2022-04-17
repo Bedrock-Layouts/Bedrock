@@ -50,6 +50,7 @@ const SplitBase = styled.div.attrs<SplitBaseProps>(
     return {
       "data-bedrock-split": attrString,
       style: { ...style, "--gutter": maybeGutter },
+      gutter: undefined,
     };
   }
 )<SplitBaseProps>`
@@ -72,22 +73,18 @@ export interface SplitProps extends StackProps, SplitBaseProps {
 const Splitter = forwardRefWithAs<SplitProps, "div">(
   ({ fraction, switchAt, as, ...props }, ref) => {
     const safeRef = useForwardedRef(ref);
-    const [maybePx, setMaybePx] = React.useState<number | null>(null);
 
     const node = safeRef.current;
 
-    React.useEffect(() => {
-      const maybePx =
-        typeof switchAt === "string" ? toPX(switchAt, node) : null;
+    const maybePx = React.useMemo(() => {
+      return typeof switchAt === "string"
+        ? toPX(switchAt, node)
+        : typeof switchAt === "number" && switchAt > -1
+        ? switchAt
+        : null;
+    }, [switchAt, node]);
 
-      setMaybePx(maybePx);
-    }, [node, switchAt]);
-
-    const widthToSwitchAt: number = maybePx
-      ? maybePx
-      : typeof switchAt === "number" && switchAt > -1
-      ? switchAt
-      : 0; //zero is used to make the switchAt a noop
+    const widthToSwitchAt: number = maybePx ? maybePx : 0; //zero is used to make the switchAt a noop
 
     const shouldSwitch = useContainerQuery(node, widthToSwitchAt);
 
@@ -120,12 +117,7 @@ Split.propTypes = {
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
  */
 
-//Logic forked from is-in-browser npm package
-/* istanbul ignore next */
-const isBrowser =
-  typeof window === "object" &&
-  typeof document === "object" &&
-  document.nodeType === 9;
+const PIXELS_PER_INCH = 96;
 
 /* istanbul ignore next */
 function parseUnit(str: string): [number, string] {
@@ -135,27 +127,6 @@ function parseUnit(str: string): [number, string] {
   const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
-}
-/* istanbul ignore next */
-const PIXELS_PER_INCH: number = isBrowser
-  ? getSizeBrutal("in", document.body)
-  : 96; // 96
-
-/* istanbul ignore next */
-function getPropertyInPX(element: Element, prop: string): number {
-  const [value, units] = parseUnit(
-    getComputedStyle(element).getPropertyValue(prop)
-  );
-  return value * (toPX(units, element) ?? 1);
-}
-
-function getSizeBrutal(unit: string, element: Element) {
-  const testDIV = document.createElement("div");
-  testDIV.style["height"] = "128" + unit;
-  element.appendChild(testDIV);
-  const size = getPropertyInPX(testDIV, "height") / 128;
-  element.removeChild(testDIV);
-  return size;
 }
 
 /* istanbul ignore next */
@@ -202,4 +173,21 @@ function toPX(str: string, element?: Element): number | null {
       return typeof px === "number" ? value * px : null;
     }
   }
+}
+
+/* istanbul ignore next */
+function getPropertyInPX(element: Element, prop: string): number {
+  const [value, units] = parseUnit(
+    getComputedStyle(element).getPropertyValue(prop)
+  );
+  return value * (toPX(units, element) ?? 1);
+}
+
+function getSizeBrutal(unit: string, element: Element) {
+  const testDIV = document.createElement("div");
+  testDIV.style["height"] = "128" + unit;
+  element.appendChild(testDIV);
+  const size = getPropertyInPX(testDIV, "height") / 128;
+  element.removeChild(testDIV);
+  return size;
 }

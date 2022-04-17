@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import * as React from "react";
 export function forwardRefWithAs<Props, ComponentType extends As>(
   comp: (
     props: PropsFromAs<ComponentType, Props>,

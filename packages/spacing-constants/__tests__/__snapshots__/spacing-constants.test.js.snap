@@ -1,21 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Spacing Constants constant snapshot 1`] = `
-Object {
-  "breakPoints": Object {
+exports[`Spacing Constants > constant snapshot 1`] = `
+{
+  "breakPoints": {
     "large": 1199,
-    "largeOnly": Array [
+    "largeOnly": [
       1024,
       1199,
     ],
     "medium": 1023,
-    "mediumOnly": Array [
+    "mediumOnly": [
       640,
       1023,
     ],
     "smallOnly": 639,
     "xlarge": 1439,
-    "xlargeOnly": Array [
+    "xlargeOnly": [
       1200,
       1439,
     ],
@@ -26,7 +26,7 @@ Object {
   "getSizeValue": [Function],
   "getSpacingValue": [Function],
   "mergeBreakpoints": [Function],
-  "sizes": Object {
+  "sizes": {
     "large": "1199px",
     "medium": "1023px",
     "small": "639px",
@@ -35,7 +35,7 @@ Object {
     "xxlarge": "1920px",
     "xxsmall": "159px",
   },
-  "spacing": Object {
+  "spacing": {
     "lg": "1rem",
     "lgXl": "1.5rem",
     "md": "0.5rem",
@@ -49,24 +49,25 @@ Object {
     "xxs": "0.0625rem",
   },
   "validateGutter": [Function],
+  Symbol(Symbol.toStringTag): "Module",
 }
 `;
 
-exports[`Spacing Constants does not break if called with no object 1`] = `
-Object {
+exports[`Spacing Constants > does not break if called with no object 1`] = `
+{
   "large": 1199,
-  "largeOnly": Array [
+  "largeOnly": [
     1024,
     1199,
   ],
   "medium": 1023,
-  "mediumOnly": Array [
+  "mediumOnly": [
     640,
     1023,
   ],
   "smallOnly": 639,
   "xlarge": 1439,
-  "xlargeOnly": Array [
+  "xlargeOnly": [
     1200,
     1439,
   ],
@@ -74,21 +75,21 @@ Object {
 }
 `;
 
-exports[`Spacing Constants merges breakpoints 1`] = `
-Object {
+exports[`Spacing Constants > merges breakpoints 1`] = `
+{
   "large": 1199,
-  "largeOnly": Array [
+  "largeOnly": [
     1024,
     1199,
   ],
   "medium": 1023,
-  "mediumOnly": Array [
+  "mediumOnly": [
     640,
     1023,
   ],
   "smallOnly": 639,
   "xlarge": "1300px",
-  "xlargeOnly": Array [
+  "xlargeOnly": [
     1200,
     1439,
   ],
