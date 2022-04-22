@@ -1,5 +1,5 @@
 // .storybook/manager.js
-import "open-props/style";
+import "open-props/open-props.min.css";
 
 import "./manager-styles.css";
 

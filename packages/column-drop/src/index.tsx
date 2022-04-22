@@ -65,6 +65,7 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--gutter, 0px);
 `;
 
