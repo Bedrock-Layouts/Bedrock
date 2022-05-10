@@ -14230,10 +14230,10 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tinypool@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.1.2.tgz#5b1d5f5bb403afac8c67000047951ce76342fda7"
-  integrity sha512-fvtYGXoui2RpeMILfkvGIgOVkzJEGediv8UJt7TxdAOY8pnvUkFg/fkvqTfXG9Acc9S17Cnn1S4osDc2164guA==
+tinypool@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.1.3.tgz#b5570b364a1775fd403de5e7660b325308fee26b"
+  integrity sha512-2IfcQh7CP46XGWGGbdyO4pjcKqsmVqFAPcXfPxcPXmOWt9cYkTP9HcDmGgsfijYoAEc4z9qcpM/BaBz46Y9/CQ==
 
 tinyspy@^0.3.2:
   version "0.3.2"
@@ -14923,7 +14923,7 @@ vite-plugin-turbosnap@^1.0.0:
   resolved "https://registry.yarnpkg.com/vite-plugin-turbosnap/-/vite-plugin-turbosnap-1.0.1.tgz#3eacd101defcce59c8526d5162bf13e3513d247a"
   integrity sha512-isVvISdXZyflIsXYrpTMBnyrtZq92ftohL8/xHi1H0kUwXIFDegqedX1kCKIQ04tjUkphB0cFbGzuvOGVwVTnQ==
 
-vite@^2.6.13, vite@^2.9.5:
+vite@^2.6.13, vite@^2.9.8:
   version "2.9.8"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.8.tgz#2c2cb0790beb0fbe4b8c0995b80fe691a91c2545"
   integrity sha512-zsBGwn5UT3YS0NLSJ7hnR54+vUKfgzMUh/Z9CxF1YKEBVIe213+63jrFLmZphgGI5zXwQCSmqIdbPuE8NJywPw==
@@ -14935,18 +14935,18 @@ vite@^2.6.13, vite@^2.9.5:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.10.0.tgz#ab8930194f2a8943c533cca735cba2bca705d5bc"
-  integrity sha512-8UXemUg9CA4QYppDTsDV76nH0e1p6C8lV9q+o9i0qMSK9AQ7vA2sjoxtkDP0M+pwNmc3ZGYetBXgSJx0M1D/gg==
+vitest@^0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.12.3.tgz#d17b6ffbb17b462779e7ca3502379f34dc09d04d"
+  integrity sha512-Dc4uJAcnUampdJ6+C8IasrmL+Px+oDhS9gxeHlL9uwUzoM0ae2WydAK9UF2THxHszfZogLGT37atQwOkj1Lqvg==
   dependencies:
     "@types/chai" "^4.3.1"
     "@types/chai-subset" "^1.3.3"
     chai "^4.3.6"
     local-pkg "^0.4.1"
-    tinypool "^0.1.2"
+    tinypool "^0.1.3"
     tinyspy "^0.3.2"
-    vite "^2.9.5"
+    vite "^2.9.8"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
