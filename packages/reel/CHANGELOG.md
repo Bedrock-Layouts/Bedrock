@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.3 (2022-05-20)
+
+
+### Bug Fixes
+
+* **reel:** set scroll overflow to auto ([0193c99](https://github.com/Bedrock-Layouts/Bedrock/commit/0193c991995806322b243ee0c4c41aca338a9047)), closes [#1293](https://github.com/Bedrock-Layouts/Bedrock/issues/1293)
+
+
+
+
+
 ## [1.3.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/reel@1.3.1...@bedrock-layout/reel@1.3.2) (2022-04-17)
 
 **Note:** Version bump only for package @bedrock-layout/reel

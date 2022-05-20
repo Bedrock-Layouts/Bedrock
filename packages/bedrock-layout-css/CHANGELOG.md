@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.5.8...@bedrock-layout/bedrock-layout-css@1.5.9) (2022-05-20)
+
+
+### Bug Fixes
+
+* **reel:** set scroll overflow to auto ([0193c99](https://github.com/Bedrock-Layouts/Bedrock/commit/0193c991995806322b243ee0c4c41aca338a9047)), closes [#1293](https://github.com/Bedrock-Layouts/Bedrock/issues/1293)
+
+
+
+
+
 ## [1.5.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@1.5.7...@bedrock-layout/bedrock-layout-css@1.5.8) (2022-04-22)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css

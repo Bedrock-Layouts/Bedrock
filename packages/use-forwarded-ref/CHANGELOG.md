@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2022-05-20)
+
+
+### Features
+
+* **use-forwarded-ref:** make use-forwarded-ref configurable to not be stateful ([7b67006](https://github.com/Bedrock-Layouts/Bedrock/commit/7b67006c79e9073e2194f94c5b441c41b997f104)), closes [#1289](https://github.com/Bedrock-Layouts/Bedrock/issues/1289)
+
+
+
+
+
 ## 1.2.1 (2022-04-17)
 
 **Note:** Version bump only for package @bedrock-layout/use-forwarded-ref
