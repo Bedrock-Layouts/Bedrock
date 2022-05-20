@@ -1,8 +1,8 @@
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
-import { vi } from "vitest";
+import { it, vi } from "vitest";
 
 import useForwardedRef from "../src";
 
@@ -21,8 +21,9 @@ vi.mock("@bedrock-layout/use-stateful-ref", () => ({
 }));
 
 let safeRef;
-const HookWrapper = React.forwardRef((_, ref) => {
-  safeRef = useForwardedRef(ref);
+const HookWrapper = React.forwardRef(({ isStateful }, ref) => {
+  const config = isStateful === undefined ? undefined : { isStateful };
+  safeRef = useForwardedRef(ref, config);
   safeRef.current = "safeRef:current";
   return null;
 });
@@ -37,6 +38,7 @@ describe("useForwardedRef", () => {
 
   afterEach(() => {
     safeRef = undefined;
+
     document.body.removeChild(container);
     container = null;
   });

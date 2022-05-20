@@ -1,10 +1,20 @@
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import { useRef } from "react";
 import React from "react";
 
+export interface Config {
+  isStateful: boolean;
+}
+
 export default function useForwardedRef<T>(
-  forwardedRef: React.Ref<T>
+  forwardedRef: React.Ref<T>,
+  config: Config = { isStateful: true }
 ): React.MutableRefObject<T> {
-  const innerRef = useStatefulRef<T>(null);
+  const statefulRef = useStatefulRef<T>(null);
+  const ref = useRef<T>(null);
+
+  const innerRef = config.isStateful ? statefulRef : ref;
+
   React.useEffect(() => {
     if (!forwardedRef) return;
 
@@ -16,5 +26,5 @@ export default function useForwardedRef<T>(
     }
   });
 
-  return innerRef;
+  return innerRef as React.MutableRefObject<T>;
 }

@@ -27,7 +27,7 @@ export const Reel = styled.div.attrs<ReelProps>((props) => {
   display: flex;
   gap: var(--gutter, 0px);
 
-  overflow-x: scroll;
+  overflow-x: auto;
 
   scroll-snap-type: ${({ snapType = "none" }) => {
     switch (snapType) {

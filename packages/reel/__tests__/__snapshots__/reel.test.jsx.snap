@@ -8,7 +8,7 @@ exports[`Reel > correct usage > renders all the gutter options 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -52,7 +52,7 @@ exports[`Reel > correct usage > renders all the gutter options 2`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -96,7 +96,7 @@ exports[`Reel > correct usage > renders all the gutter options 3`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -140,7 +140,7 @@ exports[`Reel > correct usage > renders all the gutter options 4`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -184,7 +184,7 @@ exports[`Reel > correct usage > renders all the gutter options 5`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -228,7 +228,7 @@ exports[`Reel > correct usage > renders all the gutter options 6`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -272,7 +272,7 @@ exports[`Reel > correct usage > renders all the gutter options 7`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -316,7 +316,7 @@ exports[`Reel > correct usage > renders all the gutter options 8`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -360,7 +360,7 @@ exports[`Reel > correct usage > renders all the gutter options 9`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -404,7 +404,7 @@ exports[`Reel > correct usage > renders all the gutter options 10`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -448,7 +448,7 @@ exports[`Reel > correct usage > renders all the gutter options 11`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -492,7 +492,7 @@ exports[`Reel > correct usage > renders custom gutter as number 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -536,7 +536,7 @@ exports[`Reel > correct usage > renders custom gutter as string 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -580,7 +580,7 @@ exports[`Reel > correct usage > renders default gutter when none supplied 1`] = 
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -624,7 +624,7 @@ exports[`Reel > correct usage > renders snapTypes 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -668,7 +668,7 @@ exports[`Reel > correct usage > renders snapTypes 2`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: x mandatory;
   -moz-scroll-snap-type: x mandatory;
   -ms-scroll-snap-type: x mandatory;
@@ -712,7 +712,7 @@ exports[`Reel > correct usage > renders snapTypes 3`] = `
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: x proximity;
   -moz-scroll-snap-type: x proximity;
   -ms-scroll-snap-type: x proximity;
@@ -756,7 +756,7 @@ exports[`Reel > incorrect usage > renders with console error with incorrect gutt
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;
@@ -800,7 +800,7 @@ exports[`Reel > incorrect usage > renders with console error with incorrect snap
   display: -ms-flexbox;
   display: flex;
   gap: var(--gutter,0px);
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-scroll-snap-type: none;
   -moz-scroll-snap-type: none;
   -ms-scroll-snap-type: none;

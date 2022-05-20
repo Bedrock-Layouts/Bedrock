@@ -10,7 +10,7 @@
 [data-bedrock-reel] {
   display: flex;
   gap: var(--gutter, 0);
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-snap-type: none;
 }
 
