@@ -1141,7 +1141,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.17.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.8.tgz#3e56e4aff81befa55ac3ac6a0967349fd1c5bca2"
   integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
@@ -2903,6 +2903,14 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
+"@storybook/client-logger@6.5.6":
+  version "6.5.6"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.5.6.tgz#6ce56c687dcd7772247ffa3915b44737a62f729c"
+  integrity sha512-hJzhn5EO0S4fUAZkKzBGNACJfupV9n+7TSIaU4mpVP+/ImS9uPdorAAtyqp5HC6R6vA67POoSgX0+qPgZnWvaw==
+  dependencies:
+    core-js "^3.8.2"
+    global "^4.4.0"
+
 "@storybook/components@6.5.3":
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.5.3.tgz#8d643d2d89c298e5e5c2957f7ffb171ba3288ecf"
@@ -3425,12 +3433,21 @@
     resolve-from "^5.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/theming@6.5.3", "@storybook/theming@^6.5.3":
+"@storybook/theming@6.5.3":
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.5.3.tgz#a8df53df2812d49453a3410346123231e028c103"
   integrity sha512-2tM46jahAhKRUzCcoaqPoqs+4imXqbze0dCPZ0cdVnfs14jhMB1lAfGE+diodCCaUcXUu8r2c5dTPKqqM1lHqQ==
   dependencies:
     "@storybook/client-logger" "6.5.3"
+    core-js "^3.8.2"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/theming@^6.5.3":
+  version "6.5.6"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.5.6.tgz#519e1675a7ff5c780f5a41b05b4b679c37b62fe8"
+  integrity sha512-JEKl9gdVD2Ef9xSwRtaq6EpjJD5xe7X2OP/4e61ucrp/rSOk7SOpYUZYQh6PhYLGhnGbgQkedVVc9CUhK8bs6Q==
+  dependencies:
+    "@storybook/client-logger" "6.5.6"
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
 
@@ -12200,14 +12217,7 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-polished@^4.0.5:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-4.1.4.tgz#640293ba834109614961a700fdacbb6599fb12d0"
-  integrity sha512-Nq5Mbza+Auo7N3sQb1QMFaQiDO+4UexWuSGR7Cjb4Sw11SZIJcrrFtiZ+L0jT9MBsUsxDboHVASbCLbE1rnECg==
-  dependencies:
-    "@babel/runtime" "^7.16.7"
-
-polished@^4.2.2:
+polished@^4.0.5, polished@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
   integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
