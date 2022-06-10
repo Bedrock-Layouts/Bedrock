@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.4.8...@bedrock-layout/primitives@1.4.9) (2022-06-10)
+
+
+### Bug Fixes
+
+* update peer dependencies to include React 18 ([cfdfaed](https://github.com/Bedrock-Layouts/Bedrock/commit/cfdfaedaa950645897cf4466c381a9946153ed3e)), closes [#1321](https://github.com/Bedrock-Layouts/Bedrock/issues/1321)
+
+
+
+
+
 ## [1.4.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.4.7...@bedrock-layout/primitives@1.4.8) (2022-05-20)
 
 

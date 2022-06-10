@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.4.4 (2022-06-10)
+
+
+### Bug Fixes
+
+* update peer dependencies to include React 18 ([cfdfaed](https://github.com/Bedrock-Layouts/Bedrock/commit/cfdfaedaa950645897cf4466c381a9946153ed3e)), closes [#1321](https://github.com/Bedrock-Layouts/Bedrock/issues/1321)
+
+
+
+
+
 ## [2.4.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@2.4.2...@bedrock-layout/cover@2.4.3) (2022-04-22)
 
 **Note:** Version bump only for package @bedrock-layout/cover
