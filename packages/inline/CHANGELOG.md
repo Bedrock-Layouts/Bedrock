@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@2.5.4...@bedrock-layout/inline@3.0.0) (2022-06-22)
+
+
+### Features
+
+* **inline:** add min item width to the inline component ([100a4b7](https://github.com/Bedrock-Layouts/Bedrock/commit/100a4b792b1d412c6939bb38c6a3cc7d26ee7fa8))
+
+
+### BREAKING CHANGES
+
+* **inline:** Previously the inline component would attempt to fit all the content when you did
+the switchAt prop.  This will no longer be the case
+
+
+
+
+
 ## 2.5.4 (2022-06-10)
 
 

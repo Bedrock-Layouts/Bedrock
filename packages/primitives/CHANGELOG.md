@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.4.9...@bedrock-layout/primitives@2.0.0) (2022-06-22)
+
+
+### Features
+
+* **columndrop:** change basis prop to be minItemWidth ([68c2a0f](https://github.com/Bedrock-Layouts/Bedrock/commit/68c2a0fbd07f6ea218c1cfe1a4ee05db0f909184)), closes [#1178](https://github.com/Bedrock-Layouts/Bedrock/issues/1178)
+* **inline:** add min item width to the inline component ([100a4b7](https://github.com/Bedrock-Layouts/Bedrock/commit/100a4b792b1d412c6939bb38c6a3cc7d26ee7fa8))
+
+
+### BREAKING CHANGES
+
+* **inline:** Previously the inline component would attempt to fit all the content when you did
+the switchAt prop.  This will no longer be the case
+* **columndrop:** basis will no longer be a valid prop for column-drop.  From now on use
+minItemWidth.
+
+
+
+
+
 ## [1.4.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@1.4.8...@bedrock-layout/primitives@1.4.9) (2022-06-10)
 
 
