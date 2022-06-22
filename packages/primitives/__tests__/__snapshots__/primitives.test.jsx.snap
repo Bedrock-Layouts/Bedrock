@@ -164,7 +164,7 @@ exports[`primitives > primitives snapshot 1`] = `
       "isStatic": false,
       "rules": [
         "
-  @property --basis {
+  @property --minItemWidth {
     syntax: \\"<length-percentage>\\";
     inherits: true;
     initial-value: ",
@@ -181,7 +181,7 @@ exports[`primitives > primitives snapshot 1`] = `
   box-sizing: border-box;
   > * {
     margin: 0;
-    flex-basis: var(--basis, ",
+    flex-basis: var(--minItemWidth, ",
         "159px",
         ");
     flex-grow: ",
@@ -200,8 +200,8 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "foldedComponentIds": [],
     "propTypes": {
-      "basis": [Function],
       "gutter": [Function],
+      "minItemWidth": [Function],
       "noStretchedColumns": [Function],
     },
     "render": [Function],

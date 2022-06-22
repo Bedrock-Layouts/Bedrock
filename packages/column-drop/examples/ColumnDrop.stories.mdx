@@ -127,15 +127,15 @@ Here are the possible values for `gutter` by default:
   </Story>
 </Canvas>
 
-## basis
+## minItemWidth
 
-The `basis` prop defines the width basis of each of the children. The `ColumnDrop` will the optimize how many columns and rows are needed based on that value.
+The `minItemWidth` prop defines the width basis of each of the children. The `ColumnDrop` will the optimize how many columns and rows are needed based on that value.
 
-In the below example, The `basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
 <Canvas withSource="open">
   <Story name="basis">
-    <ColumnDrop gutter="lg" basis="15rem">
+    <ColumnDrop gutter="lg" minItemWidth="15rem">
       <Box />
       <Box />
       <Box />
@@ -152,7 +152,7 @@ In the below example, The `basis` is set to `15rem`. As you resize the window, t
 
 By default, the column-drop component will stretch the columns to fit the container. If you want to prevent this behavior, you can add the `noStretchedColumns` prop. The `ColumnDrop` will then use the `basis` prop to determine the width of each column and center the columns on each row.
 
-In the below example, The `basis` is set to `15rem`. As you resize the window, the ColumnDrop will recalculate and potentially change the count of columns and rows.
+In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the ColumnDrop will recalculate and potentially change the count of columns and rows.
 
 <Canvas withSource="open">
   <Story name="noStretchedColumns">
@@ -194,7 +194,7 @@ export const Template = (args) =>  (
     name="Playground"
     args={{
       gutter: "lg",
-      basis: "15rem",
+      minItemWidth: "15rem",
       noStretchedColumns: false,
     }}
     argTypes={argTypes}

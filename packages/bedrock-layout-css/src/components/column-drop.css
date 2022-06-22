@@ -8,7 +8,7 @@
   initial-value: 0;
 }
 
-@property --basis {
+@property --minItemWidth {
   syntax: "<length-percentage>";
   inherits: true;
   initial-value: 159px;
@@ -24,7 +24,7 @@
 
 [data-bedrock-column-drop] > * {
   margin: 0;
-  flex-basis: var(--basis, 159px);
+  flex-basis: var(--minItemWidth, 159px);
   flex-grow: 1;
   flex-shrink: 1;
 }

@@ -20,8 +20,8 @@ export const argTypes = {
       "xxl",
     ],
   },
-  basis: {
-    description: "Sets the basis of each of the children",
+  minItemWidth: {
+    description: "Sets the minItemWidth of each of the children",
     type: { name: "string" },
     table: {
       type: { summary: "CSSLength" },

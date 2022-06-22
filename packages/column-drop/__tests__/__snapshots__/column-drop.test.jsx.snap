@@ -19,9 +19,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 1`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -36,8 +36,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 1`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0px",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -75,9 +75,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 2`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -92,8 +92,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 2`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0.0625rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -131,9 +131,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 3`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -148,8 +148,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 3`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0.125rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -187,9 +187,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 4`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -204,8 +204,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 4`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0.25rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -243,9 +243,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 5`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -260,8 +260,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 5`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0.5rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -299,9 +299,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 6`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -316,8 +316,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 6`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "0.75rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -355,9 +355,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 7`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -372,8 +372,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 7`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "1rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -411,9 +411,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 8`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -428,8 +428,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 8`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "1.5rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -467,9 +467,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 9`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -484,8 +484,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 9`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "2rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -523,9 +523,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 10`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -540,8 +540,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 10`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "3rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -579,9 +579,9 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 11`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -596,120 +596,8 @@ exports[`ColumnDrop > correct usage > renders all the gutter options 11`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "4rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`ColumnDrop > correct usage > renders custom basis 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: var(--gutter,0px);
-}
-
-.c0 > * {
-  margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-
-<div
-  className="c0"
-  data-bedrock-column-drop=""
-  style={
-    {
-      "--basis": "320px",
-      "--gutter": "1rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`ColumnDrop > correct usage > renders custom basis as string 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: var(--gutter,0px);
-}
-
-.c0 > * {
-  margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-
-<div
-  className="c0"
-  data-bedrock-column-drop=""
-  style={
-    {
-      "--basis": "32rem",
-      "--gutter": "1rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -747,9 +635,9 @@ exports[`ColumnDrop > correct usage > renders custom gutter with number 1`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -764,8 +652,8 @@ exports[`ColumnDrop > correct usage > renders custom gutter with number 1`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "320px",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -803,9 +691,9 @@ exports[`ColumnDrop > correct usage > renders custom gutter with number 2`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -820,8 +708,120 @@ exports[`ColumnDrop > correct usage > renders custom gutter with number 2`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "60ch",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`ColumnDrop > correct usage > renders custom minItemWidth 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: var(--gutter,0px);
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<div
+  className="c0"
+  data-bedrock-column-drop=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minItemWidth": "320px",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`ColumnDrop > correct usage > renders custom minItemWidth as string 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: var(--gutter,0px);
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<div
+  className="c0"
+  data-bedrock-column-drop=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minItemWidth": "32rem",
     }
   }
 >
@@ -859,9 +859,9 @@ exports[`ColumnDrop > correct usage > renders default gutter of 0px when no gutt
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -876,8 +876,8 @@ exports[`ColumnDrop > correct usage > renders default gutter of 0px when no gutt
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": undefined,
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -915,9 +915,9 @@ exports[`ColumnDrop > correct usage > renders with no stretch columns 1`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -932,8 +932,8 @@ exports[`ColumnDrop > correct usage > renders with no stretch columns 1`] = `
   data-bedrock-column-drop="no-stretched-columns"
   style={
     {
-      "--basis": undefined,
       "--gutter": "1rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -971,9 +971,9 @@ exports[`ColumnDrop > correct usage > renders with theme overrides 1`] = `
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -988,8 +988,8 @@ exports[`ColumnDrop > correct usage > renders with theme overrides 1`] = `
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "200px",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -1027,9 +1027,9 @@ exports[`ColumnDrop > incorrect usage > renders default with console error with 
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1044,64 +1044,8 @@ exports[`ColumnDrop > incorrect usage > renders default with console error with 
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "1rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`ColumnDrop > incorrect usage > renders default with console error with basis input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: var(--gutter,0px);
-}
-
-.c0 > * {
-  margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-
-<div
-  className="c0"
-  data-bedrock-column-drop=""
-  style={
-    {
-      "--basis": undefined,
-      "--gutter": "1rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -1139,9 +1083,9 @@ exports[`ColumnDrop > incorrect usage > renders default with console error with 
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1156,8 +1100,64 @@ exports[`ColumnDrop > incorrect usage > renders default with console error with 
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": "1rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`ColumnDrop > incorrect usage > renders default with console error with minItemWidth input 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: var(--gutter,0px);
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<div
+  className="c0"
+  data-bedrock-column-drop=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -1195,9 +1195,9 @@ exports[`ColumnDrop > incorrect usage > renders default with wrong gutter input 
 
 .c0 > * {
   margin: 0;
-  -webkit-flex-basis: var(--basis,159px);
-  -ms-flex-preferred-size: var(--basis,159px);
-  flex-basis: var(--basis,159px);
+  -webkit-flex-basis: var(--minItemWidth,159px);
+  -ms-flex-preferred-size: var(--minItemWidth,159px);
+  flex-basis: var(--minItemWidth,159px);
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1212,8 +1212,8 @@ exports[`ColumnDrop > incorrect usage > renders default with wrong gutter input 
   data-bedrock-column-drop=""
   style={
     {
-      "--basis": undefined,
       "--gutter": undefined,
+      "--minItemWidth": undefined,
     }
   }
 >
