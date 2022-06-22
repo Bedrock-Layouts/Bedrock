@@ -79,17 +79,36 @@ The `stretch` prop can be used to specify a child component that will stretch to
   </Story>
 </Canvas>
 
+## minItemWidth
+
+Some times you want all the items to have a minimum width. By setting the `minItemWidth` prop, you will set the minimum width of each of the children.
+
+This is especially useful with the `switchAt` prop (see below).
+
+In the below example, each of the boxes has an intrinsic width of 50px. The `minItemWidth` will make them `150px` each.
+
+<Canvas withSource="open">
+  <Story name="minItemWidth">
+    <Inline gutter="lg" minItemWidth={150}>
+      <Box style={{}} />
+      <Box />
+      <Box />
+      <Box />
+    </Inline>
+  </Story>
+</Canvas>
+
 ## switchAt
 
 In the below example, the layout will switch to stack when its width becomes less than `45rem`. (Resize your window to see this in action.)
 
 <Canvas withSource="open">
   <Story name="switchAt">
-    <Inline gutter="lg" switchAt="45rem">
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
+    <Inline gutter="lg" switchAt="45rem" minItemWidth={100}>
+      <Box />
+      <Box />
+      <Box />
+      <Box />
     </Inline>
   </Story>
 </Canvas>
@@ -120,6 +139,7 @@ export const Template = (args) =>  (
       align: "start",
       stretch: "end",
       switchAt: "40rem",
+      minItemWidth: "6.25rem",
     }}
     argTypes={argTypes}
   >

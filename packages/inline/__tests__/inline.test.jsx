@@ -48,6 +48,17 @@ describe("Inline", () => {
         expect(inline.toJSON()).toMatchSnapshot();
       });
     });
+
+    it("renders with minItemWidth", () => {
+      [42, "42rem"].forEach((minItemWidth) => {
+        const inline = create(
+          <Inline gutter="lg" minItemWidth={minItemWidth}>
+            <Lorem />
+          </Inline>
+        );
+        expect(inline.toJSON()).toMatchSnapshot();
+      });
+    });
   });
 
   describe("incorrect usage", () => {
@@ -58,10 +69,22 @@ describe("Inline", () => {
     afterEach(() => {
       console.error.mockRestore();
     });
+
     it("renders default with console error with wrong stretch input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
         <Inline gutter="lg" stretch="incorrect">
+          <Lorem />
+        </Inline>
+      );
+      expect(console.error).toBeCalled();
+      expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders default with console error with wrong minItemWidth input", () => {
+      expect(console.error).not.toBeCalled();
+      const errorStack = create(
+        <Inline gutter="lg" minItemWidth="incorrect">
           <Lorem />
         </Inline>
       );

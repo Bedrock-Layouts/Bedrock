@@ -65,17 +65,17 @@ You can adjust the space between the child elements by setting the `--gutter` pr
   </Story>
 </Canvas>
 
-## --basis
+## --minItemWidth
 
-The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--basis` property. By default this is set to `159px`, but you can change this value by setting the `--basis` property in the style.
+The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--minItemWidth` property. By default this is set to `159px`, but you can change this value by setting the `--minItemWidth` property in the style.
 
-In the below example, The `--basis` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+In the below example, The `--minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
 <Canvas withSource="open">
-  <Story name="--basis">
+  <Story name="--minItemWidth">
     <div
       data-bedrock-column-drop
-      style={{ "--gutter": "1rem", "--basis": "15rem" }}
+      style={{ "--gutter": "1rem", "--minItemWidth": "15rem" }}
     >
       <Box />
       <Box />

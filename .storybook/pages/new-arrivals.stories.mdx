@@ -185,7 +185,7 @@ function App() {
       <Center>
         <Stack gutter="xl">
           <h2>New Arrivals</h2>
-          <ColumnDrop gutter="lg" basis="20rem">
+          <ColumnDrop gutter="lg" minItemWidth="20rem">
             {cards.map((title) => (
               <Card key={title} title={title} />
             ))}
@@ -212,7 +212,7 @@ Your browser should now show the following:
   />
 </Center>
 
-The above picture show the cards being optimized to the number of columns that fit the container, based on the `basis` set on the `ColumnDrop` component. When a column drops down to a new row, the precious row's column count does not impact the new row's column count. By default, it will stretch each card, but you can also set the `ColumnDrop` to have `noStretchedColumns` set to `true` to prevent this.
+The above picture show the cards being optimized to the number of columns that fit the container, based on the `minItemWidth` set on the `ColumnDrop` component. When a column drops down to a new row, the precious row's column count does not impact the new row's column count. By default, it will stretch each card, but you can also set the `ColumnDrop` to have `noStretchedColumns` set to `true` to prevent this.
 
 The next option is to use the `Grid` component. So let's update our `App.js` file to use the `Grid` component. We will also need to import the `Grid` component
 
@@ -280,7 +280,7 @@ If you are interested in contributing you can learn more about [contributing cod
 
 Thank you again for taking the time to learn more about Bedrock Layout Primitives. I hope you enjoyed it.
 
-<Inline switchAt="25rem" stretch={1} gutter="md">
+<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-5-the-hero--page">
     The Hero
   </Button>

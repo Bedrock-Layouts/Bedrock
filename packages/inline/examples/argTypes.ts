@@ -58,4 +58,12 @@ export const argTypes = {
       "Sets the width threshold that the split will switch to a Stack layout",
     control: "text",
   },
+  minItemWidth: {
+    description: "Sets the min inline size of each of the children",
+    type: { name: "CSSLength" },
+    table: {
+      type: { summary: "css length-percentage" },
+    },
+    control: "text",
+  },
 };

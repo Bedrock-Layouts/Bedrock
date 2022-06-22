@@ -70,9 +70,9 @@ describe("ColumnDrop", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom basis", () => {
+    it("renders custom minItemWidth", () => {
       const columnDrop = create(
-        <ColumnDrop gutter="lg" basis={320}>
+        <ColumnDrop gutter="lg" minItemWidth={320}>
           <Lorem />
         </ColumnDrop>
       );
@@ -88,9 +88,9 @@ describe("ColumnDrop", () => {
       expect(columnDrop.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom basis as string", () => {
+    it("renders custom minItemWidth as string", () => {
       const columnDrop = create(
-        <ColumnDrop gutter="lg" basis="32rem">
+        <ColumnDrop gutter="lg" minItemWidth="32rem">
           <Lorem />
         </ColumnDrop>
       );
@@ -135,11 +135,11 @@ describe("ColumnDrop", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default with console error with basis input", () => {
+    it("renders default with console error with minItemWidth input", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <ColumnDrop gutter="lg" basis={{ value: "incorrect" }}>
+        <ColumnDrop gutter="lg" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
@@ -165,7 +165,7 @@ describe("ColumnDrop", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <ColumnDrop gutter="lg" basis="garbage">
+        <ColumnDrop gutter="lg" minItemWidth="garbage">
           <Lorem />
         </ColumnDrop>
       );

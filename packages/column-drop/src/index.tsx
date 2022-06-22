@@ -11,39 +11,46 @@ import {
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-type Basis = CSSLength | number | SizesOptions;
+type MinItemWidth = CSSLength | number | SizesOptions;
 
 export interface ColumnDropProps {
   gutter?: Gutter;
-  basis?: Basis;
+  minItemWidth?: MinItemWidth;
   noStretchedColumns?: boolean;
 }
 
-function getSafeBasis<T extends Record<string, unknown>>(
+function getSafeMinItemWidth<T extends Record<string, unknown>>(
   theme: T,
-  basis?: Basis
+  minItemWidth?: MinItemWidth
 ) {
-  if (typeof basis === "number") return `${basis}px`;
-  if (checkIsCSSLength(basis as string)) return basis;
-  return getSizeValue(theme, basis as string);
+  if (typeof minItemWidth === "number") return `${minItemWidth}px`;
+  if (checkIsCSSLength(minItemWidth as string)) return minItemWidth;
+  return getSizeValue(theme, minItemWidth as string);
 }
 
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
-  ({ gutter, theme, style = {}, basis, noStretchedColumns = false }) => {
+  ({ gutter, theme, style = {}, minItemWidth, noStretchedColumns = false }) => {
     const maybeGutter = getSafeGutter(theme, gutter);
 
     const attributeValue =
       noStretchedColumns === true ? "no-stretched-columns" : "";
 
-    const safeBasis = getSafeBasis(theme, basis);
+    const safeMinItemWidth = getSafeMinItemWidth(theme, minItemWidth);
 
     return {
       "data-bedrock-column-drop": attributeValue,
-      style: { ...style, "--gutter": maybeGutter, "--basis": safeBasis },
+      style: {
+        ...style,
+        "--gutter": maybeGutter,
+        "--minItemWidth":
+          typeof safeMinItemWidth === "number"
+            ? `${safeMinItemWidth}px`
+            : safeMinItemWidth,
+      },
     };
   }
 )<ColumnDropProps>`
-  @property --basis {
+  @property --minItemWidth {
     syntax: "<length-percentage>";
     inherits: true;
     initial-value: ${sizes.xxsmall};
@@ -58,7 +65,7 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
   box-sizing: border-box;
   > * {
     margin: 0;
-    flex-basis: var(--basis, ${sizes.xxsmall});
+    flex-basis: var(--minItemWidth, ${sizes.xxsmall});
     flex-grow: ${(props) => (props.noStretchedColumns ? "0" : "1")};
     flex-shrink: 1;
   }
@@ -71,13 +78,16 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
 
 ColumnDrop.displayName = "ColumnDrop";
 
-function validateBasis({ basis }: ColumnDropProps, propName: string) {
-  if (basis === undefined) return;
+function validateMinItemWidth(
+  { minItemWidth }: ColumnDropProps,
+  propName: string
+) {
+  if (minItemWidth === undefined) return;
 
   const isValid =
-    typeof basis === "number" ||
-    checkIsCSSLength(basis as string) ||
-    Object.keys(sizes).includes(basis as string);
+    typeof minItemWidth === "number" ||
+    checkIsCSSLength(minItemWidth as string) ||
+    Object.keys(sizes).includes(minItemWidth as string);
 
   if (isValid) return;
 
@@ -86,6 +96,7 @@ function validateBasis({ basis }: ColumnDropProps, propName: string) {
 
 ColumnDrop.propTypes = {
   gutter: validateGutter,
-  basis: validateBasis as unknown as React.Validator<Basis>,
+  minItemWidth:
+    validateMinItemWidth as unknown as React.Validator<MinItemWidth>,
   noStretchedColumns: PropTypes.bool,
 };
