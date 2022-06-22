@@ -2,7 +2,6 @@ import {
   CSSLength,
   Gutter,
   SizesOptions,
-  SpacingOptions,
   checkIsCSSLength,
   getSafeGutter,
   getSizeValue,
@@ -28,7 +27,10 @@ export const Grid = styled.div.attrs<GridProps>(
       style: {
         ...style,
         "--gutter": safeGutter,
-        "--minItemWidth": safeMinItemWidth,
+        "--minItemWidth":
+          typeof safeMinItemWidth === "number"
+            ? `${safeMinItemWidth}px`
+            : safeMinItemWidth,
       },
     };
   }

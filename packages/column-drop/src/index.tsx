@@ -42,7 +42,10 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
       style: {
         ...style,
         "--gutter": maybeGutter,
-        "--minItemWidth": safeMinItemWidth,
+        "--minItemWidth":
+          typeof safeMinItemWidth === "number"
+            ? `${safeMinItemWidth}px`
+            : safeMinItemWidth,
       },
     };
   }

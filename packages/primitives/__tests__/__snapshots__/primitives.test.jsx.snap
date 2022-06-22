@@ -478,15 +478,30 @@ exports[`primitives > primitives snapshot 1`] = `
     inherits: true;
     initial-value: 0;
   }
+  @property --minItemWidth {
+    syntax: \\"<length-percentage>\\";
+    inherits: false;
+    initial-value: 0;
+  }
   flex-wrap: nowrap;
+
+  > * {
+    margin: 0;
+  }
+
   ",
         [Function],
         "
 
+  &[style*=\\"--minItemWidth\\"] {
+    > * {
+      min-inline-size: var(--minItemWidth, 0);
+    }
+  }
+
   &[style*=\\"--switchAt\\"] {
     flex-wrap: wrap;
     > * {
-      min-inline-size: fit-content;
       flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
     }
   }
@@ -501,6 +516,7 @@ exports[`primitives > primitives snapshot 1`] = `
       "align": [Function],
       "gutter": [Function],
       "justify": [Function],
+      "minItemWidth": [Function],
       "stretch": [Function],
       "switchAt": [Function],
     },
