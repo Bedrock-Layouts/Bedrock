@@ -1157,6 +1157,42 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bedrock-layout/bedrock-layout-css@^1.0.1":
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/bedrock-layout-css/-/bedrock-layout-css-1.5.10.tgz#6ef5fae2f9318259643e81b2d1e6e39a220ca59f"
+  integrity sha512-rabZE1vXiG9LwYHFJrNwcXfMaz10g6HI9i+lkj2WyhfFrGsibzPm7srEx6th7adYHXyWJ9YPPgQ1pgAacWTJRg==
+
+"@bedrock-layout/column-drop@^1.0.0":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/column-drop/-/column-drop-1.4.4.tgz#bf86a1fa32a0c20826a0c2ced89f95e9b0facc83"
+  integrity sha512-XzjNiuWBir+xjcvZ1Nyw0hcCwQx13ZYiTT8cehWFWwxuIz9nNe3voPFPehciXRNFJT72So2N4wWwflfyj65NAg==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.8.3"
+
+"@bedrock-layout/grid@^2.1.0", "@bedrock-layout/grid@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/grid/-/grid-2.4.4.tgz#a1210f4353040b795de258a827ce424d5301058d"
+  integrity sha512-ZKaDJvG0RlVhP/shrqKF5qSSVgXRsa1M/gF1+xXh7m6nh62/DcLkRubshAl+xgFnqx3TIckk5+pJPse3U4VmzA==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.8.3"
+
+"@bedrock-layout/inline@^2.0.16":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/inline/-/inline-2.5.4.tgz#f4abc2efb734c2dc451cdf11ac32ca250b9fddfa"
+  integrity sha512-wpyLZ17DtL6PpAXIIZ6NtBXae2ld5F9tMxVjbst9hEu4msAbDDd2EF3zSWkyAuDY7r/WH1z7E3HXww3bRDs19w==
+  dependencies:
+    "@bedrock-layout/inline-cluster" "^2.6.4"
+    "@bedrock-layout/spacing-constants" "^2.8.3"
+
+"@bedrock-layout/masonry-grid@^2.1.0":
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/masonry-grid/-/masonry-grid-2.6.6.tgz#ddd095b42057c2a6e68f8b235938907dbe76cd6f"
+  integrity sha512-n1mDA08wd1cDgCtNkFHBFJZhWMKCsot0en194W9XO+eCVbzgrkpNeBWCKKdL3EF3auooZqRgRNY5XkyC3etruA==
+  dependencies:
+    "@bedrock-layout/grid" "^2.4.4"
+    "@bedrock-layout/spacing-constants" "^2.8.3"
+    "@bedrock-layout/use-resize-observer" "^1.2.3"
+
 "@bedrock-layout/type-utils@^0.0.12":
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/type-utils/-/type-utils-0.0.12.tgz#194ab4dfe2c03f5e2f33617705122b0fa9b8d270"
@@ -14546,12 +14582,12 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tinypool@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.1.3.tgz#b5570b364a1775fd403de5e7660b325308fee26b"
-  integrity sha512-2IfcQh7CP46XGWGGbdyO4pjcKqsmVqFAPcXfPxcPXmOWt9cYkTP9HcDmGgsfijYoAEc4z9qcpM/BaBz46Y9/CQ==
+tinypool@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.2.2.tgz#9b1da3a4f0c8c44c04e8af8783d9f27f1795bda2"
+  integrity sha512-tp4n5OARNL3v8ntdJUyo5NsDfwvUtu8isB43USjrsQxQrADDKY6UGBkmFaw/2vNmEt8S/uSm2U5FhkiK1eAFGw==
 
-tinyspy@^0.3.2:
+tinyspy@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/tinyspy/-/tinyspy-0.3.3.tgz#8b57f8aec7fe1bf583a3a49cb9ab30c742f69237"
   integrity sha512-gRiUR8fuhUf0W9lzojPf1N1euJYA30ISebSfgca8z76FOvXtVXqd5ojEIaKLWbDQhAaC3ibxZIjqbyi4ybjcTw==
@@ -15208,10 +15244,10 @@ vite-plugin-turbosnap@^1.0.0:
   resolved "https://registry.yarnpkg.com/vite-plugin-turbosnap/-/vite-plugin-turbosnap-1.0.1.tgz#3eacd101defcce59c8526d5162bf13e3513d247a"
   integrity sha512-isVvISdXZyflIsXYrpTMBnyrtZq92ftohL8/xHi1H0kUwXIFDegqedX1kCKIQ04tjUkphB0cFbGzuvOGVwVTnQ==
 
-vite@^2.6.13, vite@^2.9.9:
-  version "2.9.12"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.12.tgz#b1d636b0a8ac636afe9d83e3792d4895509a941b"
-  integrity sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==
+vite@^2.6.13, "vite@^2.9.12 || ^3.0.0-0":
+  version "2.9.13"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.13.tgz#859cb5d4c316c0d8c6ec9866045c0f7858ca6abc"
+  integrity sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==
   dependencies:
     esbuild "^0.14.27"
     postcss "^8.4.13"
@@ -15220,19 +15256,20 @@ vite@^2.6.13, vite@^2.9.9:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@^0.14.2:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.14.2.tgz#ac07b46d3cd3b5667d2bb803962f759a1b8f3f89"
-  integrity sha512-vXQUl8OUCqHmxKWscMGL+6Xl1pBJmYHZ8N85iNpLGrirAC2vhspu7b73ShRcLonmZT44BYZW+LBAVvn0L4jyVA==
+vitest@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.17.1.tgz#0387535624538bfc1fe1a69fac617cca059428e2"
+  integrity sha512-d6NsFC6FPmZ5XdiSYfW5rwJ/b8060wqe2steNNlVbhO69HWma6CucIm5g7PXlCSkmKvrdEbUsZHPAarlH83VGw==
   dependencies:
     "@types/chai" "^4.3.1"
     "@types/chai-subset" "^1.3.3"
+    "@types/node" "*"
     chai "^4.3.6"
     debug "^4.3.4"
     local-pkg "^0.4.1"
-    tinypool "^0.1.3"
-    tinyspy "^0.3.2"
-    vite "^2.9.9"
+    tinypool "^0.2.1"
+    tinyspy "^0.3.3"
+    vite "^2.9.12 || ^3.0.0-0"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
