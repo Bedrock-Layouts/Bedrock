@@ -1,4 +1,4 @@
-import { ColumnDrop } from '@bedrock-layout/column-drop';
+import { ColumnDrop } from '../src/index';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
 
 import { Box } from './Box';
@@ -134,7 +134,7 @@ The `minItemWidth` prop defines the width basis of each of the children. The `Co
 In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
 <Canvas withSource="open">
-  <Story name="basis">
+  <Story name="minItemWidth">
     <ColumnDrop gutter="lg" minItemWidth="15rem">
       <Box />
       <Box />
