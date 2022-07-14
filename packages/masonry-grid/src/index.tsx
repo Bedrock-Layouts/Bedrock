@@ -3,6 +3,7 @@ import {
   Gutter,
   SpacingOptions,
   getSafeGutter,
+  getSizeValue,
 } from "@bedrock-layout/spacing-constants";
 import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
@@ -62,9 +63,19 @@ const Resizer = ({
 };
 
 export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
+  const safeMinItemWidth =
+    getSizeValue(props.theme, props.minItemWidth) ?? props.minItemWidth;
+  const style = props.style ?? {};
   return {
     "data-bedrock-masonry-grid": "",
     "data-bedrock-grid": undefined,
+    style: {
+      ...style,
+      "--minItemWidth":
+        typeof safeMinItemWidth === "number"
+          ? `${safeMinItemWidth}px`
+          : safeMinItemWidth,
+    },
     children: Children.map(props.children, (child) => (
       <Resizer gutter={props.gutter}>{child}</Resizer>
     )),

@@ -19,7 +19,7 @@ export default defineConfig({
       reporter: ["text", "json", "html"],
       lines: 91,
       functions: 88,
-      branches: 92,
+      branches: 91,
       statements: 91,
       exclude: [
         "**/node_modules/**",
