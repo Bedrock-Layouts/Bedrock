@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.5 (2022-07-14)
+
+**Note:** Version bump only for package @bedrock-layout/reel
+
+
+
+
+
 ## [1.3.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/reel@1.3.3...@bedrock-layout/reel@1.3.4) (2022-06-10)
 
 

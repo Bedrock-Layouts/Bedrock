@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@3.0.0...@bedrock-layout/masonry-grid@3.0.1) (2022-07-14)
+
+
+### Bug Fixes
+
+* fix peer dependencies in hooks ([16a3cde](https://github.com/Bedrock-Layouts/Bedrock/commit/16a3cdee04996a3cc360a42720c62be44aa42b38)), closes [#1355](https://github.com/Bedrock-Layouts/Bedrock/issues/1355)
+
+
+
+
+
 # [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@2.6.6...@bedrock-layout/masonry-grid@3.0.0) (2022-06-22)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.2 (2022-07-14)
+
+
+### Bug Fixes
+
+* fix peer dependencies in hooks ([16a3cde](https://github.com/Bedrock-Layouts/Bedrock/commit/16a3cdee04996a3cc360a42720c62be44aa42b38)), closes [#1355](https://github.com/Bedrock-Layouts/Bedrock/issues/1355)
+
+
+
+
+
 ## 1.2.1 (2022-04-17)
 
 **Note:** Version bump only for package @bedrock-layout/use-stateful-ref
