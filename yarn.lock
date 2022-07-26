@@ -1615,11 +1615,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@joshwooding/vite-plugin-react-docgen-typescript@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@joshwooding/vite-plugin-react-docgen-typescript/-/vite-plugin-react-docgen-typescript-0.0.4.tgz#1b41e3c0f6a09b0279e64f225ebfd2fb86a33dff"
-  integrity sha512-ezL7SU//1OV4Oyt/zQ3CsX8uLujVEYUHuULkqgcW6wOuQfRnvgkn99HZtLWwS257GmZVwszGQzhL7VE3PbMAYw==
+"@joshwooding/vite-plugin-react-docgen-typescript@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@joshwooding/vite-plugin-react-docgen-typescript/-/vite-plugin-react-docgen-typescript-0.0.5.tgz#67f6a6e0b532febdd04cf809b3d4ce2fd593e1a5"
+  integrity sha512-HwAEj/vAP1+hzBfIv9DTCyg+1O0/LG48Up7j1RmJ+pFwjb/wRxzUBco4LqKFKe7SZ0M6IyASNh1oKP3yHnJElA==
   dependencies:
+    "@rollup/pluginutils" "^4.2.1"
     glob "^7.2.0"
     glob-promise "^4.2.0"
     magic-string "^0.26.1"
@@ -2765,7 +2766,7 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@rollup/pluginutils@^4.1.1":
+"@rollup/pluginutils@^4.1.1", "@rollup/pluginutils@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
   integrity sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==
@@ -3009,14 +3010,17 @@
     util-deprecate "^1.0.2"
 
 "@storybook/builder-vite@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-0.2.0.tgz#4aada1f705203e43c80ad6e67da9558e881b2a33"
-  integrity sha512-sh6oCqkAnXgo+4bBI3UZ/b2T7LbRePjBnjUJNmHK3CkycnZbXJFQyr1ESzwd1vOpHTSkWbRhDEsV8fl8HbL0iA==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-0.2.1.tgz#66e6f09395dd84329ccf8521b8f4fd283b449689"
+  integrity sha512-fJUd2kLSr7KiuWW/N6IlvT7c5g4zI1PAXbbwXvhtVPhTcAe3yrBU3PpcEG4s2+1Yc0Q4DrSQMj6MwFigcvBc5w==
   dependencies:
-    "@joshwooding/vite-plugin-react-docgen-typescript" "0.0.4"
+    "@joshwooding/vite-plugin-react-docgen-typescript" "0.0.5"
+    "@rollup/pluginutils" "^4.2.1"
+    "@storybook/core-common" "^6.4.3"
     "@storybook/mdx1-csf" "^0.0.4"
+    "@storybook/node-logger" "^6.4.3"
     "@storybook/source-loader" "^6.4.3"
-    "@vitejs/plugin-react" "^2.0.0-beta.1"
+    "@vitejs/plugin-react" "^2.0.0"
     ast-types "^0.14.2"
     es-module-lexer "^0.9.3"
     glob "^7.2.0"
@@ -3188,7 +3192,7 @@
     unfetch "^4.2.0"
     util-deprecate "^1.0.2"
 
-"@storybook/core-common@6.5.9":
+"@storybook/core-common@6.5.9", "@storybook/core-common@^6.4.3":
   version "6.5.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-common/-/core-common-6.5.9.tgz#7ca8258ea2634b1d64695c1e4262f71cc7457989"
   integrity sha512-NxOK0mrOCo0TWZ7Npc5HU66EKoRHlrtg18/ZixblLDWQMIqY9XCck8K1kJ8QYpYCHla+aHIsYUArFe2vhlEfZA==
@@ -3433,7 +3437,7 @@
     prettier ">=2.2.1 <=2.3.0"
     ts-dedent "^2.0.0"
 
-"@storybook/node-logger@6.5.9":
+"@storybook/node-logger@6.5.9", "@storybook/node-logger@^6.4.3":
   version "6.5.9"
   resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-6.5.9.tgz#129cfe0d0f79cab4f6a2ba194d39516680b1626f"
   integrity sha512-nZZNZG2Wtwv6Trxi3FrnIqUmB55xO+X/WQGPT5iKlqNjdRIu/T72mE7addcp4rbuWCQfZUhcDDGpBOwKtBxaGg==
@@ -4105,7 +4109,7 @@
     "@rollup/pluginutils" "^4.1.1"
     react-refresh "^0.10.0"
 
-"@vitejs/plugin-react@^2.0.0-beta.1":
+"@vitejs/plugin-react@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-2.0.0.tgz#12decd097773a00620e44b780b1d2c00df101449"
   integrity sha512-zHkRR+X4zqEPNBbKV2FvWSxK7Q6crjMBVIAYroSU8Nbb4M3E5x4qOiLoqJBHtXgr27kfednXjkwr3lr8jS6Wrw==
