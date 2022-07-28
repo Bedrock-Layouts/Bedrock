@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@3.0.1...@bedrock-layout/grid@3.0.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* **inline:** remove [@property](https://github.com/property) for minItemWidth ([9eaefd8](https://github.com/Bedrock-Layouts/Bedrock/commit/9eaefd8f8a26382583889d268b059e0c72c1e657))
+
+
+
+
+
 ## [3.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@3.0.0...@bedrock-layout/grid@3.0.1) (2022-07-14)
 
 **Note:** Version bump only for package @bedrock-layout/grid
