@@ -8,12 +8,6 @@
   initial-value: 0;
 }
 
-@property --minItemWidth {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 639px;
-}
-
 [data-bedrock-grid] {
   box-sizing: border-box;
   display: grid;

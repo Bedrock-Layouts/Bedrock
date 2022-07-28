@@ -164,14 +164,6 @@ exports[`primitives > primitives snapshot 1`] = `
       "isStatic": false,
       "rules": [
         "
-  @property --minItemWidth {
-    syntax: \\"<length-percentage>\\";
-    inherits: true;
-    initial-value: ",
-        "159px",
-        ";
-  }
-
   @property --gutter {
     syntax: \\"<length-percentage>\\";
     inherits: false;
@@ -395,14 +387,6 @@ exports[`primitives > primitives snapshot 1`] = `
     initial-value: 0;
   }
 
-  @property --minItemWidth {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: ",
-        "639px",
-        ";
-  }
-
   box-sizing: border-box;
   > * {
     margin: 0;
@@ -478,11 +462,7 @@ exports[`primitives > primitives snapshot 1`] = `
     inherits: true;
     initial-value: 0;
   }
-  @property --minItemWidth {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
+
   flex-wrap: nowrap;
 
   > * {

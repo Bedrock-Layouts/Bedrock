@@ -8,12 +8,6 @@
   initial-value: 0;
 }
 
-@property --minItemWidth {
-  syntax: "<length-percentage>";
-  inherits: true;
-  initial-value: 159px;
-}
-
 [data-bedrock-column-drop] {
   box-sizing: border-box;
   display: flex;

@@ -41,12 +41,6 @@ export const Grid = styled.div.attrs<GridProps>(
     initial-value: 0;
   }
 
-  @property --minItemWidth {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: ${sizes.small};
-  }
-
   box-sizing: border-box;
   > * {
     margin: 0;
