@@ -50,12 +50,6 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
     };
   }
 )<ColumnDropProps>`
-  @property --minItemWidth {
-    syntax: "<length-percentage>";
-    inherits: true;
-    initial-value: ${sizes.xxsmall};
-  }
-
   @property --gutter {
     syntax: "<length-percentage>";
     inherits: false;
