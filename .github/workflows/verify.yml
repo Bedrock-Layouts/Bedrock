@@ -40,5 +40,4 @@ jobs:
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npm whoami
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        # run: npx lerna publish --conventional-commits --yes
-        run: yarn publish:fix
+        run: npx lerna publish --conventional-commits --yes
