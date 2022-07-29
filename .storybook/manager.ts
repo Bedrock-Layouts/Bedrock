@@ -8,6 +8,7 @@ import { create } from "@storybook/theming";
 import openProps from "open-props";
 
 addons.setConfig({
+  showToolbar: false,
   theme: create({
     base: "light",
     brandTitle: "Bedrock Layout Primitives",
