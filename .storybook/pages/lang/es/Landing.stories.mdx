@@ -1,0 +1,250 @@
+import { Meta, Preview } from '@storybook/addon-docs/';
+import { Center, PadBox, Grid, ColumnDrop, Cover, Stack, Split, Frame, Reel, Inline, InlineCluster } from '@bedrock-layout/primitives'
+import { Button } from '../ui-components/Button'
+import { Heading } from '../ui-components/Heading'
+import { Avatar } from '../ui-components/Avatar'
+import justLogo from '../assets/Logo only.svg'
+import fullLogo from '../assets/Full logo.png'
+import { LogoOnly } from '../ui-components/LogoOnly'
+
+<Meta title="Overview/Bedrock Layout Primitives" />
+
+<Stack gutter="lg">
+<Cover as={Center} maxWidth='90vw' minHeight="40vh">
+  <Split gutter="lgXl" switchAt="50rem">
+     <Center maxWidth='90%'>
+      <LogoOnly />
+    </Center>
+    <Stack gutter='lg'>
+      <Heading>
+        BEDROCK
+        <span style={{fontSize:'var(--font-size-fluid-2)', lineHeight: "2rem", letterSpacing: "0.5ch" }}>
+          LAYOUT PRIMITIVES
+        </span>
+      </Heading>
+      <Center
+        as="p"
+        centerText
+        style={{ fontSize: "var(--font-size-fluid-1)" }}
+      >
+        <strong>El Lodash de los Diseños Gráficos</strong>
+        <p>
+          Una colección de componentes utilitarios que son diseñados para ser usados como bloques de construcción para el diseño de tu aplicación.
+        </p>
+      </Center>
+      <Center centerChildren as='a' href='https://github.com/Bedrock-Layouts/Bedrock/stargazers'>
+        <img src='https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social' alt='GitHub Repo stars'/>
+      </Center>
+      <Inline gutter="lg" justify="center" switchAt='20rem' minItemWidth="fit-content">
+        <Button primary as="a" href="/?path=/docs/getting-started-introduction--page">
+          Comienza
+        </Button>
+        <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock">
+          GitHub
+        </Button>
+      </Inline>
+    </Stack>
+
+  </Split>
+</Cover>
+
+<PadBox padding='xl' >
+
+## Sistema de diseño de componentes
+
+<Split fraction='1/3' gutter='xxl' switchAt="42rem" >
+    <Reel style={{flexDirection:'column'}}>
+
+```jsx
+export function Hero() {
+  return (
+    <Stack>
+      <Inline>
+        {/* */}
+      </Inline>
+      <Split>
+        <Cover>
+          <Stack>
+            <h1>{/* */}</h1>
+            <p>{/* */}</p>
+            <Inline>
+              <button>
+                {/* */}
+              </button>
+              <button>
+                {/* */}
+              </button>
+            </Inline>
+          </Stack>
+        </Cover>
+        <Frame>
+          <img />
+        </Frame>
+      </Split>
+    </Stack>
+  );
+}
+
+```
+
+  </Reel>
+  <section>
+
+La mayoría de los diseños que usamos en internet no son tan únicos. Frecuentemente pueden ser divididos en una pequeña cantidad de patrones de diseño. Es la combinación de estos patrones los que hacen el diseño gráfico general.
+
+Los diseños de Bedrock Layout Primitives han sido construidos con esta idea en mente. Cada componente está construido para ejecutar bien un patrón de diseño. Con la combinación de estos componentes individuales puedes crear tus propios diseños. Muchos de los diseños ¨complejos¨ que hacemos en internet pueden ser creados combinando una cantidad de Bedrock Layout Primitives. Hay [más ejemplos de recetas de diseño en nuestra sección de ejemplos.](/docs/examples-web-dev--12-span-grid#layout-patterns)
+
+Puedes aprender más sobre la composición de diseños en la [Página de introducción](/docs/getting-started-introduction--page).
+
+  </section>
+  </Split>
+</PadBox>
+
+<PadBox padding='xl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-1)'}}>
+
+## Componentes faltantes en tu sistema de diseño
+
+<Split gutter='xl' switchAt="40rem">
+  <section>
+
+Tu diseño estándar tiene muchos componentes, pero sólo unos pocos de ellos están dedicados a colocar esos componentes en tu página. Bedrock Layout Primitives está diseñado para ayudarte a ampliar tu diseño, brindando un conjunto de primitivas de diseño que pueden ser combinadas para crear un diseño completo.
+
+Puedes usar Bedrock Layout Primitives con cualquier diseño. El esquema de espaciado de Bedrock Layout puede ser fácilmente sobrescrito para que coincida con tu diseño. [Revisa las instrucciones para integrar los Bedrock Layout Primitives en tu diseño.](/docs/getting-started-spacing--page#integrating-with-your-design-system)
+
+  </section>
+  <Reel style={{flexDirection:'column'}}>
+
+```jsx
+<Grid minItemWidth="30rem">
+  <Card/>
+  <Card/>
+  <Card/>
+</Grid>
+<InlineCluster justify="end">
+  <Button primary>
+    Primary
+  </Button>
+  <Button>
+    Secondary
+  </Button>
+</InlineCluster>
+```
+
+  </Reel>
+  </Split>
+</PadBox>
+<PadBox padding='xl' >
+
+## No solamente para React
+
+<Split fraction='2/3' gutter='xl' switchAt="43rem">
+    <Reel style={{flexDirection:'column'}}>
+
+```jsx
+<header data-bedrock-cover>
+  <nav data-bedrock-inline-cluster>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div
+    data-bedrock-cover-centered
+    data-bedrock-stack
+  >
+    <h1>Coco Le Belle</h1>
+    <div
+      data-bedrock-split='fraction:1/3'
+    >
+      <p>
+        <strong>Coco Le Belle</strong>
+        is an online fashion boutique.
+      </p>
+      <img src='logo.png' />
+    </div>
+  </div>
+</header>
+
+```
+
+  </Reel>
+  <section>
+
+¿No quieres usar React? Tenemos lo que necesitas. Bedrock Layout Primitives es también un Framework CSS. Construido usando atributos de datos, sigue siendo un componente como experiencia de desarrollador sin que afecte a tus clases de nombre. Cualquier aplicación que utilice HTML y CSS puede aprovechar Bedrock Layouts. [Revisa las instrucciones para usar Bedrock Layout Primitives en tu aplicación.](/docs/css-only-a-css-only-version--page)
+
+Una vesion de solid.js está en marcha. Puedes revisar Solid-Bedrock en [solid.bedrock-layout.dev](https://solid.bedrock-layout.dev)
+
+  </section>
+  </Split>
+</PadBox>
+<PadBox as={Center} maxWidth='90vw' padding='xxl' style={{background:'var(--gray-1)', borderRadius:'var(--radius-blob-4)'}}>
+
+## ¿Como comenzar?
+
+Puedes comenzar por pasar por el tutorial en nuestra [Página de introducción](/docs/getting-started-introduction--page) para aprender los conceptos básicos de cómo usar Bedrock Layout Primitives.
+
+Tambien puedes revisar la API de cualquiera de nuestros componentes individuales, por ejemplo [el componente Stack.](/docs/spacer-components-stack--api)
+
+</PadBox>
+<PadBox as={Center} maxWidth='90vw' padding='xxl'>
+
+## Colaboradores
+
+Gracias a todos los que han contribuido al desarrollo de Bedrock Layout.
+[Involúcrate!](/docs/overview-contributing--page)
+
+<a href="https://github.com/Bedrock-Layouts/Bedrock/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Bedrock-Layouts/Bedrock" />
+</a>
+
+Adicionalmente a los anteriores, los siguientes han proporcionado retroalimentación, ideas y documentación:
+
+<InlineCluster gutter="md">
+  <a href="https://github.com/ajcwebdev" target="_blank">
+    <Avatar
+      src="https://avatars.githubusercontent.com/u/12433465?v=4"
+      alt="Anthony Campolo ajcwebdev"
+    />
+  </a>
+  <a href="https://github.com/httpete" target="_blank">
+    <Avatar
+      src="https://avatars.githubusercontent.com/u/1200635?v=4"
+      alt="Pete Smith httpete"
+    />
+  </a>
+  <a href="https://github.com/rajatk16" target="_blank">
+    <Avatar
+      src="https://avatars.githubusercontent.com/u/23185733?v=4"
+      alt="Rajat rajatk16"
+    />
+  </a>
+  <a href="https://twitter.com/trostcodes" target="_blank">
+    <Avatar
+      src="https://pbs.twimg.com/profile_images/1411453247932481544/ZUh_TtBa_400x400.jpg"
+      alt="Alex Trost"
+    />
+  </a>
+  <a href="https://twitter.com/chantastic" target="_blank">
+    <Avatar
+      src="https://www.chromatic.com/team/portraits-chan-square.png"
+      alt="Michael Chan"
+    />
+  </a>
+</InlineCluster>
+
+## Patrocina Bedrock Layout
+
+Puedes patrocinar Bedrock Layouts en Github Sponsors.
+
+  <a href="https://github.com/sponsors/Bedrock-Layouts?o=sd&sc=t ">
+    <Button
+      style={{
+        cursor: "pointer",
+        maxWidth: "min-content",
+      }}
+    >
+      Patrocina
+    </Button>
+  </a>
+</PadBox>
+
+</Stack>
