@@ -19,5 +19,4 @@ addons.setConfig({
     appBorderColor: openProps.gray9,
     appBg: "white",
   }),
-  isToolshown: false,
 });
