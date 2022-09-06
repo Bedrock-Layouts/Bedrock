@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-container-query@1.5.0...@bedrock-layout/use-container-query@1.6.0) (2022-09-06)
+
+
+### Features
+
+* fix spelling error and start using named exports ([f30f81a](https://github.com/Bedrock-Layouts/Bedrock/commit/f30f81ae96afebe334866c5e48aa3eb49ad18460))
+
+
+
+
+
 # 1.5.0 (2022-09-06)
 
 
