@@ -1,5 +1,5 @@
-import useContainerQuery from "@bedrock-layout/use-container-query";
-import useStatefulRef from "packages/use-stateful-ref/lib";
+import { useContainerQuery } from "@bedrock-layout/use-container-query";
+import { useStatefulRef } from "packages/use-stateful-ref/lib";
 import React from "react";
 import styled from "styled-components";
 

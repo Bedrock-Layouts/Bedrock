@@ -4,7 +4,9 @@ import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
 import { it, vi } from "vitest";
 
-import useForwardedRef from "../src";
+import * as imports from "../src";
+
+const { useForwardedRef } = imports;
 
 vi.mock("@bedrock-layout/use-stateful-ref", () => ({
   default: vi.fn(() => {

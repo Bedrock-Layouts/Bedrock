@@ -6,7 +6,7 @@ export interface Config {
   isStateful: boolean;
 }
 
-export default function useForwardedRef<T>(
+export function useForwardedRef<T>(
   forwardedRef: React.Ref<T>,
   config: Config = { isStateful: true }
 ): React.MutableRefObject<T> {
@@ -28,3 +28,5 @@ export default function useForwardedRef<T>(
 
   return innerRef as React.MutableRefObject<T>;
 }
+
+export default useForwardedRef;

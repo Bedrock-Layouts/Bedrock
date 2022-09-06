@@ -3,7 +3,9 @@ import ReactDOM, { unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
 
-import useResizeObserver from "../src";
+import * as imports from "../src";
+
+const { useResizeObserver } = imports;
 
 vi.spyOn(console, "error").mockImplementation(() => void 0);
 

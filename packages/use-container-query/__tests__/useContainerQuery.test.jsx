@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
 
-import useContainerQuery from "../src";
+import { useContainterQuery } from "../src";
 
 vi.spyOn(console, "error").mockImplementation(() => void 0);
 
@@ -46,12 +46,12 @@ let matches;
 const HookWrapper = ({ minWidth, maxWidth, withNode = true }) => {
   const node = withNode ? document.createElement("div") : null;
 
-  matches = useContainerQuery(node, minWidth, maxWidth);
+  matches = useContainterQuery(node, minWidth, maxWidth);
 
   return null;
 };
 
-describe("useContainerQuery", () => {
+describe("useContainterQuery", () => {
   let container;
 
   beforeEach(async () => {
@@ -67,8 +67,8 @@ describe("useContainerQuery", () => {
     document.body.removeChild(container);
   });
 
-  test("useContainerQuery is not null", () => {
-    expect(useContainerQuery).toBeTruthy();
+  test("useContainterQuery is not null", () => {
+    expect(useContainterQuery).toBeTruthy();
   });
 
   test("ResizeObserver is called", async () => {

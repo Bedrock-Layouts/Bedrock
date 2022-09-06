@@ -14,7 +14,7 @@ property will trigger a refrender just like updating state.
 ```
 
 ```javascript
-import useStatefulRef from '@bedrock-layout/use-stateful-ref';
+import { useStatefulRef } from '@bedrock-layout/use-stateful-ref';
 
 const App = () => {
   const ref = useStatefulRef(null);

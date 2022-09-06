@@ -1,13 +1,11 @@
 import useResizeObserver from "@bedrock-layout/use-resize-observer";
 import React from "react";
 
-type UseContainterQuery = (
+export function useContainterQuery(
   node: Element | undefined,
-  width: number,
+  width = 1,
   maxWidth?: number
-) => boolean;
-
-const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
+): boolean {
   if (maxWidth !== undefined && maxWidth <= width) {
     throw new Error(
       `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`
@@ -34,6 +32,6 @@ const useContainterQuery: UseContainterQuery = (node, width = 1, maxWidth) => {
   }, node);
 
   return matches;
-};
+}
 
 export default useContainterQuery;

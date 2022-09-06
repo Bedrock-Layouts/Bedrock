@@ -1,4 +1,4 @@
-import useContainerQuery from "@bedrock-layout/use-container-query";
+import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
 import styled from "styled-components";
 
