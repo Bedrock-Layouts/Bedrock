@@ -5,7 +5,7 @@ import {
   getSafeGutter,
   getSizeValue,
 } from "@bedrock-layout/spacing-constants";
-import useResizeObserver from "@bedrock-layout/use-resize-observer";
+import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";

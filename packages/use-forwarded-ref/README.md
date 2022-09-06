@@ -7,7 +7,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 ## Usage
 
 ```javascript
-import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
+import { useForwardedRef } from '@bedrock-layout/use-forwarded-ref';
 
 const ForwardedRefDiv = React.forwardRef((props,ref)=>{
     const innerRef = useForwardedRef(ref)
@@ -37,7 +37,7 @@ The default value is true.
 For example:
 
 ```javascript
-import useForwardedRef from '@bedrock-layout/use-forwarded-ref';
+import { useForwardedRef } from '@bedrock-layout/use-forwarded-ref';
 
 const ForwardedRefDiv = React.forwardRef((props,ref)=>{
     const innerRef = useForwardedRef(ref, {isStateful: false})

@@ -1,4 +1,4 @@
-import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
+import { useForwardedRef } from "@bedrock-layout/use-forwarded-ref";
 import React from "react";
 import styled from "styled-components";
 

@@ -9,7 +9,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 `useResizeObserver` takes a callback that accepts a `ResizeObserverEntry` and will return a ref object to assign the appropriate node.
 
 ```javascript
-import useResizeObserver from '@bedrock-layout/use-resize-observer';
+import { useResizeObserver } from '@bedrock-layout/use-resize-observer';
 
 function Component(props){
 
@@ -24,8 +24,8 @@ function Component(props){
 Optionally, if you already have a node from a ref you are using you can pass it in as a second argument. **Note:** If you choose to use it this way, the node must be stateful either by using `@bedrock-layout/use-stateful-ref` or using a `React.useState` hook with the ref. If you are using the returned ref object, the node passed in will be ignored.
 
 ```javascript
-import useResizeObserver from '@bedrock-layout/use-resize-observer';
-import useStatefulRef from '@bedrock-layout/use-stateful-ref';
+import { useResizeObserverc} from '@bedrock-layout/use-resize-observer';
+import { useStatefulRef } from '@bedrock-layout/use-stateful-ref';
 
 function Component(props){
   const statefulRef = useStatefulRef()

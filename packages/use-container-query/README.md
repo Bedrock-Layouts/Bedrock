@@ -7,7 +7,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 ## Usage
 
 ```javascript
-import useContainerQuery from '@bedrock-layout/use-container-query';
+import { useContainerQuery } from '@bedrock-layout/use-container-query';
 
 const Div = React.forwardRef(props,ref)=>{
   const [node,setRef] = React.useState(null)
@@ -20,7 +20,7 @@ const Div = React.forwardRef(props,ref)=>{
 Or you can provide a range
 
 ```javascript
-import useContainerQuery from '@bedrock-layout/use-container-query';
+import { useContainerQuery } from '@bedrock-layout/use-container-query';
 
 const Div = React.forwardRef(props,ref)=>{
   const [node,setRef] = React.useState(null)

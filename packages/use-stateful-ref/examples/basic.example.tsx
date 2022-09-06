@@ -1,4 +1,4 @@
-import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import React from "react";
 import styled from "styled-components";
 

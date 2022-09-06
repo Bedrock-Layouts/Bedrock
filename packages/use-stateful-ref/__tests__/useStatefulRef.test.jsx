@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
 
-import useStatefulRef from "../src";
+import * as imports from "../src";
+
+const { useStatefulRef } = imports;
 
 vi.spyOn(React, "useState");
 

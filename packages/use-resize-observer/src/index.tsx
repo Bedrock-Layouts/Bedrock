@@ -6,7 +6,7 @@ import {
 import useStatefulRef from "@bedrock-layout/use-stateful-ref";
 import { useEffect, useRef } from "react";
 
-export default function useResizeObserver<T extends Element>(
+export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
   node?: T
 ): React.MutableRefObject<T> {
@@ -33,3 +33,5 @@ export default function useResizeObserver<T extends Element>(
 
   return nodeRef;
 }
+
+export default useResizeObserver;
