@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2022-09-06)
+
+
+### Features
+
+* add named exports with defaults ([ec16b0a](https://github.com/Bedrock-Layouts/Bedrock/commit/ec16b0a6fe5079199c60550eb60c8da2f7d9aa30))
+
+
+
+
+
 ## [3.0.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@3.0.1...@bedrock-layout/masonry-grid@3.0.2) (2022-07-28)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
