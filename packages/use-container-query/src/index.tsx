@@ -1,7 +1,7 @@
-import useResizeObserver from "@bedrock-layout/use-resize-observer";
+import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
 import React from "react";
 
-export function useContainterQuery(
+export function useContainerQuery(
   node: Element | undefined,
   width = 1,
   maxWidth?: number
@@ -34,4 +34,4 @@ export function useContainterQuery(
   return matches;
 }
 
-export default useContainterQuery;
+export default useContainerQuery;
