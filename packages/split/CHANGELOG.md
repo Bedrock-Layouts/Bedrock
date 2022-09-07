@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.5.0...@bedrock-layout/split@2.6.0) (2022-09-07)
+
+
+### Features
+
+* move all imports to named imports only ([de8607f](https://github.com/Bedrock-Layouts/Bedrock/commit/de8607fc8030eaa384b7a3603183b7a51e3c3182))
+
+
+
+
+
 # [2.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.4.9...@bedrock-layout/split@2.5.0) (2022-09-06)
 
 
