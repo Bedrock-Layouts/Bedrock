@@ -1,5 +1,5 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
-import useContainerQuery from "@bedrock-layout/use-container-query";
+import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
 import styled, { ThemeProvider } from "styled-components";

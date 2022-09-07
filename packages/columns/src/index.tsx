@@ -5,8 +5,8 @@ import {
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
-import useContainerQuery from "@bedrock-layout/use-container-query";
-import useForwardedRef from "@bedrock-layout/use-forwarded-ref";
+import { useContainerQuery } from "@bedrock-layout/use-container-query";
+import { useForwardedRef } from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
