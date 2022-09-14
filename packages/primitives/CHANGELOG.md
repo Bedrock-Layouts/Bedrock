@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.0.5...@bedrock-layout/primitives@2.1.0) (2022-09-14)
+
+
+### Features
+
+* **split:** refactor underline CSS to no longer need Javascript ([95cf5c3](https://github.com/Bedrock-Layouts/Bedrock/commit/95cf5c3260127bbd06b3a5156c87ac523c72b8d6))
+
+
+
+
+
 ## [2.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.0.4...@bedrock-layout/primitives@2.0.5) (2022-09-07)
 
 **Note:** Version bump only for package @bedrock-layout/primitives

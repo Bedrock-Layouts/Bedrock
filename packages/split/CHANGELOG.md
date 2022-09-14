@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.6.0...@bedrock-layout/split@2.7.0) (2022-09-14)
+
+
+### Features
+
+* **split:** refactor underline CSS to no longer need Javascript ([95cf5c3](https://github.com/Bedrock-Layouts/Bedrock/commit/95cf5c3260127bbd06b3a5156c87ac523c72b8d6))
+
+
+
+
+
 # [2.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.5.0...@bedrock-layout/split@2.6.0) (2022-09-07)
 
 
