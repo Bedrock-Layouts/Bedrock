@@ -7,6 +7,14 @@ export const argTypes = {
     description:
       "Sets the width threshold that the split will switch to a Stack layout",
   },
+  minItemWidth: {
+    description: "Sets the min inline size of each of the children",
+    type: { name: "CSSLength" },
+    table: {
+      type: { summary: "css length-percentage" },
+    },
+    control: "text",
+  },
   fraction: {
     description: "Sets the fractional split",
     table: {

@@ -7,41 +7,76 @@
   initial-value: 0;
 }
 
+@property --switchAt {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 0;
+}
+
 [data-bedrock-split] {
   box-sizing: border-box;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--gutter, 0);
-  grid-template-columns: 1fr 1fr;
 }
 
 [data-bedrock-split] > * {
+  box-sizing: border-box;
   margin: 0;
+  flex-grow: 1;
 }
 
-[data-bedrock-split~="fraction:1/4"] {
-  grid-template-columns: 1fr 3fr;
+/* All the Fraction options */
+[data-bedrock-split~="fraction:1/4"] > *:nth-child(odd) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
 }
 
-[data-bedrock-split~="fraction:1/3"] {
-  grid-template-columns: 1fr 2fr;
+[data-bedrock-split~="fraction:1/3"] > *:nth-child(odd) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(33.333% - var(--gutter) / 3));
 }
 
-[data-bedrock-split~="fraction:1/2"] {
-  grid-template-columns: 1fr 1fr;
+[data-bedrock-split~="fraction:1/2"] > *:nth-child(odd) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(50% - var(--gutter) / 2));
 }
 
-[data-bedrock-split~="fraction:2/3"] {
-  grid-template-columns: 2fr 1fr;
+[data-bedrock-split~="fraction:2/3"] > *:nth-child(even) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(33.333% - var(--gutter) / 3));
 }
 
-[data-bedrock-split~="fraction:3/4"] {
-  grid-template-columns: 3fr 1fr;
+[data-bedrock-split~="fraction:3/4"] > *:nth-child(even) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
 }
 
-[data-bedrock-split~="fraction:auto-start"] {
-  grid-template-columns: auto 1fr;
+[data-bedrock-split~="fraction:auto-start"] > *:nth-child(odd) {
+  flex-basis: var(--minItemWidth, 0);
 }
 
-[data-bedrock-split~="fraction:auto-end"] {
-  grid-template-columns: 1fr auto;
+[data-bedrock-split~="fraction:auto-end"] > *:nth-child(even) {
+  flex-basis: var(--minItemWidth, 0);
+}
+
+:is([data-bedrock-split~="fraction:1/4"], [data-bedrock-split~="fraction:1/3"], [data-bedrock-split~="fraction:1/2"], [data-bedrock-split~="fraction:auto-start"])
+  > *:nth-child(even) {
+  --largestWidth: calc(100% - var(--gutter, 0px));
+  flex-basis: calc(
+    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+  );
+  min-inline-size: max(
+    min(var(--minItemWidth, 0), 100%),
+    calc(50% - var(--gutter))
+  );
+  flex-grow: 999;
+}
+
+:is([data-bedrock-split~="fraction:3/4"], [data-bedrock-split~="fraction:2/3"], [data-bedrock-split~="fraction:auto-end"])
+  > *:nth-child(odd) {
+  --largestWidth: calc(100% - var(--gutter, 0px));
+  flex-basis: calc(
+    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+  );
+  min-inline-size: max(
+    min(var(--minItemWidth, 0), 100%),
+    calc(50% - var(--gutter))
+  );
+  flex-grow: 999;
 }

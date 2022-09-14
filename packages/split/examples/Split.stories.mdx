@@ -147,13 +147,53 @@ Here are the possible values for `gutter` by default:
   </Story>
 </Canvas>
 
+### With minItemWidth
+
+The `minItemWidth` prop defines the minimum inline size of each child.
+
+If the minimum inline size can not be maintained, it will move to a stacking layout.
+
+(Resize window to observe the changes)
+
+<Canvas withSource="open">
+  <Story name="With minItemWidth">
+    <h3>With fraction of 2/3 and minItemWidth of 40ch</h3>
+    <Split gutter="lg" fraction="2/3" minItemWidth="40ch">
+      <Box />
+      <Box />
+    </Split>
+    <h3>With auto-start and minItemWidth of 30ch</h3>
+    <Split gutter="lg" fraction="auto-start" minItemWidth="30ch">
+      <Box />
+      <Box />
+    </Split>
+  </Story>
+</Canvas>
+
 ### With switchAt
 
-The below example will switch the layout to stack when the width is less than `45rem`. (Resize your window to see this in action.)
+If you set the `switchAt` property, the inline will switch to a stacking layout if the width of the element is below the threshold set by the `switchAt` property.
+
+This can be used with `minItemWidth` and it will switch to a stacking layout at which ever size is largest.
+
+The below example will switch to a stack when it is less than `45rem`.
+
+(Resize your window to see this in action.)
 
 <Canvas withSource="open">
   <Story name="With switchAt">
-    <Split gutter="lg" fraction="1/2" switchAt="45rem">
+    <h3>With fraction:3/4</h3>
+    <Split fraction="2/3" gutter="md" switchAt="45rem">
+      <Box />
+      <Box />
+    </Split>
+    <h3>With auto-start with 20rem minItemWidth</h3>
+    <Split
+      fraction="auto-start"
+      gutter="md"
+      switchAt="45rem"
+      minItemWidth="20rem"
+    >
       <Box />
       <Box />
     </Split>
@@ -175,7 +215,12 @@ export const Template = (args) =>  (
   <Story
     name="Playground"
     argTypes={argTypes}
-    args={{ fraction: "1/2", gutter: "lg", switchAt: "30rem" }}
+    args={{
+      fraction: "1/2",
+      gutter: "lg",
+      switchAt: "30rem",
+      minItemWidth: "30ch",
+    }}
   >
     {Template.bind({})}
   </Story>
