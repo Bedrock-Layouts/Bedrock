@@ -57,7 +57,10 @@
 
 :is([data-bedrock-split~="fraction:1/4"], [data-bedrock-split~="fraction:1/3"], [data-bedrock-split~="fraction:1/2"], [data-bedrock-split~="fraction:auto-start"])
   > *:nth-child(even) {
-  flex-basis: calc((var(--switchAt, 0) - (100% - var(--gutter, 0px))) * 999);
+  --largestWidth: calc(100% - var(--gutter, 0px));
+  flex-basis: calc(
+    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+  );
   min-inline-size: max(
     min(var(--minItemWidth, 0), 100%),
     calc(50% - var(--gutter))
@@ -67,7 +70,10 @@
 
 :is([data-bedrock-split~="fraction:3/4"], [data-bedrock-split~="fraction:2/3"], [data-bedrock-split~="fraction:auto-end"])
   > *:nth-child(odd) {
-  flex-basis: calc((var(--switchAt, 0) - (100% - var(--gutter, 0px))) * 999);
+  --largestWidth: calc(100% - var(--gutter, 0px));
+  flex-basis: calc(
+    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+  );
   min-inline-size: max(
     min(var(--minItemWidth, 0), 100%),
     calc(50% - var(--gutter))

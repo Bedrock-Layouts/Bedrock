@@ -235,19 +235,17 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 
 ## Sidbar says
 
-A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Inline>` component.
+A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Split>` component.
 
 <Canvas withSource="open">
   <Story name="Sidbar says">
-    <Inline gutter="md" stretch={1} align="stretch">
-      <Box contentEditable style={{ width: "max(100px, 25%)" }}>
-        Min: 100px / Max: 25%
+    <Split gutter="md" fraction="1/4" minItemWidth="100px">
+      <Box>Min: 100px / Max: 25%</Box>
+      <Box>
+        This element takes the second position, meaning it takes up the rest of
+        the remaining space.
       </Box>
-      <Box contentEditable>
-        This element takes the second position (stretch:1), meaning it takes up
-        the rest of the remaining space.
-      </Box>
-    </Inline>
+    </Split>
   </Story>
 </Canvas>
 

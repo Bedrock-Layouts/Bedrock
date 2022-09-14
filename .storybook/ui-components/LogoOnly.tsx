@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const SVG = styled.svg`
   width: 100%;
+  max-width: 400px;
   height: auto;
 `;
 
