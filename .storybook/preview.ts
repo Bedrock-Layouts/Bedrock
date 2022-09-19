@@ -7,6 +7,7 @@ import { create } from "@storybook/theming";
 
 export const parameters = {
   viewMode: "docs",
+  previewTabs: { canvas: { hidden: true } },
   docs: {
     theme: create({
       base: "light",
