@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-forwarded-ref@1.5.0...@bedrock-layout/use-forwarded-ref@1.6.0) (2022-09-19)
+
+
+### Features
+
+* **split:** fix bug in split where it wont work with max-inline-size set ([05a4e14](https://github.com/Bedrock-Layouts/Bedrock/commit/05a4e1498fda813a361b54c2a71735d2673f1109)), closes [#1466](https://github.com/Bedrock-Layouts/Bedrock/issues/1466)
+
+
+
+
+
 # [1.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-forwarded-ref@1.4.0...@bedrock-layout/use-forwarded-ref@1.5.0) (2022-09-06)
 
 

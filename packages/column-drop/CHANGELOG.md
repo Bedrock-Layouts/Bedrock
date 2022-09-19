@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2022-09-19)
+
+
+### Features
+
+* **split:** fix bug in split where it wont work with max-inline-size set ([05a4e14](https://github.com/Bedrock-Layouts/Bedrock/commit/05a4e1498fda813a361b54c2a71735d2673f1109)), closes [#1466](https://github.com/Bedrock-Layouts/Bedrock/issues/1466)
+
+
+
+
+
 ## [2.0.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@2.0.1...@bedrock-layout/column-drop@2.0.2) (2022-07-28)
 
 
