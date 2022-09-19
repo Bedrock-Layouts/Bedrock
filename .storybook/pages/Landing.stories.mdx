@@ -6,12 +6,18 @@ import { Avatar } from '../ui-components/Avatar'
 import justLogo from '../assets/Logo only.svg'
 import fullLogo from '../assets/Full logo.png'
 import { LogoOnly } from '../ui-components/LogoOnly'
+import { SwitchToDocs } from '../ui-components/SwitchToDocs'
 
-<Meta title="Overview/Bedrock Layout Primitives" />
+<Meta
+  title="Overview/Bedrock Layout Primitives"
+  parameters={{ viewMode: "docs", previewTabs: { canvas: { hidden: true } } }}
+/>
+
+<SwitchToDocs />
 
 <Stack gutter="lg">
 <Cover as={Center} maxWidth='90vw' minHeight="40vh">
-  <Split gutter="lgXl" switchAt="50rem">
+  <Split gutter="lgXl" fraction='1/3' switchAt="50rem">
      <Center centerChildren maxWidth='90%'>
       <LogoOnly />
     </Center>

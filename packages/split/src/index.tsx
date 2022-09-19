@@ -88,6 +88,7 @@ export const Split = styled.div.attrs<SplitProps>(
     box-sizing: border-box;
     margin: 0;
     flex-grow: 1;
+    max-inline-size: unset;
   }
 
   &[data-bedrock-split~="fraction:1/4"] > *:nth-child(odd) {
