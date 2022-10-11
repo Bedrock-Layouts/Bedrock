@@ -1,7 +1,7 @@
 import { Split } from '@bedrock-layout/split';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
 
-import { Box } from './Box';
+import { Component } from './Component';
 import { argTypes } from './argTypes';
 
 <Meta
@@ -36,40 +36,40 @@ The `fraction` prop defines the fraction of the container width to use for the s
   <Story name="fraction">
     <h3>1/4</h3>
     <Split gutter="lg" fraction="1/4">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>1/3</h3>
     <Split gutter="lg" fraction="1/3">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>1/2</h3>
     <Split gutter="lg" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>2/3</h3>
     <Split gutter="lg" fraction="2/3">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>3/4</h3>
     <Split gutter="lg" fraction="3/4">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>auto-start</h3>
-    <p>(The first box has a width of 100px)</p>
+    <p>(The first Component has a width of 100px)</p>
     <Split gutter="lg" fraction="auto-start">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>auto-end</h3>
-    <p>(The second box has a width of 100px)</p>
+    <p>(The second Component has a width of 100px)</p>
     <Split gutter="lg" fraction="auto-end">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
   </Story>
 </Canvas>
@@ -85,68 +85,68 @@ Here are the possible values for `gutter` by default:
   <Story name="gutter">
     <h3>Custom gutter as number (20)</h3>
     <Split gutter={20} fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>Custom gutter as string ("3ch")</h3>
     <Split gutter="3ch" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>none</h3>
     <Split gutter="none" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>xxs</h3>
     <Split gutter="xxs" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>xs</h3>
     <Split gutter="xs" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>sm</h3>
     <Split gutter="sm" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>md</h3>
     <Split gutter="md" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>mdLg</h3>
     <Split gutter="mdLg" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>lg</h3>
     <Split gutter="lg" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>lgXl</h3>
     <Split gutter="lgXl" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>xl</h3>
     <Split gutter="xl" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>xlXXl</h3>
     <Split gutter="xlXXl" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>xxl</h3>
     <Split gutter="xxl" fraction="1/2">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
   </Story>
 </Canvas>
@@ -163,13 +163,13 @@ If the minimum inline size can not be maintained, it will move to a stacking lay
   <Story name="With minItemWidth">
     <h3>With fraction of 2/3 and minItemWidth of 40ch</h3>
     <Split gutter="lg" fraction="2/3" minItemWidth="40ch">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>With auto-start and minItemWidth of 30ch</h3>
     <Split gutter="lg" fraction="auto-start" minItemWidth="30ch">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
   </Story>
 </Canvas>
@@ -186,10 +186,10 @@ The below example will switch to a stack when it is less than `45rem`.
 
 <Canvas withSource="open">
   <Story name="With switchAt">
-    <h3>With fraction:3/4</h3>
+    <h3>With fraction: 2/3</h3>
     <Split fraction="2/3" gutter="md" switchAt="45rem">
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
     <h3>With auto-start with 20rem minItemWidth</h3>
     <Split
@@ -198,8 +198,8 @@ The below example will switch to a stack when it is less than `45rem`.
       switchAt="45rem"
       minItemWidth="20rem"
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
   </Story>
 </Canvas>
@@ -210,8 +210,8 @@ Experiment with this story with the Controls addon in the Canvas tab above.
 
 export const Template = (args) =>  (
     <Split {...args}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </Split>
 );
 

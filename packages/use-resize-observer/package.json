@@ -46,8 +46,8 @@
     "clean:build": "rimraf lib",
     "build": "vite build && tsc --emitDeclarationOnly",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
-    "fix-format": "yarn prettier -- --write",
-    "check-format": "yarn prettier -- --list-different",
+    "fix-format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
     "check-types": "tsc --noEmit"
   },
   "bugs": {

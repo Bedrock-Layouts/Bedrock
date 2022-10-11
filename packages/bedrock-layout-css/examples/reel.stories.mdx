@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box, colors } from './Box';
+import { Component, colors } from './Component';
 
 import "../src/components/reel.css"
 import "../src/components/spacing-properties.css"
@@ -40,13 +40,13 @@ You can adjust the space between the child elements by setting the `--gutter` pr
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-reel style={{ "--gutter": "var(--space-md)" }}>
       {colors.map((color, i) => (
-        <Box key={i} color={color} />
+        <Component key={i} color={color} />
       ))}
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-reel style={{ "--gutter": "2rem" }}>
       {colors.map((color, i) => (
-        <Box key={i} color={color} />
+        <Component key={i} color={color} />
       ))}
     </div>
   </Story>
@@ -75,7 +75,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: "100%" }} />
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>mandatory</h3>
@@ -85,7 +85,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: "100%" }} />
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>proximity</h3>
@@ -95,7 +95,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
       style={{ "--gutter": "var(--space-md)" }}
     >
       {colors.map((color, i) => (
-        <Box key={i} color={color} style={{ minWidth: "100%" }} />
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
   </Story>

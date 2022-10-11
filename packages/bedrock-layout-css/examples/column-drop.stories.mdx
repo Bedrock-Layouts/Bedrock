@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box } from './Box';
+import { Component } from './Component';
 
 import "../src/components/column-drop.css"
 import "../src/components/spacing-properties.css"
@@ -41,26 +41,26 @@ You can adjust the space between the child elements by setting the `--gutter` pr
       data-bedrock-column-drop
       style={{ "--gutter": "var(--space-md)", "--minItemWidth": "25rem" }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>Any CSS Length</h3>
     <div
       data-bedrock-column-drop
       style={{ "--gutter": "2rem", "--minItemWidth": "25rem" }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -77,14 +77,14 @@ In the below example, The `--minItemWidth` is set to `15rem`. As you resize the 
       data-bedrock-column-drop
       style={{ "--gutter": "1rem", "--minItemWidth": "15rem" }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -101,14 +101,14 @@ In the below example, The `--basis` is set to `15rem`. As you resize the window,
       data-bedrock-column-drop="no-stretched-columns"
       style={{ "--gutter": "1rem", "--basis": "15rem" }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>

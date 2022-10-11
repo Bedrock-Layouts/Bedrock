@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box } from './Box';
+import { Component } from './Component';
 
 import "../src/components/stack.css"
 import "../src/components/spacing-properties.css"
@@ -38,17 +38,17 @@ You can adjust the space between the child elements by setting the `--gutter` pr
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-stack style={{ "--gutter": "var(--space-md)" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-stack style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>

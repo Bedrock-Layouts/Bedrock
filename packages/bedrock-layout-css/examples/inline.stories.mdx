@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box } from './Box';
+import { Component } from './Component';
 
 import "../src/components/inline.css"
 import "../src/components/spacing-properties.css"
@@ -37,17 +37,17 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-inline style={{ "--gutter": "var(--space-md)" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-inline style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -62,24 +62,24 @@ You set the justification by setting the `justify` property on the `data-bedrock
   <Story name="justify">
     <h3>justify:start</h3>
     <div data-bedrock-inline="justify:start" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>justify:center</h3>
     <div data-bedrock-inline="justify:center" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>justify:end</h3>
     <div data-bedrock-inline="justify:end" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -94,31 +94,31 @@ You can set the alignment of the inline's children by setting the `align` proper
   <Story name="align">
     <h3>align:start</h3>
     <div data-bedrock-inline="align:start" style={{ "--gutter": "2rem" }}>
-      <Box style={{ height: 200 }} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>align:center</h3>
     <div data-bedrock-inline="align:center" style={{ "--gutter": "2rem" }}>
-      <Box style={{ height: 200 }} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>align:end</h3>
     <div data-bedrock-inline="align:end" style={{ "--gutter": "2rem" }}>
-      <Box style={{ height: 200 }} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>align:stretch</h3>
     <div data-bedrock-inline="align:stretch" style={{ "--gutter": "2rem" }}>
-      <Box style={{ height: 200 }} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -144,24 +144,24 @@ The `stretch` prop accepts the following values: `stretch:start`, `stretch:end`,
   <Story name="stretch">
     <h3>start</h3>
     <div data-bedrock-inline="stretch:start" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>end</h3>
     <div data-bedrock-inline="stretch:end" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>all</h3>
     <div data-bedrock-inline="stretch:all" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -174,43 +174,43 @@ Unlike the `Inline` component, the `stretch` property can't be set to any intege
   <Story name="stretch:index">
     <h3>0</h3>
     <div data-bedrock-inline="stretch:0" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>1</h3>
     <div data-bedrock-inline="stretch:1" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>2</h3>
     <div data-bedrock-inline="stretch:2" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>3</h3>
     <div data-bedrock-inline="stretch:3" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>4</h3>
     <div data-bedrock-inline="stretch:4" style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -229,10 +229,10 @@ The below example will switch to a stack when it is less than `45rem`.
       data-bedrock-inline
       style={{ "--switchAt": "45rem", "--gutter": "2rem" }}
     >
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
-      <Box style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
     </div>
   </Story>
 </Canvas>
