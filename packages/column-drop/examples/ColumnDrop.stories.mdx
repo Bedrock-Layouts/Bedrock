@@ -1,7 +1,7 @@
 import { ColumnDrop } from '../src/index';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
 
-import { Box } from './Box';
+import { Component } from './Component';
 import { argTypes } from './argTypes'
 
 <Meta
@@ -39,94 +39,94 @@ Here are the possible values for `gutter` by default:
   <Story name="gutter">
     <h3>Custom gutter as number (20)</h3>
     <ColumnDrop gutter={20}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>Custom gutter as string ("3ch")</h3>
     <ColumnDrop gutter="3ch">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>none</h3>
     <ColumnDrop gutter="none">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>xxs</h3>
     <ColumnDrop gutter="xxs">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>xs</h3>
     <ColumnDrop gutter="xs">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>sm</h3>
     <ColumnDrop gutter="sm">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>md</h3>
     <ColumnDrop gutter="md">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>mdLg</h3>
     <ColumnDrop gutter="mdLg">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>lg</h3>
     <ColumnDrop gutter="lg">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>lgXl</h3>
     <ColumnDrop gutter="lgXl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>xl</h3>
     <ColumnDrop gutter="xl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>xlXXl</h3>
     <ColumnDrop gutter="xlXXl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
     <h3>xxl</h3>
     <ColumnDrop gutter="xxl">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
   </Story>
 </Canvas>
@@ -140,14 +140,14 @@ In the below example, The `minItemWidth` is set to `15rem`. As you resize the wi
 <Canvas withSource="open">
   <Story name="minItemWidth">
     <ColumnDrop gutter="lg" minItemWidth="15rem">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
   </Story>
 </Canvas>
@@ -161,14 +161,14 @@ In the below example, The `minItemWidth` is set to `15rem`. As you resize the wi
 <Canvas withSource="open">
   <Story name="noStretchedColumns">
     <ColumnDrop noStretchedColumns gutter="lg" basis="15rem">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
   </Story>
 </Canvas>
@@ -183,13 +183,13 @@ Experiment with this story with the Controls addon in the Canvas tab.
 
 export const Template = (args) =>  (
    <ColumnDrop {...args}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </ColumnDrop>
 );
 

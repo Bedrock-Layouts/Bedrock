@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box } from './Box';
+import { Component } from './Component';
 
 import "../src/components/columns.css"
 import "../src/components/spacing-properties.css"
@@ -39,23 +39,23 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
       data-bedrock-columns
       style={{ "--gutter": "var(--space-md)", "--columns": 4 }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-columns style={{ "--gutter": "2rem", "--columns": 4 }}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -64,7 +64,7 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
 
 By default, the number of columns will be one. You can set the number of columns by setting the `--columns` property in the inline style.
 
-The below example is a 4 column layout. Each box will take up one column by default.
+The below example is a 4 column layout. Each Component will take up one column by default.
 
 <Canvas withSource="open">
   <Story name="--columns">
@@ -72,13 +72,13 @@ The below example is a 4 column layout. Each box will take up one column by defa
       data-bedrock-columns
       style={{ "--gutter": "var(--space-md)", "--columns": 4 }}
     >
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -89,22 +89,22 @@ By adding the `data-bedrock-column` attribute to an element, it will be styled a
 
 You can adjust the number of columns that the element spans by setting the `--span` property in the inline style.
 
-The column component is wrapping the blue and green boxes. It is then setting the blue box to span 3 columns and the green to span 2
+The column component is wrapping the blue and green Componentes. It is then setting the blue Component to span 3 columns and the green to span 2
 
 <Canvas withSource="open">
   <Story name="--span">
     <div data-bedrock-columns style={{ "--gutter": "1rem", "--columns": 4 }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
       <div data-bedrock-column style={{ "--span": 3 }}>
-        <Box style={{ background: "blue" }} />
+        <Component style={{ background: "blue" }} />
       </div>
       <div data-bedrock-column style={{ "--span": 2 }}>
-        <Box style={{ background: "green" }} />
+        <Component style={{ background: "green" }} />
       </div>
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -119,17 +119,17 @@ You can choose to have a dense layout by setting the `dense` value on the `data-
       data-bedrock-columns="dense"
       style={{ "--gutter": "1rem", "--columns": 4 }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
       <div data-bedrock-column style={{ "--span": 3 }}>
-        <Box style={{ background: "blue" }} />
+        <Component style={{ background: "blue" }} />
       </div>
       <div data-bedrock-column style={{ "--span": 2 }}>
-        <Box style={{ background: "green" }} />
+        <Component style={{ background: "green" }} />
       </div>
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -138,22 +138,22 @@ You can choose to have a dense layout by setting the `dense` value on the `data-
 
 If you want the have the element offset by `n` number of columns, before or after , you can set the `--offsetStart` or `--offsetEnd` property in the inline style of the `data-bedrock-column` element.
 
-In the below code, the blue box is `--offsetStart` of 1 and the green box has an `--offsetEnd` of 2
+In the below code, the blue Component is `--offsetStart` of 1 and the green Component has an `--offsetEnd` of 2
 
 <Canvas withSource="open">
   <Story name="offsetStart and offsetEnd">
     <div data-bedrock-columns style={{ "--gutter": "1rem", "--columns": 4 }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
       <div data-bedrock-column style={{ "--offsetStart": 1 }}>
-        <Box style={{ background: "blue" }} />
+        <Component style={{ background: "blue" }} />
       </div>
       <div data-bedrock-column style={{ "--offsetEnd": 2 }}>
-        <Box style={{ background: "green" }} />
+        <Component style={{ background: "green" }} />
       </div>
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>

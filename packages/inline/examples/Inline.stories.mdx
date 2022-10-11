@@ -1,7 +1,7 @@
 import { Inline } from '../src/index';
 import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
 
-import { Box } from './Box';
+import { Component } from './Component';
 import { argTypes } from './argTypes'
 
 <Meta
@@ -38,10 +38,10 @@ Below is an example of the `Inline` component with the `gutter` prop set to `xl`
 <Canvas withSource="open">
   <Story name="InlineCluster Props">
     <Inline gutter="xl" justify="center" align="center">
-      <Box style={{ height: 200 }} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
   </Story>
 </Canvas>
@@ -54,31 +54,31 @@ The `stretch` prop can be used to specify a child component that will stretch to
   <Story name="stretch">
     <h3>start</h3>
     <Inline gutter="lg" stretch="start">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
     <h3>end</h3>
     <Inline gutter="lg" stretch="end">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
     <h3>all</h3>
     <Inline gutter="lg" stretch="all">
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
     <h3>2 index</h3>
     <Inline gutter="lg" stretch={2}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
   </Story>
 </Canvas>
@@ -89,15 +89,15 @@ Some times you want all the items to have a minimum width. By setting the `minIt
 
 This is especially useful with the `switchAt` prop (see below).
 
-In the below example, each of the boxes has an intrinsic width of 50px. The `minItemWidth` will make them `150px` each.
+In the below example, each of the Componentes has an intrinsic width of 50px. The `minItemWidth` will make them `150px` each.
 
 <Canvas withSource="open">
   <Story name="minItemWidth">
     <Inline gutter="lg" minItemWidth={150}>
-      <Box style={{}} />
-      <Box />
-      <Box />
-      <Box />
+      <Component style={{}} />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
   </Story>
 </Canvas>
@@ -109,10 +109,10 @@ In the below example, the layout will switch to stack when its width becomes les
 <Canvas withSource="open">
   <Story name="switchAt">
     <Inline gutter="lg" switchAt="45rem" minItemWidth={100}>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
     </Inline>
   </Story>
 </Canvas>
@@ -127,10 +127,10 @@ Experiment with this story with the Controls addon in the Canvas tab.
 
 export const Template = (args) =>  (
    <Inline {...args}>
-      <Box style={{minWidth:100}} />
-      <Box style={{minWidth:100}} />
-      <Box style={{minWidth:100}} />
-      <Box style={{minWidth:100}} />
+      <Component style={{minWidth:100}} />
+      <Component style={{minWidth:100}} />
+      <Component style={{minWidth:100}} />
+      <Component style={{minWidth:100}} />
     </Inline>
 );
 

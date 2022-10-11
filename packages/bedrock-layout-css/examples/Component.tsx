@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const Box = styled.div<{ color?: string }>`
+export const Component = styled.div<{ color?: string }>`
   background: ${(props) => props.color ?? "black"};
   min-height: 100px;
   min-width: 100px;

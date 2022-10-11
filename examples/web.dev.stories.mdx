@@ -10,7 +10,7 @@ import { Cover } from '../packages/cover/src/';
 import { Center } from '../packages/center/src/';
 import { ColumnDrop } from '../packages/column-drop/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
-import { Box } from './Box'
+import { Component } from './Component'
 
 <Meta title="Examples/web.dev" parameters={{ viewMode: "docs" }} />
 
@@ -28,16 +28,16 @@ A grid broken up into 12 segments where you can place areas onto the tracks even
   <Story name="12-span grid">
     <Columns gutter="lg" columns={12}>
       <Column span={12}>
-        <Box>Span 12</Box>
+        <Component>Span 12</Component>
       </Column>
       <Column span={6} offsetEnd={6}>
-        <Box>Span 6 (offsetEnd 6)</Box>
+        <Component>Span 6 (offsetEnd 6)</Component>
       </Column>
       <Column offsetStart={3} offsetEnd={5} span={4}>
-        <Box>Span 4 (offsetStart 3, offsetEnd 5)</Box>
+        <Component>Span 4 (offsetStart 3, offsetEnd 5)</Component>
       </Column>
       <Column offsetStart={2} span={2}>
-        <Box>Span 2 (offsetStart 2)</Box>
+        <Component>Span 2 (offsetStart 2)</Component>
       </Column>
     </Columns>
   </Story>
@@ -107,9 +107,9 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
   <Story name="Deconstructed pancake">
     <Center maxWidth="25rem">
       <ColumnDrop gutter="sm" minItemWidth="150px">
-        <Box>1</Box>
-        <Box>2</Box>
-        <Box>3</Box>
+        <Component>1</Component>
+        <Component>2</Component>
+        <Component>3</Component>
       </ColumnDrop>
     </Center>
   </Story>
@@ -125,13 +125,13 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
       gutter="sm"
       stretchContent
       minHeight="50vh"
-      top={<Box as="header">Header</Box>}
-      bottom={<Box as="footer">Footer</Box>}
+      top={<Component as="header">Header</Component>}
+      bottom={<Component as="footer">Footer</Component>}
     >
       <Inline align="stretch" gutter="sm" stretch={1}>
-        <Box>Left Sidebar</Box>
-        <Box as="main">Main Content</Box>
-        <Box>Right Sidebar</Box>
+        <Component>Left Sidebar</Component>
+        <Component as="main">Main Content</Component>
+        <Component>Right Sidebar</Component>
       </Inline>
     </Cover>
   </Story>
@@ -147,7 +147,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
   <Story name="Line up">
     <Columns columns={3} gutter="xxl">
       <Cover
-        as={Box}
+        as={Component}
         minHeight="100%"
         gutter="md"
         top={<h3>Title - Card 1</h3>}
@@ -162,7 +162,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
         </p>
       </Cover>
       <Cover
-        as={Box}
+        as={Component}
         minHeight="100%"
         gutter="md"
         top={<h3>Title - Card 2</h3>}
@@ -178,7 +178,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
         </p>
       </Cover>
       <Cover
-        as={Box}
+        as={Component}
         minHeight="100%"
         gutter="md"
         top={<h3>Title - Card 3</h3>}
@@ -204,12 +204,12 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
       minHeight="25vh"
       stretchContent
       gutter="md"
-      top={<Box as="header">Header</Box>}
-      bottom={<Box as="footer">Footer Content</Box>}
+      top={<Component as="header">Header</Component>}
+      bottom={<Component as="footer">Footer Content</Component>}
     >
-      <Box as="main" style={{ minHeight: "25vh" }}>
+      <Component as="main" style={{ minHeight: "25vh" }}>
         Main
-      </Box>
+      </Component>
     </Cover>
   </Story>
 </Canvas>
@@ -224,10 +224,10 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
   <Story name="RAM (Repeat, Auto, Minmax)">
     <Center maxWidth="25rem">
       <Grid gutter="lg" minItemWidth="150px">
-        <Box>1</Box>
-        <Box>2</Box>
-        <Box>3</Box>
-        <Box>4</Box>
+        <Component>1</Component>
+        <Component>2</Component>
+        <Component>3</Component>
+        <Component>4</Component>
       </Grid>
     </Center>
   </Story>
@@ -240,11 +240,11 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 <Canvas withSource="open">
   <Story name="Sidbar says">
     <Split gutter="md" fraction="1/4" minItemWidth="100px">
-      <Box>Min: 100px / Max: 25%</Box>
-      <Box>
+      <Component>Min: 100px / Max: 25%</Component>
+      <Component>
         This element takes the second position, meaning it takes up the rest of
         the remaining space.
-      </Box>
+      </Component>
     </Split>
   </Story>
 </Canvas>
@@ -257,7 +257,7 @@ Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cov
   <Story name="Super centered">
     <Cover minHeight="25vh">
       <Center centerChildren>
-        <Box>:)</Box>
+        <Component>:)</Component>
       </Center>
     </Cover>
   </Story>

@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
-import { Box } from './Box';
+import { Component } from './Component';
 
 import "../src/components/split.css"
 import "../src/components/spacing-properties.css"
@@ -38,13 +38,13 @@ You can adjust the space between the child elements by setting the `--gutter` pr
   <Story name="--gutter">
     <h3>Bedrock Layout Spacing Property</h3>
     <div data-bedrock-split style={{ "--gutter": "var(--space-md)" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-split style={{ "--gutter": "2rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -59,43 +59,43 @@ By default the split will be a `1/2` split. You can change this by setting the `
   <Story name="fraction">
     <h3>1/4</h3>
     <div data-bedrock-split="fraction:1/4" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>1/3</h3>
     <div data-bedrock-split="fraction:1/3" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>1/2</h3>
     <div data-bedrock-split="fraction:1/2" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>2/3</h3>
     <div data-bedrock-split="fraction:2/3" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>3/4</h3>
     <div data-bedrock-split="fraction:3/4" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>auto-start</h3>
-    <p>(The first box has a width of 100px)</p>
+    <p>(The first Component has a width of 100px)</p>
     <div
       data-bedrock-split="fraction:auto-start"
       style={{ "--gutter": "1rem" }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>auto-end</h3>
-    <p>(The second box has a width of 100px)</p>
+    <p>(The second Component has a width of 100px)</p>
     <div data-bedrock-split="fraction:auto-end" style={{ "--gutter": "1rem" }}>
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -115,16 +115,16 @@ If the minimum inline size can not be maintained, it will move to a stacking lay
       data-bedrock-split="fraction:2/3"
       style={{ "--gutter": "var(--space-md)", "--minItemWidth": "40ch" }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>With auto-start and minItemWidth of 30ch</h3>
     <div
       data-bedrock-split="fraction:auto-start"
       style={{ "--gutter": "var(--space-md)", "--minItemWidth": "30ch" }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
@@ -146,8 +146,8 @@ The below example will switch to a stack when it is less than `45rem`.
       data-bedrock-split="fraction:2/3"
       style={{ "--gutter": "var(--space-md)", "--switchAt": "45rem" }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
     <h3>With auto-start with 20rem minItemWidth</h3>
     <div
@@ -158,8 +158,8 @@ The below example will switch to a stack when it is less than `45rem`.
         "--switchAt": "45rem",
       }}
     >
-      <Box />
-      <Box />
+      <Component />
+      <Component />
     </div>
   </Story>
 </Canvas>
