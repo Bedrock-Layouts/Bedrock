@@ -9,12 +9,13 @@ import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
 import PropTypes from "prop-types";
 import React, { Children, useState } from "react";
 import styled, { CSSProperties, ThemeContext } from "styled-components";
+
 //Logic forked from is-in-browser npm package
 /* istanbul ignore next */
 const isBrowser =
   typeof window === "object" &&
   typeof document === "object" &&
-  document.nodeType === 9;
+  (document as Document).nodeType === 9;
 
 const RowSpanner = styled.div`
   grid-row: span var(--rows, 1);
