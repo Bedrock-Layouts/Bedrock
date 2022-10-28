@@ -54,3 +54,7 @@ html:focus-within {
 :is(body, p, .sbdocs-p.sbdocs-p) {
   font-size: 100%;
 }
+
+.sbdocs-preview.sbdocs-preview {
+  background-color: var(--gray-0);
+}

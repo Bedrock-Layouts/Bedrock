@@ -8,4 +8,5 @@ export const Heading = styled(Stack).attrs(() => ({ as: "h1", gutter: "md" }))`
   text-align: center;
   font-weight: var(--font-weight-4);
   letter-spacing: 0.5ch;
+  color: white;
 `;
