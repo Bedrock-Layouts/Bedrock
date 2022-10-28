@@ -10,9 +10,9 @@ export const Button = styled(PadBox).attrs((props) => ({
   border-radius: 0.5rem;
   border-width: 1px;
   border-style: solid;
-  border-color: ${({ primary }) => (primary ? "white" : "black")};
-  background-color: ${({ primary }) => (primary ? "black" : "white")};
-  color: ${({ primary }) => (primary ? "white" : "black")};
+  border-color: ${({ primary }) => (primary ? "black" : "white")};
+  background-color: ${({ primary }) => (primary ? "white" : "black")};
+  color: ${({ primary }) => (primary ? "black" : "white")};
   text-decoration: none;
   text-align: center;
   :disabled {

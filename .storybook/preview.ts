@@ -2,6 +2,7 @@ import "pepjs";
 import "open-props/style";
 
 import "./styles.css";
+import "./i18n";
 
 import { create } from "@storybook/theming";
 
@@ -10,7 +11,7 @@ export const parameters = {
   previewTabs: { canvas: { hidden: true } },
   docs: {
     theme: create({
-      base: "light",
+      base: "dark",
     }),
   },
   options: {

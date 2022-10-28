@@ -10,13 +10,11 @@ import openProps from "open-props";
 addons.setConfig({
   showToolbar: false,
   theme: create({
-    base: "light",
+    base: "dark",
     brandTitle: "Bedrock Layout Primitives",
     brandUrl: "/",
     brandImage: "/Logo only.png",
-    textColor: openProps.gray9,
     fontBase: '"Roboto", sans-serif',
-    appBorderColor: openProps.gray9,
-    appBg: "white",
+    textColor: openProps.gray2,
   }),
 });
