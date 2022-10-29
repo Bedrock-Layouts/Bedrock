@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.2.2...@bedrock-layout/primitives@2.2.3) (2022-10-29)
+
+### Bug Fixes
+
+- **stack:** fix issue where stack wasn't honoring widths ([0c0d7bb](https://github.com/Bedrock-Layouts/Bedrock/commit/0c0d7bbe0d00beb9b1724924ff2071ddd71bb030))
+
 ## [2.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.2.1...@bedrock-layout/primitives@2.2.2) (2022-10-25)
 
 **Note:** Version bump only for package @bedrock-layout/primitives
