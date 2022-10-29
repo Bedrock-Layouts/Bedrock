@@ -28,9 +28,9 @@ export const Stack = styled.div.attrs<StackProps>(
     margin: 0;
   }
 
-  display: grid;
-  gap: var(--gutter, 0px);
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter, 0);
 
   & > [data-bedrock-column] {
     grid-column: span 1 / auto;

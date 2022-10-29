@@ -10,9 +10,9 @@
 
 [data-bedrock-stack] {
   box-sizing: border-box;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--gutter, 0);
-  align-content: start;
 }
 
 [data-bedrock-stack] > * {

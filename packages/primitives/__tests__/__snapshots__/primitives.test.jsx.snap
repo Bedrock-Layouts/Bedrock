@@ -835,9 +835,9 @@ exports[`primitives > primitives snapshot 1`] = `
     margin: 0;
   }
 
-  display: grid;
-  gap: var(--gutter, 0px);
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter, 0);
 
   & > [data-bedrock-column] {
     grid-column: span 1 / auto;

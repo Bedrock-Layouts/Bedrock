@@ -3,11 +3,14 @@
 exports[`Stack > correct usage > renders 0px default with no gutter provided 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -45,11 +48,14 @@ exports[`Stack > correct usage > renders 0px default with no gutter provided 1`]
 exports[`Stack > correct usage > renders 0px with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -87,11 +93,14 @@ exports[`Stack > correct usage > renders 0px with theme overrides 1`] = `
 exports[`Stack > correct usage > renders all the gutter options 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -129,11 +138,14 @@ exports[`Stack > correct usage > renders all the gutter options 1`] = `
 exports[`Stack > correct usage > renders all the gutter options 2`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -171,11 +183,14 @@ exports[`Stack > correct usage > renders all the gutter options 2`] = `
 exports[`Stack > correct usage > renders all the gutter options 3`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -213,11 +228,14 @@ exports[`Stack > correct usage > renders all the gutter options 3`] = `
 exports[`Stack > correct usage > renders all the gutter options 4`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -255,11 +273,14 @@ exports[`Stack > correct usage > renders all the gutter options 4`] = `
 exports[`Stack > correct usage > renders all the gutter options 5`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -297,11 +318,14 @@ exports[`Stack > correct usage > renders all the gutter options 5`] = `
 exports[`Stack > correct usage > renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -339,11 +363,14 @@ exports[`Stack > correct usage > renders all the gutter options 6`] = `
 exports[`Stack > correct usage > renders all the gutter options 7`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -381,11 +408,14 @@ exports[`Stack > correct usage > renders all the gutter options 7`] = `
 exports[`Stack > correct usage > renders all the gutter options 8`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -423,11 +453,14 @@ exports[`Stack > correct usage > renders all the gutter options 8`] = `
 exports[`Stack > correct usage > renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -465,11 +498,14 @@ exports[`Stack > correct usage > renders all the gutter options 9`] = `
 exports[`Stack > correct usage > renders all the gutter options 10`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -507,11 +543,14 @@ exports[`Stack > correct usage > renders all the gutter options 10`] = `
 exports[`Stack > correct usage > renders all the gutter options 11`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -549,11 +588,14 @@ exports[`Stack > correct usage > renders all the gutter options 11`] = `
 exports[`Stack > correct usage > renders custom gutter with number 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -591,11 +633,14 @@ exports[`Stack > correct usage > renders custom gutter with number 1`] = `
 exports[`Stack > correct usage > renders cutom gutter with string 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -633,11 +678,14 @@ exports[`Stack > correct usage > renders cutom gutter with string 1`] = `
 exports[`Stack > correct usage > renders with theme overrides 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -675,11 +723,14 @@ exports[`Stack > correct usage > renders with theme overrides 1`] = `
 exports[`Stack > correct usage > renders with theme overrides using 'space' as key 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
@@ -717,11 +768,14 @@ exports[`Stack > correct usage > renders with theme overrides using 'space' as k
 exports[`Stack > incorrect usage > renders default with wrong gutter value 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0);
 }
 
 .c0 > * {
