@@ -42,6 +42,7 @@ export type PropsWithAs<
 export interface ComponentWithAs<ComponentType extends As, ComponentProps> {
   // These types are a bit of a hack, but cover us in cases where the `as` prop
   // is not a JSX string type. Makes the compiler happy so 🤷‍♂️
+  // non important change
   <TT extends As>(
     props: PropsWithAs<TT, ComponentProps>
   ): React.ReactElement | null;
