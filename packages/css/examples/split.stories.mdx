@@ -2,7 +2,6 @@ import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/
 import { Component } from './Component';
 
 import "../src/components/split.css"
-import "../src/components/spacing-properties.css"
 
 <Meta title="CSS Only/split.css" parameters={{ viewMode: "docs" }} />
 
@@ -19,11 +18,11 @@ The Split component is designed to create a split layout based on a fractional r
 First you need to import the appropriate stylesheet. The split is part of the main CSS bundle or you can import it in individually from the components directory.
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
 
 // or
 
-import "@bedrock-layout/bedrock-layout-css/lib/components/split.css";
+import "@bedrock-layout/css/lib/components/split.min.css";
 ```
 
 Then you add the `data-bedrock-split` attribute to the desired element.
@@ -36,8 +35,8 @@ You can adjust the space between the child elements by setting the `--gutter` pr
 
 <Canvas withSource="open">
   <Story name="--gutter">
-    <h3>Bedrock Layout Spacing Property</h3>
-    <div data-bedrock-split style={{ "--gutter": "var(--space-md)" }}>
+    <h3>Spacing Property such as open-props</h3>
+    <div data-bedrock-split style={{ "--gutter": "var(--size-2)" }}>
       <Component />
       <Component />
     </div>
@@ -113,7 +112,7 @@ If the minimum inline size can not be maintained, it will move to a stacking lay
     <h3>With fraction:2/3 and minItemWidth of 40ch</h3>
     <div
       data-bedrock-split="fraction:2/3"
-      style={{ "--gutter": "var(--space-md)", "--minItemWidth": "40ch" }}
+      style={{ "--gutter": "var(--size-2)", "--minItemWidth": "40ch" }}
     >
       <Component />
       <Component />
@@ -121,7 +120,7 @@ If the minimum inline size can not be maintained, it will move to a stacking lay
     <h3>With auto-start and minItemWidth of 30ch</h3>
     <div
       data-bedrock-split="fraction:auto-start"
-      style={{ "--gutter": "var(--space-md)", "--minItemWidth": "30ch" }}
+      style={{ "--gutter": "var(--size-2)", "--minItemWidth": "30ch" }}
     >
       <Component />
       <Component />
@@ -144,7 +143,7 @@ The below example will switch to a stack when it is less than `45rem`.
     <h3>With fraction:3/4</h3>
     <div
       data-bedrock-split="fraction:2/3"
-      style={{ "--gutter": "var(--space-md)", "--switchAt": "45rem" }}
+      style={{ "--gutter": "var(--size-2)", "--switchAt": "45rem" }}
     >
       <Component />
       <Component />
@@ -153,7 +152,7 @@ The below example will switch to a stack when it is less than `45rem`.
     <div
       data-bedrock-split="fraction:auto-start"
       style={{
-        "--gutter": "var(--space-md)",
+        "--gutter": "var(--size-2)",
         "--minItemWidth": "20rem",
         "--switchAt": "45rem",
       }}

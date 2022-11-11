@@ -12,32 +12,28 @@ It's highly influenced by the [AVO method of CSS](https://chan.dev/avo) made fam
 
 ## How to install
 
-`yarn add @bedrock-layout/bedrock-layout-css`
+`yarn add @bedrock-layout/css`
 
 ## How to import
 
 You can import the entire CSS bundle like this:
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.min.css';
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
 ```
 
 Or you can import just the parts you want from the components directory
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/components/spacing-properties.css';
-import '@bedrock-layout/bedrock-layout-css/lib/components/reset.css';
-import '@bedrock-layout/bedrock-layout-css/lib/components/stack.css';
-import '@bedrock-layout/bedrock-layout-css/lib/components/center.css';
+import '@bedrock-layout/css/lib/reset.min.css';
+import '@bedrock-layout/css/lib/components/stack.min.css';
+import '@bedrock-layout/css/lib/components/center.min.css';
 ```
 
 In lieu of the above, you can also use the `<link>` tag with it's source set to the UNPKG version:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/"
-/>
+<link rel="stylesheet" href="https://unpkg.com/@bedrock-layout/css/" />
 ```
 
 or
@@ -45,18 +41,12 @@ or
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/lib/components/stack.css"
+  href="https://unpkg.com/@bedrock-layout/css/lib/components/stack.min.css"
 />
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@bedrock-layout/bedrock-layout-css/lib/components/center.css"
+  href="https://unpkg.com/@bedrock-layout/css/lib/components/center.min.css"
 />
-```
-
-Currently, only the main bundled CSS file is available in a minified format:
-
-```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.min.css';
 ```
 
 ## Not included
@@ -66,6 +56,6 @@ There are a few components/APIs that are not included in the pure CSS version. T
 - `MasonryGrid`
 - `PadBox`
 - `AppBoundary`
-- The `switchAt` API for `Split` and `Columns`
+- The `switchAt` and `Columns`
 
 They are left out either because they require additional JavaScript to work or the developer experience is lost in the CSS-only version.

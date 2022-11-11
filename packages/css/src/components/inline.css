@@ -1,0 +1,87 @@
+/*
+  inline.css
+*/
+@property --gutter {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --switchAt {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[data-bedrock-inline] {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--gutter, 0px);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+[data-bedrock-inline] > * {
+  margin: 0;
+}
+
+[data-bedrock-inline][style*="--switchAt"] {
+  flex-wrap: wrap;
+}
+
+[data-bedrock-inline][style*="--switchAt"] > * {
+  flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
+}
+
+[data-bedrock-inline][style*="--minItemWidth"] > * {
+  min-inline-size: var(--minItemWidth, 0);
+}
+
+[data-bedrock-inline~="justify:start"] {
+  justify-content: flex-start;
+}
+[data-bedrock-inline~="justify:center"] {
+  justify-content: center;
+}
+[data-bedrock-inline~="justify:end"] {
+  justify-content: flex-end;
+}
+
+[data-bedrock-inline~="align:start"] {
+  align-items: flex-start;
+}
+[data-bedrock-inline~="align:center"] {
+  align-items: center;
+}
+[data-bedrock-inline~="align:end"] {
+  align-items: flex-end;
+}
+[data-bedrock-inline~="align:stretch"] {
+  align-items: stretch;
+}
+
+[data-bedrock-inline~="stretch:all"] > * {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:start"] > :first-child {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:end"] > :last-child {
+  flex: 1;
+}
+
+[data-bedrock-inline~="stretch:0"] > :nth-child(1) {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:1"] > :nth-child(2) {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:2"] > :nth-child(3) {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:3"] > :nth-child(4) {
+  flex: 1;
+}
+[data-bedrock-inline~="stretch:4"] > :nth-child(5) {
+  flex: 1;
+}

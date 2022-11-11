@@ -4,8 +4,6 @@ Pure CSS version of the Bedrock Layout Primitives
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
-**EXPERIMENTAL**
-
 ## How to install
 
 `npm install @bedrock-layout/css`
@@ -15,15 +13,14 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 You can import all the entire CSS bundle like this:
 
 ```javascript
-import '@bedrock-layout/css/lib/bedrock-layout.css';
+import '@bedrock-layout/css/lib/bedrock-layou.min.css';
 ```
 
 Or you can import just the parts you want from the components directory
 
 ```javascript
-import '@bedrock-layout/css/lib/components/spaceing-properties.css';
-import '@bedrock-layout/css/lib/components/reset.css';
-import '@bedrock-layout/css/lib/components/stack.css';
-import '@bedrock-layout/css/lib/components/center.css';
-
+import '@bedrock-layout/css/lib/components/spaceing-properties.min.css';
+import '@bedrock-layout/css/lib/reset.min.css';
+import '@bedrock-layout/css/lib/components/stack.min.css';
+import '@bedrock-layout/css/lib/components/center.min.css';
 ```

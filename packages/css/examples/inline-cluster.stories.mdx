@@ -2,7 +2,6 @@ import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/
 import { Component } from './Component';
 
 import "../src/components/inline-cluster.css"
-import "../src/components/spacing-properties.css"
 
 <Meta title="CSS Only/inline-cluster.css" parameters={{ viewMode: "docs" }} />
 
@@ -19,11 +18,11 @@ The InlineCluster component is used to display a group of elements in a row. Whe
 First you need to import the appropriate stylesheet. The inline-cluster is part of the main CSS bundle or you can import it in individually from the components directory.
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
 
 // or
 
-import "@bedrock-layout/bedrock-layout-css/lib/components/inline-cluster.css";
+import "@bedrock-layout/css/lib/components/inline-cluster.min.css";
 ```
 
 Then you add the `data-bedrock-inline-cluster` attribute to the desired element.
@@ -34,8 +33,8 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
 
 <Canvas withSource="open">
   <Story name="--gutter">
-    <h3>Bedrock Layout Spacing Property</h3>
-    <div data-bedrock-inline-cluster style={{ "--gutter": "var(--space-md)" }}>
+    <h3>Spacing Property such as open-props</h3>
+    <div data-bedrock-inline-cluster style={{ "--gutter": "var(--size-2)" }}>
       <Component />
       <Component />
       <Component />
@@ -145,7 +144,7 @@ Both the `justify` and `align` properties can be set to at the same time.
 ```html
 <div
   data-bedrock-inline-cluster="justify:start align:center"
-  style="--gutter:var(--space-mdLg)"
+  style="--gutter:var(--size-3)"
 >
   <!-- content goes here -->
 </div>
