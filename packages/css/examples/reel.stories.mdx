@@ -2,7 +2,6 @@ import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/
 import { Component, colors } from './Component';
 
 import "../src/components/reel.css"
-import "../src/components/spacing-properties.css"
 
 <Meta title="CSS Only/reel.css" parameters={{ viewMode: "docs" }} />
 
@@ -20,11 +19,11 @@ designed to organize content into scrollable flat lists with convenient scroll b
 First you need to import the appropriate stylesheet. The reel is part of the main CSS bundle or you can import it in individually from the components directory.
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
 
 // or
 
-import "@bedrock-layout/bedrock-layout-css/lib/components/reel.css";
+import "@bedrock-layout/css/lib/components/reel.min.css";
 ```
 
 Then you add the `data-bedrock-reel` attribute to the desired element.
@@ -37,8 +36,8 @@ You can adjust the space between the child elements by setting the `--gutter` pr
 
 <Canvas withSource="open">
   <Story name="--gutter">
-    <h3>Bedrock Layout Spacing Property</h3>
-    <div data-bedrock-reel style={{ "--gutter": "var(--space-md)" }}>
+    <h3>Spacing Property such as open-props</h3>
+    <div data-bedrock-reel style={{ "--gutter": "var(--size-2)" }}>
       {colors.map((color, i) => (
         <Component key={i} color={color} />
       ))}
@@ -57,7 +56,7 @@ You can adjust the space between the child elements by setting the `--gutter` pr
   <!-- content goes here -->
 </div>
 
-<div data-bedrock-reel style="--gutter:var(--space-mdLg)">
+<div data-bedrock-reel style="--gutter:var(--size-3)">
   <!-- content goes here -->
 </div>
 ```
@@ -72,7 +71,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
     <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:none"
-      style={{ "--gutter": "var(--space-md)" }}
+      style={{ "--gutter": "var(--size-2)" }}
     >
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />
@@ -82,7 +81,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
     <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:mandatory"
-      style={{ "--gutter": "var(--space-md)" }}
+      style={{ "--gutter": "var(--size-2)" }}
     >
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />
@@ -92,7 +91,7 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
     <p>scroll to the right to see the next item</p>
     <div
       data-bedrock-reel="snapType:proximity"
-      style={{ "--gutter": "var(--space-md)" }}
+      style={{ "--gutter": "var(--size-2)" }}
     >
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />

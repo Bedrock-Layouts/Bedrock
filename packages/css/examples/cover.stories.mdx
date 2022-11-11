@@ -1,6 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
 import "../src/components/cover.css"
-import "../src/components/spacing-properties.css"
 
 <Meta title="CSS Only/cover.css" parameters={{ viewMode: "docs" }} />
 
@@ -13,11 +12,11 @@ This is a CSS Only version of the [Cover package](/?path=/docs/components-cover-
 First you need to import the appropriate stylesheet. The cover is part of the main CSS bundle or you can import it in individually from the components directory.
 
 ```javascript
-import '@bedrock-layout/bedrock-layout-css/lib/bedrock-layout.css';
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
 
 // or
 
-import "@bedrock-layout/bedrock-layout-css/lib/components/cover.css";
+import "@bedrock-layout/css/lib/components/cover.min.css";
 ```
 
 Then you add the `data-bedrock-cover` attribute to the desired element.
