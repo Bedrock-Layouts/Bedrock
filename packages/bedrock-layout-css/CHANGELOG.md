@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@2.2.2...@bedrock-layout/bedrock-layout-css@2.3.0) (2022-11-11)
+
+### Features
+
+- **css:** publish new css package ([e14a5f5](https://github.com/Bedrock-Layouts/Bedrock/commit/e14a5f5867cb5a65ed84d7086e47ff3a1cc2aafa))
+
 ## [2.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.1...@bedrock-layout/css@2.2.2) (2022-10-29)
 
 ### Bug Fixes
