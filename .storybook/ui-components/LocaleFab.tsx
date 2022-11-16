@@ -3,15 +3,34 @@ import { Stack } from "@bedrock-layout/stack";
 import { Menu, MenuButton, MenuItem, MenuList } from "@reach/menu-button";
 import { VisuallyHidden } from "@reach/visually-hidden";
 import React, { useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import i18n from "../i18n";
 import { Button } from "./Button";
 import { GlobeIcon } from "./GlobeIcon";
 
-const LanguageItem = styled(MenuItem).attrs((props) => ({
-  as: PadBox,
+const SlideDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const SlideDownMenuList = styled(MenuList)`
+  transform: translateY(10px);
+  border-radius: 5px;
+  animation: ${SlideDown} 0.2s ease;
+`;
+
+const LanguageItem = styled(PadBox).attrs((props) => ({
+  as: MenuItem,
+
   padding: ["md", "lg"],
+  tabIndex: 0,
 }))`
   :hover,
   :active,
@@ -19,31 +38,66 @@ const LanguageItem = styled(MenuItem).attrs((props) => ({
     background-color: var(--gray-3);
     cursor: pointer;
   }
+  &[data-selected] {
+    background-color: var(--gray-3);
+    cursor: pointer;
+  }
 `;
 
 export const LocaleFab = () => {
   const [locale, setLocale] = React.useState(i18n.language);
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
+  const menuButtonRef = React.useRef<any>(null);
 
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
+
+  useEffect(() => {
+    if (wrapperRef.current === null) {
+      return;
+    }
+    const { current: component } = wrapperRef;
+
+    const onFocusIn = () => {
+      menuButtonRef.current?.focus();
+    };
+
+    component.addEventListener("focus", onFocusIn);
+
+    return () => {
+      component.removeEventListener("focus", onFocusIn);
+    };
+  }, []);
+
+  const MenuItemButton = styled.button`
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  `;
+
   return (
-    <div style={{ position: "fixed", top: "1rem", right: "1rem" }}>
+    <div
+      ref={wrapperRef}
+      tabIndex={0}
+      style={{ position: "fixed", top: "1rem", right: "1rem" }}
+    >
       <Menu>
-        <MenuButton icon as={Button}>
+        <MenuButton ref={menuButtonRef} icon as={Button}>
           <GlobeIcon />
           <VisuallyHidden>Locale</VisuallyHidden>
         </MenuButton>
-        <MenuList style={{ marginTop: "10px" }}>
+        <SlideDownMenuList>
           <Stack gutter="sm" style={{ background: "white" }}>
-            <MenuItem as={LanguageItem} onSelect={() => setLocale("es")}>
-              Spanish
-            </MenuItem>
-            <MenuItem as={LanguageItem} onSelect={() => setLocale("en")}>
+            <LanguageItem onSelect={() => setLocale("en")}>
               English
-            </MenuItem>
+            </LanguageItem>
+            <LanguageItem onSelect={() => setLocale("es")}>
+              Espańol
+            </LanguageItem>
           </Stack>
-        </MenuList>
+        </SlideDownMenuList>
       </Menu>
     </div>
   );

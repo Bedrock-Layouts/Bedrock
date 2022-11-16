@@ -1,29 +1,124 @@
 import { Meta } from '@storybook/addon-docs/';
+import { Intl } from '../ui-components/Intl'
+import { LocaleFab } from '../ui-components/LocaleFab'
+
+<LocaleFab />
 
 <Meta title="Overview/Contributing" parameters={{ viewMode: "docs" }} />
 
-# Contributing to Bedrock Layout
+# <Intl>Contributing.title</Intl>
 
-Thank you for taking the time to contribute! 🎉
+<p>
+  <Intl>Contributing.thanks</Intl>
+</p>
 
-There are many ways to contribute to the Bedrock Layout Primitives. The most common is to fork the repository and make your own changes. You can also contribute directly to the discussions at the [GitHub repository](https://github.com/Bedrock-Layouts/Bedrock/discussions/categories/general) or you can create an [issue](https://github.com/Bedrock-Layouts/Bedrock/issues) to discuss the changes or problems you find.
+<p>
+  <Intl>Contributing.description1</Intl>
+</p>
 
-## Contributing Code
+<p>
+  <Intl>
+    There are many ways to contribute to the Bedrock Layout Primitives. Here are
+    a few:
+  </Intl>
+</p>
 
-When contributing code to Bedrock Layout Primitives, please first create an [issue](https://github.com/Bedrock-Layouts/Bedrock/issues) to discuss the changes.
+<ul>
+  <li>
+    <Intl>Report a bug</Intl>
+  </li>
+  <li>
+    <Intl>Request a feature</Intl>
+  </li>
+  <li>
+    <Intl>Translate the documentation</Intl>
+  </li>
+  <li>
+    <Intl>Add examples to the documentation</Intl>
+  </li>
+  <li>
+    <Intl>Fix a Bug</Intl>
+  </li>
+  <li>
+    <Intl>Write a new component</Intl>
+  </li>
+  <li>
+    <Intl>Write a new feature</Intl>
+  </li>
+  <li>
+    <Intl>Write a new documentation page</Intl>
+  </li>
+  <li>
+    <Intl>Write a new test</Intl>
+  </li>
+  <li>
+    <Intl>And so on</Intl>
+  </li>
+</ul>
 
-Bedrock Layout Primitives is a monorepo of packages that are currently versioned independently of each other. It also utilizes Storybook as a documentation website.
+<p>
+  <Intl>Many of these tasks can be accomplished by </Intl>
+  <a href="https://github.com/Bedrock-Layouts/Bedrock/issues">
+    <Intl>filing an issue on the GitHub repository.</Intl>
+  </a> <Intl>If you'd like to contribute code, please read the following guidelines.</Intl>
+</p>
 
-To manage all of these things, Bedrock uses Lerna to manage all the repositories into one monorepo. Lerna is used to publish to NPM, tag releases to Github, and process change logs under each package. To make the above possible in CI, Bedrock has adopted conventional commits and uses commitizen and husky to enforce it.
+## Contributing Code or Documentation
 
-To make a pull request, do the following:
+<p>
+  <Intl>
+    Bedrock Layout Primitives is a monorepo of packages that are currently
+    versioned independently of each other. It also utilizes Storybook as code
+    playground, a documentation website, and visual regression test runner in
+    chromatic.
+  </Intl>
+</p>
 
-1. Fork the repository.
-1. Clone the repository from your GitHub.
-1. Set up your environment with `yarn`
-1. Check out a new branch and add your modification.
-1. Add test cases for all your changes.
-1. Update any README.md and documentation in Storybook under the examples folder in the corresponding package.
-1. Use commitizen to do git commit by running `yarn cz` (be sure to stage your changes first). Doing this will automatically run `yarn verify` as a pre-commit hook when you do this. If anything fails, fix and follow this step again.
-1. **DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG.**
-1. Send a pull request 🙏
+<p>
+  <Intl>To manage all of these things, Bedrock uses </Intl>
+  <a href="https://lerna.js.org" target="_blank" rel="noreferer">
+    Lerna
+  </a> <Intl>to manage all the repositories into one monorepo. Lerna is used to publish to NPM, tag releases to Github, and process change logs under each package. To make the above possible in CI, Bedrock has adopted conventional commits and uses commitizen and husky to enforce it.</Intl>
+</p>
+
+<p>
+  <Intl>To make a pull request, do the following:</Intl>
+</p>
+
+<ol>
+  <li>
+    <Intl>Fork the repository.</Intl>
+  </li>
+  <li>
+    <Intl>Clone the repository from your GitHub.</Intl>
+  </li>
+  <li>
+    <Intl>Set up your environment with yarn</Intl>
+  </li>
+  <li>
+    <Intl>Check out a new branch and add your modification.</Intl>
+  </li>
+  <li>
+    <Intl>Add test cases for all your changes.</Intl>
+  </li>
+  <li>
+    <Intl>
+      Update any README.md and documentation in Storybook under the examples
+      folder in the corresponding package.
+    </Intl>
+  </li>
+  <li>
+    <Intl>
+      Use commitizen to do git commit by running yarn cz (be sure to stage your
+      changes first). Doing this will automatically run yarn verify as a
+      pre-commit hook when you do this. If anything fails, fix and follow this
+      step again.
+    </Intl>
+  </li>
+  <li>
+    <Intl>**DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG.**</Intl>
+  </li>
+  <li>
+    <Intl>Send a pull request 🙏</Intl>
+  </li>
+</ol>
