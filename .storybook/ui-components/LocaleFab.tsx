@@ -94,7 +94,7 @@ export const LocaleFab = () => {
               English
             </LanguageItem>
             <LanguageItem onSelect={() => setLocale("es")}>
-              Espańol
+              Español
             </LanguageItem>
           </Stack>
         </SlideDownMenuList>
