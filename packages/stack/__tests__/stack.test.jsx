@@ -91,7 +91,7 @@ describe("Stack", () => {
     it("renders 0px with theme overrides", () => {
       const stack = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
-          <Stack gutter="lg">
+          <Stack gutter="size3">
             <Lorem />
           </Stack>
         </ThemeProvider>

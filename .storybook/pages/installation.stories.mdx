@@ -1,8 +1,8 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import initialSetup from '../assets/initial-setup.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import initialSetup from "../assets/initial-setup.png";
 
 <Meta
   title="Getting Started/Lesson 1: Installation"
@@ -35,7 +35,7 @@ import { Stack } from "@bedrock-layout/stack";
 
 function App() {
   return (
-    <Stack gutter="md">
+    <Stack gutter='size3'>
       <header>
         <h1>Coco Le Belle</h1>
       </header>
@@ -58,7 +58,7 @@ Finally, let's start the development server by running `yarn start`. Navigate to
 
 We are now ready to start building our layout. In the next section, we will learn how to use the `Stack` component to create our first component in our landing page.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-introduction--page">
     Introduction
   </Button>

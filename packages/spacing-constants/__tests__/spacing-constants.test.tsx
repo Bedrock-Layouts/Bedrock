@@ -113,10 +113,8 @@ describe("Size Constants", () => {
     expect(constants.getSizeValue({ sizes: { "1x": 1 } }, "1x")).toBe("1px");
   });
 
-  it("should return undefined if sizekey is a number", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    expect(constants.getSizeValue({ sizes: { "1x": 1 } }, 1)).toBe(undefined);
+  it("should convert number to px if sizekey is a number", () => {
+    expect(constants.getSizeValue({ sizes: { "1x": 1 } }, 1)).toBe("1px");
   });
 
   it("should return a undefined if sizes provided with incorrect key", () => {

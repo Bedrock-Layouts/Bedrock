@@ -28,7 +28,7 @@ exports[`Reel > correct usage > renders all the gutter options 1`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0px",
+      "--gutter": "-.5rem",
     }
   }
 >
@@ -72,7 +72,7 @@ exports[`Reel > correct usage > renders all the gutter options 2`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0.0625rem",
+      "--gutter": "-.25rem",
     }
   }
 >
@@ -116,7 +116,7 @@ exports[`Reel > correct usage > renders all the gutter options 3`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0.125rem",
+      "--gutter": ".25rem",
     }
   }
 >
@@ -160,7 +160,7 @@ exports[`Reel > correct usage > renders all the gutter options 4`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0.25rem",
+      "--gutter": ".5rem",
     }
   }
 >
@@ -204,7 +204,7 @@ exports[`Reel > correct usage > renders all the gutter options 5`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0.5rem",
+      "--gutter": "1rem",
     }
   }
 >
@@ -248,7 +248,7 @@ exports[`Reel > correct usage > renders all the gutter options 6`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "0.75rem",
+      "--gutter": "1.25rem",
     }
   }
 >
@@ -292,7 +292,7 @@ exports[`Reel > correct usage > renders all the gutter options 7`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "1rem",
+      "--gutter": "1.5rem",
     }
   }
 >
@@ -336,7 +336,7 @@ exports[`Reel > correct usage > renders all the gutter options 8`] = `
   data-bedrock-reel=""
   style={
     {
-      "--gutter": "1.5rem",
+      "--gutter": "1.75rem",
     }
   }
 >
@@ -469,6 +469,270 @@ exports[`Reel > correct usage > renders all the gutter options 11`] = `
   style={
     {
       "--gutter": "4rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 12`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "5rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 13`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "7.5rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 14`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "10rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 15`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "15rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 16`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "20rem",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non praesentium delectus, accusamus beatae cumque nam pariatur, eius eaque magni expedita, perferendis ducimus. Deleniti, tenetur modi! Odit, consequatur dicta quas impedit incidunt rerum eaque nesciunt reiciendis nostrum natus libero. Doloribus fuga aut voluptatum accusantium similique, tempora at odio rerum repellat?
+  </p>
+</div>
+`;
+
+exports[`Reel > correct usage > renders all the gutter options 17`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter,0px);
+  overflow-x: auto;
+  -webkit-scroll-snap-type: none;
+  -moz-scroll-snap-type: none;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+
+.c0 > * {
+  margin: 0;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+<div
+  className="c0"
+  data-bedrock-reel=""
+  style={
+    {
+      "--gutter": "30rem",
     }
   }
 >

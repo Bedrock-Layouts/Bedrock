@@ -5,7 +5,7 @@ exports[`Grid > correct usage > renders all the gutter options 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -17,7 +17,7 @@ exports[`Grid > correct usage > renders all the gutter options 1`] = `
   data-bedrock-grid=""
   style={
     {
-      "--gutter": "0px",
+      "--gutter": "-.5rem",
       "--minItemWidth": undefined,
     }
   }
@@ -42,7 +42,7 @@ exports[`Grid > correct usage > renders all the gutter options 2`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -54,7 +54,7 @@ exports[`Grid > correct usage > renders all the gutter options 2`] = `
   data-bedrock-grid=""
   style={
     {
-      "--gutter": "0.0625rem",
+      "--gutter": "-.25rem",
       "--minItemWidth": undefined,
     }
   }
@@ -79,7 +79,7 @@ exports[`Grid > correct usage > renders all the gutter options 3`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -91,7 +91,7 @@ exports[`Grid > correct usage > renders all the gutter options 3`] = `
   data-bedrock-grid=""
   style={
     {
-      "--gutter": "0.125rem",
+      "--gutter": ".25rem",
       "--minItemWidth": undefined,
     }
   }
@@ -116,7 +116,7 @@ exports[`Grid > correct usage > renders all the gutter options 4`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -128,7 +128,7 @@ exports[`Grid > correct usage > renders all the gutter options 4`] = `
   data-bedrock-grid=""
   style={
     {
-      "--gutter": "0.25rem",
+      "--gutter": ".5rem",
       "--minItemWidth": undefined,
     }
   }
@@ -153,81 +153,7 @@ exports[`Grid > correct usage > renders all the gutter options 5`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-<div
-  className="c0"
-  data-bedrock-grid=""
-  style={
-    {
-      "--gutter": "0.5rem",
-      "--minItemWidth": undefined,
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Grid > correct usage > renders all the gutter options 6`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-<div
-  className="c0"
-  data-bedrock-grid=""
-  style={
-    {
-      "--gutter": "0.75rem",
-      "--minItemWidth": undefined,
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Grid > correct usage > renders all the gutter options 7`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -259,12 +185,49 @@ exports[`Grid > correct usage > renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 8`] = `
+exports[`Grid > correct usage > renders all the gutter options 6`] = `
 .c0 {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "1.25rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 7`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -296,12 +259,49 @@ exports[`Grid > correct usage > renders all the gutter options 8`] = `
 </div>
 `;
 
+exports[`Grid > correct usage > renders all the gutter options 8`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "1.75rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
 exports[`Grid > correct usage > renders all the gutter options 9`] = `
 .c0 {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -338,7 +338,7 @@ exports[`Grid > correct usage > renders all the gutter options 10`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -375,7 +375,7 @@ exports[`Grid > correct usage > renders all the gutter options 11`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -407,12 +407,234 @@ exports[`Grid > correct usage > renders all the gutter options 11`] = `
 </div>
 `;
 
+exports[`Grid > correct usage > renders all the gutter options 12`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "5rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 13`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "7.5rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 14`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "10rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 15`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "15rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 16`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "20rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Grid > correct usage > renders all the gutter options 17`] = `
+.c0 {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gutter,0px);
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+<div
+  className="c0"
+  data-bedrock-grid=""
+  style={
+    {
+      "--gutter": "30rem",
+      "--minItemWidth": undefined,
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
 exports[`Grid > correct usage > renders custom gutter with number 1`] = `
 .c0 {
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -449,7 +671,7 @@ exports[`Grid > correct usage > renders custom gutter with string 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -486,7 +708,7 @@ exports[`Grid > correct usage > renders custom minItemWidth 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -523,7 +745,7 @@ exports[`Grid > correct usage > renders custom minItemWidth as string 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -560,7 +782,7 @@ exports[`Grid > correct usage > renders default with no gutter 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -597,7 +819,7 @@ exports[`Grid > correct usage > renders with theme overrides 1`] = `
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -609,7 +831,7 @@ exports[`Grid > correct usage > renders with theme overrides 1`] = `
   data-bedrock-grid=""
   style={
     {
-      "--gutter": "200px",
+      "--gutter": undefined,
       "--minItemWidth": undefined,
     }
   }
@@ -634,7 +856,7 @@ exports[`Grid > incorrect usage > renders default with console error when minIte
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -671,7 +893,7 @@ exports[`Grid > incorrect usage > renders default with console error with minIte
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {
@@ -710,7 +932,7 @@ exports[`Grid > incorrect usage > renders default with wrong gutter input 1`] = 
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,639px),100%),1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
 }
 
 .c0 > * {

@@ -19,7 +19,6 @@ module.exports = defineConfig({
         "react",
         "styled-components",
         "@bedrock-layout/spacing-constants",
-        "@bedrock-layout/grid",
       ],
     },
   },

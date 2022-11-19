@@ -1,5 +1,6 @@
 import "pepjs";
 import "open-props/style";
+import "@bedrock-layout/css";
 
 import "./styles.css";
 import "./i18n";

@@ -1,8 +1,9 @@
-import { PadBox } from "@bedrock-layout/padbox";
 import styled from "styled-components";
 
+import { PadBox } from "../../packages/padbox/src";
+
 export const Button = styled(PadBox).attrs((props) => ({
-  padding: props.icon ? "md" : ["lg", "xl"],
+  padding: props.icon ? "size2" : ["size3", "size7"],
   as: props?.as ?? "button",
 }))<{
   primary?: boolean;

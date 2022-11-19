@@ -69,7 +69,7 @@ describe("Grid", () => {
 
     it("renders custom minItemWidth", () => {
       const grid = create(
-        <Grid gutter="lg" minItemWidth={320}>
+        <Grid gutter="size3" minItemWidth={320}>
           <Lorem />
         </Grid>
       );
@@ -78,7 +78,7 @@ describe("Grid", () => {
 
     it("renders custom minItemWidth as string", () => {
       const grid = create(
-        <Grid gutter="lg" minItemWidth="32rem">
+        <Grid gutter="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>
       );
@@ -112,15 +112,12 @@ describe("Grid", () => {
     });
 
     it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Grid gutter={{ value: "incorrect" }}>
           <Lorem />
         </Grid>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -128,7 +125,7 @@ describe("Grid", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Grid gutter="lg" minItemWidth={{ value: "incorrect" }}>
+        <Grid gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>
       );
@@ -141,7 +138,7 @@ describe("Grid", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Grid gutter="lg" minItemWidth="garbage">
+        <Grid gutter="size3" minItemWidth="garbage">
           <Lorem />
         </Grid>
       );

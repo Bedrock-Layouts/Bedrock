@@ -1,10 +1,10 @@
-import { PadBox } from "@bedrock-layout/padbox";
-import { Stack } from "@bedrock-layout/stack";
 import { Menu, MenuButton, MenuItem, MenuList } from "@reach/menu-button";
 import { VisuallyHidden } from "@reach/visually-hidden";
 import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
+import { PadBox } from "../../packages/padbox/src";
+import { Stack } from "../../packages/stack/src";
 import i18n from "../i18n";
 import { Button } from "./Button";
 import { GlobeIcon } from "./GlobeIcon";
@@ -29,7 +29,7 @@ const SlideDownMenuList = styled(MenuList)`
 const LanguageItem = styled(PadBox).attrs((props) => ({
   as: MenuItem,
 
-  padding: ["md", "lg"],
+  padding: ["size2", "size3"],
   tabIndex: 0,
 }))`
   :hover,
@@ -89,7 +89,7 @@ export const LocaleFab = () => {
           <VisuallyHidden>Locale</VisuallyHidden>
         </MenuButton>
         <SlideDownMenuList>
-          <Stack gutter="sm" style={{ background: "white" }}>
+          <Stack style={{ background: "white" }}>
             <LanguageItem onSelect={() => setLocale("en")}>
               English
             </LanguageItem>

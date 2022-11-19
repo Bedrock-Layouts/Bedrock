@@ -1,8 +1,4 @@
-import {
-  Gutter,
-  getSafeGutter,
-  validateGutter,
-} from "@bedrock-layout/spacing-constants";
+import { Gutter, getSafeGutter } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -59,7 +55,6 @@ export const InlineCluster = styled.div.attrs<InlineClusterProps>(
 InlineCluster.displayName = "InlineCluster";
 
 InlineCluster.propTypes = {
-  gutter: validateGutter,
   justify: PropTypes.oneOf<keyof typeof justifyMap>(["start", "center", "end"]),
   align: PropTypes.oneOf<keyof typeof alignMap>([
     "start",

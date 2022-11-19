@@ -1367,37 +1367,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bedrock-layout/column-drop@^1.0.0":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@bedrock-layout/column-drop/-/column-drop-1.4.4.tgz#bf86a1fa32a0c20826a0c2ced89f95e9b0facc83"
-  integrity sha512-XzjNiuWBir+xjcvZ1Nyw0hcCwQx13ZYiTT8cehWFWwxuIz9nNe3voPFPehciXRNFJT72So2N4wWwflfyj65NAg==
-  dependencies:
-    "@bedrock-layout/spacing-constants" "^2.8.3"
-
-"@bedrock-layout/grid@^2.1.0", "@bedrock-layout/grid@^2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@bedrock-layout/grid/-/grid-2.4.4.tgz#a1210f4353040b795de258a827ce424d5301058d"
-  integrity sha512-ZKaDJvG0RlVhP/shrqKF5qSSVgXRsa1M/gF1+xXh7m6nh62/DcLkRubshAl+xgFnqx3TIckk5+pJPse3U4VmzA==
-  dependencies:
-    "@bedrock-layout/spacing-constants" "^2.8.3"
-
-"@bedrock-layout/inline@^2.0.16":
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/@bedrock-layout/inline/-/inline-2.5.4.tgz#f4abc2efb734c2dc451cdf11ac32ca250b9fddfa"
-  integrity sha512-wpyLZ17DtL6PpAXIIZ6NtBXae2ld5F9tMxVjbst9hEu4msAbDDd2EF3zSWkyAuDY7r/WH1z7E3HXww3bRDs19w==
-  dependencies:
-    "@bedrock-layout/inline-cluster" "^2.6.4"
-    "@bedrock-layout/spacing-constants" "^2.8.3"
-
-"@bedrock-layout/masonry-grid@^2.1.0":
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/@bedrock-layout/masonry-grid/-/masonry-grid-2.6.6.tgz#ddd095b42057c2a6e68f8b235938907dbe76cd6f"
-  integrity sha512-n1mDA08wd1cDgCtNkFHBFJZhWMKCsot0en194W9XO+eCVbzgrkpNeBWCKKdL3EF3auooZqRgRNY5XkyC3etruA==
-  dependencies:
-    "@bedrock-layout/grid" "^2.4.4"
-    "@bedrock-layout/spacing-constants" "^2.8.3"
-    "@bedrock-layout/use-resize-observer" "^1.2.3"
-
 "@bedrock-layout/type-utils@^0.0.12":
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/type-utils/-/type-utils-0.0.12.tgz#194ab4dfe2c03f5e2f33617705122b0fa9b8d270"

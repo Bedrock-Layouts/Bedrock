@@ -1,21 +1,20 @@
-import {
-  Gutter,
-  getSafeGutter,
-  validateGutter,
-} from "@bedrock-layout/spacing-constants";
+import { Gutter, getSafeGutter } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
-import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import { useForwardedRef } from "@bedrock-layout/use-forwarded-ref";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { ElementType, forwardRef } from "react";
 import styled from "styled-components";
 
 interface ColumnsBaseProps {
   gutter?: Gutter;
   columns?: number;
   dense?: boolean;
-  forwardedAs?: As<unknown>;
+  forwardedAs?: unknown;
 }
 
 const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
@@ -51,20 +50,26 @@ const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
   grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
 `;
 
-export interface ColumnsProps extends StackProps, ColumnsBaseProps {
+interface ColumnsPropsBase extends StackProps, ColumnsBaseProps {
   switchAt?: number | string;
   children?: React.ReactNode;
 }
 
-const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
-  ({ columns, dense, switchAt, as, ...props }, ref) => {
-    const safeRef = useForwardedRef(ref);
+export type ColumnsProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, ColumnsPropsBase>;
+
+const ColumnComp = forwardRef(
+  <C extends ElementType = "div">(
+    { columns, dense, switchAt, as, gutter, ...props }: ColumnsProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const safeRef = useForwardedRef<HTMLDivElement>(ref);
 
     const node = safeRef.current;
 
     const maybePx = React.useMemo(() => {
       return typeof switchAt === "string"
-        ? toPX(switchAt, node)
+        ? toPX(switchAt, node ?? undefined)
         : typeof switchAt === "number" && switchAt > -1
         ? switchAt
         : null;
@@ -72,14 +77,17 @@ const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
 
     const widthToSwitchAt: number = maybePx ? maybePx : 0; //zero is used to make the switchAt a noop
 
-    const shouldSwitch = useContainerQuery(node, widthToSwitchAt);
+    const shouldSwitch = useContainerQuery(node ?? undefined, widthToSwitchAt);
 
     return shouldSwitch ? (
-      <Stack as={as} ref={safeRef} {...props} />
+      <Stack as={as} ref={safeRef} gutter={gutter} {...props} />
     ) : (
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-expect-error
       <ColumnsBase
         as={as}
         ref={safeRef}
+        gutter={gutter}
         columns={columns}
         dense={dense}
         {...props}
@@ -98,7 +106,6 @@ export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
 Columns.displayName = "Columns";
 
 Columns.propTypes = {
-  gutter: validateGutter,
   columns: PropTypes.number,
   dense: PropTypes.bool,
   switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

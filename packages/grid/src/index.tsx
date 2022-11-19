@@ -6,7 +6,6 @@ import {
   getSafeGutter,
   getSizeValue,
   sizes,
-  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -51,7 +50,7 @@ export const Grid = styled.div.attrs<GridProps>(
 
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--minItemWidth, ${sizes.small}), 100%), 1fr)
+    minmax(min(var(--minItemWidth, ${sizes.sizeSm}), 100%), 1fr)
   );
 `;
 
@@ -74,7 +73,6 @@ function validateMinItemWidth({ minItemWidth }: GridProps, propName: string) {
 }
 
 Grid.propTypes = {
-  gutter: validateGutter,
   minItemWidth:
     validateMinItemWidth as unknown as PropTypes.Requireable<MinItemWidth>,
 };

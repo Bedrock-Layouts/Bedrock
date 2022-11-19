@@ -103,15 +103,12 @@ describe("PadBox", () => {
     });
 
     it("renders default with console error with no input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <PadBox>
           <Lorem />
         </PadBox>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

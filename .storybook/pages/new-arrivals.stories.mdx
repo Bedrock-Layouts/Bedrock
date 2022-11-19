@@ -1,12 +1,12 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import cardInitial from '../assets/card-initial.png'
-import cardStyled from '../assets/card-styled.png'
-import columnDrop from '../assets/column-drop.png'
-import grid from '../assets/grid.png'
-import masonryGrid from '../assets/masonry-grid.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import cardInitial from "../assets/card-initial.png";
+import cardStyled from "../assets/card-styled.png";
+import columnDrop from "../assets/column-drop.png";
+import grid from "../assets/grid.png";
+import masonryGrid from "../assets/masonry-grid.png";
 
 <Meta
   title="Getting Started/Lesson 6: The New Arrivals"
@@ -37,7 +37,6 @@ export function Card() {
     </article>
   );
 }
-
 ```
 
 Now we can bring in this component into our `App.js` file. In our `App.js` file, paste the following code into the `App.js` file:
@@ -54,19 +53,19 @@ import { Card } from "./Card";
 
 function App() {
   return (
-    <Stack gutter="md">
-      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
+    <Stack gutter='size3'>
+      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
         <Center maxWidth="40rem">
-          <Stack as="header" gutter="lg">
+          <Stack as="header" gutter='size3'>
             <h1>Coco Le Belle</h1>
             <p>Elegant Feminine Fashion</p>
-            <Inline gutter="md">
+            <Inline gutter='size3'>
               <button>New Arrivals</button>
             </Inline>
           </Stack>
         </Center>
       </Cover>
-      <Stack gutter="xl">
+      <Stack gutter='size7'>
         <h2>New Arrivals</h2>
         <Card />
       </Stack>
@@ -118,7 +117,7 @@ function randomLoremIpsum() {
 
 export function Card({ title }) {
   return (
-    <Stack as="article" gutter="lg">
+    <Stack as="article" gutter='size3'>
       <Frame ratio={[16, 9]}>
         <img
           src={`https://source.unsplash.com/random/900×700/?${title}`}
@@ -173,22 +172,22 @@ const cards = ["Fruit", "Bikes", "Clothes", "Shoes", "Computers"];
 
 function App() {
   return (
-    <Stack gutter="md">
-      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
+    <Stack gutter='size3'>
+      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
         <Center maxWidth="40rem">
-          <Stack as="header" gutter="lg">
+          <Stack as="header" gutter='size3'>
             <h1>Coco Le Belle</h1>
             <p>Elegant Feminine Fashion</p>
-            <Inline gutter="md">
+            <Inline gutter='size3'>
               <button>New Arrivals</button>
             </Inline>
           </Stack>
         </Center>
       </Cover>
       <Center>
-        <Stack gutter="xl">
+        <Stack gutter='size7'>
           <h2>New Arrivals</h2>
-          <ColumnDrop gutter="lg" minItemWidth="20rem">
+          <ColumnDrop gutter='size3' minItemWidth="20rem">
             {cards.map((title) => (
               <Card key={title} title={title} />
             ))}
@@ -226,7 +225,7 @@ import { Grid } from "@bedrock-layout/grid";
 Then we can update replace the `ColumnDrop` component with the `Grid` component:
 
 ```jsx
-<Grid gutter="lg" minItemWidth="20rem">
+<Grid gutter='size3' minItemWidth="20rem">
   {cards.map((title) => (
     <Card key={title} title={title} />
   ))}
@@ -254,7 +253,7 @@ import { MasonryGrid } from "@bedrock-layout/masonry-grid";
 Then we can update replace the `Grid` component with the `MasonryGrid` component:
 
 ```jsx
-<MasonryGrid gutter="lg" minItemWidth="20rem">
+<MasonryGrid gutter='size3' minItemWidth="20rem">
   {cards.map((title) => (
     <Card key={title} title={title} />
   ))}
@@ -283,7 +282,7 @@ If you are interested in contributing you can learn more about [contributing cod
 
 Thank you again for taking the time to learn more about Bedrock Layout Primitives. I hope you enjoyed it.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-5-the-hero--page">
     The Hero
   </Button>

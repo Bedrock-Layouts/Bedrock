@@ -30,7 +30,7 @@ describe("Inline", () => {
     it("renders all the stretch options", () => {
       ["all", "start", "end", 0, 3].forEach((stretch) => {
         const inline = create(
-          <Inline gutter="lg" stretch={stretch}>
+          <Inline gutter="size3" stretch={stretch}>
             <Lorem />
           </Inline>
         );
@@ -41,7 +41,7 @@ describe("Inline", () => {
     it("renders with switchAt", () => {
       [42, "42rem"].forEach((switchAt) => {
         const inline = create(
-          <Inline gutter="lg" switchAt={switchAt}>
+          <Inline gutter="size3" switchAt={switchAt}>
             <Lorem />
           </Inline>
         );
@@ -52,7 +52,7 @@ describe("Inline", () => {
     it("renders with minItemWidth", () => {
       [42, "42rem"].forEach((minItemWidth) => {
         const inline = create(
-          <Inline gutter="lg" minItemWidth={minItemWidth}>
+          <Inline gutter="size3" minItemWidth={minItemWidth}>
             <Lorem />
           </Inline>
         );
@@ -73,7 +73,7 @@ describe("Inline", () => {
     it("renders default with console error with wrong stretch input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <Inline gutter="lg" stretch="incorrect">
+        <Inline gutter="size3" stretch="incorrect">
           <Lorem />
         </Inline>
       );
@@ -84,7 +84,7 @@ describe("Inline", () => {
     it("renders default with console error with wrong minItemWidth input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <Inline gutter="lg" minItemWidth="incorrect">
+        <Inline gutter="size3" minItemWidth="incorrect">
           <Lorem />
         </Inline>
       );

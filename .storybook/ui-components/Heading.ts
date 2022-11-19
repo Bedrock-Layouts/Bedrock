@@ -1,4 +1,4 @@
-import { Stack } from "@bedrock-layout/stack";
+import { Stack } from "../../packages/stack/src";
 import styled from "styled-components";
 
 export const Heading = styled(Stack).attrs(() => ({ as: "h1", gutter: "md" }))`

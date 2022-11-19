@@ -72,7 +72,7 @@ describe("ColumnDrop", () => {
 
     it("renders custom minItemWidth", () => {
       const columnDrop = create(
-        <ColumnDrop gutter="lg" minItemWidth={320}>
+        <ColumnDrop gutter="size3" minItemWidth={320}>
           <Lorem />
         </ColumnDrop>
       );
@@ -81,7 +81,7 @@ describe("ColumnDrop", () => {
 
     it("renders with no stretch columns", () => {
       const columnDrop = create(
-        <ColumnDrop gutter="lg" noStretchedColumns>
+        <ColumnDrop gutter="size3" noStretchedColumns>
           <Lorem />
         </ColumnDrop>
       );
@@ -90,7 +90,7 @@ describe("ColumnDrop", () => {
 
     it("renders custom minItemWidth as string", () => {
       const columnDrop = create(
-        <ColumnDrop gutter="lg" minItemWidth="32rem">
+        <ColumnDrop gutter="size3" minItemWidth="32rem">
           <Lorem />
         </ColumnDrop>
       );
@@ -124,14 +124,12 @@ describe("ColumnDrop", () => {
     });
 
     it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
       const errorStack = create(
         <ColumnDrop gutter={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -139,7 +137,7 @@ describe("ColumnDrop", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <ColumnDrop gutter="lg" minItemWidth={{ value: "incorrect" }}>
+        <ColumnDrop gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
@@ -152,7 +150,7 @@ describe("ColumnDrop", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <ColumnDrop gutter="lg" noStretchedColumns={{ value: "incorrect" }}>
+        <ColumnDrop gutter="size3" noStretchedColumns={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
@@ -165,7 +163,7 @@ describe("ColumnDrop", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <ColumnDrop gutter="lg" minItemWidth="garbage">
+        <ColumnDrop gutter="size3" minItemWidth="garbage">
           <Lorem />
         </ColumnDrop>
       );

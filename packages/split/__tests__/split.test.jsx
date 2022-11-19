@@ -73,7 +73,7 @@ describe("Split", () => {
       ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"].forEach(
         (fraction) => {
           const split = create(
-            <Split gutter="lg" fraction={fraction}>
+            <Split gutter="size3" fraction={fraction}>
               <Lorem />
             </Split>
           );
@@ -100,7 +100,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="lg" switchAt={widthToSwitchAt}>
+        <Split gutter="size3" switchAt={widthToSwitchAt}>
           <Lorem />
         </Split>
       );
@@ -112,7 +112,7 @@ describe("Split", () => {
 
     it("should render as a main", () => {
       const stack = create(
-        <Split gutter="lg" as="main">
+        <Split gutter="size3" as="main">
           <Lorem />
         </Split>
       );
@@ -123,7 +123,7 @@ describe("Split", () => {
     it("should render as a main when wrapped in styled", () => {
       const WrappedSplit = styled(Split)``;
       const split = create(
-        <WrappedSplit gutter="lg" as="main">
+        <WrappedSplit gutter="size3" as="main">
           <Lorem />
         </WrappedSplit>
       );
@@ -138,7 +138,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="lg" switchAt={widthToSwitchAt + 1}>
+        <Split gutter="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
         </Split>
       );
@@ -155,7 +155,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="lg" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
+        <Split gutter="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
           <Lorem />
         </Split>
       );
@@ -176,15 +176,12 @@ describe("Split", () => {
     });
 
     it("renders default with wrong gutter input", async () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Split gutter={{ value: "incorrect" }}>
           <Lorem />
         </Split>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -212,15 +209,12 @@ describe("Split", () => {
     });
 
     it("renders default with console error with wrong switchAt input", () => {
-      expect(console.error.mock.calls.length).toBe(0);
-
       const errorStack = create(
-        <Split gutter="lg" switchAt={{ value: "incorrect" }}>
+        <Split gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Split>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

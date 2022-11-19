@@ -4,9 +4,7 @@ import {
   checkIsCSSLength,
   spacing as defaultSpacing,
   getSafeGutter,
-  validateGutter,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 type PaddingValue = Gutter;
@@ -125,12 +123,3 @@ export const PadBox = styled.div.attrs<PadBoxProps>(() => ({
 `;
 
 PadBox.displayName = "PadBox";
-
-PadBox.propTypes = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  padding: PropTypes.oneOfType<any>([
-    validateGutter,
-    PropTypes.objectOf(validateGutter),
-    PropTypes.arrayOf(validateGutter),
-  ]).isRequired,
-};

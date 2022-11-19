@@ -27,7 +27,7 @@ yarn add @bedrock-layout/cover
   name="API"
   argTypes={argTypes}
   // This is preventing sorybook from rendering the component
-  args={{ minHeight: 0, top: "", bottom: "" }}
+  args={{ minHeight: "0px", top: "", bottom: "" }}
 />
 
 <ArgsTable story="API" />
@@ -40,7 +40,7 @@ The `Cover` component can be used with any React node as its child. The child wi
 
 <Canvas withSource="open">
   <Story name="With children">
-    <Cover minHeight="50vh" gutter="sm">
+    <Cover minHeight="50vh" gutter="size2">
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -57,7 +57,7 @@ The `top` prop can be used to render a top section.
 
 <Canvas withSource="open">
   <Story name="top">
-    <Cover minHeight="50vh" gutter="sm" top={<span>I am on top.</span>}>
+    <Cover minHeight="50vh" gutter="size2" top={<span>I am on top.</span>}>
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -74,7 +74,11 @@ The `bottom` prop can be used to render a bottom section.
 
 <Canvas withSource="open">
   <Story name="bottom">
-    <Cover minHeight="50vh" gutter="sm" bottom={<span>I am on bottom.</span>}>
+    <Cover
+      minHeight="50vh"
+      gutter="size2"
+      bottom={<span>I am on bottom.</span>}
+    >
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -93,7 +97,7 @@ Both the `top` and `bottom` props can be used to render a top and bottom section
   <Story name="top and bottom">
     <Cover
       minHeight="50vh"
-      gutter="sm"
+      gutter="size2"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
@@ -115,7 +119,7 @@ The `minHeight` prop can be used to set the minimum height of the cover. The def
   <Story name="minHeight">
     <Cover
       minHeight="500px"
-      gutter="sm"
+      gutter="size2"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
@@ -156,100 +160,154 @@ Here are the possible values for `gutter` by default:
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>none</h3>
+    <h3>size000</h3>
     <Cover
       minHeight={0}
-      gutter="none"
+      gutter="size000"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>xxs</h3>
+    <h3>size00</h3>
     <Cover
       minHeight={0}
-      gutter="xxs"
+      gutter="size00"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>xs</h3>
+    <h3>size1</h3>
     <Cover
       minHeight={0}
-      gutter="xs"
+      gutter="size1"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>sm</h3>
+    <h3>size2</h3>
     <Cover
       minHeight={0}
-      gutter="sm"
+      gutter="size2"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>md</h3>
+    <h3>size3</h3>
     <Cover
       minHeight={0}
-      gutter="md"
+      gutter="size3"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>mdLg</h3>
+    <h3>size4</h3>
     <Cover
       minHeight={0}
-      gutter="mdLg"
+      gutter="size4"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>lg</h3>
+    <h3>size5</h3>
     <Cover
       minHeight={0}
-      gutter="lg"
+      gutter="size5"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>lgXl</h3>
+    <h3>size6</h3>
     <Cover
       minHeight={0}
-      gutter="lgXl"
+      gutter="size6"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>xl</h3>
+    <h3>size7</h3>
     <Cover
       minHeight={0}
-      gutter="xl"
+      gutter="size7"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>xlXXl</h3>
+    <h3>size8</h3>
     <Cover
       minHeight={0}
-      gutter="xlXXL"
+      gutter="size8"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
       <div>I am a child.</div>
     </Cover>
-    <h3>xxl</h3>
+    <h3>size9</h3>
     <Cover
       minHeight={0}
-      gutter="xxl"
+      gutter="size9"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size10</h3>
+    <Cover
+      minHeight={0}
+      gutter="size10"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size11</h3>
+    <Cover
+      minHeight={0}
+      gutter="size11"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size12</h3>
+    <Cover
+      minHeight={0}
+      gutter="size12"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size13</h3>
+    <Cover
+      minHeight={0}
+      gutter="size13"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size14</h3>
+    <Cover
+      minHeight={0}
+      gutter="size14"
+      top={<span>I am on top.</span>}
+      bottom={<span>I am on bottom.</span>}
+    >
+      <div>I am a child.</div>
+    </Cover>
+    <h3>size15</h3>
+    <Cover
+      minHeight={0}
+      gutter="size15"
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
     >
@@ -266,7 +324,7 @@ The `stretchContent` prop can be used to stretch the content to the full height 
   <Story name="stretchContent">
     <Cover
       minHeight="50vh"
-      gutter="sm"
+      gutter="size2"
       stretchContent
       top={<span>I am on top.</span>}
       bottom={<span>I am on bottom.</span>}
@@ -305,7 +363,7 @@ export const Template = ({top, bottom,...args}) =>  (
     name="Playground"
     args={{
       minHeight: "50vh",
-      gutter: "lg",
+      gutter: "size3",
       top: "I'm on top.",
       bottom: "I'm on bottom.",
     }}

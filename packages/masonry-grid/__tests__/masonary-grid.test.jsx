@@ -28,7 +28,7 @@ describe("MasonryGrid", () => {
 
     it("renders custom minItemWidth", () => {
       const masonryGrid = create(
-        <MasonryGrid gutter="lg" minItemWidth={320}>
+        <MasonryGrid gutter="size3" minItemWidth={320}>
           <div>1</div>
           <div>1</div>
           <div>1</div>
@@ -39,7 +39,7 @@ describe("MasonryGrid", () => {
 
     it("renders custom minItemWidth as string", () => {
       const masonryGrid = create(
-        <MasonryGrid gutter="lg" minItemWidth="32rem">
+        <MasonryGrid gutter="size3" minItemWidth="32rem">
           <div>1</div>
           <div>1</div>
           <div>1</div>
@@ -77,7 +77,6 @@ describe("MasonryGrid", () => {
     });
 
     it("renders default with console error with no gutter input", () => {
-      expect(console.error).not.toBeCalled();
       const errorStack = create(
         <MasonryGrid>
           <div>1</div>
@@ -85,7 +84,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
         </MasonryGrid>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -105,7 +104,7 @@ describe("MasonryGrid", () => {
     it("renders default with console error with minItemWidth input", () => {
       expect(console.error).not.toBeCalled();
       const errorStack = create(
-        <MasonryGrid gutter="lg" minItemWidth={{ value: "incorrect" }}>
+        <MasonryGrid gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <div>1</div>
           <div>1</div>
           <div>1</div>

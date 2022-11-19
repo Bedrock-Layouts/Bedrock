@@ -16,15 +16,11 @@ export interface AppBoundaryProps {
 
 export const AppBoundary = styled.div.attrs<AppBoundaryProps>(
   ({ theme, boundarySize, children }) => {
-    const maybeSize: CSSLength | undefined =
-      typeof boundarySize === "number" && boundarySize > 0
-        ? `${boundarySize}px`
-        : getSizeValue(theme, boundarySize) ??
-          (boundarySize as CSSLength | undefined);
+    const maybeSize = getSizeValue(theme, boundarySize);
     return {
       "data-bedrock-appboundary": "",
       children: (
-        <Center maxWidth={maybeSize ?? sizes.xxlarge}>{children}</Center>
+        <Center maxWidth={maybeSize ?? sizes.sizeXxl}>{children}</Center>
       ),
     };
   }

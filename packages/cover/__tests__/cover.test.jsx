@@ -27,7 +27,7 @@ describe("Cover", () => {
 
     it("renders default", () => {
       const cover = create(
-        <Cover gutter="lg">
+        <Cover gutter="size3">
           <Lorem />
         </Cover>
       );
@@ -36,7 +36,7 @@ describe("Cover", () => {
 
     it("renders custom height", () => {
       const cover = create(
-        <Cover gutter="lg" minHeight="500px">
+        <Cover gutter="size3" minHeight="500px">
           <Lorem />
         </Cover>
       );
@@ -44,7 +44,7 @@ describe("Cover", () => {
     });
     it("renders with top", () => {
       const cover = create(
-        <Cover gutter="lg" top={<Lorem />}>
+        <Cover gutter="size3" top={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -53,7 +53,7 @@ describe("Cover", () => {
 
     it("renders with bottom", () => {
       const cover = create(
-        <Cover gutter="lg" bottom={<Lorem />}>
+        <Cover gutter="size3" bottom={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -62,7 +62,7 @@ describe("Cover", () => {
 
     it("renders with top and bottom", () => {
       const cover = create(
-        <Cover gutter="lg" top={<Lorem />} bottom={<Lorem />}>
+        <Cover gutter="size3" top={<Lorem />} bottom={<Lorem />}>
           <Lorem />
         </Cover>
       );
@@ -109,7 +109,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as string", () => {
       const cover = create(
-        <Cover gutter="lg" minHeight="50vh">
+        <Cover gutter="size3" minHeight="50vh">
           <Lorem />
         </Cover>
       );
@@ -118,7 +118,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as custom property", () => {
       const cover = create(
-        <Cover gutter="lg" minHeight="var(--size-xl)">
+        <Cover gutter="size3" minHeight="var(--size-xl)">
           <Lorem />
         </Cover>
       );
@@ -127,7 +127,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as number", () => {
       const cover = create(
-        <Cover gutter="lg" minHeight={300}>
+        <Cover gutter="size3" minHeight={300}>
           <Lorem />
         </Cover>
       );
@@ -137,7 +137,7 @@ describe("Cover", () => {
     it("renders with minHeight as a size property", () => {
       Object.keys(sizes).forEach((size) => {
         const cover = create(
-          <Cover gutter="lg" minHeight={size}>
+          <Cover gutter="size3" minHeight={size}>
             <Lorem />
           </Cover>
         );
@@ -147,7 +147,7 @@ describe("Cover", () => {
 
     it("renders with stretched content", () => {
       const cover = create(
-        <Cover gutter="lg" stretchContent>
+        <Cover gutter="size3" stretchContent>
           <Lorem />
         </Cover>
       );
@@ -176,21 +176,18 @@ describe("Cover", () => {
     });
 
     it("renders default with wrong gutter", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Cover gutter={{ value: "incorrect" }}>
           <Lorem />
         </Cover>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders with min-height incorrect with invalid minHeight", () => {
       const errorStack = create(
-        <Cover gutter="lg" minHeight="incorrect">
+        <Cover gutter="size3" minHeight="incorrect">
           <Lorem />
         </Cover>
       );
@@ -200,7 +197,7 @@ describe("Cover", () => {
 
     it("renders without stretched conent with invalid stretchContent prop", () => {
       const errorStack = create(
-        <Cover gutter="lg" stretchContent="incorrect">
+        <Cover gutter="size3" stretchContent="incorrect">
           <Lorem />
         </Cover>
       );

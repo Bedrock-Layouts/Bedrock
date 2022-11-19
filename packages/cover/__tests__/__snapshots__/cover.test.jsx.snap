@@ -27,7 +27,7 @@ exports[`Cover > correct usage > renders all the gutter options 1`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0px",
+      "--gutter": "-.5rem",
       "--minHeight": undefined,
     }
   }
@@ -69,7 +69,7 @@ exports[`Cover > correct usage > renders all the gutter options 2`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0.0625rem",
+      "--gutter": "-.25rem",
       "--minHeight": undefined,
     }
   }
@@ -111,7 +111,7 @@ exports[`Cover > correct usage > renders all the gutter options 3`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0.125rem",
+      "--gutter": ".25rem",
       "--minHeight": undefined,
     }
   }
@@ -153,7 +153,7 @@ exports[`Cover > correct usage > renders all the gutter options 4`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0.25rem",
+      "--gutter": ".5rem",
       "--minHeight": undefined,
     }
   }
@@ -195,7 +195,7 @@ exports[`Cover > correct usage > renders all the gutter options 5`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0.5rem",
+      "--gutter": "1rem",
       "--minHeight": undefined,
     }
   }
@@ -237,7 +237,7 @@ exports[`Cover > correct usage > renders all the gutter options 6`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "0.75rem",
+      "--gutter": "1.25rem",
       "--minHeight": undefined,
     }
   }
@@ -279,7 +279,7 @@ exports[`Cover > correct usage > renders all the gutter options 7`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "1rem",
+      "--gutter": "1.5rem",
       "--minHeight": undefined,
     }
   }
@@ -321,7 +321,7 @@ exports[`Cover > correct usage > renders all the gutter options 8`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "1.5rem",
+      "--gutter": "1.75rem",
       "--minHeight": undefined,
     }
   }
@@ -448,6 +448,258 @@ exports[`Cover > correct usage > renders all the gutter options 11`] = `
   style={
     {
       "--gutter": "4rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 12`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "5rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 13`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "7.5rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 14`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "10rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 15`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "15rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 16`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "20rem",
+      "--minHeight": undefined,
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders all the gutter options 17`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "30rem",
       "--minHeight": undefined,
     }
   }
@@ -875,7 +1127,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 1`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "159px",
+      "--minHeight": "240px",
     }
   }
 >
@@ -917,7 +1169,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 2`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "319px",
+      "--minHeight": "360px",
     }
   }
 >
@@ -959,7 +1211,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 3`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "639px",
+      "--minHeight": "480px",
     }
   }
 >
@@ -1001,7 +1253,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 4`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "1023px",
+      "--minHeight": "768px",
     }
   }
 >
@@ -1043,7 +1295,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 5`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "1199px",
+      "--minHeight": "1024px",
     }
   }
 >
@@ -1085,7 +1337,7 @@ exports[`Cover > correct usage > renders with minHeight as a size property 6`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "1439px",
+      "--minHeight": "1440px",
     }
   }
 >
@@ -1128,6 +1380,258 @@ exports[`Cover > correct usage > renders with minHeight as a size property 7`] =
     {
       "--gutter": "1rem",
       "--minHeight": "1920px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 8`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "20ch",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 9`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "45ch",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 10`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "60ch",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 11`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "20ch",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 12`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "25ch",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 13`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--gutter,0px);
+  min-block-size: var(--minHeight,100vh);
+}
+
+.c0 > * {
+  margin: 0;
+}
+
+.c0 > [data-bedrock-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+<div
+  className="c0"
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "35ch",
     }
   }
 >
@@ -1226,7 +1730,7 @@ exports[`Cover > correct usage > renders with theme overrides 1`] = `
   data-bedrock-cover=""
   style={
     {
-      "--gutter": "200px",
+      "--gutter": undefined,
       "--minHeight": undefined,
     }
   }

@@ -34,7 +34,7 @@ describe("Column", () => {
 
     it("renders default gutters", () => {
       const columns = create(
-        <Columns gutter="lg">
+        <Columns gutter="size3">
           <Column>
             <Lorem />
           </Column>
@@ -45,7 +45,7 @@ describe("Column", () => {
 
     it("renders as main", () => {
       const columns = create(
-        <Columns gutter="lg" as="main">
+        <Columns gutter="size3" as="main">
           <Column>
             <Lorem />
           </Column>
@@ -56,7 +56,7 @@ describe("Column", () => {
 
     it("renders custom span", () => {
       const columns = create(
-        <Columns gutter="lg">
+        <Columns gutter="size3">
           <Column span={2}>
             <Lorem />
           </Column>
@@ -67,7 +67,7 @@ describe("Column", () => {
 
     it("renders offsetStart span", () => {
       const columns = create(
-        <Columns gutter="lg" columns={4}>
+        <Columns gutter="size3" columns={4}>
           <Column span={2} offsetStart={2}>
             <Lorem />
           </Column>
@@ -78,7 +78,7 @@ describe("Column", () => {
 
     it("renders offsetEnd span", () => {
       const columns = create(
-        <Columns gutter="lg" columns={4}>
+        <Columns gutter="size3" columns={4}>
           <Column span={2} offsetEnd={2}>
             <Lorem />
           </Column>
@@ -101,7 +101,7 @@ describe("Column", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <Columns gutter="lg">
+        <Columns gutter="size3">
           <Column span="incorrect">
             <Lorem />
           </Column>
@@ -114,7 +114,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given 0", () => {
       const columns = create(
-        <Columns gutter="lg">
+        <Columns gutter="size3">
           <Column span={0}>
             <Lorem />
           </Column>
@@ -125,7 +125,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given negative number", () => {
       const columns = create(
-        <Columns gutter="lg">
+        <Columns gutter="size3">
           <Column span={-1}>
             <Lorem />
           </Column>
@@ -182,7 +182,7 @@ describe("Columns", () => {
 
     it("renders custom columns", () => {
       const columns = create(
-        <Columns gutter="lg" columns={5}>
+        <Columns gutter="size3" columns={5}>
           <Lorem />
         </Columns>
       );
@@ -191,7 +191,7 @@ describe("Columns", () => {
 
     it("renders dense mode", () => {
       const columns = create(
-        <Columns gutter="lg" dense>
+        <Columns gutter="size3" dense>
           <Lorem />
         </Columns>
       );
@@ -216,7 +216,7 @@ describe("Columns", () => {
       });
 
       const stack = create(
-        <Columns gutter="lg" switchAt={widthToSwitchAt - 1}>
+        <Columns gutter="size3" switchAt={widthToSwitchAt - 1}>
           <Lorem />
         </Columns>
       );
@@ -233,7 +233,7 @@ describe("Columns", () => {
       });
 
       const stack = create(
-        <Columns gutter="lg" switchAt={widthToSwitchAt + 1}>
+        <Columns gutter="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
         </Columns>
       );
@@ -254,15 +254,12 @@ describe("Columns", () => {
     });
 
     it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Columns gutter={{ value: "incorrect" }}>
           <Lorem />
         </Columns>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -313,7 +310,7 @@ describe("Columns", () => {
     it("renders default with console error with wrong switchAt input", () => {
       expect(console.error.mock.calls.length).toBe(0);
       const errorStack = create(
-        <Columns gutter="lg" switchAt={{ value: "incorrect" }}>
+        <Columns gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Columns>
       );

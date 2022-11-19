@@ -156,9 +156,9 @@ const size = {
   sizeHeader3,
 };
 
-export const spacing = space;
+export const spacing = space as Record<keyof typeof space, CSSLength>;
 
-export const sizes = size;
+export const sizes = size as Record<keyof typeof size, CSSLength>;
 
 export function checkIsCSSLength(str: string): str is CSSLength {
   if (typeof str !== "string") return false;
@@ -188,7 +188,6 @@ export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 
 export function getSpacingValue<T>(
   theme: T & {
-    spacing?: BaseTheme;
     space?: BaseTheme;
   },
   spacingKey: SpacingOptions
@@ -211,23 +210,22 @@ export function getSafeGutter<T extends BaseTheme>(
   theme: T,
   gutter?: Gutter
 ): Maybe<CSSLength> {
+  if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter > 0) return `${gutter}px`;
+  if (typeof gutter === "string" && checkIsCSSLength(gutter)) return gutter;
 
-  const isCSSLength = checkIsCSSLength(gutter as string);
-  if (isCSSLength) return gutter as CSSLength;
-
-  return gutter !== undefined
-    ? getSpacingValue(theme, gutter as SpacingOptions)
-    : undefined;
+  return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
 
 export function getSizeValue<T>(
   theme: T & {
     sizes?: BaseTheme;
   },
-  sizeKey: SizesOptions
+  sizeKey?: CSSLength | number | SizesOptions
 ): Maybe<CSSLength> {
-  if (typeof sizeKey === "number" || sizeKey === undefined) return undefined;
+  if (sizeKey === undefined) return undefined;
+  if (typeof sizeKey === "number" && sizeKey > 0) return `${sizeKey}px`;
+  if (typeof sizeKey === "string" && checkIsCSSLength(sizeKey)) return sizeKey;
 
   const maybeSizesOrDefault = theme.sizes ?? sizes;
 
@@ -238,5 +236,5 @@ export function getSizeValue<T>(
     ])
   );
 
-  return convertToMaybe(safeSizes[sizeKey]);
+  return convertToMaybe(safeSizes[sizeKey as SizesOptions]);
 }

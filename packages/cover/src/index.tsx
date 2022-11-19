@@ -6,7 +6,6 @@ import {
   getSafeGutter,
   getSizeValue,
   sizes,
-  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import React from "react";
@@ -25,9 +24,7 @@ function getSafeMinHeight<T extends Record<string, unknown>>(
   theme: T,
   minHeight?: MinHeight
 ) {
-  if (typeof minHeight === "number") return `${minHeight}px`;
-  if (checkIsCSSLength(minHeight as string)) return minHeight;
-  return getSizeValue(theme, minHeight as string);
+  return getSizeValue(theme, minHeight);
 }
 
 export const Cover = styled.div.attrs<CoverProps>(
@@ -121,7 +118,6 @@ function validateMinHeight({ minHeight }: CoverProps, propName: string) {
 }
 
 Cover.propTypes = {
-  gutter: validateGutter,
   minHeight: validateMinHeight as unknown as React.Validator<MinHeight>,
   top: PropTypes.element,
   bottom: PropTypes.element,

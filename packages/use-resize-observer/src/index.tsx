@@ -3,13 +3,13 @@ import {
   init,
   registerCallback,
 } from "@bedrock-layout/register-resize-callback";
-import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import { useEffect, useRef } from "react";
 
 export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
   node?: T
-): React.MutableRefObject<T> {
+): React.RefObject<T> {
   const callbackRef = useRef<ResizeFunc>(callback);
 
   const nodeRef = useStatefulRef<T>();

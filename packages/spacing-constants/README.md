@@ -31,7 +31,7 @@ const newSpacings = {
 }
 
 <ThemeProvider theme={{spacing:newSpacings}}>
-    <Stack gutter="sm">
+    <Stack gutter='size2'>
      {...}
     </Stack>
 </ThemeProvider>;

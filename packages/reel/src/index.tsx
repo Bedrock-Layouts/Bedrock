@@ -1,8 +1,4 @@
-import {
-  Gutter,
-  getSafeGutter,
-  validateGutter,
-} from "@bedrock-layout/spacing-constants";
+import { Gutter, getSafeGutter } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -51,5 +47,4 @@ Reel.displayName = "Reel";
 
 Reel.propTypes = {
   snapType: PropTypes.oneOf(["none", "proximity", "mandatory"]),
-  gutter: validateGutter,
 };

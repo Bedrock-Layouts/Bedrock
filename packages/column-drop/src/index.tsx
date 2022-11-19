@@ -6,7 +6,6 @@ import {
   getSafeGutter,
   getSizeValue,
   sizes,
-  validateGutter,
 } from "@bedrock-layout/spacing-constants";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -23,9 +22,7 @@ function getSafeMinItemWidth<T extends Record<string, unknown>>(
   theme: T,
   minItemWidth?: MinItemWidth
 ) {
-  if (typeof minItemWidth === "number") return `${minItemWidth}px`;
-  if (checkIsCSSLength(minItemWidth as string)) return minItemWidth;
-  return getSizeValue(theme, minItemWidth as string);
+  return getSizeValue(theme, minItemWidth);
 }
 
 export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
@@ -42,10 +39,7 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
       style: {
         ...style,
         "--gutter": maybeGutter,
-        "--minItemWidth":
-          typeof safeMinItemWidth === "number"
-            ? `${safeMinItemWidth}px`
-            : safeMinItemWidth,
+        "--minItemWidth": safeMinItemWidth,
       },
     };
   }
@@ -59,7 +53,7 @@ export const ColumnDrop = styled.div.attrs<ColumnDropProps>(
   box-sizing: border-box;
   > * {
     margin: 0;
-    flex-basis: var(--minItemWidth, ${sizes.xxsmall});
+    flex-basis: var(--minItemWidth, ${sizes.sizeSm});
     flex-grow: ${(props) => (props.noStretchedColumns ? "0" : "1")};
     flex-shrink: 1;
   }
@@ -89,7 +83,6 @@ function validateMinItemWidth(
 }
 
 ColumnDrop.propTypes = {
-  gutter: validateGutter,
   minItemWidth:
     validateMinItemWidth as unknown as React.Validator<MinItemWidth>,
   noStretchedColumns: PropTypes.bool,

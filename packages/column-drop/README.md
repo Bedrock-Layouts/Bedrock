@@ -17,7 +17,7 @@ Used to create a column-drop layouts
 ```javascript
 import ColumnDrop from '@bedrock-layout/column-drop';
 
-<ColumnDrop stretch={1} gutter='lg' justify='start' align='start'>
+<ColumnDrop stretch={1} gutter='size3' justify='start' align='start'>
   <span>Lorem ipsum dolor</span>
   <span>sit amet consectetur</span>
   <span>adipisicing elit.</span>

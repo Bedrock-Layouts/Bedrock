@@ -70,7 +70,7 @@ describe("InlineCluster", () => {
     it("renders all the justify options", () => {
       ["start", "center", "end"].forEach((justify) => {
         const inlineCluster = create(
-          <InlineCluster gutter="lg" justify={justify}>
+          <InlineCluster gutter="size3" justify={justify}>
             <Lorem />
           </InlineCluster>
         );
@@ -81,7 +81,7 @@ describe("InlineCluster", () => {
     it("renders all the align options", () => {
       ["start", "center", "end", "stretch"].forEach((align) => {
         const inlineCluster = create(
-          <InlineCluster gutter="lg" align={align}>
+          <InlineCluster gutter="size3" align={align}>
             <Lorem />
           </InlineCluster>
         );
@@ -103,7 +103,7 @@ describe("InlineCluster", () => {
     it("renders with theme overrides using numbers", () => {
       const inlineCluster = create(
         <ThemeProvider theme={{ spacing: { none: 0 } }}>
-          <InlineCluster gutter="none">
+          <InlineCluster gutter="size000">
             <Lorem />
           </InlineCluster>
         </ThemeProvider>
@@ -113,7 +113,7 @@ describe("InlineCluster", () => {
 
     it("accepts className prop", () => {
       const inlineCluster = create(
-        <InlineCluster gutter="lg" className="CLASSNAME">
+        <InlineCluster gutter="size3" className="CLASSNAME">
           <Lorem />
         </InlineCluster>
       );
@@ -131,15 +131,12 @@ describe("InlineCluster", () => {
     });
 
     it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <InlineCluster gutter={{ value: "incorrect" }}>
           <Lorem />
         </InlineCluster>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -147,7 +144,7 @@ describe("InlineCluster", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster gutter="lg" justify="incorrect">
+        <InlineCluster gutter="size3" justify="incorrect">
           <Lorem />
         </InlineCluster>
       );
@@ -159,7 +156,7 @@ describe("InlineCluster", () => {
       expect(console.error).not.toBeCalled();
 
       const errorStack = create(
-        <InlineCluster gutter="lg" align="incorrect">
+        <InlineCluster gutter="size3" align="incorrect">
           <Lorem />
         </InlineCluster>
       );
