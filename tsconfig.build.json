@@ -25,6 +25,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": true,
-    "target": "esnext"
+    "target": "esnext",
+    "types": ["vitest/globals"]
   }
 }

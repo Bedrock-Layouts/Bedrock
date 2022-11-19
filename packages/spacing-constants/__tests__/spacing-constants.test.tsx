@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import * as constants from "../src";
 
@@ -7,37 +7,34 @@ describe("Spacing Constants", () => {
     expect(constants).toMatchSnapshot();
   });
 
-  it("merges breakpoints", () => {
-    const newBreakpoints = { xlarge: "1300px" };
-    expect(constants.mergeBreakpoints(newBreakpoints)).toMatchSnapshot();
-  });
-
-  it("does not break if called with no object", () => {
-    expect(constants.mergeBreakpoints()).toMatchSnapshot();
-  });
-
   it("should return a string if no spacing provided", () => {
-    expect(constants.getSpacingValue({}, "lg")).toBe("1rem");
+    expect(constants.getSpacingValue({}, "size3")).toBe("1rem");
   });
 
   it("should return undefined if no spacing provided and incorrect key", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSpacingValue({}, "noKey")).toBe(undefined);
   });
 
   it("should return a string if spacing provided", () => {
-    expect(constants.getSpacingValue({ spacing: { "1x": "1rem" } }, "1x")).toBe(
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    expect(constants.getSpacingValue({ space: { "1x": "1rem" } }, "1x")).toBe(
       "1rem"
     );
   });
 
   it("should return a string if spacing provided using number", () => {
-    expect(constants.getSpacingValue({ spacing: { "1x": 1 } }, "1x")).toBe(
-      "1px"
-    );
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    expect(constants.getSpacingValue({ space: { "1x": 1 } }, "1x")).toBe("1px");
   });
 
   it("should return a undefined if spacing provided with incorrect key", () => {
-    expect(constants.getSpacingValue({ spacing: { "1x": "1rem" } }, "lg")).toBe(
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    expect(constants.getSpacingValue({ space: { "1x": "1rem" } }, "lg")).toBe(
       undefined
     );
   });
@@ -84,97 +81,47 @@ describe("gutter helpers", () => {
       ["var(--x)", "var(--x)"],
       ["lg", constants.spacing["lg"]],
     ])("returns correct value", (gutter, expected) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       expect(constants.getSafeGutter(theme, gutter)).toBe(expected);
     });
-  });
-
-  describe("gutterValidator", () => {
-    beforeEach(() => {
-      // eslint-disable-next-line no-undef
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockReset();
-    });
-    it.each([
-      [undefined],
-      [0],
-      ["garbage"],
-      ["px"],
-      ["1"],
-      ["em1"],
-      ["1me"],
-      [" "],
-      ["var(--)"],
-      ["var(--1)"],
-      [1],
-      [100],
-      ["1em"],
-      ["0.25em"],
-      ["11em"],
-      ["110000000em"],
-      ["1vmin"],
-      ["1vmax"],
-      ["1vh"],
-      ["1vw"],
-      ["1%"],
-      ["1ch"],
-      ["1ex"],
-      ["1em"],
-      ["1rem"],
-      ["1in"],
-      ["1cm"],
-      ["1mm"],
-      ["1pt"],
-      ["1pc"],
-      ["1px"],
-      ["var(--yellow)"],
-      ["var(--x)"],
-      ["lg"],
-    ])("returns undefined", (gutter) => {
-      expect(console.error).not.toBeCalled();
-      const props = { gutter };
-      constants.validateGutter(props, "gutter");
-      expect(console.error).not.toBeCalled();
-    });
-
-    it.each([[{ value: "garbage" }], [["garbage"]], [null]])(
-      "calls console.error on incorrect usage",
-      (gutter) => {
-        expect(console.error).not.toBeCalled();
-        const props = { gutter };
-        constants.validateGutter(props, "gutter");
-        expect(console.error).toBeCalled();
-      }
-    );
   });
 });
 
 describe("Size Constants", () => {
   it("should return a string if no sizes provided", () => {
-    expect(constants.getSizeValue({}, "large")).toBe("1199px");
+    expect(constants.getSizeValue({}, "sizeLg")).toBe("1024px");
   });
 
   it("should return undefined if no sizes provided and incorrect key", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSizeValue({}, "noKey")).toBe(undefined);
   });
 
   it("should return a string if sizes provided", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "1x")).toBe(
       "1199px"
     );
   });
 
   it("should return a string if sizes provided using number", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": 1 } }, "1x")).toBe("1px");
   });
 
   it("should return undefined if sizekey is a number", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": 1 } }, 1)).toBe(undefined);
   });
 
   it("should return a undefined if sizes provided with incorrect key", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "lg")).toBe(
       undefined
     );
@@ -215,6 +162,8 @@ describe("checkIsCSSLength", () => {
     ["var(--)", false],
     ["var(--1)", false],
   ])("checkIsCSSLength(%s) -> %s", (value, expected) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-expect-error
     expect(constants.checkIsCSSLength(value)).toBe(expected);
   });
 });

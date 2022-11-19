@@ -1,8 +1,8 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "types": ["vitest/globals"],
+    "baseUrl": ".",
     "paths": {
       "@bedrock-layout/appboundary": ["packages/appboundary/src"],
       "@bedrock-layout/center": ["packages/center/src"],
