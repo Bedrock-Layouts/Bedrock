@@ -1,19 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`Center > correct usage > renders custom width 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {
@@ -37,19 +25,7 @@ exports[`Center > correct usage > renders custom width 1`] = `
 `;
 
 exports[`Center > correct usage > renders custom width as string 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {
@@ -73,19 +49,7 @@ exports[`Center > correct usage > renders custom width as string 1`] = `
 `;
 
 exports[`Center > correct usage > renders default width 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {
@@ -109,30 +73,7 @@ exports[`Center > correct usage > renders default width 1`] = `
 `;
 
 exports[`Center > correct usage > renders with centered children 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center="center-children"
   style={
     {
@@ -156,20 +97,7 @@ exports[`Center > correct usage > renders with centered children 1`] = `
 `;
 
 exports[`Center > correct usage > renders with centered text 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-  text-align: center;
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center="center-text"
   style={
     {
@@ -193,19 +121,7 @@ exports[`Center > correct usage > renders with centered text 1`] = `
 `;
 
 exports[`Center > correct usage > renders with theme overrides 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {
@@ -229,19 +145,7 @@ exports[`Center > correct usage > renders with theme overrides 1`] = `
 `;
 
 exports[`Center > incorrect usage > renders default width if invalid CSS length 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {
@@ -265,19 +169,7 @@ exports[`Center > incorrect usage > renders default width if invalid CSS length 
 `;
 
 exports[`Center > incorrect usage > renders default with console error with no children 1`] = `
-.c0 {
-  box-sizing: content-box;
-  max-inline-size: var(--maxWidth,100%);
-}
-
-.c0.c0 {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  margin-inline: auto;
-}
-
 <div
-  className="c0"
   data-bedrock-center=""
   style={
     {

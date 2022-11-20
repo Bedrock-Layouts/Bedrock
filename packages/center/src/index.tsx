@@ -1,23 +1,39 @@
 import {
   CSSLength,
   SizesOptions,
-  checkIsCSSLength,
   getSizeValue,
-  sizes,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 type MaxWidth = number | CSSLength | SizesOptions;
 
-export interface CenterProps {
+interface CenterPropsBase {
   maxWidth?: MaxWidth;
   centerText?: boolean;
   centerChildren?: boolean;
 }
 
-export const Center = styled.div.attrs<CenterProps>(
-  ({ centerChildren, centerText, maxWidth, theme, style }) => {
+export type CenterProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, CenterPropsBase>;
+
+export const Center = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      centerChildren,
+      centerText,
+      maxWidth,
+      style,
+      ...props
+    }: CenterProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const centerProps = [
       centerText && "center-text",
       centerChildren && "center-children",
@@ -25,63 +41,27 @@ export const Center = styled.div.attrs<CenterProps>(
       .filter((x) => x)
       .join(" ");
 
-    return {
-      "data-bedrock-center": centerProps,
-      style: {
-        ...style,
-        "--maxWidth":
-          typeof maxWidth === "number" && maxWidth > 0
-            ? `${maxWidth}px`
-            : getSizeValue(theme, maxWidth) ?? maxWidth,
-      },
-    };
-  }
-)<CenterProps>`
-  @property --maxWidth {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 100%;
-  }
+    const safeStyle = style ?? {};
 
-  box-sizing: content-box;
+    const Component = as ?? "div";
 
-  && {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    margin-inline: auto;
-  }
-
-  max-inline-size: var(--maxWidth, 100%);
-
-  ${(props) =>
-    props.centerChildren &&
-    `display: flex;
-    flex-direction: column;
-    align-items: center;`}
-
-  ${(props) => props.centerText && `text-align: center;`}
-`;
-
-Center.displayName = "Center";
-
-function validateMaxWidth({ maxWidth }: CenterProps, propName: string) {
-  if (maxWidth === undefined) return undefined;
-
-  const isValid =
-    typeof maxWidth === "number" ||
-    checkIsCSSLength(maxWidth as string) ||
-    Object.keys(sizes).includes(maxWidth as string);
-
-  if (!isValid) {
-    console.error(
-      `${propName} needs to be an number, CSSLength or SizesOptions`
+    return (
+      <Component
+        data-bedrock-center={centerProps}
+        ref={ref}
+        style={
+          {
+            ...safeStyle,
+            "--maxWidth":
+              typeof maxWidth === "number" && maxWidth > 0
+                ? `${maxWidth}px`
+                : getSizeValue(theme, maxWidth) ?? maxWidth,
+          } as CSSProperties
+        }
+        {...props}
+      />
     );
   }
-  return undefined;
-}
+);
 
-Center.propTypes = {
-  maxWidth: validateMaxWidth as unknown as React.Validator<MaxWidth>,
-  centerText: PropTypes.bool,
-  centerChildren: PropTypes.bool,
-};
+Center.displayName = "Center";

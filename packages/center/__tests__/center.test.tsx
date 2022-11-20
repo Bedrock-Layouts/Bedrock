@@ -1,7 +1,7 @@
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { Center } from "../src";
 
@@ -86,14 +86,6 @@ describe("Center", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockReset();
-    });
-
     it("renders default width if invalid CSS length", () => {
       const center = create(
         <Center maxWidth="320pixels">
@@ -104,15 +96,12 @@ describe("Center", () => {
     });
 
     it("renders default with console error with no children", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Center maxWidth={["incorrect"]}>
           <Lorem />
         </Center>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
