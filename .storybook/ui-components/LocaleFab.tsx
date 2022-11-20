@@ -24,6 +24,7 @@ const SlideDownMenuList = styled(MenuList)`
   transform: translateY(10px);
   border-radius: 5px;
   animation: ${SlideDown} 0.2s ease;
+  zindex: 100;
 `;
 
 const LanguageItem = styled.div
@@ -77,7 +78,7 @@ export const LocaleFab = () => {
     <div
       ref={wrapperRef}
       tabIndex={0}
-      style={{ position: "fixed", top: "1rem", right: "1rem" }}
+      style={{ position: "fixed", top: "1rem", right: "1rem", zIndex: 10 }}
     >
       <Menu>
         <MenuButton ref={menuButtonRef} icon as={Button}>

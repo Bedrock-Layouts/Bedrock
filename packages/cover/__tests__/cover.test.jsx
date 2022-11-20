@@ -167,14 +167,6 @@ describe("Cover", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with wrong gutter", () => {
       const errorStack = create(
         <Cover gutter={{ value: "incorrect" }}>
@@ -191,7 +183,7 @@ describe("Cover", () => {
           <Lorem />
         </Cover>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -201,7 +193,7 @@ describe("Cover", () => {
           <Lorem />
         </Cover>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

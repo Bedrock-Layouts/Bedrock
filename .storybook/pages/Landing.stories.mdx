@@ -30,7 +30,7 @@ import { LocaleFab } from "../ui-components/LocaleFab";
 <SwitchToDocs />
 
 <Stack gutter="size3">
-<Cover as={Center} maxWidth='90vw' minHeight="40vh">
+<Cover as={Center} maxWidth='90vw' style={{ scrollSnapAlign: "start" }}>
   <Split gutter="size5" fraction='1/3' switchAt="50rem">
      <Center centerChildren maxWidth='90%'>
       <LogoOnly />
@@ -67,7 +67,7 @@ import { LocaleFab } from "../ui-components/LocaleFab";
 
   </Split>
 </Cover>
-
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
 <PadBox padding='size7' >
 
 ## <Intl>Landing.composableLayout</Intl>
@@ -124,7 +124,8 @@ export function Hero() {
   </section>
   </Split>
 </PadBox>
-
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
 <PadBox padding='size7' style={{background:'var(--gray-8)', borderRadius:'var(--radius-blob-1)'}}>
 
 ## <Intl>Landing.missingComponents</Intl>
@@ -165,6 +166,8 @@ export function Hero() {
   </Reel>
   </Split>
 </PadBox>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
 <PadBox padding='size7' >
 
 ## <Intl>Landing.notJustReact</Intl>
@@ -212,6 +215,8 @@ export function Hero() {
   </section>
   </Split>
 </PadBox>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
 <PadBox as={Center} maxWidth='90vw' padding='size9' style={{background:'var(--gray-8)', borderRadius:'var(--radius-blob-4)'}}>
 
 ## <Intl>Landing.gettingStarted</Intl>
@@ -232,6 +237,8 @@ export function Hero() {
 </p>
 
 </PadBox>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
 <PadBox as={Center} maxWidth='90vw' padding='size9'>
 
 ## <Intl>Landing.contribute</Intl>
@@ -296,5 +303,6 @@ export function Hero() {
     </Button>
   </a>
 </PadBox>
+</Cover>
 
 </Stack>
