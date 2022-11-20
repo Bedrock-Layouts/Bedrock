@@ -1,13 +1,18 @@
-import PropTypes from "prop-types";
-import styled from "styled-components";
-
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 type RatioString = `${number}/${number}` | `${number} / ${number}`;
 
 type Ratio = [number, number] | RatioString;
-export interface FrameProps {
+interface FramePropsBase {
   ratio?: Ratio;
   position?: string;
 }
+
+export type FrameProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, FramePropsBase>;
 
 function checkIsRatio(ratio: unknown): ratio is Ratio {
   const isCorrectArray =
@@ -29,64 +34,31 @@ function getSafeRatio(ratio: unknown): RatioString | undefined {
   return isRatio ? getRatioString(ratio) : undefined;
 }
 
-export const Frame = styled.div.attrs<FrameProps>(({ ratio, style }) => {
-  const safeRatio = getSafeRatio(ratio);
-  return {
-    "data-bedrock-frame": "",
-    style: { ...style, "--ratio": safeRatio },
-  };
-})<FrameProps>`
-  box-sizing: border-box;
-  display: block;
-  inline-size: 100%;
-  position: relative;
-  overflow: hidden;
+export const Frame = forwardRef(
+  <C extends ElementType = "div">(
+    { as, ratio, style, position, ...props }: FrameProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const safeRatio = getSafeRatio(ratio);
+    const safeStyle = style ?? {};
 
-  &[style*="--ratio"] {
-    aspect-ratio: var(--ratio);
-  }
+    const Component = as ?? "div";
 
-  > * {
-    position: absolute;
-
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-
-    inset-block: 0;
-    inset-inline: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  > :is(img, video) {
-    inline-size: 100%;
-    block-size: 100%;
-    size: 100%;
-
-    object-fit: cover;
-    object-position: ${(props) =>
-      typeof props.position === "string" ? props.position : "50%"};
-  }
-`;
-
-Frame.displayName = "Frame";
-
-function validateIsArray({ ratio }: FrameProps, propName: string) {
-  if (ratio === undefined) return undefined;
-  const isRatio = checkIsRatio(ratio);
-  if (!isRatio) {
-    console.error(
-      `${propName} needs to be an array of two numbers or a string in the form of "width/height"`
+    return (
+      <Component
+        data-bedrock-frame
+        ref={ref}
+        style={
+          {
+            ...safeStyle,
+            "--ratio": safeRatio,
+            "--position": position,
+          } as CSSProperties
+        }
+        {...props}
+      />
     );
   }
-  return undefined;
-}
+);
 
-Frame.propTypes = {
-  ratio: validateIsArray as unknown as React.Validator<Ratio>,
-  position: PropTypes.string,
-};
+Frame.displayName = "Frame";
