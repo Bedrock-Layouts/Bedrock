@@ -1,13 +1,12 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
-import { useContainerQuery } from "@bedrock-layout/use-container-query";
+import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import * as containerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import { vi } from "vitest";
 
 import { Column, Columns } from "../src";
 
-vi.mock("@bedrock-layout/use-container-query");
+vi.spyOn(containerQuery, "useContainerQuery");
 
 const Lorem = () => (
   <>
@@ -89,17 +88,7 @@ describe("Column", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with console error with wrong span input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Columns gutter="size3">
           <Column span="incorrect">
@@ -108,7 +97,6 @@ describe("Column", () => {
         </Columns>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -141,7 +129,6 @@ describe("Columns", () => {
     test("Columns is not null", () => {
       expect(Columns).toBeTruthy();
     });
-
     it("renders default gutter when none provided", () => {
       const columns = create(
         <Columns>
@@ -150,7 +137,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders all the gutter options", () => {
       Object.keys(spacing).forEach((gutter) => {
         const columns = create(
@@ -161,7 +147,6 @@ describe("Columns", () => {
         expect(columns.toJSON()).toMatchSnapshot();
       });
     });
-
     it("renders custom gutter with number", () => {
       const columns = create(
         <Columns gutter={20}>
@@ -170,7 +155,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders custom gutter with string", () => {
       const columns = create(
         <Columns gutter="3ch">
@@ -179,7 +163,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders custom columns", () => {
       const columns = create(
         <Columns gutter="size3" columns={5}>
@@ -188,7 +171,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders dense mode", () => {
       const columns = create(
         <Columns gutter="size3" dense>
@@ -197,7 +179,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders with theme overrides", () => {
       const columns = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
@@ -208,61 +189,55 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("should render a stack if container is below switchAt", () => {
       const widthToSwitchAt = 600;
-      useContainerQuery.mockImplementation((...[, width]) => {
-        return width <= widthToSwitchAt + 1;
+      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
+        return [width <= widthToSwitchAt + 1, { current: null }];
       });
-
       const stack = create(
         <Columns gutter="size3" switchAt={widthToSwitchAt - 1}>
           <Lorem />
         </Columns>
       );
-
       expect(stack.toJSON()).toMatchSnapshot();
-
-      useContainerQuery.mockRestore();
+      containerQuery.useContainerQuery.mockRestore();
     });
-
     it("should render a columns if container is above switchAt", () => {
       const widthToSwitchAt = 600;
-      useContainerQuery.mockImplementation((...[, width]) => {
-        return width <= widthToSwitchAt + 1;
+      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
+        return [width <= widthToSwitchAt + 1, { current: null }];
       });
-
       const stack = create(
         <Columns gutter="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
         </Columns>
       );
-
       expect(stack.toJSON()).toMatchSnapshot();
-
-      useContainerQuery.mockRestore();
+      containerQuery.useContainerQuery.mockRestore();
+    });
+    it("should render a columns if container is above switchAt as a string", () => {
+      const widthToSwitchAt = 600;
+      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
+        return [width <= widthToSwitchAt + 1, { current: null }];
+      });
+      const stack = create(
+        <Columns gutter="size3" switchAt={`${widthToSwitchAt + 1}px`}>
+          <Lorem />
+        </Columns>
+      );
+      expect(stack.toJSON()).toMatchSnapshot();
+      containerQuery.useContainerQuery.mockRestore();
     });
   });
-
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
         <Columns gutter={{ value: "incorrect" }}>
           <Lorem />
         </Columns>
       );
-
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-
     it("renders 1 columns if given 0", () => {
       const columns = create(
         <Columns columns={0}>
@@ -271,7 +246,6 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders 1 columns if given negative number", () => {
       const columns = create(
         <Columns columns={-1}>
@@ -280,41 +254,31 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-
     it("renders default with console error with incorrect column type", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Columns columns="incorrect">
           <Lorem />
         </Columns>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-
     it("renders default with console error with incorrect dense type", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Columns dense="incorrect">
           <Lorem />
         </Columns>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-
     it("renders default with console error with wrong switchAt input", () => {
-      expect(console.error.mock.calls.length).toBe(0);
       const errorStack = create(
         <Columns gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Columns>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

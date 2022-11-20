@@ -5,8 +5,6 @@ import {
   PolymorphicRef,
 } from "@bedrock-layout/type-utils";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
-import { useForwardedRef } from "@bedrock-layout/use-forwarded-ref";
-import PropTypes from "prop-types";
 import React, { ElementType, forwardRef } from "react";
 import styled from "styled-components";
 
@@ -63,21 +61,20 @@ const ColumnComp = forwardRef(
     { columns, dense, switchAt, as, gutter, ...props }: ColumnsProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
-    const safeRef = useForwardedRef<HTMLDivElement>(ref);
-
-    const node = safeRef.current;
-
     const maybePx = React.useMemo(() => {
       return typeof switchAt === "string"
-        ? toPX(switchAt, node ?? undefined)
+        ? toPX(switchAt)
         : typeof switchAt === "number" && switchAt > -1
         ? switchAt
         : null;
-    }, [switchAt, node]);
+    }, [switchAt]);
 
-    const widthToSwitchAt: number = maybePx ? maybePx : 0; //zero is used to make the switchAt a noop
+    const widthToSwitchAt: number = maybePx ?? 0; //zero is used to make the switchAt a noop
 
-    const shouldSwitch = useContainerQuery(node ?? undefined, widthToSwitchAt);
+    const [shouldSwitch, safeRef] = useContainerQuery(
+      { width: widthToSwitchAt },
+      ref
+    );
 
     return shouldSwitch ? (
       <Stack as={as} ref={safeRef} gutter={gutter} {...props} />
@@ -105,12 +102,6 @@ export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
 
 Columns.displayName = "Columns";
 
-Columns.propTypes = {
-  columns: PropTypes.number,
-  dense: PropTypes.bool,
-  switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 export interface ColumnProps {
   span?: number;
   offsetStart?: number;
@@ -122,7 +113,6 @@ const safeSpan = (span: unknown) => {
 };
 
 /**
- * ColumnsProps passed twice to make propTypes work.
  *
  * span is remaped to colSpan due to span being an attribute that gets
  * passed to the underlying element.  This can cause issues with Grid layout.
@@ -186,33 +176,32 @@ export const Column = styled.div.attrs<ColumnProps>(
 
 Column.displayName = "Column";
 
-Column.propTypes = {
-  span: PropTypes.number,
-};
-
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
  */
 
 const PIXELS_PER_INCH = 96;
 
-/* istanbul ignore next */
+/* c8 ignore start */
 function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
 
+  /* c8 ignore next */
   const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function toPX(str: string, element?: Element): number | null {
+  /* c8 ignore next */
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
   const safeStr = (str ?? "px").trim().toLowerCase();
 
+  /* c8 ignore next */
   switch (safeStr) {
     case "vmin":
     case "vmax":
@@ -252,7 +241,7 @@ function toPX(str: string, element?: Element): number | null {
   }
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)
@@ -268,3 +257,4 @@ function getSizeBrutal(unit: string, element: Element) {
   element.removeChild(testDIV);
   return size;
 }
+/* c8 ignore stop */

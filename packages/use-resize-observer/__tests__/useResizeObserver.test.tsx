@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM, { unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import { vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 
 import * as imports from "../src";
 
@@ -13,13 +13,18 @@ async function awaitAnimationFrame() {
   await new Promise((resolve) => requestAnimationFrame(resolve));
 }
 
-let createNode = vi.fn((node) => ({
+const createNode = vi.fn((node) => ({
   target: node,
   contentRect: { width: 300 },
 }));
 
 let onChange;
-let reset = () => void 0;
+
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+let reset = () => {};
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-expect-error
 ResizeObserver.mockImplementation(
   vi.fn((impl) => {
     const map = new Map();
@@ -28,7 +33,9 @@ ResizeObserver.mockImplementation(
       impl([...map.values()]);
     };
 
-    reset = () => map.clear();
+    reset = () => {
+      return map.clear();
+    };
 
     return {
       observe: vi.fn((node) => {
@@ -41,7 +48,7 @@ ResizeObserver.mockImplementation(
   })
 );
 
-let callback = vi.fn();
+const callback = vi.fn();
 const node = document.createElement("div");
 
 const HookWrapper = () => {

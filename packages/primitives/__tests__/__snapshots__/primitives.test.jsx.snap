@@ -141,9 +141,6 @@ exports[`primitives > primitives snapshot 1`] = `
       "staticRulesId": "",
     },
     "foldedComponentIds": [],
-    "propTypes": {
-      "span": [Function],
-    },
     "render": [Function],
     "shouldForwardProp": undefined,
     "styledComponentId": "sc-jSUZER",
@@ -219,11 +216,6 @@ exports[`primitives > primitives snapshot 1`] = `
       "staticRulesId": "",
     },
     "foldedComponentIds": [],
-    "propTypes": {
-      "columns": [Function],
-      "dense": [Function],
-      "switchAt": [Function],
-    },
     "render": [Function],
     "shouldForwardProp": undefined,
     "styledComponentId": "sc-eDvSVe",
@@ -506,33 +498,7 @@ exports[`primitives > primitives snapshot 1`] = `
   },
   "MasonryGrid": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 945680343,
-      "baseStyle": undefined,
-      "componentId": "sc-kDvujY",
-      "isStatic": false,
-      "rules": [
-        "
-  grid-template-rows: 1px;
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {},
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-kDvujY",
-    "target": {
-      "$$typeof": Symbol(react.forward_ref),
-      "render": [Function],
-    },
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "PadBox": {
     "$$typeof": Symbol(react.forward_ref),
@@ -540,9 +506,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": 1071014339,
+      "baseHash": -2129341314,
       "baseStyle": undefined,
-      "componentId": "sc-ipEyDJ",
+      "componentId": "sc-jrcTuL",
       "isStatic": false,
       "rules": [
         "
@@ -557,7 +523,7 @@ exports[`primitives > primitives snapshot 1`] = `
     "foldedComponentIds": [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ipEyDJ",
+    "styledComponentId": "sc-jrcTuL",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -569,9 +535,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -1178774832,
+      "baseHash": 945680343,
       "baseStyle": undefined,
-      "componentId": "sc-csuSiG",
+      "componentId": "sc-kDvujY",
       "isStatic": false,
       "rules": [
         "
@@ -599,7 +565,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-csuSiG",
+    "styledComponentId": "sc-kDvujY",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -611,9 +577,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -174752625,
+      "baseHash": 1071014339,
       "baseStyle": undefined,
-      "componentId": "sc-eDWCr",
+      "componentId": "sc-ipEyDJ",
       "isStatic": false,
       "rules": [
         "
@@ -710,7 +676,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-eDWCr",
+    "styledComponentId": "sc-ipEyDJ",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -866,7 +832,7 @@ exports[`primitives > primitives snapshot 1`] = `
   },
   "useContainerQuery": [Function],
   "useForwardedRef": undefined,
-  "useResizeObserver": [Function],
+  "useResizeObserver": undefined,
   "useStatefulRef": undefined,
   "useTheme": [Function],
 }

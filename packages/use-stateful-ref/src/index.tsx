@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useStatefulRef<T>(initialVal?: T): React.RefObject<T> {
+export function useStatefulRef<T>(initialVal?: T): React.MutableRefObject<T> {
   // eslint-disable-next-line prefer-const
   let [cur, setCur] = React.useState<T | undefined>(initialVal);
 
@@ -18,5 +18,5 @@ export function useStatefulRef<T>(initialVal?: T): React.RefObject<T> {
     },
   });
 
-  return ref as React.RefObject<T>;
+  return ref as React.MutableRefObject<T>;
 }

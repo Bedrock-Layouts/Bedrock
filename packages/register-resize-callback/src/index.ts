@@ -11,7 +11,7 @@ let observer: ResizeObserver | undefined;
 
 const callBackMap = new WeakMap<Element, ObserverCallback[]>();
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export function init(): void {
   if (observer) return;
   observer = new ResizeObserver((entries) => {
@@ -20,7 +20,7 @@ export function init(): void {
       /**
        * This is defensive code, but it's possible that get returns undefined
        */
-      /* istanbul ignore next */
+      /* c8 ignore next */
       const safeCallBacks = maybeCallBacks ?? [];
 
       if (safeCallBacks.length === 0) return;
@@ -63,7 +63,7 @@ export function registerCallback(
     /**
      * This is defensive code, but it's possible that get returns undefined
      */
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const safeCallBacks = maybeCallBacks ?? [];
     const newCallbacks = safeCallBacks.filter((ref) => ref !== cb);
 

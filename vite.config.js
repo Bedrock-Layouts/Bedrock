@@ -17,10 +17,10 @@ export default defineConfig({
     ],
     coverage: {
       reporter: ["text", "json", "html"],
-      lines: 91,
-      functions: 88,
-      branches: 91,
-      statements: 91,
+      statements: 95,
+      branches: 96,
+      functions: 97,
+      lines: 95,
       exclude: [
         "**/node_modules/**",
         "**/dist/**",

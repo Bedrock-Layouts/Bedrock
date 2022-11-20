@@ -9,9 +9,9 @@ export interface Config {
 export function useForwardedRef<T>(
   forwardedRef?: React.Ref<T>,
   config: Config = { isStateful: true }
-): React.RefObject<T> {
+): React.MutableRefObject<T> {
   const statefulRef = useStatefulRef<T>();
-  const ref = useRef<T>(null);
+  const ref = useRef<T>();
 
   const innerRef = config.isStateful ? statefulRef : ref;
 
@@ -19,5 +19,5 @@ export function useForwardedRef<T>(
   // @ts-expect-error
   React.useImperativeHandle(forwardedRef, () => innerRef.current);
 
-  return innerRef;
+  return innerRef as React.MutableRefObject<T>;
 }

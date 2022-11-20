@@ -17,7 +17,7 @@ import React, {
 } from "react";
 
 //Logic forked from is-in-browser npm package
-/* istanbul ignore next */
+/* c8 ignore next */
 const isBrowser =
   typeof window === "object" &&
   typeof document === "object" &&
@@ -44,7 +44,7 @@ const Resizer = ({
 
   const theme = useTheme();
 
-  /* istanbul ignore next */
+  /* c8 ignore next */
   const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
     setRowSpan(1);
     const gapString = getSafeGutter(theme, gutter) ?? "1px";
@@ -104,7 +104,7 @@ MasonryGrid.displayName = "MasonryGrid";
 
 const PIXELS_PER_INCH = 96;
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
@@ -114,7 +114,7 @@ function parseUnit(str: string): [number, string] {
   return [num, unit];
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function toPX(str: string, element?: Element): number | null {
   if (!str) return null;
 
@@ -160,7 +160,7 @@ function toPX(str: string, element?: Element): number | null {
   }
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)

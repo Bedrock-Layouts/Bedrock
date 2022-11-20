@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
-import { vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 
 import * as imports from "../src";
 
@@ -15,6 +15,8 @@ const setState = vi.fn((newState) => {
   state = newState;
 });
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 React.useState.mockImplementation((initialValue) => {
   state = initialValue;
   return [state, setState];
@@ -51,7 +53,10 @@ describe("useStatefulRef", () => {
 
   it("should call useState", () => {
     act(() => {
-      ReactDOM.render(<HookWrapper />, container);
+      ReactDOM.render(
+        <HookWrapper value={undefined} initialValue={undefined} />,
+        container
+      );
     });
 
     expect(React.useState).toBeCalled();

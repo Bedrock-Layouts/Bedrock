@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
   node?: T
-): React.RefObject<T> {
+): React.MutableRefObject<T> {
   const callbackRef = useRef<ResizeFunc>(callback);
 
   const nodeRef = useStatefulRef<T>();
@@ -33,5 +33,3 @@ export function useResizeObserver<T extends Element>(
 
   return nodeRef;
 }
-
-export default useResizeObserver;
