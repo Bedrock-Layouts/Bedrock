@@ -104,7 +104,7 @@ MasonryGrid.displayName = "MasonryGrid";
 
 const PIXELS_PER_INCH = 96;
 
-/* c8 ignore next */
+/* c8 ignore start */
 function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
@@ -114,7 +114,6 @@ function parseUnit(str: string): [number, string] {
   return [num, unit];
 }
 
-/* c8 ignore next */
 function toPX(str: string, element?: Element): number | null {
   if (!str) return null;
 
@@ -176,3 +175,4 @@ function getSizeBrutal(unit: string, element: Element) {
   element.removeChild(testDIV);
   return size;
 }
+/* c8 ignore end */

@@ -3,9 +3,9 @@
 exports[`Frame > correct usage > renders custom position 1`] = `
 <div
   data-bedrock-frame={true}
-  position="top left"
   style={
     {
+      "--position": "top left",
       "--ratio": "16/9",
     }
   }
@@ -22,6 +22,7 @@ exports[`Frame > correct usage > renders with ratio as a string 1`] = `
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": "16/9",
     }
   }
@@ -38,6 +39,7 @@ exports[`Frame > correct usage > renders with ratio as a string with spaces 1`] 
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": "16 / 9",
     }
   }
@@ -54,6 +56,7 @@ exports[`Frame > correct usage > renders with ratio as an array 1`] = `
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": "16/9",
     }
   }
@@ -70,6 +73,7 @@ exports[`Frame > correct usage > renders without ratio 1`] = `
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
@@ -84,9 +88,9 @@ exports[`Frame > correct usage > renders without ratio 1`] = `
 exports[`Frame > incorrect usage > renders default position with incorrect value 1`] = `
 <div
   data-bedrock-frame={true}
-  position={true}
   style={
     {
+      "--position": true,
       "--ratio": "16/9",
     }
   }
@@ -103,6 +107,7 @@ exports[`Frame > incorrect usage > renders without ratio if ratio is not correct
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
@@ -119,6 +124,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
@@ -135,6 +141,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
@@ -151,6 +158,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
@@ -167,6 +175,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if ratio str
   data-bedrock-frame={true}
   style={
     {
+      "--position": undefined,
       "--ratio": undefined,
     }
   }
