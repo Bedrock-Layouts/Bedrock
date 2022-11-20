@@ -37,11 +37,12 @@
     "lib"
   ],
   "dependencies": {
-    "@bedrock-layout/spacing-constants": "^2.9.0"
+    "@bedrock-layout/spacing-constants": "^2.9.0",
+    "@bedrock-layout/type-utils": "^0.0.18"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17 || ^18",
-    "styled-components": ">=5"
+    "@bedrock-layout/css": "^1.1.0"
   },
   "repository": {
     "type": "git",

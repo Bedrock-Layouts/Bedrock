@@ -1,7 +1,7 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { Reel } from "../src";
 
@@ -77,24 +77,13 @@ describe("Reel", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders with console error with incorrect snapType", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Reel gutter="size3" snapType="incorrect">
           <Lorem />
         </Reel>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
