@@ -42,10 +42,10 @@ describe("PadBox", () => {
 
     it("use 1, 2, 3, 4 items arrays", () => {
       [
-        ["md"],
-        ["md", "lg"],
-        ["md", "lg", "xs"],
-        ["md", "lg", "xs", "sm"],
+        ["size2"],
+        ["size2", "size3"],
+        ["size2", "size3", "size00"],
+        ["size2", "size3", "size00", "size1"],
       ].forEach((padding) => {
         const padbox = create(
           <PadBox padding={padding}>

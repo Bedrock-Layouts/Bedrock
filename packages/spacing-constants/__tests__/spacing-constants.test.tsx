@@ -32,11 +32,9 @@ describe("Spacing Constants", () => {
   });
 
   it("should return a undefined if spacing provided with incorrect key", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    expect(constants.getSpacingValue({ space: { "1x": "1rem" } }, "lg")).toBe(
-      undefined
-    );
+    expect(
+      constants.getSpacingValue({ space: { "1x": "1rem" } }, "size3")
+    ).toBe(undefined);
   });
 });
 
@@ -79,7 +77,7 @@ describe("gutter helpers", () => {
       ["1px", "1px"],
       ["var(--yellow)", "var(--yellow)"],
       ["var(--x)", "var(--x)"],
-      ["lg", constants.spacing["lg"]],
+      ["size3", constants.spacing["size3"]],
     ])("returns correct value", (gutter, expected) => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
@@ -120,7 +118,7 @@ describe("Size Constants", () => {
   it("should return a undefined if sizes provided with incorrect key", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "lg")).toBe(
+    expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "size3")).toBe(
       undefined
     );
   });

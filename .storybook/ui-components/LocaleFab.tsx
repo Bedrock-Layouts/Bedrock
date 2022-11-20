@@ -26,12 +26,15 @@ const SlideDownMenuList = styled(MenuList)`
   animation: ${SlideDown} 0.2s ease;
 `;
 
-const LanguageItem = styled(PadBox).attrs((props) => ({
-  as: MenuItem,
+const LanguageItem = styled.div
+  .withConfig({ shouldForwardProp: () => true })
+  .attrs(() => ({
+    as: MenuItem,
+    forwardedAs: PadBox,
 
-  padding: ["size2", "size3"],
-  tabIndex: 0,
-}))`
+    padding: ["size2", "size3"],
+    tabIndex: 0,
+  }))`
   :hover,
   :active,
   :focus {
@@ -69,13 +72,6 @@ export const LocaleFab = () => {
       component.removeEventListener("focus", onFocusIn);
     };
   }, []);
-
-  const MenuItemButton = styled.button`
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-  `;
 
   return (
     <div
