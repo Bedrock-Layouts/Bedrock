@@ -2,7 +2,7 @@ import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import * as containerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
-import { vi } from "vitest";
+import { describe, expect, it, test, vi } from "vitest";
 
 import { Column, Columns } from "../src";
 
@@ -191,6 +191,8 @@ describe("Columns", () => {
     });
     it("should render a stack if container is below switchAt", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockImplementation(({ width }) => {
         return [width <= widthToSwitchAt + 1, { current: null }];
       });
@@ -200,10 +202,14 @@ describe("Columns", () => {
         </Columns>
       );
       expect(stack.toJSON()).toMatchSnapshot();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockRestore();
     });
     it("should render a columns if container is above switchAt", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockImplementation(({ width }) => {
         return [width <= widthToSwitchAt + 1, { current: null }];
       });
@@ -213,10 +219,14 @@ describe("Columns", () => {
         </Columns>
       );
       expect(stack.toJSON()).toMatchSnapshot();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockRestore();
     });
     it("should render a columns if container is above switchAt as a string", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockImplementation(({ width }) => {
         return [width <= widthToSwitchAt + 1, { current: null }];
       });
@@ -226,6 +236,8 @@ describe("Columns", () => {
         </Columns>
       );
       expect(stack.toJSON()).toMatchSnapshot();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       containerQuery.useContainerQuery.mockRestore();
     });
   });

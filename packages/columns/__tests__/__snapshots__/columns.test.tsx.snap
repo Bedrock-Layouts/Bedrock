@@ -1,42 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`Column > correct usage > renders as main 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <main
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -46,8 +11,7 @@ exports[`Column > correct usage > renders as main 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -73,42 +37,7 @@ exports[`Column > correct usage > renders as main 1`] = `
 `;
 
 exports[`Column > correct usage > renders custom span 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -118,8 +47,7 @@ exports[`Column > correct usage > renders custom span 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -145,42 +73,7 @@ exports[`Column > correct usage > renders custom span 1`] = `
 `;
 
 exports[`Column > correct usage > renders default gutters 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -190,8 +83,7 @@ exports[`Column > correct usage > renders default gutters 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -217,42 +109,7 @@ exports[`Column > correct usage > renders default gutters 1`] = `
 `;
 
 exports[`Column > correct usage > renders offsetEnd span 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -262,8 +119,7 @@ exports[`Column > correct usage > renders offsetEnd span 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": 2,
@@ -289,42 +145,7 @@ exports[`Column > correct usage > renders offsetEnd span 1`] = `
 `;
 
 exports[`Column > correct usage > renders offsetStart span 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -334,8 +155,7 @@ exports[`Column > correct usage > renders offsetStart span 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -361,42 +181,7 @@ exports[`Column > correct usage > renders offsetStart span 1`] = `
 `;
 
 exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -406,8 +191,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -433,42 +217,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
 `;
 
 exports[`Column > incorrect usage > renders a span of 1 if given negative number 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -478,8 +227,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given negative number
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -505,42 +253,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given negative number
 `;
 
 exports[`Column > incorrect usage > renders default with console error with wrong span input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
-.c1 {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offset"] {
-  display: contents;
-}
-
-.c1[style*="--offset"] > * {
-  grid-column: span min(var(--span,1),var(--columns,1));
-}
-
-.c1[style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart,1),var(--columns,1));
-}
-
-.c1[style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd,1),var(--columns,1));
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -550,8 +263,7 @@ exports[`Column > incorrect usage > renders default with console error with wron
   }
 >
   <div
-    className="c1"
-    data-bedrock-column=""
+    data-bedrock-column={true}
     style={
       {
         "--offsetEnd": undefined,
@@ -577,20 +289,7 @@ exports[`Column > incorrect usage > renders default with console error with wron
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -615,20 +314,7 @@ exports[`Columns > correct usage > renders all the gutter options 1`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 2`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -653,20 +339,7 @@ exports[`Columns > correct usage > renders all the gutter options 2`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 3`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -691,20 +364,7 @@ exports[`Columns > correct usage > renders all the gutter options 3`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 4`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -729,20 +389,7 @@ exports[`Columns > correct usage > renders all the gutter options 4`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 5`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -767,20 +414,7 @@ exports[`Columns > correct usage > renders all the gutter options 5`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 6`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -805,20 +439,7 @@ exports[`Columns > correct usage > renders all the gutter options 6`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 7`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -843,20 +464,7 @@ exports[`Columns > correct usage > renders all the gutter options 7`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 8`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -881,20 +489,7 @@ exports[`Columns > correct usage > renders all the gutter options 8`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 9`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -919,20 +514,7 @@ exports[`Columns > correct usage > renders all the gutter options 9`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 10`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -957,20 +539,7 @@ exports[`Columns > correct usage > renders all the gutter options 10`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 11`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -995,20 +564,7 @@ exports[`Columns > correct usage > renders all the gutter options 11`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 12`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1033,20 +589,7 @@ exports[`Columns > correct usage > renders all the gutter options 12`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 13`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1071,20 +614,7 @@ exports[`Columns > correct usage > renders all the gutter options 13`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 14`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1109,20 +639,7 @@ exports[`Columns > correct usage > renders all the gutter options 14`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 15`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1147,20 +664,7 @@ exports[`Columns > correct usage > renders all the gutter options 15`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 16`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1185,20 +689,7 @@ exports[`Columns > correct usage > renders all the gutter options 16`] = `
 `;
 
 exports[`Columns > correct usage > renders all the gutter options 17`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1223,20 +714,7 @@ exports[`Columns > correct usage > renders all the gutter options 17`] = `
 `;
 
 exports[`Columns > correct usage > renders custom columns 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1261,20 +739,7 @@ exports[`Columns > correct usage > renders custom columns 1`] = `
 `;
 
 exports[`Columns > correct usage > renders custom gutter with number 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1299,20 +764,7 @@ exports[`Columns > correct usage > renders custom gutter with number 1`] = `
 `;
 
 exports[`Columns > correct usage > renders custom gutter with string 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1337,20 +789,7 @@ exports[`Columns > correct usage > renders custom gutter with string 1`] = `
 `;
 
 exports[`Columns > correct usage > renders default gutter when none provided 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1375,20 +814,7 @@ exports[`Columns > correct usage > renders default gutter when none provided 1`]
 `;
 
 exports[`Columns > correct usage > renders dense mode 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row dense;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns="dense"
   style={
     {
@@ -1413,20 +839,7 @@ exports[`Columns > correct usage > renders dense mode 1`] = `
 `;
 
 exports[`Columns > correct usage > renders with theme overrides 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1452,7 +865,6 @@ exports[`Columns > correct usage > renders with theme overrides 1`] = `
 
 exports[`Columns > correct usage > should render a columns if container is above switchAt 1`] = `
 <div
-  className=""
   data-bedrock-stack={true}
   style={
     {
@@ -1477,7 +889,6 @@ exports[`Columns > correct usage > should render a columns if container is above
 
 exports[`Columns > correct usage > should render a columns if container is above switchAt as a string 1`] = `
 <div
-  className=""
   data-bedrock-stack={true}
   style={
     {
@@ -1502,7 +913,6 @@ exports[`Columns > correct usage > should render a columns if container is above
 
 exports[`Columns > correct usage > should render a stack if container is below switchAt 1`] = `
 <div
-  className=""
   data-bedrock-stack={true}
   style={
     {
@@ -1526,20 +936,7 @@ exports[`Columns > correct usage > should render a stack if container is below s
 `;
 
 exports[`Columns > incorrect usage > renders 1 columns if given 0 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1564,20 +961,7 @@ exports[`Columns > incorrect usage > renders 1 columns if given 0 1`] = `
 `;
 
 exports[`Columns > incorrect usage > renders 1 columns if given negative number 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1602,20 +986,7 @@ exports[`Columns > incorrect usage > renders 1 columns if given negative number 
 `;
 
 exports[`Columns > incorrect usage > renders default with console error with incorrect column type 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1640,20 +1011,7 @@ exports[`Columns > incorrect usage > renders default with console error with inc
 `;
 
 exports[`Columns > incorrect usage > renders default with console error with incorrect dense type 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns="dense"
   style={
     {
@@ -1678,20 +1036,7 @@ exports[`Columns > incorrect usage > renders default with console error with inc
 `;
 
 exports[`Columns > incorrect usage > renders default with console error with wrong switchAt input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {
@@ -1716,20 +1061,7 @@ exports[`Columns > incorrect usage > renders default with console error with wro
 `;
 
 exports[`Columns > incorrect usage > renders default with wrong gutter input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(var(--columns,1),1fr);
-  gap: var(--gutter,0px);
-  grid-auto-flow: row;
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0 "
   data-bedrock-columns=""
   style={
     {

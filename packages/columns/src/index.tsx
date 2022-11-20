@@ -1,52 +1,54 @@
-import { Gutter, getSafeGutter } from "@bedrock-layout/spacing-constants";
+import {
+  Gutter,
+  getSafeGutter,
+  useTheme,
+} from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
 import {
   PolymorphicComponentPropsWithRef,
   PolymorphicRef,
 } from "@bedrock-layout/type-utils";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
-import React, { ElementType, forwardRef } from "react";
-import styled from "styled-components";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
-interface ColumnsBaseProps {
+interface BaseColumnsProps {
   gutter?: Gutter;
   columns?: number;
   dense?: boolean;
   forwardedAs?: unknown;
 }
 
-const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
-  ({ dense, theme, gutter, columns = 1, style }) => {
+type ColumnsBaseProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, BaseColumnsProps>;
+
+const ColumnsBase = forwardRef(
+  <C extends ElementType = "div">(
+    { as, dense, gutter, columns = 1, style, ...props }: ColumnsBaseProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeColumns = columns > 0 ? columns : 1;
-    return {
-      "data-bedrock-columns": dense ? "dense" : "",
-      style: { ...style, "--gutter": maybeGutter, "--columns": safeColumns },
-    };
-  }
-)<ColumnsBaseProps>`
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
+    const safeStyle = style ?? {};
 
-  @property --columns {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
-  }
+    const Component = as ?? "div";
 
-  box-sizing: border-box;
-  > * {
-    margin: 0;
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-columns={dense ? "dense" : ""}
+        style={
+          {
+            ...safeStyle,
+            "--gutter": maybeGutter,
+            "--columns": safeColumns,
+          } as CSSProperties
+        }
+        {...props}
+      />
+    );
   }
-
-  display: grid;
-  grid-template-columns: repeat(var(--columns, 1), 1fr);
-  gap: var(--gutter, 0px);
-  grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
-`;
+);
 
 interface ColumnsPropsBase extends StackProps, ColumnsBaseProps {
   switchAt?: number | string;
@@ -56,7 +58,7 @@ interface ColumnsPropsBase extends StackProps, ColumnsBaseProps {
 export type ColumnsProps<C extends ElementType = "div"> =
   PolymorphicComponentPropsWithRef<C, ColumnsPropsBase>;
 
-const ColumnComp = forwardRef(
+export const Columns = forwardRef(
   <C extends ElementType = "div">(
     { columns, dense, switchAt, as, gutter, ...props }: ColumnsProps<C>,
     ref?: PolymorphicRef<C>
@@ -79,8 +81,6 @@ const ColumnComp = forwardRef(
     return shouldSwitch ? (
       <Stack as={as} ref={safeRef} gutter={gutter} {...props} />
     ) : (
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-expect-error
       <ColumnsBase
         as={as}
         ref={safeRef}
@@ -93,20 +93,16 @@ const ColumnComp = forwardRef(
   }
 );
 
-export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
-  return {
-    forwardedAs: as ?? forwardedAs,
-    as: ColumnComp,
-  };
-})``;
-
 Columns.displayName = "Columns";
 
-export interface ColumnProps {
+export interface ColumnPropsBase {
   span?: number;
   offsetStart?: number;
   offsetEnd?: number;
 }
+
+export type ColumnProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, ColumnPropsBase>;
 
 const safeSpan = (span: unknown) => {
   return typeof span === "number" ? span : 1;
@@ -119,60 +115,41 @@ const safeSpan = (span: unknown) => {
  *
  * In a future breaking change, colSpan should be the public API.
  * */
-export const Column = styled.div.attrs<ColumnProps>(
-  ({ span, style, offsetStart = 0, offsetEnd = 0 }) => {
+export const Column = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      span,
+      style,
+      offsetStart = 0,
+      offsetEnd = 0,
+      ...props
+    }: ColumnProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
     const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
     const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;
-    return {
-      "data-bedrock-column": "",
-      span: undefined,
-      style: {
-        ...style,
-        "--span": Math.max(safeSpan(span), 1),
-        "--offsetStart": safeOffsetStart,
-        "--offsetEnd": safeOffsetEnd,
-      },
-    };
-  }
-)<ColumnProps>`
-  @property --span {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
-  }
+    const safeStyle = style ?? {};
 
-  @property --offsetStart {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
-  }
+    const Component = as ?? "div";
 
-  @property --offsetEnd {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
+    return (
+      <Component
+        data-bedrock-column
+        ref={ref}
+        style={
+          {
+            ...safeStyle,
+            "--span": Math.max(safeSpan(span), 1),
+            "--offsetStart": safeOffsetStart,
+            "--offsetEnd": safeOffsetEnd,
+          } as CSSProperties
+        }
+        {...props}
+      />
+    );
   }
-
-  grid-column: span min(var(--span, 1), var(--columns, 1));
-
-  &[style*="--offset"] {
-    display: contents;
-  }
-
-  &[style*="--offset"] > * {
-    grid-column: span min(var(--span, 1), var(--columns, 1));
-  }
-
-  &[style*="--offsetStart"]::before {
-    content: "";
-    grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
-  }
-
-  &[style*="--offsetEnd"]::after {
-    content: "";
-    grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
-  }
-`;
+);
 
 Column.displayName = "Column";
 
