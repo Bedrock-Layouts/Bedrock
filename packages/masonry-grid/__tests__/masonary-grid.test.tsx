@@ -1,8 +1,7 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { MasonryGrid } from "../src";
 
@@ -52,8 +51,7 @@ describe("MasonryGrid", () => {
       const masonryGrid = create(
         <ThemeProvider
           theme={{
-            breakPoints: { smallOnly: 320 },
-            spacing: { "1x": "200px" },
+            space: { "1x": "200px" },
           }}
         >
           <MasonryGrid gutter="1x">
@@ -68,14 +66,6 @@ describe("MasonryGrid", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with console error with no gutter input", () => {
       const errorStack = create(
         <MasonryGrid>
@@ -89,7 +79,6 @@ describe("MasonryGrid", () => {
     });
 
     it("renders default with wrong gutter input", () => {
-      expect(console.error).not.toBeCalled();
       const errorStack = create(
         <MasonryGrid gutter="incorrect">
           <div>1</div>
@@ -101,8 +90,7 @@ describe("MasonryGrid", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default with console error with minItemWidth input", () => {
-      expect(console.error).not.toBeCalled();
+    it("renders default with minItemWidth input", () => {
       const errorStack = create(
         <MasonryGrid gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <div>1</div>
@@ -110,7 +98,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
         </MasonryGrid>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

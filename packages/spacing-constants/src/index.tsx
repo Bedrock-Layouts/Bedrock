@@ -13,7 +13,7 @@ export type DefaultTheme = {};
 export const ThemeContext = createContext<DefaultTheme>({});
 
 export function useTheme(): DefaultTheme {
-  return useContext(ThemeContext);
+  return useContext(ThemeContext) ?? {};
 }
 
 export function ThemeProvider({

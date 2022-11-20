@@ -2,6 +2,7 @@ import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
+import { describe, expect, it, test } from "vitest";
 
 import { Stack } from "../src";
 
@@ -101,17 +102,7 @@ describe("Stack", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with wrong gutter value", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Stack gutter={{ value: "incorrect" }}>
           <Lorem />

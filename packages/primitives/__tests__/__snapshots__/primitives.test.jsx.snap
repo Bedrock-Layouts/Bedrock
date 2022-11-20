@@ -368,51 +368,7 @@ exports[`primitives > primitives snapshot 1`] = `
   },
   "Grid": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 183687572,
-      "baseStyle": undefined,
-      "componentId": "sc-ftTHYK",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: grid;
-  gap: var(--gutter, 0px);
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--minItemWidth, ",
-        "480px",
-        "), 100%), 1fr)
-  );
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "minItemWidth": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ftTHYK",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Inline": {
     "$$typeof": Symbol(react.forward_ref),
@@ -421,11 +377,11 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -2129341314,
+      "baseHash": 677740513,
       "baseStyle": e {
-        "baseHash": 677740513,
+        "baseHash": 183687572,
         "baseStyle": undefined,
-        "componentId": "sc-pyfCe",
+        "componentId": "sc-ftTHYK",
         "isStatic": false,
         "rules": [
           "
@@ -449,7 +405,7 @@ exports[`primitives > primitives snapshot 1`] = `
         ],
         "staticRulesId": "",
       },
-      "componentId": "sc-jrcTuL",
+      "componentId": "sc-pyfCe",
       "isStatic": false,
       "rules": [
         "
@@ -486,7 +442,7 @@ exports[`primitives > primitives snapshot 1`] = `
       "staticRulesId": "",
     },
     "foldedComponentIds": [
-      "sc-pyfCe",
+      "sc-ftTHYK",
     ],
     "propTypes": {
       "align": [Function],
@@ -497,7 +453,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-jrcTuL",
+    "styledComponentId": "sc-pyfCe",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -509,9 +465,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": 677740513,
+      "baseHash": 183687572,
       "baseStyle": undefined,
-      "componentId": "sc-pyfCe",
+      "componentId": "sc-ftTHYK",
       "isStatic": false,
       "rules": [
         "
@@ -542,7 +498,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-pyfCe",
+    "styledComponentId": "sc-ftTHYK",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -552,42 +508,11 @@ exports[`primitives > primitives snapshot 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "attrs": [
       [Function],
-      [Function],
     ],
     "componentStyle": e {
-      "baseHash": 1071014339,
-      "baseStyle": e {
-        "baseHash": 183687572,
-        "baseStyle": undefined,
-        "componentId": "sc-ftTHYK",
-        "isStatic": false,
-        "rules": [
-          "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: grid;
-  gap: var(--gutter, 0px);
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--minItemWidth, ",
-          "480px",
-          "), 100%), 1fr)
-  );
-",
-        ],
-        "staticRulesId": "",
-      },
-      "componentId": "sc-ipEyDJ",
+      "baseHash": 945680343,
+      "baseStyle": undefined,
+      "componentId": "sc-kDvujY",
       "isStatic": false,
       "rules": [
         "
@@ -596,16 +521,15 @@ exports[`primitives > primitives snapshot 1`] = `
       ],
       "staticRulesId": "",
     },
-    "foldedComponentIds": [
-      "sc-ftTHYK",
-    ],
-    "propTypes": {
-      "minItemWidth": [Function],
-    },
+    "foldedComponentIds": [],
+    "propTypes": {},
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ipEyDJ",
-    "target": "div",
+    "styledComponentId": "sc-kDvujY",
+    "target": {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
     "toString": [Function],
     "warnTooManyClasses": [Function],
     "withComponent": [Function],
@@ -616,9 +540,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -1178774832,
+      "baseHash": 1071014339,
       "baseStyle": undefined,
-      "componentId": "sc-csuSiG",
+      "componentId": "sc-ipEyDJ",
       "isStatic": false,
       "rules": [
         "
@@ -633,7 +557,7 @@ exports[`primitives > primitives snapshot 1`] = `
     "foldedComponentIds": [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-csuSiG",
+    "styledComponentId": "sc-ipEyDJ",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -645,9 +569,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -174752625,
+      "baseHash": -1178774832,
       "baseStyle": undefined,
-      "componentId": "sc-eDWCr",
+      "componentId": "sc-csuSiG",
       "isStatic": false,
       "rules": [
         "
@@ -675,7 +599,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-eDWCr",
+    "styledComponentId": "sc-csuSiG",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
@@ -687,9 +611,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": 2129548803,
+      "baseHash": -174752625,
       "baseStyle": undefined,
-      "componentId": "sc-bqWxrE",
+      "componentId": "sc-eDWCr",
       "isStatic": false,
       "rules": [
         "
@@ -786,7 +710,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-bqWxrE",
+    "styledComponentId": "sc-eDWCr",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],

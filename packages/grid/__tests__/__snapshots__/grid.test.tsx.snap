@@ -1,20 +1,8 @@
 // Vitest Snapshot v1
 
 exports[`Grid > correct usage > renders all the gutter options 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "-.5rem",
@@ -38,20 +26,8 @@ exports[`Grid > correct usage > renders all the gutter options 1`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 2`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "-.25rem",
@@ -75,20 +51,8 @@ exports[`Grid > correct usage > renders all the gutter options 2`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 3`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": ".25rem",
@@ -112,20 +76,8 @@ exports[`Grid > correct usage > renders all the gutter options 3`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 4`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": ".5rem",
@@ -149,20 +101,8 @@ exports[`Grid > correct usage > renders all the gutter options 4`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 5`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1rem",
@@ -186,20 +126,8 @@ exports[`Grid > correct usage > renders all the gutter options 5`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 6`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1.25rem",
@@ -223,20 +151,8 @@ exports[`Grid > correct usage > renders all the gutter options 6`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 7`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1.5rem",
@@ -260,20 +176,8 @@ exports[`Grid > correct usage > renders all the gutter options 7`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 8`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1.75rem",
@@ -297,20 +201,8 @@ exports[`Grid > correct usage > renders all the gutter options 8`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 9`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "2rem",
@@ -334,20 +226,8 @@ exports[`Grid > correct usage > renders all the gutter options 9`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 10`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "3rem",
@@ -371,20 +251,8 @@ exports[`Grid > correct usage > renders all the gutter options 10`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 11`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "4rem",
@@ -408,20 +276,8 @@ exports[`Grid > correct usage > renders all the gutter options 11`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 12`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "5rem",
@@ -445,20 +301,8 @@ exports[`Grid > correct usage > renders all the gutter options 12`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 13`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "7.5rem",
@@ -482,20 +326,8 @@ exports[`Grid > correct usage > renders all the gutter options 13`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 14`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "10rem",
@@ -519,20 +351,8 @@ exports[`Grid > correct usage > renders all the gutter options 14`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 15`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "15rem",
@@ -556,20 +376,8 @@ exports[`Grid > correct usage > renders all the gutter options 15`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 16`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "20rem",
@@ -593,20 +401,8 @@ exports[`Grid > correct usage > renders all the gutter options 16`] = `
 `;
 
 exports[`Grid > correct usage > renders all the gutter options 17`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "30rem",
@@ -630,20 +426,9 @@ exports[`Grid > correct usage > renders all the gutter options 17`] = `
 `;
 
 exports[`Grid > correct usage > renders custom gutter with number 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
+  grid={20}
   style={
     {
       "--gutter": undefined,
@@ -667,20 +452,9 @@ exports[`Grid > correct usage > renders custom gutter with number 1`] = `
 `;
 
 exports[`Grid > correct usage > renders custom gutter with string 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
+  grid="3ch"
   style={
     {
       "--gutter": undefined,
@@ -704,20 +478,8 @@ exports[`Grid > correct usage > renders custom gutter with string 1`] = `
 `;
 
 exports[`Grid > correct usage > renders custom minItemWidth 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1rem",
@@ -741,20 +503,8 @@ exports[`Grid > correct usage > renders custom minItemWidth 1`] = `
 `;
 
 exports[`Grid > correct usage > renders custom minItemWidth as string 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1rem",
@@ -778,20 +528,8 @@ exports[`Grid > correct usage > renders custom minItemWidth as string 1`] = `
 `;
 
 exports[`Grid > correct usage > renders default with no gutter 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": undefined,
@@ -815,20 +553,8 @@ exports[`Grid > correct usage > renders default with no gutter 1`] = `
 `;
 
 exports[`Grid > correct usage > renders with theme overrides 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": undefined,
@@ -852,24 +578,12 @@ exports[`Grid > correct usage > renders with theme overrides 1`] = `
 `;
 
 exports[`Grid > incorrect usage > renders default with console error when minItemWidth is not valid CSSLength 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1rem",
-      "--minItemWidth": "garbage",
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -889,26 +603,12 @@ exports[`Grid > incorrect usage > renders default with console error when minIte
 `;
 
 exports[`Grid > incorrect usage > renders default with console error with minItemWidth input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": "1rem",
-      "--minItemWidth": {
-        "value": "incorrect",
-      },
+      "--minItemWidth": undefined,
     }
   }
 >
@@ -928,20 +628,8 @@ exports[`Grid > incorrect usage > renders default with console error with minIte
 `;
 
 exports[`Grid > incorrect usage > renders default with wrong gutter input 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: grid;
-  gap: var(--gutter,0px);
-  grid-template-columns: repeat( auto-fit, minmax(min(var(--minItemWidth,480px),100%),1fr) );
-}
-
-.c0 > * {
-  margin: 0;
-}
-
 <div
-  className="c0"
-  data-bedrock-grid=""
+  data-bedrock-grid={true}
   style={
     {
       "--gutter": undefined,

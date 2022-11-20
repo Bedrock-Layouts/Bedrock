@@ -2,11 +2,19 @@ import { Grid, GridProps } from "@bedrock-layout/grid";
 import {
   Gutter,
   getSafeGutter,
-  getSizeValue,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
+import { PolymorphicRef } from "@bedrock-layout/type-utils";
 import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
-import React, { Children, useState } from "react";
-import styled, { CSSProperties, ThemeContext } from "styled-components";
+import React, {
+  CSSProperties,
+  Children,
+  ComponentPropsWithoutRef,
+  ElementType,
+  cloneElement,
+  forwardRef,
+  useState,
+} from "react";
 
 //Logic forked from is-in-browser npm package
 /* istanbul ignore next */
@@ -15,16 +23,18 @@ const isBrowser =
   typeof document === "object" &&
   (document as Document).nodeType === 9;
 
-const RowSpanner = styled.div`
-  grid-row: span var(--rows, 1);
-
-  > * {
-    display: block;
-    height: 100%;
+const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
+  ({ style, ...props }, ref) => {
+    const safeStyle = style ?? {};
+    return (
+      <div
+        ref={ref}
+        {...props}
+        style={{ ...safeStyle, gridRow: "span var(--rows, 1)" }}
+      />
+    );
   }
-`;
-
-const safeTheme = {};
+);
 
 const Resizer = ({
   children,
@@ -32,7 +42,7 @@ const Resizer = ({
 }: React.PropsWithChildren<{ gutter?: Gutter }>) => {
   const [rowSpan, setRowSpan] = useState(1);
 
-  const theme = React.useContext(ThemeContext) ?? safeTheme;
+  const theme = useTheme();
 
   /* istanbul ignore next */
   const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
@@ -52,42 +62,41 @@ const Resizer = ({
   });
 
   return (
-    <RowSpanner
-      style={{ "--rows": rowSpan } as unknown as CSSProperties}
-      ref={childRef}
-    >
-      {children}
+    <RowSpanner style={{ "--rows": rowSpan } as CSSProperties} ref={childRef}>
+      {Children.map(children, (child) => {
+        return cloneElement(child as React.ReactElement, {
+          style: {
+            display: "block",
+            height: "100%",
+          },
+        });
+      })}
     </RowSpanner>
   );
 };
 
-export const MasonryGrid = styled(Grid).attrs<GridProps>((props) => {
-  const safeMinItemWidth =
-    getSizeValue(props.theme, props.minItemWidth) ?? props.minItemWidth;
-  const style = props.style ?? {};
-  return {
-    "data-bedrock-masonry-grid": "",
-    "data-bedrock-grid": undefined,
-    style: {
-      ...style,
-      "--minItemWidth":
-        typeof safeMinItemWidth === "number"
-          ? `${safeMinItemWidth}px`
-          : safeMinItemWidth,
-    },
-    children: Children.map(props.children, (child) => (
-      <Resizer gutter={props.gutter}>{child}</Resizer>
-    )),
-  };
-})`
-  grid-template-rows: 1px;
-`;
+export const MasonryGrid = forwardRef(
+  <C extends ElementType>(
+    { children, style, ...props }: GridProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const safeStyle = style ?? {};
+    return (
+      <Grid
+        ref={ref}
+        data-bedrock-masonry-grid
+        {...props}
+        style={{ ...safeStyle, gridTemplateRows: "1px" }}
+      >
+        {Children.map(children, (child) => (
+          <Resizer gutter={props.gutter}>{child}</Resizer>
+        ))}
+      </Grid>
+    );
+  }
+);
 
 MasonryGrid.displayName = "MasonryGrid";
-
-MasonryGrid.propTypes = {
-  ...Grid.propTypes,
-};
 
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
