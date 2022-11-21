@@ -44,54 +44,7 @@ exports[`primitives > primitives snapshot 1`] = `
   },
   "ColumnDrop": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 392846413,
-      "baseStyle": undefined,
-      "componentId": "sc-gswNZR",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0px;
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-    flex-basis: var(--minItemWidth, ",
-        "480px",
-        ");
-    flex-grow: ",
-        [Function],
-        ";
-    flex-shrink: 1;
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--gutter, 0px);
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "minItemWidth": [Function],
-      "noStretchedColumns": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-gswNZR",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Columns": {
     "$$typeof": Symbol(react.forward_ref),
@@ -140,9 +93,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": -1807137125,
+      "baseHash": 392846413,
       "baseStyle": undefined,
-      "componentId": "sc-dkrFOg",
+      "componentId": "sc-gswNZR",
       "isStatic": false,
       "rules": [
         "
@@ -239,7 +192,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-dkrFOg",
+    "styledComponentId": "sc-gswNZR",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],

@@ -2,7 +2,7 @@ import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { ColumnDrop } from "../src";
 
@@ -115,14 +115,6 @@ describe("ColumnDrop", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
         <ColumnDrop gutter={{ value: "incorrect" }}>
@@ -134,41 +126,32 @@ describe("ColumnDrop", () => {
     });
 
     it("renders default with console error with minItemWidth input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <ColumnDrop gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with incorrect noStretchColumns input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <ColumnDrop gutter="size3" noStretchedColumns={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with an invalid CSS String", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <ColumnDrop gutter="size3" minItemWidth="garbage">
           <Lorem />
         </ColumnDrop>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
