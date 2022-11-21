@@ -1,6 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { Inline } from "../src";
 
@@ -62,33 +62,23 @@ describe("Inline", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with console error with wrong stretch input", () => {
-      expect(console.error).not.toBeCalled();
       const errorStack = create(
         <Inline gutter="size3" stretch="incorrect">
           <Lorem />
         </Inline>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
     it("renders default with console error with wrong minItemWidth input", () => {
-      expect(console.error).not.toBeCalled();
       const errorStack = create(
         <Inline gutter="size3" minItemWidth="incorrect">
           <Lorem />
         </Inline>
       );
-      expect(console.error).toBeCalled();
+
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });

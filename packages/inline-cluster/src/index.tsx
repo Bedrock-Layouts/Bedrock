@@ -10,20 +10,9 @@ import {
 import React, { ElementType, forwardRef } from "react";
 import { CSSProperties } from "styled-components";
 
-const justifyMap = {
-  start: "flex-start",
-  end: "flex-end",
-  center: "center",
-} as const;
-
-const alignMap = {
-  ...justifyMap,
-  stretch: "stretch",
-} as const;
-
 interface InlineClusterPropsBase {
-  justify?: keyof typeof justifyMap;
-  align?: keyof typeof alignMap;
+  justify?: "start" | "end" | "center";
+  align?: "start" | "end" | "center" | "stretch";
   gutter?: Gutter;
 }
 
@@ -39,7 +28,7 @@ export const InlineCluster = forwardRef(
     const justifyValue = justify ? `justify:${justify}` : undefined;
     const alignValue = align ? `align:${align}` : undefined;
 
-    const attributes = [justifyValue, alignValue].filter((x) => x).join(" ");
+    const attributes = [justifyValue, alignValue].filter(Boolean).join(" ");
 
     const safeStyle = style ?? {};
 

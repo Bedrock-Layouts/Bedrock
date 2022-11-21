@@ -116,64 +116,7 @@ exports[`primitives > primitives snapshot 1`] = `
   },
   "Inline": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -1807137125,
-      "baseStyle": undefined,
-      "componentId": "sc-dkrFOg",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --switchAt {
-    syntax: \\"<length-percentage>\\";
-    inherits: true;
-    initial-value: 0;
-  }
-
-  flex-wrap: nowrap;
-
-  > * {
-    margin: 0;
-  }
-
-  ",
-        [Function],
-        "
-
-  &[style*=\\"--minItemWidth\\"] {
-    > * {
-      min-inline-size: var(--minItemWidth, 0);
-    }
-  }
-
-  &[style*=\\"--switchAt\\"] {
-    flex-wrap: wrap;
-    > * {
-      flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
-    }
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "minItemWidth": [Function],
-      "stretch": [Function],
-      "switchAt": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-dkrFOg",
-    "target": {
-      "$$typeof": Symbol(react.forward_ref),
-      "render": [Function],
-    },
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "InlineCluster": {
     "$$typeof": Symbol(react.forward_ref),
@@ -197,9 +140,9 @@ exports[`primitives > primitives snapshot 1`] = `
       [Function],
     ],
     "componentStyle": e {
-      "baseHash": 1665723835,
+      "baseHash": -1807137125,
       "baseStyle": undefined,
-      "componentId": "sc-hLBbgP",
+      "componentId": "sc-dkrFOg",
       "isStatic": false,
       "rules": [
         "
@@ -296,7 +239,7 @@ exports[`primitives > primitives snapshot 1`] = `
     },
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-hLBbgP",
+    "styledComponentId": "sc-dkrFOg",
     "target": "div",
     "toString": [Function],
     "warnTooManyClasses": [Function],
