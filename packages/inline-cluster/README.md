@@ -52,4 +52,4 @@ For styling purposes, you can select `data-bedrock-inline-cluster`.
 | justify  | Sets the inline justification of the children | One of: `start, end, center` | `start` |
 |  align   |   Sets the block alignment of the children    | One of: `start, end, center` | `start` |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

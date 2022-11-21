@@ -55,4 +55,4 @@ For styling purposes, you can select `data-bedrock-split`.
 | fraction |                   Sets the fractional split                   | one of `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` |  `1/2`  |
 | switchAt | Sets the width threshold at which layout will change to Stack |             a number in pixels or valid CSS length as a string             |    -    |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

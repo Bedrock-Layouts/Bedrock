@@ -53,4 +53,4 @@ For styling purposes, you can select `data-bedrock-stack`.
 | :------: | :-----------------------------------------: | :------------------: | :-----: |
 | gutter\* | Sets the space between each child component | one of `Spacing`\*\* |    -    |
 
-\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

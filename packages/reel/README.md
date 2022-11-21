@@ -52,4 +52,4 @@ For styling purposes, you can select `data-bedrock-reel`.
 | gutter\* | Sets the space between each child element |        one of `Spacing`\*\*        |    -    |
 | snapType |       Controls horizontal snap type       | `none`, `mandatory` or `proximity` | 'none'  |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

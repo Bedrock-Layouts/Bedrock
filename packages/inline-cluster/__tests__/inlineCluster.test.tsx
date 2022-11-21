@@ -1,7 +1,6 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import { describe, expect, it, test } from "vitest";
 
 import { InlineCluster } from "../src";
