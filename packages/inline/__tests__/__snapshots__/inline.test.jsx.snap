@@ -2,64 +2,41 @@
 
 exports[`Inline > correct usage > renders all the stretch options 1`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1 > * {
+.c0 > * {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start stretch:all"
+  stretch="all"
   style={
     {
       "--gutter": "1rem",
@@ -85,64 +62,41 @@ exports[`Inline > correct usage > renders all the stretch options 1`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 2`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1 > :first-child {
+.c0 > :first-child {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start stretch:start"
+  stretch="start"
   style={
     {
       "--gutter": "1rem",
@@ -168,64 +122,41 @@ exports[`Inline > correct usage > renders all the stretch options 2`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 3`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1 > :last-child {
+.c0 > :last-child {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start stretch:end"
+  stretch="end"
   style={
     {
       "--gutter": "1rem",
@@ -251,64 +182,41 @@ exports[`Inline > correct usage > renders all the stretch options 3`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 4`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1 > :nth-child(1) {
+.c0 > :nth-child(1) {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
+  stretch={0}
   style={
     {
       "--gutter": "1rem",
@@ -334,64 +242,41 @@ exports[`Inline > correct usage > renders all the stretch options 4`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 5`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1 > :nth-child(4) {
+.c0 > :nth-child(4) {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start stretch:3"
+  stretch={3}
   style={
     {
       "--gutter": "1rem",
@@ -417,58 +302,35 @@ exports[`Inline > correct usage > renders all the stretch options 5`] = `
 
 exports[`Inline > correct usage > renders with minItemWidth 1`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
+  minItemWidth={42}
   style={
     {
       "--gutter": "1rem",
@@ -494,58 +356,35 @@ exports[`Inline > correct usage > renders with minItemWidth 1`] = `
 
 exports[`Inline > correct usage > renders with minItemWidth 2`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
+  minItemWidth="42rem"
   style={
     {
       "--gutter": "1rem",
@@ -571,57 +410,33 @@ exports[`Inline > correct usage > renders with minItemWidth 2`] = `
 
 exports[`Inline > correct usage > renders with switchAt 1`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
   style={
     {
@@ -630,6 +445,7 @@ exports[`Inline > correct usage > renders with switchAt 1`] = `
       "--switchAt": "42px",
     }
   }
+  switchAt={42}
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -648,57 +464,33 @@ exports[`Inline > correct usage > renders with switchAt 1`] = `
 
 exports[`Inline > correct usage > renders with switchAt 2`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
   style={
     {
@@ -707,6 +499,7 @@ exports[`Inline > correct usage > renders with switchAt 2`] = `
       "--switchAt": "42rem",
     }
   }
+  switchAt="42rem"
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
@@ -725,58 +518,35 @@ exports[`Inline > correct usage > renders with switchAt 2`] = `
 
 exports[`Inline > incorrect usage > renders default with console error with wrong minItemWidth input 1`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start"
+  minItemWidth="incorrect"
   style={
     {
       "--gutter": "1rem",
@@ -802,58 +572,35 @@ exports[`Inline > incorrect usage > renders default with console error with wron
 
 exports[`Inline > incorrect usage > renders default with console error with wrong stretch input 1`] = `
 .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: var(--gutter,0px);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > * {
   margin: 0;
 }
 
-.c1 {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c1 > * {
-  margin: 0;
-}
-
-.c1[style*="--minItemWidth"] > * {
+.c0[style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth,0);
 }
 
-.c1[style*="--switchAt"] {
+.c0[style*="--switchAt"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c1[style*="--switchAt"] > * {
+.c0[style*="--switchAt"] > * {
   -webkit-flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   -ms-flex-preferred-size: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter,0px))) * 999);
 }
 
 <div
-  className="c0 c1"
+  className="c0"
   data-bedrock-inline="justify:start align:start stretch:incorrect"
+  stretch="incorrect"
   style={
     {
       "--gutter": "1rem",

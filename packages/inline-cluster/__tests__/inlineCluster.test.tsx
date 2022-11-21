@@ -2,7 +2,7 @@ import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
-import { vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { InlineCluster } from "../src";
 
@@ -122,14 +122,6 @@ describe("InlineCluster", () => {
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockRestore();
-    });
-
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
         <InlineCluster gutter={{ value: "incorrect" }}>
@@ -141,27 +133,21 @@ describe("InlineCluster", () => {
     });
 
     it("renders default with console error with incorrect justify", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <InlineCluster gutter="size3" justify="incorrect">
           <Lorem />
         </InlineCluster>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
     it("renders default with console error with incorrect align", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <InlineCluster gutter="size3" align="incorrect">
           <Lorem />
         </InlineCluster>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
   });
