@@ -1,8 +1,8 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import initialSetup from '../assets/initial-setup.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import initialSetup from "../assets/initial-setup.png";
 
 <Meta
   title="Getting Started/Lesson 1: Installation"
@@ -18,15 +18,30 @@ yarn create react-app bedrock-layouts
 cd bedrock-layouts
 ```
 
-Bedrock Layouts is built on top of [styled-components](https://styled-components.com). If you would like to learn more about how to use styled-components, please refer to the [styled-components documentation](https://styled-components.com/docs)
+Bedrock Layouts is built on top of it's own css framework, `@bedrock-layout/css`. We need to install this as a dependency.
 
-Before you install any of the Bedrock Layout Primitives, you will need to install `styled-components` first. Let's start out by installing our the `Stack` component:
+Before you install any of the Bedrock Layout Primitives, you will need to install `@bedrock-layout/css` first. Let's start out by installing our the `Stack` component:
 
 ```bash
-yarn add styled-components @bedrock-layout/stack
+yarn add @bedrock-layout/css @bedrock-layout/stack
+```
+
+Now that we have our dependencies installed, let's import the `@bedrock-layout/css` into our `index.js` file:
+
+```jsx
+import from '@bedrock-layout/css'
+```
+
+If you would prefer to only import the css of the components you are using, you can import the css from the individual components:
+
+```jsx
+import '@bedrock-layout/css/lib/components/stack.min.css';
+import '@bedrock-layout/css/lib/components/center.min.css';
 ```
 
 ## App.js
+
+Now that we have our dependencies installed, let's import the `Stack` component into our `App.js` file:
 
 Replace the code in App.js with the following example:
 
@@ -35,7 +50,7 @@ import { Stack } from "@bedrock-layout/stack";
 
 function App() {
   return (
-    <Stack gutter="md">
+    <Stack gutter='size3'>
       <header>
         <h1>Coco Le Belle</h1>
       </header>
@@ -58,7 +73,7 @@ Finally, let's start the development server by running `yarn start`. Navigate to
 
 We are now ready to start building our layout. In the next section, we will learn how to use the `Stack` component to create our first component in our landing page.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-introduction--page">
     Introduction
   </Button>

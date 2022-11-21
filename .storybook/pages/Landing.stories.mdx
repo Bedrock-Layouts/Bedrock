@@ -1,14 +1,24 @@
-import { Meta, Preview } from '@storybook/addon-docs/';
-import { Center, PadBox, Grid, ColumnDrop, Cover, Stack, Split, Frame, Reel, Inline, InlineCluster } from '@bedrock-layout/primitives'
-import { Button } from '../ui-components/Button'
-import { Heading } from '../ui-components/Heading'
-import { Avatar } from '../ui-components/Avatar'
-import justLogo from '../assets/Logo only.svg'
-import fullLogo from '../assets/Full logo.png'
-import { LogoOnly } from '../ui-components/LogoOnly'
-import { SwitchToDocs } from '../ui-components/SwitchToDocs'
-import { Intl } from '../ui-components/Intl'
-import { LocaleFab } from '../ui-components/LocaleFab'
+import { Meta, Preview } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src"
+import { PadBox } from "../../packages/padbox/src"
+import { Grid } from "../../packages/grid/src"
+import { ColumnDrop } from "../../packages/column-drop/src"
+import { Cover } from "../../packages/cover/src"
+import { Stack } from "../../packages/stack/src"
+import { Split } from "../../packages/split/src"
+import { Frame } from "../../packages/frame/src"
+import { Reel } from "../../packages/reel/src"
+import { Inline } from "../../packages/inline/src"
+import { InlineCluster } from "../../packages/inline-cluster/src"
+import { Button } from "../ui-components/Button";
+import { Heading } from "../ui-components/Heading";
+import { Avatar } from "../ui-components/Avatar";
+import justLogo from "../assets/Logo only.svg";
+import fullLogo from "../assets/Full logo.png";
+import { LogoOnly } from "../ui-components/LogoOnly";
+import { SwitchToDocs } from "../ui-components/SwitchToDocs";
+import { Intl } from "../ui-components/Intl";
+import { LocaleFab } from "../ui-components/LocaleFab";
 
 <LocaleFab />
 
@@ -19,13 +29,15 @@ import { LocaleFab } from '../ui-components/LocaleFab'
 
 <SwitchToDocs />
 
-<Stack gutter="lg">
-<Cover as={Center} maxWidth='90vw' minHeight="40vh">
-  <Split gutter="lgXl" fraction='1/3' switchAt="50rem">
+<Stack gutter="size3">
+<Cover as={Center} maxWidth='90vw' style={{ scrollSnapAlign: "start" }}>
+  <Split gutter="size5" fraction='1/3' switchAt="50rem">
      <Center centerChildren maxWidth='90%'>
-      <LogoOnly />
+      <PadBox padding={['size10', 'size1']}>
+        <LogoOnly />
+      </PadBox>
     </Center>
-    <Stack gutter='lg'>
+    <Stack as={PadBox} padding='size10' gutter="size3" style={{background:"var(--cyan-9)", borderRadius:'var(--radius-blob-2)'}}>
       <Heading>
         BEDROCK
         <span style={{fontSize:'var(--font-size-fluid-2)', lineHeight: "2rem", letterSpacing: "0.5ch" }}>
@@ -45,11 +57,11 @@ import { LocaleFab } from '../ui-components/LocaleFab'
       <Center centerChildren as='a' href='https://github.com/Bedrock-Layouts/Bedrock/stargazers'>
         <img src='https://img.shields.io/github/stars/Bedrock-Layouts/Bedrock?style=social' alt='GitHub Repo stars'/>
       </Center>
-      <Inline gutter="lg" justify="center" switchAt='20rem' minItemWidth="fit-content">
+      <Inline gutter="size3" justify="center" switchAt='20rem' minItemWidth="fit-content">
         <Button primary as="a" href="/?path=/docs/getting-started-introduction--page">
           <Intl>Get Started</Intl>
         </Button>
-        <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock">
+        <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock" target="__blank" rel="noreferer noopener">
           GitHub
         </Button>
       </Inline>
@@ -57,33 +69,27 @@ import { LocaleFab } from '../ui-components/LocaleFab'
 
   </Split>
 </Cover>
-
-<PadBox padding='xl' >
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
+<PadBox padding='size7' >
 
 ## <Intl>Landing.composableLayout</Intl>
 
-<Split fraction='1/3' gutter='xxl' switchAt="42rem" >
+<Split fraction='1/3' gutter='size9' switchAt="42rem" >
     <Reel style={{flexDirection:'column'}}>
 
 ```jsx
 export function Hero() {
   return (
     <Stack>
-      <Inline>
-        {/* */}
-      </Inline>
+      <Inline>{/* */}</Inline>
       <Split>
         <Cover>
           <Stack>
             <h1>{/* */}</h1>
             <p>{/* */}</p>
             <Inline>
-              <button>
-                {/* */}
-              </button>
-              <button>
-                {/* */}
-              </button>
+              <button>{/* */}</button>
+              <button>{/* */}</button>
             </Inline>
           </Stack>
         </Cover>
@@ -94,7 +100,6 @@ export function Hero() {
     </Stack>
   );
 }
-
 ```
 
   </Reel>
@@ -121,12 +126,13 @@ export function Hero() {
   </section>
   </Split>
 </PadBox>
-
-<PadBox padding='xl' style={{background:'var(--gray-8)', borderRadius:'var(--radius-blob-1)'}}>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
+<PadBox padding='size7' style={{background:'var(--cyan-9)', borderRadius:'var(--radius-blob-1)'}}>
 
 ## <Intl>Landing.missingComponents</Intl>
 
-<Split gutter='xl' switchAt="40rem">
+<Split gutter='size7' switchAt="40rem">
   <section>
 
 <p>
@@ -162,11 +168,13 @@ export function Hero() {
   </Reel>
   </Split>
 </PadBox>
-<PadBox padding='xl' >
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
+<PadBox padding='size7' >
 
 ## <Intl>Landing.notJustReact</Intl>
 
-<Split fraction='2/3' gutter='xl' switchAt="43rem">
+<Split fraction='2/3' gutter='size7' switchAt="43rem">
     <Reel style={{flexDirection:'column'}}>
 
 ```jsx
@@ -176,23 +184,17 @@ export function Hero() {
     <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
-  <div
-    data-bedrock-cover-centered
-    data-bedrock-stack
-  >
+  <div data-bedrock-cover-centered data-bedrock-stack>
     <h1>Coco Le Belle</h1>
-    <div
-      data-bedrock-split='fraction:1/3'
-    >
+    <div data-bedrock-split="fraction:1/3">
       <p>
         <strong>Coco Le Belle</strong>
         is an online fashion boutique.
       </p>
-      <img src='logo.png' />
+      <img src="logo.png" />
     </div>
   </div>
 </header>
-
 ```
 
   </Reel>
@@ -215,7 +217,9 @@ export function Hero() {
   </section>
   </Split>
 </PadBox>
-<PadBox as={Center} maxWidth='90vw' padding='xxl' style={{background:'var(--gray-8)', borderRadius:'var(--radius-blob-4)'}}>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
+<PadBox as={Center} maxWidth='90vw' padding='size9' style={{background:'var(--cyan-9)', borderRadius:'var(--radius-blob-4)'}}>
 
 ## <Intl>Landing.gettingStarted</Intl>
 
@@ -235,7 +239,9 @@ export function Hero() {
 </p>
 
 </PadBox>
-<PadBox as={Center} maxWidth='90vw' padding='xxl'>
+</Cover>
+<Cover as={Center} maxWidth='90vw' minHeight='50vh' style={{ scrollSnapAlign: "start" }}>
+<PadBox as={Center} maxWidth='90vw' padding='size9'>
 
 ## <Intl>Landing.contribute</Intl>
 
@@ -254,7 +260,7 @@ export function Hero() {
   <Intl>Landing.contribute.description2</Intl>
 </p>
 
-<InlineCluster gutter="md">
+<InlineCluster gutter="size3">
   <a href="https://github.com/ajcwebdev" target="_blank">
     <Avatar
       src="https://avatars.githubusercontent.com/u/12433465?v=4"
@@ -299,5 +305,6 @@ export function Hero() {
     </Button>
   </a>
 </PadBox>
+</Cover>
 
 </Stack>

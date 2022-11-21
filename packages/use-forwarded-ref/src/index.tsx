@@ -7,26 +7,17 @@ export interface Config {
 }
 
 export function useForwardedRef<T>(
-  forwardedRef: React.Ref<T>,
+  forwardedRef?: React.Ref<T>,
   config: Config = { isStateful: true }
 ): React.MutableRefObject<T> {
-  const statefulRef = useStatefulRef<T>(null);
-  const ref = useRef<T>(null);
+  const statefulRef = useStatefulRef<T>();
+  const ref = useRef<T>();
 
   const innerRef = config.isStateful ? statefulRef : ref;
 
-  React.useEffect(() => {
-    if (!forwardedRef) return;
-
-    if (typeof forwardedRef === "function") {
-      forwardedRef(innerRef.current);
-    } else {
-      (forwardedRef as React.MutableRefObject<T | null>).current =
-        innerRef.current;
-    }
-  });
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  React.useImperativeHandle(forwardedRef, () => innerRef.current);
 
   return innerRef as React.MutableRefObject<T>;
 }
-
-export default useForwardedRef;

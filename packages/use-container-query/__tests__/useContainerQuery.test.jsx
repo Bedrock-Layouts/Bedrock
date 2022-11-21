@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import ReactDOM from "react-dom/";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
@@ -7,9 +7,11 @@ import { useContainerQuery } from "../src";
 
 vi.spyOn(console, "error").mockImplementation(() => void 0);
 
+const NODE_WIDTH = 300;
+
 let createNode = vi.fn((node) => ({
   target: node,
-  contentRect: { width: 300 },
+  contentRect: { width: NODE_WIDTH },
 }));
 
 async function awaitAnimationFrame() {
@@ -43,13 +45,22 @@ ResizeObserver.mockImplementation(
 );
 
 let matches;
-const HookWrapper = ({ minWidth, maxWidth, withNode = true }) => {
-  const node = withNode ? document.createElement("div") : null;
+const HookWrapper = forwardRef(
+  ({ minWidth, maxWidth, withNode = true }, ref) => {
+    const [doesMatch, nodeRef] = useContainerQuery(
+      { width: minWidth, maxWidth },
+      ref
+    );
 
-  matches = useContainerQuery(node, minWidth, maxWidth);
+    matches = doesMatch;
 
-  return null;
-};
+    nodeRef.current = withNode
+      ? nodeRef.current ?? document.createElement("div")
+      : null;
+
+    return null;
+  }
+);
 
 describe("useContainerQuery", () => {
   let container;

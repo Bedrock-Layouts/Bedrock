@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import newsletter from '../assets/newsletter.png'
-import newsletterBefore from '../assets/newsletter-before.png'
-import newsletterAfter from '../assets/newsletter-after.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import newsletter from "../assets/newsletter.png";
+import newsletterBefore from "../assets/newsletter-before.png";
+import newsletterAfter from "../assets/newsletter-after.png";
 
 <Meta
   title="Getting Started/Lesson 2: Your First Component"
@@ -70,7 +70,7 @@ import { Subscribe } from "./Subscribe";
 
 function App() {
   return (
-    <Stack gutter="md">
+    <Stack gutter='size3'>
       <header>
         <h1>Coco Le Belle</h1>
       </header>
@@ -99,8 +99,8 @@ import { Stack } from "@bedrock-layout/stack";
 
 export function Subscribe() {
   return (
-    <Stack as='form' gutter='xl'>
-      <Stack gutter='md'>
+    <Stack as="form" gutter='size7'>
+      <Stack gutter='size3'>
         <h2>Subscribe To Our Newsletter</h2>
         <p>
           Subscribe to our newsletter to keep up to date on all our amazing
@@ -108,13 +108,13 @@ export function Subscribe() {
         </p>
       </Stack>
 
-      <Stack gutter='lg'>
-        <Stack as='label' gutter='sm'>
+      <Stack gutter='size3'>
+        <Stack as="label" gutter='size2'>
           Name
           <input type="text" />
         </Stack>
 
-        <Stack as='label' gutter='sm'>
+        <Stack as="label" gutter='size2'>
           Email
           <input type="email" />
         </Stack>
@@ -140,7 +140,7 @@ In the above `Subscribe` component, we are taking advantage of two import parts 
 
 The other part of the Stack primitive is the `gutter` prop. This allows you to control the space between the elements. Bedrock Layout Primitives has implemented a default spacing scheme, but this can be adjusted to fit any style guide. In the next section we will learn more about Bedrock Layout Primitives spacing scheme and how to override it with our own.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-1-installation--page"

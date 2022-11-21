@@ -2,75 +2,105 @@
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
-Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. Generally speaking, you won't typically need to pull these in to your App Directly since the Layout Primitives already implement them, but these do exist incase you ever need the raw values.
+Spacing constants are the standard by which all spacing and layout decisions are made in the Bedrock Layout Primitives. They are the building blocks of the system and are used to create all other spacing values.
 
-The spacing is built simply on `1rem` as the starting mid point and then doubling the value at each step above and halfing the value each step below. This comes down to the following spacings: `0`, `0.125rem`, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`. Each one of these spacing points are then named based on t-shirt size or `none`, `xs`, `sm`, `md`, `lg`, `xl`, and `xxl` respectively.
+Bedrock Layout's spacing constants are based on the [Open-props size scale](https://open-props.style/#sizes).
 
-For the breakpoints, we are adopting the foundation breakpoint values. All values are given in `rems`. There are two types of constants, single value and range values. `medium`, `large`, `xlarge`, and `xxlarge` are intended communicate that size or smaller. The constants are `smallOnly`, `mediumOnly`, `largeOnly`, and `xlargeOnly` and will be an array with the first value being the lowerbound and the second value being the upperbound;.
+## Spacing constants
 
-## Usage
-
-```javascript
-import { spacing, breakpoints } from '@bedrock-layout/spacing-constants';
-
-spacing.sm; //0.25rem
-
-breakpoints.large; //64rem
+```js
+{
+  space:{
+    size000: "-.5rem",
+    size00: "-.25rem",
+    size1: ".25rem",
+    size2: ".5rem",
+    size3: "1rem",
+    size4: "1.25rem",
+    size5: "1.5rem",
+    size6: "1.75rem",
+    size7: "2rem",
+    size8: "3rem",
+    size9: "4rem",
+    size10: "5rem",
+    size11: "7.5rem",
+    size12: "10rem",
+    size13: "15rem",
+    size14: "20rem",
+    size15: "30rem",
+  },
+  sizes: {
+    sizeContent1: "20ch",
+    sizeContent2: "45ch",
+    sizeContent3: "60ch",
+    sizeHeader1: "20ch",
+    sizeHeader2: "25ch",
+    sizeHeader3: "35ch",
+    sizeXxs: "240px",
+    sizeXs: "360px",
+    sizeSm: "480px",
+    sizeMd: "768px",
+    sizeLg: "1024px",
+    sizeXl: "1440px",
+    sizeXxl: "1920px",
+  }
+}
 ```
 
-## Overriding the values
+## Integrating With Your Design System
 
-All of the Bedrock Layout Primitives are built using `styled-components`. In order to override the values of any or all of the constants, you can use the `ThemeProvider` to change the values. The `ThemeProvider` can be rendered at any level of the tree and will override the values at that point. [Check out the docs for `styled-components`](https://styled-components.com/docs/advanced#theming) for more details on how it works
+Bedrock Layout Primitives is designed to be able to be integrated easily into any design system or style guide. Bedrock's Spacing values can be overridden using the `ThemeProvider` provided by `@bedrock-layout/spacing-constants`.
 
-```javascript
-import { ThemeProvider } from 'styled-components';
+Bedrock Layout Primitives follow the [System UI Theme Specification](https://system-ui.com/theme/#:~:text=This%20specification%20is%20a%20work%2Din%2Dprogress.&text=The%20theme%20object%20is%20intended,%2C%20and%2For%20design%20tokens) when overriding theme values. To override Bedrock Layout's default space values, you will need to pass in your new spacing values as an object of key/value pairs to the `space` key of the theme. For example, you can pass in the following object to override the default spacing values:
+
+```jsx
+import { ThemeProvider } from '@bedrock-layout/spacing-constants';
 
 const newSpacings = {
-    sm:'45px',
-    xxlg:'100ch'
+    "0x": 0,
+    "1x":'45px',
+    "3x":'100ch'
 }
 
-<ThemeProvider theme={{spacing:newSpacings}}>
-    <Stack gutter="sm">
+<ThemeProvider theme={{ space: newSpacings }}>
+    <Stack gutter="1x">
      {...}
     </Stack>
 </ThemeProvider>;
 ```
 
-### CSS Stylesheet
+The spacing values can either be any valid CSS size unit or percentage written as a string, or a positive number for the number of pixels
 
-You can also just bring in the CSS Stylesheet directly from the `lib` folder:
+## Overriding Spacing Types in TypeScript
 
-```javascript
-import "@bedrock-layout/css/lib/spacing-properties.css";
+If you are in a TypeScript project you will also need to override the default types. The spacing types are overridden by defining your theme types through [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). For example, to define the types of you `newSpacings` from the example above, we need to create a type declaration file, for example `bedrock.d.ts`, in the same directory as your `index.tsx` file where we define our new spacing types. This file will look something like this:
 
-/* or import the minified version */
+```typescript
+import type { CSSLength } from "@bedrock-layout/spacing-constants";
 
-import "@bedrock-layout/css/lib/spacing-properties.min.css";
-```
-
-This will add the following custom properties to your stylesheets:
-
-```css
-:root {
-  --space-none: 0px;
-  --space-xxs: 0.0625rem;
-  --space-xs: 0.125rem;
-  --space-sm: 0.25rem;
-  --space-md: 0.5rem;
-  --space-mdLg: 0.75rem;
-  --space-lg: 1rem;
-  --space-lgXl: 1.5rem;
-  --space-xl: 2rem;
-  --space-xlXXl: 3rem;
-  --space-xxl: 4rem;
-
-  --size-xxsmall: 159px;
-  --size-xsmall: 319px;
-  --size-small: 639px;
-  --size-medium: 1023px;
-  --size-large: 1199px;
-  --size-xlarge: 1439px;
-  --size-xxlarge: 1920px;
+declare module "@bedrock-layout/spacing-constants" {
+  export interface DefaultTheme {
+    space: {
+      "0x": number;
+      "1x": CSSLength;
+      "3x": CSSLength;
+    };
+  }
 }
 ```
+
+It is important to note that space values can only be of type `string`, `CSSLength` or `number`. `CSSLength` is the prefered type over `string` since it will validate that your string is in the format of `${number}${length-unit}`. You can import the `CSSLength` type from the`@bedrock-layout/spacing-constants` package.
+
+**Note: If you use any other type for your space values, the types will revert back to Bedrock's default spacing types.**
+
+If you prefer to not to use the `ThemeProvider` and instead use CSS custom properties, you can simply pass in any custom property wrapped in `var()` to the `gutter` or `padding` prop, like this:
+
+```typescript
+  <Stack gutter="var(--size-3)">
+    {...}
+  </Stack>
+```
+
+## No spacing in your design system
+
+In a perfect world we would only work on applications that have a well defined spacing system. However, there are many applications that do not have a well defined spacing system. For these applications, you can use any positive integer or valid `CSSLength` value for the spacing values.

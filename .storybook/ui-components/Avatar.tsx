@@ -1,4 +1,4 @@
-import { Frame } from "@bedrock-layout/frame";
+import { Frame } from "../../packages/frame/src";
 import React from "react";
 
 export const Avatar = (props) => (

@@ -26,7 +26,7 @@ A grid broken up into 12 segments where you can place areas onto the tracks even
 
 <Canvas withSource="open">
   <Story name="12-span grid">
-    <Columns gutter="lg" columns={12}>
+    <Columns gutter="size3" columns={12}>
       <Column span={12}>
         <Component>Span 12</Component>
       </Column>
@@ -54,8 +54,8 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
     <Center maxWidth="25rem">
       <PadBox
         as={Stack}
-        gutter="lg"
-        padding="xl"
+        gutter="size3"
+        padding="size7"
         style={{ border: "1px solid black" }}
       >
         <h1>Video Title</h1>
@@ -81,8 +81,8 @@ At this time, Bedrock Layout Primitives does not have a layout component that wo
     <Center centerChildren>
       <PadBox
         as={Stack}
-        gutter="lg"
-        padding="xl"
+        gutter="size3"
+        padding="size7"
         style={{ border: "1px solid black", width: "clamp(23ch, 60%, 46ch)" }}
       >
         <h1>Video Title</h1>
@@ -106,7 +106,7 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
 <Canvas withSource="open">
   <Story name="Deconstructed pancake">
     <Center maxWidth="25rem">
-      <ColumnDrop gutter="sm" minItemWidth="150px">
+      <ColumnDrop gutter="size2" minItemWidth="150px">
         <Component>1</Component>
         <Component>2</Component>
         <Component>3</Component>
@@ -122,13 +122,13 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
 <Canvas withSource="open">
   <Story name="Holy grail layout">
     <Cover
-      gutter="sm"
+      gutter="size2"
       stretchContent
       minHeight="50vh"
       top={<Component as="header">Header</Component>}
       bottom={<Component as="footer">Footer</Component>}
     >
-      <Inline align="stretch" gutter="sm" stretch={1}>
+      <Inline align="stretch" gutter="size2" stretch={1}>
         <Component>Left Sidebar</Component>
         <Component as="main">Main Content</Component>
         <Component>Right Sidebar</Component>
@@ -145,11 +145,11 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 <Canvas withSource="open">
   <Story name="Line up">
-    <Columns columns={3} gutter="xxl">
+    <Columns columns={3} gutter="size9">
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="md"
+        gutter="size3"
         top={<h3>Title - Card 1</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -164,7 +164,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="md"
+        gutter="size3"
         top={<h3>Title - Card 2</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -180,7 +180,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="md"
+        gutter="size3"
         top={<h3>Title - Card 3</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -203,7 +203,7 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
     <Cover
       minHeight="25vh"
       stretchContent
-      gutter="md"
+      gutter="size3"
       top={<Component as="header">Header</Component>}
       bottom={<Component as="footer">Footer Content</Component>}
     >
@@ -223,7 +223,7 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
 <Canvas withSource="open">
   <Story name="RAM (Repeat, Auto, Minmax)">
     <Center maxWidth="25rem">
-      <Grid gutter="lg" minItemWidth="150px">
+      <Grid gutter="size3" minItemWidth="150px">
         <Component>1</Component>
         <Component>2</Component>
         <Component>3</Component>
@@ -239,7 +239,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 <Canvas withSource="open">
   <Story name="Sidbar says">
-    <Split gutter="md" fraction="1/4" minItemWidth="100px">
+    <Split gutter="size3" fraction="1/4" minItemWidth="100px">
       <Component>Min: 100px / Max: 25%</Component>
       <Component>
         This element takes the second position, meaning it takes up the rest of

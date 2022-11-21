@@ -3,7 +3,7 @@ import {
   init,
   registerCallback,
 } from "@bedrock-layout/register-resize-callback";
-import useStatefulRef from "@bedrock-layout/use-stateful-ref";
+import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import { useEffect, useRef } from "react";
 
 export function useResizeObserver<T extends Element>(
@@ -33,5 +33,3 @@ export function useResizeObserver<T extends Element>(
 
   return nodeRef;
 }
-
-export default useResizeObserver;

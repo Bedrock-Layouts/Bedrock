@@ -30,7 +30,7 @@ yarn add @bedrock-layout/grid
 
 ## gutter
 
-The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/spacing--page#integrating-with-your-design-system)
 You can also use any valid CSSLength or positve integer.
 
 Here are the possible values for `gutter` by default:
@@ -51,68 +51,104 @@ Here are the possible values for `gutter` by default:
       <Component />
       <Component />
     </Grid>
-    <h3>none</h3>
-    <Grid gutter="none" minItemWidth="25rem">
+    <h3>size000</h3>
+    <Grid gutter="size000" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>xxs</h3>
-    <Grid gutter="xxs" minItemWidth="25rem">
+    <h3>size00</h3>
+    <Grid gutter="size00" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>xs</h3>
-    <Grid gutter="xs" minItemWidth="25rem">
+    <h3>size1</h3>
+    <Grid gutter="size1" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>sm</h3>
-    <Grid gutter="sm" minItemWidth="25rem">
+    <h3>size2</h3>
+    <Grid gutter="size2" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>md</h3>
-    <Grid gutter="md" minItemWidth="25rem">
+    <h3>size3</h3>
+    <Grid gutter="size3" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>mdLg</h3>
-    <Grid gutter="mdLg" minItemWidth="25rem">
+    <h3>size4</h3>
+    <Grid gutter="size4" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>lg</h3>
-    <Grid gutter="lg" minItemWidth="25rem">
+    <h3>size5</h3>
+    <Grid gutter="size5" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>lgXl</h3>
-    <Grid gutter="lgXl" minItemWidth="25rem">
+    <h3>size6</h3>
+    <Grid gutter="size6" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>xl</h3>
-    <Grid gutter="xl" minItemWidth="25rem">
+    <h3>size7</h3>
+    <Grid gutter="size7" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>xlXXl</h3>
-    <Grid gutter="xlXXl" minItemWidth="25rem">
+    <h3>size8</h3>
+    <Grid gutter="size8" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
     </Grid>
-    <h3>xxl</h3>
-    <Grid gutter="xxl" minItemWidth="25rem">
+    <h3>size9</h3>
+    <Grid gutter="size9" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size10</h3>
+    <Grid gutter="size10" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size11</h3>
+    <Grid gutter="size11" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size12</h3>
+    <Grid gutter="size12" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size13</h3>
+    <Grid gutter="size13" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size14</h3>
+    <Grid gutter="size14" minItemWidth="25rem">
+      <Component />
+      <Component />
+      <Component />
+    </Grid>
+    <h3>size15</h3>
+    <Grid gutter="size15" minItemWidth="25rem">
       <Component />
       <Component />
       <Component />
@@ -128,7 +164,7 @@ In the below example, The `minItemWidth` is set to `15rem`. As you resize the wi
 
 <Canvas withSource="open">
   <Story name="minItemWidth">
-    <Grid gutter="lg" minItemWidth="15rem">
+    <Grid gutter="size3" minItemWidth="15rem">
       <Component />
       <Component />
       <Component />
@@ -165,7 +201,7 @@ export const Template = (args) =>  (
 <Canvas>
   <Story
     name="Playground"
-    args={{ minItemWidth: "20rem", gutter: "lg" }}
+    args={{ minItemWidth: "20rem", gutter: "size3" }}
     argTypes={argTypes}
   >
     {Template.bind({})}

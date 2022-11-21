@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import heroPageInitial from '../assets/hero-page-initial.png'
-import heroPageWithCover from '../assets/hero-page-with-cover.png'
-import heroPageWithCenter from '../assets/hero-page-with-center.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import heroPageInitial from "../assets/hero-page-initial.png";
+import heroPageWithCover from "../assets/hero-page-with-cover.png";
+import heroPageWithCenter from "../assets/hero-page-with-center.png";
 
 <Meta
   title="Getting Started/Lesson 5: The Hero"
@@ -30,12 +30,12 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter="md">
+    <Stack gutter='size3'>
       <Menu />
-      <Stack as="header" gutter="lg">
+      <Stack as="header" gutter='size3'>
         <h1>Coco Le Belle</h1>
         <p>Elegant Feminine Fashion</p>
-        <Inline gutter="md">
+        <Inline gutter='size3'>
           <button>New Arrivals</button>
         </Inline>
       </Stack>
@@ -77,12 +77,12 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter="md">
-      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
-        <Stack as="header" gutter="lg">
+    <Stack gutter='size3'>
+      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
+        <Stack as="header" gutter='size3'>
           <h1>Coco Le Belle</h1>
           <p>Elegant Feminine Fashion</p>
-          <Inline gutter="md">
+          <Inline gutter='size3'>
             <button>New Arrivals</button>
           </Inline>
         </Stack>
@@ -126,13 +126,13 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter="md">
-      <Cover minHeight="50vh" gutter="md" top={<Menu />}>
+    <Stack gutter='size3'>
+      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
         <Center maxWidth="40rem">
-          <Stack as="header" gutter="lg">
+          <Stack as="header" gutter='size3'>
             <h1>Coco Le Belle</h1>
             <p>Elegant Feminine Fashion</p>
-            <Inline gutter="md">
+            <Inline gutter='size3'>
               <button>New Arrivals</button>
             </Inline>
           </Stack>
@@ -194,7 +194,7 @@ Now the `AppBoundary` will clamp the width of your app to the `xlarge` size opti
 
 Our landing page is coming along. In the next section, we'll be building cards and add them to a responsive grid layout.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-4-the-menu-component--page"

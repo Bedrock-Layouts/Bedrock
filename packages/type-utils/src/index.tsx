@@ -1,59 +1,66 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as React from "react";
-export function forwardRefWithAs<Props, ComponentType extends As>(
-  comp: (
-    props: PropsFromAs<ComponentType, Props>,
-    ref: React.RefObject<any>
-  ) => React.ReactElement | null
-): ComponentWithAs<ComponentType, Props> {
-  return React.forwardRef(comp as any) as unknown as ComponentWithAs<
-    ComponentType,
-    Props
-  >;
-}
-export type PropsFromAs<
-  ComponentType extends As,
-  ComponentProps
-> = (PropsWithAs<ComponentType, ComponentProps> & { as: ComponentType }) &
-  PropsWithAs<ComponentType, ComponentProps>;
+// Adapted from Source: https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/
+import React from "react";
 
-export type ComponentWithForwardedRef<
-  ElementType extends React.ElementType,
-  ComponentProps
-> = React.ForwardRefExoticComponent<
-  ComponentProps &
-    React.HTMLProps<React.ElementType<ElementType>> &
-    React.ComponentPropsWithRef<ElementType>
->;
+// Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
+// A more precise version of just React.ComponentPropsWithoutRef on its own
+export type PropsOf<
+  C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
+> = JSX.LibraryManagedAttributes<C, React.ComponentPropsWithoutRef<C>>;
 
-export type As<BaseProps = any> = React.ElementType<BaseProps>;
+type AsProp<C extends React.ElementType> = {
+  /**
+   * An override of the default HTML tag.
+   * Can also be another React component.
+   */
+  as?: C;
+};
 
-export type PropsWithAs<
-  ComponentType extends As,
-  ComponentProps
-> = ComponentProps &
-  Omit<
-    React.ComponentPropsWithRef<ComponentType>,
-    "as" | keyof ComponentProps
-  > & {
-    as?: ComponentType;
-  };
+/**
+ * Allows for extending a set of props (`ExtendedProps`) by an overriding set of props
+ * (`OverrideProps`), ensuring that any duplicates are overridden by the overriding
+ * set of props.
+ */
+export type ExtendableProps<
+  ExtendedProps = {},
+  OverrideProps = {}
+> = OverrideProps & Omit<ExtendedProps, keyof OverrideProps>;
 
-export interface ComponentWithAs<ComponentType extends As, ComponentProps> {
-  // These types are a bit of a hack, but cover us in cases where the `as` prop
-  // is not a JSX string type. Makes the compiler happy so 🤷‍♂️
-  // non important change
-  <TT extends As>(
-    props: PropsWithAs<TT, ComponentProps>
-  ): React.ReactElement | null;
-  (
-    props: PropsWithAs<ComponentType, ComponentProps>
-  ): React.ReactElement | null;
+/**
+ * Allows for inheriting the props from the specified element type so that
+ * props like children, className & style work, as well as element-specific
+ * attributes like aria roles. The component (`C`) must be passed in.
+ */
+export type InheritableElementProps<
+  C extends React.ElementType,
+  Props = {}
+> = ExtendableProps<PropsOf<C>, Props>;
 
-  displayName?: string;
-  propTypes?: React.WeakValidationMap<
-    PropsWithAs<ComponentType, ComponentProps>
-  >;
-  contextTypes?: React.ValidationMap<any>;
-  defaultProps?: Partial<PropsWithAs<ComponentType, ComponentProps>>;
-}
+/**
+ * A more sophisticated version of `InheritableElementProps` where
+ * the passed in `as` prop will determine which props can be included
+ */
+export type PolymorphicComponentProps<
+  C extends React.ElementType,
+  Props = {}
+> = InheritableElementProps<C, Props & AsProp<C>>;
+
+/**
+ * Utility type to extract the `ref` prop from a polymorphic component
+ */
+export type PolymorphicRef<C extends React.ElementType> =
+  React.ComponentPropsWithRef<C>["ref"];
+
+/**
+ * Utility type to extend the `ref` prop from a polymorphic component
+ */
+export type WithRef<C extends React.ElementType> = { ref?: PolymorphicRef<C> };
+/**
+ * A wrapper of `PolymorphicComponentProps` that also includes the `ref`
+ * prop for the polymorphic component
+ */
+export type PolymorphicComponentPropsWithRef<
+  C extends React.ElementType,
+  Props = {}
+> = PolymorphicComponentProps<C, Props> & WithRef<C>;

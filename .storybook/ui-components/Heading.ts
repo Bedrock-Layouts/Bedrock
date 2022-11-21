@@ -1,7 +1,12 @@
-import { Stack } from "@bedrock-layout/stack";
 import styled from "styled-components";
 
-export const Heading = styled(Stack).attrs(() => ({ as: "h1", gutter: "md" }))`
+import { Stack } from "../../packages/stack/src";
+
+export const Heading = styled.div.attrs(() => ({
+  as: Stack,
+  forwardedAs: "h1",
+  gutter: "md",
+}))`
   margin: 0;
   font-size: var(--font-size-fluid-3);
   font-family: "Roboto", sans-serif;

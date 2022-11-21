@@ -2,18 +2,18 @@ import {
   CSSLength,
   Gutter,
   SizesOptions,
-  checkIsCSSLength,
   getSafeGutter,
   getSizeValue,
-  sizes,
-  validateGutter,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
-import React from "react";
-import styled, { css } from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 type MinHeight = CSSLength | number | SizesOptions;
-export interface CoverProps {
+interface CoverPropsBase {
   top?: React.ReactNode;
   bottom?: React.ReactNode;
   gutter?: Gutter;
@@ -21,109 +21,59 @@ export interface CoverProps {
   stretchContent?: boolean;
 }
 
+export type CoverProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, CoverPropsBase>;
+
 function getSafeMinHeight<T extends Record<string, unknown>>(
   theme: T,
   minHeight?: MinHeight
 ) {
-  if (typeof minHeight === "number") return `${minHeight}px`;
-  if (checkIsCSSLength(minHeight as string)) return minHeight;
-  return getSizeValue(theme, minHeight as string);
+  return getSizeValue(theme, minHeight);
 }
 
-export const Cover = styled.div.attrs<CoverProps>(
-  ({
-    children,
-    gutter,
-    top,
-    bottom,
-    minHeight,
-    theme,
-    style,
-    stretchContent,
-  }) => {
+export const Cover = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      children,
+      gutter,
+      top,
+      bottom,
+      minHeight,
+      style,
+      stretchContent,
+      ...props
+    }: CoverProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeMinHeight = getSafeMinHeight(theme, minHeight);
 
     const attributeVal = stretchContent === true ? "stretch-content" : "";
 
-    return {
-      "data-bedrock-cover": attributeVal,
-      style: {
-        ...style,
-        "--minHeight": safeMinHeight,
-        "--gutter": maybeGutter,
-      },
-      children: (
-        <React.Fragment>
-          {top && <div data-bedrock-cover-top="">{top}</div>}
-          <div data-bedrock-cover-centered="">{children}</div>
-          {bottom && <div data-bedrock-cover-bottom="">{bottom}</div>}
-        </React.Fragment>
-      ),
-    };
-  }
-)<CoverProps>`
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
+    const safeStyle = style ?? {};
 
-  @property --minHeight {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 100vh;
-  }
-
-  > * {
-    margin: 0;
-  }
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter, 0px);
-
-  min-block-size: var(--minHeight, 100vh);
-
-  > [data-bedrock-cover-centered] {
-    margin-block-start: auto;
-    margin-block-end: auto;
-
-    ${({ stretchContent }) =>
-      stretchContent === true &&
-      css`
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        > * {
-          flex: 1;
+    const Component = as ?? "div";
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-cover={attributeVal}
+        style={
+          {
+            ...safeStyle,
+            "--gutter": maybeGutter,
+            "--minHeight": safeMinHeight,
+          } as CSSProperties
         }
-      `};
-  }
-`;
-
-Cover.displayName = "Cover";
-
-function validateMinHeight({ minHeight }: CoverProps, propName: string) {
-  if (minHeight === undefined) return;
-
-  const isValid =
-    typeof minHeight === "number" ||
-    checkIsCSSLength(minHeight as string) ||
-    Object.keys(sizes).includes(minHeight as string);
-
-  if (!isValid) {
-    console.error(
-      `${propName} needs to be an number, CSSLength or SizesOptions`
+        {...props}
+      >
+        {top && <div data-bedrock-cover-top="">{top}</div>}
+        <div data-bedrock-cover-centered="">{children}</div>
+        {bottom && <div data-bedrock-cover-bottom="">{bottom}</div>}
+      </Component>
     );
   }
-  return;
-}
+);
 
-Cover.propTypes = {
-  gutter: validateGutter,
-  minHeight: validateMinHeight as unknown as React.Validator<MinHeight>,
-  top: PropTypes.element,
-  bottom: PropTypes.element,
-  stretchContent: PropTypes.bool,
-};
+Cover.displayName = "Cover";

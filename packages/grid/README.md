@@ -49,9 +49,9 @@ For styling purposes, you can select `data-bedrock-grid`.
 
 \* required
 
-| Property     | Description                                   | Type                                   | Default               |
-| :----------: | :-------------------------------:             | :------------------------------------: | :-------------------: |
-| gutter\*     | sets the space between each child element     | One of `Spacing`\*\*                   | -                     |
-| minItemWidth | sets the min width size of each child element | number or valid CSS length as a string |  small (639px)        |
+|   Property   |                  Description                  |                  Type                  |    Default    |
+| :----------: | :-------------------------------------------: | :------------------------------------: | :-----------: |
+|   gutter\*   |   sets the space between each child element   |          One of `Spacing`\*\*          |       -       |
+| minItemWidth | sets the min width size of each child element | number or valid CSS length as a string | small (639px) |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

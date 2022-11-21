@@ -4,10 +4,13 @@ import {
   checkIsCSSLength,
   spacing as defaultSpacing,
   getSafeGutter,
-  validateGutter,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 type PaddingValue = Gutter;
 
@@ -40,23 +43,23 @@ const validKeys = new Set([
   "blockEnd",
 ]);
 
-const keyToProperty = (key: string, val: string) => {
+const keyToProperty = (key: string) => {
   type map = { [s: string]: string };
   const modernMap: map = {
-    left: `padding-inline-start:${val};`,
-    right: `padding-inline-end:${val};`,
-    top: `padding-block-start:${val};`,
-    bottom: `padding-block-end:${val};`,
-    inlineStart: `padding-inline-start:${val};`,
-    inlineEnd: `padding-inline-end:${val};`,
-    blockStart: `padding-block-start:${val};`,
-    blockEnd: `padding-block-end:${val};`,
+    left: `padding-inline-start`,
+    right: `padding-inline-end`,
+    top: `padding-block-start`,
+    bottom: `padding-block-end`,
+    inlineStart: `padding-inline-start`,
+    inlineEnd: `padding-inline-end`,
+    blockStart: `padding-block-start`,
+    blockEnd: `padding-block-end`,
   };
 
   return modernMap[key];
 };
 
-const paddingToString = (theme: BaseTheme, padding: PaddingTypes) => {
+const paddingToStyleProps = (theme: BaseTheme, padding: PaddingTypes) => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
   }
@@ -96,41 +99,51 @@ const paddingToString = (theme: BaseTheme, padding: PaddingTypes) => {
   };
 
   if (!isValidPadding()) {
-    console.error("Invalid padding Type");
+    console.error("Invalid padding Type: ", padding);
   }
 
   return typeof padding === "object" && !Array.isArray(padding)
     ? Object.entries(padding).reduce(
-        (acc, [key, val]) =>
-          acc + keyToProperty(key, getSafeGutter(theme, val) ?? "0px"),
-        ""
+        (acc, [key, val]) => ({
+          ...acc,
+          [keyToProperty(key)]: getSafeGutter(theme, val) ?? "0px",
+        }),
+        {}
       )
-    : `padding: ${Array.from(Array.isArray(padding) ? padding : [padding])
-        .map((pad: Gutter) => getSafeGutter(theme, pad) ?? "0px")
-        .join(" ")};`;
+    : {
+        padding: Array.from(Array.isArray(padding) ? padding : [padding])
+          .map((pad: Gutter) => getSafeGutter(theme, pad) ?? "0px")
+          .join(" "),
+      };
 };
 
-export interface PadBoxProps {
+interface PadBoxPropsBase {
   padding?: PaddingTypes;
 }
 
-export const PadBox = styled.div.attrs<PadBoxProps>(() => ({
-  "data-bedrock-padbox": "",
-}))<PadBoxProps>`
-  box-sizing: border-box;
-  ${(props) =>
-    props.padding !== undefined
-      ? paddingToString(props.theme, props.padding)
-      : ""}
-`;
+export type PadBoxProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, PadBoxPropsBase>;
+
+export const PadBox = forwardRef(
+  <C extends ElementType = "div">(
+    { as, style, padding, ...props }: PadBoxProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
+    const safeStyle = style ?? {};
+
+    const Component = as ?? "div";
+    const paddingStyles = paddingToStyleProps(theme, padding ?? "size00");
+
+    return (
+      <Component
+        data-bedrock-padbox
+        {...props}
+        ref={ref}
+        style={{ ...safeStyle, ...paddingStyles } as CSSProperties}
+      />
+    );
+  }
+);
 
 PadBox.displayName = "PadBox";
-
-PadBox.propTypes = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  padding: PropTypes.oneOfType<any>([
-    validateGutter,
-    PropTypes.objectOf(validateGutter),
-    PropTypes.arrayOf(validateGutter),
-  ]).isRequired,
-};

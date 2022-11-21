@@ -27,7 +27,7 @@ or
 ```javascript
 import { Stack } from '@bedrock-layout/stack';
 
-<Stack gutter='lg'>
+<Stack gutter='size3'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -49,8 +49,8 @@ For styling purposes, you can select `data-bedrock-stack`.
 
 \* required
 
-| Property | Description                                 | Type                 | Default |
+| Property |                 Description                 |         Type         | Default |
 | :------: | :-----------------------------------------: | :------------------: | :-----: |
-| gutter\* | Sets the space between each child component | one of `Spacing`\*\* | -       |
+| gutter\* | Sets the space between each child component | one of `Spacing`\*\* |    -    |
 
-\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

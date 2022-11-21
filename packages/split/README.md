@@ -16,7 +16,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
 `npm install @bedrock-layout/split`
 
-or 
+or
 
 `yarn add @bedrock-layout/split`
 
@@ -27,7 +27,7 @@ or
 ```javascript
 import { Split } from '@bedrock-layout/split';
 
-<Split gutter='lg' fraction='2/3'>
+<Split gutter='size3' fraction='2/3'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -49,10 +49,10 @@ For styling purposes, you can select `data-bedrock-split`.
 
 \* required
 
-| Property | Description                                                   | Type                                                                       | Default |
+| Property |                          Description                          |                                    Type                                    | Default |
 | :------: | :-----------------------------------------------------------: | :------------------------------------------------------------------------: | :-----: |
-| gutter\* | Sets the space between each child component                   | one of `Spacing`\*\*                                                       | -       |
-| fraction | Sets the fractional split                                     | one of `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` | `1/2`   |
-| switchAt | Sets the width threshold at which layout will change to Stack | a number in pixels or valid CSS length as a string                         | -       |
+| gutter\* |          Sets the space between each child component          |                            one of `Spacing`\*\*                            |    -    |
+| fraction |                   Sets the fractional split                   | one of `'auto-start' , 'auto-end' , '1/4' , '1/3' , '1/2' , '2/3' , '3/4'` |  `1/2`  |
+| switchAt | Sets the width threshold at which layout will change to Stack |             a number in pixels or valid CSS length as a string             |    -    |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

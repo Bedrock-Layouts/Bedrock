@@ -15,7 +15,11 @@ module.exports = defineConfig({
       },
     },
     rollupOptions: {
-      external: ["react", "@bedrock-layout/use-resize-observer"],
+      external: [
+        "react",
+        "@bedrock-layout/use-resize-observer",
+        "@bedrock-layout/use-forwarded-ref",
+      ],
     },
   },
 });

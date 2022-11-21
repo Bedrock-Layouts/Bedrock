@@ -1,26 +1,33 @@
 import {
-  InlineCluster,
-  InlineClusterProps,
-} from "@bedrock-layout/inline-cluster";
-import {
   CSSLength,
+  Gutter,
   SizesOptions,
   checkIsCSSLength,
+  getSafeGutter,
   getSizeValue,
-  sizes,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 type MinItemWidth = number | CSSLength | SizesOptions;
 type Stretch = "all" | "start" | "end" | number;
 type SwitchAt = CSSLength | number;
 
-export interface InlineProps extends InlineClusterProps {
+export interface InlinePropsBase {
   stretch?: Stretch;
   switchAt?: SwitchAt;
   minItemWidth?: MinItemWidth;
+  justify?: "start" | "end" | "center";
+  align?: "start" | "end" | "center" | "stretch";
+  gutter?: Gutter;
 }
+
+export type InlineProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, InlinePropsBase>;
 
 function shouldUseSwitch(switchAt?: SwitchAt) {
   if (switchAt === undefined) {
@@ -32,11 +39,29 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
     : switchAt > -1;
 }
 
-export const Inline = styled(InlineCluster).attrs<InlineProps>(
-  ({ justify, align, stretch, style, switchAt, theme, minItemWidth }) => {
-    const justifyValue = justify ? `justify:${justify}` : "justify:start";
-    const alignValue = align ? `align:${align}` : "align:start";
+export const Inline = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      justify,
+      align,
+      gutter,
+      stretch,
+      style,
+      switchAt,
+      minItemWidth,
+      ...props
+    }: InlineProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
+    const justifyValue = justify ? `justify:${justify}` : undefined;
+    const alignValue = align ? `align:${align}` : undefined;
+
     const stretchValue = stretch ? `stretch:${stretch}` : undefined;
+    const attributes = [justifyValue, alignValue, stretchValue]
+      .filter(Boolean)
+      .join(" ");
     const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
     const switchAtValue = shouldUseSwitch(switchAt)
       ? typeof switchAt === "string"
@@ -44,87 +69,29 @@ export const Inline = styled(InlineCluster).attrs<InlineProps>(
         : `${switchAt}px`
       : undefined;
 
-    return {
-      "data-bedrock-inline": [justifyValue, alignValue, stretchValue]
-        .filter(Boolean)
-        .join(" "),
-      "data-bedrock-inline-cluster": undefined,
-      style: {
-        ...style,
-        "--switchAt": switchAtValue,
-        "--minItemWidth":
-          typeof safeMinItemWidth === "number"
-            ? `${safeMinItemWidth}px`
-            : safeMinItemWidth,
-      },
-    };
-  }
-)<InlineProps>`
-  @property --switchAt {
-    syntax: "<length-percentage>";
-    inherits: true;
-    initial-value: 0;
-  }
+    const safeStyle = style ?? {};
 
-  flex-wrap: nowrap;
+    const Component = as ?? "div";
 
-  > * {
-    margin: 0;
-  }
-
-  ${({ stretch }) =>
-    stretch === "all"
-      ? `> *  { flex: 1 }`
-      : stretch === "start"
-      ? `> :first-child { flex: 1 }`
-      : stretch === "end"
-      ? `> :last-child { flex: 1 }`
-      : typeof stretch === "number"
-      ? `> :nth-child(${stretch + 1}) { flex: 1 }`
-      : null}
-
-  &[style*="--minItemWidth"] {
-    > * {
-      min-inline-size: var(--minItemWidth, 0);
-    }
-  }
-
-  &[style*="--switchAt"] {
-    flex-wrap: wrap;
-    > * {
-      flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
-    }
-  }
-`;
-
-Inline.displayName = "Inline";
-
-function validateMinItemWidth({ minItemWidth }: InlineProps, propName: string) {
-  if (minItemWidth === undefined) return undefined;
-
-  const isValid =
-    typeof minItemWidth === "number" ||
-    checkIsCSSLength(minItemWidth as string) ||
-    Object.keys(sizes).includes(minItemWidth as string);
-
-  if (!isValid) {
-    console.error(
-      `${propName} needs to be an number, CSSLength or SizesOptions`
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-inline={attributes}
+        style={
+          {
+            ...safeStyle,
+            "--gutter": getSafeGutter(theme, gutter),
+            "--switchAt": switchAtValue,
+            "--minItemWidth":
+              typeof safeMinItemWidth === "number"
+                ? `${safeMinItemWidth}px`
+                : safeMinItemWidth,
+          } as CSSProperties
+        }
+        {...props}
+      />
     );
   }
-  return undefined;
-}
+);
 
-Inline.propTypes = {
-  ...InlineCluster.propTypes,
-  stretch: PropTypes.oneOfType([
-    PropTypes.oneOf<Stretch>(["all", "start", "end"]),
-    PropTypes.number,
-  ]),
-  switchAt: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]) as unknown as React.Validator<SwitchAt>,
-  minItemWidth:
-    validateMinItemWidth as unknown as PropTypes.Requireable<MinItemWidth>,
-};
+Inline.displayName = "Inline";

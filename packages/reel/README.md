@@ -25,7 +25,7 @@ or
 ```javascript
 import { Reel } from '@bedrock-layout/reel';
 
-<Reel gutter="lg" snapType='mandatory'>
+<Reel gutter='size3' snapType='mandatory'>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -47,9 +47,9 @@ For styling purposes, you can select `data-bedrock-reel`.
 
 \* required
 
-| Property | Description                                  | Type                               | Default |
-| :------: | :------------------------------------------: | :--------------------------------: | :-----: |
-| gutter\* | Sets the space between each child element    | one of `Spacing`\*\*               | -       |
-| snapType | Controls horizontal snap type                | `none`, `mandatory` or `proximity` | 'none'  |
+| Property |                Description                |                Type                | Default |
+| :------: | :---------------------------------------: | :--------------------------------: | :-----: |
+| gutter\* | Sets the space between each child element |        one of `Spacing`\*\*        |    -    |
+| snapType |       Controls horizontal snap type       | `none`, `mandatory` or `proximity` | 'none'  |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but it can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

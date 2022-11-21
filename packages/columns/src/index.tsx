@@ -1,85 +1,90 @@
 import {
   Gutter,
   getSafeGutter,
-  validateGutter,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
-import { As, forwardRefWithAs } from "@bedrock-layout/type-utils";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
-import { useForwardedRef } from "@bedrock-layout/use-forwarded-ref";
-import PropTypes from "prop-types";
-import React from "react";
-import styled from "styled-components";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
-interface ColumnsBaseProps {
+interface BaseColumnsProps {
   gutter?: Gutter;
   columns?: number;
   dense?: boolean;
-  forwardedAs?: As<unknown>;
+  forwardedAs?: unknown;
 }
 
-const ColumnsBase = styled.div.attrs<ColumnsBaseProps>(
-  ({ dense, theme, gutter, columns = 1, style }) => {
+type ColumnsBaseProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, BaseColumnsProps>;
+
+const ColumnsBase = forwardRef(
+  <C extends ElementType = "div">(
+    { as, dense, gutter, columns = 1, style, ...props }: ColumnsBaseProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeColumns = columns > 0 ? columns : 1;
-    return {
-      "data-bedrock-columns": dense ? "dense" : "",
-      style: { ...style, "--gutter": maybeGutter, "--columns": safeColumns },
-    };
-  }
-)<ColumnsBaseProps>`
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
+    const safeStyle = style ?? {};
 
-  @property --columns {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
+    const Component = as ?? "div";
+
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-columns={dense ? "dense" : ""}
+        style={
+          {
+            ...safeStyle,
+            "--gutter": maybeGutter,
+            "--columns": safeColumns,
+          } as CSSProperties
+        }
+        {...props}
+      />
+    );
   }
+);
 
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: grid;
-  grid-template-columns: repeat(var(--columns, 1), 1fr);
-  gap: var(--gutter, 0px);
-  grid-auto-flow: row ${({ dense = false }) => (dense === true ? "dense" : "")};
-`;
-
-export interface ColumnsProps extends StackProps, ColumnsBaseProps {
+interface ColumnsPropsBase extends StackProps, ColumnsBaseProps {
   switchAt?: number | string;
   children?: React.ReactNode;
 }
 
-const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
-  ({ columns, dense, switchAt, as, ...props }, ref) => {
-    const safeRef = useForwardedRef(ref);
+export type ColumnsProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, ColumnsPropsBase>;
 
-    const node = safeRef.current;
-
+export const Columns = forwardRef(
+  <C extends ElementType = "div">(
+    { columns, dense, switchAt, as, gutter, ...props }: ColumnsProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
     const maybePx = React.useMemo(() => {
       return typeof switchAt === "string"
-        ? toPX(switchAt, node)
+        ? toPX(switchAt)
         : typeof switchAt === "number" && switchAt > -1
         ? switchAt
         : null;
-    }, [switchAt, node]);
+    }, [switchAt]);
 
-    const widthToSwitchAt: number = maybePx ? maybePx : 0; //zero is used to make the switchAt a noop
+    const widthToSwitchAt: number = maybePx ?? 0; //zero is used to make the switchAt a noop
 
-    const shouldSwitch = useContainerQuery(node, widthToSwitchAt);
+    const [shouldSwitch, safeRef] = useContainerQuery(
+      { width: widthToSwitchAt },
+      ref
+    );
 
     return shouldSwitch ? (
-      <Stack as={as} ref={safeRef} {...props} />
+      <Stack as={as} ref={safeRef} gutter={gutter} {...props} />
     ) : (
       <ColumnsBase
         as={as}
         ref={safeRef}
+        gutter={gutter}
         columns={columns}
         dense={dense}
         {...props}
@@ -88,100 +93,65 @@ const ColumnComp = forwardRefWithAs<ColumnsProps, "div">(
   }
 );
 
-export const Columns = styled(ColumnComp).attrs(({ as, forwardedAs }) => {
-  return {
-    forwardedAs: as ?? forwardedAs,
-    as: ColumnComp,
-  };
-})``;
-
 Columns.displayName = "Columns";
 
-Columns.propTypes = {
-  gutter: validateGutter,
-  columns: PropTypes.number,
-  dense: PropTypes.bool,
-  switchAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-export interface ColumnProps {
+export interface ColumnPropsBase {
   span?: number;
   offsetStart?: number;
   offsetEnd?: number;
 }
+
+export type ColumnProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, ColumnPropsBase>;
 
 const safeSpan = (span: unknown) => {
   return typeof span === "number" ? span : 1;
 };
 
 /**
- * ColumnsProps passed twice to make propTypes work.
  *
  * span is remaped to colSpan due to span being an attribute that gets
  * passed to the underlying element.  This can cause issues with Grid layout.
  *
  * In a future breaking change, colSpan should be the public API.
  * */
-export const Column = styled.div.attrs<ColumnProps>(
-  ({ span, style, offsetStart = 0, offsetEnd = 0 }) => {
+export const Column = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      span,
+      style,
+      offsetStart = 0,
+      offsetEnd = 0,
+      ...props
+    }: ColumnProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
     const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
     const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;
-    return {
-      "data-bedrock-column": "",
-      span: undefined,
-      style: {
-        ...style,
-        "--span": Math.max(safeSpan(span), 1),
-        "--offsetStart": safeOffsetStart,
-        "--offsetEnd": safeOffsetEnd,
-      },
-    };
-  }
-)<ColumnProps>`
-  @property --span {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
-  }
+    const safeStyle = style ?? {};
 
-  @property --offsetStart {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
-  }
+    const Component = as ?? "div";
 
-  @property --offsetEnd {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 1;
+    return (
+      <Component
+        data-bedrock-column
+        ref={ref}
+        style={
+          {
+            ...safeStyle,
+            "--span": Math.max(safeSpan(span), 1),
+            "--offsetStart": safeOffsetStart,
+            "--offsetEnd": safeOffsetEnd,
+          } as CSSProperties
+        }
+        {...props}
+      />
+    );
   }
-
-  grid-column: span min(var(--span, 1), var(--columns, 1));
-
-  &[style*="--offset"] {
-    display: contents;
-  }
-
-  &[style*="--offset"] > * {
-    grid-column: span min(var(--span, 1), var(--columns, 1));
-  }
-
-  &[style*="--offsetStart"]::before {
-    content: "";
-    grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
-  }
-
-  &[style*="--offsetEnd"]::after {
-    content: "";
-    grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
-  }
-`;
+);
 
 Column.displayName = "Column";
-
-Column.propTypes = {
-  span: PropTypes.number,
-};
 
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js
@@ -189,23 +159,26 @@ Column.propTypes = {
 
 const PIXELS_PER_INCH = 96;
 
-/* istanbul ignore next */
+/* c8 ignore start */
 function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
 
+  /* c8 ignore next */
   const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function toPX(str: string, element?: Element): number | null {
+  /* c8 ignore next */
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
   const safeStr = (str ?? "px").trim().toLowerCase();
 
+  /* c8 ignore next */
   switch (safeStr) {
     case "vmin":
     case "vmax":
@@ -245,7 +218,7 @@ function toPX(str: string, element?: Element): number | null {
   }
 }
 
-/* istanbul ignore next */
+/* c8 ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)
@@ -261,3 +234,4 @@ function getSizeBrutal(unit: string, element: Element) {
   element.removeChild(testDIV);
   return size;
 }
+/* c8 ignore stop */

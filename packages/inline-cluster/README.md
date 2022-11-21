@@ -27,7 +27,7 @@ or
 ```javascript
 import { InlineCluster } from '@bedrock-layout/inline-cluster';
 
-<InlineCLuster gutter='lg' justify='start' align='start'>
+<InlineCLuster gutter='size3' justify='start' align='start'>
   <span>Lorem ipsum dolor</span>
   <span>sit amet consectetur</span>
   <span>adipisicing elit.</span>
@@ -46,10 +46,10 @@ For styling purposes, you can select `data-bedrock-inline-cluster`.
 
 \* required
 
-| Property | Description                                          | Type                         | Default |
-| :------: | :--------------------------------------------------: | :--------------------------: | :-----: |
-| gutter\* | Sets the space between each child element            | one of `Spacing`\*\*         | -       |
-| justify  | Sets the inline justification of the children        | One of: `start, end, center` | `start` |
-| align    | Sets the block alignment of the children             | One of: `start, end, center` | `start` |
+| Property |                  Description                  |             Type             | Default |
+| :------: | :-------------------------------------------: | :--------------------------: | :-----: |
+| gutter\* |   Sets the space between each child element   |     one of `Spacing`\*\*     |    -    |
+| justify  | Sets the inline justification of the children | One of: `start, end, center` | `start` |
+|  align   |   Sets the block alignment of the children    | One of: `start, end, center` | `start` |
 
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

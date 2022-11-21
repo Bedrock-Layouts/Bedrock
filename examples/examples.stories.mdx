@@ -20,9 +20,9 @@ A simple product card with an image and a description on the the right. Uses the
 
 <Canvas withSource="open">
   <Story name="Product Card">
-    <Split fraction="1/4" gutter="none">
+    <Split fraction="1/4" gutter="size000">
       <img src={jacketPic} alt="Computer" />
-      <Stack as={PadBox} padding="lg" gutter="lg">
+      <Stack as={PadBox} padding="size3" gutter="size3">
         <header>
           <span>Classic Utility Jacket</span>
         </header>
@@ -43,45 +43,45 @@ A basic form with inputs that span multiple columns. Uses the `<Stack>`, `<Colum
 
 <Canvas withSource="open">
   <Story name="Form">
-    <Columns as="form" gutter="lg" columns={6}>
+    <Columns as="form" gutter="size3" columns={6}>
       <Column span={3}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           First Name
           <input type="text" />
         </Stack>
       </Column>
       <Column span={3}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           Last Name
           <input type="text" />
         </Stack>
       </Column>
       <Column span={4}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           Email
           <input type="text" />
         </Stack>
       </Column>
       <Column span={6}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           Street Address
           <input type="text" />
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           City
           <input type="text" />
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           State
           <input type="text" />
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="md">
+        <Stack as="label" gutter="size3">
           Zip Code
           <input type="text" />
         </Stack>

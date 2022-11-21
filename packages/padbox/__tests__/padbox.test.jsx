@@ -1,7 +1,6 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import { vi } from "vitest";
 
 import { PadBox } from "../src";
@@ -42,10 +41,10 @@ describe("PadBox", () => {
 
     it("use 1, 2, 3, 4 items arrays", () => {
       [
-        ["md"],
-        ["md", "lg"],
-        ["md", "lg", "xs"],
-        ["md", "lg", "xs", "sm"],
+        ["size2"],
+        ["size2", "size3"],
+        ["size2", "size3", "size00"],
+        ["size2", "size3", "size00", "size1"],
       ].forEach((padding) => {
         const padbox = create(
           <PadBox padding={padding}>
@@ -103,15 +102,12 @@ describe("PadBox", () => {
     });
 
     it("renders default with console error with no input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <PadBox>
           <Lorem />
         </PadBox>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

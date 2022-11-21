@@ -15,7 +15,7 @@ module.exports = defineConfig({
       },
     },
     rollupOptions: {
-      external: ["react", "styled-components"],
+      external: ["react", "open-props"],
     },
   },
 });

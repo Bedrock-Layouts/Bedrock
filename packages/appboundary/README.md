@@ -1,6 +1,6 @@
 # `@bedrock-layout/appboundary`
 
-A layout helper component that clamps the app at the `XXL` breakpoint and keeps the app centered on the screen.
+A layout helper component that clamps the app at the `sizeXxl` breakpoint and keeps the app centered on the screen.
 
 Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 

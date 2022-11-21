@@ -30,7 +30,7 @@ yarn add @bedrock-layout/column-drop
 
 ## gutter
 
-The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/spacing--page#integrating-with-your-design-system)
 You can also use any valid CSSLength or positve integer.
 
 Here are the possible values for `gutter` by default:
@@ -51,78 +51,120 @@ Here are the possible values for `gutter` by default:
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>none</h3>
-    <ColumnDrop gutter="none">
+    <h3>size000</h3>
+    <ColumnDrop gutter="size000">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>xxs</h3>
-    <ColumnDrop gutter="xxs">
+    <h3>size00</h3>
+    <ColumnDrop gutter="size00">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>xs</h3>
-    <ColumnDrop gutter="xs">
+    <h3>size1</h3>
+    <ColumnDrop gutter="size1">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>sm</h3>
-    <ColumnDrop gutter="sm">
+    <h3>size2</h3>
+    <ColumnDrop gutter="size2">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>md</h3>
-    <ColumnDrop gutter="md">
+    <h3>size3</h3>
+    <ColumnDrop gutter="size3">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>mdLg</h3>
-    <ColumnDrop gutter="mdLg">
+    <h3>size4</h3>
+    <ColumnDrop gutter="size4">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>lg</h3>
-    <ColumnDrop gutter="lg">
+    <h3>size5</h3>
+    <ColumnDrop gutter="size5">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>lgXl</h3>
-    <ColumnDrop gutter="lgXl">
+    <h3>size6</h3>
+    <ColumnDrop gutter="size6">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>xl</h3>
-    <ColumnDrop gutter="xl">
+    <h3>size7</h3>
+    <ColumnDrop gutter="size7">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>xlXXl</h3>
-    <ColumnDrop gutter="xlXXl">
+    <h3>size8</h3>
+    <ColumnDrop gutter="size8">
       <Component />
       <Component />
       <Component />
       <Component />
     </ColumnDrop>
-    <h3>xxl</h3>
-    <ColumnDrop gutter="xxl">
+    <h3>size9</h3>
+    <ColumnDrop gutter="size9">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size10</h3>
+    <ColumnDrop gutter="size10">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size11</h3>
+    <ColumnDrop gutter="size11">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size12</h3>
+    <ColumnDrop gutter="size12">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size13</h3>
+    <ColumnDrop gutter="size13">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size14</h3>
+    <ColumnDrop gutter="size14">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size15</h3>
+    <ColumnDrop gutter="size15">
       <Component />
       <Component />
       <Component />
@@ -139,7 +181,7 @@ In the below example, The `minItemWidth` is set to `15rem`. As you resize the wi
 
 <Canvas withSource="open">
   <Story name="minItemWidth">
-    <ColumnDrop gutter="lg" minItemWidth="15rem">
+    <ColumnDrop gutter="size3" minItemWidth="15rem">
       <Component />
       <Component />
       <Component />
@@ -160,8 +202,7 @@ In the below example, The `minItemWidth` is set to `15rem`. As you resize the wi
 
 <Canvas withSource="open">
   <Story name="noStretchedColumns">
-    <ColumnDrop noStretchedColumns gutter="lg" basis="15rem">
-      <Component />
+    <ColumnDrop noStretchedColumns gutter="size3" minItemWidth="15rem">
       <Component />
       <Component />
       <Component />
@@ -197,7 +238,7 @@ export const Template = (args) =>  (
   <Story
     name="Playground"
     args={{
-      gutter: "lg",
+      gutter: "size3",
       minItemWidth: "15rem",
       noStretchedColumns: false,
     }}

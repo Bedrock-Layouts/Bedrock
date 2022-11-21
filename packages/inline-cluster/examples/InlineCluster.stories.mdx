@@ -30,7 +30,7 @@ yarn add @bedrock-layout/inline-cluster
 
 ## gutter
 
-The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `styled-components`.](/docs/spacing--page#integrating-with-your-design-system)
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/spacing--page#integrating-with-your-design-system)
 You can also use any valid CSSLength or positve integer.
 
 Here are the possible values for `gutter` by default:
@@ -51,78 +51,120 @@ Here are the possible values for `gutter` by default:
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>none</h3>
-    <InlineCluster gutter="none">
+    <h3>size000</h3>
+    <InlineCluster gutter="size000">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>xxs</h3>
-    <InlineCluster gutter="xxs">
+    <h3>size00</h3>
+    <InlineCluster gutter="size00">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>xs</h3>
-    <InlineCluster gutter="xs">
+    <h3>size1</h3>
+    <InlineCluster gutter="size1">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>sm</h3>
-    <InlineCluster gutter="sm">
+    <h3>size2</h3>
+    <InlineCluster gutter="size2">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>md</h3>
-    <InlineCluster gutter="md">
+    <h3>size3</h3>
+    <InlineCluster gutter="size3">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>mdLg</h3>
-    <InlineCluster gutter="mdLg">
+    <h3>size4</h3>
+    <InlineCluster gutter="size4">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>lg</h3>
-    <InlineCluster gutter="lg">
+    <h3>size5</h3>
+    <InlineCluster gutter="size5">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>lgXl</h3>
-    <InlineCluster gutter="lgXl">
+    <h3>size6</h3>
+    <InlineCluster gutter="size6">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>xl</h3>
-    <InlineCluster gutter="xl">
+    <h3>size7</h3>
+    <InlineCluster gutter="size7">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>xlXXl</h3>
-    <InlineCluster gutter="xlXXl">
+    <h3>size8</h3>
+    <InlineCluster gutter="size8">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
-    <h3>xxl</h3>
-    <InlineCluster gutter="xxl">
+    <h3>size9</h3>
+    <InlineCluster gutter="size9">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size10</h3>
+    <InlineCluster gutter="size10">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size11</h3>
+    <InlineCluster gutter="size11">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size12</h3>
+    <InlineCluster gutter="size12">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size13</h3>
+    <InlineCluster gutter="size13">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size14</h3>
+    <InlineCluster gutter="size14">
+      <Component widthLevel={5} />
+      <Component widthLevel={0.5} />
+      <Component />
+      <Component widthLevel={4} />
+    </InlineCluster>
+    <h3>size15</h3>
+    <InlineCluster gutter="size15">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
@@ -138,21 +180,21 @@ The `justify` prop defines the inline justification of the elements within the c
 <Canvas withSource="open">
   <Story name="justify">
     <h3>start</h3>
-    <InlineCluster justify="start" gutter="xl">
+    <InlineCluster justify="start" gutter="size7">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
     <h3>end</h3>
-    <InlineCluster justify="end" gutter="xl">
+    <InlineCluster justify="end" gutter="size7">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
       <Component widthLevel={4} />
     </InlineCluster>
     <h3>center</h3>
-    <InlineCluster justify="center" gutter="xl">
+    <InlineCluster justify="center" gutter="size7">
       <Component widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
@@ -168,25 +210,25 @@ The `align` prop defines the block alignment of the elements within the cluster.
 <Canvas withSource="open">
   <Story name="align">
     <h3>start</h3>
-    <InlineCluster align="start" gutter="xl">
+    <InlineCluster align="start" gutter="size7">
       <Component style={{ height: 200 }} widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
     </InlineCluster>
     <h3>end</h3>
-    <InlineCluster align="end" gutter="xl">
+    <InlineCluster align="end" gutter="size7">
       <Component style={{ height: 200 }} widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
     </InlineCluster>
     <h3>center</h3>
-    <InlineCluster align="center" gutter="xl">
+    <InlineCluster align="center" gutter="size7">
       <Component style={{ height: 200 }} widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
     </InlineCluster>
     <h3>stretch</h3>
-    <InlineCluster align="stretch" gutter="xl">
+    <InlineCluster align="stretch" gutter="size7">
       <Component style={{ height: 200 }} widthLevel={5} />
       <Component widthLevel={0.5} />
       <Component />
@@ -215,7 +257,7 @@ export const Template = (args) =>  (
   <Story
     name="Playground"
     args={{
-      gutter: "lg",
+      gutter: "size3",
       justify: "start",
       align: "start",
     }}

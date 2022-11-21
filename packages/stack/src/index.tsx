@@ -1,44 +1,39 @@
 import {
   Gutter,
   getSafeGutter,
-  validateGutter,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { ElementType, forwardRef } from "react";
 
-export interface StackProps {
+interface StackPropsBase {
   gutter?: Gutter;
 }
 
-export const Stack = styled.div.attrs<StackProps>(
-  ({ gutter, theme, style }) => {
+export type StackProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, StackPropsBase>;
+
+export const Stack = forwardRef(
+  <C extends ElementType = "div">(
+    { as, gutter, style, ...props }: StackProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
-    return {
-      "data-bedrock-stack": "",
-      style: { ...style, "--gutter": maybeGutter },
-    };
-  }
-)<StackProps>`
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0px;
-  }
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
+    const safeStyle = style ?? {};
 
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter, 0);
-
-  & > [data-bedrock-column] {
-    grid-column: span 1 / auto;
+    const Component = as ?? "div";
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-stack
+        style={{ ...safeStyle, "--gutter": maybeGutter } as React.CSSProperties}
+        {...props}
+      />
+    );
   }
-`;
-
+);
 Stack.displayName = "Stack";
-
-Stack.propTypes = {
-  gutter: validateGutter,
-};

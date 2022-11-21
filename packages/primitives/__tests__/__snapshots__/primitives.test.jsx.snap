@@ -4,997 +4,127 @@ exports[`primitives > primitives snapshot 1`] = `
 {
   "AppBoundary": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 392846413,
-      "baseStyle": undefined,
-      "componentId": "sc-gswNZR",
-      "isStatic": false,
-      "rules": [
-        "
-  padding: 0;
-  max-inline-size: 100%;
-  overflow: hidden;
-  height: 100%;
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "boundarySize": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-gswNZR",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Center": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 138803661,
-      "baseStyle": undefined,
-      "componentId": "sc-bcXHqe",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --maxWidth {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 100%;
-  }
-
-  box-sizing: content-box;
-
-  && {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    margin-inline: auto;
-  }
-
-  max-inline-size: var(--maxWidth, 100%);
-
-  ",
-        [Function],
-        "
-
-  ",
-        [Function],
-        "
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "centerChildren": [Function],
-      "centerText": [Function],
-      "maxWidth": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-bcXHqe",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Column": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -1113249035,
-      "baseStyle": undefined,
-      "componentId": "sc-gKPRtg",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --span {
-    syntax: \\"<number>\\";
-    inherits: true;
-    initial-value: 1;
-  }
-
-  @property --offsetStart {
-    syntax: \\"<number>\\";
-    inherits: true;
-    initial-value: 1;
-  }
-
-  @property --offsetEnd {
-    syntax: \\"<number>\\";
-    inherits: true;
-    initial-value: 1;
-  }
-
-  grid-column: span min(var(--span, 1), var(--columns, 1));
-
-  &[style*=\\"--offset\\"] {
-    display: contents;
-  }
-
-  &[style*=\\"--offset\\"] > * {
-    grid-column: span min(var(--span, 1), var(--columns, 1));
-  }
-
-  &[style*=\\"--offsetStart\\"]::before {
-    content: \\"\\";
-    grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
-  }
-
-  &[style*=\\"--offsetEnd\\"]::after {
-    content: \\"\\";
-    grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "span": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-gKPRtg",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "ColumnDrop": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -1807137125,
-      "baseStyle": undefined,
-      "componentId": "sc-dkrFOg",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0px;
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-    flex-basis: var(--minItemWidth, ",
-        "159px",
-        ");
-    flex-grow: ",
-        [Function],
-        ";
-    flex-shrink: 1;
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--gutter, 0px);
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "gutter": [Function],
-      "minItemWidth": [Function],
-      "noStretchedColumns": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-dkrFOg",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Columns": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 816878857,
-      "baseStyle": undefined,
-      "componentId": "sc-jSUZER",
-      "isStatic": false,
-      "rules": [
-        "",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "columns": [Function],
-      "dense": [Function],
-      "gutter": [Function],
-      "switchAt": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-jSUZER",
-    "target": {
-      "$$typeof": Symbol(react.forward_ref),
-      "render": [Function],
-    },
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Cover": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -2015370,
-      "baseStyle": undefined,
-      "componentId": "sc-iBYQkv",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  @property --minHeight {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 100vh;
-  }
-
-  > * {
-    margin: 0;
-  }
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter, 0px);
-
-  min-block-size: var(--minHeight, 100vh);
-
-  > [data-bedrock-cover-centered] {
-    margin-block-start: auto;
-    margin-block-end: auto;
-
-    ",
-        [Function],
-        ";
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "bottom": [Function],
-      "gutter": [Function],
-      "minHeight": [Function],
-      "stretchContent": [Function],
-      "top": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-iBYQkv",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Frame": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 183687572,
-      "baseStyle": undefined,
-      "componentId": "sc-ftTHYK",
-      "isStatic": false,
-      "rules": [
-        "
-  box-sizing: border-box;
-  display: block;
-  inline-size: 100%;
-  position: relative;
-  overflow: hidden;
-
-  &[style*=\\"--ratio\\"] {
-    aspect-ratio: var(--ratio);
-  }
-
-  > * {
-    position: absolute;
-
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-
-    inset-block: 0;
-    inset-inline: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  > :is(img, video) {
-    inline-size: 100%;
-    block-size: 100%;
-    size: 100%;
-
-    object-fit: cover;
-    object-position: ",
-        [Function],
-        ";
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "position": [Function],
-      "ratio": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ftTHYK",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
-  },
-  "GlobalStyles": {
-    "$$typeof": Symbol(react.memo),
-    "compare": null,
-    "type": [Function],
   },
   "Grid": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 677740513,
-      "baseStyle": undefined,
-      "componentId": "sc-pyfCe",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: grid;
-  gap: var(--gutter, 0px);
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--minItemWidth, ",
-        "639px",
-        "), 100%), 1fr)
-  );
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "gutter": [Function],
-      "minItemWidth": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-pyfCe",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Inline": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 945680343,
-      "baseStyle": e {
-        "baseHash": -2129341314,
-        "baseStyle": undefined,
-        "componentId": "sc-jrcTuL",
-        "isStatic": false,
-        "rules": [
-          "
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, 0px);
-
-  justify-content: ",
-          [Function],
-          ";
-
-  align-items: ",
-          [Function],
-          ";
-",
-        ],
-        "staticRulesId": "",
-      },
-      "componentId": "sc-kDvujY",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --switchAt {
-    syntax: \\"<length-percentage>\\";
-    inherits: true;
-    initial-value: 0;
-  }
-
-  flex-wrap: nowrap;
-
-  > * {
-    margin: 0;
-  }
-
-  ",
-        [Function],
-        "
-
-  &[style*=\\"--minItemWidth\\"] {
-    > * {
-      min-inline-size: var(--minItemWidth, 0);
-    }
-  }
-
-  &[style*=\\"--switchAt\\"] {
-    flex-wrap: wrap;
-    > * {
-      flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
-    }
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [
-      "sc-jrcTuL",
-    ],
-    "propTypes": {
-      "align": [Function],
-      "gutter": [Function],
-      "justify": [Function],
-      "minItemWidth": [Function],
-      "stretch": [Function],
-      "switchAt": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-kDvujY",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "InlineCluster": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -2129341314,
-      "baseStyle": undefined,
-      "componentId": "sc-jrcTuL",
-      "isStatic": false,
-      "rules": [
-        "
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, 0px);
-
-  justify-content: ",
-        [Function],
-        ";
-
-  align-items: ",
-        [Function],
-        ";
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "align": [Function],
-      "gutter": [Function],
-      "justify": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-jrcTuL",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "MasonryGrid": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -174752625,
-      "baseStyle": e {
-        "baseHash": 1071014339,
-        "baseStyle": undefined,
-        "componentId": "sc-ipEyDJ",
-        "isStatic": false,
-        "rules": [
-          "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  @property --minItemWidth {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: ",
-          "639px",
-          ";
-  }
-
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: grid;
-  gap: var(--gutter, 0px);
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--minItemWidth, ",
-          "639px",
-          "), 100%), 1fr)
-  );
-",
-        ],
-        "staticRulesId": "",
-      },
-      "componentId": "sc-eDWCr",
-      "isStatic": false,
-      "rules": [
-        "
-  grid-template-rows: 1px;
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [
-      "sc-ipEyDJ",
-    ],
-    "propTypes": {
-      "gutter": [Function],
-      "minItemWidth": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-eDWCr",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "PadBox": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 2129548803,
-      "baseStyle": undefined,
-      "componentId": "sc-bqWxrE",
-      "isStatic": false,
-      "rules": [
-        "
-  box-sizing: border-box;
-  ",
-        [Function],
-        "
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "padding": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-bqWxrE",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Reel": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -33587879,
-      "baseStyle": undefined,
-      "componentId": "sc-ksBlkl",
-      "isStatic": false,
-      "rules": [
-        "
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-    scroll-snap-align: start;
-  }
-
-  display: flex;
-  gap: var(--gutter, 0px);
-
-  overflow-x: auto;
-
-  scroll-snap-type: ",
-        [Function],
-        ";
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "gutter": [Function],
-      "snapType": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ksBlkl",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Split": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": -749487824,
-      "baseStyle": undefined,
-      "componentId": "sc-hBxehG",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0;
-  }
-
-  @property --switchAt {
-    syntax: \\"<length-percentage>\\";
-    inherits: true;
-    initial-value: 0;
-  }
-
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, 0);
-
-  > * {
-    box-sizing: border-box;
-    margin: 0;
-    flex-grow: 1;
-    max-inline-size: unset;
-  }
-
-  &[data-bedrock-split~=\\"fraction:1/4\\"] > *:nth-child(odd) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
-  }
-
-  &[data-bedrock-split~=\\"fraction:1/3\\"] > *:nth-child(odd) {
-    flex-basis: max(
-      var(--minItemWidth, 0px),
-      calc(33.333% - var(--gutter) / 3)
-    );
-  }
-
-  &[data-bedrock-split~=\\"fraction:1/2\\"] > *:nth-child(odd) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(50% - var(--gutter) / 2));
-  }
-
-  &[data-bedrock-split~=\\"fraction:2/3\\"] > *:nth-child(even) {
-    flex-basis: max(
-      var(--minItemWidth, 0px),
-      calc(33.333% - var(--gutter) / 3)
-    );
-  }
-
-  &[data-bedrock-split~=\\"fraction:3/4\\"] > *:nth-child(even) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
-  }
-
-  &[data-bedrock-split~=\\"fraction:auto-start\\"] > *:nth-child(odd) {
-    flex-basis: var(--minItemWidth, 0);
-  }
-
-  &[data-bedrock-split~=\\"fraction:auto-end\\"] > *:nth-child(even) {
-    flex-basis: var(--minItemWidth, 0);
-  }
-
-  :is([data-bedrock-split~=\\"fraction:1/4\\"], [data-bedrock-split~=\\"fraction:1/3\\"], [data-bedrock-split~=\\"fraction:1/2\\"], [data-bedrock-split~=\\"fraction:auto-start\\"])
-    > *:nth-child(even) {
-    --largestWidth: calc(100% - var(--gutter, 0px));
-    flex-basis: calc(
-      (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
-    );
-    min-inline-size: max(
-      min(var(--minItemWidth, 0), 100%),
-      calc(50% - var(--gutter))
-    );
-    flex-grow: 999;
-  }
-
-  :is([data-bedrock-split~=\\"fraction:3/4\\"], [data-bedrock-split~=\\"fraction:2/3\\"], [data-bedrock-split~=\\"fraction:auto-end\\"])
-    > *:nth-child(odd) {
-    --largestWidth: calc(100% - var(--gutter, 0px));
-    flex-basis: calc(
-      (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
-    );
-    min-inline-size: max(
-      min(var(--minItemWidth, 0), 100%),
-      calc(50% - var(--gutter))
-    );
-    flex-grow: 999;
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "fraction": [Function],
-      "gutter": [Function],
-      "switchAt": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-hBxehG",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
   "Stack": {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": [
-      [Function],
-    ],
-    "componentStyle": e {
-      "baseHash": 1665723835,
-      "baseStyle": undefined,
-      "componentId": "sc-hLBbgP",
-      "isStatic": false,
-      "rules": [
-        "
-  @property --gutter {
-    syntax: \\"<length-percentage>\\";
-    inherits: false;
-    initial-value: 0px;
-  }
-  box-sizing: border-box;
-  > * {
-    margin: 0;
-  }
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter, 0);
-
-  & > [data-bedrock-column] {
-    grid-column: span 1 / auto;
-  }
-",
-      ],
-      "staticRulesId": "",
-    },
-    "foldedComponentIds": [],
-    "propTypes": {
-      "gutter": [Function],
-    },
     "render": [Function],
-    "shouldForwardProp": undefined,
-    "styledComponentId": "sc-hLBbgP",
-    "target": "div",
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
-    "withComponent": [Function],
   },
-  "breakPoints": {
-    "large": 1199,
-    "largeOnly": [
-      1024,
-      1199,
-    ],
-    "medium": 1023,
-    "mediumOnly": [
-      640,
-      1023,
-    ],
-    "smallOnly": 639,
-    "xlarge": 1439,
-    "xlargeOnly": [
-      1200,
-      1439,
-    ],
-    "xxlarge": 1920,
+  "ThemeContext": {
+    "$$typeof": Symbol(react.context),
+    "Consumer": {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": [Circular],
+    },
+    "Provider": {
+      "$$typeof": Symbol(react.provider),
+      "_context": [Circular],
+    },
+    "_calculateChangedBits": null,
+    "_currentRenderer": null,
+    "_currentRenderer2": null,
+    "_currentValue": {},
+    "_currentValue2": {},
+    "_threadCount": 0,
   },
+  "ThemeProvider": [Function],
   "checkIsCSSLength": [Function],
   "getSafeGutter": [Function],
   "getSizeValue": [Function],
   "getSpacingValue": [Function],
   "init": [Function],
-  "mergeBreakpoints": [Function],
   "registerCallback": [Function],
-  "reset": [
-    "
-  /*
-  reset.css
-*/
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  * {
-    margin: 0;
-  }
-
-  ul[class],
-  ol[class] {
-    padding: 0;
-    list-style: none;
-  }
-
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    min-block-size: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    font-size: 100%;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
-
-  img,
-  picture {
-    display: block;
-    max-inline-size: 100%;
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  li,
-  figcaption {
-    max-inline-size: 60ch;
-    overflow-wrap: break-word;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-    max-inline-size: 100%;
-  }
-
-  .js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-      scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-",
-  ],
   "sizes": {
-    "large": "1199px",
-    "medium": "1023px",
-    "small": "639px",
-    "xlarge": "1439px",
-    "xsmall": "319px",
-    "xxlarge": "1920px",
-    "xxsmall": "159px",
+    "sizeContent1": "20ch",
+    "sizeContent2": "45ch",
+    "sizeContent3": "60ch",
+    "sizeHeader1": "20ch",
+    "sizeHeader2": "25ch",
+    "sizeHeader3": "35ch",
+    "sizeLg": "1024px",
+    "sizeMd": "768px",
+    "sizeSm": "480px",
+    "sizeXl": "1440px",
+    "sizeXs": "360px",
+    "sizeXxl": "1920px",
+    "sizeXxs": "240px",
   },
   "spacing": {
-    "lg": "1rem",
-    "lgXl": "1.5rem",
-    "md": "0.5rem",
-    "mdLg": "0.75rem",
-    "none": "0px",
-    "sm": "0.25rem",
-    "xl": "2rem",
-    "xlXXl": "3rem",
-    "xs": "0.125rem",
-    "xxl": "4rem",
-    "xxs": "0.0625rem",
+    "size00": "-.25rem",
+    "size000": "-.5rem",
+    "size1": ".25rem",
+    "size10": "5rem",
+    "size11": "7.5rem",
+    "size12": "10rem",
+    "size13": "15rem",
+    "size14": "20rem",
+    "size15": "30rem",
+    "size2": ".5rem",
+    "size3": "1rem",
+    "size4": "1.25rem",
+    "size5": "1.5rem",
+    "size6": "1.75rem",
+    "size7": "2rem",
+    "size8": "3rem",
+    "size9": "4rem",
   },
   "useContainerQuery": [Function],
   "useForwardedRef": [Function],
   "useResizeObserver": [Function],
   "useStatefulRef": [Function],
-  "validateGutter": [Function],
+  "useTheme": [Function],
 }
 `;

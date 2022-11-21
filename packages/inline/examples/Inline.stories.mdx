@@ -33,11 +33,11 @@ yarn add @bedrock-layout/inline
 
 The `Inline` component has all the same props as the `InlineCluster` component. (check the [InlineCluster component for more details](/?path=/docs/components-inlinecluster--api))
 
-Below is an example of the `Inline` component with the `gutter` prop set to `xl` and both `justify` and `align` props set to `center`.
+Below is an example of the `Inline` component with the `gutter` prop set to `size7` and both `justify` and `align` props set to `center`.
 
 <Canvas withSource="open">
   <Story name="InlineCluster Props">
-    <Inline gutter="xl" justify="center" align="center">
+    <Inline gutter="size7" justify="center" align="center">
       <Component style={{ height: 200 }} />
       <Component />
       <Component />
@@ -53,28 +53,28 @@ The `stretch` prop can be used to specify a child component that will stretch to
 <Canvas withSource="open">
   <Story name="stretch">
     <h3>start</h3>
-    <Inline gutter="lg" stretch="start">
+    <Inline gutter="size3" stretch="start">
       <Component />
       <Component />
       <Component />
       <Component />
     </Inline>
     <h3>end</h3>
-    <Inline gutter="lg" stretch="end">
+    <Inline gutter="size3" stretch="end">
       <Component />
       <Component />
       <Component />
       <Component />
     </Inline>
     <h3>all</h3>
-    <Inline gutter="lg" stretch="all">
+    <Inline gutter="size3" stretch="all">
       <Component />
       <Component />
       <Component />
       <Component />
     </Inline>
     <h3>2 index</h3>
-    <Inline gutter="lg" stretch={2}>
+    <Inline gutter="size3" stretch={2}>
       <Component />
       <Component />
       <Component />
@@ -93,7 +93,7 @@ In the below example, each of the Componentes has an intrinsic width of 50px. Th
 
 <Canvas withSource="open">
   <Story name="minItemWidth">
-    <Inline gutter="lg" minItemWidth={150}>
+    <Inline gutter="size3" minItemWidth={150}>
       <Component style={{}} />
       <Component />
       <Component />
@@ -108,7 +108,7 @@ In the below example, the layout will switch to stack when its width becomes les
 
 <Canvas withSource="open">
   <Story name="switchAt">
-    <Inline gutter="lg" switchAt="45rem" minItemWidth={100}>
+    <Inline gutter="size3" switchAt="45rem" minItemWidth={100}>
       <Component />
       <Component />
       <Component />
@@ -138,7 +138,7 @@ export const Template = (args) =>  (
   <Story
     name="Playground"
     args={{
-      gutter: "lg",
+      gutter: "size3",
       justify: "start",
       align: "start",
       stretch: "end",

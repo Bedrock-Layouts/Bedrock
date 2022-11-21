@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/addon-docs/';
-import { Center } from '@bedrock-layout/center'
-import { Inline } from '@bedrock-layout/inline'
-import { Button } from '../ui-components/Button'
-import menuStart from '../assets/menu-start.png'
-import menuMobile from '../assets/menu-mobile.png'
-import menuInline from '../assets/menu-just-inline.png'
+import { Meta } from "@storybook/addon-docs/";
+import { Center } from "../../packages/center/src";
+import { Inline } from "../../packages/inline/src";
+import { Button } from "../ui-components/Button";
+import menuStart from "../assets/menu-start.png";
+import menuMobile from "../assets/menu-mobile.png";
+import menuInline from "../assets/menu-just-inline.png";
 
 <Meta
   title="Getting Started/Lesson 4: The Menu Component"
@@ -41,7 +41,6 @@ export function Menu() {
     </div>
   );
 }
-
 ```
 
 We can now import our Menu component into our `App.js` file:
@@ -54,7 +53,7 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter="md">
+    <Stack gutter='size3'>
       <Menu />
       <Subscribe />
     </Stack>
@@ -89,15 +88,15 @@ import { Inline } from "@bedrock-layout/inline";
 
 export function Menu() {
   return (
-    <Inline stretch={1} gutter="lg">
+    <Inline stretch={1} gutter='size3'>
       <p>CLB</p>
-      <Inline gutter="md" justify="center">
+      <Inline gutter='size3' justify="center">
         <a href="/#">Product</a>
         <a href="/#">Features</a>
         <a href="/#">Marketplace</a>
         <a href="/#">Company</a>
       </Inline>
-      <Inline gutter="md">
+      <Inline gutter='size3'>
         <a href="/#">Search</a>
         <a href="/#">Cart</a>
       </Inline>
@@ -132,15 +131,15 @@ import { InlineCluster } from "@bedrock-layout/inline-cluster";
 
 export function Menu() {
   return (
-    <Inline stretch={1} gutter="lg" switchAt="40rem">
+    <Inline stretch={1} gutter='size3' switchAt="40rem">
       <p>CLB</p>
-      <InlineCluster gutter="md" justify="center">
+      <InlineCluster gutter='size3' justify="center">
         <a href="/#">Product</a>
         <a href="/#">Features</a>
         <a href="/#">Marketplace</a>
         <a href="/#">Company</a>
       </InlineCluster>
-      <Inline gutter="md" justify="end">
+      <Inline gutter='size3' justify="end">
         <a href="/#">Search</a>
         <a href="/#">Cart</a>
       </Inline>
@@ -161,7 +160,7 @@ Now if we resize to a small mobile screen size, it will look something like this
 
 In the next section we will start to fill out our landing page by adding a Hero section using the `Cover` component. I'll see you there.
 
-<Inline switchAt="25rem" stretch={1} gutter="md" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-3-spacing--page">
     Spacing
   </Button>

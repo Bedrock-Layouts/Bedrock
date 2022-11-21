@@ -8,7 +8,7 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
 ## When to Use
 
-`Inline` can be used to create inline layouts where there is a consistent space around its child elements. Unlike the `InlineCluster`  component, the child elements inside `Inline` components will not wrap. With `Inline` component, you can also specify a child element that can stretch to fill excess spaces.
+`Inline` can be used to create inline layouts where there is a consistent space around its child elements. Unlike the `InlineCluster` component, the child elements inside `Inline` components will not wrap. With `Inline` component, you can also specify a child element that can stretch to fill excess spaces.
 
 ---
 
@@ -27,7 +27,7 @@ or
 ```javascript
 import { Inline } from '@bedrock-layout/inline';
 
-<Inline stretch={1} gutter='lg' justify='start' align='start'>
+<Inline stretch={1} gutter='size3' justify='start' align='start'>
   <span>Lorem ipsum dolor</span>
   <span>sit amet consectetur</span>
   <span>adipisicing elit.</span>
@@ -46,12 +46,12 @@ For styliing purposes, you can select `data-bedrock-inline`.
 
 \* required
 
-| Property | Description                                                            | Type                                          | Default |
+| Property |                              Description                               |                     Type                      | Default |
 | :------: | :--------------------------------------------------------------------: | :-------------------------------------------: | :-----: |
-| gutter\* | Space inbetween each child element                                     | One of `Spacing`\*\*                          | -       |
-| stretch  | Child or children that will stretch to fill available space            | One of: `all, start, end, index of the child` | -       |
-| justify  | Inline justification of the children                                   | One of: `start, end, center`                  | `start` |
-| align    | Block alignment of the children                                        | One of: `start, end, center`                  | `start` |
-| switchAt | The width threshold at which the container will switch to stack layout | One of: `CSS length, number`                  | -       |
+| gutter\* |                   Space inbetween each child element                   |             One of `Spacing`\*\*              |    -    |
+| stretch  |      Child or children that will stretch to fill available space       | One of: `all, start, end, index of the child` |    -    |
+| justify  |                  Inline justification of the children                  |         One of: `start, end, center`          | `start` |
+|  align   |                    Block alignment of the children                     |         One of: `start, end, center`          | `start` |
+| switchAt | The width threshold at which the container will switch to stack layout |         One of: `CSS length, number`          |    -    |
 
-\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `styled-components`
+\*\* By default, `Spacing` is one of the [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`

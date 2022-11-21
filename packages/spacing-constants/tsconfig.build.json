@@ -3,6 +3,7 @@
   "include": ["src", "types", "../../types"],
   "compilerOptions": {
     "outDir": "./lib",
-    "declaration": true
+    "declaration": true,
+    "types": ["vitest/globals"]
   }
 }
