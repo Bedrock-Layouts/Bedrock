@@ -2,57 +2,50 @@ import { Center } from "@bedrock-layout/center";
 import {
   CSSLength,
   SizesOptions,
-  checkIsCSSLength,
   getSizeValue,
   sizes,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import React from "react";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { ElementType, forwardRef } from "react";
 
 type BoundarySize = number | CSSLength | SizesOptions;
-export interface AppBoundaryProps {
+interface AppBoundaryPropsBase {
   boundarySize?: BoundarySize;
 }
 
-export const AppBoundary = styled.div.attrs<AppBoundaryProps>(
-  ({ theme, boundarySize, children }) => {
+export type AppBoundaryProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, AppBoundaryPropsBase>;
+
+export const AppBoundary = forwardRef(
+  <C extends ElementType = "div">(
+    { as, boundarySize, children, style, ...props }: AppBoundaryProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const maybeSize = getSizeValue(theme, boundarySize);
-    return {
-      "data-bedrock-appboundary": "",
-      children: (
+    const safeStyle = style ?? {};
+    const Component = as ?? "div";
+    return (
+      <Component
+        data-bedrock-appboundary
+        ref={ref}
+        {...props}
+        style={{
+          padding: 0,
+          maxInlineSize: "100%",
+          overflow: "hidden",
+          height: "100%",
+          ...safeStyle,
+        }}
+      >
         <Center maxWidth={maybeSize ?? sizes.sizeXxl}>{children}</Center>
-      ),
-    };
-  }
-)<AppBoundaryProps>`
-  padding: 0;
-  max-inline-size: 100%;
-  overflow: hidden;
-  height: 100%;
-`;
-
-AppBoundary.displayName = "AppBoundary";
-
-function validateIsboundarySize(
-  { boundarySize }: AppBoundaryProps,
-  propName: string
-) {
-  if (boundarySize === undefined) return undefined;
-
-  const isValid =
-    typeof boundarySize === "number" ||
-    checkIsCSSLength(boundarySize as string) ||
-    Object.keys(sizes).includes(boundarySize as string);
-
-  if (!isValid) {
-    console.error(
-      `${propName} needs to be an number, CSSLength or SizesOptions`
+      </Component>
     );
   }
-  return undefined;
-}
+);
 
-AppBoundary.propTypes = {
-  boundarySize:
-    validateIsboundarySize as unknown as React.Validator<BoundarySize>,
-};
+AppBoundary.displayName = "AppBoundary";
