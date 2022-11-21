@@ -23,7 +23,7 @@ export const parameters = {
         "Spacer Components",
         "Wrapper Components",
         "Primitives",
-        "CSS Only",
+        "Bedrock Layout CSS",
         ["A CSS Only Version", "reset.css", "spacing-properties.css"],
         "Hooks",
       ],
