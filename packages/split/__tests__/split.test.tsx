@@ -1,8 +1,8 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
-import styled, { ThemeProvider } from "styled-components";
+import { describe, expect, it, test } from "vitest";
 
 import { Split } from "../src";
 
@@ -95,6 +95,8 @@ describe("Split", () => {
 
     it("should render a stack if container is below switchAt", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt + 1;
       });
@@ -106,7 +108,8 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockRestore();
     });
 
@@ -120,19 +123,10 @@ describe("Split", () => {
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
-    it("should render as a main when wrapped in styled", () => {
-      const WrappedSplit = styled(Split)``;
-      const split = create(
-        <WrappedSplit gutter="size3" as="main">
-          <Lorem />
-        </WrappedSplit>
-      );
-
-      expect(split.toJSON()).toMatchSnapshot();
-    });
-
     it("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
       });
@@ -144,12 +138,15 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockRestore();
     });
 
     it("should render a split if container is above switchAt using a css string", () => {
       const widthToSwitchAt = 600;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
       });
@@ -161,20 +158,13 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       useContainerQuery.mockRestore();
     });
   });
 
   describe("incorrect usage", () => {
-    beforeEach(() => {
-      vi.spyOn(console, "error");
-      console.error.mockImplementation(() => undefined);
-    });
-    afterEach(() => {
-      console.error.mockReset();
-    });
-
     it("renders default with wrong gutter input", async () => {
       const errorStack = create(
         <Split gutter={{ value: "incorrect" }}>
@@ -196,15 +186,12 @@ describe("Split", () => {
     });
 
     it("renders default with console error with fraction input", () => {
-      expect(console.error).not.toBeCalled();
-
       const errorStack = create(
         <Split fraction="incorrect">
           <Lorem />
         </Split>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

@@ -35,7 +35,6 @@ export const ColumnDrop = forwardRef(
     {
       as,
       gutter,
-
       style,
       minItemWidth,
       noStretchedColumns = false,

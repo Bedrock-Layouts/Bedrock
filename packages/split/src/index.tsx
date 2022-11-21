@@ -4,9 +4,13 @@ import {
   SizesOptions,
   getSafeGutter,
   getSizeValue,
+  useTheme,
 } from "@bedrock-layout/spacing-constants";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@bedrock-layout/type-utils";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 type FractionTypes =
   | "auto-start"
@@ -32,15 +36,30 @@ const fractions: Fractions = {
 };
 
 type MinItemWidth = number | CSSLength | SizesOptions;
-export interface SplitProps {
+interface SplitPropsBase {
   gutter?: Gutter;
   fraction?: FractionTypes;
   switchAt?: number | CSSLength | SizesOptions;
   minItemWidth?: MinItemWidth;
 }
 
-export const Split = styled.div.attrs<SplitProps>(
-  ({ fraction, theme, gutter, minItemWidth, switchAt, style }) => {
+export type SplitProps<C extends ElementType = "div"> =
+  PolymorphicComponentPropsWithRef<C, SplitPropsBase>;
+
+export const Split = forwardRef(
+  <C extends ElementType = "div">(
+    {
+      as,
+      fraction,
+      gutter,
+      minItemWidth,
+      switchAt,
+      style,
+      ...props
+    }: SplitProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const theme = useTheme();
     const attrString =
       fraction && fractions[fraction] ? `fraction:${fraction}` : "";
 
@@ -49,112 +68,32 @@ export const Split = styled.div.attrs<SplitProps>(
     const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
 
     const safeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
+    const safeStyle = style ?? {};
 
-    return {
-      "data-bedrock-split": attrString,
-      style: {
-        ...style,
-        "--gutter": maybeGutter,
-        "--minItemWidth":
-          typeof safeMinItemWidth === "number"
-            ? `${safeMinItemWidth}px`
-            : safeMinItemWidth,
-        "--switchAt":
-          typeof safeSwitchAt === "number" ? `${safeSwitchAt}px` : safeSwitchAt,
-      },
-      gutter: undefined,
-    };
-  }
-)<SplitProps>`
-  @property --gutter {
-    syntax: "<length-percentage>";
-    inherits: false;
-    initial-value: 0;
-  }
+    const Component = as ?? "div";
 
-  @property --switchAt {
-    syntax: "<length-percentage>";
-    inherits: true;
-    initial-value: 0;
-  }
-
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, 0);
-
-  > * {
-    box-sizing: border-box;
-    margin: 0;
-    flex-grow: 1;
-    max-inline-size: unset;
-  }
-
-  &[data-bedrock-split~="fraction:1/4"] > *:nth-child(odd) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
-  }
-
-  &[data-bedrock-split~="fraction:1/3"] > *:nth-child(odd) {
-    flex-basis: max(
-      var(--minItemWidth, 0px),
-      calc(33.333% - var(--gutter) / 3)
+    return (
+      <Component
+        ref={ref}
+        data-bedrock-split={attrString}
+        style={
+          {
+            ...safeStyle,
+            "--gutter": maybeGutter,
+            "--minItemWidth":
+              typeof safeMinItemWidth === "number"
+                ? `${safeMinItemWidth}px`
+                : safeMinItemWidth,
+            "--switchAt":
+              typeof safeSwitchAt === "number"
+                ? `${safeSwitchAt}px`
+                : safeSwitchAt,
+          } as CSSProperties
+        }
+        {...props}
+      />
     );
   }
-
-  &[data-bedrock-split~="fraction:1/2"] > *:nth-child(odd) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(50% - var(--gutter) / 2));
-  }
-
-  &[data-bedrock-split~="fraction:2/3"] > *:nth-child(even) {
-    flex-basis: max(
-      var(--minItemWidth, 0px),
-      calc(33.333% - var(--gutter) / 3)
-    );
-  }
-
-  &[data-bedrock-split~="fraction:3/4"] > *:nth-child(even) {
-    flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
-  }
-
-  &[data-bedrock-split~="fraction:auto-start"] > *:nth-child(odd) {
-    flex-basis: var(--minItemWidth, 0);
-  }
-
-  &[data-bedrock-split~="fraction:auto-end"] > *:nth-child(even) {
-    flex-basis: var(--minItemWidth, 0);
-  }
-
-  :is([data-bedrock-split~="fraction:1/4"], [data-bedrock-split~="fraction:1/3"], [data-bedrock-split~="fraction:1/2"], [data-bedrock-split~="fraction:auto-start"])
-    > *:nth-child(even) {
-    --largestWidth: calc(100% - var(--gutter, 0px));
-    flex-basis: calc(
-      (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
-    );
-    min-inline-size: max(
-      min(var(--minItemWidth, 0), 100%),
-      calc(50% - var(--gutter))
-    );
-    flex-grow: 999;
-  }
-
-  :is([data-bedrock-split~="fraction:3/4"], [data-bedrock-split~="fraction:2/3"], [data-bedrock-split~="fraction:auto-end"])
-    > *:nth-child(odd) {
-    --largestWidth: calc(100% - var(--gutter, 0px));
-    flex-basis: calc(
-      (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
-    );
-    min-inline-size: max(
-      min(var(--minItemWidth, 0), 100%),
-      calc(50% - var(--gutter))
-    );
-    flex-grow: 999;
-  }
-`;
+);
 
 Split.displayName = "Split";
-
-Split.propTypes = {
-  fraction: PropTypes.oneOf<FractionTypes>(
-    Object.keys(fractions) as FractionTypes[]
-  ),
-};
