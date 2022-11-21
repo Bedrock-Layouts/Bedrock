@@ -17,7 +17,6 @@ module.exports = defineConfig({
     rollupOptions: {
       external: [
         "react",
-        "styled-components",
         "@bedrock-layout/spacing-constants",
         "@bedrock-layout/stack",
         "@bedrock-layout/type-utils",

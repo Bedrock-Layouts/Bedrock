@@ -51,11 +51,11 @@ export const Center = forwardRef(
         ref={ref}
         style={
           {
-            ...safeStyle,
             "--maxWidth":
               typeof maxWidth === "number" && maxWidth > 0
                 ? `${maxWidth}px`
                 : getSizeValue(theme, maxWidth) ?? maxWidth,
+            ...safeStyle,
           } as CSSProperties
         }
         {...props}

@@ -7,8 +7,7 @@ import {
   PolymorphicComponentPropsWithRef,
   PolymorphicRef,
 } from "@bedrock-layout/type-utils";
-import React, { ElementType, forwardRef } from "react";
-import { CSSProperties } from "styled-components";
+import React, { CSSProperties, ElementType, forwardRef } from "react";
 
 interface InlineClusterPropsBase {
   justify?: "start" | "end" | "center";

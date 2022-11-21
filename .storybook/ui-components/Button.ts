@@ -2,20 +2,13 @@ import styled from "styled-components";
 
 import { PadBox } from "../../packages/padbox/src";
 
-export const Button = styled.button
-  // .withConfig({
-  //   shouldForwardProp: (prop, defaultValidatorFn) => {
-  //     if (prop === "padding") return true;
-  //     return defaultValidatorFn(prop);
-  //   },
-  // })
-  .attrs((props) => {
-    return {
-      padding: props.icon ? "size2" : ["size3", "size7"],
-      forwardedAs: props.as ?? "button",
-      as: PadBox,
-    };
-  })<{
+export const Button = styled.button.attrs((props) => {
+  return {
+    padding: props.icon ? "size2" : ["size3", "size7"],
+    forwardedAs: props.as ?? "button",
+    as: PadBox,
+  };
+})<{
   primary?: boolean;
   icon?: boolean;
 }>`

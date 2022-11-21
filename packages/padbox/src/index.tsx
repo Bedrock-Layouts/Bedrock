@@ -99,7 +99,7 @@ const paddingToStyleProps = (theme: BaseTheme, padding: PaddingTypes) => {
   };
 
   if (!isValidPadding()) {
-    console.error("Invalid padding Type");
+    console.error("Invalid padding Type: ", padding);
   }
 
   return typeof padding === "object" && !Array.isArray(padding)
@@ -133,7 +133,7 @@ export const PadBox = forwardRef(
     const safeStyle = style ?? {};
 
     const Component = as ?? "div";
-    const paddingStyles = paddingToStyleProps(theme, padding ?? 0);
+    const paddingStyles = paddingToStyleProps(theme, padding ?? "size00");
 
     return (
       <Component
