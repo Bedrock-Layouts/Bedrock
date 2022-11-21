@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@4.0.0...@bedrock-layout/masonry-grid@4.0.1) (2022-11-21)
+
+**Note:** Version bump only for package @bedrock-layout/masonry-grid
+
 # [4.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@3.2.3...@bedrock-layout/masonry-grid@4.0.0) (2022-11-21)
 
 ### Bug Fixes

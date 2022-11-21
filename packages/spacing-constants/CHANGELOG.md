@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.0.0...@bedrock-layout/spacing-constants@3.0.1) (2022-11-21)
+
+### Bug Fixes
+
+- **spacing-contants:** fix open-props dependencies ([a116dbe](https://github.com/Bedrock-Layouts/Bedrock/commit/a116dbee22f40ee15b4684b5a5f00efc9fbc8bc0))
+
 # [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.9.0...@bedrock-layout/spacing-constants@3.0.0) (2022-11-21)
 
 ### Documentation

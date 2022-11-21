@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.0.0...@bedrock-layout/css@2.0.1) (2022-11-21)
+
+### Bug Fixes
+
+- **spacing-contants:** fix open-props dependencies ([a116dbe](https://github.com/Bedrock-Layouts/Bedrock/commit/a116dbee22f40ee15b4684b5a5f00efc9fbc8bc0))
+
 # [2.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@1.1.0...@bedrock-layout/css@2.0.0) (2022-11-21)
 
 ### Features

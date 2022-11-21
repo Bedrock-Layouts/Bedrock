@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@3.0.0...@bedrock-layout/inline-cluster@3.0.1) (2022-11-21)
+
+**Note:** Version bump only for package @bedrock-layout/inline-cluster
+
 # [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@2.7.2...@bedrock-layout/inline-cluster@3.0.0) (2022-11-21)
 
 ### Bug Fixes
