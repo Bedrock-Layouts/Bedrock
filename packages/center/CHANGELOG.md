@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@2.7.2...@bedrock-layout/center@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Documentation
+
+- **docs:** update to docs to remove all mention of styled-components ([95e7f10](https://github.com/Bedrock-Layouts/Bedrock/commit/95e7f10043f4bfa4e00e0b131c901b8ac3042ef7))
+
+### Features
+
+- **center:** remove styled-components ([6fa1436](https://github.com/Bedrock-Layouts/Bedrock/commit/6fa14360e886b2c91a963f83799c635ca83a6281))
+
+### BREAKING CHANGES
+
+- **docs:** Styled components is no longer part of the library
+- **center:** remove styled-components dependency in favor of @bedrock-layout/css
+
 ## [2.7.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@2.7.1...@bedrock-layout/center@2.7.2) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/center

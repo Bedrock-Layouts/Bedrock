@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.8.2...@bedrock-layout/split@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Features
+
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+- **split:** remove styled-components ([2f92e24](https://github.com/Bedrock-Layouts/Bedrock/commit/2f92e2440536b016317fb6a7afaa221bb3b45992))
+
+### BREAKING CHANGES
+
+- **split:** Remove styled-components as a dependency
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [2.8.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@2.8.1...@bedrock-layout/split@2.8.2) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/split

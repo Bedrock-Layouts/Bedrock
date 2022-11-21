@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/stack@2.5.3...@bedrock-layout/stack@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Features
+
+- **grid:** move away from styled components ([94ac5be](https://github.com/Bedrock-Layouts/Bedrock/commit/94ac5be75fcca428a30c52a64316c3f8db1721ed))
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+
+### BREAKING CHANGES
+
+- **grid:** Components no longer use styled-components
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [2.5.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/stack@2.5.2...@bedrock-layout/stack@2.5.3) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/stack

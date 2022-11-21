@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/type-utils@0.0.18...@bedrock-layout/type-utils@0.1.0) (2022-11-21)
+
+### Features
+
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+
+### BREAKING CHANGES
+
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [0.0.18](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/type-utils@0.0.17...@bedrock-layout/type-utils@0.0.18) (2022-11-04)
 
 **Note:** Version bump only for package @bedrock-layout/type-utils

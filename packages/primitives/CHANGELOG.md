@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.2.5...@bedrock-layout/primitives@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Features
+
+- **appboundary:** remove styled-components ([e0027c8](https://github.com/Bedrock-Layouts/Bedrock/commit/e0027c84109b9ff3209d7b519ceddd44c3f7eace))
+- **center:** remove styled-components ([6fa1436](https://github.com/Bedrock-Layouts/Bedrock/commit/6fa14360e886b2c91a963f83799c635ca83a6281))
+- **column-drop:** remove styled-components ([f17dcab](https://github.com/Bedrock-Layouts/Bedrock/commit/f17dcab20363557046ce9a6c09b8b815ffa72680))
+- **columns:** move away from styled components ([72e1cad](https://github.com/Bedrock-Layouts/Bedrock/commit/72e1cadcbaefb6638f904ed0848cc243e3fcb04e))
+- **grid:** move away from styled components ([94ac5be](https://github.com/Bedrock-Layouts/Bedrock/commit/94ac5be75fcca428a30c52a64316c3f8db1721ed))
+- **inline-cluster:** remove styled-components dependency ([fa83524](https://github.com/Bedrock-Layouts/Bedrock/commit/fa83524910448f333bf35e5c0ed31c3bcc8dbccc))
+- **inline:** update inline ([49f874f](https://github.com/Bedrock-Layouts/Bedrock/commit/49f874fc2253b44bad6d6cc816fd1e5d7c74a7d4))
+- **padbox:** remove styled-components dependency ([22bc5d8](https://github.com/Bedrock-Layouts/Bedrock/commit/22bc5d8249833a198e0ed46fd4e49ec0d2d009ed))
+- **reel:** remove styled-components dependency ([10788e6](https://github.com/Bedrock-Layouts/Bedrock/commit/10788e6a9e5dc6f013f16790e244ed804fd468a6))
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+- **split:** remove styled-components ([2f92e24](https://github.com/Bedrock-Layouts/Bedrock/commit/2f92e2440536b016317fb6a7afaa221bb3b45992))
+- update and modernize useContainerQuery ([25d5b38](https://github.com/Bedrock-Layouts/Bedrock/commit/25d5b384b2008ede9ac92dd9200302a0e0926b87))
+
+### BREAKING CHANGES
+
+- **appboundary:** Remove styled-components as a dependency
+- **split:** Remove styled-components as a dependency
+- **column-drop:** Remove styled-components dependency
+- **inline:** Bedrock no longer depends on styled-components
+- **inline-cluster:** Remove styled-components in favor of bedrock-layout/css
+- **center:** remove styled-components dependency in favor of @bedrock-layout/css
+- **reel:** Remove styled-components dependency
+- **padbox:** Padbox now depends on @bedrock-layout/css instead of styled-components
+- **columns:** remove dependency on styled components
+- container query now acts as a forwardedref
+- **grid:** Components no longer use styled-components
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [2.2.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@2.2.4...@bedrock-layout/primitives@2.2.5) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/primitives

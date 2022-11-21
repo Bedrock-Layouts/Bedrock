@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.9.0...@bedrock-layout/spacing-constants@3.0.0) (2022-11-21)
+
+### Documentation
+
+- **docs:** update to docs to remove all mention of styled-components ([95e7f10](https://github.com/Bedrock-Layouts/Bedrock/commit/95e7f10043f4bfa4e00e0b131c901b8ac3042ef7))
+
+### Features
+
+- **grid:** move away from styled components ([94ac5be](https://github.com/Bedrock-Layouts/Bedrock/commit/94ac5be75fcca428a30c52a64316c3f8db1721ed))
+- **padbox:** remove styled-components dependency ([22bc5d8](https://github.com/Bedrock-Layouts/Bedrock/commit/22bc5d8249833a198e0ed46fd4e49ec0d2d009ed))
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+
+### BREAKING CHANGES
+
+- **docs:** Styled components is no longer part of the library
+- **padbox:** Padbox now depends on @bedrock-layout/css instead of styled-components
+- **grid:** Components no longer use styled-components
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 # [2.9.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@2.8.4...@bedrock-layout/spacing-constants@2.9.0) (2022-11-11)
 
 ### Features

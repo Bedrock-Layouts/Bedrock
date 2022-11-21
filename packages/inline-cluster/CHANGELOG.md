@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@2.7.2...@bedrock-layout/inline-cluster@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Documentation
+
+- **docs:** update to docs to remove all mention of styled-components ([95e7f10](https://github.com/Bedrock-Layouts/Bedrock/commit/95e7f10043f4bfa4e00e0b131c901b8ac3042ef7))
+
+### Features
+
+- **inline-cluster:** remove styled-components dependency ([fa83524](https://github.com/Bedrock-Layouts/Bedrock/commit/fa83524910448f333bf35e5c0ed31c3bcc8dbccc))
+- **inline:** update inline ([49f874f](https://github.com/Bedrock-Layouts/Bedrock/commit/49f874fc2253b44bad6d6cc816fd1e5d7c74a7d4))
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+
+### BREAKING CHANGES
+
+- **docs:** Styled components is no longer part of the library
+- **inline:** Bedrock no longer depends on styled-components
+- **inline-cluster:** Remove styled-components in favor of bedrock-layout/css
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [2.7.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline-cluster@2.7.1...@bedrock-layout/inline-cluster@2.7.2) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/inline-cluster

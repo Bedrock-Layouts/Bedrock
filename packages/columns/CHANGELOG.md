@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/columns@2.7.4...@bedrock-layout/columns@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Documentation
+
+- **docs:** update to docs to remove all mention of styled-components ([95e7f10](https://github.com/Bedrock-Layouts/Bedrock/commit/95e7f10043f4bfa4e00e0b131c901b8ac3042ef7))
+
+### Features
+
+- **columns:** move away from styled components ([72e1cad](https://github.com/Bedrock-Layouts/Bedrock/commit/72e1cadcbaefb6638f904ed0848cc243e3fcb04e))
+- **spacing-constants:** move to new spacing scheme and away from styled-components ([b553a8b](https://github.com/Bedrock-Layouts/Bedrock/commit/b553a8b6b00fdc65538b39170236131f0855c111)), closes [#1541](https://github.com/Bedrock-Layouts/Bedrock/issues/1541)
+- update and modernize useContainerQuery ([25d5b38](https://github.com/Bedrock-Layouts/Bedrock/commit/25d5b384b2008ede9ac92dd9200302a0e0926b87))
+
+### BREAKING CHANGES
+
+- **docs:** Styled components is no longer part of the library
+- **columns:** remove dependency on styled components
+- container query now acts as a forwardedref
+- **spacing-constants:** The spacing values are now based on open-props sizes and it no longer depends on
+  styled-components
+
 ## [2.7.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/columns@2.7.3...@bedrock-layout/columns@2.7.4) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/columns

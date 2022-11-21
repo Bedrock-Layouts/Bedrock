@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.5.2...@bedrock-layout/frame@3.0.0) (2022-11-21)
+
+### Bug Fixes
+
+- remove styled-components references from packages ([5f02f23](https://github.com/Bedrock-Layouts/Bedrock/commit/5f02f236d825ef86f3449997e017b80c78d48485))
+
+### Features
+
+- **frame:** remove dependency on styled-components ([c8aa3f7](https://github.com/Bedrock-Layouts/Bedrock/commit/c8aa3f7c77608227a5315bdcd23fe9b959a41739))
+- **frame:** remove styled components ([97f911b](https://github.com/Bedrock-Layouts/Bedrock/commit/97f911b3486f9c97f00c9bde3eca7599ddc82bfb))
+
+### BREAKING CHANGES
+
+- **frame:** Frame now depends on bedrock-layout/css directly instead of styled-components
+- **frame:** remove styled components dependencies
+
 ## [2.5.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/frame@2.5.1...@bedrock-layout/frame@2.5.2) (2022-11-11)
 
 **Note:** Version bump only for package @bedrock-layout/frame

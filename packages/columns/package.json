@@ -1,6 +1,6 @@
 {
   "name": "@bedrock-layout/columns",
-  "version": "2.7.4",
+  "version": "3.0.0",
   "description": "bedrock-layout columns",
   "sideEffects": false,
   "private": false,
@@ -35,15 +35,15 @@
     "lib"
   ],
   "dependencies": {
-    "@bedrock-layout/spacing-constants": "^2.9.0",
-    "@bedrock-layout/stack": "^2.5.3",
-    "@bedrock-layout/type-utils": "^0.0.18",
-    "@bedrock-layout/use-container-query": "^1.7.1",
-    "@bedrock-layout/use-forwarded-ref": "^1.6.1"
+    "@bedrock-layout/spacing-constants": "^3.0.0",
+    "@bedrock-layout/stack": "^3.0.0",
+    "@bedrock-layout/type-utils": "^0.1.0",
+    "@bedrock-layout/use-container-query": "^2.0.0",
+    "@bedrock-layout/use-forwarded-ref": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8 || ^17 || ^18",
-    "@bedrock-layout/css": "^1.1.0"
+    "@bedrock-layout/css": "^1.1.0",
+    "react": "^16.8 || ^17 || ^18"
   },
   "repository": {
     "type": "git",
