@@ -15,3 +15,9 @@ export const Heading = styled.div.attrs(() => ({
   letter-spacing: 0.5ch;
   color: white;
 `;
+
+export const SubHeading = styled.span`
+  font-size: var(--font-size-fluid-2);
+  line-height: var(--font-lineheight-2);
+  letter-spacing: 0.5ch;
+`;
