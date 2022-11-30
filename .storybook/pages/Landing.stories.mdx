@@ -17,10 +17,12 @@ import justLogo from "../assets/Logo only.svg";
 import fullLogo from "../assets/Full logo.png";
 import { LogoOnly } from "../ui-components/LogoOnly";
 import { SwitchToDocs } from "../ui-components/SwitchToDocs";
-import { Intl } from "../ui-components/Intl";
+import { Intl, NameSpace } from "../ui-components/Intl";
 import { LocaleFab } from "../ui-components/LocaleFab";
 
 <LocaleFab />
+
+<NameSpace ns="landing" />
 
 <Meta
   title="Overview/Bedrock Layout Primitives"
@@ -49,9 +51,9 @@ import { LocaleFab } from "../ui-components/LocaleFab";
         centerText
         style={{ fontSize: "var(--font-size-fluid-1)", color:"white" }}
       >
-        <strong><Intl>Landing.subtitle</Intl></strong>
+        <strong><Intl>landing:subtitle</Intl></strong>
         <p>
-         <Intl>Landing.description</Intl>
+         <Intl>landing:description</Intl>
         </p>
       </Center>
       <Center centerChildren as='a' href='https://github.com/Bedrock-Layouts/Bedrock/stargazers'>
@@ -59,7 +61,7 @@ import { LocaleFab } from "../ui-components/LocaleFab";
       </Center>
       <Inline gutter="size3" justify="center" switchAt='20rem' minItemWidth="fit-content">
         <Button primary as="a" href="/?path=/docs/getting-started-introduction--page">
-          <Intl>Get Started</Intl>
+          <Intl>landing:getStarted</Intl>
         </Button>
         <Button as="a" href="https://github.com/Bedrock-Layouts/Bedrock" target="__blank" rel="noreferer noopener">
           GitHub
@@ -72,7 +74,7 @@ import { LocaleFab } from "../ui-components/LocaleFab";
 
 <PadBox padding='size7' >
 
-## <Intl>Landing.composableLayout</Intl>
+## <Intl>landing:composableLayout.title</Intl>
 
 <Split fraction='1/3' gutter='size9' switchAt="42rem" >
 <Reel style={{flexDirection:'column'}}>
@@ -106,20 +108,20 @@ export function Hero() {
 <section>
 
 <p>
-  <Intl>Landing.composableLayout.description1</Intl>
+  <Intl>landing:composableLayout.description1</Intl>
 </p>
 
 <p>
-  <Intl>Landing.composableLayout.description2</Intl>
+  <Intl>landing:composableLayout.description2</Intl>
   <a href="/docs/examples-web-dev--12-span-grid#layout-patterns">
-    <Intl>Landing.composableLayout.exampleLink</Intl>
+    <Intl>landing:composableLayout.exampleLink</Intl>
   </a>
 </p>
 
 <p>
-  <Intl>Landing.composableLayout.description3</Intl>
+  <Intl>landing:composableLayout.description3</Intl>
   <a href="/docs/getting-started-introduction--page">
-    <Intl>Landing.composableLayout.gettingStartedLink</Intl>
+    <Intl>landing:composableLayout.gettingStartedLink</Intl>
   </a>
 </p>
 
@@ -129,19 +131,19 @@ export function Hero() {
 
 <PadBox padding='size7' style={{background:'var(--cyan-9)', borderRadius:'var(--radius-blob-1)'}}>
 
-## <Intl>Landing.missingComponents</Intl>
+## <Intl>landing:missingComponents.title</Intl>
 
 <Split gutter='size7' switchAt="40rem">
   <section>
 
 <p>
-  <Intl>Landing.missingComponents.description1</Intl>
+  <Intl>landing:missingComponents.description1</Intl>
 </p>
 
 <p>
-  <Intl>Landing.missingComponents.description2</Intl>
+  <Intl>landing:missingComponents.description2</Intl>
   <a href="/docs/getting-started-spacing--page">
-    <Intl>Landing.missingComponents.integrationLink</Intl>
+    <Intl>landing:missingComponents.integrationLink</Intl>
   </a>
 </p>
 
@@ -170,7 +172,7 @@ export function Hero() {
 
 <PadBox padding='size7' >
 
-## <Intl>Landing.notJustReact</Intl>
+## <Intl>landing:notJustReact.title</Intl>
 
 <Split fraction='1/2' gutter='size7' switchAt="43rem">
 <Reel style={{flexDirection:'column'}}>
@@ -202,16 +204,16 @@ export function Hero() {
   <section>
 
 <p>
-  <Intl>Landing.notJustReact.description1</Intl>
+  <Intl>landing:notJustReact.description1</Intl>
   <a href="/docs/css-only-a-css-only-version--page">
-    <Intl>Landing.notJustReact.cssOnlyLink</Intl>
+    <Intl>landing:notJustReact.cssOnlyLink</Intl>
   </a>
 </p>
 
 <p>
-  <Intl>Landing.notJustReact.description2</Intl>
+  <Intl>landing:notJustReact.description2</Intl>
   <a href="https://solid.bedrock-layout.dev" target="_blank">
-    <Intl>Landing.notJustReact.solidLink</Intl>
+    <Intl>landing:notJustReact.solidLink</Intl>
   </a>
 </p>
 
@@ -221,20 +223,20 @@ export function Hero() {
 
 <PadBox as={Center} maxWidth='90vw' padding='size9' style={{background:'var(--cyan-9)', borderRadius:'var(--radius-blob-4)'}}>
 
-## <Intl>Landing.gettingStarted</Intl>
+## <Intl>landing:gettingStarted.title</Intl>
 
 <p>
-  <Intl>Landing.gettingStarted.description1</Intl>
+  <Intl>landing:gettingStarted.description1</Intl>
   <a href="/docs/getting-started-introduction--page">
-    <Intl>Landing.gettingStarted.gettingStartedLink</Intl>
+    <Intl>landing:gettingStarted.gettingStartedLink</Intl>
   </a>
-  <Intl>Landing.gettingStarted.description2</Intl>
+  <Intl>landing:gettingStarted.description2</Intl>
 </p>
 
 <p>
-  <Intl>Landing.gettingStarted.description3</Intl>
+  <Intl>landing:gettingStarted.description3</Intl>
   <a href="/docs/spacer-components-stack--api">
-    <Intl>Landing.gettingStarted.apiLink</Intl>
+    <Intl>landing:gettingStarted.apiLink</Intl>
   </a>
 </p>
 
@@ -242,12 +244,12 @@ export function Hero() {
 
 <PadBox as={Center} maxWidth='90vw' padding='size9'>
 
-## <Intl>Landing.contribute</Intl>
+## <Intl>landing:contribute.title</Intl>
 
 <p>
-  <Intl>Landing.contribute.description1</Intl>
+  <Intl>landing:contribute.description1</Intl>
   <a href="/docs/overview-contributing--page">
-    <Intl>Landing.contribute.getInvolved</Intl>
+    <Intl>landing:contribute.getInvolved</Intl>
   </a>
 </p>
 
@@ -256,7 +258,7 @@ export function Hero() {
 </a>
 
 <p>
-  <Intl>Landing.contribute.description2</Intl>
+  <Intl>landing:contribute.description2</Intl>
 </p>
 
 <InlineCluster gutter="size3">
@@ -292,15 +294,15 @@ export function Hero() {
   </a>
 </InlineCluster>
 
-## <Intl>Landing.sponsors</Intl>
+## <Intl>landing:sponsors.title</Intl>
 
 <p>
-  <Intl>Landing.sponsors.description1</Intl>
+  <Intl>landing:sponsors.description1</Intl>
 </p>
 
   <a href="https://github.com/sponsors/Bedrock-Layouts?o=sd&sc=t ">
     <Button>
-      <Intl>Landing.sponsors.sponsorLink</Intl>
+      <Intl>landing:sponsors.sponsorLink</Intl>
     </Button>
   </a>
 </PadBox>
