@@ -11,3 +11,9 @@ export const Intl = ({
   const { t } = useTranslation();
   return <>{t(children, options)}</>;
 };
+
+export function NameSpace({ ns }: { ns: string }) {
+  const { i18n } = useTranslation();
+  i18n.loadNamespaces(ns);
+  return null;
+}
