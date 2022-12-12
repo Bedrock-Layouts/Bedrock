@@ -18,8 +18,11 @@ export interface CoverProps {
   stretchContent?: boolean;
 }
 
-function getSafeMinHeight<T extends Record<string, unknown>>(
-  theme: T,
+function getSafeMinHeight(
+  theme: {
+    space?: { [key: string]: string };
+    sizes?: { [key: string]: string };
+  },
   minHeight?: MinHeight
 ) {
   return getSizeValue(theme, minHeight);

@@ -6,12 +6,8 @@ import {
   getSafeGutter,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-  forwardRefWithAs,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type PaddingValue = Gutter;
 
@@ -60,12 +56,15 @@ const keyToProperty = (key: string) => {
   return modernMap[key];
 };
 
-const paddingToStyleProps = (theme: BaseTheme, padding: PaddingTypes) => {
+const paddingToStyleProps = (
+  theme: { space?: BaseTheme },
+  padding: PaddingTypes
+) => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
   }
 
-  const validSpacings = new Set(Object.keys(theme.spacing ?? defaultSpacing));
+  const validSpacings = new Set(Object.keys(theme.space ?? defaultSpacing));
 
   const isValidPadding = () => {
     if (typeof padding === "number" || typeof padding === "string") {

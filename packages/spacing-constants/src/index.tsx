@@ -7,8 +7,8 @@ function convertToMaybe<T extends unknown>(value: T): Maybe<T> {
   return value ?? undefined;
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type DefaultTheme = {};
+// eslint-disable-next-line @typescript-eslint/ban-types, @typescript-eslint/no-empty-interface
+export interface DefaultTheme {}
 
 export const ThemeContext = createContext<DefaultTheme>({});
 
@@ -200,7 +200,7 @@ type ThemeOrDefaultSizes<T> = T extends {
 export type SpacingOptions = ThemeOrDefaultSpace<DefaultTheme>;
 export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 
-export function getSpacingValue<T>(
+export function getSpacingValue<T extends DefaultTheme>(
   theme: T & {
     space?: BaseTheme;
   },
@@ -220,7 +220,7 @@ export function getSpacingValue<T>(
 
 export type Gutter = CSSLength | number | SpacingOptions;
 
-export function getSafeGutter<T extends BaseTheme>(
+export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
   gutter?: Gutter
 ): Maybe<CSSLength> {
@@ -232,7 +232,7 @@ export function getSafeGutter<T extends BaseTheme>(
   return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
 
-export function getSizeValue<T>(
+export function getSizeValue<T extends DefaultTheme>(
   theme: T & {
     sizes?: BaseTheme;
   },
