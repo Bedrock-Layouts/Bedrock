@@ -17,8 +17,11 @@ export interface ColumnDropProps {
   noStretchedColumns?: boolean;
 }
 
-function getSafeMinItemWidth<T extends Record<string, unknown>>(
-  theme: T,
+function getSafeMinItemWidth(
+  theme: {
+    space?: { [key: string]: string };
+    sizes?: { [key: string]: string };
+  },
   minItemWidth?: MinItemWidth
 ) {
   return getSizeValue(theme, minItemWidth);
