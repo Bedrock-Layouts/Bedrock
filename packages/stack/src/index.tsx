@@ -6,21 +6,16 @@ import {
 import {
   PolymorphicComponentPropsWithRef,
   PolymorphicRef,
+  forwardRefWithAs,
 } from "@bedrock-layout/type-utils";
-import React, { ElementType, forwardRef } from "react";
+import React from "react";
 
-interface StackPropsBase {
+export interface StackProps {
   gutter?: Gutter;
 }
 
-export type StackProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, StackPropsBase>;
-
-export const Stack = forwardRef(
-  <C extends ElementType = "div">(
-    { as, gutter, style, ...props }: StackProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Stack = forwardRefWithAs<"div", StackProps>(
+  ({ as, gutter, style, ...props }, ref) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeStyle = style ?? {};

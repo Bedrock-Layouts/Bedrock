@@ -4,13 +4,12 @@ import {
   getSafeGutter,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import { PolymorphicRef } from "@bedrock-layout/type-utils";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
 import React, {
   CSSProperties,
   Children,
   ComponentPropsWithoutRef,
-  ElementType,
   cloneElement,
   forwardRef,
   useState,
@@ -75,11 +74,10 @@ const Resizer = ({
   );
 };
 
-export const MasonryGrid = forwardRef(
-  <C extends ElementType>(
-    { children, style, ...props }: GridProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export type MasonryGridProps = GridProps;
+
+export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
+  ({ children, style, ...props }, ref) => {
     const safeStyle = style ?? {};
     return (
       <Grid

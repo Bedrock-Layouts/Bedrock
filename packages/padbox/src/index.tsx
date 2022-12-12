@@ -9,6 +9,7 @@ import {
 import {
   PolymorphicComponentPropsWithRef,
   PolymorphicRef,
+  forwardRefWithAs,
 } from "@bedrock-layout/type-utils";
 import React, { CSSProperties, ElementType, forwardRef } from "react";
 
@@ -117,18 +118,12 @@ const paddingToStyleProps = (theme: BaseTheme, padding: PaddingTypes) => {
       };
 };
 
-interface PadBoxPropsBase {
+export interface PadBoxProps {
   padding?: PaddingTypes;
 }
 
-export type PadBoxProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, PadBoxPropsBase>;
-
-export const PadBox = forwardRef(
-  <C extends ElementType = "div">(
-    { as, style, padding, ...props }: PadBoxProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const PadBox = forwardRefWithAs<"div", PadBoxProps>(
+  ({ as, style, padding, ...props }, ref) => {
     const theme = useTheme();
     const safeStyle = style ?? {};
 

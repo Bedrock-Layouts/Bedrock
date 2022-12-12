@@ -4,35 +4,19 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type MaxWidth = number | CSSLength | SizesOptions;
 
-interface CenterPropsBase {
+export interface CenterProps {
   maxWidth?: MaxWidth;
   centerText?: boolean;
   centerChildren?: boolean;
 }
 
-export type CenterProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, CenterPropsBase>;
-
-export const Center = forwardRef(
-  <C extends ElementType = "div">(
-    {
-      as,
-      centerChildren,
-      centerText,
-      maxWidth,
-      style,
-      ...props
-    }: CenterProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Center = forwardRefWithAs<"div", CenterProps>(
+  ({ as, centerChildren, centerText, maxWidth, style, ...props }, ref) => {
     const theme = useTheme();
     const centerProps = [
       centerText && "center-text",

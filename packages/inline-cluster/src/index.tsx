@@ -3,26 +3,17 @@ import {
   getSafeGutter,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
-interface InlineClusterPropsBase {
+export interface InlineClusterProps {
   justify?: "start" | "end" | "center";
   align?: "start" | "end" | "center" | "stretch";
   gutter?: Gutter;
 }
 
-export type InlineClusterProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, InlineClusterPropsBase>;
-
-export const InlineCluster = forwardRef(
-  <C extends ElementType = "div">(
-    { as, justify, align, style, gutter, ...props }: InlineClusterProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
+  ({ as, justify, align, style, gutter, ...props }, ref) => {
     const theme = useTheme();
     const justifyValue = justify ? `justify:${justify}` : undefined;
     const alignValue = align ? `align:${align}` : undefined;

@@ -7,17 +7,14 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type MinItemWidth = number | CSSLength | SizesOptions;
 type Stretch = "all" | "start" | "end" | number;
 type SwitchAt = CSSLength | number;
 
-export interface InlinePropsBase {
+export interface InlineProps {
   stretch?: Stretch;
   switchAt?: SwitchAt;
   minItemWidth?: MinItemWidth;
@@ -25,9 +22,6 @@ export interface InlinePropsBase {
   align?: "start" | "end" | "center" | "stretch";
   gutter?: Gutter;
 }
-
-export type InlineProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, InlinePropsBase>;
 
 function shouldUseSwitch(switchAt?: SwitchAt) {
   if (switchAt === undefined) {
@@ -39,8 +33,8 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
     : switchAt > -1;
 }
 
-export const Inline = forwardRef(
-  <C extends ElementType = "div">(
+export const Inline = forwardRefWithAs<"div", InlineProps>(
+  (
     {
       as,
       justify,
@@ -51,8 +45,8 @@ export const Inline = forwardRef(
       switchAt,
       minItemWidth,
       ...props
-    }: InlineProps<C>,
-    ref?: PolymorphicRef<C>
+    },
+    ref
   ) => {
     const theme = useTheme();
     const justifyValue = justify ? `justify:${justify}` : undefined;

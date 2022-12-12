@@ -6,25 +6,16 @@ import {
   sizes,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React from "react";
 
 type BoundarySize = number | CSSLength | SizesOptions;
-interface AppBoundaryPropsBase {
+export interface AppBoundaryProps {
   boundarySize?: BoundarySize;
 }
 
-export type AppBoundaryProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, AppBoundaryPropsBase>;
-
-export const AppBoundary = forwardRef(
-  <C extends ElementType = "div">(
-    { as, boundarySize, children, style, ...props }: AppBoundaryProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
+  ({ as, boundarySize, children, style, ...props }, ref) => {
     const theme = useTheme();
     const maybeSize = getSizeValue(theme, boundarySize);
     const safeStyle = style ?? {};
