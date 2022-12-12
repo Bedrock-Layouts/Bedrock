@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2022-12-12)
+
+### Bug Fixes
+
+- fix document check in columns and types from polymorphic ([39783bf](https://github.com/Bedrock-Layouts/Bedrock/commit/39783bf61b01b3dbe56d62bc3beeb864d2c45bce)), closes [#1596](https://github.com/Bedrock-Layouts/Bedrock/issues/1596) [#1589](https://github.com/Bedrock-Layouts/Bedrock/issues/1589)
+
 # [0.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/type-utils@0.0.18...@bedrock-layout/type-utils@0.1.0) (2022-11-21)
 
 ### Features
