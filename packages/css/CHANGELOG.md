@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.0.1...@bedrock-layout/css@2.1.0) (2022-12-12)
+
+### Features
+
+- add gutter prop to spacers in css ([d10394e](https://github.com/Bedrock-Layouts/Bedrock/commit/d10394e845d3caa2e0b520cd00026755631c01f3))
+- **css:** add gutter: variation ([030d1f2](https://github.com/Bedrock-Layouts/Bedrock/commit/030d1f2b96c215bc730adb39434d033a860f849c))
+
 ## [2.0.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.0.0...@bedrock-layout/css@2.0.1) (2022-11-21)
 
 ### Bug Fixes
