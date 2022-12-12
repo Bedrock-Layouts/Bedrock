@@ -48,8 +48,61 @@
   margin: 0;
 }
 
-[data-bedrock-columns="dense"] {
+[data-bedrock-columns~="dense"] {
   grid-auto-flow: row dense;
+}
+
+/* Gutter Sizes */
+[data-bedrock-columns~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-bedrock-columns~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-bedrock-columns~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-bedrock-columns~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-bedrock-columns~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-bedrock-columns~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-bedrock-columns~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-bedrock-columns~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-bedrock-columns~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-bedrock-columns~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-bedrock-columns~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-bedrock-columns~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-bedrock-columns~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-bedrock-columns~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-bedrock-columns~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-bedrock-columns~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-bedrock-columns~="gutter:size15"] {
+  --gutter: 30rem;
 }
 
 /*
