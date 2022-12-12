@@ -58,7 +58,11 @@ type LowercaseCharacter =
 type AllCharacter = LowercaseCharacter | Uppercase<LowercaseCharacter>;
 type NonEmptyString = `${AllCharacter}${string}`;
 
-type CSSCustomProperties = `var(--${NonEmptyString})`;
+type CSSLengthUnit = `${number}${LengthUnit}`;
+
+type CSSCustomProperties = `--${NonEmptyString}`;
+
+type CSSCustomPropertiesWithVar = `var(${CSSCustomProperties})`;
 
 type LengthUnit =
   | "vmin"
@@ -77,7 +81,10 @@ type LengthUnit =
   | "pc"
   | "px";
 
-export type CSSLength = `${number}${LengthUnit}` | CSSCustomProperties;
+export type CSSLength =
+  | CSSLengthUnit
+  | CSSCustomPropertiesWithVar
+  | CSSCustomProperties;
 
 function fromEntries<K extends string | number, T>(
   entries: [s: K, value: T][]
@@ -160,12 +167,19 @@ export const spacing = space as Record<keyof typeof space, CSSLength>;
 
 export const sizes = size as Record<keyof typeof size, CSSLength>;
 
+const customPropertyRegex = /^--\D{1}.{0,100}$/;
+
+function checkIsCSSCustomProperty(str: string): str is CSSCustomProperties {
+  return customPropertyRegex.test(str);
+}
+
 export function checkIsCSSLength(str: string): str is CSSLength {
   if (typeof str !== "string") return false;
 
   return [
     /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
-    /^var\(--\D{1,100}\)$/,
+    /^var\(--\D{1}.{0,100}\)$/,
+    customPropertyRegex,
   ].some((regex) => regex.test(str));
 }
 
@@ -212,7 +226,8 @@ export function getSafeGutter<T extends BaseTheme>(
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter > 0) return `${gutter}px`;
-  if (typeof gutter === "string" && checkIsCSSLength(gutter)) return gutter;
+  if (typeof gutter === "string" && checkIsCSSLength(gutter))
+    return checkIsCSSCustomProperty(gutter) ? `var(${gutter})` : gutter;
 
   return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
@@ -225,7 +240,8 @@ export function getSizeValue<T>(
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey > 0) return `${sizeKey}px`;
-  if (typeof sizeKey === "string" && checkIsCSSLength(sizeKey)) return sizeKey;
+  if (typeof sizeKey === "string" && checkIsCSSLength(sizeKey))
+    return checkIsCSSCustomProperty(sizeKey) ? `var(${sizeKey})` : sizeKey;
 
   const maybeSizesOrDefault = theme.sizes ?? sizes;
 

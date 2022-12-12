@@ -23,7 +23,7 @@ Then you add the `data-bedrock-cover` attribute to the desired element.
 
 ## data-bedrock-cover-centered
 
-The cover lets you center an element vertically in a container.
+The cover lets you center an element vertically in the `data-bedrock-cover` container.
 To achieve that, you need to add the `data-bedrock-cover-centered` attribute to the element that needs to be vertically centered.
 You can add content above the centered element, below it, or both. In that case the element will be centered between the content above and below.
 
@@ -88,20 +88,21 @@ By default, the minimum height of the `data-bedrock-cover` element is `100vh`. Y
   </Story>
 </Canvas>
 
-## --gutter
+## gutter
 
-The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
 
 This will ensure space between the elements if the content is larger than the `--minHeight` prop.
 
 (The below example, the `--minHeight` prop is set to `10vh` and the `--gutter` prop is set to `2rem`)
 
 <Canvas withSource="open">
-  <Story name="--gutter">
+  <Story name="gutter">
     <div
-      data-bedrock-cover
+      data-bedrock-cover="gutter:size7"
       style={{
-        "--gutter": "2rem",
         "--minHeight": "10vh",
         border: "1px solid black",
       }}
@@ -127,9 +128,8 @@ The `--minHeight` custom property can be used to set the minimum height of the c
 <Canvas withSource="open">
   <Story name="--minHeight">
     <div
-      data-bedrock-cover
+      data-bedrock-cover="gutter:size7"
       style={{
-        "--gutter": "2rem",
         "--minHeight": "500px",
         border: "1px solid black",
       }}
@@ -155,9 +155,8 @@ Setting the `stretch-content` prop on the `data-bedrock-cover` attribute will st
 <Canvas withSource="open">
   <Story name="stretch-content">
     <div
-      data-bedrock-cover="stretch-content"
+      data-bedrock-cover="stretch-content gutter:size7"
       style={{
-        "--gutter": "2rem",
         "--minHeight": "500px",
         border: "1px solid black",
       }}

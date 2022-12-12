@@ -30,13 +30,15 @@ import "@bedrock-layout/css/lib/components/inline-cluster.min.css";
 
 Then you add the `data-bedrock-inline-cluster` attribute to the desired element.
 
-## --gutter
+## gutter
 
-The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
 
 <Canvas withSource="open">
-  <Story name="--gutter">
-    <h3>Spacing Property such as open-props</h3>
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
     <div data-bedrock-inline-cluster style={{ "--gutter": "var(--size-2)" }}>
       <Component />
       <Component />
@@ -45,6 +47,125 @@ The `--gutter` prop defines the gutter size between elements. Bedrock has implem
     </div>
     <h3>Any CSS Length</h3>
     <div data-bedrock-inline-cluster style={{ "--gutter": "2rem" }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-inline-cluster="gutter:size000">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-inline-cluster="gutter:size00">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-inline-cluster="gutter:size1">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-inline-cluster="gutter:size2">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-inline-cluster="gutter:size3">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-inline-cluster="gutter:size4">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-inline-cluster="gutter:size5">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-inline-cluster="gutter:size6">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-inline-cluster="gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-inline-cluster="gutter:size8">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-inline-cluster="gutter:size9">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-inline-cluster="gutter:size10">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-inline-cluster="gutter:size11">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-inline-cluster="gutter:size12">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-inline-cluster="gutter:size13">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-inline-cluster="gutter:size14">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-inline-cluster="gutter:size15">
       <Component />
       <Component />
       <Component />
@@ -62,30 +183,21 @@ You set the justification by setting the `justify` property on the `data-bedrock
 <Canvas withSource="open">
   <Story name="justify">
     <h3>justify:start</h3>
-    <div
-      data-bedrock-inline-cluster="justify:start"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:start gutter:size7">
       <Component />
       <Component />
       <Component />
       <Component />
     </div>
     <h3>justify:center</h3>
-    <div
-      data-bedrock-inline-cluster="justify:center"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:center gutter:size7">
       <Component />
       <Component />
       <Component />
       <Component />
     </div>
     <h3>justify:end</h3>
-    <div
-      data-bedrock-inline-cluster="justify:end"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:end gutter:size7">
       <Component />
       <Component />
       <Component />
@@ -103,37 +215,28 @@ You can set the alignment of the inline's children by setting the `align` proper
 <Canvas withSource="open">
   <Story name="align">
     <h3>align:start</h3>
-    <div
-      data-bedrock-inline-cluster="align:start"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="align:start gutter:size7">
       <Component style={{ height: 200 }} />
       <Component />
       <Component />
       <Component />
     </div>
     <h3>align:center</h3>
-    <div
-      data-bedrock-inline-cluster="align:center"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="align:center gutter:size7">
       <Component style={{ height: 200 }} />
       <Component />
       <Component />
       <Component />
     </div>
     <h3>align:end</h3>
-    <div data-bedrock-inline-cluster="align:end" style={{ "--gutter": "2rem" }}>
+    <div data-bedrock-inline-cluster="align:end gutter:size7">
       <Component style={{ height: 200 }} />
       <Component />
       <Component />
       <Component />
     </div>
     <h3>align:stretch</h3>
-    <div
-      data-bedrock-inline-cluster="align:stretch"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="align:stretch gutter:size7">
       <Component style={{ height: 200 }} />
       <Component />
       <Component />
@@ -145,10 +248,7 @@ You can set the alignment of the inline's children by setting the `align` proper
 Both the `justify` and `align` properties can be set to at the same time.
 
 ```html
-<div
-  data-bedrock-inline-cluster="justify:start align:center"
-  style="--gutter:var(--size-3)"
->
+<div data-bedrock-inline-cluster="justify:start align:center gutter:size3">
   <!-- content goes here -->
 </div>
 ```
@@ -164,30 +264,21 @@ The below example will stay inline unless they no longer have room in the contai
 <Canvas withSource="open">
   <Story name="clustering">
     <h3>start</h3>
-    <div
-      data-bedrock-inline-cluster="justify:start"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:start gutter:size7">
       <Component />
       <Component style={{ width: "25rem" }} />
       <Component style={{ width: "10rem" }} />
       <Component style={{ width: "15rem" }} />
     </div>
     <h3>center</h3>
-    <div
-      data-bedrock-inline-cluster="justify:center"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:center gutter:size7">
       <Component />
       <Component style={{ width: "25rem" }} />
       <Component style={{ width: "10rem" }} />
       <Component style={{ width: "15rem" }} />
     </div>
     <h3>end</h3>
-    <div
-      data-bedrock-inline-cluster="justify:end"
-      style={{ "--gutter": "2rem" }}
-    >
+    <div data-bedrock-inline-cluster="justify:end gutter:size7">
       <Component />
       <Component style={{ width: "25rem" }} />
       <Component style={{ width: "10rem" }} />

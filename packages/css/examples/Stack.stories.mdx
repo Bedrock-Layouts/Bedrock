@@ -27,18 +27,16 @@ import "@bedrock-layout/css/lib/components/stack.min.css";
 
 Then you add the `data-bedrock-stack` attribute to the desired element.
 
-## --gutter
+## gutter
 
-The `--gutter` prop defines the gutter size between elements. Bedrock has implemented a [default spacing scheme](css-only-components-spacing-properties-css--page), or you can simply pass any valid CSS length or percentage value.
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
 
-You can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
 
 <Canvas withSource="open">
-  <Story name="--gutter">
-    <h3>Spacing Property such as open-props</h3>
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
     <div data-bedrock-stack style={{ "--gutter": "var(--size-2)" }}>
-      <Component />
-      <Component />
       <Component />
       <Component />
     </div>
@@ -46,6 +44,89 @@ You can adjust the space between the child elements by setting the `--gutter` pr
     <div data-bedrock-stack style={{ "--gutter": "2rem" }}>
       <Component />
       <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-stack="gutter:size000">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-stack="gutter:size00">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-stack="gutter:size1">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-stack="gutter:size2">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-stack="gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-stack="gutter:size4">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-stack="gutter:size5">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-stack="gutter:size6">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-stack="gutter:size7">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-stack="gutter:size8">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-stack="gutter:size9">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-stack="gutter:size10">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-stack="gutter:size11">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-stack="gutter:size12">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-stack="gutter:size13">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-stack="gutter:size14">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-stack="gutter:size15">
       <Component />
       <Component />
     </div>

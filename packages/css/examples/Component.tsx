@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Component = styled.div<{ color?: string }>`
   background: ${(props) => props.color ?? "black"};
-  min-height: 100px;
+  min-height: 50px;
   min-width: 100px;
   text-align: center;
 `;
