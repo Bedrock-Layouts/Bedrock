@@ -6,26 +6,17 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React from "react";
 
 type MinItemWidth = number | CSSLength | SizesOptions;
-interface GridPropsBase {
+export interface GridProps {
   gutter?: Gutter;
   minItemWidth?: MinItemWidth;
 }
 
-export type GridProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, GridPropsBase>;
-
-export const Grid = forwardRef(
-  <C extends ElementType = "div">(
-    { as, style, minItemWidth, gutter, ...props }: GridProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Grid = forwardRefWithAs<"div", GridProps>(
+  ({ as, style, minItemWidth, gutter, ...props }, ref) => {
     const theme = useTheme();
     const safeMinItemWidth = getSizeValue(theme, minItemWidth);
 

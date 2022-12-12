@@ -4,28 +4,26 @@ import {
   useTheme,
 } from "@bedrock-layout/spacing-constants";
 import { Stack, StackProps } from "@bedrock-layout/stack";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import React, { CSSProperties } from "react";
 
-interface BaseColumnsProps {
+//Logic forked from is-in-browser npm package
+/* c8 ignore next */
+const isBrowser =
+  typeof window === "object" &&
+  typeof document === "object" &&
+  (document as Document).nodeType === 9;
+
+interface ColumnsBaseProps {
   gutter?: Gutter;
   columns?: number;
   dense?: boolean;
   forwardedAs?: unknown;
 }
 
-type ColumnsBaseProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, BaseColumnsProps>;
-
-const ColumnsBase = forwardRef(
-  <C extends ElementType = "div">(
-    { as, dense, gutter, columns = 1, style, ...props }: ColumnsBaseProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+const ColumnsBase = forwardRefWithAs<"div", ColumnsBaseProps>(
+  ({ as, dense, gutter, columns = 1, style, ...props }, ref) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeColumns = columns > 0 ? columns : 1;
@@ -50,21 +48,15 @@ const ColumnsBase = forwardRef(
   }
 );
 
-interface ColumnsPropsBase extends StackProps, ColumnsBaseProps {
+export interface ColumnsProps extends StackProps, ColumnsBaseProps {
   switchAt?: number | string;
   children?: React.ReactNode;
 }
 
-export type ColumnsProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, ColumnsPropsBase>;
-
-export const Columns = forwardRef(
-  <C extends ElementType = "div">(
-    { columns, dense, switchAt, as, gutter, ...props }: ColumnsProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Columns = forwardRefWithAs<"div", ColumnsProps>(
+  ({ columns, dense, switchAt, as, gutter, ...props }, ref) => {
     const maybePx = React.useMemo(() => {
-      return typeof switchAt === "string"
+      return typeof switchAt === "string" && isBrowser
         ? toPX(switchAt)
         : typeof switchAt === "number" && switchAt > -1
         ? switchAt
@@ -95,38 +87,18 @@ export const Columns = forwardRef(
 
 Columns.displayName = "Columns";
 
-export interface ColumnPropsBase {
+export interface ColumnProps {
   span?: number;
   offsetStart?: number;
   offsetEnd?: number;
 }
 
-export type ColumnProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, ColumnPropsBase>;
-
 const safeSpan = (span: unknown) => {
   return typeof span === "number" ? span : 1;
 };
 
-/**
- *
- * span is remaped to colSpan due to span being an attribute that gets
- * passed to the underlying element.  This can cause issues with Grid layout.
- *
- * In a future breaking change, colSpan should be the public API.
- * */
-export const Column = forwardRef(
-  <C extends ElementType = "div">(
-    {
-      as,
-      span,
-      style,
-      offsetStart = 0,
-      offsetEnd = 0,
-      ...props
-    }: ColumnProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Column = forwardRefWithAs<"div", ColumnProps>(
+  ({ as, span, style, offsetStart = 0, offsetEnd = 0, ...props }, ref) => {
     const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
     const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;
     const safeStyle = style ?? {};
@@ -164,21 +136,17 @@ function parseUnit(str: string): [number, string] {
   str = String(str);
   const num = parseFloat(str);
 
-  /* c8 ignore next */
   const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
 
-/* c8 ignore next */
 function toPX(str: string, element?: Element): number | null {
-  /* c8 ignore next */
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
   const safeStr = (str ?? "px").trim().toLowerCase();
 
-  /* c8 ignore next */
   switch (safeStr) {
     case "vmin":
     case "vmax":
@@ -218,7 +186,6 @@ function toPX(str: string, element?: Element): number | null {
   }
 }
 
-/* c8 ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop)

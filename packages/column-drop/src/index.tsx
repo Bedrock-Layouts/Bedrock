@@ -6,22 +6,16 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type MinItemWidth = CSSLength | number | SizesOptions;
 
-interface ColumnDropPropsBase {
+export interface ColumnDropProps {
   gutter?: Gutter;
   minItemWidth?: MinItemWidth;
   noStretchedColumns?: boolean;
 }
-
-export type ColumnDropProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, ColumnDropPropsBase>;
 
 function getSafeMinItemWidth<T extends Record<string, unknown>>(
   theme: T,
@@ -30,17 +24,10 @@ function getSafeMinItemWidth<T extends Record<string, unknown>>(
   return getSizeValue(theme, minItemWidth);
 }
 
-export const ColumnDrop = forwardRef(
-  <C extends ElementType = "div">(
-    {
-      as,
-      gutter,
-      style,
-      minItemWidth,
-      noStretchedColumns = false,
-      ...props
-    }: ColumnDropProps<C>,
-    ref?: PolymorphicRef<C>
+export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
+  (
+    { as, gutter, style, minItemWidth, noStretchedColumns = false, ...props },
+    ref
   ) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);

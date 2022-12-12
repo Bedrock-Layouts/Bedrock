@@ -1,18 +1,12 @@
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 type RatioString = `${number}/${number}` | `${number} / ${number}`;
 
 type Ratio = [number, number] | RatioString;
-interface FramePropsBase {
+export interface FrameProps {
   ratio?: Ratio;
   position?: string;
 }
-
-export type FrameProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, FramePropsBase>;
 
 function checkIsRatio(ratio: unknown): ratio is Ratio {
   const isCorrectArray =
@@ -34,11 +28,8 @@ function getSafeRatio(ratio: unknown): RatioString | undefined {
   return isRatio ? getRatioString(ratio) : undefined;
 }
 
-export const Frame = forwardRef(
-  <C extends ElementType = "div">(
-    { as, ratio, style, position, ...props }: FrameProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Frame = forwardRefWithAs<"div", FrameProps>(
+  ({ as, ratio, style, position, ...props }, ref) => {
     const safeRatio = getSafeRatio(ratio);
     const safeStyle = style ?? {};
 

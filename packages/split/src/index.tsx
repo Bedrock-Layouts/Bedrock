@@ -6,11 +6,8 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type FractionTypes =
   | "auto-start"
@@ -36,29 +33,15 @@ const fractions: Fractions = {
 };
 
 type MinItemWidth = number | CSSLength | SizesOptions;
-interface SplitPropsBase {
+export interface SplitProps {
   gutter?: Gutter;
   fraction?: FractionTypes;
   switchAt?: number | CSSLength | SizesOptions;
   minItemWidth?: MinItemWidth;
 }
 
-export type SplitProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, SplitPropsBase>;
-
-export const Split = forwardRef(
-  <C extends ElementType = "div">(
-    {
-      as,
-      fraction,
-      gutter,
-      minItemWidth,
-      switchAt,
-      style,
-      ...props
-    }: SplitProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
+export const Split = forwardRefWithAs<"div", SplitProps>(
+  ({ as, fraction, gutter, minItemWidth, switchAt, style, ...props }, ref) => {
     const theme = useTheme();
     const attrString =
       fraction && fractions[fraction] ? `fraction:${fraction}` : "";

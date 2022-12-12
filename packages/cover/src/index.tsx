@@ -6,23 +6,17 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-} from "@bedrock-layout/type-utils";
-import React, { CSSProperties, ElementType, forwardRef } from "react";
+import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import React, { CSSProperties } from "react";
 
 type MinHeight = CSSLength | number | SizesOptions;
-interface CoverPropsBase {
+export interface CoverProps {
   top?: React.ReactNode;
   bottom?: React.ReactNode;
   gutter?: Gutter;
   minHeight?: MinHeight;
   stretchContent?: boolean;
 }
-
-export type CoverProps<C extends ElementType = "div"> =
-  PolymorphicComponentPropsWithRef<C, CoverPropsBase>;
 
 function getSafeMinHeight<T extends Record<string, unknown>>(
   theme: T,
@@ -31,8 +25,8 @@ function getSafeMinHeight<T extends Record<string, unknown>>(
   return getSizeValue(theme, minHeight);
 }
 
-export const Cover = forwardRef(
-  <C extends ElementType = "div">(
+export const Cover = forwardRefWithAs<"div", CoverProps>(
+  (
     {
       as,
       children,
@@ -43,8 +37,8 @@ export const Cover = forwardRef(
       style,
       stretchContent,
       ...props
-    }: CoverProps<C>,
-    ref?: PolymorphicRef<C>
+    },
+    ref
   ) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
