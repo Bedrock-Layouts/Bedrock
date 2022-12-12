@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@3.0.3...@bedrock-layout/column-drop@3.0.4) (2022-12-12)
+
+### Bug Fixes
+
+- **spacing:** fix DefaultTheme declaration merging ([db90340](https://github.com/Bedrock-Layouts/Bedrock/commit/db90340599331e19823f31cda417dbcba2d27795))
+
 ## [3.0.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@3.0.2...@bedrock-layout/column-drop@3.0.3) (2022-12-12)
 
 ### Bug Fixes
