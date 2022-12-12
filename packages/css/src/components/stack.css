@@ -22,3 +22,56 @@
 [data-bedrock-stack] > [data-bedrock-column] {
   grid-column: span 1 / auto;
 }
+
+/* Gutter Sizes */
+[data-bedrock-stack~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-bedrock-stack~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-bedrock-stack~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-bedrock-stack~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-bedrock-stack~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-bedrock-stack~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-bedrock-stack~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-bedrock-stack~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-bedrock-stack~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-bedrock-stack~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-bedrock-stack~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-bedrock-stack~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-bedrock-stack~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-bedrock-stack~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-bedrock-stack~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-bedrock-stack~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-bedrock-stack~="gutter:size15"] {
+  --gutter: 30rem;
+}

@@ -78,6 +78,7 @@ describe("gutter helpers", () => {
       ["var(--yellow)", "var(--yellow)"],
       ["var(--x)", "var(--x)"],
       ["size3", constants.spacing["size3"]],
+      ["--x", "var(--x)"],
     ])("returns correct value", (gutter, expected) => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
@@ -157,6 +158,9 @@ describe("checkIsCSSLength", () => {
     ["var(--x)", true],
     ["var(--)", false],
     ["var(--1)", false],
+    ["--size-3", true],
+    ["var(--size-3)", true],
+    ["var(--size-3, 100px)", true],
   ])("checkIsCSSLength(%s) -> %s", (value, expected) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-expect-error
