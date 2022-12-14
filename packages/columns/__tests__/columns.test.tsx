@@ -171,14 +171,24 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-    it("renders dense mode", () => {
+    it("renders switchAt as number", () => {
       const columns = create(
-        <Columns gutter="size3" dense>
+        <Columns gutter="size3" switchAt={500}>
           <Lorem />
         </Columns>
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
+    it("renders switchAt as string", () => {
+      const columns = create(
+        <Columns gutter="size3" switchAt="500px">
+          <Lorem />
+        </Columns>
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with theme overrides", () => {
       const columns = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
@@ -188,57 +198,6 @@ describe("Columns", () => {
         </ThemeProvider>
       );
       expect(columns.toJSON()).toMatchSnapshot();
-    });
-    it("should render a stack if container is below switchAt", () => {
-      const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
-        return [width <= widthToSwitchAt + 1, { current: null }];
-      });
-      const stack = create(
-        <Columns gutter="size3" switchAt={widthToSwitchAt - 1}>
-          <Lorem />
-        </Columns>
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockRestore();
-    });
-    it("should render a columns if container is above switchAt", () => {
-      const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
-        return [width <= widthToSwitchAt + 1, { current: null }];
-      });
-      const stack = create(
-        <Columns gutter="size3" switchAt={widthToSwitchAt + 1}>
-          <Lorem />
-        </Columns>
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockRestore();
-    });
-    it("should render a columns if container is above switchAt as a string", () => {
-      const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockImplementation(({ width }) => {
-        return [width <= widthToSwitchAt + 1, { current: null }];
-      });
-      const stack = create(
-        <Columns gutter="size3" switchAt={`${widthToSwitchAt + 1}px`}>
-          <Lorem />
-        </Columns>
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      containerQuery.useContainerQuery.mockRestore();
     });
   });
   describe("incorrect usage", () => {
@@ -275,15 +234,7 @@ describe("Columns", () => {
 
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-    it("renders default with console error with incorrect dense type", () => {
-      const errorStack = create(
-        <Columns dense="incorrect">
-          <Lorem />
-        </Columns>
-      );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
-    });
     it("renders default with console error with wrong switchAt input", () => {
       const errorStack = create(
         <Columns gutter="size3" switchAt={{ value: "incorrect" }}>

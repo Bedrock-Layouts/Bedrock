@@ -2,18 +2,6 @@
   cover.css
 */
 
-@property --gutter {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --minHeight {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100vh;
-}
-
 [data-bedrock-cover] {
   display: flex;
   flex-direction: column;

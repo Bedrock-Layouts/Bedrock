@@ -63,14 +63,8 @@ export const Split = forwardRefWithAs<"div", SplitProps>(
           {
             ...safeStyle,
             "--gutter": maybeGutter,
-            "--minItemWidth":
-              typeof safeMinItemWidth === "number"
-                ? `${safeMinItemWidth}px`
-                : safeMinItemWidth,
-            "--switchAt":
-              typeof safeSwitchAt === "number"
-                ? `${safeSwitchAt}px`
-                : safeSwitchAt,
+            "--minItemWidth": safeMinItemWidth,
+            "--switchAt": safeSwitchAt,
           } as CSSProperties
         }
         {...props}

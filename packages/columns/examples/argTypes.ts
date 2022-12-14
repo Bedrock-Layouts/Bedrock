@@ -34,14 +34,6 @@ export const columnsArgTypes = {
     },
     control: "number",
   },
-  dense: {
-    description: "Toggle for is the layout should use a dense layout or not",
-    type: { name: "boolean" },
-    table: {
-      type: { summary: "boolean" },
-    },
-    control: "boolean",
-  },
   switchAt: {
     description:
       "Sets the width threshold that the split will switch to a Stack layout",

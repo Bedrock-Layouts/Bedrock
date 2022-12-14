@@ -1,17 +1,6 @@
 /*
   inline.css
 */
-@property --gutter {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --switchAt {
-  syntax: "<length-percentage>";
-  inherits: true;
-  initial-value: 0;
-}
 
 [data-bedrock-inline] {
   display: flex;

@@ -6,50 +6,28 @@
   columns component
 */
 
-@property --gutter {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --columns {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 1;
-}
-
-@property --span {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 1;
-}
-
-@property --offsetStart {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 1;
-}
-
-@property --offsetEnd {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 1;
-}
-
 [data-bedrock-columns] {
   box-sizing: border-box;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--gutter, 0);
-  grid-template-columns: repeat(var(--columns, 1), 1fr);
-  grid-auto-flow: row;
 }
 
-[data-bedrock-columns] > * {
+[data-bedrock-columns][data-bedrock-columns] > * {
+  --numberOfGutters: calc(var(--columns, 1) - 1);
+  --largestWidth: calc(
+    100% - max(var(--gutter, 0px) * var(--numberOfGutters), 0px)
+  );
+  --columnWidth: calc(var(--largestWidth) / var(--columns, 1));
+  --basis: calc(
+    (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
+  );
   margin: 0;
-}
-
-[data-bedrock-columns~="dense"] {
-  grid-auto-flow: row dense;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: var(--basis);
+  min-inline-size: min(min(var(--columnWidth), 100%), var(--largestWidth));
+  max-inline-size: min(max(var(--basis), var(--columnWidth)), 100%);
 }
 
 /* Gutter Sizes */
@@ -109,24 +87,34 @@
   column component
 */
 
-[data-bedrock-column] {
-  grid-column: span min(var(--span, 1), var(--columns, 1));
+[data-bedrock-column][style*="--span"] {
+  --maxSpan: min(var(--span, 1), var(--columns, 1));
+  --guttersToAdd: calc(var(--maxSpan, 1) - 1);
+  --gutterSize: calc(var(--gutter, 0px) * var(--guttersToAdd));
+  --columnWidth: calc(
+    ((var(--largestWidth) / var(--columns, 1)) * var(--maxSpan, 1)) +
+      var(--gutterSize)
+  );
 }
 
-[data-bedrock-column][style*="--offset"] {
-  display: contents;
+[data-bedrock-column][style*="--offsetStart"] {
+  --maxOffsetStart: min(var(--offsetStart, 1), var(--columns, 1));
+  --marginOffsetStartGutters: calc(var(--gutter, 0px) * var(--maxOffsetStart));
+  --marginOffsetStart: calc(
+    (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetStart, 1) +
+      var(--marginOffsetStartGutters)
+  );
+  --basisSwitcher: max(var(--basis) * -1, 0px);
+  margin-inline-start: min(var(--marginOffsetStart), var(--basisSwitcher));
 }
 
-[data-bedrock-column][style*="--offset"] > * {
-  grid-column: span min(var(--span, 1), var(--columns, 1));
-}
-
-[data-bedrock-column][style*="--offsetStart"]::before {
-  content: "";
-  grid-column: span min(var(--offsetStart, 1), var(--columns, 1));
-}
-
-[data-bedrock-column][style*="--offsetEnd"]::after {
-  content: "";
-  grid-column: span min(var(--offsetEnd, 1), var(--columns, 1));
+[data-bedrock-column][style*="--offsetEnd"] {
+  --maxOffsetEnd: min(var(--offsetEnd, 1), var(--columns, 1));
+  --marginOffsetEndGutters: calc(var(--gutter, 0px) * var(--maxOffsetEnd));
+  --marginOffsetEnd: calc(
+    (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetEnd, 1) +
+      var(--marginOffsetEndGutters)
+  );
+  --basisSwitcher: max(var(--basis) * -1, 0px);
+  margin-inline-end: min(var(--marginOffsetEnd), var(--basisSwitcher));
 }

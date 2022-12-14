@@ -1,7 +1,7 @@
 import "pepjs";
 import "open-props/style";
-import "@bedrock-layout/css";
 
+import "../packages/css/lib/bedrock-layout.min.css";
 import "./styles.css";
 import "./i18n";
 

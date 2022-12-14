@@ -2,12 +2,6 @@
   stack.css
 */
 
-@property --gutter {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0;
-}
-
 [data-bedrock-stack] {
   box-sizing: border-box;
   display: flex;

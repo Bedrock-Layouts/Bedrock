@@ -242,28 +242,6 @@ The column component is wrapping the blue and green Componentes. It is then sett
   </Story>
 </Canvas>
 
-## dense
-
-You can choose to have a dense layout by setting the `dense` value on the `data-bedrock-columns` attribute.
-
-<Canvas withSource="open">
-  <Story name="dense">
-    <div data-bedrock-columns="dense gutter:size3" style={{ "--columns": 4 }}>
-      <Component />
-      <Component />
-      <div data-bedrock-column style={{ "--span": 3 }}>
-        <Component style={{ background: "blue" }} />
-      </div>
-      <div data-bedrock-column style={{ "--span": 2 }}>
-        <Component style={{ background: "green" }} />
-      </div>
-      <Component />
-      <Component />
-      <Component />
-    </div>
-  </Story>
-</Canvas>
-
 ## offsetStart and offsetEnd
 
 If you want the have the element offset by `n` number of columns, before or after , you can set the `--offsetStart` or `--offsetEnd` property in the inline style of the `data-bedrock-column` element.
@@ -284,6 +262,26 @@ In the below code, the blue Component is `--offsetStart` of 1 and the green Comp
       <Component />
       <Component />
       <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --switchAt
+
+The below Columns layout will switch to a Stack layout when its less than `45rem`.
+
+<Canvas withSource="open">
+  <Story name="--switchAt">
+    <div
+      data-bedrock-columns="gutter:size3"
+      style={{ "--columns": 3, "--switchAt": "45rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <div data-bedrock-column style={{ "--span": 3 }}>
+        <Component />
+      </div>
     </div>
   </Story>
 </Canvas>
