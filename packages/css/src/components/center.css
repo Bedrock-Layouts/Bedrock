@@ -2,12 +2,6 @@
   center.css
 */
 
-@property --maxWidth {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-
 [data-bedrock-center] {
   box-sizing: content-box;
 

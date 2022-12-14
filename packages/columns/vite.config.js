@@ -18,10 +18,7 @@ module.exports = defineConfig({
       external: [
         "react",
         "@bedrock-layout/spacing-constants",
-        "@bedrock-layout/stack",
         "@bedrock-layout/type-utils",
-        "@bedrock-layout/use-container-query",
-        "@bedrock-layout/use-forwarded-ref",
       ],
     },
   },

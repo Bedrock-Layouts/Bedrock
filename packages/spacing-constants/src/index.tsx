@@ -225,7 +225,7 @@ export function getSafeGutter<T extends DefaultTheme>(
   gutter?: Gutter
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
-  if (typeof gutter === "number" && gutter > 0) return `${gutter}px`;
+  if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
   if (typeof gutter === "string" && checkIsCSSLength(gutter))
     return checkIsCSSCustomProperty(gutter) ? `var(${gutter})` : gutter;
 
@@ -239,7 +239,7 @@ export function getSizeValue<T extends DefaultTheme>(
   sizeKey?: CSSLength | number | SizesOptions
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
-  if (typeof sizeKey === "number" && sizeKey > 0) return `${sizeKey}px`;
+  if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
   if (typeof sizeKey === "string" && checkIsCSSLength(sizeKey))
     return checkIsCSSCustomProperty(sizeKey) ? `var(${sizeKey})` : sizeKey;
 

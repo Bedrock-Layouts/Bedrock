@@ -44,7 +44,7 @@ describe("gutter helpers", () => {
 
     it.each([
       [undefined, undefined],
-      [0, undefined],
+      [0, "0px"],
       ["garbage", undefined],
       [{ value: "1rem" }, undefined],
       ["px", undefined],

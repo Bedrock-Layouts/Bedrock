@@ -7,6 +7,7 @@ exports[`Column > correct usage > renders as main 1`] = `
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -43,6 +44,7 @@ exports[`Column > correct usage > renders custom span 1`] = `
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -79,6 +81,7 @@ exports[`Column > correct usage > renders default gutters 1`] = `
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -115,6 +118,7 @@ exports[`Column > correct usage > renders offsetEnd span 1`] = `
     {
       "--columns": 4,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -151,6 +155,7 @@ exports[`Column > correct usage > renders offsetStart span 1`] = `
     {
       "--columns": 4,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -187,6 +192,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -223,6 +229,7 @@ exports[`Column > incorrect usage > renders a span of 1 if given negative number
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -259,6 +266,7 @@ exports[`Column > incorrect usage > renders default with console error with wron
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -295,6 +303,7 @@ exports[`Columns > correct usage > renders all the gutter options 1`] = `
     {
       "--columns": 1,
       "--gutter": "-.5rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -320,6 +329,7 @@ exports[`Columns > correct usage > renders all the gutter options 2`] = `
     {
       "--columns": 1,
       "--gutter": "-.25rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -345,6 +355,7 @@ exports[`Columns > correct usage > renders all the gutter options 3`] = `
     {
       "--columns": 1,
       "--gutter": ".25rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -370,6 +381,7 @@ exports[`Columns > correct usage > renders all the gutter options 4`] = `
     {
       "--columns": 1,
       "--gutter": ".5rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -395,6 +407,7 @@ exports[`Columns > correct usage > renders all the gutter options 5`] = `
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -420,6 +433,7 @@ exports[`Columns > correct usage > renders all the gutter options 6`] = `
     {
       "--columns": 1,
       "--gutter": "1.25rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -445,6 +459,7 @@ exports[`Columns > correct usage > renders all the gutter options 7`] = `
     {
       "--columns": 1,
       "--gutter": "1.5rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -470,6 +485,7 @@ exports[`Columns > correct usage > renders all the gutter options 8`] = `
     {
       "--columns": 1,
       "--gutter": "1.75rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -495,6 +511,7 @@ exports[`Columns > correct usage > renders all the gutter options 9`] = `
     {
       "--columns": 1,
       "--gutter": "2rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -520,6 +537,7 @@ exports[`Columns > correct usage > renders all the gutter options 10`] = `
     {
       "--columns": 1,
       "--gutter": "3rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -545,6 +563,7 @@ exports[`Columns > correct usage > renders all the gutter options 11`] = `
     {
       "--columns": 1,
       "--gutter": "4rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -570,6 +589,7 @@ exports[`Columns > correct usage > renders all the gutter options 12`] = `
     {
       "--columns": 1,
       "--gutter": "5rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -595,6 +615,7 @@ exports[`Columns > correct usage > renders all the gutter options 13`] = `
     {
       "--columns": 1,
       "--gutter": "7.5rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -620,6 +641,7 @@ exports[`Columns > correct usage > renders all the gutter options 14`] = `
     {
       "--columns": 1,
       "--gutter": "10rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -645,6 +667,7 @@ exports[`Columns > correct usage > renders all the gutter options 15`] = `
     {
       "--columns": 1,
       "--gutter": "15rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -670,6 +693,7 @@ exports[`Columns > correct usage > renders all the gutter options 16`] = `
     {
       "--columns": 1,
       "--gutter": "20rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -695,6 +719,7 @@ exports[`Columns > correct usage > renders all the gutter options 17`] = `
     {
       "--columns": 1,
       "--gutter": "30rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -720,6 +745,7 @@ exports[`Columns > correct usage > renders custom columns 1`] = `
     {
       "--columns": 5,
       "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -745,6 +771,7 @@ exports[`Columns > correct usage > renders custom gutter with number 1`] = `
     {
       "--columns": 1,
       "--gutter": "20px",
+      "--switchAt": undefined,
     }
   }
 >
@@ -770,6 +797,7 @@ exports[`Columns > correct usage > renders custom gutter with string 1`] = `
     {
       "--columns": 1,
       "--gutter": "3ch",
+      "--switchAt": undefined,
     }
   }
 >
@@ -795,6 +823,7 @@ exports[`Columns > correct usage > renders default gutter when none provided 1`]
     {
       "--columns": 1,
       "--gutter": undefined,
+      "--switchAt": undefined,
     }
   }
 >
@@ -813,13 +842,40 @@ exports[`Columns > correct usage > renders default gutter when none provided 1`]
 </div>
 `;
 
-exports[`Columns > correct usage > renders dense mode 1`] = `
+exports[`Columns > correct usage > renders switchAt as number 1`] = `
 <div
-  data-bedrock-columns="dense"
+  data-bedrock-columns=""
   style={
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": "500px",
+    }
+  }
+>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+  </p>
+</div>
+`;
+
+exports[`Columns > correct usage > renders switchAt as string 1`] = `
+<div
+  data-bedrock-columns=""
+  style={
+    {
+      "--columns": 1,
+      "--gutter": "1rem",
+      "--switchAt": "500px",
     }
   }
 >
@@ -845,78 +901,7 @@ exports[`Columns > correct usage > renders with theme overrides 1`] = `
     {
       "--columns": 1,
       "--gutter": undefined,
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Columns > correct usage > should render a columns if container is above switchAt 1`] = `
-<div
-  data-bedrock-stack={true}
-  style={
-    {
-      "--gutter": "1rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Columns > correct usage > should render a columns if container is above switchAt as a string 1`] = `
-<div
-  data-bedrock-stack={true}
-  style={
-    {
-      "--gutter": "1rem",
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Columns > correct usage > should render a stack if container is below switchAt 1`] = `
-<div
-  data-bedrock-stack={true}
-  style={
-    {
-      "--gutter": "1rem",
+      "--switchAt": undefined,
     }
   }
 >
@@ -942,6 +927,7 @@ exports[`Columns > incorrect usage > renders 1 columns if given 0 1`] = `
     {
       "--columns": 1,
       "--gutter": undefined,
+      "--switchAt": undefined,
     }
   }
 >
@@ -967,6 +953,7 @@ exports[`Columns > incorrect usage > renders 1 columns if given negative number 
     {
       "--columns": 1,
       "--gutter": undefined,
+      "--switchAt": undefined,
     }
   }
 >
@@ -992,31 +979,7 @@ exports[`Columns > incorrect usage > renders default with console error with inc
     {
       "--columns": 1,
       "--gutter": undefined,
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Columns > incorrect usage > renders default with console error with incorrect dense type 1`] = `
-<div
-  data-bedrock-columns="dense"
-  style={
-    {
-      "--columns": 1,
-      "--gutter": undefined,
+      "--switchAt": undefined,
     }
   }
 >
@@ -1042,6 +1005,9 @@ exports[`Columns > incorrect usage > renders default with console error with wro
     {
       "--columns": 1,
       "--gutter": "1rem",
+      "--switchAt": {
+        "value": "incorrect",
+      },
     }
   }
 >
@@ -1067,6 +1033,7 @@ exports[`Columns > incorrect usage > renders default with wrong gutter input 1`]
     {
       "--columns": 1,
       "--gutter": undefined,
+      "--switchAt": undefined,
     }
   }
 >

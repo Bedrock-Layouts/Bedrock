@@ -76,10 +76,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(
             ...safeStyle,
             "--gutter": getSafeGutter(theme, gutter),
             "--switchAt": switchAtValue,
-            "--minItemWidth":
-              typeof safeMinItemWidth === "number"
-                ? `${safeMinItemWidth}px`
-                : safeMinItemWidth,
+            "--minItemWidth": safeMinItemWidth,
           } as CSSProperties
         }
         {...props}

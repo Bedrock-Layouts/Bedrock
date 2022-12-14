@@ -248,28 +248,6 @@ Here, the `Column` component is wrapping the blue and green Componentes. It is t
   </Story>
 </Canvas>
 
-## dense
-
-Setting the `dense` prop will layout the children so that the items will fill any blank space.
-
-<Canvas withSource="open">
-  <Story name="dense">
-    <Columns dense gutter="size3" columns={4}>
-      <Component>1</Component>
-      <Component>2</Component>
-      <Column span={3}>
-        <Component>3</Component>
-      </Column>
-      <Component>4</Component>
-      <Component>5</Component>
-      <Column span={2}>
-        <Component>6</Component>
-      </Column>
-      <Component>7</Component>
-    </Columns>
-  </Story>
-</Canvas>
-
 ## offsetStart and offsetEnd
 
 In the example, the blue Component has `offsetStart` prop with value of 1 and the green Component has an `offsetEnd` prop with value of 2
