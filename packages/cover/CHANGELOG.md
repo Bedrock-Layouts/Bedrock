@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@3.0.4...@bedrock-layout/cover@3.1.0) (2022-12-14)
+
+### Features
+
+- remove JavaScript dependency on to switchAt ([93aa8d9](https://github.com/Bedrock-Layouts/Bedrock/commit/93aa8d95695b815321021348bc266009f3f536a5))
+
 ## [3.0.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@3.0.3...@bedrock-layout/cover@3.0.4) (2022-12-12)
 
 ### Bug Fixes
