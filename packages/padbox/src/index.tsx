@@ -1,8 +1,6 @@
 import {
   BaseTheme,
   Gutter,
-  checkIsCSSLength,
-  spacing as defaultSpacing,
   getSafeGutter,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
@@ -29,17 +27,6 @@ type PaddingTypes =
   | [PaddingValue, PaddingValue, PaddingValue]
   | [PaddingValue, PaddingValue, PaddingValue, PaddingValue];
 
-const validKeys = new Set([
-  "left",
-  "right",
-  "top",
-  "bottom",
-  "inlineStart",
-  "inlineEnd",
-  "blockStart",
-  "blockEnd",
-]);
-
 const keyToProperty = (key: string) => {
   type map = { [s: string]: string };
   const modernMap: map = {
@@ -62,44 +49,6 @@ const paddingToStyleProps = (
 ) => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
-  }
-
-  const validSpacings = new Set(Object.keys(theme.space ?? defaultSpacing));
-
-  const isValidPadding = () => {
-    if (typeof padding === "number" || typeof padding === "string") {
-      return (
-        padding > 0 ||
-        validSpacings.has(padding.toString()) ||
-        checkIsCSSLength(padding.toString())
-      );
-    }
-
-    if (Array.isArray(padding)) {
-      return padding.every((val) => {
-        return (
-          val > 0 ||
-          validSpacings.has(val.toString()) ||
-          checkIsCSSLength(val.toString())
-        );
-      });
-    }
-
-    return (
-      padding !== undefined &&
-      Object.keys(padding).every((key) => validKeys.has(key)) &&
-      Object.values(padding).every((val) => {
-        return (
-          val > 0 ||
-          validSpacings.has(val.toString()) ||
-          checkIsCSSLength(val.toString())
-        );
-      })
-    );
-  };
-
-  if (!isValidPadding()) {
-    console.error("Invalid padding Type: ", padding);
   }
 
   return typeof padding === "object" && !Array.isArray(padding)

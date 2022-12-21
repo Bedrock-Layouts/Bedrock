@@ -46,7 +46,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
     const safeMinHeight = getSafeMinHeight(theme, minHeight);
-    console.log(safeMinHeight, minHeight);
+
     const attributeVal = stretchContent === true ? "stretch-content" : "";
 
     const safeStyle = style ?? {};
