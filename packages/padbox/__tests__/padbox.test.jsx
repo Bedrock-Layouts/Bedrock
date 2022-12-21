@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
@@ -132,7 +133,6 @@ describe("PadBox", () => {
         </PadBox>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
@@ -145,7 +145,6 @@ describe("PadBox", () => {
         </PadBox>
       );
 
-      expect(console.error).toBeCalled();
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 

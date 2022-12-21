@@ -35,6 +35,7 @@ const readDir = promisify(fs.readdir);
 
   await Promise.all(
     filesSorted.map(async (file) => {
+      // eslint-disable-next-line no-console
       console.info(`Copying ${file}`);
       copyFile(
         path.join(srcComponentPath, file),
@@ -45,6 +46,7 @@ const readDir = promisify(fs.readdir);
 
   await Promise.all(
     filesSorted.map(async (file) => {
+      // eslint-disable-next-line no-console
       console.info(`Minifying ${file}`);
       exec(
         `npx postcss ${path.join(libComponentPath, file)} > ${path.join(
