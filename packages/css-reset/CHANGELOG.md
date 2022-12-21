@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css-reset@1.5.0...@bedrock-layout/css-reset@1.5.1) (2022-12-21)
+
+### Bug Fixes
+
+- add linting rule to prevent console.logs making it to production ([e8c554d](https://github.com/Bedrock-Layouts/Bedrock/commit/e8c554d711a0e97bb583a957ac3d20a02fdda58e))
+
 # [1.5.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css-reset@1.4.1...@bedrock-layout/css-reset@1.5.0) (2022-11-11)
 
 ### Features

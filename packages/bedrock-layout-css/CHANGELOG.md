@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@3.0.4...@bedrock-layout/bedrock-layout-css@3.0.5) (2022-12-21)
+
+### Bug Fixes
+
+- add linting rule to prevent console.logs making it to production ([e8c554d](https://github.com/Bedrock-Layouts/Bedrock/commit/e8c554d711a0e97bb583a957ac3d20a02fdda58e))
+
 ## [3.0.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/bedrock-layout-css@3.0.3...@bedrock-layout/bedrock-layout-css@3.0.4) (2022-12-14)
 
 **Note:** Version bump only for package @bedrock-layout/bedrock-layout-css
