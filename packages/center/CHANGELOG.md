@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@3.1.0...@bedrock-layout/center@3.1.1) (2023-01-03)
+
+### Bug Fixes
+
+- **docs:** update storybook docs page to beta storybook ([15d7c0a](https://github.com/Bedrock-Layouts/Bedrock/commit/15d7c0abd7ffc1f451f1fc3c5e151cc9004b5c9d))
+
 # [3.1.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@3.0.4...@bedrock-layout/center@3.1.0) (2022-12-14)
 
 ### Features

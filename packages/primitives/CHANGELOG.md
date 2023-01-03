@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@3.0.6...@bedrock-layout/primitives@3.0.7) (2023-01-03)
+
+### Bug Fixes
+
+- **docs:** update storybook docs page to beta storybook ([15d7c0a](https://github.com/Bedrock-Layouts/Bedrock/commit/15d7c0abd7ffc1f451f1fc3c5e151cc9004b5c9d))
+
 ## [3.0.6](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@3.0.5...@bedrock-layout/primitives@3.0.6) (2022-12-21)
 
 **Note:** Version bump only for package @bedrock-layout/primitives
