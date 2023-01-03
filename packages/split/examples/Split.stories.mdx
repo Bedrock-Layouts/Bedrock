@@ -1,5 +1,5 @@
 import { Split } from '@bedrock-layout/split';
-import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
+import { Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs';
 
 import { Component } from './Component';
 import { argTypes } from './argTypes';
@@ -60,13 +60,13 @@ The `fraction` prop defines the fraction of the container width to use for the s
       <Component />
     </Split>
     <h3>auto-start</h3>
-    <p>(The first Component has a width of 100px)</p>
+    (The first Component has a width of 100px)
     <Split gutter="size3" fraction="auto-start">
       <Component />
       <Component />
     </Split>
     <h3>auto-end</h3>
-    <p>(The second Component has a width of 100px)</p>
+    (The second Component has a width of 100px)
     <Split gutter="size3" fraction="auto-end">
       <Component />
       <Component />

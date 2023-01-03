@@ -1,5 +1,5 @@
 import { Reel } from '../src/index';
-import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/';
+import { Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs';
 
 import { colors, ColoredRect, argTypes} from './colors'
 
@@ -32,10 +32,11 @@ yarn add @bedrock-layout/reel
 
 The `snapType` prop sets the scroll snap type.
 
+(scroll to the right to see the next items)
+
 <Canvas withSource="open">
   <Story name="snapType">
     <h3>none</h3>
-    <p>scroll to the right to see the next item</p>
     <Reel snapType="none" gutter="size3">
       {colors.map((color, i) => {
         return (
@@ -46,7 +47,6 @@ The `snapType` prop sets the scroll snap type.
       })}
     </Reel>
     <h3>mandatory</h3>
-    <p>scroll to the right to see the next item</p>
     <Reel snapType="mandatory" gutter="size3">
       {colors.map((color, i) => {
         return (
@@ -57,7 +57,6 @@ The `snapType` prop sets the scroll snap type.
       })}
     </Reel>
     <h3>proximity</h3>
-    <p>scroll to the right to see the next item</p>
     <Reel snapType="proximity" gutter="size3">
       {colors.map((color, i) => {
         return (

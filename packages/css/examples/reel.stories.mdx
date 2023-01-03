@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { Component, colors } from './Component';
 
 import "../src/components/reel.css"
@@ -171,21 +171,21 @@ The `snapType` property sets the scroll snap type. The default snap type is `non
 <Canvas withSource="open">
   <Story name="snapType">
     <h3>size000</h3>
-    <p>scroll to the right to see the next item</p>
+    scroll to the right to see the next item
     <div data-bedrock-reel="snapType:none gutter:size2">
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>mandatory</h3>
-    <p>scroll to the right to see the next item</p>
+    scroll to the right to see the next item
     <div data-bedrock-reel="snapType:mandatory gutter:size2">
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />
       ))}
     </div>
     <h3>proximity</h3>
-    <p>scroll to the right to see the next item</p>
+    scroll to the right to see the next item
     <div data-bedrock-reel="snapType:proximity gutter:size2">
       {colors.map((color, i) => (
         <Component key={i} color={color} style={{ minWidth: "100%" }} />

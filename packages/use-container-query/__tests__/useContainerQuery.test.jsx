@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import ReactDOM from "react-dom/";
+import ReactDOM from "react-dom";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
 

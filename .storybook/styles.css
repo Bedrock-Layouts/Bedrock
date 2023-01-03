@@ -62,3 +62,23 @@ html:focus-within {
 .sbdocs.sbdocs:where(:is(h1, h2, h3, h4, h5, h6)) {
   font-size: var(--font-size-6);
 }
+
+.main-heading.main-heading {
+  margin: 0;
+  font-size: var(--font-size-fluid-3);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: var(--font-weight-4);
+  letter-spacing: 0.5ch;
+  color: white;
+}
+
+.main-heading.main-heading > * {
+  font-size: var(--font-size-fluid-3);
+}
+
+.main-heading.main-heading > * + * {
+  font-size: var(--font-size-fluid-2);
+  line-height: var(--font-lineheight-2);
+  letter-spacing: 0.5ch;
+}
