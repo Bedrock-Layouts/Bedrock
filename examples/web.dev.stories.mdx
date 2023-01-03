@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Canvas } from '@storybook/addon-docs';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { Stack } from '../packages/stack/src/';
 import { Split } from '../packages/split/src/';
 import { Grid } from '../packages/grid/src/';
@@ -208,7 +208,7 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
       bottom={<Component as="footer">Footer Content</Component>}
     >
       <Component as="main" style={{ minHeight: "25vh" }}>
-        Main
+        <span>Main</span>
       </Component>
     </Cover>
   </Story>
@@ -242,8 +242,9 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
     <Split gutter="size3" fraction="1/4" minItemWidth="100px">
       <Component>Min: 100px / Max: 25%</Component>
       <Component>
-        This element takes the second position, meaning it takes up the rest of
-        the remaining space.
+        {
+          "This element takes the second position, meaning it takes up the rest of the remaining space."
+        }
       </Component>
     </Split>
   </Story>

@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { Component } from './Component';
 
 import "../src/components/split.css"
@@ -167,13 +167,13 @@ By default the split will be a `1/2` split. You can change this by setting the `
       <Component />
     </div>
     <h3>auto-start</h3>
-    <p>(The first Component has a width of 100px)</p>
+    (The first Component has a width of 100px)
     <div data-bedrock-split="fraction:auto-start gutter:size3">
       <Component />
       <Component />
     </div>
     <h3>auto-end</h3>
-    <p>(The second Component has a width of 100px)</p>
+    (The second Component has a width of 100px)
     <div data-bedrock-split="fraction:auto-end gutter:size3">
       <Component />
       <Component />

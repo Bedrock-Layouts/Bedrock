@@ -1,6 +1,6 @@
 import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import * as React from "react";
-import ReactDOM from "react-dom/";
+import ReactDOM from "react-dom";
 import { act } from "react-dom/test-utils";
 import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 

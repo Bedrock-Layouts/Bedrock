@@ -1,5 +1,5 @@
 import { Cover } from '../src/index';
-import { Meta, Story, Canvas, ArgsTable, Preview, } from '@storybook/addon-docs/';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 
 import { argTypes } from './argTypes'
 
@@ -26,7 +26,6 @@ yarn add @bedrock-layout/cover
 <Story
   name="API"
   argTypes={argTypes}
-  // This is preventing sorybook from rendering the component
   args={{ minHeight: "0px", top: "", bottom: "" }}
 />
 
@@ -42,10 +41,9 @@ The `Cover` component can be used with any React node as its child. The child wi
   <Story name="With children">
     <Cover minHeight="50vh" gutter="size2">
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -59,10 +57,9 @@ The `top` prop can be used to render a top section.
   <Story name="top">
     <Cover minHeight="50vh" gutter="size2" top={<span>I am on top.</span>}>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -80,10 +77,9 @@ The `bottom` prop can be used to render a bottom section.
       bottom={<span>I am on bottom.</span>}
     >
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -102,10 +98,9 @@ Both the `top` and `bottom` props can be used to render a top and bottom section
       bottom={<span>I am on bottom.</span>}
     >
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -124,10 +119,9 @@ The `minHeight` prop can be used to set the minimum height of the cover. The def
       bottom={<span>I am on bottom.</span>}
     >
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -330,10 +324,9 @@ The `stretchContent` prop can be used to stretch the content to the full height 
       bottom={<span>I am on bottom.</span>}
     >
       <div style={{ border: "1px solid black" }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
   </Story>
@@ -350,10 +343,9 @@ Experiment with this story with the Controls addon in the Canvas tab.
 export const Template = ({top, bottom,...args}) =>  (
     <Cover {...args} top={<span>{top}</span>} bottom={<span>{bottom}</span>}>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
-        architecto doloribus aperiam sapiente, incidunt nihil suscipit
-        voluptatibus tempore est dolor! Iusto, vero.
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
       </div>
     </Cover>
 );

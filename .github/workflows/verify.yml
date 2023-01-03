@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - run: yarn config set registry https://registry.npmjs.org
       - run: yarn
       - run: yarn verify
       - run: git checkout main
