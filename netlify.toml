@@ -3,3 +3,10 @@ force = true
 from = "/src-components-use-forwarded-ref"
 status = 301
 to = "/?path=/docs/hooks-useforwardedref--page"
+
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook"
+status = 301
+to = "/sb-addons/storybook"
+
