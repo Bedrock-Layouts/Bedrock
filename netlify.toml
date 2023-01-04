@@ -6,7 +6,36 @@ to = "/?path=/docs/hooks-useforwardedref--page"
 
 [[redirects]]
 force = true
-from = "/sb-addons/.storybook"
+from = "/sb-addons/.storybook/manager-bundle.css"
 status = 301
-to = "/sb-addons/storybook"
+to = "/sb-addons/storybook/manager-bundle.css"
 
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/manager-bundle.css.LEGAL.txt"
+status = 301
+to = "/sb-addons/storybook/manager-bundle.css.LEGAL.txt"
+
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/manager-bundle.css.map"
+status = 301
+to = "/sb-addons/storybook/manager-bundle.css.map"
+
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/manager-bundle.mjs"
+status = 301
+to = "/sb-addons/storybook/manager-bundle.mjs"
+
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/manager-bundle.mjs.LEGAL.txt"
+status = 301
+to = "/sb-addons/storybook/manager-bundle.mjs.LEGAL.txt"
+
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/manager-bundle.mjs.map"
+status = 301
+to = "/sb-addons/storybook/manager-bundle.mjs.map"

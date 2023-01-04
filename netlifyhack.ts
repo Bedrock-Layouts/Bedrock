@@ -6,6 +6,9 @@ const storybookStatic = path.join(__dirname, "storybook-static");
 const sbAddons = path.join(storybookStatic, "sb-addons");
 const hiddenStorybook = path.join(sbAddons, ".storybook");
 const nonHiddenStorybook = path.join(sbAddons, "storybook");
+
+const netlifyToml = path.join(__dirname, "netlify.toml");
+
 (async () => {
   try {
     await promisify(fs.rename)(hiddenStorybook, nonHiddenStorybook);
@@ -13,6 +16,25 @@ const nonHiddenStorybook = path.join(sbAddons, "storybook");
     if (!files.includes("storybook")) {
       throw new Error("Failed to rename .storybook to storybook");
     }
+
+    const storybookFiles = await promisify(fs.readdir)(nonHiddenStorybook);
+    const baseToml = `[[redirects]]
+force = true
+from = "/src-components-use-forwarded-ref"
+status = 301
+to = "/?path=/docs/hooks-useforwardedref--page"
+`;
+    const tomlContent = storybookFiles.reduce((base, file) => {
+      return `${base}
+[[redirects]]
+force = true
+from = "/sb-addons/.storybook/${file}"
+status = 301
+to = "/sb-addons/storybook/${file}"
+`;
+    }, baseToml);
+
+    await promisify(fs.writeFile)(netlifyToml, tomlContent);
     // eslint-disable-next-line no-console
     console.log("Renamed .storybook to storybook");
   } catch (e) {
