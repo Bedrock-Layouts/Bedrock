@@ -2,6 +2,7 @@ import { Meta } from "@storybook/addon-docs";
 import { Inline } from "../../packages/inline/src";
 import { Button } from "../ui-components/Button";
 import { Reel } from "../../packages/reel/src";
+import { Intl, NameSpace } from "../ui-components/Intl";
 
 <Meta
   title="Getting Started/Lesson 3: Spacing"
@@ -124,13 +125,13 @@ Now that we have our first component that stacks elements in the block direction
     as="a"
     href="/?path=/docs/getting-started-lesson-2-your-first-component--page"
   >
-    Your First Component
+    <Intl>Your First Component</Intl>
   </Button>
   <span />
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-4-the-menu-component--page"
   >
-    The Menu Component
+    <Intl>The Menu Component</Intl>
   </Button>
 </Inline>
