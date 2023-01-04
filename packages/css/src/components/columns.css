@@ -7,13 +7,6 @@
 */
 
 [data-bedrock-columns] {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, 0);
-}
-
-[data-bedrock-columns][data-bedrock-columns] > * {
   --numberOfGutters: calc(var(--columns, 1) - 1);
   --largestWidth: calc(
     100% - max(var(--gutter, 0px) * var(--numberOfGutters), 0px)
@@ -22,11 +15,18 @@
   --basis: calc(
     (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
   );
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, 0);
+}
+
+[data-bedrock-columns][data-bedrock-columns] > * {
   margin: 0;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: var(--basis);
-  min-inline-size: min(min(var(--columnWidth), 100%), var(--largestWidth));
+  min-inline-size: min(min(var(--columnWidth), 100%), 100%);
   max-inline-size: min(max(var(--basis), var(--columnWidth)), 100%);
 }
 
