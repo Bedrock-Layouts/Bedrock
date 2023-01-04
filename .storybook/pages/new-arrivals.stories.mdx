@@ -2,6 +2,7 @@ import { Meta } from "@storybook/addon-docs";
 import { Center } from "../../packages/center/src";
 import { Inline } from "../../packages/inline/src";
 import { Button } from "../ui-components/Button";
+import { Intl, NameSpace } from "../ui-components/Intl";
 import cardInitial from "../assets/card-initial.png";
 import cardStyled from "../assets/card-styled.png";
 import columnDrop from "../assets/column-drop.png";
@@ -282,10 +283,8 @@ If you are interested in contributing you can learn more about [contributing cod
 
 Thank you again for taking the time to learn more about Bedrock Layout Primitives. I hope you enjoyed it.
 
-<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
+<Inline gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-5-the-hero--page">
-    The Hero
+    <Intl>The Hero</Intl>
   </Button>
-  <span />
-  <span />
 </Inline>

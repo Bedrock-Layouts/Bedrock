@@ -2,6 +2,7 @@ import { Meta } from "@storybook/addon-docs";
 import { Center } from "../../packages/center/src";
 import { Inline } from "../../packages/inline/src";
 import { Button } from "../ui-components/Button";
+import { Intl, NameSpace } from "../ui-components/Intl";
 import menuStart from "../assets/menu-start.png";
 import menuMobile from "../assets/menu-mobile.png";
 import menuInline from "../assets/menu-just-inline.png";
@@ -162,10 +163,10 @@ In the next section we will start to fill out our landing page by adding a Hero 
 
 <Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-3-spacing--page">
-    Spacing
+    <Intl>Spacing</Intl>
   </Button>
   <span />
   <Button as="a" href="/?path=/docs/getting-started-lesson-5-the-hero--page">
-    The Hero
+    <Intl>The Hero</Intl>
   </Button>
 </Inline>

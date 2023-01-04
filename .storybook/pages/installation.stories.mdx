@@ -2,6 +2,7 @@ import { Meta } from "@storybook/addon-docs";
 import { Center } from "../../packages/center/src";
 import { Inline } from "../../packages/inline/src";
 import { Button } from "../ui-components/Button";
+import { Intl, NameSpace } from "../ui-components/Intl";
 import initialSetup from "../assets/initial-setup.png";
 
 <Meta
@@ -75,13 +76,13 @@ We are now ready to start building our layout. In the next section, we will lear
 
 <Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-introduction--page">
-    Introduction
+    <Intl>Introduction</Intl>
   </Button>
   <span />
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-2-your-first-component--page"
   >
-    Your First Component
+    <Intl>Your First Component</Intl>
   </Button>
 </Inline>
