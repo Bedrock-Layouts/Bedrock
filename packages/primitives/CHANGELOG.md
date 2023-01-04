@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@3.0.7...@bedrock-layout/primitives@3.0.8) (2023-01-04)
+
+**Note:** Version bump only for package @bedrock-layout/primitives
+
 ## [3.0.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@3.0.6...@bedrock-layout/primitives@3.0.7) (2023-01-03)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.2...@bedrock-layout/css@2.2.3) (2023-01-04)
+
+### Bug Fixes
+
+- **docs:** fix links in docs site ([efa2861](https://github.com/Bedrock-Layouts/Bedrock/commit/efa2861ecfd2dbb5804320b86a81a6caa8b49fb5)), closes [#1631](https://github.com/Bedrock-Layouts/Bedrock/issues/1631)
+
 ## [2.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.1...@bedrock-layout/css@2.2.2) (2023-01-03)
 
 ### Bug Fixes
