@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: yarn config set registry https://registry.npmjs.org
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic

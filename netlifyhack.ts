@@ -11,7 +11,17 @@ const netlifyToml = path.join(__dirname, "netlify.toml");
 
 (async () => {
   try {
-    await promisify(fs.rename)(hiddenStorybook, nonHiddenStorybook);
+    await promisify(fs.mkdir)(nonHiddenStorybook);
+    const hiddenStorybookFiles = await promisify(fs.readdir)(hiddenStorybook);
+
+    await Promise.all(
+      hiddenStorybookFiles.map(async (file) => {
+        const from = path.join(hiddenStorybook, file);
+        const to = path.join(nonHiddenStorybook, file);
+        await promisify(fs.copyFile)(from, to);
+      })
+    );
+
     const files = await promisify(fs.readdir)(sbAddons);
     if (!files.includes("storybook")) {
       throw new Error("Failed to rename .storybook to storybook");
@@ -22,7 +32,7 @@ const netlifyToml = path.join(__dirname, "netlify.toml");
 force = true
 from = "/src-components-use-forwarded-ref"
 status = 301
-to = "/?path=/docs/hooks-useforwardedref--page"
+to = "/?path=/docs/hooks-useforwardedref--docs"
 `;
     const tomlContent = storybookFiles.reduce((base, file) => {
       return `${base}
