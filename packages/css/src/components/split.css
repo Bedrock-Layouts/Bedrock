@@ -3,6 +3,7 @@
 */
 
 [data-bedrock-split] {
+  --largestWidth: calc(100% - var(--gutter, 0px));
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +53,6 @@
     [data-bedrock-split~="fraction:auto-start"]
   )
   > *:nth-child(even) {
-  --largestWidth: calc(100% - var(--gutter, 0px));
   flex-basis: calc(
     (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
   );
@@ -69,7 +69,6 @@
     [data-bedrock-split~="fraction:auto-end"]
   )
   > *:nth-child(odd) {
-  --largestWidth: calc(100% - var(--gutter, 0px));
   flex-basis: calc(
     (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
   );
