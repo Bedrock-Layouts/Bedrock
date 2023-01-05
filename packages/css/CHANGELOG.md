@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.3...@bedrock-layout/css@2.2.4) (2023-01-05)
+
+### Bug Fixes
+
+- **columns:** fix where gutters are calculated ([e11368a](https://github.com/Bedrock-Layouts/Bedrock/commit/e11368a2bf54e2d00ae13c39198eeeff63b9b600)), closes [#1633](https://github.com/Bedrock-Layouts/Bedrock/issues/1633)
+
 ## [2.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.2...@bedrock-layout/css@2.2.3) (2023-01-04)
 
 ### Bug Fixes
