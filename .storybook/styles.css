@@ -1,6 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-family: var(--font-sans);
   margin: 0 auto !important;
   padding: 0 !important;
   max-width: 90vw;
@@ -81,4 +80,84 @@ html:focus-within {
   font-size: var(--font-size-fluid-2);
   line-height: var(--font-lineheight-2);
   letter-spacing: 0.5ch;
+}
+
+[data-card] {
+  --titleColor: var(--gray-12);
+  --fontColor: var(--gray-7);
+  --labelColor: var(--gray-8);
+  --selectBackground: none;
+  --selectColor: var(--gray-7);
+  --selectBorder: var(--border-size-1) solid var(--gray-3);
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-3);
+  font-size: var(--font-size-3);
+  font-family: var(--font-sans);
+  color: var(--fontColor);
+}
+
+[data-card~="dark"] {
+  --titleColor: var(--gray-0);
+  --fontColor: var(--gray-5);
+  --labelColor: var(--gray-2);
+  --selectBackground: var(--gray-8);
+  --selectColor: var(--gray-4);
+  --selectBorder: none;
+  background-color: var(--gray-10);
+}
+
+[data-card~="image"] {
+  background-color: var(--indigo-12);
+  background-image: url("/people.jpeg");
+  background-position: cover;
+  background-blend-mode: multiply, luminosity;
+}
+
+[data-card-title] {
+  font-size: var(--font-size-8);
+  color: var(--titleColor);
+}
+
+[data-card-subtitle] {
+  color: var(--blue-8);
+  font-weight: var(--font-weight-6);
+}
+
+[data-select] {
+  position: relative;
+  color: var(--labelColor);
+  font-size: var(--font-size-2);
+}
+
+[data-select]::after {
+  --size: var(--size-5);
+  content: " ";
+  background-color: var(--selectColor);
+  width: var(--size);
+  height: var(--size);
+  clip-path: path(
+    "M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+  );
+  position: absolute;
+  right: var(--size-1);
+  bottom: 0;
+}
+
+[data-select] > select {
+  -webkit-appearance: none;
+  border-radius: var(--radius-2);
+  background-color: var(--selectBackground);
+  color: var(--selectColor);
+  font-size: var(--font-size-1);
+  padding-block: var(--size-1);
+  padding-inline: var(--size-2);
+  border: var(--selectBorder);
+  position: relative;
+}
+
+[data-input] {
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-1);
+  border: var(--border-size-1) solid var(--gray-3);
+  position: relative;
 }
