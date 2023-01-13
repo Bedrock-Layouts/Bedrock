@@ -12,10 +12,12 @@ export interface DefaultTheme {}
 
 export const ThemeContext = createContext<DefaultTheme>({});
 
+/* c8 ignore next */
 export function useTheme(): DefaultTheme {
   return useContext(ThemeContext) ?? {};
 }
 
+/* c8 ignore next */
 export function ThemeProvider({
   theme,
   children,

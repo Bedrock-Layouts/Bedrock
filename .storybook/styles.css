@@ -161,3 +161,27 @@ html:focus-within {
   border: var(--border-size-1) solid var(--gray-3);
   position: relative;
 }
+
+[data-product-card] {
+  color: var(--gray-7);
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-3);
+  overflow: hidden;
+}
+
+[data-product-card-heading] {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-6);
+  color: var(--gray-12);
+}
+
+[data-product-card-button] {
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-2);
+  background-color: transparent;
+}
+
+[data-product-card-button]:hover,
+:focus {
+  background-color: var(--gray-3);
+}

@@ -22,9 +22,14 @@ Minimal styling has been applied to make the examples more readable.
 
 ## 12-span grid
 
-A grid broken up into 12 segments where you can place areas onto the tracks evenly. Uses the `<Columns>` and `<Column>` components.
+<p id="12-span-grid">
+  A grid broken up into 12 segments where you can place areas onto the tracks
+  evenly.{" "}
+</p>
 
-<Canvas withSource="open">
+Uses the `<Columns>` and `<Column>` components.
+
+<Canvas>
   <Story name="12-span grid">
     <Columns gutter="size3" columns={12}>
       <Column span={12}>
@@ -43,13 +48,35 @@ A grid broken up into 12 segments where you can place areas onto the tracks even
   </Story>
 </Canvas>
 
+```jsx
+<Columns gutter="size3" columns={12}>
+  <Column span={12}>
+    <Component>Span 12</Component>
+  </Column>
+  <Column span={6} offsetEnd={6}>
+    <Component>Span 6 (offsetEnd 6)</Component>
+  </Column>
+  <Column offsetStart={3} offsetEnd={5} span={4}>
+    <Component>Span 4 (offsetStart 3, offsetEnd 5)</Component>
+  </Column>
+  <Column offsetStart={2} span={2}>
+    <Component>Span 2 (offsetStart 2)</Component>
+  </Column>
+</Columns>
+```
+
 ## Aspect ratio image card
 
-Maintains the aspect ratio of an image in a card, while letting you resize the card. Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
+<p id="ratio-image-card">
+  Maintains the aspect ratio of an image in a card, while letting you resize the
+  card.
+</p>
+
+Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
 
 (The `<Center` component is used to center and clamp the width of the card in the example.)
 
-<Canvas withSource="open">
+<Canvas>
   <Story name="Aspect ratio image card">
     <Center maxWidth="25rem">
       <PadBox
@@ -68,42 +95,35 @@ Maintains the aspect ratio of an image in a card, while letting you resize the c
   </Story>
 </Canvas>
 
-## Clamping card
-
-Sets an absolute min and max size, and an actual size for the card.
-
-You can learn more about this pattern in the [clamping card](https://web.dev/layout/clamping-card) page of web.dev, but to summarize: This pattern uses the `clamp` function in CSS to clamp the width of the card between a min and max width.
-
-At this time, Bedrock Layout Primitives does not have a layout component that would provide a benefit beyond what you can already do in CSS.
-
-<Canvas withSource="open">
-  <Story name="Clamping card">
-    <Center centerChildren>
-      <PadBox
-        as={Stack}
-        gutter="size3"
-        padding="size7"
-        style={{ border: "1px solid black", width: "clamp(23ch, 60%, 46ch)" }}
-      >
-        <h1>Video Title</h1>
-        <Frame ratio={[16, 9]}>
-          <img src={jacketPic} alt="Computer" />
-        </Frame>
-        <p>Descriptive Text goes here</p>
-      </PadBox>
-    </Center>
-  </Story>
-</Canvas>
-
-[I am open to suggestions.](/?path=/docs/overview-contributing--docs)
+```jsx
+<Center maxWidth="25rem">
+  <PadBox
+    as={Stack}
+    gutter="size3"
+    padding="size7"
+    style={{ border: "1px solid black" }}
+  >
+    <h1>Video Title</h1>
+    <Frame ratio={[16, 9]}>
+      <img src={jacketPic} alt="Computer" />
+    </Frame>
+    <p>Descriptive Text goes here</p>
+  </PadBox>
+</Center>
+```
 
 ## Deconstructed pancake
 
-Create a layout that stretches to fit the space, and snaps to the next line at a minimum size. Uses the `<ColumnDrop>` component.
+<p id="deconstructed-pancake">
+  Create a layout that stretches to fit the space, and snaps to the next line at
+  a minimum size.
+</p>
+
+Uses the `<ColumnDrop>` component.
 
 (The `<Center` component is used to center and clamp the width of the card in the example.)
 
-<Canvas withSource="open">
+<Canvas>
   <Story name="Deconstructed pancake">
     <Center maxWidth="25rem">
       <ColumnDrop gutter="size2" minItemWidth="150px">
@@ -114,6 +134,16 @@ Create a layout that stretches to fit the space, and snaps to the next line at a
     </Center>
   </Story>
 </Canvas>
+
+```jsx
+<Center maxWidth="25rem">
+  <ColumnDrop gutter="size2" minItemWidth="150px">
+    <Component>1</Component>
+    <Component>2</Component>
+    <Component>3</Component>
+  </ColumnDrop>
+</Center>
+```
 
 ## Holy grail layout
 

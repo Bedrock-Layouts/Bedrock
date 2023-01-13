@@ -12,7 +12,6 @@ import React, { CSSProperties } from "react";
 export interface ColumnsProps {
   gutter?: Gutter;
   columns?: number;
-  forwardedAs?: unknown;
   switchAt?: number | CSSLength | SizesOptions;
   children?: React.ReactNode;
 }
