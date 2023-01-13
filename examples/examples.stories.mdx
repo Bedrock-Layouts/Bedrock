@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { Stack } from '../packages/stack/src/';
 import { Cover } from '../packages/cover/src/';
+import { Inline } from '../packages/inline/src/';
 import { Center } from '../packages/center/src/';
 import { Frame } from '../packages/frame/src/';
 import { Columns, Column } from '../packages/columns/src/';
@@ -24,38 +25,78 @@ Uses the `<Split>` component to split the image and the description into two col
 
 <Canvas>
   <Story name="Product Card">
-    <Split fraction="1/4" gutter="size000">
-      <img src={jacketPic} alt="Computer" />
+    <Split data-product-card fraction="1/4" gutter="size000">
+      <Frame>
+        <img src={jacketPic} alt="Computer" />
+      </Frame>
       <Stack as={PadBox} padding="size3" gutter="size3">
         <header>
-          <span>Classic Utility Jacket</span>
+          <span data-product-card-heading>Classic Utility Jacket</span>
         </header>
         <p>In Stock</p>
-        <div>
-          <button>Buy Now</button>
-          <button>Add To Bag</button>
-          <button>Like</button>
-        </div>
+        <Inline gutter="size3">
+          <PadBox
+            as="button"
+            data-product-card-button
+            padding={["size1", "size3"]}
+          >
+            Buy Now
+          </PadBox>
+          <PadBox
+            as="button"
+            data-product-card-button
+            padding={["size1", "size3"]}
+          >
+            Add To Bag
+          </PadBox>
+          <PadBox
+            as="button"
+            data-product-card-button
+            padding={["size1", "size3"]}
+          >
+            Like
+          </PadBox>
+        </Inline>
       </Stack>
     </Split>
   </Story>
 </Canvas>
 
 ```jsx
-    <Split fraction="1/4" gutter="size000">
-      <img src={jacketPic} alt="Computer" />
-      <Stack as={PadBox} padding="size3" gutter="size3">
-        <header>
-          <span>Classic Utility Jacket</span>
-        </header>
-        <p>In Stock</p>
-        <div>
-          <button>Buy Now</button>
-          <button>Add To Bag</button>
-          <button>Like</button>
-        </div>
-      </Stack>
-    </Split>
+<Split data-product-card fraction="1/4" gutter="size000">
+  <Frame>
+    <img src={jacketPic} alt="Computer" />
+  </Frame>
+  <Stack as={PadBox} padding="size3" gutter="size3">
+    <header>
+      <span data-product-card-heading>Classic Utility Jacket</span>
+    </header>
+    <p>In Stock</p>
+    <Inline gutter="size3">
+      <PadBox
+        as="button"
+        data-product-card-button
+        padding={["size1", "size3"]}
+      >
+        Buy Now
+      </PadBox>
+      <PadBox
+        as="button"
+        data-product-card-button
+        padding={["size1", "size3"]}
+      >
+        Add To Bag
+      </PadBox>
+      <PadBox
+        as="button"
+        data-product-card-button
+        padding={["size1", "size3"]}
+      >
+        Like
+      </PadBox>
+    </Inline>
+  </Stack>
+</Split>
 ```
 
 ## Basic Form
@@ -150,84 +191,84 @@ Uses the `<Stack>`, `<Columns>` and the `<Column>` components.
 
 ```jsx
 <Columns as="form" gutter="size3" columns={6}>
-      <Column span={3}>
-        <Stack as="label" gutter="size3">
-          First Name
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={3}>
-        <Stack as="label" gutter="size3">
-          Last Name
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={4}>
-        <Stack as="label" gutter="size3">
-          Email
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={6}>
-        <Stack as="label" gutter="size3">
-          Street Address
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={2}>
-        <Stack as="label" gutter="size3">
-          City
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={2}>
-        <Stack as="label" gutter="size3">
-          State
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-      <Column span={2}>
-        <Stack as="label" gutter="size3">
-          Zip Code
-          <PadBox
-            padding={["size1", "size2"]}
-            as="input"
-            data-input
-            type="text"
-          />
-        </Stack>
-      </Column>
-    </Columns>
+  <Column span={3}>
+    <Stack as="label" gutter="size3">
+      First Name
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={3}>
+    <Stack as="label" gutter="size3">
+      Last Name
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={4}>
+    <Stack as="label" gutter="size3">
+      Email
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={6}>
+    <Stack as="label" gutter="size3">
+      Street Address
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={2}>
+    <Stack as="label" gutter="size3">
+      City
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={2}>
+    <Stack as="label" gutter="size3">
+      State
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+  <Column span={2}>
+    <Stack as="label" gutter="size3">
+      Zip Code
+      <PadBox
+        padding={["size1", "size2"]}
+        as="input"
+        data-input
+        type="text"
+      />
+    </Stack>
+  </Column>
+</Columns>
 ```
 
 ## Avatar
@@ -251,15 +292,15 @@ Uses the `<Frame>` component to create a circular frame around the image.
 </Canvas>
 
 ```jsx
-    <Frame
-      ratio="1/1"
-      style={{ borderRadius: "50%", width: "100px", height: "100px" }}
-    >
-      <img
-        src="https://avatars.githubusercontent.com/u/5460770?v=4"
-        alt="The most handsome developer in the world: Travis Waith-Mair."
-      />
-    </Frame>
+<Frame
+  ratio="1/1"
+  style={{ borderRadius: "50%", width: "100px", height: "100px" }}
+>
+  <img
+    src="https://avatars.githubusercontent.com/u/5460770?v=4"
+    alt="The most handsome developer in the world: Travis Waith-Mair."
+  />
+</Frame>
 ```
 
 ## Header Sections
@@ -348,73 +389,73 @@ Uses the `<Stack>`, `<Split>`, `<Cover>`, `<Center>`, and the `<PadBox>` compone
 
 ```jsx
 <Stack as="main" gutter="size7">
-      <Cover as={PadBox} padding="size7" data-card minHeight="sizeXs">
-        <Center maxWidth="sizeContent3" centerChildren centerText>
-          <p data-card-subtitle>Pricing</p>
-          <h2 data-card-title>Take Control of Your Team.</h2>
-          <Center as="p" maxWidth="sizeContent2">
-            Start building for free, then add a site plan to go live. Account
-            plans unlock additional features.
-          </Center>
-        </Center>
-      </Cover>
+  <Cover as={PadBox} padding="size7" data-card minHeight="sizeXs">
+    <Center maxWidth="sizeContent3" centerChildren centerText>
+      <p data-card-subtitle>Pricing</p>
+      <h2 data-card-title>Take Control of Your Team.</h2>
+      <Center as="p" maxWidth="sizeContent2">
+        Start building for free, then add a site plan to go live. Account
+        plans unlock additional features.
+      </Center>
+    </Center>
+  </Cover>
 
-      <Split
-        as={PadBox}
-        padding="size7"
-        data-card="dark"
-        fraction="3/4"
-        minItemWidth="sizeContent1"
-      >
-        <Cover minHeight="sizeXs">
-          <h2 data-card-title>Pricing Plans</h2>
-          <p>Start building for free, then add a site plan to go live.</p>
-          <p>Account plans unlock additional features.</p>
-        </Cover>
-        <Cover minHeight="0px">
-          <Stack data-select as="label" gutter="size2">
-            Currency
-            <select data-select>
-              <option>United States (USD)</option>
-            </select>
-          </Stack>
-        </Cover>
-      </Split>
+  <Split
+    as={PadBox}
+    padding="size7"
+    data-card="dark"
+    fraction="3/4"
+    minItemWidth="sizeContent1"
+  >
+    <Cover minHeight="sizeXs">
+      <h2 data-card-title>Pricing Plans</h2>
+      <p>Start building for free, then add a site plan to go live.</p>
+      <p>Account plans unlock additional features.</p>
+    </Cover>
+    <Cover minHeight="0px">
+      <Stack data-select as="label" gutter="size2">
+        Currency
+        <select data-select>
+          <option>United States (USD)</option>
+        </select>
+      </Stack>
+    </Cover>
+  </Split>
 
-      <Split
-        as={PadBox}
-        padding="size7"
-        data-card
-        fraction="3/4"
-        minItemWidth="sizeContent1"
-      >
-        <Cover minHeight="sizeXs">
-          <h2 data-card-title>Pricing Plans</h2>
-          <p>Start building for free, then add a site plan to go live.</p>
-          <p>Account plans unlock additional features.</p>
-        </Cover>
-        <Cover minHeight="0px">
-          <Stack data-select as="label" gutter="size2">
-            Currency
-            <select data-select>
-              <option>United States (USD)</option>
-            </select>
-          </Stack>
-        </Cover>
-      </Split>
+  <Split
+    as={PadBox}
+    padding="size7"
+    data-card
+    fraction="3/4"
+    minItemWidth="sizeContent1"
+  >
+    <Cover minHeight="sizeXs">
+      <h2 data-card-title>Pricing Plans</h2>
+      <p>Start building for free, then add a site plan to go live.</p>
+      <p>Account plans unlock additional features.</p>
+    </Cover>
+    <Cover minHeight="0px">
+      <Stack data-select as="label" gutter="size2">
+        Currency
+        <select data-select>
+          <option>United States (USD)</option>
+        </select>
+      </Stack>
+    </Cover>
+  </Split>
 
-      <Cover
-        as={PadBox}
-        padding="size7"
-        data-card="dark image"
-        minHeight="sizeXs"
-      >
-        <h2 data-card-title>Get in Touch</h2>
-        <p>
-          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
-          lacus nisi urna, arcu socis eu. Orci vel lectus nisl eget get ut
-          consectetur. Sit justo viverra non adipisicing elit distinctio.
-        </p>
-      </Cover>
-    </Stack>
+  <Cover
+    as={PadBox}
+    padding="size7"
+    data-card="dark image"
+    minHeight="sizeXs"
+  >
+    <h2 data-card-title>Get in Touch</h2>
+    <p>
+      Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
+      lacus nisi urna, arcu socis eu. Orci vel lectus nisl eget get ut
+      consectetur. Sit justo viverra non adipisicing elit distinctio.
+    </p>
+  </Cover>
+</Stack>
 ```

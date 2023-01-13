@@ -123,6 +123,14 @@ describe("Size Constants", () => {
       undefined
     );
   });
+
+  it("should return a undefined if size key is undefined", () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    expect(
+      constants.getSizeValue({ sizes: { "1x": "1199px" } }, undefined)
+    ).toBe(undefined);
+  });
 });
 
 describe("checkIsCSSLength", () => {

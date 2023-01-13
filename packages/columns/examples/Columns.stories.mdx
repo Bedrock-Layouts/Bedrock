@@ -4,7 +4,11 @@ import { Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs';
 import { Component } from './Component'
 import { columnsArgTypes, columnArgTypes } from './argTypes'
 
-<Meta title="Spacer Components/Columns" parameters={{ viewMode: "docs" }} />
+<Meta
+  component={Columns}
+  title="Spacer Components/Columns"
+  parameters={{ viewMode: "docs" }}
+/>
 
 # Columns
 
@@ -15,6 +19,7 @@ The `Columns` component is designed to create a n-column layout. The complimenta
 Some examples of where you might use a `Columns` and `Column` component are:
 
 - [Basic Form](/docs/examples-basic--docs#basic-form)
+- [12 Span Grid](/docs/examples-web-dev--docs#12-span-grid)
 
 ## Installation
 
@@ -26,19 +31,7 @@ yarn add @bedrock-layout/columns
 
 ### Columns props
 
-<Story name="Columns props" argTypes={columnsArgTypes}>
-  <Columns />
-</Story>
-
-<ArgsTable component={Column} story="Columns props" />
-
-### Column props
-
-<Story name="Column props" argTypes={columnArgTypes}>
-  <Column />
-</Story>
-
-<ArgsTable story="Column props" />
+<ArgsTable component={Columns} />
 
 ## columns
 

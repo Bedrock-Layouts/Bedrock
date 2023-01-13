@@ -12,7 +12,7 @@
   "author": "Jarvis1010 <travis.mair@gmail.com>",
   "homepage": "https://bedrock-layout.dev/",
   "scripts": {
-    "start": "storybook dev -p 9001 -c .storybook",
+    "start": "storybook dev --docs -p 9001 -c .storybook",
     "test": "vitest --run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest --watch --notify",
@@ -25,7 +25,7 @@
     "cz": "cz",
     "clean": "lerna clean",
     "build": "lerna run build",
-    "build:storybook": "storybook build && ts-node netlifyhack.ts",
+    "build:storybook": "storybook build --docs && ts-node netlifyhack.ts",
     "prepublish": "yarn build",
     "publish": "lerna publish",
     "publish:ci": "yarn publish -- --no-commit-hooks --ignore-scripts",
