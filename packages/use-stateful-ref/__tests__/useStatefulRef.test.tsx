@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { act } from "react-dom/test-utils";
 import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 
@@ -53,9 +53,8 @@ describe("useStatefulRef", () => {
 
   it("should call useState", () => {
     act(() => {
-      ReactDOM.render(
-        <HookWrapper value={undefined} initialValue={undefined} />,
-        container
+      ReactDOM.createRoot(container).render(
+        <HookWrapper value={undefined} initialValue={undefined} />
       );
     });
 
@@ -64,9 +63,8 @@ describe("useStatefulRef", () => {
 
   it("should call setState when setting value", () => {
     act(() => {
-      ReactDOM.render(
-        <HookWrapper initialValue="Testing" value="Test" />,
-        container
+      ReactDOM.createRoot(container).render(
+        <HookWrapper initialValue="Testing" value="Test" />
       );
     });
 
@@ -78,9 +76,8 @@ describe("useStatefulRef", () => {
     expect(setState).not.toBeCalled();
 
     act(() => {
-      ReactDOM.render(
-        <HookWrapper initialValue="Test" value="Test" />,
-        container
+      ReactDOM.createRoot(container).render(
+        <HookWrapper initialValue="Test" value="Test" />
       );
     });
 
