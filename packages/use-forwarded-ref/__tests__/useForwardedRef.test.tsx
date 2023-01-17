@@ -10,7 +10,7 @@ const { useForwardedRef } = imports;
 
 vi.mock("@bedrock-layout/use-stateful-ref", () => {
   const fn = vi.fn(() => {
-    let value = undefined;
+    let value: unknown = undefined;
     return {
       set current(val) {
         value = val;
@@ -26,7 +26,7 @@ vi.mock("@bedrock-layout/use-stateful-ref", () => {
   };
 });
 
-let safeRef;
+let safeRef: React.MutableRefObject<unknown> | undefined;
 const HookWrapper = React.forwardRef(
   ({ isStateful }: { isStateful?: boolean }, ref) => {
     const config = isStateful === undefined ? undefined : { isStateful };
@@ -37,7 +37,7 @@ const HookWrapper = React.forwardRef(
 );
 
 describe("useForwardedRef", () => {
-  let container;
+  let container: Node;
 
   beforeEach(() => {
     container = document.createElement("div");
@@ -48,6 +48,8 @@ describe("useForwardedRef", () => {
     safeRef = undefined;
 
     document.body.removeChild(container);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     container = null;
   });
 
@@ -57,6 +59,8 @@ describe("useForwardedRef", () => {
 
   test("useStatefulRef is called", () => {
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(<HookWrapper />);
     });
 
@@ -67,6 +71,8 @@ describe("useForwardedRef", () => {
   it("should call ref callback", () => {
     const ref = vi.fn();
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(<HookWrapper ref={ref} />);
     });
     expect(ref).toBeCalled();
@@ -75,6 +81,8 @@ describe("useForwardedRef", () => {
   it("should update a ref object", () => {
     const ref = { current: undefined };
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(<HookWrapper ref={ref} />);
     });
     expect(ref).toMatchSnapshot();
