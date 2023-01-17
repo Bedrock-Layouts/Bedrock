@@ -1,6 +1,6 @@
 import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import * as React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { act } from "react-dom/test-utils";
 import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 
@@ -57,7 +57,7 @@ describe("useForwardedRef", () => {
 
   test("useStatefulRef is called", () => {
     act(() => {
-      ReactDOM.render(<HookWrapper />, container);
+      ReactDOM.createRoot(container).render(<HookWrapper />);
     });
 
     expect(useStatefulRef).toBeCalled();
@@ -67,7 +67,7 @@ describe("useForwardedRef", () => {
   it("should call ref callback", () => {
     const ref = vi.fn();
     act(() => {
-      ReactDOM.render(<HookWrapper ref={ref} />, container);
+      ReactDOM.createRoot(container).render(<HookWrapper ref={ref} />);
     });
     expect(ref).toBeCalled();
   });
@@ -75,7 +75,7 @@ describe("useForwardedRef", () => {
   it("should update a ref object", () => {
     const ref = { current: undefined };
     act(() => {
-      ReactDOM.render(<HookWrapper ref={ref} />, container);
+      ReactDOM.createRoot(container).render(<HookWrapper ref={ref} />);
     });
     expect(ref).toMatchSnapshot();
   });

@@ -6,6 +6,8 @@ import "regenerator-runtime/runtime";
 
 import { vi } from "vitest";
 
+global.IS_REACT_ACT_ENVIRONMENT = true;
+
 Object.defineProperty(global, "CSS", {
   writable: true,
   value: {
