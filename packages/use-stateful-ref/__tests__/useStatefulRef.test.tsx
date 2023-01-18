@@ -22,8 +22,15 @@ React.useState.mockImplementation((initialValue) => {
   return [state, setState];
 });
 
-let statefulRef;
-const HookWrapper = ({ value, initialValue }) => {
+let statefulRef: React.MutableRefObject<unknown> | undefined;
+
+const HookWrapper = ({
+  value,
+  initialValue,
+}: {
+  value: unknown;
+  initialValue: unknown;
+}) => {
   statefulRef = useStatefulRef(initialValue);
   if (value) {
     statefulRef.current = value;
@@ -32,7 +39,7 @@ const HookWrapper = ({ value, initialValue }) => {
 };
 
 describe("useStatefulRef", () => {
-  let container;
+  let container: Node;
 
   beforeEach(() => {
     container = document.createElement("div");
@@ -43,6 +50,8 @@ describe("useStatefulRef", () => {
     state = undefined;
     statefulRef = undefined;
     document.body.removeChild(container);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     container = null;
     setState.mockRestore();
   });
@@ -53,6 +62,8 @@ describe("useStatefulRef", () => {
 
   it("should call useState", () => {
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(
         <HookWrapper value={undefined} initialValue={undefined} />
       );
@@ -63,6 +74,8 @@ describe("useStatefulRef", () => {
 
   it("should call setState when setting value", () => {
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(
         <HookWrapper initialValue="Testing" value="Test" />
       );
@@ -76,6 +89,8 @@ describe("useStatefulRef", () => {
     expect(setState).not.toBeCalled();
 
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       ReactDOM.createRoot(container).render(
         <HookWrapper initialValue="Test" value="Test" />
       );
