@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-forwarded-ref@2.0.2...@bedrock-layout/use-forwarded-ref@2.0.3) (2023-01-18)
+
+### Bug Fixes
+
+- update the types of the tests ([ad01a63](https://github.com/Bedrock-Layouts/Bedrock/commit/ad01a630de619385246733c7b15f3e38d834503c))
+
 ## [2.0.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-forwarded-ref@2.0.1...@bedrock-layout/use-forwarded-ref@2.0.2) (2023-01-17)
 
 **Note:** Version bump only for package @bedrock-layout/use-forwarded-ref
