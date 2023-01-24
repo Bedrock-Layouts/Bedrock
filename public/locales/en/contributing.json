@@ -19,5 +19,20 @@
     "tasks": "Many of these tasks can be accomplished by ",
     "tasksLink": "filing an issue on the GitHub repository.",
     "tasks2": "If you'd like to contribute code, please read the following guidelines below."
+  },
+  "contributingCode": {
+    "description1": "Bedrock Layout Primitives is a monorepo of packages that are currently versioned independently of each other. It also utilizes Storybook as code playground, a documentation website, and visual regression test runner in chromatic.",
+    "description2.1": "To manage all of these things, Bedrock uses ",
+    "description2.2": " to manage all the repositories into one monorepo. Lerna is used to publish to NPM, tag releases to Github, and process change logs under each package. To make the above possible in CI, Bedrock has adopted conventional commits and uses commitizen and husky to enforce it.",
+    "pullRequestsDescription": "To make a pull request, do the following:",
+    "prOption1": "Fork the repository.",
+    "prOption2": "Clone the repository from your GitHub.",
+    "prOption3": "Set up your environment by running yarn.",
+    "prOption4": "Check out a new branch and add your modification.",
+    "prOption5": "Add test cases for all your changes.",
+    "prOption6": "Update any README.md and documentation in Storybook under the examples folder in the corresponding package.",
+    "prOption7": "Use commitizen to do git commit by running yarn cz (be sure to stage your changes first). Doing this will automatically run yarn verify as a pre-commit hook when you do this. If anything fails, fix and follow this step again.",
+    "prOption8": "**DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG.**",
+    "prOption9": "Send a pull request 🙏"
   }
 }
