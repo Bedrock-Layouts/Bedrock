@@ -11350,11 +11350,6 @@ path-type@^4.0.0:
   resolved "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathe@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/pathe/-/pathe-0.2.0.tgz#30fd7bbe0a0d91f0e60bae621f5d19e9e225c339"
-  integrity sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==
-
 pathe@^1.0.0, pathe@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/pathe/-/pathe-1.1.0.tgz#e2e13f6c62b31a3289af4ba19886c230f295ec03"
@@ -14267,20 +14262,6 @@ vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vite-node@0.27.3:
-  version "0.27.3"
-  resolved "https://registry.npmjs.org/vite-node/-/vite-node-0.27.3.tgz#56b823b7f45b17f6ee45cd37468e869a7915ff5a"
-  integrity sha512-eyJYOO64o5HIp8poc4bJX+ZNBwMZeI3f6/JdiUmJgW02Mt7LnoCtDMRVmLaY9S05SIsjGe339ZK4uo2wQ+bF9g==
-  dependencies:
-    cac "^6.7.14"
-    debug "^4.3.4"
-    mlly "^1.1.0"
-    pathe "^0.2.0"
-    picocolors "^1.0.0"
-    source-map "^0.6.1"
-    source-map-support "^0.5.21"
-    vite "^3.0.0 || ^4.0.0"
-
 vite-node@0.28.1:
   version "0.28.1"
   resolved "https://registry.npmjs.org/vite-node/-/vite-node-0.28.1.tgz#e2af53e112e57455a474e9f7a6478b1cdf79a6ab"
@@ -14322,7 +14303,7 @@ vite-plugin-turbosnap@^1.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@0.28.1:
+vitest@0.28.1, vitest@^0.28.1:
   version "0.28.1"
   resolved "https://registry.npmjs.org/vitest/-/vitest-0.28.1.tgz#a87656075e01436c887048efd83a5d32792ce890"
   integrity sha512-F6wAO3K5+UqJCCGt0YAl3Ila2f+fpBrJhl9n7qWEhREwfzQeXlMkkCqGqGtzBxCSa8kv5QHrkshX8AaPTXYACQ==
@@ -14350,31 +14331,6 @@ vitest@0.28.1:
     tinyspy "^1.0.2"
     vite "^3.0.0 || ^4.0.0"
     vite-node "0.28.1"
-    why-is-node-running "^2.2.2"
-
-vitest@^0.27.2:
-  version "0.27.3"
-  resolved "https://registry.npmjs.org/vitest/-/vitest-0.27.3.tgz#207529ca35943956e3141b270ac01dcc635a89c3"
-  integrity sha512-Ld3UVgRVhJUtqvQ3dW89GxiApFAgBsWJZBCWzK+gA3w2yG68csXlGZZ4WDJURf+8ecNfgrScga6xY+8YSOpiMg==
-  dependencies:
-    "@types/chai" "^4.3.4"
-    "@types/chai-subset" "^1.3.3"
-    "@types/node" "*"
-    acorn "^8.8.1"
-    acorn-walk "^8.2.0"
-    cac "^6.7.14"
-    chai "^4.3.7"
-    debug "^4.3.4"
-    local-pkg "^0.4.2"
-    picocolors "^1.0.0"
-    source-map "^0.6.1"
-    std-env "^3.3.1"
-    strip-literal "^1.0.0"
-    tinybench "^2.3.1"
-    tinypool "^0.3.0"
-    tinyspy "^1.0.2"
-    vite "^3.0.0 || ^4.0.0"
-    vite-node "0.27.3"
     why-is-node-running "^2.2.2"
 
 vm-browserify@^1.0.1:
