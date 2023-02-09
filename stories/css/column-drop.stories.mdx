@@ -1,0 +1,296 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Component } from './Component';
+
+import "../../packages/css/src/components/column-drop.css"
+
+<Meta
+  title="Bedrock Layout CSS/column-drop.css"
+  parameters={{ viewMode: "docs" }}
+/>
+
+# column-drop.css
+
+This is a CSS Only version of the [ColumnDrop package](/docs/spacer-components-columndrop--docs).
+
+## Use case
+
+The ColumnDrop component is used to create a layout of columns that stretch to fit the space, and snaps to the next line at a minimum size.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The grid is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/column-drop.min.css";
+```
+
+Then you add the `data-bedrock-column-drop` attribute to the desired element.
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
+    <div
+      data-bedrock-column-drop
+      style={{ "--gutter": "var(--size-2)", "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div
+      data-bedrock-column-drop
+      style={{ "--gutter": "2rem", "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div
+      data-bedrock-column-drop="gutter:size000"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div
+      data-bedrock-column-drop="gutter:size00"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div
+      data-bedrock-column-drop="gutter:size1"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div
+      data-bedrock-column-drop="gutter:size2"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div
+      data-bedrock-column-drop="gutter:size3"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div
+      data-bedrock-column-drop="gutter:size4"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div
+      data-bedrock-column-drop="gutter:size5"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div
+      data-bedrock-column-drop="gutter:size6"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div
+      data-bedrock-column-drop="gutter:size7"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div
+      data-bedrock-column-drop="gutter:size8"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div
+      data-bedrock-column-drop="gutter:size9"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div
+      data-bedrock-column-drop="gutter:size10"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div
+      data-bedrock-column-drop="gutter:size11"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div
+      data-bedrock-column-drop="gutter:size12"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div
+      data-bedrock-column-drop="gutter:size13"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div
+      data-bedrock-column-drop="gutter:size14"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div
+      data-bedrock-column-drop="gutter:size15"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --minItemWidth
+
+The grid will automatically optimize the number of columns based on the width of the container and the value provided to the `--minItemWidth` property. By default this is set to `159px`, but you can change this value by setting the `--minItemWidth` property in the style.
+
+In the below example, The `--minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Canvas withSource="open">
+  <Story name="--minItemWidth">
+    <div
+      data-bedrock-column-drop="gutter:size3"
+      style={{ "--minItemWidth": "15rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## no-stretched-columns
+
+By default, the column-drop component will stretch the columns to fit the container. If you want to prevent this behavior, you can set the `no-stretched-columns` property on the `data-bedrock-column-drop` attribute.
+
+As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Canvas withSource="open">
+  <Story name="no-stretched-columns">
+    <div data-bedrock-column-drop="no-stretched-columns gutter:size3">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>

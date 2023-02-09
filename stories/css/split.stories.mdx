@@ -1,0 +1,245 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Component } from './Component';
+
+import "../../packages/css/src/components/split.css"
+
+<Meta title="Bedrock Layout CSS/split.css" parameters={{ viewMode: "docs" }} />
+
+# split.css
+
+This is a CSS Only version of the [Split package](/docs/spacer-components-split--docs).
+
+## Use case
+
+The Split component is designed to create a split layout based on a fractional ratio. The Split will enforce a standard spacing scheme through the gutter prop.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The split is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/split.min.css";
+```
+
+Then you add the `data-bedrock-split` attribute to the desired element.
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
+    <div data-bedrock-split style={{ "--gutter": "var(--size-2)" }}>
+      <Component />
+      <Component />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-split style={{ "--gutter": "2rem" }}>
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-split="gutter:size000">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-split="gutter:size00">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-split="gutter:size1">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-split="gutter:size2">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-split="gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-split="gutter:size4">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-split="gutter:size5">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-split="gutter:size6">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-split="gutter:size7">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-split="gutter:size8">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-split="gutter:size9">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-split="gutter:size10">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-split="gutter:size11">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-split="gutter:size12">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-split="gutter:size13">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-split="gutter:size14">
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-split="gutter:size15">
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## fraction
+
+The `fraction` prop defines the fraction of the container width to use for the split.
+
+By default the split will be a `1/2` split. You can change this by setting the `fraction:` value on the `data-bedrock-split` attribute.
+
+<Canvas withSource="open">
+  <Story name="fraction">
+    <h3>1/4</h3>
+    <div data-bedrock-split="fraction:1/4 gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>1/3</h3>
+    <div data-bedrock-split="fraction:1/3 gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>1/2</h3>
+    <div data-bedrock-split="fraction:1/2 gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>2/3</h3>
+    <div data-bedrock-split="fraction:2/3 gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>3/4</h3>
+    <div data-bedrock-split="fraction:3/4 gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>auto-start</h3>
+    (The first Component has a width of 100px)
+    <div data-bedrock-split="fraction:auto-start gutter:size3">
+      <Component />
+      <Component />
+    </div>
+    <h3>auto-end</h3>
+    (The second Component has a width of 100px)
+    <div data-bedrock-split="fraction:auto-end gutter:size3">
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --minItemWidth
+
+The `--minItemWidth` prop defines the minimum inline size of each child.
+
+If the minimum inline size can not be maintained, it will move to a stacking layout.
+
+(Resize window to observe the changes)
+
+<Canvas withSource="open">
+  <Story name="--minItemWidth">
+    <h3>With fraction:2/3 and minItemWidth of 40ch</h3>
+    <div
+      data-bedrock-split="fraction:2/3 gutter:size2"
+      style={{ "--minItemWidth": "40ch" }}
+    >
+      <Component />
+      <Component />
+    </div>
+    <h3>With auto-start and minItemWidth of 30ch</h3>
+    <div
+      data-bedrock-split="fraction:auto-start gutter:size2"
+      style={{ "--minItemWidth": "30ch" }}
+    >
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --switchAt
+
+If you set the `--switchAt` property, the inline will switch to a stacking layout if the width of the element is below the threshold set by the `--switchAt` property.
+
+This can be used with `--minItemWidth` and it will switch to a stacking layout at which ever size is largest.
+
+The below example will switch to a stack when it is less than `45rem`.
+
+(Resize your window to see this in action.)
+
+<Canvas withSource="open">
+  <Story name="--switchAt">
+    <h3>With fraction:3/4</h3>
+    <div
+      data-bedrock-split="fraction:2/3 gutter:size2"
+      style={{ "--switchAt": "45rem" }}
+    >
+      <Component />
+      <Component />
+    </div>
+    <h3>With auto-start with 20rem minItemWidth</h3>
+    <div
+      data-bedrock-split="fraction:auto-start gutter:size2"
+      style={{
+        "--minItemWidth": "20rem",
+        "--switchAt": "45rem",
+      }}
+    >
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>

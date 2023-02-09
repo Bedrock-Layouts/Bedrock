@@ -1,0 +1,195 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Component, colors } from './Component';
+
+import "../../packages/css/src/components/reel.css"
+
+<Meta title="Bedrock Layout CSS/reel.css" parameters={{ viewMode: "docs" }} />
+
+# reel.css
+
+This is a CSS Only version of the [Reel package](/docs/spacer-components-reel--docs).
+
+## Use case
+
+Scrolling is a popular and natural way to interact with web content. The Reel is
+designed to organize content into scrollable flat lists with convenient scroll breakpoints.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The reel is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/reel.min.css";
+```
+
+Then you add the `data-bedrock-reel` attribute to the desired element.
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+can adjust the space between the child elements by setting the `--gutter` property in the inline style.
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
+    <div data-bedrock-reel style={{ "--gutter": "var(--size-2)" }}>
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-reel style={{ "--gutter": "2rem" }}>
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-reel="gutter:size000">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-reel="gutter:size00">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-reel="gutter:size1">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-reel="gutter:size2">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-reel="gutter:size3">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-reel="gutter:size4">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-reel="gutter:size5">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-reel="gutter:size6">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-reel="gutter:size7">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-reel="gutter:size8">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-reel="gutter:size9">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-reel="gutter:size10">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-reel="gutter:size11">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-reel="gutter:size12">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-reel="gutter:size13">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-reel="gutter:size14">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-reel="gutter:size15">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} />
+      ))}
+    </div>
+  </Story>
+</Canvas>
+
+```html
+<div data-bedrock-reel style="--gutter:2rem">
+  <!-- content goes here -->
+</div>
+
+<div data-bedrock-reel style="--gutter:var(--size-3)">
+  <!-- content goes here -->
+</div>
+```
+
+## snapType
+
+The `snapType` property sets the scroll snap type. The default snap type is `none`, but you can set it to `proximity` or `mandatory` by setting the `snapType:` value on the `data-bedrock-reel` attribute.
+
+<Canvas withSource="open">
+  <Story name="snapType">
+    <h3>size000</h3>
+    scroll to the right to see the next item
+    <div data-bedrock-reel="snapType:none gutter:size2">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
+      ))}
+    </div>
+    <h3>mandatory</h3>
+    scroll to the right to see the next item
+    <div data-bedrock-reel="snapType:mandatory gutter:size2">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
+      ))}
+    </div>
+    <h3>proximity</h3>
+    scroll to the right to see the next item
+    <div data-bedrock-reel="snapType:proximity gutter:size2">
+      {colors.map((color, i) => (
+        <Component key={i} color={color} style={{ minWidth: "100%" }} />
+      ))}
+    </div>
+  </Story>
+</Canvas>
