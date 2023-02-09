@@ -1,0 +1,352 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Component } from './Component';
+
+import "../../packages/css/src/components/inline.css"
+
+<Meta title="Bedrock Layout CSS/inline.css" parameters={{ viewMode: "docs" }} />
+
+# inline.css
+
+This is a CSS Only version of the [Inline package](/docs/spacer-components-inline--docs).
+
+## Use case
+
+The Inline component is designed to create consistent spacing around inline elements of variable width. Unlike the div component,
+the items in the Inline component will not wrap be default. The Inline component also allows you to specify a child that can stretch, filling the excess space.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The inline is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/inline.min.css";
+```
+
+Then you add the `data-bedrock-inline` attribute to the desired element.
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
+    <div data-bedrock-inline style={{ "--gutter": "var(--size-2)" }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-inline style={{ "--gutter": "2rem" }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-inline="gutter:size000">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-inline="gutter:size00">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-inline="gutter:size1">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-inline="gutter:size2">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-inline="gutter:size3">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-inline="gutter:size4">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-inline="gutter:size5">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-inline="gutter:size6">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-inline="gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-inline="gutter:size8">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-inline="gutter:size9">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-inline="gutter:size10">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-inline="gutter:size11">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-inline="gutter:size12">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-inline="gutter:size13">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-inline="gutter:size14">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-inline="gutter:size15">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## justify
+
+The `justify` prop defines the inline justification of the elements within the cluster. It accepts the following values: `justify:start`, `justify:end`, `justify:center`.
+
+You set the justification by setting the `justify` property on the `data-bedrock-inline` attribute.
+
+<Canvas withSource="open">
+  <Story name="justify">
+    <h3>justify:start</h3>
+    <div data-bedrock-inline="justify:start gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>justify:center</h3>
+    <div data-bedrock-inline="justify:center gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>justify:end</h3>
+    <div data-bedrock-inline="justify:end gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## align
+
+The `align` prop defines the block alignment of the elements within the cluster. It accepts the following values: `align:start`, `align:end`, `align:center`.
+
+You can set the alignment of the inline's children by setting the `align` property on the `data-bedrock-inline` attribute.
+
+<Canvas withSource="open">
+  <Story name="align">
+    <h3>align:start</h3>
+    <div data-bedrock-inline="align:start gutter:size7">
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>align:center</h3>
+    <div data-bedrock-inline="align:center gutter:size7">
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>align:end</h3>
+    <div data-bedrock-inline="align:end gutter:size7">
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>align:stretch</h3>
+    <div data-bedrock-inline="align:stretch gutter:size7">
+      <Component style={{ height: 200 }} />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+Both the `justify` and `align` properties can be set to at the same time.
+
+```html
+<div data-bedrock-inline="justify:start align:center gutter:size3">
+  <!-- content goes here -->
+</div>
+```
+
+## stretch
+
+The `stretch` prop can be used to set one or all of the children to stretch and fill the available space in the inline direction. You can set the `stretch` property on the `data-bedrock-inline` attribute.
+
+The `stretch` prop accepts the following values: `stretch:start`, `stretch:end`, `stretch:all`.
+
+<Canvas withSource="open">
+  <Story name="stretch">
+    <h3>start</h3>
+    <div data-bedrock-inline="stretch:start gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>end</h3>
+    <div data-bedrock-inline="stretch:end gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>all</h3>
+    <div data-bedrock-inline="stretch:all gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+The `stretch` property can also be set with an integer that represents the index of the child.
+
+The `stretch` property can only be set to 0-4 to represent the first, second, third, fourth, or fifth child respectively.
+
+<Canvas withSource="open">
+  <Story name="stretch:index">
+    <h3>0</h3>
+    <div data-bedrock-inline="stretch:0 gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>1</h3>
+    <div data-bedrock-inline="stretch:1 gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>2</h3>
+    <div data-bedrock-inline="stretch:2 gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>3</h3>
+    <div data-bedrock-inline="stretch:3 gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>4</h3>
+    <div data-bedrock-inline="stretch:4 gutter:size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --switchAt
+
+If you set the `--switchAt` property, the inline will switch to a stacking layout if the width of the element is below the threshold set by the `--switchAt` property.
+
+The below example will switch to a stack when it is less than `45rem`.
+
+(Resize your window to see this in action.)
+
+<Canvas withSource="open">
+  <Story name="--switchAt">
+    <div data-bedrock-inline="gutter:size7" style={{ "--switchAt": "45rem" }}>
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+      <Component style={{ minWidth: 100 }} />
+    </div>
+  </Story>
+</Canvas>

@@ -1,0 +1,253 @@
+import { ColumnDrop } from '../../packages/column-drop/src/index';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Component } from './Component';
+import { argTypes } from './argTypes'
+
+<Meta
+  title="Spacer Components/ColumnDrop"
+  component={ColumnDrop}
+  parameters={{ viewMode: "docs" }}
+/>
+
+# ColumnDrop
+
+## Use case
+
+The ColumnDrop component is used to create a layout of columns that stretch to fit the space, and snaps to the next line at a minimum size. As columns drop down to a new row, they will be laid out independantly of the column layout above. This is a common layout for marketing sites.
+
+Some examples of where you might use a `ColumnDrop`:
+
+- [Deconstructed pancake](/docs/examples-web-dev--docs#deconstructed-pancake)
+
+## Installation
+
+```bash
+yarn add @bedrock-layout/column-drop
+```
+
+## API
+
+<ArgsTable />
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has implemented a default spacing scheme, but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/spacing--docs#integrating-with-your-design-system)
+You can also use any valid CSSLength or positve integer.
+
+Here are the possible values for `gutter` by default:
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom gutter as number (20)</h3>
+    <ColumnDrop gutter={20}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>Custom gutter as string ("3ch")</h3>
+    <ColumnDrop gutter="3ch">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size000</h3>
+    <ColumnDrop gutter="size000">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size00</h3>
+    <ColumnDrop gutter="size00">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size1</h3>
+    <ColumnDrop gutter="size1">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size2</h3>
+    <ColumnDrop gutter="size2">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size3</h3>
+    <ColumnDrop gutter="size3">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size4</h3>
+    <ColumnDrop gutter="size4">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size5</h3>
+    <ColumnDrop gutter="size5">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size6</h3>
+    <ColumnDrop gutter="size6">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size7</h3>
+    <ColumnDrop gutter="size7">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size8</h3>
+    <ColumnDrop gutter="size8">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size9</h3>
+    <ColumnDrop gutter="size9">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size10</h3>
+    <ColumnDrop gutter="size10">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size11</h3>
+    <ColumnDrop gutter="size11">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size12</h3>
+    <ColumnDrop gutter="size12">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size13</h3>
+    <ColumnDrop gutter="size13">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size14</h3>
+    <ColumnDrop gutter="size14">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+    <h3>size15</h3>
+    <ColumnDrop gutter="size15">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+  </Story>
+</Canvas>
+
+## minItemWidth
+
+The `minItemWidth` prop defines the width basis of each of the children. The `ColumnDrop` will the optimize how many columns and rows are needed based on that value.
+
+In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
+
+<Canvas withSource="open">
+  <Story name="minItemWidth">
+    <ColumnDrop gutter="size3" minItemWidth="15rem">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+  </Story>
+</Canvas>
+
+## noStretchedColumns
+
+By default, the column-drop component will stretch the columns to fit the container. If you want to prevent this behavior, you can add the `noStretchedColumns` prop. The `ColumnDrop` will then use the `basis` prop to determine the width of each column and center the columns on each row.
+
+In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the ColumnDrop will recalculate and potentially change the count of columns and rows.
+
+<Canvas withSource="open">
+  <Story name="noStretchedColumns">
+    <ColumnDrop noStretchedColumns gutter="size3" minItemWidth="15rem">
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+  </Story>
+</Canvas>
+
+## data-attribute
+
+For purposes of styling, you can select `data-bedrock-column-drop`.
+
+## Playground
+
+Experiment with this story with the Controls addon in the Canvas tab.
+
+export const Template = (args) =>  (
+   <ColumnDrop {...args}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </ColumnDrop>
+);
+
+<Canvas>
+  <Story
+    name="Playground"
+    args={{
+      gutter: "size3",
+      minItemWidth: "15rem",
+      noStretchedColumns: false,
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

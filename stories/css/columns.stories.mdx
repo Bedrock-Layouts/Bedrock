@@ -1,0 +1,287 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Component } from './Component';
+
+import "../../packages/css/src/components/columns.css"
+
+<Meta
+  title="Bedrock Layout CSS/columns.css"
+  parameters={{ viewMode: "docs" }}
+/>
+
+# columns.css
+
+This is a CSS Only version of the [Column package](/docs/spacer-components-columns--docs).
+
+## Use case
+
+The Columns component is designed to create a n-column layout. The complimentary Column will allow elements to span and offset n-columns.
+
+## Usage
+
+First you need to import the appropriate stylesheet. The columns is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/columns.min.css";
+```
+
+Then you add the `data-bedrock-columns` and `data-bedrock-column` attributes to the desired elements.
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <h3>Custom Properties</h3>
+    <div
+      data-bedrock-columns
+      style={{ "--gutter": "var(--size-2)", "--columns": 4 }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>Any CSS Length</h3>
+    <div data-bedrock-columns style={{ "--gutter": "2rem", "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size000</h3>
+    <div data-bedrock-columns="gutter:size000" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size00</h3>
+    <div data-bedrock-columns="gutter:size00" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size1</h3>
+    <div data-bedrock-columns="gutter:size1" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size2</h3>
+    <div data-bedrock-columns="gutter:size2" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size3</h3>
+    <div data-bedrock-columns="gutter:size3" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size4</h3>
+    <div data-bedrock-columns="gutter:size4" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size5</h3>
+    <div data-bedrock-columns="gutter:size5" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size6</h3>
+    <div data-bedrock-columns="gutter:size6" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size7</h3>
+    <div data-bedrock-columns="gutter:size7" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size8</h3>
+    <div data-bedrock-columns="gutter:size8" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size9</h3>
+    <div data-bedrock-columns="gutter:size9" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size10</h3>
+    <div data-bedrock-columns="gutter:size10" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size11</h3>
+    <div data-bedrock-columns="gutter:size11" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size12</h3>
+    <div data-bedrock-columns="gutter:size12" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size13</h3>
+    <div data-bedrock-columns="gutter:size13" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size14</h3>
+    <div data-bedrock-columns="gutter:size14" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+    <h3>gutter:size15</h3>
+    <div data-bedrock-columns="gutter:size15" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --columns
+
+By default, the number of columns will be one. You can set the number of columns by setting the `--columns` property in the inline style.
+
+The below example is a 4 column layout. Each Component will take up one column by default.
+
+<Canvas withSource="open">
+  <Story name="--columns">
+    <div data-bedrock-columns="gutter:size2" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --span
+
+By adding the `data-bedrock-column` attribute to an element, it will be styled as a column component.
+
+You can adjust the number of columns that the element spans by setting the `--span` property in the inline style.
+
+The column component is wrapping the blue and green Componentes. It is then setting the blue Component to span 3 columns and the green to span 2
+
+<Canvas withSource="open">
+  <Story name="--span">
+    <div data-bedrock-columns="gutter:size3" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <div data-bedrock-column style={{ "--span": 3 }}>
+        <Component style={{ background: "blue" }} />
+      </div>
+      <div data-bedrock-column style={{ "--span": 2 }}>
+        <Component style={{ background: "green" }} />
+      </div>
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## offsetStart and offsetEnd
+
+If you want the have the element offset by `n` number of columns, before or after , you can set the `--offsetStart` or `--offsetEnd` property in the inline style of the `data-bedrock-column` element.
+
+In the below code, the blue Component is `--offsetStart` of 1 and the green Component has an `--offsetEnd` of 2
+
+<Canvas withSource="open">
+  <Story name="offsetStart and offsetEnd">
+    <div data-bedrock-columns="gutter:size3" style={{ "--columns": 4 }}>
+      <Component />
+      <Component />
+      <div data-bedrock-column style={{ "--offsetStart": 1 }}>
+        <Component style={{ background: "blue" }} />
+      </div>
+      <div data-bedrock-column style={{ "--offsetEnd": 2 }}>
+        <Component style={{ background: "green" }} />
+      </div>
+      <Component />
+      <Component />
+      <Component />
+    </div>
+  </Story>
+</Canvas>
+
+## --switchAt
+
+The below Columns layout will switch to a Stack layout when its less than `45rem`.
+
+<Canvas withSource="open">
+  <Story name="--switchAt">
+    <div
+      data-bedrock-columns="gutter:size3"
+      style={{ "--columns": 3, "--switchAt": "45rem" }}
+    >
+      <Component />
+      <Component />
+      <Component />
+      <div data-bedrock-column style={{ "--span": 3 }}>
+        <Component />
+      </div>
+    </div>
+  </Story>
+</Canvas>

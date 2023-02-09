@@ -1,0 +1,170 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import "../../packages/css/src/components/cover.css"
+
+<Meta title="Bedrock Layout CSS/cover.css" parameters={{ viewMode: "docs" }} />
+
+# cover.css
+
+This is a CSS Only version of the [Cover package](/docs/wrapper-components-cover--docs).
+
+## Usage
+
+First you need to import the appropriate stylesheet. The cover is part of the main CSS bundle or you can import it in individually from the components directory.
+
+```javascript
+import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+
+// or
+
+import "@bedrock-layout/css/lib/components/cover.min.css";
+```
+
+Then you add the `data-bedrock-cover` attribute to the desired element.
+
+## data-bedrock-cover-centered
+
+The cover lets you center an element vertically in the `data-bedrock-cover` container.
+To achieve that, you need to add the `data-bedrock-cover-centered` attribute to the element that needs to be vertically centered.
+You can add content above the centered element, below it, or both. In that case the element will be centered between the content above and below.
+
+By default, the minimum height of the `data-bedrock-cover` element is `100vh`. You can update this by setting the `--minHeight` property in the inline style.
+
+(The below examples with the `--minHeight` prop set to `25vh`)
+
+<Canvas withSource="open">
+  <Story name="data-bedrock-cover-centered">
+    <h3>Centered element</h3>
+    <div
+      data-bedrock-cover
+      style={{ "--minHeight": "25vh", border: "1px solid black" }}
+    >
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+    </div>
+    <h3>Top</h3>
+    <div
+      data-bedrock-cover
+      style={{ "--minHeight": "25vh", border: "1px solid black" }}
+    >
+      <span>I am on top.</span>
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+    </div>
+    <h3>Bottom</h3>
+    <div
+      data-bedrock-cover
+      style={{ "--minHeight": "25vh", border: "1px solid black" }}
+    >
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+    <h3>Both top and bottom</h3>
+    <div
+      data-bedrock-cover
+      style={{ "--minHeight": "25vh", border: "1px solid black" }}
+    >
+      <span>I am on top.</span>
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>
+
+## gutter
+
+The `gutter` prop defines the gutter size between elements. Bedrock has adopted the [open props sizes as a default spacing scheme](https://open-props.style/#sizes).
+
+You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
+
+This will ensure space between the elements if the content is larger than the `--minHeight` prop.
+
+(The below example, the `--minHeight` prop is set to `10vh` and the `--gutter` prop is set to `2rem`)
+
+<Canvas withSource="open">
+  <Story name="gutter">
+    <div
+      data-bedrock-cover="gutter:size7"
+      style={{
+        "--minHeight": "10vh",
+        border: "1px solid black",
+      }}
+    >
+      <span>I am on top.</span>
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>
+
+## --minHeight
+
+The `--minHeight` custom property can be used to set the minimum height of the cover. The default is `100vh`.
+
+(The below example, the `--minHeight` prop is set to `500px` and the `--gutter` prop is set to `2rem`)
+
+<Canvas withSource="open">
+  <Story name="--minHeight">
+    <div
+      data-bedrock-cover="gutter:size7"
+      style={{
+        "--minHeight": "500px",
+        border: "1px solid black",
+      }}
+    >
+      <span>I am on top.</span>
+      <div data-bedrock-cover-centered>
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>
+
+## stretch-content
+
+Setting the `stretch-content` prop on the `data-bedrock-cover` attribute will stretch the centered content to fill the remaining height of the cover.
+
+(The below example, the `--minHeight` prop is set to `50vh` and the `--gutter` prop is set to `2rem`)
+
+<Canvas withSource="open">
+  <Story name="stretch-content">
+    <div
+      data-bedrock-cover="stretch-content gutter:size7"
+      style={{
+        "--minHeight": "500px",
+        border: "1px solid black",
+      }}
+    >
+      <span>I am on top.</span>
+      <div
+        data-bedrock-cover-centered
+        style={{ background: "rgba(0,0,0,0.85)", color: "white" }}
+      >
+        {
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur corrupti beatae commodi vitae, perspiciatis totam provident architecto doloribus aperiam sapiente, incidunt nihil suscipit voluptatibus tempore est dolor! Iusto, vero."
+        }
+      </div>
+      <span>I am on bottom.</span>
+    </div>
+  </Story>
+</Canvas>
