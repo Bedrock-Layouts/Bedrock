@@ -93,22 +93,16 @@ describe("Size Constants", () => {
   });
 
   it("should return undefined if no sizes provided and incorrect key", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(constants.getSizeValue({}, "noKey")).toBe(undefined);
   });
 
   it("should return a string if sizes provided", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "1x")).toBe(
       "1199px"
     );
   });
 
   it("should return a string if sizes provided using number", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": 1 } }, "1x")).toBe("1px");
   });
 
@@ -117,16 +111,12 @@ describe("Size Constants", () => {
   });
 
   it("should return a undefined if sizes provided with incorrect key", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "size3")).toBe(
       undefined
     );
   });
 
   it("should return a undefined if size key is undefined", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(
       constants.getSizeValue({ sizes: { "1x": "1199px" } }, undefined)
     ).toBe(undefined);
@@ -169,9 +159,14 @@ describe("checkIsCSSLength", () => {
     ["--size-3", true],
     ["var(--size-3)", true],
     ["var(--size-3, 100px)", true],
+    ["var(--size-3, 100px, 200px)", true],
+    ["max-content", true],
+    ["fit-content", true],
+    ["auto", true],
+    ["inherit", true],
+    ["none", true],
+    ["min-content", true],
   ])("checkIsCSSLength(%s) -> %s", (value, expected) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-expect-error
     expect(constants.checkIsCSSLength(value)).toBe(expected);
   });
 });

@@ -31,7 +31,7 @@
     "publish": "lerna publish",
     "publish:ci": "yarn publish -- --no-commit-hooks --ignore-scripts",
     "publish:fix": "lerna publish from-package",
-    "verify": "yarn check-types && yarn lint && yarn check-format && yarn test:coverage",
+    "verify": "yarn build && yarn check-types && yarn lint && yarn check-format && yarn test:coverage",
     "postinstall": "husky install",
     "chromatic": "npx chromatic --build-script-name build:storybook --only-changed --project-token=$CHROMATIC_PROJECT_TOKEN"
   },

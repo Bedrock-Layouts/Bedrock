@@ -3,7 +3,7 @@ import React, { createContext, useContext } from "react";
 
 type Maybe<T> = NonNullable<T> | undefined;
 
-function convertToMaybe<T extends unknown>(value: T): Maybe<T> {
+function convertToMaybe<T>(value: T): Maybe<T> {
   return value ?? undefined;
 }
 
@@ -57,7 +57,9 @@ type LowercaseCharacter =
   | "x"
   | "y"
   | "z";
+
 type AllCharacter = LowercaseCharacter | Uppercase<LowercaseCharacter>;
+
 type NonEmptyString = `${AllCharacter}${string}`;
 
 type CSSLengthUnit = `${number}${LengthUnit}`;
@@ -83,10 +85,19 @@ type LengthUnit =
   | "pc"
   | "px";
 
+type CSSSizeKeyword =
+  | "auto"
+  | "inherit"
+  | "none"
+  | "min-content"
+  | "max-content"
+  | "fit-content";
+
 export type CSSLength =
   | CSSLengthUnit
   | CSSCustomPropertiesWithVar
-  | CSSCustomProperties;
+  | CSSCustomProperties
+  | CSSSizeKeyword;
 
 function fromEntries<K extends string | number, T>(
   entries: [s: K, value: T][]
@@ -175,14 +186,27 @@ function checkIsCSSCustomProperty(str: string): str is CSSCustomProperties {
   return customPropertyRegex.test(str);
 }
 
-export function checkIsCSSLength(str: string): str is CSSLength {
+function checkIsCSSSizeKeyword(str: string): str is CSSSizeKeyword {
+  return [
+    "auto",
+    "inherit",
+    "none",
+    "min-content",
+    "max-content",
+    "fit-content",
+  ].includes(str);
+}
+
+export function checkIsCSSLength(str: unknown): str is CSSLength {
   if (typeof str !== "string") return false;
 
-  return [
-    /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
-    /^var\(--\D{1}.{0,100}\)$/,
-    customPropertyRegex,
-  ].some((regex) => regex.test(str));
+  return (
+    [
+      /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
+      /^var\(--\D{1}.{0,100}\)$/,
+      customPropertyRegex,
+    ].some((regex) => regex.test(str)) || checkIsCSSSizeKeyword(str)
+  );
 }
 
 export type BaseTheme = Record<string, CSSLength | string | number>;
@@ -234,11 +258,11 @@ export function getSafeGutter<T extends DefaultTheme>(
   return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
 
-export function getSizeValue<T extends DefaultTheme>(
-  theme: T & {
+export function getSizeValue(
+  theme: {
     sizes?: BaseTheme;
   },
-  sizeKey?: CSSLength | number | SizesOptions
+  sizeKey?: string | number
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
