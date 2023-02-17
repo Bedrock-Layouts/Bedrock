@@ -12,7 +12,7 @@ import React, { CSSProperties } from "react";
 
 type MinItemWidth = number | CSSLength | SizesOptions;
 type Stretch = "all" | "start" | "end" | number;
-type SwitchAt = CSSLength | number;
+type SwitchAt = number | CSSLength | SizesOptions;
 
 export interface InlineProps {
   stretch?: Stretch;
