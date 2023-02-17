@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.3 (2023-02-17)
+
+### Bug Fixes
+
+- **spacing:** add size keywords as valid CSS Length ([414c538](https://github.com/Bedrock-Layouts/Bedrock/commit/414c5388147fdf815416a4b0e3173efc095f6526)), closes [#1759](https://github.com/Bedrock-Layouts/Bedrock/issues/1759)
+
 ## [3.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.2.1...@bedrock-layout/spacing-constants@3.2.2) (2023-01-13)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@4.1.3...@bedrock-layout/inline@4.1.4) (2023-02-17)
+
+### Bug Fixes
+
+- **inline:** allow sizeOptions as valid switchAt property value ([08323b2](https://github.com/Bedrock-Layouts/Bedrock/commit/08323b27b4e1caa7c94a6d5e652a00e303d38f8d))
+
 ## 4.1.3 (2023-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/inline
