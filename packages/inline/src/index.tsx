@@ -28,9 +28,7 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
     return false;
   }
 
-  return typeof switchAt === "string"
-    ? checkIsCSSLength(switchAt)
-    : switchAt > -1;
+  return typeof switchAt === "string" || typeof switchAt === "number";
 }
 
 export const Inline = forwardRefWithAs<"div", InlineProps>(
@@ -58,9 +56,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(
       .join(" ");
     const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
     const switchAtValue = shouldUseSwitch(switchAt)
-      ? typeof switchAt === "string"
-        ? switchAt
-        : `${switchAt}px`
+      ? getSizeValue(theme, switchAt)
       : undefined;
 
     const safeStyle = style ?? {};
