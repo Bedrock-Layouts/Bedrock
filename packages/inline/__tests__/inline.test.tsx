@@ -39,7 +39,7 @@ describe("Inline", () => {
     });
 
     it("renders with switchAt", () => {
-      [42, "42rem"].forEach((switchAt) => {
+      [42, "42rem", "sizeContent2"].forEach((switchAt) => {
         const inline = create(
           <Inline gutter="size3" switchAt={switchAt}>
             <Lorem />
