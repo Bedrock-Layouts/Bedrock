@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@4.1.4...@bedrock-layout/inline@4.1.5) (2023-02-20)
+
+### Bug Fixes
+
+- **inline:** fix logic where switchAt wasn't using size keywords ([5578a2c](https://github.com/Bedrock-Layouts/Bedrock/commit/5578a2c00bc1c38c9a7dad8bee1445f7b08d1f35))
+
 ## [4.1.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@4.1.3...@bedrock-layout/inline@4.1.4) (2023-02-17)
 
 ### Bug Fixes
