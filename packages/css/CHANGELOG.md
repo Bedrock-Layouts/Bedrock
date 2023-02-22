@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.6 (2023-02-22)
+
+### Bug Fixes
+
+- **split:** update to css to fix split bug ([9ac86cc](https://github.com/Bedrock-Layouts/Bedrock/commit/9ac86cca119862e226f35f696bf4bb3f337703aa))
+
 ## 2.2.5 (2023-02-09)
 
 **Note:** Version bump only for package @bedrock-layout/css
