@@ -19,23 +19,29 @@
 
 /* All the Fraction options */
 [data-bedrock-split~="fraction:1/4"] > *:nth-child(odd) {
-  flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.25));
 }
 
 [data-bedrock-split~="fraction:1/3"] > *:nth-child(odd) {
-  flex-basis: max(var(--minItemWidth, 0px), calc(33.333% - var(--gutter) / 3));
+  flex-basis: max(
+    var(--minItemWidth, 0px),
+    calc(var(--largestWidth) * 0.333333)
+  );
 }
 
 [data-bedrock-split~="fraction:1/2"] > *:nth-child(odd) {
-  flex-basis: max(var(--minItemWidth, 0px), calc(50% - var(--gutter) / 2));
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.5));
 }
 
 [data-bedrock-split~="fraction:2/3"] > *:nth-child(even) {
-  flex-basis: max(var(--minItemWidth, 0px), calc(33.333% - var(--gutter) / 3));
+  flex-basis: max(
+    var(--minItemWidth, 0px),
+    calc(var(--largestWidth) * 0.333333)
+  );
 }
 
 [data-bedrock-split~="fraction:3/4"] > *:nth-child(even) {
-  flex-basis: max(var(--minItemWidth, 0px), calc(25% - var(--gutter) / 4));
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.25));
 }
 
 [data-bedrock-split~="fraction:auto-start"] > *:nth-child(odd) {
