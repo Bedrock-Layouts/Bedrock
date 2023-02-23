@@ -32,18 +32,18 @@ import { LocaleFab } from "../ui-components/LocaleFab";
 <SwitchToDocs />
 
 <Stack gutter="size3">
-<Cover as={Center} maxWidth='90vw' style={{ scrollSnapAlign: "start" }}>
+<Cover minHeight="50vh" as={Center} maxWidth='90vw' style={{ scrollSnapAlign: "start" }}>
   <Split gutter="size5" fraction='1/3' switchAt="50rem">
      <Center centerChildren maxWidth='90%'>
       <PadBox padding={['size10', 'size1']}>
         <LogoOnly />
       </PadBox>
     </Center>
-    <Stack gutter="size7" style={{background:"var(--cyan-9)", borderRadius:'var(--radius-blob-2)'}}>
+    <Stack gutter="size3" style={{background:"var(--cyan-9)", borderRadius:'var(--radius-blob-2)'}}>
       <Heading>
         <span>BEDROCK</span>
         <SubHeading>
-          LAYOUT PRIMITIVES
+          {"LAYOUT PRIMITIVES"}
         </SubHeading>
       </Heading>
       <Center
