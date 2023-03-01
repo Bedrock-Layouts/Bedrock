@@ -1,0 +1,54 @@
+{
+  "name": "@bedrock-layout/solid-doc-site",
+  "version": "1.0.0",
+  "description": "Solid Bedrock Doc Site",
+  "info": "Solid Bedrock Layout is a Solid.js port of the Bedrock Layout primitives written for react.  Bedrock primitives are built to allow you to compose them together to create your own custom layouts. Many 'complex' layouts can be created by composing Bedrock Layout Primitives",
+  "sideEffects": false,
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "primitives",
+    "layout",
+    "bedrock",
+    "bedrock-layout",
+    "bedrock-layout-primitives",
+    "composition",
+    "solid"
+  ],
+  "author": "Jarvis1010 <travis.mair@gmail.com>",
+  "contributors": [
+    {
+      "name": "Travis Waith-Mair",
+      "email": "travis.mair@gmail.com",
+      "url": "https://github.com/Jarvis1010"
+    }
+  ],
+  "homepage": "https://github.com/Bedrock-Layouts/Solid-Bedrock",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bedrock-Layouts/Solid-Bedrock.git"
+  },
+  "dependencies": {
+    "@bedrock-layout/solid": "^1.0.0"
+  },
+  "scripts": {
+    "start:solid": "vite",
+    "dev": "vite",
+    "build:site": "vite build",
+    "serve": "vite preview",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "clean:build": "rimraf lib",
+    "build": "vite build",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
+    "fix-format": "yarn prettier -- --write",
+    "check-format": "yarn prettier -- --list-different",
+    "check-types": "tsc --noEmit"
+  },
+  "bugs": {
+    "url": "https://github.com/Bedrock-Layouts/Solid-Bedrock/issues"
+  }
+}
