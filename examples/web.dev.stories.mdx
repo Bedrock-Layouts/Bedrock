@@ -27,7 +27,7 @@ Minimal styling has been applied to make the examples more readable.
   evenly.{" "}
 </p>
 
-Uses the `<Columns>` and `<Column>` components.
+Uses the [Columns](/docs/spacer-components-columns--docs) and [Column](/docs/spacer-components-columns--docs) components.
 
 <Canvas>
   <Story name="12-span grid">
@@ -72,9 +72,9 @@ Uses the `<Columns>` and `<Column>` components.
   card.
 </p>
 
-Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
+Uses the [Frame](/docs/wrapper-components-frame--docs), the [Stack](/docs/spacer-components-stack--docs), and the [PadBox](/docs/wrapper-components-padbox--docs) components.
 
-(The `<Center` component is used to center and clamp the width of the card in the example.)
+(The [Center](/docs/wrapper-components-center--docs) component is used to center and clamp the width of the card in the example.)
 
 <Canvas>
   <Story name="Aspect ratio image card">
@@ -119,9 +119,9 @@ Uses the `<Frame>`, the `<Stack>`, and the `<PadBox>` components.
   a minimum size.
 </p>
 
-Uses the `<ColumnDrop>` component.
+Uses the [ColumnDrop](/docs/spacer-components-columndrop--docs) component.
 
-(The `<Center` component is used to center and clamp the width of the card in the example.)
+(The [Center](/docs/wrapper-components-center--docs) component is used to center and clamp the width of the card in the example.)
 
 <Canvas>
   <Story name="Deconstructed pancake">
@@ -147,7 +147,7 @@ Uses the `<ColumnDrop>` component.
 
 ## Holy grail layout
 
-Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the `<Cover>` and `<Inline>` components.
+Classic layout with a header, footer, and two sidebars flanking a main content area. Uses the [Cover](/docs/wrapper-components-cover--docs) and [Inline](/docs/spacer-components-inline--docs) components.
 
 <Canvas withSource="open">
   <Story name="Holy grail layout">
@@ -167,11 +167,27 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
   </Story>
 </Canvas>
 
+```jsx
+<Cover
+  gutter="size2"
+  stretchContent
+  minHeight="50vh"
+  top={<Component as="header">Header</Component>}
+  bottom={<Component as="footer">Footer</Component>}
+>
+  <Inline align="stretch" gutter="size2" stretch={1}>
+    <Component>Left Sidebar</Component>
+    <Component as="main">Main Content</Component>
+    <Component>Right Sidebar</Component>
+  </Inline>
+</Cover>
+```
+
 ## Line up
 
-A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Cover>` component.
+A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the [Cover](/docs/wrapper-components-cover--docs) component.
 
-(The `<Columns` component is used to create the 3 column layout.)
+(The [Columns](/docs/spacer-components-columns--docs) component is used to create the 3 column layout.)
 
 <Canvas withSource="open">
   <Story name="Line up">
@@ -224,9 +240,58 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
   </Story>
 </Canvas>
 
+```jsx
+<Columns columns={3} gutter="size9" switchAt="sizeContent2">
+  <Cover
+    as={Component}
+    minHeight="100%"
+    gutter="size3"
+    top={<h3>Title - Card 1</h3>}
+    bottom={
+      <Frame ratio={[16, 9]}>
+        <img src={jacketPic} alt="Computer" />
+      </Frame>
+    }
+  >
+    <p contenteditable>
+      Medium length description with a few more words here.
+    </p>
+  </Cover>
+  <Cover
+    as={Component}
+    minHeight="100%"
+    gutter="size3"
+    top={<h3>Title - Card 2</h3>}
+    bottom={
+      <Frame ratio={[16, 9]}>
+        <img src={jacketPic} alt="Computer" />
+      </Frame>
+    }
+  >
+    <p contenteditable>
+      Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing
+      elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </p>
+  </Cover>
+  <Cover
+    as={Component}
+    minHeight="100%"
+    gutter="size3"
+    top={<h3>Title - Card 3</h3>}
+    bottom={
+      <Frame ratio={[16, 9]}>
+        <img src={jacketPic} alt="Computer" />
+      </Frame>
+    }
+  >
+    <p contenteditable>Short Description.</p>
+  </Cover>
+</Columns>
+```
+
 ## Pancake stack
 
-Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the `<Cover>` component.
+Commonly referred to as a sticky footer, this layout is often used for both websites and apps. Uses the [Cover](/docs/wrapper-components-cover--docs) component.
 
 <Canvas withSource="open">
   <Story name="Pancake stack">
@@ -244,11 +309,25 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
   </Story>
 </Canvas>
 
+```jsx
+<Cover
+  minHeight="25vh"
+  stretchContent
+  gutter="size3"
+  top={<Component as="header">Header</Component>}
+  bottom={<Component as="footer">Footer Content</Component>}
+>
+  <Component as="main" style={{ minHeight: "25vh" }}>
+    <span>Main</span>
+  </Component>
+</Cover>
+```
+
 ## RAM (Repeat, Auto, Minmax)
 
-A responsive layout with automatically-placed and flexible children. Uses the `<Grid>` component.
+A responsive layout with automatically-placed and flexible children. Uses the [Grid](/docs/spacer-components-grid--docs) component.
 
-(The `<Center` component is used to center and clamp the width of the card in the example.)
+(The [Center](/docs/wrapper-components-center--docs) component is used to center and clamp the width of the card in the example.)
 
 <Canvas withSource="open">
   <Story name="RAM (Repeat, Auto, Minmax)">
@@ -263,9 +342,18 @@ A responsive layout with automatically-placed and flexible children. Uses the `<
   </Story>
 </Canvas>
 
+```jsx
+<Grid gutter="size3" minItemWidth="150px">
+  <Component>1</Component>
+  <Component>2</Component>
+  <Component>3</Component>
+  <Component>4</Component>
+</Grid>
+```
+
 ## Sidbar says
 
-A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the `<Split>` component.
+A layout where the sidebar is given a minimum and maximum safe area size, and the rest of the content fills the available space. Uses the [Split](/docs/spacer-components-split--docs) component.
 
 <Canvas withSource="open">
   <Story name="Sidbar says">
@@ -280,9 +368,20 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
   </Story>
 </Canvas>
 
+```jsx
+<Split gutter="size3" fraction="1/4" minItemWidth="100px">
+  <Component>Min: 100px / Max: 25%</Component>
+  <Component>
+    {
+      "This element takes the second position, meaning it takes up the rest of the remaining space."
+    }
+  </Component>
+</Split>
+```
+
 ## Super centered
 
-Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cover>` component.
+Centering a child div vertically and horizontally. Uses the [Center](/docs/wrapper-components-center--docs) and [Cover](/docs/wrapper-components-cover--docs) component.
 
 <Canvas withSource="open">
   <Story name="Super centered">
@@ -293,3 +392,11 @@ Centering a child div vertically and horizontally. Uses the `<Center>` and `<Cov
     </Cover>
   </Story>
 </Canvas>
+
+```jsx
+<Cover minHeight="25vh">
+  <Center centerChildren>
+    <Component>:)</Component>
+  </Center>
+</Cover>
+```
