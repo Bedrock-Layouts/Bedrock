@@ -20,6 +20,7 @@ export const parameters = {
       order: [
         "Overview",
         "Getting Started",
+        "Examples",
         "Spacer Components",
         "Wrapper Components",
         "Primitives",
