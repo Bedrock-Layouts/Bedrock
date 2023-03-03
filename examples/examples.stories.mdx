@@ -8,6 +8,7 @@ import { Columns, Column } from '../packages/columns/src/';
 import { Split } from '../packages/split/src/';
 import { PadBox } from '../packages/padbox/src/';
 import jacketPic from '../.storybook/assets/jacket-pic.jpg'
+import { plans } from './plans.ts'
 
 <Meta title="Examples/Basic" parameters={{ viewMode: "docs" }} />
 
@@ -108,7 +109,7 @@ The Product card uses the [Split](/docs/spacer-components-split--docs) component
 
 <p id="basic-form">A basic form with inputs that span multiple columns.</p>
 
-Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-components-columns--docs) and the [Column](/docs/spacer-components-columns--docs) components.
+Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-components-columns--docs), [Inline](/docs/spacer-components-inline--docs) and the [Column](/docs/spacer-components-columns--docs) components.
 
 <Canvas>
   <Story name="Form">
@@ -466,4 +467,96 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
     </p>
   </Cover>
 </Stack>
+```
+
+## Pricing Plan
+
+<p id="pricing-plan">
+  Examples of pricing plan cards that stack at smaller screen sizes.
+</p>
+
+Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-components-split--docs), [Columns](/docs/spacer-components-columns--docs), and the [PadBox](/docs/wrapper-components-padbox--docs) components.
+
+<Canvas>
+  <Story name="Pricing Plan">
+    <Columns
+      as={PadBox}
+      padding="size3"
+      gutter="size5"
+      columns={3}
+      switchAt="sizeMd"
+    >
+      {plans.map(({ planName, description, price, benefits = [] }) => (
+        <PadBox
+          key={planName}
+          data-plan-card
+          as={Split}
+          fraction="1/2"
+          gutter="size7"
+          padding={["size9", "size7"]}
+        >
+          <Stack gutter="size5">
+            <h2 data-plan-name>{planName}</h2>
+            <p data-plan-description>{description}</p>
+            <p data-plan-price>{price}</p>
+            <button data-plan-button>Buy Plan</button>
+          </Stack>
+          <Stack data-plan-benefits as="ul" role="list" gutter="size2">
+            {benefits.map((benefit, i) => (
+              <Inline
+                key={i}
+                data-benefit-item
+                as="li"
+                align="center"
+                gutter="size3"
+              >
+                {benefit}
+              </Inline>
+            ))}
+          </Stack>
+        </PadBox>
+      ))}
+    </Columns>
+  </Story>
+</Canvas>
+
+```jsx
+<Columns
+  as={PadBox}
+  padding="size3"
+  gutter="size5"
+  columns={3}
+  switchAt="sizeMd"
+>
+  {plans.map(({ planName, description, price, benefits = [] }) => (
+    <PadBox
+      key={planName}
+      data-plan-card
+      as={Split}
+      fraction="1/2"
+      gutter="size7"
+      padding={["size9", "size7"]}
+    >
+      <Stack gutter="size5">
+        <h2 data-plan-name>{planName}</h2>
+        <p data-plan-description>{description}</p>
+        <p data-plan-price>{price}</p>
+        <button data-plan-button>Buy Plan</button>
+      </Stack>
+      <Stack data-plan-benefits as="ul" role="list" gutter="size2">
+        {benefits.map((benefit, i) => (
+          <Inline
+            key={i}
+            data-benefit-item
+            as="li"
+            align="center"
+            gutter="size3"
+          >
+            {benefit}
+          </Inline>
+        ))}
+      </Stack>
+    </PadBox>
+  ))}
+</Columns>
 ```

@@ -60,11 +60,11 @@
   )
   > *:nth-child(even) {
   flex-basis: calc(
-    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+    (max(var(--switchAt, 0px), var(--largestWidt)) - var(--largestWidth)) * 999
   );
   min-inline-size: max(
     min(var(--minItemWidth, 0), 100%),
-    calc(50% - var(--gutter))
+    calc(var(--largestWidth) * 0.5)
   );
   flex-grow: 999;
 }
