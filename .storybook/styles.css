@@ -185,3 +185,67 @@ html:focus-within {
 :focus {
   background-color: var(--gray-3);
 }
+
+[data-plan-button] {
+  border: none;
+  background-color: var(--violet-7);
+  border-radius: var(--radius-2);
+  color: var(--gray-0);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-7);
+  padding: var(--size-2) var(--size-5);
+}
+
+[data-plan-button]:hover,
+:focus {
+  background-color: var(--violet-5);
+}
+
+[data-plan-card] {
+  border: var(--border-size-1) solid var(--violet-2);
+  border-radius: var(--radius-4);
+}
+
+[data-plan-name] {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-7);
+}
+
+[data-plan-description] {
+  color: var(--gray-7);
+}
+
+[data-plan-price] {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-8);
+}
+
+[data-plan-price]:before {
+  content: "$";
+}
+
+[data-plan-price]:after {
+  content: " /month";
+  font-size: var(--font-size-0);
+  color: var(--gray-7);
+}
+
+[data-benefit-item] {
+  color: var(--gray-7);
+}
+
+[data-plan-benefits] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-benefit-item]:before {
+  content: "";
+  clip-path: path(
+    "M0.333252 5.2506L5.21529 10.1336L13.6666 1.68325L11.9833 0L5.21528 6.76895L2.01464 3.56921L0.333252 5.2506Z"
+  );
+  width: 0.875rem;
+  height: 0.6875rem;
+  background-color: var(--violet-7);
+}
