@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.6 (2023-03-03)
+
+### Bug Fixes
+
+- **css:** fix switchAt calculation for basis ([da1099a](https://github.com/Bedrock-Layouts/Bedrock/commit/da1099a3c0aa2c0b27e1413688c5124e3b6b5584))
+
 ## [3.1.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@3.1.4...@bedrock-layout/center@3.1.5) (2023-02-17)
 
 **Note:** Version bump only for package @bedrock-layout/center
