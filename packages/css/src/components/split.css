@@ -60,7 +60,7 @@
   )
   > *:nth-child(even) {
   flex-basis: calc(
-    (max(var(--switchAt, 0px), var(--largestWidt)) - var(--largestWidth)) * 999
+    (max(var(--switchAt, 0px), var(--largestWidth)) - var(--largestWidth)) * 999
   );
   min-inline-size: max(
     min(var(--minItemWidth, 0), 100%),
