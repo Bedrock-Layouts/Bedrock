@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.7...@bedrock-layout/css@2.2.8) (2023-03-20)
+
+### Bug Fixes
+
+- **split:** split.css was staking too early ([76ffa31](https://github.com/Bedrock-Layouts/Bedrock/commit/76ffa31dad4e4cfd2757fa4b1a7256b17afd812c))
+
 ## 2.2.7 (2023-03-03)
 
 ### Bug Fixes
