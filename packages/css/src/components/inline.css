@@ -3,6 +3,9 @@
 */
 
 [data-bedrock-inline] {
+  --gutter: initial;
+  --switchAt: initial;
+  --minItemWidth: initial;
   display: flex;
   flex-wrap: nowrap;
   gap: var(--gutter, 0px);

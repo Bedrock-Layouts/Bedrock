@@ -3,6 +3,9 @@
 */
 
 [data-bedrock-split] {
+  --switchAt: initial;
+  --gutter: initial;
+  --minItemWidth: initial;
   --largestWidth: calc(100% - var(--gutter, 0px));
   box-sizing: border-box;
   display: flex;

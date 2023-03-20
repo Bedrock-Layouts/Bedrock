@@ -3,6 +3,7 @@
 */
 
 [data-bedrock-inline-cluster] {
+  --gutter: initial;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter, 0px);

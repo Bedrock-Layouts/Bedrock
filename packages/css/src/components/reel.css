@@ -3,6 +3,7 @@
 */
 
 [data-bedrock-reel] {
+  --gutter: initial;
   display: flex;
   gap: var(--gutter, 0);
   overflow-x: auto;
