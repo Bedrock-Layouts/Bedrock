@@ -3,6 +3,8 @@
 */
 
 [data-bedrock-column-drop] {
+  --gutter: initial;
+  --minItemWidth: initial;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;

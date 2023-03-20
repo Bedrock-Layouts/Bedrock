@@ -3,6 +3,7 @@
 */
 
 [data-bedrock-cover] {
+  --gutter: initial;
   display: flex;
   flex-direction: column;
   gap: var(--gutter, 0px);

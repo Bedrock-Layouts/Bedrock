@@ -7,6 +7,8 @@
 */
 
 [data-bedrock-columns] {
+  --gutter: initial;
+  --switchAt: initial;
   --numberOfGutters: calc(var(--columns, 1) - 1);
   --largestWidth: calc(
     100% - max(var(--gutter, 0px) * var(--numberOfGutters), 0px)

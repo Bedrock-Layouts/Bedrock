@@ -3,6 +3,8 @@
 */
 
 [data-bedrock-grid] {
+  --gutter: initial;
+  --minItemWidth: initial;
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
