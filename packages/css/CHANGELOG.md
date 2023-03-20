@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.8...@bedrock-layout/css@2.2.9) (2023-03-20)
+
+### Bug Fixes
+
+- **css:** fix properties being inherited ([588234f](https://github.com/Bedrock-Layouts/Bedrock/commit/588234f90d523aa8551578bf9673634feddf3ba4))
+
 ## [2.2.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.7...@bedrock-layout/css@2.2.8) (2023-03-20)
 
 ### Bug Fixes
