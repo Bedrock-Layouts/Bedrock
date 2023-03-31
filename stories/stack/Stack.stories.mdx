@@ -5,6 +5,7 @@ import {
   Canvas,
   ArgsTable,
 } from "@storybook/addon-docs";
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 
 import { Component } from "./Component";
 import { argTypes } from "./argTypes";
@@ -146,20 +147,56 @@ Here are the possible values for `gutter` by default:
   </Story>
 </Canvas>
 
-## data-attribute
+<Tabs>
+  <TabList>
+    <Tab>React</Tab>
+    <Tab>CSS</Tab>
+  </TabList>
 
-Stack component has the `data-bedrock-stack`.
+  <TabPanels>
+    <TabPanel>
+```jsx
+<h3>Custom gutter as number (20)</h3>
+<Stack gutter={20}>
+  <Component />
+  <Component />
+</Stack>
+<h3>Custom gutter as string ("3ch")</h3>
+<Stack gutter="3ch">
+  <Component />
+  <Component />
+</Stack>
+<h3>size000</h3>
+<Stack gutter="size000">
+  <Component />
+  <Component />
+</Stack>
+// etc.
+```
+    </TabPanel>
+    <TabPanel>
+```jsx
+<h3>Custom Properties</h3>
+<div data-bedrock-stack style={{ "--gutter": "var(--size-2)" }}>
+  <Component />
+  <Component />
+</div>
+<h3>Any CSS Length</h3>
+<div data-bedrock-stack style={{ "--gutter": "2rem" }}>
+  <Component />
+  <Component />
+</div>
+<h3>gutter:size000</h3>
+<div data-bedrock-stack="gutter:size000">
+  <Component />
+  <Component />
+</div>
+// etc.
+```
+    </TabPanel>
 
-## as prop
-
-<Canvas withSource="open">
-  <Story name="as prop">
-    <Stack data-bedrock-stack as="main" gutter="size3">
-      <Component />
-      <Component />
-    </Stack>
-  </Story>
-</Canvas>
+  </TabPanels>
+</Tabs>
 
 ## Playground
 
