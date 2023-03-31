@@ -5,3 +5,7 @@ a[href="#storybook-preview-wrapper"] {
 a[title="Bedrock Layout Primitives"] {
   filter: invert(90%);
 }
+
+[data-is-storybook][data-is-storybook] {
+  background-color: var(--grey-9);
+}
