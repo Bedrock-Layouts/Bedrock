@@ -3518,14 +3518,14 @@
     magic-string "^0.27.0"
     react-refresh "^0.14.0"
 
-"@vitest/coverage-c8@^0.29.7":
-  version "0.29.8"
-  resolved "https://registry.npmjs.org/@vitest/coverage-c8/-/coverage-c8-0.29.8.tgz#a61f5a2434af3f0fd7a7e4fe9c25bb6ed03ebd0a"
-  integrity sha512-y+sEMQMctWokjnSqm3FCQEYFkjLrYaznsxEZHxcx8z2aftpYg3A5tvI1S5himfdEFo7o+OeHzh40bPSWZHW4oQ==
+"@vitest/coverage-c8@^0.30.1":
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/@vitest/coverage-c8/-/coverage-c8-0.30.1.tgz#81cd4f2674e6b2807cd116cd0632d591fd6aad2c"
+  integrity sha512-/Wa3dtSuckpdngAmiCwowaEXXgJkqPrtfvrs9HTB9QoEfNbZWPu4E4cjEn4lJZb4qcGf4fxFtUA2f9DnDNAzBA==
   dependencies:
     c8 "^7.13.0"
     picocolors "^1.0.0"
-    std-env "^3.3.1"
+    std-env "^3.3.2"
 
 "@vitest/expect@0.30.1":
   version "0.30.1"
@@ -13676,7 +13676,7 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
-std-env@^3.3.1, std-env@^3.3.2:
+std-env@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/std-env/-/std-env-3.3.2.tgz#af27343b001616015534292178327b202b9ee955"
   integrity sha512-uUZI65yrV2Qva5gqE0+A7uVAvO40iPo6jGhs7s8keRfHCmtg+uB2X6EiLGCI9IgL1J17xGhvoOqSz79lzICPTA==
