@@ -28,7 +28,6 @@ export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
         style={{
           padding: 0,
           maxInlineSize: "100%",
-          overflow: "hidden",
           height: "100%",
           ...safeStyle,
         }}
