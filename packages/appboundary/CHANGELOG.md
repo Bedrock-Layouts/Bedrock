@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/appboundary@3.1.6...@bedrock-layout/appboundary@3.1.7) (2023-06-19)
+
+### Bug Fixes
+
+- **appboundary:** remove overflow:hidden from appboundary ([040faf2](https://github.com/Bedrock-Layouts/Bedrock/commit/040faf238c7d913f72b570812bf1928f98c5aa5f)), closes [#1874](https://github.com/Bedrock-Layouts/Bedrock/issues/1874)
+
 ## 3.1.6 (2023-03-03)
 
 ### Bug Fixes
