@@ -55,16 +55,16 @@ export interface DynamicComponentWithRef<T extends ValidConstructor>
 export type HeadlessPropsWithRef<
   T extends ValidConstructor,
   // eslint-disable-next-line @typescript-eslint/ban-types
-  V = {}
+  V = {},
 > = OmitAndMerge<V & DynamicComponentWithRef<T>, DynamicProps<T>>;
 
-export function convertToMaybe<T extends unknown>(value: T): Maybe<T> {
+export function convertToMaybe<T>(value: T): Maybe<T> {
   return value ?? undefined;
 }
 
 export function omitProps<T extends Record<string, any>, K extends keyof T>(
   value: T,
-  keys: K[]
+  keys: K[],
 ): Omit<T, K> {
   return Object.keys(value)
     .filter((k) => !keys.includes(k as K))
@@ -82,7 +82,7 @@ export function omitProps<T extends Record<string, any>, K extends keyof T>(
 
 export default function createDynamic<T extends ValidConstructor>(
   source: () => T,
-  props: DynamicProps<T>
+  props: DynamicProps<T>,
 ): JSX.Element {
   return createComponent(
     Dynamic,
@@ -92,13 +92,13 @@ export default function createDynamic<T extends ValidConstructor>(
           return source();
         },
       },
-      props
-    ) as any
+      props,
+    ) as any,
   );
 }
 
 export function createPropsFromAccessors<T extends Record<string, Accessor>>(
-  props: T
+  props: T,
 ): { [P in keyof T]: ReturnType<T[P]> } {
   if (!Object.values(props).every((x) => typeof x === "function"))
     throw new Error("Please provide an object with accessor values only.");

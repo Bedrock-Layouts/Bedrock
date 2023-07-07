@@ -27,14 +27,14 @@ export type CenterProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, CenterBaseProps>;
 
 export function Center<T extends ValidConstructor = "div">(
-  props: CenterProps<T>
+  props: CenterProps<T>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const maxWidth = () => `--maxWidth: ${getSafeMaxWidth(props.maxWidth)};`;
@@ -55,7 +55,7 @@ export function Center<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-center": attrString,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

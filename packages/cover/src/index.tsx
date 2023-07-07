@@ -23,7 +23,7 @@ function getSafeMinHeight(
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
   },
-  minHeight?: MinHeight
+  minHeight?: MinHeight,
 ) {
   return getSizeValue(theme, minHeight);
 }
@@ -41,7 +41,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(
       stretchContent,
       ...props
     },
-    ref
+    ref,
   ) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
@@ -70,7 +70,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(
         {bottom && <div data-bedrock-cover-bottom="">{bottom}</div>}
       </Component>
     );
-  }
+  },
 );
 
 Cover.displayName = "Cover";

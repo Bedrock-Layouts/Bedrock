@@ -124,8 +124,8 @@ function Hero() {
                     Get Started
                   </Button>
                   <Button
-                    /* @ts-expect-error */
                     as="a"
+                    /* @ts-expect-error */
                     href="https://github.com/Bedrock-Layouts/Solid-Bedrock"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -33,7 +33,7 @@ describe("ColumnDrop", () => {
         const columnDrop = create(
           <ColumnDrop gutter={gutter}>
             <Lorem />
-          </ColumnDrop>
+          </ColumnDrop>,
         );
         expect(columnDrop.toJSON()).toMatchSnapshot();
       });
@@ -43,7 +43,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -53,7 +53,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter={320}>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter="60ch">
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe("ColumnDrop", () => {
       const columnDrop = create(
         <ColumnDrop gutter="size3" minItemWidth={320}>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
       expect(columnDrop.toJSON()).toMatchSnapshot();
     });
@@ -82,7 +82,7 @@ describe("ColumnDrop", () => {
       const columnDrop = create(
         <ColumnDrop gutter="size3" noStretchedColumns>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
       expect(columnDrop.toJSON()).toMatchSnapshot();
     });
@@ -91,7 +91,7 @@ describe("ColumnDrop", () => {
       const columnDrop = create(
         <ColumnDrop gutter="size3" minItemWidth="32rem">
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
       expect(columnDrop.toJSON()).toMatchSnapshot();
     });
@@ -107,7 +107,7 @@ describe("ColumnDrop", () => {
           <ColumnDrop gutter="1x">
             <Lorem />
           </ColumnDrop>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -118,7 +118,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter={{ value: "incorrect" }}>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -128,7 +128,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -138,7 +138,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter="size3" noStretchedColumns={{ value: "incorrect" }}>
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -148,7 +148,7 @@ describe("ColumnDrop", () => {
       const errorStack = create(
         <ColumnDrop gutter="size3" minItemWidth="garbage">
           <Lorem />
-        </ColumnDrop>
+        </ColumnDrop>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

@@ -26,7 +26,7 @@ export type ColumnsProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnsBaseProps>;
 
 export function Columns<T extends ValidConstructor = "div">(
-  props: ColumnsProps<T>
+  props: ColumnsProps<T>,
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>
@@ -34,7 +34,7 @@ export function Columns<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -58,8 +58,8 @@ export function Columns<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-columns": () => "",
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }
 
@@ -77,14 +77,14 @@ export type ColumnProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnBaseProps>;
 
 export function Column<T extends ValidConstructor = "div">(
-  props: ColumnProps<T>
+  props: ColumnProps<T>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const span = () => `--span: ${safeSpan(props.span)};`;
@@ -109,7 +109,7 @@ export function Column<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-column": () => "",
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

@@ -18,7 +18,7 @@ describe("MasonryGrid", () => {
             <div>1</div>
             <div>1</div>
             <div>1</div>
-          </MasonryGrid>
+          </MasonryGrid>,
         );
 
         expect(masonryGrid.toJSON()).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
           <div>1</div>
           <div>1</div>
-        </MasonryGrid>
+        </MasonryGrid>,
       );
       expect(masonryGrid.toJSON()).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
           <div>1</div>
           <div>1</div>
-        </MasonryGrid>
+        </MasonryGrid>,
       );
       expect(masonryGrid.toJSON()).toMatchSnapshot();
     });
@@ -59,7 +59,7 @@ describe("MasonryGrid", () => {
             <div>1</div>
             <div>1</div>
           </MasonryGrid>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(masonryGrid.toJSON()).toMatchSnapshot();
     });
@@ -72,7 +72,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
           <div>1</div>
           <div>1</div>
-        </MasonryGrid>
+        </MasonryGrid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
           <div>1</div>
           <div>1</div>
-        </MasonryGrid>
+        </MasonryGrid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -96,7 +96,7 @@ describe("MasonryGrid", () => {
           <div>1</div>
           <div>1</div>
           <div>1</div>
-        </MasonryGrid>
+        </MasonryGrid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

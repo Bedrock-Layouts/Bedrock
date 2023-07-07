@@ -44,7 +44,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(
       minItemWidth,
       ...props
     },
-    ref
+    ref,
   ) => {
     const theme = useTheme();
     const justifyValue = justify ? `justify:${justify}` : undefined;
@@ -78,7 +78,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Inline.displayName = "Inline";

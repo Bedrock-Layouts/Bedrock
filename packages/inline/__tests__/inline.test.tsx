@@ -32,7 +32,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" stretch={stretch}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -43,7 +43,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" switchAt={switchAt}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -54,7 +54,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" minItemWidth={minItemWidth}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -66,7 +66,7 @@ describe("Inline", () => {
       const errorStack = create(
         <Inline gutter="size3" stretch="incorrect">
           <Lorem />
-        </Inline>
+        </Inline>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -76,7 +76,7 @@ describe("Inline", () => {
       const errorStack = create(
         <Inline gutter="size3" minItemWidth="incorrect">
           <Lorem />
-        </Inline>
+        </Inline>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

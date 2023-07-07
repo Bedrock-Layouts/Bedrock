@@ -33,14 +33,14 @@ function assertIsValidWidth(width: number | [number, number]) {
 
   if (isInvalidArray) {
     fail(
-      `The second width value, ${width[1]}, is not larger than ${width[0]}. Please provide a value greater than first width value`
+      `The second width value, ${width[1]}, is not larger than ${width[0]}. Please provide a value greater than first width value`,
     );
   }
 }
 
 export function createContainerQuery<T extends Element>(
   width: number | [number, number],
-  maybeRef?: (ref: T) => void
+  maybeRef?: (ref: T) => void,
 ): [Accessor<boolean>, Setter<T | undefined>] {
   assertIsValidWidth(width);
 

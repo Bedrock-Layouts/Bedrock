@@ -37,7 +37,7 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 InlineCluster.displayName = "InlineCluster";

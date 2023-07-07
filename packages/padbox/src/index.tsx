@@ -45,7 +45,7 @@ const keyToProperty = (key: string) => {
 
 const paddingToStyleProps = (
   theme: { space?: BaseTheme },
-  padding: PaddingTypes
+  padding: PaddingTypes,
 ) => {
   if (Array.isArray(padding) && padding.length > 4) {
     throw new Error("padding arrays can only be 4 or less in length");
@@ -57,7 +57,7 @@ const paddingToStyleProps = (
           ...acc,
           [keyToProperty(key)]: getSafeGutter(theme, val) ?? "0px",
         }),
-        {}
+        {},
       )
     : {
         padding: Array.from(Array.isArray(padding) ? padding : [padding])
@@ -86,7 +86,7 @@ export const PadBox = forwardRefWithAs<"div", PadBoxProps>(
         style={{ ...safeStyle, ...paddingStyles } as CSSProperties}
       />
     );
-  }
+  },
 );
 
 PadBox.displayName = "PadBox";

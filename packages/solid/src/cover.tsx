@@ -26,12 +26,6 @@ interface CoverWrapperBaseProps {
 export type CoverWrapperProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, CoverWrapperBaseProps>;
 
-export interface CoverProps {
-  top?: JSXElement;
-  bottom?: JSXElement;
-  children?: JSXElement;
-}
-
 function getSafeMinHeight(minHeight?: MinHeight) {
   if (typeof minHeight === "number") return `${minHeight}px`;
 
@@ -39,7 +33,7 @@ function getSafeMinHeight(minHeight?: MinHeight) {
 }
 
 function CoverWrapper<T extends ValidConstructor = "div">(
-  props: CoverWrapperProps<T>
+  props: CoverWrapperProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -48,7 +42,7 @@ function CoverWrapper<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -68,18 +62,24 @@ function CoverWrapper<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-cover": stretchContent,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }
 
+export interface CoverProps {
+  top?: JSXElement;
+  bottom?: JSXElement;
+  children?: JSXElement;
+}
+
 export function Cover<T extends ValidConstructor = "div">(
-  props: CoverWrapperProps<T> & CoverProps
+  props: CoverWrapperProps<T> & CoverProps,
 ): JSX.Element {
   const [local, restProps] = splitProps(props, ["children", "top", "bottom"]);
 
   return (
-    <CoverWrapper {...restProps}>
+    <CoverWrapper {...(restProps as CoverWrapperProps)}>
       {local.top}
       <div data-bedrock-cover-centered>{local.children}</div>
       {local.bottom}

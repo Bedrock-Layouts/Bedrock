@@ -45,7 +45,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Center.displayName = "Center";

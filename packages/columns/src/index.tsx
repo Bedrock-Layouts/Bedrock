@@ -41,7 +41,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Columns.displayName = "Columns";
@@ -79,7 +79,7 @@ export const Column = forwardRefWithAs<"div", ColumnProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Column.displayName = "Column";

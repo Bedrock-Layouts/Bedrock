@@ -53,7 +53,7 @@ export type InlineProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, InlineBaseProps>;
 
 export function Inline<T extends ValidConstructor = "div">(
-  props: InlineProps<T>
+  props: InlineProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -62,7 +62,7 @@ export function Inline<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -111,7 +111,7 @@ export function Inline<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-inline": attrAssesor,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

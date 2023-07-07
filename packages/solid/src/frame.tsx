@@ -41,14 +41,14 @@ function getSafeRatio(ratio: unknown): Maybe<RatioString> {
 }
 
 export function Frame<T extends ValidConstructor = "div">(
-  props: FrameProps<T>
+  props: FrameProps<T>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const maybeRatioAssesor = () => getSafeRatio(props.ratio);
@@ -70,7 +70,7 @@ export function Frame<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-frame": () => "",
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

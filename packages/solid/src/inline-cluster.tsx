@@ -33,7 +33,7 @@ export type InlineClusterProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, InlineClusterBaseProps>;
 
 export function InlineCluster<T extends ValidConstructor = "div">(
-  props: InlineClusterProps<T>
+  props: InlineClusterProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -42,7 +42,7 @@ export function InlineCluster<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -65,7 +65,7 @@ export function InlineCluster<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-inline-cluster": attrAssesor,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

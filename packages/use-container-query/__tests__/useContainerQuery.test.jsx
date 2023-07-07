@@ -41,7 +41,7 @@ ResizeObserver.mockImplementation(
       disconnect: vi.fn(map.clear),
       unobserve,
     };
-  })
+  }),
 );
 
 let matches;
@@ -49,7 +49,7 @@ const HookWrapper = forwardRef(
   ({ minWidth, maxWidth, withNode = true }, ref) => {
     const [doesMatch, nodeRef] = useContainerQuery(
       { width: minWidth, maxWidth },
-      ref
+      ref,
     );
 
     matches = doesMatch;
@@ -59,7 +59,7 @@ const HookWrapper = forwardRef(
       : null;
 
     return null;
-  }
+  },
 );
 
 describe("useContainerQuery", () => {
@@ -181,7 +181,7 @@ describe("useContainerQuery", () => {
       act(() => {
         ReactDOM.render(
           <HookWrapper minWidth={320} maxWidth={100} />,
-          container
+          container,
         );
       });
 

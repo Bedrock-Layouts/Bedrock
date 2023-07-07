@@ -11,7 +11,7 @@ export function PaddingObject(): JSXElement {
           {JSON.stringify(
             { top: "size3", inlineEnd: "size7", blockEnd: "size1" },
             null,
-            3
+            3,
           )}
         </code>
       </pre>

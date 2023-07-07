@@ -35,7 +35,7 @@ describe("Split", () => {
       const split = create(
         <Split>
           <Lorem />
-        </Split>
+        </Split>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
@@ -45,7 +45,7 @@ describe("Split", () => {
         const split = create(
           <Split gutter={gutter}>
             <Lorem />
-          </Split>
+          </Split>,
         );
         expect(split.toJSON()).toMatchSnapshot();
       });
@@ -55,7 +55,7 @@ describe("Split", () => {
       const split = create(
         <Split gutter={1}>
           <Lorem />
-        </Split>
+        </Split>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
@@ -64,7 +64,7 @@ describe("Split", () => {
       const split = create(
         <Split gutter="3ch">
           <Lorem />
-        </Split>
+        </Split>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
@@ -75,10 +75,10 @@ describe("Split", () => {
           const split = create(
             <Split gutter="size3" fraction={fraction}>
               <Lorem />
-            </Split>
+            </Split>,
           );
           expect(split.toJSON()).toMatchSnapshot();
-        }
+        },
       );
     });
 
@@ -88,7 +88,7 @@ describe("Split", () => {
           <Split gutter="1x">
             <Lorem />
           </Split>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
@@ -104,7 +104,7 @@ describe("Split", () => {
       const stack = create(
         <Split gutter="size3" switchAt={widthToSwitchAt}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
@@ -117,7 +117,7 @@ describe("Split", () => {
       const stack = create(
         <Split gutter="size3" as="main">
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
@@ -134,7 +134,7 @@ describe("Split", () => {
       const stack = create(
         <Split gutter="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
@@ -154,7 +154,7 @@ describe("Split", () => {
       const stack = create(
         <Split gutter="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
@@ -169,7 +169,7 @@ describe("Split", () => {
       const errorStack = create(
         <Split gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -179,7 +179,7 @@ describe("Split", () => {
       const errorStack = create(
         <Split gutter={-1}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -189,7 +189,7 @@ describe("Split", () => {
       const errorStack = create(
         <Split fraction="incorrect">
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -199,7 +199,7 @@ describe("Split", () => {
       const errorStack = create(
         <Split gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
-        </Split>
+        </Split>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

@@ -26,7 +26,7 @@ export const Reel = forwardRefWithAs<"div", ReelProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Reel.displayName = "Reel";

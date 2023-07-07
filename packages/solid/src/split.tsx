@@ -60,7 +60,7 @@ function getSafeMinItemWidth(
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
   },
-  minItemWidth?: MinItemWidth
+  minItemWidth?: MinItemWidth,
 ) {
   return getSizeValue(theme, minItemWidth);
 }
@@ -69,7 +69,7 @@ export type SplitProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, SplitBase>;
 
 export function Split<T extends ValidConstructor = "div">(
-  props: SplitProps<T>
+  props: SplitProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -78,7 +78,7 @@ export function Split<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const switchAt = () =>
@@ -110,7 +110,7 @@ export function Split<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-split": fraction,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }
