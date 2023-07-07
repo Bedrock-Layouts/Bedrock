@@ -10,7 +10,7 @@ type PropsWithAs<C extends React.ElementType, Props> = Props & { as?: C };
 
 export type PolymorphicComponentPropsWithoutRef<
   C extends React.ElementType,
-  Props
+  Props,
 > = Merge<
   C extends keyof JSX.IntrinsicElements
     ? React.PropsWithoutRef<JSX.IntrinsicElements[C]>
@@ -20,7 +20,7 @@ export type PolymorphicComponentPropsWithoutRef<
 
 export type PolymorphicComponentPropsWithRef<
   C extends React.ElementType,
-  Props
+  Props,
 > = Merge<
   C extends keyof JSX.IntrinsicElements
     ? React.PropsWithRef<JSX.IntrinsicElements[C]>
@@ -33,7 +33,7 @@ export type PolymorphicComponentPropsWithRef<
  */
 export type PolymorphicExoticComponent<
   C extends React.ElementType = React.ElementType,
-  Props = {}
+  Props = {},
 > = Merge<
   React.ExoticComponent<Props & { [key: string]: unknown }>,
   {
@@ -41,7 +41,7 @@ export type PolymorphicExoticComponent<
      * **NOTE**: Exotic components are not callable.
      */
     <InstanceC extends React.ElementType = C>(
-      props: PolymorphicComponentPropsWithRef<InstanceC, Props>
+      props: PolymorphicComponentPropsWithRef<InstanceC, Props>,
     ): React.ReactElement | null;
   }
 >;
@@ -54,7 +54,7 @@ export type PolymorphicRef<C extends React.ElementType> =
  */
 export type PolymorphicForwardedRefComponent<
   C extends React.ElementType,
-  Props
+  Props,
 > = Merge<
   React.ForwardRefExoticComponent<Props & { [key: string]: unknown }>,
   PolymorphicExoticComponent<C, Props>
@@ -63,8 +63,8 @@ export type PolymorphicForwardedRefComponent<
 export function forwardRefWithAs<C extends React.ElementType, Props = {}>(
   render: (
     props: PolymorphicComponentPropsWithoutRef<C, Props>,
-    ref: PolymorphicRef<C>
-  ) => React.ReactElement | null
+    ref: PolymorphicRef<C>,
+  ) => React.ReactElement | null,
 ) {
   return React.forwardRef(render) as PolymorphicForwardedRefComponent<C, Props>;
 }

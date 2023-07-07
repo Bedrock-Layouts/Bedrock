@@ -70,7 +70,7 @@ export const Split = forwardRefWithAs<"div", SplitProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Split.displayName = "Split";

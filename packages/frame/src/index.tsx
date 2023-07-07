@@ -49,7 +49,7 @@ export const Frame = forwardRefWithAs<"div", FrameProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Frame.displayName = "Frame";

@@ -51,7 +51,7 @@ const keyToProperty = (key: string) => {
 
 const paddingToStyleProps = (
   theme: { space?: BaseTheme },
-  padding?: PaddingTypes
+  padding?: PaddingTypes,
 ): string => {
   if (!padding) return "";
 
@@ -66,7 +66,7 @@ const paddingToStyleProps = (
             ...acc,
             [keyToProperty(key)]: getSafeGutter(theme, val) ?? "0px",
           }),
-          {}
+          {},
         )
       : {
           padding: Array.from(Array.isArray(padding) ? padding : [padding])
@@ -87,7 +87,7 @@ export type PadBoxProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, PadBoxBaseProps>;
 
 export function PadBox<T extends ValidConstructor = "div">(
-  props: PadBoxProps<T>
+  props: PadBoxProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -96,7 +96,7 @@ export function PadBox<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const padding = () => paddingToStyleProps(theme, props.padding);
@@ -110,7 +110,7 @@ export function PadBox<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-padbox": () => "",
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

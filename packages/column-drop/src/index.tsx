@@ -22,7 +22,7 @@ function getSafeMinItemWidth(
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
   },
-  minItemWidth?: MinItemWidth
+  minItemWidth?: MinItemWidth,
 ) {
   return getSizeValue(theme, minItemWidth);
 }
@@ -30,7 +30,7 @@ function getSafeMinItemWidth(
 export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
   (
     { as, gutter, style, minItemWidth, noStretchedColumns = false, ...props },
-    ref
+    ref,
   ) => {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
@@ -56,6 +56,6 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
         {...props}
       />
     );
-  }
+  },
 );
 ColumnDrop.displayName = "ColumnDrop";

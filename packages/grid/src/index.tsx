@@ -37,6 +37,6 @@ export const Grid = forwardRefWithAs<"div", GridProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Grid.displayName = "Grid";

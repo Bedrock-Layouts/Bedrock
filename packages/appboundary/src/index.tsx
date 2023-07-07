@@ -35,7 +35,7 @@ export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
         <Center maxWidth={maybeSize ?? sizes.sizeXxl}>{children}</Center>
       </Component>
     );
-  }
+  },
 );
 
 AppBoundary.displayName = "AppBoundary";

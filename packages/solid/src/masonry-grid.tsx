@@ -30,7 +30,7 @@ const isBrowser =
   document.nodeType === 9;
 
 const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
-  props
+  props,
 ) => {
   const [rowSpan, setRowSpan] = createSignal(1);
   const [node, nodeRef] = createSignal<HTMLElement>();

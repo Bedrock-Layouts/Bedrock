@@ -38,7 +38,7 @@ export function init(): void {
 }
 
 function assertIsResizeOberver(
-  obj?: ResizeObserver
+  obj?: ResizeObserver,
 ): asserts obj is ResizeObserver {
   if (obj === undefined) {
     throw new Error("ResizeObserver is not defined.  Please call init()");
@@ -47,7 +47,7 @@ function assertIsResizeOberver(
 
 export function registerCallback(
   node: Element,
-  cb: ObserverCallback
+  cb: ObserverCallback,
 ): DeregisterFunc {
   assertIsResizeOberver(observer);
 

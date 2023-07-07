@@ -33,7 +33,7 @@ export type GridProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, GridBaseProps>;
 
 export function Grid<T extends ValidConstructor = "div">(
-  props: GridProps<T>
+  props: GridProps<T>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -42,7 +42,7 @@ export function Grid<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -64,7 +64,7 @@ export function Grid<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-grid": () => "",
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

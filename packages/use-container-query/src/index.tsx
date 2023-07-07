@@ -9,11 +9,11 @@ interface UseContainerQueryProps {
 
 export function useContainerQuery<T extends Element>(
   { width = 1, maxWidth }: UseContainerQueryProps,
-  forwardedRef?: React.Ref<T>
+  forwardedRef?: React.Ref<T>,
 ): [boolean, React.MutableRefObject<T>] {
   if (maxWidth !== undefined && maxWidth <= width) {
     throw new Error(
-      `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`
+      `The second width value, ${maxWidth}, is not larger than ${width}. Please provide a value greater than first width value`,
     );
   }
   const [matches, setMatch] = React.useState(false);

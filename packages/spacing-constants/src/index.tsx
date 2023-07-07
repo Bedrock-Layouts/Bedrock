@@ -100,11 +100,14 @@ export type CSSLength =
   | CSSSizeKeyword;
 
 function fromEntries<K extends string | number, T>(
-  entries: [s: K, value: T][]
+  entries: [s: K, value: T][],
 ): Record<K, T> {
-  return entries.reduce((acc, [key, value]) => {
-    return { ...acc, [key]: value };
-  }, {} as Record<K, T>);
+  return entries.reduce(
+    (acc, [key, value]) => {
+      return { ...acc, [key]: value };
+    },
+    {} as Record<K, T>,
+  );
 }
 
 const {
@@ -230,7 +233,7 @@ export function getSpacingValue<T extends DefaultTheme>(
   theme: T & {
     space?: BaseTheme;
   },
-  spacingKey: SpacingOptions
+  spacingKey: SpacingOptions,
 ): Maybe<CSSLength> {
   const maybeSpacingOrDefault = theme.space ?? spacing;
 
@@ -238,7 +241,7 @@ export function getSpacingValue<T extends DefaultTheme>(
     Object.entries(maybeSpacingOrDefault).map(([spaceKey, value]) => [
       spaceKey as SpacingOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ])
+    ]),
   );
 
   return convertToMaybe(safeSpacings[spacingKey]);
@@ -248,7 +251,7 @@ export type Gutter = CSSLength | number | SpacingOptions;
 
 export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
-  gutter?: Gutter
+  gutter?: Gutter,
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
@@ -262,7 +265,7 @@ export function getSizeValue(
   theme: {
     sizes?: BaseTheme;
   },
-  sizeKey?: string | number
+  sizeKey?: string | number,
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
@@ -275,7 +278,7 @@ export function getSizeValue(
     Object.entries(maybeSizesOrDefault).map(([sizeKey, value]) => [
       sizeKey as SizesOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ])
+    ]),
   );
 
   return convertToMaybe(safeSizes[sizeKey as SizesOptions]);

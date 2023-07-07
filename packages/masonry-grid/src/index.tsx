@@ -32,7 +32,7 @@ const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
         style={{ ...safeStyle, gridRow: "span var(--rows, 1)" }}
       />
     );
-  }
+  },
 );
 
 const Resizer = ({
@@ -91,7 +91,7 @@ export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
         ))}
       </Grid>
     );
-  }
+  },
 );
 
 MasonryGrid.displayName = "MasonryGrid";
@@ -160,7 +160,7 @@ function toPX(str: string, element?: Element): number | null {
 /* c8 ignore next */
 function getPropertyInPX(element: Element, prop: string): number {
   const [value, units] = parseUnit(
-    getComputedStyle(element).getPropertyValue(prop)
+    getComputedStyle(element).getPropertyValue(prop),
   );
   return value * (toPX(units, element) ?? 1);
 }

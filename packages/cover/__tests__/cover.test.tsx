@@ -32,7 +32,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" minHeight="500px">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -49,7 +49,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" top={<Lorem />}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -58,7 +58,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" bottom={<Lorem />}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -67,7 +67,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" top={<Lorem />} bottom={<Lorem />}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -76,7 +76,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -86,7 +86,7 @@ describe("Cover", () => {
         const cover = create(
           <Cover gutter={gutter}>
             <Lorem />
-          </Cover>
+          </Cover>,
         );
         expect(cover.toJSON()).toMatchSnapshot();
       });
@@ -96,7 +96,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter={20}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -105,7 +105,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="3ch">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -114,7 +114,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" minHeight="50vh">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -123,7 +123,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" minHeight="var(--size-xl)">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -132,7 +132,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" minHeight={300}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -142,7 +142,7 @@ describe("Cover", () => {
         const cover = create(
           <Cover gutter="size3" minHeight={size}>
             <Lorem />
-          </Cover>
+          </Cover>,
         );
         expect(cover.toJSON()).toMatchSnapshot();
       });
@@ -152,7 +152,7 @@ describe("Cover", () => {
       const cover = create(
         <Cover gutter="size3" stretchContent>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -163,7 +163,7 @@ describe("Cover", () => {
           <Cover gutter="1x">
             <Lorem />
           </Cover>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
@@ -174,7 +174,7 @@ describe("Cover", () => {
       const errorStack = create(
         <Cover gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Cover>
+        </Cover>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -184,7 +184,7 @@ describe("Cover", () => {
       const errorStack = create(
         <Cover gutter="size3" minHeight="incorrect">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -194,7 +194,7 @@ describe("Cover", () => {
       const errorStack = create(
         <Cover gutter="size3" stretchContent="incorrect">
           <Lorem />
-        </Cover>
+        </Cover>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

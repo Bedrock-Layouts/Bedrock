@@ -37,7 +37,7 @@ describe("Column", () => {
           <Column>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -48,7 +48,7 @@ describe("Column", () => {
           <Column>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -59,7 +59,7 @@ describe("Column", () => {
           <Column span={2}>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -70,7 +70,7 @@ describe("Column", () => {
           <Column span={2} offsetStart={2}>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -81,7 +81,7 @@ describe("Column", () => {
           <Column span={2} offsetEnd={2}>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -94,7 +94,7 @@ describe("Column", () => {
           <Column span="incorrect">
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe("Column", () => {
           <Column span={0}>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -117,7 +117,7 @@ describe("Column", () => {
           <Column span={-1}>
             <Lorem />
           </Column>
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -133,7 +133,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -142,7 +142,7 @@ describe("Columns", () => {
         const columns = create(
           <Columns gutter={gutter}>
             <Lorem />
-          </Columns>
+          </Columns>,
         );
         expect(columns.toJSON()).toMatchSnapshot();
       });
@@ -151,7 +151,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns gutter={20}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -159,7 +159,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns gutter="3ch">
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -167,7 +167,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns gutter="size3" columns={5}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -175,7 +175,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns gutter="size3" switchAt={500}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -184,7 +184,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns gutter="size3" switchAt="500px">
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -195,7 +195,7 @@ describe("Columns", () => {
           <Columns gutter="1x">
             <Lorem />
           </Columns>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -205,7 +205,7 @@ describe("Columns", () => {
       const errorStack = create(
         <Columns gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
@@ -213,7 +213,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns columns={0}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -221,7 +221,7 @@ describe("Columns", () => {
       const columns = create(
         <Columns columns={-1}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
@@ -229,7 +229,7 @@ describe("Columns", () => {
       const errorStack = create(
         <Columns columns="incorrect">
           <Lorem />
-        </Columns>
+        </Columns>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -239,7 +239,7 @@ describe("Columns", () => {
       const errorStack = create(
         <Columns gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
-        </Columns>
+        </Columns>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
