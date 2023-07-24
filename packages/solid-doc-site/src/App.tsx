@@ -7,7 +7,7 @@ import {
   Stack,
   createContainerQuery,
 } from "@bedrock-layout/solid";
-import { Link, Route, Routes } from "solid-app-router";
+import { Link, Route, Routes } from "@solidjs/router";
 import { Component, For, Show } from "solid-js";
 import { styled } from "solid-styled-components";
 

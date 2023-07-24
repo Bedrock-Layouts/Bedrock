@@ -1,5 +1,5 @@
 import { InlineClusterProps, Stack } from "@bedrock-layout/solid";
-import { Link } from "solid-app-router";
+import { Link } from "@solidjs/router";
 import { JSXElement, createSignal } from "solid-js";
 
 import { ArgsTable } from "../../components/ArgsTable";

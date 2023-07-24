@@ -7,7 +7,7 @@ import "highlight.js/styles/atom-one-dark.css";
 import "./global-styles.css";
 
 import { Center, Cover } from "@bedrock-layout/solid";
-import { Router } from "solid-app-router";
+import { Router } from "@solidjs/router";
 /* @refresh reload */
 import { render } from "solid-js/web";
 
