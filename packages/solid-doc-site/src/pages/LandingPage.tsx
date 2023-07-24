@@ -8,7 +8,7 @@ import {
   PadBox,
   Stack,
 } from "@bedrock-layout/solid";
-import { Link } from "solid-app-router";
+import { Link } from "@solidjs/router";
 import { JSXElement } from "solid-js";
 import { styled } from "solid-styled-components";
 
