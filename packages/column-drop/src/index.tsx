@@ -9,11 +9,27 @@ import {
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
-type MinItemWidth = CSSLength | number | SizesOptions;
+/**
+ * The `minItemWidth` prop can accept any positive integer, `CSSLength`, or `SizeOption`.
+ */
+export type MinItemWidth = number | CSSLength | SizesOptions;
 
+/**
+ * Props for the ColumnDrop component.
+ */
 export interface ColumnDropProps {
+  /**
+   * Sets space between each element.
+   */
   gutter?: Gutter;
+  /**
+   * Sets the minimum width of each child.
+   * The `minItemWidth` prop can accept any positive integer, `CSSLength`, or `SizeOption`.
+   */
   minItemWidth?: MinItemWidth;
+  /**
+   * Prevents columns from stretching to fill the space.
+   */
   noStretchedColumns?: boolean;
 }
 
@@ -27,11 +43,19 @@ function getSafeMinItemWidth(
   return getSizeValue(theme, minItemWidth);
 }
 
+/**
+ * The `ColumnDrop` component is used to create a layout
+ * of columns that stretch to fit the space, and snaps
+ * to the next row at a minimum size. As columns drop
+ * down to a new row, they will be laid out independently
+ * of the column layout above. This component is useful for
+ * creating a responsive grid.
+ */
 export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
-  (
+  function ColumnDrop(
     { as, gutter, style, minItemWidth, noStretchedColumns = false, ...props },
     ref,
-  ) => {
+  ) {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gutter);
 
@@ -58,4 +82,3 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     );
   },
 );
-ColumnDrop.displayName = "ColumnDrop";
