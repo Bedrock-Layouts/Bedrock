@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.1.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/appboundary@3.1.7...@bedrock-layout/appboundary@3.1.8) (2023-07-13)
+## 3.1.9 (2023-08-17)
 
 **Note:** Version bump only for package @bedrock-layout/appboundary
 
+## [3.1.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/appboundary@3.1.7...@bedrock-layout/appboundary@3.1.8) (2023-07-13)
 
-
-
+**Note:** Version bump only for package @bedrock-layout/appboundary
 
 ## [3.1.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/appboundary@3.1.6...@bedrock-layout/appboundary@3.1.7) (2023-06-19)
 
