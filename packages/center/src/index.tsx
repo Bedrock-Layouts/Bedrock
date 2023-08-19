@@ -8,7 +8,7 @@ import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
 /**
- * The `maxWidth` prop can accept any positive integer, `CSSLength`, `SizeOption`.
+ * The `maxWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
  */
 export type MaxWidth = number | CSSLength | SizesOptions;
 
@@ -18,7 +18,7 @@ export type MaxWidth = number | CSSLength | SizesOptions;
 export interface CenterProps {
   /**
    * Sets the max-inline size of the component.
-   * The `maxWidth` prop can accept any positive integer, `CSSLength`, `SizeOption`.
+   * The `maxWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
    */
   maxWidth?: MaxWidth;
   /**
