@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-08-19)
+
+### Features
+
+- **frame:** add new string ratio option ([0d563aa](https://github.com/Bedrock-Layouts/Bedrock/commit/0d563aa9443a91297943b80ad1fa23c949cd38f4))
+
 ## [3.1.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@3.1.8...@bedrock-layout/cover@3.1.9) (2023-07-13)
 
 **Note:** Version bump only for package @bedrock-layout/cover
-
-
-
-
 
 ## 3.1.8 (2023-03-03)
 

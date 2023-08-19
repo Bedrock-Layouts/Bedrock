@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.2.0 (2023-08-19)
+
+### Features
+
+- **frame:** add new string ratio option ([0d563aa](https://github.com/Bedrock-Layouts/Bedrock/commit/0d563aa9443a91297943b80ad1fa23c949cd38f4))
+
 ## [4.1.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@4.1.6...@bedrock-layout/grid@4.1.7) (2023-07-13)
 
 **Note:** Version bump only for package @bedrock-layout/grid
-
-
-
-
 
 ## 4.1.6 (2023-03-03)
 
