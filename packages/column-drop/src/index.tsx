@@ -10,9 +10,9 @@ import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
 /**
- * The `minItemWidth` prop can accept any positive integer, `CSSLength`, or `SizeOption`.
+ * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
  */
-export type MinItemWidth = number | CSSLength | SizesOptions;
+type MinItemWidth = number | CSSLength | SizesOptions;
 
 /**
  * Props for the ColumnDrop component.
@@ -24,7 +24,7 @@ export interface ColumnDropProps {
   gutter?: Gutter;
   /**
    * Sets the minimum width of each child.
-   * The `minItemWidth` prop can accept any positive integer, `CSSLength`, or `SizeOption`.
+   * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
    */
   minItemWidth?: MinItemWidth;
   /**

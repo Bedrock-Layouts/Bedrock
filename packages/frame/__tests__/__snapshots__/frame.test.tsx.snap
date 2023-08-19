@@ -40,7 +40,7 @@ exports[`Frame > correct usage > renders with ratio as a string with spaces 1`] 
   style={
     {
       "--position": undefined,
-      "--ratio": "16 / 9",
+      "--ratio": "16/9",
     }
   }
 >
@@ -52,6 +52,40 @@ exports[`Frame > correct usage > renders with ratio as a string with spaces 1`] 
 `;
 
 exports[`Frame > correct usage > renders with ratio as an array 1`] = `
+<div
+  data-bedrock-frame={true}
+  style={
+    {
+      "--position": undefined,
+      "--ratio": "16/9",
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame > correct usage > renders with ratio string using a colon 1`] = `
+<div
+  data-bedrock-frame={true}
+  style={
+    {
+      "--position": undefined,
+      "--ratio": "16/9",
+    }
+  }
+>
+  <img
+    alt="random thing"
+    src="https://picsum.photos/5000"
+  />
+</div>
+`;
+
+exports[`Frame > correct usage > renders with ratio string using a colon and with spaces 1`] = `
 <div
   data-bedrock-frame={true}
   style={
@@ -176,7 +210,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if ratio str
   style={
     {
       "--position": undefined,
-      "--ratio": undefined,
+      "--ratio": "16/9",
     }
   }
 >

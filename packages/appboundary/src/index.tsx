@@ -10,7 +10,7 @@ import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React from "react";
 
 /**
- * The `boundarySize` prop can accept any positive integer, `CSSLength`, `SizeOption`.
+ * The `boundarySize` prop can can be a CSSLength, a number, or a key of the theme's sizes options.
  */
 export type BoundarySize = number | CSSLength | SizesOptions;
 

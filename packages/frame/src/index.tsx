@@ -1,10 +1,27 @@
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
-type RatioString = `${number}/${number}` | `${number} / ${number}`;
+type RatioString =
+  | `${number}/${number}`
+  | `${number} / ${number}`
+  | `${number}:${number}`
+  | `${number} : ${number}`;
 
-type Ratio = [number, number] | RatioString;
+/**
+ * The `Ratio` type is used to specify the aspect ratio of the content.
+ */
+export type Ratio = [number, number] | RatioString;
+
+/**
+ * Props for the `Frame` component.
+ */
 export interface FrameProps {
+  /**
+   * The `ratio` prop is used to specify the aspect ratio of the content.
+   */
   ratio?: Ratio;
+  /**
+   * The `position` prop is used to specify the position of the content within the frame.
+   */
   position?: string;
 }
 
@@ -14,12 +31,15 @@ function checkIsRatio(ratio: unknown): ratio is Ratio {
   return (
     isCorrectArray ||
     (typeof ratio === "string" &&
-      /^\d{1,1000} {0,1}\/ {0,1}\d{1,1000}$/.test(ratio))
+      /^\d{1,1000} {0,1}(\/|:) {0,1}\d{1,1000}$/.test(ratio))
   );
 }
 
-function getRatioString(ratio: Ratio): RatioString {
-  return Array.isArray(ratio) ? (ratio.join("/") as RatioString) : ratio;
+function getRatioString(ratio: Ratio): `${number}/${number}` {
+  const ratioArray = Array.isArray(ratio) ? ratio : ratio.split(/\/|:/);
+  return ratioArray
+    .map((x) => String(x).trim())
+    .join("/") as `${number}/${number}`;
 }
 
 function getSafeRatio(ratio: unknown): RatioString | undefined {
@@ -28,28 +48,30 @@ function getSafeRatio(ratio: unknown): RatioString | undefined {
   return isRatio ? getRatioString(ratio) : undefined;
 }
 
-export const Frame = forwardRefWithAs<"div", FrameProps>(
-  ({ as, ratio, style, position, ...props }, ref) => {
-    const safeRatio = getSafeRatio(ratio);
-    const safeStyle = style ?? {};
+/**
+ * The `Frame` component is useful for cropping content, typically media, to a desired aspect ratio.
+ */
+export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
+  { as, ratio, style, position, ...props },
+  ref,
+) {
+  const safeRatio = getSafeRatio(ratio);
+  const safeStyle = style ?? {};
 
-    const Component = as ?? "div";
+  const Component = as ?? "div";
 
-    return (
-      <Component
-        data-bedrock-frame
-        ref={ref}
-        style={
-          {
-            ...safeStyle,
-            "--ratio": safeRatio,
-            "--position": position,
-          } as CSSProperties
-        }
-        {...props}
-      />
-    );
-  },
-);
-
-Frame.displayName = "Frame";
+  return (
+    <Component
+      data-bedrock-frame
+      ref={ref}
+      style={
+        {
+          ...safeStyle,
+          "--ratio": safeRatio,
+          "--position": position,
+        } as CSSProperties
+      }
+      {...props}
+    />
+  );
+});
