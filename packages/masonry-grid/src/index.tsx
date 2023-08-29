@@ -23,7 +23,7 @@ const isBrowser =
   (document as Document).nodeType === 9;
 
 const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
-  ({ style, ...props }, ref) => {
+  function RowSpanner({ style, ...props }, ref) {
     const safeStyle = style ?? {};
     return (
       <div
@@ -35,10 +35,10 @@ const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
   },
 );
 
-const Resizer = ({
+function Resizer({
   children,
   gutter,
-}: React.PropsWithChildren<{ gutter?: Gutter }>) => {
+}: React.PropsWithChildren<{ gutter?: Gutter }>) {
   const [rowSpan, setRowSpan] = useState(1);
 
   const theme = useTheme();
@@ -72,12 +72,26 @@ const Resizer = ({
       })}
     </RowSpanner>
   );
-};
+}
 
+/**
+ * Props for MasonryGrid component.
+ */
 export type MasonryGridProps = GridProps;
 
+/**
+ * The `MasonryGrid` component is almost identical to the
+ * [Grid component](https://www.bedrock-layout.dev/?path=/docs/spacer-components-masonrygrid--docs)
+ * except that each item's vertical space will grow independent of each other.
+ * The `MasonryGrid` component will then optimize the number of
+ * columns based on the `minItemWidth` prop value passed in.
+ *
+ * `MasonryGrid` does not create standard rows. Instead, it will
+ * optimize for the most dense vertical layout that it can achieve based on
+ * the space available.
+ */
 export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
-  ({ children, style, ...props }, ref) => {
+  function MasonryGrid({ children, style, ...props }, ref) {
     const safeStyle = style ?? {};
     return (
       <Grid
@@ -93,8 +107,6 @@ export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
     );
   },
 );
-
-MasonryGrid.displayName = "MasonryGrid";
 
 /**
  * This module is adapted from https://github.com/mikolalysenko/to-px/blob/master/browser.js

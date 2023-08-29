@@ -1,8 +1,8 @@
-import { Inline } from '../../packages/inline/src/index';
-import { Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs';
+import { Inline } from "../../packages/inline/src/index";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
-import { Component } from './Component';
-import { argTypes } from './argTypes'
+import { Component } from "./Component";
+import { argTypes } from "./argTypes";
 
 <Meta
   title="Spacer Components/Inline"
@@ -14,8 +14,14 @@ import { argTypes } from './argTypes'
 
 ## Use case
 
-The `Inline` component is designed to create consistent spacing around inline elements of variable width. Unlike the `InlineCluster` component,
-the items in the `Inline` component will not wrap. The `Inline` component also allows you to specify a component that can stretch and fill the excess space.
+The `Inline` component is designed to create consistent spacing between elements of variable width
+in the inline direction. Unlike the `InlineCluster` component, the items in the `Inline` component
+will not wrap.
+
+The `Inline` component also allows you to specify one of the children to stretch to fill the
+excess space. This is done using the `stretch` prop. The `stretch` prop can be set to `all` for all
+children to stretch, or a number to stretch a specific child. The `stretch` prop can also be set to
+`start` or `end` to stretch the first or last child respectively.
 
 ## Installation
 
@@ -123,13 +129,13 @@ For styling purposes, you can select `data-bedrock-inline`.
 
 Experiment with this story with the Controls addon in the Canvas tab.
 
-export const Template = (args) =>  (
-   <Inline {...args}>
-      <Component style={{minWidth:100}} />
-      <Component style={{minWidth:100}} />
-      <Component style={{minWidth:100}} />
-      <Component style={{minWidth:100}} />
-    </Inline>
+export const Template = (args) => (
+  <Inline {...args}>
+    <Component style={{ minWidth: 100 }} />
+    <Component style={{ minWidth: 100 }} />
+    <Component style={{ minWidth: 100 }} />
+    <Component style={{ minWidth: 100 }} />
+  </Inline>
 );
 
 <Canvas>
