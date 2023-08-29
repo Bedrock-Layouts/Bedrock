@@ -7,6 +7,8 @@ import "./i18n";
 
 import { create } from "@storybook/theming";
 
+import { template } from "./autodocTemplate";
+
 export const parameters = {
   viewMode: "docs",
   previewTabs: { canvas: { hidden: true } },
@@ -14,6 +16,7 @@ export const parameters = {
     theme: create({
       base: "dark",
     }),
+    page: template,
   },
   options: {
     storySort: {

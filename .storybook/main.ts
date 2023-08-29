@@ -1,6 +1,8 @@
+import { dirname, join } from "path";
 const turbosnap = require("vite-plugin-turbosnap");
 
 import type { InlineConfig } from "vite";
+
 export const stories = [
   "./pages/Landing.stories.mdx",
   "./pages/introduction.stories.mdx",
@@ -15,9 +17,10 @@ export const stories = [
   "../examples/examples.stories.mdx",
   "../examples/web.dev.stories.mdx",
 ];
-export const addons = ["@storybook/addon-essentials"];
+export const addons = [getAbsolutePath("@storybook/addon-essentials")];
 
 export const staticDirs = ["../public"];
+
 export const features = {
   storyStoreV7: true,
 };
@@ -28,13 +31,21 @@ export const viteFinal = async (config: InlineConfig, { configType }) => {
     config.plugins?.push(
       turbosnap({
         rootDir: config.root,
-      })
+      }),
     );
   }
   return config;
 };
 
 export const framework = {
-  name: "@storybook/react-vite",
+  name: getAbsolutePath("@storybook/react-vite"),
   options: {},
 };
+
+export const docs = {
+  autodocs: true
+};
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}
