@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.2.0 (2023-08-29)
+
+### Features
+
+- add type descriptions to more components ([46f93dd](https://github.com/Bedrock-Layouts/Bedrock/commit/46f93dd7688ecf0661a63262abe02070c3e5bee0))
+
 ## [4.1.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@4.1.6...@bedrock-layout/inline@4.1.7) (2023-07-13)
 
 **Note:** Version bump only for package @bedrock-layout/inline
-
-
-
-
 
 ## 4.1.6 (2023-03-03)
 
