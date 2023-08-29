@@ -2113,10 +2113,10 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@putout/minify@^1.0.4":
-  version "1.49.0"
-  resolved "https://registry.npmjs.org/@putout/minify/-/minify-1.49.0.tgz#f33a86e88d6a7e7fbc2d84b0061978cdd922bbd7"
-  integrity sha512-T/eS9rJC0tgq/s8uLpB0cpbsUaY7KSML3UbvPri2qjVCcEK/qwi8+lNWdp8VSyOWiC25Ntrt/DewOu6dXRX1ng==
+"@putout/minify@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-2.0.0.tgz#3afef300800d95ccf65886aef5d6ec00b5cd8c83"
+  integrity sha512-cwpdeIm8+4868aiwH69xR95CaB9RfoKDu4uKWddK2IA6BNCenvX9LaSpHgvgwn2J7v27QTQQkeXWQMWCcJTJyw==
 
 "@radix-ui/number@1.0.1":
   version "1.0.1"
@@ -9446,11 +9446,11 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minify@^10.2.0:
-  version "10.3.0"
-  resolved "https://registry.npmjs.org/minify/-/minify-10.3.0.tgz#f01f5953ffdccfc38661abffe3e4022561b9cd6b"
-  integrity sha512-eRkx2J1ykkGBVi1gI2sksmovWFzts+GYi2u3Jd/S5eNIkzj0pidciICsWRWdTKTLZVFUP7b6IvoAzasvQkMicg==
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-10.5.0.tgz#90cb377781991a611f67afd6de924de63ab9bce7"
+  integrity sha512-3w3McBswVw5+fyRpPNtz5UtdhC5eCXHQ+EuXrJ3lJXgybahLN0wU4tlULdU35DR/FKsBPXA0zCuaEif7+hc/Yw==
   dependencies:
-    "@putout/minify" "^1.0.4"
+    "@putout/minify" "^2.0.0"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
