@@ -6,7 +6,14 @@ import React from "react";
 
 type Merge<T, U> = Omit<T, keyof U> & U;
 
-type PropsWithAs<C extends React.ElementType, Props> = Props & { as?: C };
+type PropsWithAs<C extends React.ElementType, Props> = Props & {
+  /**
+   * The component used for the root node. Can be a string to use a HTML element or a component.
+   * **Note:** The component has to accept a `style` prop as well as any `data-*`
+   * attributes and pass them down to the root element.
+   */
+  as?: C;
+};
 
 export type PolymorphicComponentPropsWithoutRef<
   C extends React.ElementType,
@@ -60,6 +67,9 @@ export type PolymorphicForwardedRefComponent<
   PolymorphicExoticComponent<C, Props>
 >;
 
+/**
+ * Utility function to create a component that can be used polymorphically with Ref
+ */
 export function forwardRefWithAs<C extends React.ElementType, Props = {}>(
   render: (
     props: PolymorphicComponentPropsWithoutRef<C, Props>,
