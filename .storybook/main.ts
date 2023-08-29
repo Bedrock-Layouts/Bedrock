@@ -43,7 +43,8 @@ export const framework = {
 };
 
 export const docs = {
-  autodocs: true
+  autodocs: true,
+  toc: true,
 };
 
 function getAbsolutePath(value: string): any {
