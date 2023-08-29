@@ -95,27 +95,27 @@ export const Playground: Story = {};
 export const Gutter: Story = {
   render: () => {
     return (
-      <>
-        <h3>Custom gutter as number (20)</h3>
+      <Stack gutter="size5">
+        <strong>Custom gutter as number (20)</strong>
         <Stack gutter={20}>
           <Component />
           <Component />
         </Stack>
-        <h3>Custom gutter as string ("3ch")</h3>
+        <strong>Custom gutter as string ("3ch")</strong>
         <Stack gutter="3ch">
           <Component />
           <Component />
         </Stack>
         {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
           <React.Fragment key={gutter}>
-            <h3>{gutter}</h3>
+            <strong>{gutter}</strong>
             <Stack gutter={gutter}>
               <Component />
               <Component />
             </Stack>
           </React.Fragment>
         ))}
-      </>
+      </Stack>
     );
   },
 };

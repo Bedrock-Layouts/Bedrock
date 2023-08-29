@@ -17,6 +17,7 @@ export const parameters = {
       base: "dark",
     }),
     page: template,
+    toc: { disabled: false, headingSelector: "h2, h3" },
   },
   options: {
     storySort: {
