@@ -7,27 +7,42 @@ import {
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
-type PaddingValue = Gutter;
+/**
+ * The `padding` prop can also take an object to specify which
+ * locations will have padding and of which type. You can pass either
+ * traditional properties like `top, bottom, right, left`, or logical
+ * properties in camelCase such as `blockStart, blockEnd, inlineStart,
+ * inlineEnd`. No matter which properties are given, logical properties
+ * are used.
+ */
+export type PaddingObj =
+  | { left: Gutter }
+  | { right: Gutter }
+  | { top: Gutter }
+  | { bottom: Gutter }
+  | { inlineStart: Gutter }
+  | { inlineEnd: Gutter }
+  | { blockStart: Gutter }
+  | { blockEnd: Gutter };
 
-type PaddingObj =
-  | { left: PaddingValue }
-  | { right: PaddingValue }
-  | { top: PaddingValue }
-  | { bottom: PaddingValue }
-  | { inlineStart: PaddingValue }
-  | { inlineEnd: PaddingValue }
-  | { blockStart: PaddingValue }
-  | { blockEnd: PaddingValue };
+/**
+ * `padding` can take an array that follows the
+ * [padding short hand rules](https://developer.mozilla.org/en-US/docs/Web/CSS/padding).
+ */
+export type PaddingArray =
+  | [Gutter]
+  | [Gutter, Gutter]
+  | [Gutter, Gutter, Gutter]
+  | [Gutter, Gutter, Gutter, Gutter];
 
-type PaddingTypes =
-  | PaddingValue
-  | PaddingObj
-  | [PaddingValue]
-  | [PaddingValue, PaddingValue]
-  | [PaddingValue, PaddingValue, PaddingValue]
-  | [PaddingValue, PaddingValue, PaddingValue, PaddingValue];
+/**
+ * Padding values can either be any valid Gutter value, a positive `number`
+ * indicating the number of pixels, or a valid `CSSLength`. If you provided
+ * an invalid value (such as a negative number), the padding will be set to `0px`.
+ */
+export type PaddingTypes = Gutter | PaddingObj | PaddingArray;
 
-const keyToProperty = (key: string) => {
+function keyToProperty(key: string) {
   type map = { [s: string]: string };
   const modernMap: map = {
     left: `padding-inline-start`,
@@ -41,7 +56,7 @@ const keyToProperty = (key: string) => {
   };
 
   return modernMap[key];
-};
+}
 
 const paddingToStyleProps = (
   theme: { space?: BaseTheme },
@@ -70,23 +85,29 @@ export interface PadBoxProps {
   padding?: PaddingTypes;
 }
 
-export const PadBox = forwardRefWithAs<"div", PadBoxProps>(
-  ({ as, style, padding, ...props }, ref) => {
-    const theme = useTheme();
-    const safeStyle = style ?? {};
+/**
+ * he `PadBox` component is designed to create consistent padding based on
+ * the spacing constants. PadBox takes either a single value, an array of
+ * values (like the css shorthand for top / right / bottom / left), or an
+ * object of values (specifying each side individually) for fine tuning the
+ * padding.
+ */
+export const PadBox = forwardRefWithAs<"div", PadBoxProps>(function PadBox(
+  { as, style, padding, ...props },
+  ref,
+) {
+  const theme = useTheme();
+  const safeStyle = style ?? {};
 
-    const Component = as ?? "div";
-    const paddingStyles = paddingToStyleProps(theme, padding ?? "size00");
+  const Component = as ?? "div";
+  const paddingStyles = paddingToStyleProps(theme, padding ?? "size00");
 
-    return (
-      <Component
-        data-bedrock-padbox
-        {...props}
-        ref={ref}
-        style={{ ...safeStyle, ...paddingStyles } as CSSProperties}
-      />
-    );
-  },
-);
-
-PadBox.displayName = "PadBox";
+  return (
+    <Component
+      data-bedrock-padbox
+      {...props}
+      ref={ref}
+      style={{ ...safeStyle, ...paddingStyles } as CSSProperties}
+    />
+  );
+});
