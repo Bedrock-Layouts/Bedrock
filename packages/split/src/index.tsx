@@ -33,44 +33,67 @@ const fractions: Fractions = {
 };
 
 type MinItemWidth = number | CSSLength | SizesOptions;
+
+/**
+ * Props for the Split component.
+ */
 export interface SplitProps {
+  /**
+   * Sets space between each element.
+   */
   gutter?: Gutter;
+  /**
+   * Sets the fractional ratio of the split.
+   */
   fraction?: FractionTypes;
+  /**
+   * Sets the width breakpoint at which the columns
+   * will switch to a single column.
+   */
   switchAt?: number | CSSLength | SizesOptions;
+  /**
+   * Sets the minimum inline-size of each of the children.
+   */
   minItemWidth?: MinItemWidth;
 }
 
-export const Split = forwardRefWithAs<"div", SplitProps>(
-  ({ as, fraction, gutter, minItemWidth, switchAt, style, ...props }, ref) => {
-    const theme = useTheme();
-    const attrString =
-      fraction && fractions[fraction] ? `fraction:${fraction}` : "";
+/**
+ * The `Split` component is designed to create a split layout
+ * based on a fractional ratio. The `Split` component will enforce
+ * a standard spacing scheme through the `gutter` prop and will
+ * optionally switch to a stack layout when the provided threshold
+ * is reached.
+ */
+export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
+  { as, fraction, gutter, minItemWidth, switchAt, style, ...props },
+  ref,
+) {
+  const theme = useTheme();
+  const attrString =
+    fraction && fractions[fraction] ? `fraction:${fraction}` : "";
 
-    const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gutter);
 
-    const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
+  const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
 
-    const safeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
-    const safeStyle = style ?? {};
+  const safeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
+  const safeStyle = style ?? {};
 
-    const Component = as ?? "div";
+  const Component = as ?? "div";
 
-    return (
-      <Component
-        ref={ref}
-        data-bedrock-split={attrString}
-        style={
-          {
-            ...safeStyle,
-            "--gutter": maybeGutter,
-            "--minItemWidth": safeMinItemWidth,
-            "--switchAt": safeSwitchAt,
-          } as CSSProperties
-        }
-        {...props}
-      />
-    );
-  },
-);
-
-Split.displayName = "Split";
+  return (
+    <Component
+      ref={ref}
+      data-bedrock-split={attrString}
+      style={
+        {
+          ...safeStyle,
+          "--gutter": maybeGutter,
+          "--minItemWidth": safeMinItemWidth,
+          "--switchAt": safeSwitchAt,
+        } as CSSProperties
+      }
+      {...props}
+    />
+  );
+});
