@@ -6,11 +6,26 @@ import {
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
+/**
+ * Props for the Reel component.
+ */
 export interface ReelProps {
+  /**
+   * Sets the scroll snap type.
+   */
   snapType?: "none" | "proximity" | "mandatory";
+  /**
+   * Sets space between each element.
+   */
   gutter?: Gutter;
 }
 
+/**
+ * Scrolling is a popular and natural way to interact with
+ * web content. The `Reel` component is designed to organize
+ * content into scrollable horizontal list with convenient scroll
+ * snap points.
+ */
 export const Reel = forwardRefWithAs<"div", ReelProps>(
   ({ as, snapType, gutter, style, ...props }, ref) => {
     const theme = useTheme();
