@@ -12,6 +12,7 @@ import React, {
   ComponentPropsWithoutRef,
   cloneElement,
   forwardRef,
+  useEffect,
   useState,
 } from "react";
 
@@ -43,9 +44,19 @@ function Resizer({
 
   const theme = useTheme();
 
-  /* c8 ignore next */
-  const childRef = useResizeObserver<HTMLDivElement>(({ target }) => {
+  /* c8 ignore start */
+  const childRef = useResizeObserver<HTMLDivElement>(() => {
     setRowSpan(1);
+  });
+  /* c8 ignore end */
+
+  useEffect(() => {
+    if (!childRef.current) return;
+
+    const target = childRef.current;
+
+    target.style.blockSize = "1px";
+
     const gapString = getSafeGutter(theme, gutter) ?? "1px";
 
     const maybeGap = isBrowser ? toPX(gapString, target) : null;
@@ -53,12 +64,21 @@ function Resizer({
     const gap: number = Math.max(maybeGap ?? 1, 1);
 
     const [child] = Array.from(target.children);
-    const height = 1 + Math.min(target.scrollHeight, child.scrollHeight);
 
-    const rowHeight = Math.ceil(height / gap);
+    const [grandChild] = Array.from(child?.children ?? []);
 
-    setRowSpan(rowHeight);
-  });
+    const smallestScrollHeight = Math.min(
+      target.scrollHeight,
+      child?.scrollHeight ?? Number.MAX_SAFE_INTEGER,
+      grandChild?.scrollHeight ?? Number.MAX_SAFE_INTEGER,
+    );
+
+    const heightWithBuffer = gap / 3 + Math.max(1, smallestScrollHeight);
+
+    const newRowSpan = Math.max(1, Math.ceil(heightWithBuffer / gap));
+
+    setRowSpan(newRowSpan);
+  }, [rowSpan, childRef, theme, gutter]);
 
   return (
     <RowSpanner style={{ "--rows": rowSpan } as CSSProperties} ref={childRef}>
@@ -66,7 +86,8 @@ function Resizer({
         return cloneElement(child as React.ReactElement, {
           style: {
             display: "block",
-            height: "100%",
+            blockSize: "100%",
+            ...((child as React.ReactElement).props.style ?? {}),
           },
         });
       })}
