@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@4.2.1...@bedrock-layout/masonry-grid@4.2.2) (2023-08-31)
+
+### Bug Fixes
+
+- **masonry-grid:** fix issue where grid was not being calculated correctly ([b157d28](https://github.com/Bedrock-Layouts/Bedrock/commit/b157d28f18505923d137d5706512b5e184bcbaa0))
+
 ## [4.2.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@4.2.0...@bedrock-layout/masonry-grid@4.2.1) (2023-08-29)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
