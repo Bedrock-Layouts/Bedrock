@@ -2577,7 +2577,7 @@
   resolved "https://registry.npmjs.org/@solidjs/router/-/router-0.8.3.tgz#4623cda699c4f47b3520222529b72e3cb77ec415"
   integrity sha512-oJuqQo10rVTiQYhe1qXIG1NyZIZ2YOwHnlLc8Xx+g/iJhFCJo1saLOIrD/Dkh2fpIaIny5ZMkz1cYYqoTYGJbg==
 
-"@storybook/addon-actions@7.4.0", "@storybook/addon-actions@^7.4.0":
+"@storybook/addon-actions@7.4.0":
   version "7.4.0"
   resolved "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-7.4.0.tgz#709988f46422b85b3672d2e6f90bf623af59faa9"
   integrity sha512-0lHLLUlrGE7CBFrfmAXrBKu7fUIsiQlnNekuE3cIAjSgVR481bJEzYHUUoMATqpPC4GGErBdP1CZxVDDwWV8jA==
@@ -2590,6 +2590,28 @@
     "@storybook/preview-api" "7.4.0"
     "@storybook/theming" "7.4.0"
     "@storybook/types" "7.4.0"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.2.0"
+    ts-dedent "^2.0.0"
+    uuid "^9.0.0"
+
+"@storybook/addon-actions@^7.4.0":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.4.2.tgz#7f1d69a5439d6d39c7453e2167f831f34c620380"
+  integrity sha512-aKHyYjxcWaOTf/7B8x4EmUNkDAiYJZyJfGTYg2TDEDs89x7/9slujAA01qIgOp74C9nWkHDUVdm7/J+h3kWJWw==
+  dependencies:
+    "@storybook/client-logger" "7.4.2"
+    "@storybook/components" "7.4.2"
+    "@storybook/core-events" "7.4.2"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.4.2"
+    "@storybook/preview-api" "7.4.2"
+    "@storybook/theming" "7.4.2"
+    "@storybook/types" "7.4.2"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
@@ -2962,6 +2984,22 @@
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
 
+"@storybook/components@7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.4.2.tgz#f8c3019a2255a48de61712e8de9f2c60cf4b3f5e"
+  integrity sha512-ecbDzSUd74vf6IwHsbQr+9mVRxKWLmwd9zJ8RHMcR8UejTRAAR/eVvYoCG331TQ8TrhTmHTy5xCVv47pm6ORkQ==
+  dependencies:
+    "@radix-ui/react-select" "^1.2.2"
+    "@radix-ui/react-toolbar" "^1.0.4"
+    "@storybook/client-logger" "7.4.2"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/theming" "7.4.2"
+    "@storybook/types" "7.4.2"
+    memoizerific "^1.11.3"
+    use-resize-observer "^9.1.0"
+    util-deprecate "^1.0.2"
+
 "@storybook/core-client@7.4.2":
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.4.2.tgz#30ae78e856cf1af7898be43f01773c58b52553c8"
@@ -3204,6 +3242,27 @@
     telejson "^7.2.0"
     ts-dedent "^2.0.0"
 
+"@storybook/manager-api@7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-7.4.2.tgz#821d1a07e9b3058d7470eab091392d1bdbe06c94"
+  integrity sha512-gKPG0At9AGhF32iwjiba+ILqswc3ZFj9ZIu5HjGEmaoiOfqI6TayuHoptup0QxkI/Hx8f9mNkHCwR9COrmb69w==
+  dependencies:
+    "@storybook/channels" "7.4.2"
+    "@storybook/client-logger" "7.4.2"
+    "@storybook/core-events" "7.4.2"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/router" "7.4.2"
+    "@storybook/theming" "7.4.2"
+    "@storybook/types" "7.4.2"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    memoizerific "^1.11.3"
+    semver "^7.3.7"
+    store2 "^2.14.2"
+    telejson "^7.2.0"
+    ts-dedent "^2.0.0"
+
 "@storybook/manager@7.4.0":
   version "7.4.0"
   resolved "https://registry.npmjs.org/@storybook/manager/-/manager-7.4.0.tgz#21a825c9145f56ca6c38d3e9d3546b311a6db14e"
@@ -3334,6 +3393,15 @@
     memoizerific "^1.11.3"
     qs "^6.10.0"
 
+"@storybook/router@7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-7.4.2.tgz#04644705bf0703a5c65163dff0f11d42c8727b93"
+  integrity sha512-TFpMrmliklWNSrF84kGnh3WcLZciqIvaAjhxahqD+kx070KLqjxrsiny7UC6PUUYZdjLkbR9m8n3SFdXAVKgLw==
+  dependencies:
+    "@storybook/client-logger" "7.4.2"
+    memoizerific "^1.11.3"
+    qs "^6.10.0"
+
 "@storybook/telemetry@7.4.0":
   version "7.4.0"
   resolved "https://registry.npmjs.org/@storybook/telemetry/-/telemetry-7.4.0.tgz#04e47a2d9decf7671273130a9af9d231a8c3d2e8"
@@ -3348,13 +3416,23 @@
     fs-extra "^11.1.0"
     read-pkg-up "^7.0.1"
 
-"@storybook/theming@7.4.0", "@storybook/theming@^7.4.0":
+"@storybook/theming@7.4.0":
   version "7.4.0"
   resolved "https://registry.npmjs.org/@storybook/theming/-/theming-7.4.0.tgz#f5d9f8f55c41e08c0f50b57d9fb0e159ed595274"
   integrity sha512-eLjEf6G3cqlegfutF/iUrec9LrUjKDj7K4ZhGdACWrf7bQcODs99EK62e9/d8GNKr4b+QMSEuM6XNGaqdPnuzQ==
   dependencies:
     "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
     "@storybook/client-logger" "7.4.0"
+    "@storybook/global" "^5.0.0"
+    memoizerific "^1.11.3"
+
+"@storybook/theming@7.4.2", "@storybook/theming@^7.4.0":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.4.2.tgz#57396b3c520187103ce99168b8473e2138311194"
+  integrity sha512-wVmxZHVCqDoZgUOXTS4HRV4UClLtCydRNOEuUZ7X08QIPSA1FVL3gEpTQJfgCsyBX/cwSSofAMUbzAGEVNo+9g==
+  dependencies:
+    "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
+    "@storybook/client-logger" "7.4.2"
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
