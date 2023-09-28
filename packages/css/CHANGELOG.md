@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2023-09-28)
+
+### Features
+
+- **split:** add stacking for items index 3+ for split ([134e2ab](https://github.com/Bedrock-Layouts/Bedrock/commit/134e2ab98307726ee5d28e1938aa9b1db308119b))
+
 ## [2.2.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.2.8...@bedrock-layout/css@2.2.9) (2023-03-20)
 
 ### Bug Fixes
