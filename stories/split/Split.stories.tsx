@@ -248,3 +248,22 @@ export const SwitchAt: Story = {
     );
   },
 };
+/**
+ * The `Split` is designed to be used with a two children, but it can be used with more.
+ * If you use more than two children, the `Split` will stack all the children underneath the first two children.
+ */
+export const MoreThanTwoChildren: Story = {
+  args: {
+    fraction: "1/3",
+  },
+  render: (args) => {
+    return (
+      <Split {...args}>
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+      </Split>
+    );
+  },
+};
