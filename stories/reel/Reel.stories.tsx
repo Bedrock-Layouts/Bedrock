@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { Stack } from "../../packages/stack/src/index";
 import { Reel } from "../../packages/reel/src/index";
-import { spacing } from "../../packages/spacing-constants/src/index";
+
 import { colors, ColoredRect } from "./colors";
 
 const installCode = `
@@ -30,7 +30,7 @@ const meta = {
       <Reel {...args}>
         {colors.map((color, ind) => {
           return (
-            <ColoredRect key={ind} bgColor={color}>
+            <ColoredRect key={ind} bgColor={color} style={{ minWidth: "70vw" }}>
               Lorem ipsum dolor sit amet.
             </ColoredRect>
           );
@@ -79,10 +79,10 @@ export const Playground: Story = {};
 export const Gutter: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gutter="size5" style={{ maxInlineSize: "45ch" }}>
         <strong>Custom gutter as number (20)</strong>
         <Reel snapType="none" gutter={20}>
-          {colors.map((color, ind) => {
+          {colors.slice(0, colors.length / 4).map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
                 Lorem ipsum dolor sit amet.{" "}
@@ -92,7 +92,7 @@ export const Gutter: Story = {
         </Reel>
         <strong>Custom gutter as string ("3ch")</strong>
         <Reel snapType="none" gutter="3ch">
-          {colors.map((color, ind) => {
+          {colors.slice(0, colors.length / 4).map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
                 Lorem ipsum dolor sit amet.{" "}
@@ -100,11 +100,23 @@ export const Gutter: Story = {
             );
           })}
         </Reel>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
+        <span>
+          (There is an issue with gutters rendering in the docs, but they work
+          in the playground above. Please see the{" "}
+          <a
+            href="https://github.com/Bedrock-Layouts/Bedrock/issues/2062"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://github.com/Bedrock-Layouts/Bedrock/issues/2062
+          </a>{" "}
+          for more information.)
+        </span>
+        {/* {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
           <React.Fragment key={gutter}>
             <strong>{gutter}</strong>
             <Reel gutter={gutter} snapType="none">
-              {colors.map((color, ind) => {
+              {colors.slice(0, colors.length / 4).map((color, ind) => {
                 return (
                   <ColoredRect key={ind} bgColor={color}>
                     Lorem ipsum dolor sit amet.{" "}
@@ -113,7 +125,7 @@ export const Gutter: Story = {
               })}
             </Reel>
           </React.Fragment>
-        ))}
+        ))} */}
       </Stack>
     );
   },
@@ -148,7 +160,7 @@ export const SnapType: Story = {
         <Reel snapType="none" gutter="size3">
           {colors.map((color, i) => {
             return (
-              <ColoredRect key={i} bgColor={color} style={{ minWidth: "80%" }}>
+              <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>
                 Lorem ipsum dolor sit amet.
               </ColoredRect>
             );
@@ -158,7 +170,7 @@ export const SnapType: Story = {
         <Reel snapType="mandatory" gutter="size3">
           {colors.map((color, i) => {
             return (
-              <ColoredRect key={i} bgColor={color} style={{ minWidth: "80%" }}>
+              <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>
                 Lorem ipsum dolor sit amet.
               </ColoredRect>
             );
@@ -168,7 +180,7 @@ export const SnapType: Story = {
         <Reel snapType="proximity" gutter="size3">
           {colors.map((color, i) => {
             return (
-              <ColoredRect key={i} bgColor={color} style={{ minWidth: "80%" }}>
+              <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>
                 Lorem ipsum dolor sit amet.
               </ColoredRect>
             );

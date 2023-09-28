@@ -34,7 +34,7 @@
     "publish:fix": "lerna publish from-package",
     "verify": "yarn build && yarn check-types && yarn lint && yarn check-format && yarn test:coverage",
     "postinstall": "husky install",
-    "chromatic": "npx chromatic --build-script-name build:storybook --only-changed --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "npx chromatic --build-script-name build:storybook --only-changed --untraced 'packages/primitives/package.json' --untraced 'package.json' --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@reach/menu-button": "^0.18.0",
