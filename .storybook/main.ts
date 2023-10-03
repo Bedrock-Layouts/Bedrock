@@ -17,7 +17,10 @@ export const stories = [
   "../examples/examples.stories.mdx",
   "../examples/web.dev.stories.mdx",
 ];
-export const addons = [getAbsolutePath("@storybook/addon-essentials")];
+export const addons = [
+  getAbsolutePath("@storybook/addon-essentials"),
+  getAbsolutePath("@chromaui/addon-visual-tests"),
+];
 
 export const staticDirs = ["../public"];
 
@@ -47,6 +50,6 @@ export const docs = {
   toc: true,
 };
 
-function getAbsolutePath(value: string): any {
+function getAbsolutePath(value: string): string {
   return dirname(require.resolve(join(value, "package.json")));
 }

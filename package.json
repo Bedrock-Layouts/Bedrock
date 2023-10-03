@@ -2,6 +2,7 @@
   "name": "root",
   "description": "Foundational Layout Primitives for your React App",
   "private": true,
+  "packageManager": "yarn@1.22.19",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bedrock-Layouts/Bedrock.git"
@@ -12,7 +13,7 @@
   "author": "Jarvis1010 <travis.mair@gmail.com>",
   "homepage": "https://bedrock-layout.dev/",
   "scripts": {
-    "start": "storybook dev --docs -p 9001 -c .storybook",
+    "start": "storybook dev -p 9001 -c .storybook",
     "start:solid": "lerna run start:solid",
     "test": "vitest --run",
     "test:coverage": "vitest run --coverage",
@@ -59,6 +60,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@bedrock-layout/css": "^2.2.4",
     "@bedrock-layout/register-resize-callback": "^2.0.0",
+    "@chromaui/addon-visual-tests": "^0.0.98",
     "@nrwl/nx-cloud": "^16.1.0",
     "@solidjs/router": "^0.8.2",
     "@storybook/addon-actions": "^7.4.0",
