@@ -1,4 +1,3 @@
-import OpenProps from "open-props";
 import React, { createContext, useContext } from "react";
 
 type Maybe<T> = NonNullable<T> | undefined;
@@ -110,74 +109,41 @@ function fromEntries<K extends string | number, T>(
   );
 }
 
-const {
-  sizeXxs,
-  sizeXs,
-  sizeSm,
-  sizeMd,
-  sizeLg,
-  sizeXl,
-  sizeXxl,
-  sizeContent1,
-  sizeContent2,
-  sizeContent3,
-  sizeHeader1,
-  sizeHeader2,
-  sizeHeader3,
-  size000,
-  size00,
-  size1,
-  size2,
-  size3,
-  size4,
-  size5,
-  size6,
-  size7,
-  size8,
-  size9,
-  size10,
-  size11,
-  size12,
-  size13,
-  size14,
-  size15,
-} = OpenProps;
-
 const space = {
-  size000,
-  size00,
-  size1,
-  size2,
-  size3,
-  size4,
-  size5,
-  size6,
-  size7,
-  size8,
-  size9,
-  size10,
-  size11,
-  size12,
-  size13,
-  size14,
-  size15,
-};
+  size000: "-.5rem",
+  size00: "-.25rem",
+  size1: ".25rem",
+  size2: ".5rem",
+  size3: "1rem",
+  size4: "1.25rem",
+  size5: "1.5rem",
+  size6: "1.75rem",
+  size7: "2rem",
+  size8: "3rem",
+  size9: "4rem",
+  size10: "5rem",
+  size11: "7.5rem",
+  size12: "10rem",
+  size13: "15rem",
+  size14: "20rem",
+  size15: "30rem",
+} as const;
 
 const size = {
-  sizeXxs,
-  sizeXs,
-  sizeSm,
-  sizeMd,
-  sizeLg,
-  sizeXl,
-  sizeXxl,
-  sizeContent1,
-  sizeContent2,
-  sizeContent3,
-  sizeHeader1,
-  sizeHeader2,
-  sizeHeader3,
-};
+  sizeContent1: "20ch",
+  sizeContent2: "45ch",
+  sizeContent3: "60ch",
+  sizeHeader1: "20ch",
+  sizeHeader2: "25ch",
+  sizeHeader3: "35ch",
+  sizeXxs: "240px",
+  sizeXs: "360px",
+  sizeSm: "480px",
+  sizeMd: "768px",
+  sizeLg: "1024px",
+  sizeXl: "1440px",
+  sizeXxl: "1920px",
+} as const;
 
 export const spacing = space as Record<keyof typeof space, CSSLength>;
 

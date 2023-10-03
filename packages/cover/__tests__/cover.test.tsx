@@ -141,7 +141,7 @@ describe("Cover", () => {
       Object.keys(sizes).forEach((size) => {
         const cover = create(
           <Cover gutter="size3" minHeight={size}>
-            <Lorem />
+            <p>{size}</p>
           </Cover>,
         );
         expect(cover.toJSON()).toMatchSnapshot();
