@@ -533,146 +533,6 @@ exports[`Cover > correct usage > renders with minHeight as a size property 1`] =
   style={
     {
       "--gutter": "1rem",
-      "--minHeight": "240px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 2`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "360px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 3`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "480px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 4`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "768px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 5`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "1024px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 6`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "1440px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 7`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
-      "--minHeight": "1920px",
-    }
-  }
->
-  <div
-    data-bedrock-cover-centered=""
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Cover > correct usage > renders with minHeight as a size property 8`] = `
-<div
-  data-bedrock-cover=""
-  style={
-    {
-      "--gutter": "1rem",
       "--minHeight": "20ch",
     }
   }
@@ -681,13 +541,13 @@ exports[`Cover > correct usage > renders with minHeight as a size property 8`] =
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeContent1
     </p>
   </div>
 </div>
 `;
 
-exports[`Cover > correct usage > renders with minHeight as a size property 9`] = `
+exports[`Cover > correct usage > renders with minHeight as a size property 2`] = `
 <div
   data-bedrock-cover=""
   style={
@@ -701,13 +561,13 @@ exports[`Cover > correct usage > renders with minHeight as a size property 9`] =
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeContent2
     </p>
   </div>
 </div>
 `;
 
-exports[`Cover > correct usage > renders with minHeight as a size property 10`] = `
+exports[`Cover > correct usage > renders with minHeight as a size property 3`] = `
 <div
   data-bedrock-cover=""
   style={
@@ -721,13 +581,13 @@ exports[`Cover > correct usage > renders with minHeight as a size property 10`] 
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeContent3
     </p>
   </div>
 </div>
 `;
 
-exports[`Cover > correct usage > renders with minHeight as a size property 11`] = `
+exports[`Cover > correct usage > renders with minHeight as a size property 4`] = `
 <div
   data-bedrock-cover=""
   style={
@@ -741,13 +601,13 @@ exports[`Cover > correct usage > renders with minHeight as a size property 11`] 
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeHeader1
     </p>
   </div>
 </div>
 `;
 
-exports[`Cover > correct usage > renders with minHeight as a size property 12`] = `
+exports[`Cover > correct usage > renders with minHeight as a size property 5`] = `
 <div
   data-bedrock-cover=""
   style={
@@ -761,13 +621,13 @@ exports[`Cover > correct usage > renders with minHeight as a size property 12`] 
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeHeader2
     </p>
   </div>
 </div>
 `;
 
-exports[`Cover > correct usage > renders with minHeight as a size property 13`] = `
+exports[`Cover > correct usage > renders with minHeight as a size property 6`] = `
 <div
   data-bedrock-cover=""
   style={
@@ -781,7 +641,147 @@ exports[`Cover > correct usage > renders with minHeight as a size property 13`] 
     data-bedrock-cover-centered=""
   >
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
+      sizeHeader3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 7`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "240px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeXxs
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 8`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "360px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeXs
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 9`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "480px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeSm
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 10`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "768px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeMd
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 11`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "1024px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeLg
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 12`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "1440px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeXl
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Cover > correct usage > renders with minHeight as a size property 13`] = `
+<div
+  data-bedrock-cover=""
+  style={
+    {
+      "--gutter": "1rem",
+      "--minHeight": "1920px",
+    }
+  }
+>
+  <div
+    data-bedrock-cover-centered=""
+  >
+    <p>
+      sizeXxl
     </p>
   </div>
 </div>
