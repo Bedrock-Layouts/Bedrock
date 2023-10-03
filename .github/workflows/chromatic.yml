@@ -26,3 +26,4 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: false
           buildScriptName: build:storybook
+          onlyChanged: true
