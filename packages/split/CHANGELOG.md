@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.12](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/split@3.1.11...@bedrock-layout/split@3.1.12) (2023-10-04)
+
+**Note:** Version bump only for package @bedrock-layout/split
+
 ## 3.1.11 (2023-10-03)
 
 **Note:** Version bump only for package @bedrock-layout/split
