@@ -32,10 +32,10 @@ export interface ColumnDropBaseProps {
 }
 
 function getSafeMinItemWidth(
-  theme: {
+  theme: Readonly<{
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
-  },
+  }>,
   minItemWidth?: MinItemWidth,
 ) {
   return getSizeValue(theme, minItemWidth);
@@ -45,7 +45,7 @@ export type ColumnDropProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnDropBaseProps>;
 
 export function ColumnDrop<T extends ValidConstructor = "div">(
-  props: ColumnDropProps<T>,
+  props: Readonly<ColumnDropProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 

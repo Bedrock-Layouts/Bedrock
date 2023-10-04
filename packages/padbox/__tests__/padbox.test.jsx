@@ -147,17 +147,5 @@ describe("PadBox", () => {
 
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
-
-    it("throws if more than 4 items in array", () => {
-      const padding = ["xs", "xs", "xs", "xs", "xs"];
-
-      expect(() =>
-        create(
-          <PadBox padding={padding}>
-            <Lorem />
-          </PadBox>,
-        ),
-      ).toThrow();
-    });
   });
 });

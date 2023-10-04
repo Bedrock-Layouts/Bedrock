@@ -53,7 +53,7 @@ export type InlineProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, InlineBaseProps>;
 
 export function Inline<T extends ValidConstructor = "div">(
-  props: InlineProps<T>,
+  props: Readonly<InlineProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 

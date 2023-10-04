@@ -2,7 +2,7 @@
 import { Cover, CoverProps } from "@bedrock-layout/solid";
 import { JSXElement } from "solid-js";
 
-export function Playground(props: CoverProps): JSXElement {
+export function Playground(props: Readonly<CoverProps>): JSXElement {
   return (
     <Cover
       {...props}

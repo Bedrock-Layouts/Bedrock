@@ -26,22 +26,21 @@ export interface ReelProps {
  * content into scrollable horizontal list with convenient scroll
  * snap points.
  */
-export const Reel = forwardRefWithAs<"div", ReelProps>(
-  ({ as, snapType, gutter, style, ...props }, ref) => {
-    const theme = useTheme();
-    const maybeGutter = getSafeGutter(theme, gutter);
-    const safeStyle = style ?? {};
+export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
+  { as, snapType, gutter, style, ...props },
+  ref,
+) {
+  const theme = useTheme();
+  const maybeGutter = getSafeGutter(theme, gutter);
+  const safeStyle = style ?? {};
 
-    const Component = as ?? "div";
-    return (
-      <Component
-        ref={ref}
-        data-bedrock-reel={snapType ? `snapType:${snapType}` : ""}
-        style={{ ...safeStyle, "--gutter": maybeGutter } as CSSProperties}
-        {...props}
-      />
-    );
-  },
-);
-
-Reel.displayName = "Reel";
+  const Component = as ?? "div";
+  return (
+    <Component
+      ref={ref}
+      data-bedrock-reel={snapType ? `snapType:${snapType}` : ""}
+      style={{ ...safeStyle, "--gutter": maybeGutter } as CSSProperties}
+      {...props}
+    />
+  );
+});

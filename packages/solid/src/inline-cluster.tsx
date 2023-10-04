@@ -33,7 +33,7 @@ export type InlineClusterProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, InlineClusterBaseProps>;
 
 export function InlineCluster<T extends ValidConstructor = "div">(
-  props: InlineClusterProps<T>,
+  props: Readonly<InlineClusterProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 

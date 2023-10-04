@@ -31,6 +31,7 @@ type UnboxIntrinsicElements<T> = T extends JSX.HTMLAttributes<infer U>
   ? U
   : never;
 
+// eslint-disable-next-line functional/no-return-void
 type RefCallback<T> = (el: T) => void;
 type RefField<T> = T | RefCallback<T>;
 
@@ -64,19 +65,18 @@ export function convertToMaybe<T>(value: T): Maybe<T> {
 
 export function omitProps<T extends Record<string, any>, K extends keyof T>(
   value: T,
-  keys: K[],
+  keys: readonly K[],
 ): Omit<T, K> {
   return Object.keys(value)
     .filter((k) => !keys.includes(k as K))
     .reduce((newObject, k) => {
-      Object.defineProperty(newObject, k, {
+      return Object.defineProperty({ ...newObject }, k, {
         get() {
           return value[k];
         },
         configurable: true,
         enumerable: true,
       });
-      return newObject;
     }, {}) as Omit<T, K>;
 }
 
@@ -99,20 +99,18 @@ export default function createDynamic<T extends ValidConstructor>(
 
 export function createPropsFromAccessors<T extends Record<string, Accessor>>(
   props: T,
-): { [P in keyof T]: ReturnType<T[P]> } {
+): { [P in keyof T]: ReturnType<T[P]> } | Error {
   if (!Object.values(props).every((x) => typeof x === "function"))
-    throw new Error("Please provide an object with accessor values only.");
+    return new Error("Please provide an object with accessor values only.");
 
   return Object.keys(props).reduce((getterObj, key) => {
     const accessor = props[key];
-    Object.defineProperty(getterObj, key, {
+    return Object.defineProperty({ ...getterObj }, key, {
       get() {
         return accessor();
       },
       configurable: true,
       enumerable: true,
     });
-
-    return getterObj;
   }, {}) as { [P in keyof T]: ReturnType<T[P]> };
 }

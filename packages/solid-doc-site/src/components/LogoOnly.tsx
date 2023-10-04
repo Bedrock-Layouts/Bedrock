@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function LogoOnly(props: { class?: string; style?: string }) {
+export function LogoOnly(props: Readonly<{ class?: string; style?: string }>) {
   return (
     <svg
       viewBox="38, 28, 326, 200"

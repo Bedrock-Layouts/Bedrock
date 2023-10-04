@@ -1,3 +1,6 @@
+/* eslint-disable functional/no-throw-statements */
+/* eslint-disable functional/prefer-immutable-types */
+
 import { JSX, mergeProps } from "solid-js";
 
 import {

@@ -19,7 +19,7 @@ export type ReelProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ReelBaseProps>;
 
 export function Reel<T extends ValidConstructor = "div">(
-  props: ReelProps<T>,
+  props: Readonly<ReelProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>

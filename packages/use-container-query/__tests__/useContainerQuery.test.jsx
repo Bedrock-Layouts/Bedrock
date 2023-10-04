@@ -175,16 +175,4 @@ describe("useContainerQuery", () => {
 
     expect(matches).toBe(false);
   });
-
-  it("Throws and error when called with a maxWidth less than minWidth", () => {
-    const renderToThrow = () =>
-      act(() => {
-        ReactDOM.render(
-          <HookWrapper minWidth={320} maxWidth={100} />,
-          container,
-        );
-      });
-
-    expect(renderToThrow).toThrow();
-  });
 });

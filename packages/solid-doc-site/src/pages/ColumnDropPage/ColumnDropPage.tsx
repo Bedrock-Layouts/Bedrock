@@ -94,6 +94,7 @@ export function ColumnDropPage(): JSXElement {
           args={argTypes}
           onChange={({ propName, value }) => {
             setProps({ ...props(), [propName]: value });
+            return value;
           }}
         />
       </PageSection>

@@ -8,16 +8,16 @@ const PIXELS_PER_INCH = 96;
 
 /* c8 ignore next */
 function parseUnit(str: string): [number, string] {
-  str = String(str);
-  const num = parseFloat(str);
+  const safeStr = String(str);
+  const num = parseFloat(safeStr);
 
-  const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
+  const [, unit] = safeStr.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
 
 /* c8 ignore next */
-export function toPX(str: string, element?: Element): Maybe<number> {
+export function toPX(str: string, element?: Readonly<Element>): Maybe<number> {
   if (!str) return undefined;
 
   const elementOrBody = element ?? document.body;
@@ -63,15 +63,16 @@ export function toPX(str: string, element?: Element): Maybe<number> {
 }
 
 /* c8 ignore next */
-function getPropertyInPX(element: Element, prop: string): number {
+function getPropertyInPX(element: Readonly<Element>, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop),
   );
   return value * (toPX(units, element) ?? 1);
 }
 
-function getSizeBrutal(unit: string, element: Element) {
+function getSizeBrutal(unit: string, element: Readonly<Element>) {
   const testDIV = document.createElement("div");
+  // eslint-disable-next-line functional/immutable-data
   testDIV.style["height"] = "128" + unit;
   element.appendChild(testDIV);
   const size = getPropertyInPX(testDIV, "height") / 128;

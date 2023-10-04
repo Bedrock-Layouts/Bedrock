@@ -1,5 +1,5 @@
-export type ResizeFunc = (r: ResizeObserverEntry) => void;
-export type DeregisterFunc = () => void;
+export type ResizeFunc = (r: ResizeObserverEntry) => unknown;
+export type DeregisterFunc = () => unknown | Error;
 
 type ObserverCallback =
   | ResizeFunc
@@ -7,15 +7,17 @@ type ObserverCallback =
       current: ResizeFunc;
     };
 
+// eslint-disable-next-line functional/no-let
 let observer: ResizeObserver | undefined;
 
 const callBackMap = new WeakMap<Element, ObserverCallback[]>();
 
 /* c8 ignore next */
-export function init(): void {
-  if (observer) return;
-  observer = new ResizeObserver((entries) => {
-    for (const entry of entries) {
+export function init(): ResizeObserver {
+  if (observer) return observer;
+
+  return (observer = new ResizeObserver((entries) => {
+    return entries.map((entry) => {
       const maybeCallBacks = callBackMap.get(entry.target);
       /**
        * This is defensive code, but it's possible that get returns undefined
@@ -23,42 +25,48 @@ export function init(): void {
       /* c8 ignore next */
       const safeCallBacks = maybeCallBacks ?? [];
 
-      if (safeCallBacks.length === 0) return;
+      if (safeCallBacks.length === 0) return entry;
+
       requestAnimationFrame(() => {
-        for (const callback of safeCallBacks) {
-          if (typeof callback === "function") {
-            callback(entry);
-          } else {
-            callback.current(entry);
-          }
-        }
+        return safeCallBacks.map((callback) => {
+          const safeCallback =
+            typeof callback === "function" ? callback : callback.current;
+
+          safeCallback(entry);
+
+          return callback;
+        });
       });
-    }
-  });
+      return entry;
+    });
+  }));
 }
 
-function assertIsResizeOberver(
-  obj?: ResizeObserver,
-): asserts obj is ResizeObserver {
+function checkIsResizeOberver(obj?: ResizeObserver): obj is ResizeObserver {
   if (obj === undefined) {
-    throw new Error("ResizeObserver is not defined.  Please call init()");
+    return false;
   }
+  return true;
 }
 
 export function registerCallback(
-  node: Element,
+  node: Readonly<Element>,
+  // eslint-disable-next-line functional/prefer-immutable-types
   cb: ObserverCallback,
 ): DeregisterFunc {
-  assertIsResizeOberver(observer);
+  const isNotNull = checkIsResizeOberver(observer);
+
+  if (isNotNull === false) {
+    return () =>
+      new Error("ResizeObserver is not defined.  Please call init()");
+  }
 
   const callbacks = callBackMap.get(node) ?? [];
 
   callBackMap.set(node, callbacks.concat(cb));
-  observer.observe(node);
+  observer?.observe(node);
 
   return () => {
-    assertIsResizeOberver(observer);
-
     const maybeCallBacks = callBackMap.get(node);
     /**
      * This is defensive code, but it's possible that get returns undefined
@@ -70,8 +78,9 @@ export function registerCallback(
     callBackMap.set(node, newCallbacks);
 
     if (newCallbacks.length === 0) {
-      observer.unobserve(node);
+      observer?.unobserve(node);
       callBackMap.delete(node);
     }
+    return observer;
   };
 }

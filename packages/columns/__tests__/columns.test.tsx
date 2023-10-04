@@ -1,12 +1,9 @@
 import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
-import * as containerQuery from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test, vi } from "vitest";
 
 import { Column, Columns } from "../src";
-
-vi.spyOn(containerQuery, "useContainerQuery");
 
 const Lorem = () => (
   <>

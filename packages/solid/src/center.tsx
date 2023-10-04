@@ -27,7 +27,7 @@ export type CenterProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, CenterBaseProps>;
 
 export function Center<T extends ValidConstructor = "div">(
-  props: CenterProps<T>,
+  props: Readonly<CenterProps<T>>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"

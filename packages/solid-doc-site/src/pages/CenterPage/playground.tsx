@@ -2,7 +2,7 @@
 import { Center, CenterProps } from "@bedrock-layout/solid";
 import { JSXElement } from "solid-js";
 
-export function Playground(props: CenterProps): JSXElement {
+export function Playground(props: Readonly<CenterProps>): JSXElement {
   return (
     <Center {...props} style="border: 1px solid black; width: 75%">
       <div style="width: 75%">

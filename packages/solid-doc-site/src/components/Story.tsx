@@ -5,10 +5,14 @@ import { JSX } from "solid-js";
 
 import { CodeBlock } from "./CodeBlock";
 
-export function Story(props: {
-  children: JSX.Element;
-  code: string | ((props: { dedent: (literals: string) => string }) => string);
-}): JSX.Element {
+export function Story(
+  props: Readonly<{
+    children: JSX.Element;
+    code:
+      | string
+      | ((props: { dedent: (literals: string) => string }) => string);
+  }>,
+): JSX.Element {
   const finalCode =
     typeof props.code === "string" ? props.code : props.code({ dedent });
 

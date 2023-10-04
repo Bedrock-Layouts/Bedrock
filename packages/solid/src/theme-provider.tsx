@@ -10,7 +10,7 @@ export interface ThemeProviderProps {
   children: JSXElement;
 }
 
-export function ThemeProvider(props: ThemeProviderProps): JSXElement {
+export function ThemeProvider(props: Readonly<ThemeProviderProps>): JSXElement {
   return (
     <ThemeContext.Provider value={props.theme}>
       {props.children}
