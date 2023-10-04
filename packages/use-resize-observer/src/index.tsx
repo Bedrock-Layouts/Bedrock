@@ -4,7 +4,7 @@ import {
   registerCallback,
 } from "@bedrock-layout/register-resize-callback";
 import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
@@ -14,9 +14,16 @@ export function useResizeObserver<T extends Element>(
 
   const nodeRef = useStatefulRef<T>();
 
-  useEffect(() => {
+  // eslint-disable-next-line functional/no-return-void
+  useLayoutEffect(() => {
+    // eslint-disable-next-line functional/immutable-data
     callbackRef.current = callback;
   });
+
+  // eslint-disable-next-line functional/no-return-void
+  useEffect(() => {
+    init();
+  }, []);
 
   const currentNode = nodeRef.current ?? node;
 
@@ -26,9 +33,14 @@ export function useResizeObserver<T extends Element>(
     /**
      * node is undefined when the component is unmounted or not yet mounted
      */
-    return currentNode
-      ? registerCallback(currentNode, callbackRef.current)
-      : undefined;
+    const cleanup = currentNode
+      ? registerCallback(currentNode, callbackRef)
+      : () => 0;
+
+    // eslint-disable-next-line functional/no-return-void
+    return () => {
+      cleanup();
+    };
   }, [currentNode]);
 
   return nodeRef;

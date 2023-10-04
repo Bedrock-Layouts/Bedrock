@@ -3,10 +3,27 @@
     "react-app",
     "plugin:jsx-a11y/recommended",
     "eslint-config-prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:functional/external-typescript-recommended",
+    "plugin:functional/lite"
   ],
-  "plugins": ["jsx-a11y"],
-  "ignorePatterns": ["node_modules", "dist"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true
+  },
+  "plugins": ["jsx-a11y", "functional"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "build",
+    "storybook-static",
+    "vite.config.js",
+    "**/*.d.ts",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.config.js",
+    "**/*build.ts"
+  ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": 0,
     "no-console": "error"

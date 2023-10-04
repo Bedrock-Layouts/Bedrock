@@ -3,7 +3,7 @@ import { JSXElement } from "solid-js";
 
 import { Box } from "../../components/Box";
 
-export function Playground(props: ColumnDropProps): JSXElement {
+export function Playground(props: Readonly<ColumnDropProps>): JSXElement {
   return (
     <ColumnDrop {...props}>
       <Box />

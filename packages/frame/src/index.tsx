@@ -9,7 +9,7 @@ type RatioString =
 /**
  * The `Ratio` type is used to specify the aspect ratio of the content.
  */
-export type Ratio = [number, number] | RatioString;
+export type Ratio = readonly [number, number] | RatioString;
 
 /**
  * Props for the `Frame` component.
@@ -36,7 +36,7 @@ function checkIsRatio(ratio: unknown): ratio is Ratio {
 }
 
 function getRatioString(ratio: Ratio): `${number}/${number}` {
-  const ratioArray = Array.isArray(ratio) ? ratio : ratio.split(/\/|:/);
+  const ratioArray = typeof ratio === "string" ? ratio.split(/\/|:/) : ratio;
   return ratioArray
     .map((x) => String(x).trim())
     .join("/") as `${number}/${number}`;

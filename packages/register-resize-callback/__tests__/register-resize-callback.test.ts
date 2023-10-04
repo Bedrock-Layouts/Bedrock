@@ -1,5 +1,4 @@
-import { vi } from "vitest";
-
+import { describe, expect, vi, test } from "vitest";
 import { init, registerCallback } from "../src";
 
 vi.spyOn(console, "error").mockImplementation(() => void 0);
@@ -16,6 +15,8 @@ async function awaitAnimationFrame() {
 let onChange;
 let unobserve;
 let reset = () => void 0;
+
+//@ts-expect-error
 ResizeObserver.mockImplementation(
   vi.fn((impl) => {
     const map = new Map();
@@ -24,6 +25,7 @@ ResizeObserver.mockImplementation(
       impl([...map.values()]);
     };
 
+    //@ts-expect-error
     reset = () => map.clear();
     unobserve = vi.fn((node) => map.delete(node));
 
@@ -40,9 +42,10 @@ ResizeObserver.mockImplementation(
 );
 
 describe("register-resize-callback", () => {
-  test("It will throw if init is not called", () => {
+  test("It will a function that returns an Error if init is not called", () => {
     const node = document.createElement("div");
-    expect(() => registerCallback(node, () => void 0)).toThrow();
+    const callback = registerCallback(node, () => void 0);
+    expect(callback() instanceof Error).toBe(true);
   });
 
   test("ResizeObserver is called", async () => {

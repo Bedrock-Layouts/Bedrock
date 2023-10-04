@@ -33,7 +33,7 @@ function getSafeMinHeight(minHeight?: MinHeight) {
 }
 
 function CoverWrapper<T extends ValidConstructor = "div">(
-  props: CoverWrapperProps<T>,
+  props: Readonly<CoverWrapperProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -74,7 +74,7 @@ export interface CoverProps {
 }
 
 export function Cover<T extends ValidConstructor = "div">(
-  props: CoverWrapperProps<T> & CoverProps,
+  props: Readonly<CoverWrapperProps<T> & CoverProps>,
 ): JSX.Element {
   const [local, restProps] = splitProps(props, ["children", "top", "bottom"]);
 

@@ -2,7 +2,7 @@
 import { PadBox, PadBoxProps } from "@bedrock-layout/solid";
 import { JSXElement } from "solid-js";
 
-export function Playground(props: PadBoxProps): JSXElement {
+export function Playground(props: Readonly<PadBoxProps>): JSXElement {
   return (
     <PadBox style="border: 1px solid black" {...props}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur

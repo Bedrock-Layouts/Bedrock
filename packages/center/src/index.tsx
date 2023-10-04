@@ -69,5 +69,3 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
     />
   );
 });
-
-Center.displayName = "Center";

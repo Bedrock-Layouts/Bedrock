@@ -26,7 +26,7 @@ export type ColumnsProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnsBaseProps>;
 
 export function Columns<T extends ValidConstructor = "div">(
-  props: ColumnsProps<T>,
+  props: Readonly<ColumnsProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>
@@ -77,7 +77,7 @@ export type ColumnProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnBaseProps>;
 
 export function Column<T extends ValidConstructor = "div">(
-  props: ColumnProps<T>,
+  props: Readonly<ColumnProps<T>>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"

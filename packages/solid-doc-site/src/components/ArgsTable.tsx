@@ -76,11 +76,13 @@ const BodyRow = styled("tr")`
   }
 `;
 
-function HeadingCell(props: JSX.HTMLAttributes<HTMLTableCellElement>) {
+function HeadingCell(
+  props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>,
+) {
   return <PadBox as="th" padding="size7" {...props} />;
 }
 
-function BodyCell(props: JSX.HTMLAttributes<HTMLTableCellElement>) {
+function BodyCell(props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>) {
   return (
     <PadBox as="td" padding={["size5", "size7"]} {...props}>
       <Stack gutter="size2" style="align-items:start">
@@ -90,12 +92,16 @@ function BodyCell(props: JSX.HTMLAttributes<HTMLTableCellElement>) {
   );
 }
 
-function SelectInput(props: {
-  name: string;
-  options: string[];
-  initialValue: string;
-  onChange?: (params: { propName: string; value: string }) => void;
-}) {
+function SelectInput(
+  props: Readonly<{
+    name: string;
+    options: string[];
+    initialValue: string;
+    onChange?: (
+      params: Readonly<{ propName: string; value: string }>,
+    ) => unknown;
+  }>,
+) {
   return (
     <SelectWrapper>
       <Select
@@ -122,13 +128,17 @@ function SelectInput(props: {
   );
 }
 
-export function ArgsTable(props: {
-  args: ArgType;
-  onChange?: (params: {
-    propName: string;
-    value: string | boolean | number;
-  }) => void;
-}): JSXElement {
+export function ArgsTable(
+  props: Readonly<{
+    args: ArgType;
+    onChange?: (
+      params: Readonly<{
+        propName: string;
+        value: string | boolean | number;
+      }>,
+    ) => unknown;
+  }>,
+): JSXElement {
   const [shouldSwitch, ref] = createContainerQuery(655);
 
   return (

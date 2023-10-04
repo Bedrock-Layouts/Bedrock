@@ -1,7 +1,7 @@
 import { GridProps, MasonryGrid } from "@bedrock-layout/solid";
 import { JSXElement } from "solid-js";
 
-export function Playground(props: GridProps): JSXElement {
+export function Playground(props: Readonly<GridProps>): JSXElement {
   return (
     <MasonryGrid {...props}>
       <div>

@@ -19,26 +19,31 @@ const Pre = styled("pre")`
   border-radius: var(--radius-2);
 `;
 
-export function CodeBlock(props: {
-  code: string;
-  language?: string;
-}): JSXElement {
-  const [textCopied, setTextCopied] = createSignal(false);
+export function CodeBlock(
+  props: Readonly<{
+    code: string;
+    language?: string;
+  }>,
+): JSXElement {
+  const [textCopied, setTextCopied] = createSignal<"copied" | "not copied">(
+    "not copied",
+  );
   const safeLanguage = props.language ?? "javascript";
+
   const highlightedCode = hljs.highlight(props.code, {
     language: safeLanguage,
   }).value;
 
-  createEffect(() => {
-    let timeout: number | undefined;
-    if (textCopied()) {
-      timeout = window.setTimeout(() => setTextCopied(false), 1000);
+  createEffect((timeout: number | undefined) => {
+    if (textCopied() === "copied") {
+      return window.setTimeout(() => setTextCopied("not copied"), 1000);
     }
+
     onCleanup(() => {
-      if (timeout) {
-        window.clearTimeout(timeout);
-      }
+      window.clearTimeout(timeout);
+      return 0;
     });
+    return 0;
   });
 
   return (
@@ -46,17 +51,20 @@ export function CodeBlock(props: {
       <code
         class={`hljs language-${safeLanguage}`}
         ref={(ref) => {
+          // eslint-disable-next-line functional/immutable-data
           ref.innerHTML = highlightedCode;
           hljs.highlightElement(ref);
+          return ref;
         }}
       ></code>
       <CopyButton
         onClick={() => {
-          setTextCopied(true);
+          setTextCopied("copied");
           navigator.clipboard.writeText(props.code);
+          return props.code;
         }}
       >
-        {textCopied() ? "Copied" : "Copy"}
+        {textCopied() === "copied" ? "Copied" : "Copy"}
       </CopyButton>
     </Pre>
   );

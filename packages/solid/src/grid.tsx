@@ -33,7 +33,7 @@ export type GridProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, GridBaseProps>;
 
 export function Grid<T extends ValidConstructor = "div">(
-  props: GridProps<T>,
+  props: Readonly<GridProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 

@@ -18,7 +18,7 @@ export type StackProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, StackPropsBase>;
 
 export function Stack<T extends ValidConstructor = "div">(
-  props: StackProps<T>,
+  props: Readonly<StackProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>

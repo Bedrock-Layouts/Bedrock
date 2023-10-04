@@ -35,10 +35,9 @@ const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
   },
 );
 
-function Resizer({
-  children,
-  gutter,
-}: React.PropsWithChildren<{ gutter?: Gutter }>) {
+type ResizerProps = Readonly<React.PropsWithChildren<{ gutter?: Gutter }>>;
+
+function Resizer({ children, gutter }: ResizerProps) {
   const [rowSpan, setRowSpan] = useState(1);
 
   const theme = useTheme();
@@ -58,6 +57,8 @@ function Resizer({
     const rowHeight = Math.ceil(height / gap);
 
     setRowSpan(rowHeight);
+
+    return target;
   });
 
   return (
@@ -117,15 +118,15 @@ const PIXELS_PER_INCH = 96;
 
 /* c8 ignore start */
 function parseUnit(str: string): [number, string] {
-  str = String(str);
-  const num = parseFloat(str);
+  const safeStr = String(str);
+  const num = parseFloat(safeStr);
 
-  const [, unit] = str.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
+  const [, unit] = safeStr.match(/[\d.\-+]*\s*(.*)/) ?? ["", ""];
 
   return [num, unit];
 }
 
-function toPX(str: string, element?: Element): number | null {
+function toPX(str: string, element?: Readonly<Element>): number | null {
   if (!str) return null;
 
   const elementOrBody = element ?? document.body;
@@ -171,19 +172,21 @@ function toPX(str: string, element?: Element): number | null {
 }
 
 /* c8 ignore next */
-function getPropertyInPX(element: Element, prop: string): number {
+function getPropertyInPX(element: Readonly<Element>, prop: string): number {
   const [value, units] = parseUnit(
     getComputedStyle(element).getPropertyValue(prop),
   );
   return value * (toPX(units, element) ?? 1);
 }
 
-function getSizeBrutal(unit: string, element: Element) {
+function getSizeBrutal(unit: string, element: Readonly<Element>) {
   const testDIV = document.createElement("div");
+  // eslint-disable-next-line functional/immutable-data
   testDIV.style["height"] = "128" + unit;
   element.appendChild(testDIV);
   const size = getPropertyInPX(testDIV, "height") / 128;
   element.removeChild(testDIV);
   return size;
 }
+
 /* c8 ignore end */

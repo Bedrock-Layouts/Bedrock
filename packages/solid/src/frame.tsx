@@ -30,8 +30,8 @@ function checkIsRatio(ratio: unknown): ratio is Ratio {
   );
 }
 
-function getRatioString(ratio: Ratio): RatioString {
-  return Array.isArray(ratio) ? (ratio.join("/") as RatioString) : ratio;
+function getRatioString(ratio: Readonly<Ratio>): RatioString {
+  return (Array.isArray(ratio) ? ratio.join("/") : ratio) as RatioString;
 }
 
 function getSafeRatio(ratio: unknown): Maybe<RatioString> {
@@ -41,7 +41,7 @@ function getSafeRatio(ratio: unknown): Maybe<RatioString> {
 }
 
 export function Frame<T extends ValidConstructor = "div">(
-  props: FrameProps<T>,
+  props: Readonly<FrameProps<T>>,
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"

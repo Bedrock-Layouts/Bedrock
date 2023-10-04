@@ -167,7 +167,9 @@ type ThemeOrDefaultSizes<T> = T extends {
   ? T["sizes"]
   : keyof typeof sizes;
 
-function fromEntries<T>(entries: [s: string, value: T][]): Record<string, T> {
+function fromEntries<T>(
+  entries: Readonly<[s: string, value: T][]>,
+): Record<string, T> {
   return entries.reduce((acc, [key, value]) => {
     return { ...acc, [key]: value };
   }, {});
@@ -188,9 +190,11 @@ export function getSafeGutter<T extends DefaultTheme>(
 }
 
 export function getSpacingValue<T extends DefaultTheme>(
-  theme: T & {
-    space?: BaseTheme;
-  },
+  theme: Readonly<
+    T & {
+      space?: BaseTheme;
+    }
+  >,
   spacingKey: SpacingOptions,
 ): Maybe<CSSLength> {
   const maybeSpacingOrDefault = theme.space ?? spacing;
@@ -206,9 +210,11 @@ export function getSpacingValue<T extends DefaultTheme>(
 }
 
 export function getSizeValue<T extends DefaultTheme>(
-  theme: T & {
-    sizes?: BaseTheme;
-  },
+  theme: Readonly<
+    T & {
+      sizes?: BaseTheme;
+    }
+  >,
   sizeKey?:
     | CSSLength
     | number

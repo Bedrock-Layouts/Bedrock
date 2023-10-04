@@ -55,21 +55,11 @@ interface SplitBase {
   switchAt?: number | CSSLength;
 }
 
-function getSafeMinItemWidth(
-  theme: {
-    space?: { [key: string]: string };
-    sizes?: { [key: string]: string };
-  },
-  minItemWidth?: MinItemWidth,
-) {
-  return getSizeValue(theme, minItemWidth);
-}
-
 export type SplitProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, SplitBase>;
 
 export function Split<T extends ValidConstructor = "div">(
-  props: SplitProps<T>,
+  props: Readonly<SplitProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 

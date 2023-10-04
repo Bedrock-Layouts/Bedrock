@@ -34,10 +34,10 @@ export interface ColumnDropProps {
 }
 
 function getSafeMinItemWidth(
-  theme: {
+  theme: Readonly<{
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
-  },
+  }>,
   minItemWidth?: MinItemWidth,
 ) {
   return getSizeValue(theme, minItemWidth);

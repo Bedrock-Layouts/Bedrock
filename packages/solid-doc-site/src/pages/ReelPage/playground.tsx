@@ -5,7 +5,7 @@ import { JSXElement } from "solid-js";
 import { Box } from "../../components/Box";
 import { colors } from "./colors";
 
-export function Playground(props: ReelProps): JSXElement {
+export function Playground(props: Readonly<ReelProps>): JSXElement {
   return (
     <Reel {...props}>
       {colors.map((color) => {

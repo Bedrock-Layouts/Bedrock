@@ -59,13 +59,9 @@ function keyToProperty(key: string) {
 }
 
 const paddingToStyleProps = (
-  theme: { space?: BaseTheme },
-  padding: PaddingTypes,
+  theme: Readonly<{ space?: BaseTheme }>,
+  padding: Readonly<PaddingTypes>,
 ) => {
-  if (Array.isArray(padding) && padding.length > 4) {
-    throw new Error("padding arrays can only be 4 or less in length");
-  }
-
   return typeof padding === "object" && !Array.isArray(padding)
     ? Object.entries(padding).reduce(
         (acc, [key, val]) => ({
@@ -76,6 +72,7 @@ const paddingToStyleProps = (
       )
     : {
         padding: Array.from(Array.isArray(padding) ? padding : [padding])
+          .slice(0, 4)
           .map((pad: Gutter) => getSafeGutter(theme, pad) ?? "0px")
           .join(" "),
       };

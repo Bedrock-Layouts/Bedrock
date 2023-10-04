@@ -39,6 +39,7 @@ const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
 
   onMount(() => {
     init();
+    return 0;
   });
 
   createEffect(() => {
@@ -61,9 +62,11 @@ const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
       const rowHeight = Math.max(Math.ceil(height / gap), MIN_HEIGHT);
 
       setRowSpan(rowHeight);
+      return 0;
     });
 
     onCleanup(cleanup);
+    return 0;
   });
 
   return (

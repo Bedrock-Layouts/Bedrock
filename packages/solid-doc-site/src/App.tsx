@@ -29,10 +29,12 @@ import { StackPage } from "./pages/StackPage";
 
 const WIDTH_BREAKPOINT = 1000;
 
-function SideNavGroup(props: {
-  title: string;
-  links: { href: string; name: string }[];
-}) {
+function SideNavGroup(
+  props: Readonly<{
+    title: string;
+    links: { href: string; name: string }[];
+  }>,
+) {
   return (
     <Stack gutter="size2">
       <strong>{props.title}</strong>

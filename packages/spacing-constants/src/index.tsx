@@ -20,10 +20,7 @@ export function useTheme(): DefaultTheme {
 export function ThemeProvider({
   theme,
   children,
-}: {
-  theme: DefaultTheme;
-  children: React.ReactNode;
-}): JSX.Element {
+}: Readonly<{ theme: DefaultTheme; children: React.ReactNode }>): JSX.Element {
   return (
     <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
   );
@@ -99,7 +96,7 @@ export type CSSLength =
   | CSSSizeKeyword;
 
 function fromEntries<K extends string | number, T>(
-  entries: [s: K, value: T][],
+  entries: Readonly<[s: K, value: T][]>,
 ): Record<K, T> {
   return entries.reduce(
     (acc, [key, value]) => {
@@ -196,9 +193,7 @@ export type SpacingOptions = ThemeOrDefaultSpace<DefaultTheme>;
 export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 
 export function getSpacingValue<T extends DefaultTheme>(
-  theme: T & {
-    space?: BaseTheme;
-  },
+  theme: Readonly<T & { space?: BaseTheme }>,
   spacingKey: SpacingOptions,
 ): Maybe<CSSLength> {
   const maybeSpacingOrDefault = theme.space ?? spacing;
@@ -228,9 +223,7 @@ export function getSafeGutter<T extends DefaultTheme>(
 }
 
 export function getSizeValue(
-  theme: {
-    sizes?: BaseTheme;
-  },
+  theme: Readonly<{ sizes?: BaseTheme }>,
   sizeKey?: string | number,
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
