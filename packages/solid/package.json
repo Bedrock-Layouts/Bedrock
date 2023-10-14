@@ -35,6 +35,7 @@
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
+      "types": "./lib/index.d.ts",
       "import": "./lib/index.m.js",
       "require": "./lib/index.umd.js"
     }
