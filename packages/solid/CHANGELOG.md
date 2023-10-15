@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.1.4...@bedrock-layout/solid@1.1.5) (2023-10-15)
+
+### Bug Fixes
+
+- Ensure types are defined in ESM exports fields ([c00702c](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/c00702cb95717810d53f88d309336a1d39512fc8))
+
 ## 1.1.4 (2023-10-04)
 
 **Note:** Version bump only for package @bedrock-layout/solid

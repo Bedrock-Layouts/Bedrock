@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.3.1...@bedrock-layout/spacing-constants@3.3.2) (2023-10-15)
+
+### Bug Fixes
+
+- Ensure types are defined in ESM exports fields ([c00702c](https://github.com/Bedrock-Layouts/Bedrock/commit/c00702cb95717810d53f88d309336a1d39512fc8))
+
 ## [3.3.1](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.3.0...@bedrock-layout/spacing-constants@3.3.1) (2023-10-04)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

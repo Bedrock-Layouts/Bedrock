@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@4.2.3...@bedrock-layout/grid@4.2.4) (2023-10-15)
+
+### Bug Fixes
+
+- Ensure types are defined in ESM exports fields ([c00702c](https://github.com/Bedrock-Layouts/Bedrock/commit/c00702cb95717810d53f88d309336a1d39512fc8))
+
 ## [4.2.3](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@4.2.2...@bedrock-layout/grid@4.2.3) (2023-10-04)
 
 **Note:** Version bump only for package @bedrock-layout/grid

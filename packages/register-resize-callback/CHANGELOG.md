@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/register-resize-callback@2.0.4...@bedrock-layout/register-resize-callback@2.0.5) (2023-10-15)
+
+### Bug Fixes
+
+- Ensure types are defined in ESM exports fields ([c00702c](https://github.com/Bedrock-Layouts/Bedrock/commit/c00702cb95717810d53f88d309336a1d39512fc8))
+
 ## 2.0.4 (2023-10-04)
 
 **Note:** Version bump only for package @bedrock-layout/register-resize-callback
