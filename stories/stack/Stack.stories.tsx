@@ -78,6 +78,13 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * <div data-bedrock-stack='gutter:size3'>
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
+ * // Or
+ *
  * <div data-bedrock-stack style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />

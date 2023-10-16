@@ -69,7 +69,14 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-stack style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-split='gutter:size3'>
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
+ * // or
+ *
+ * <div data-bedrock-split style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
