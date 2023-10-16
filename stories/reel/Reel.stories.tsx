@@ -67,6 +67,13 @@ export const Playground: Story = {};
  *  <Component />
  * </div>
  *
+ * // Or
+ *
+ * <div data-bedrock-reel style={{'--gutter':'3ch'}}>
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
  * // React.js and Solid.js
  * <Reel gutter="size3">
  *  <Component />
