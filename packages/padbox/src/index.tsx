@@ -78,13 +78,19 @@ const paddingToStyleProps = (
       };
 };
 
+/**
+ * Props for PadBox Component.
+ */
 export interface PadBoxProps {
+  /**
+   * Sets the padding around the content of the element.
+   */
   padding?: PaddingTypes;
 }
 
 /**
- * he `PadBox` component is designed to create consistent padding based on
- * the spacing constants. PadBox takes either a single value, an array of
+ * The `PadBox` component is designed to create consistent padding based on
+ * the spacing constants. The `PadBox` component takes either a single value, an array of
  * values (like the css shorthand for top / right / bottom / left), or an
  * object of values (specifying each side individually) for fine tuning the
  * padding.
