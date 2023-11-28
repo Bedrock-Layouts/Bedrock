@@ -24,8 +24,8 @@ export type ValidConstructor =
 export type DynamicProps<T extends ValidConstructor> = T extends ValidElements
   ? JSX.IntrinsicElements[T]
   : T extends ValidComponent<infer U>
-  ? U
-  : Record<string, unknown>;
+    ? U
+    : Record<string, unknown>;
 
 type UnboxIntrinsicElements<T> = T extends JSX.HTMLAttributes<infer U>
   ? U
@@ -40,8 +40,8 @@ type UnboxComponentProp<U> = U extends { ref: infer X } ? X : never;
 export type DynamicNode<T extends ValidConstructor> = T extends ValidElements
   ? UnboxIntrinsicElements<JSX.IntrinsicElements[T]>
   : T extends ValidComponent<infer U>
-  ? UnboxComponentProp<U>
-  : never;
+    ? UnboxComponentProp<U>
+    : never;
 
 export interface WithRef<T extends ValidConstructor> {
   ref?: RefField<DynamicNode<T>>;
