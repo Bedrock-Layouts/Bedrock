@@ -1213,14 +1213,14 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@chromaui/addon-visual-tests@^0.0.113":
-  version "0.0.113"
-  resolved "https://registry.npmjs.org/@chromaui/addon-visual-tests/-/addon-visual-tests-0.0.113.tgz#886c677e4f2ec9af2f48eccc4ef735f6f97290f7"
-  integrity sha512-yEQP59o9ujrPReSk30YI9M/avNx7waT7UVjWQHPGcY23J5Y5n+wy5mbpSB+Nhmlq6wr93xTzATiwjgvg7VTIWg==
+"@chromaui/addon-visual-tests@^0.0.122":
+  version "0.0.122"
+  resolved "https://registry.yarnpkg.com/@chromaui/addon-visual-tests/-/addon-visual-tests-0.0.122.tgz#50397ce8e1971b00128627e36f36f3eed2616b06"
+  integrity sha512-YVAXvegHOHdw1BRgpSSSTxRqoS69rKuwIWHprITbQhcPDMZ3Y+5KfkeWTpdrCBhVM+cHPpx1WCobT7B2mfRUBA==
   dependencies:
     "@storybook/design-system" "^7.15.15"
     "@urql/exchange-auth" "^2.1.6"
-    chromatic "^7.2.3"
+    chromatic "^9.0.0"
     date-fns "^2.30.0"
     filesize "^10.0.12"
     jsonfile "^6.1.0"
@@ -5473,12 +5473,7 @@ chownr@^2.0.0:
   resolved "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^7.2.3:
-  version "7.6.0"
-  resolved "https://registry.npmjs.org/chromatic/-/chromatic-7.6.0.tgz#b05cad35d47f6410efa5bca6b35af6fae6e540bc"
-  integrity sha512-4MwlX8EDMyfQKf1NXTdUhJ2b0EYueByaVrF75pdFaOzHH7n3OhzknmQYbUSegLiFhKvHuvM8nZvf9SCajO+Cow==
-
-chromatic@^9.1.0:
+chromatic@^9.0.0, chromatic@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-9.1.0.tgz#dfc23ca3b602f7bba29defdf1aeddf8ae8516523"
   integrity sha512-9ib8k4LIfg/88kKufxz1N8vgCB7nlLhJqmx+Vx55cM/6DCB/M6oqroirVRXfdeC7qaZuhyUemPF2QHxBh7GXtQ==
