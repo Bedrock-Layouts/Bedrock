@@ -12,7 +12,7 @@ import {
   onCleanup,
   onMount,
 } from "solid-js";
-import type { ResolvedChildren } from "solid-js/types/reactive/signal";
+import type { ResolvedChildren } from "solid-js/";
 
 import { Grid, GridProps } from "./grid";
 import { SpacingOptions, getSpacingValue } from "./spacing-constants";

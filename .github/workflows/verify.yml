@@ -26,10 +26,6 @@ jobs:
         with:
           fetch-depth: "0"
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
       - run: yarn config set registry https://registry.npmjs.org
       - run: yarn
       - run: yarn verify
