@@ -48,7 +48,8 @@ export type PolymorphicExoticComponent<
      * **NOTE**: Exotic components are not callable.
      */
     <InstanceC extends React.ElementType = C>(
-      props: Readonly<PolymorphicComponentPropsWithRef<InstanceC, Props>>,
+      // eslint-disable-next-line functional/prefer-immutable-types
+      props: PolymorphicComponentPropsWithRef<InstanceC, Props>,
     ): React.ReactElement | null;
   }
 >;
@@ -72,7 +73,8 @@ export type PolymorphicForwardedRefComponent<
  */
 export function forwardRefWithAs<C extends React.ElementType, Props = {}>(
   render: (
-    props: Readonly<PolymorphicComponentPropsWithoutRef<C, Props>>,
+    // eslint-disable-next-line functional/prefer-immutable-types
+    props: PolymorphicComponentPropsWithoutRef<C, Props>,
     ref: PolymorphicRef<C>,
   ) => React.ReactElement | null,
 ) {
