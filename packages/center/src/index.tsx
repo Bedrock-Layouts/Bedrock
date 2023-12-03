@@ -33,7 +33,6 @@ export interface CenterProps {
 
 /**
  * The `Center` component is designed to center and clamp its width at a predefined value.
- * By default, this value is set to the `medium` breakpoint.
  * You can also center the children and text alignment as well.
  */
 export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
@@ -45,7 +44,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
     centerText && "center-text",
     centerChildren && "center-children",
   ]
-    .filter((x) => x)
+    .filter(Boolean)
     .join(" ");
 
   const safeStyle = style ?? {};

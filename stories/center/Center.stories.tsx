@@ -1,0 +1,128 @@
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+
+import { Center } from "../../packages/center/src/index";
+import { argTypes } from "./argTypes";
+import { Component } from "./Component";
+
+const installCode = `
+yarn add @bedrock-layout/center
+  ## or
+yarn add @bedrock-layout/primitives
+`;
+
+const importCode = `
+import { Center } from @bedrock-layout/center
+  // or
+import { Center } from '@bedrock-layout/primitives'
+`;
+
+const meta = {
+  title: "Wrapper Components/Center",
+  component: Center,
+  args: {
+    centerChildren: false,
+    centerText: false,
+  },
+  argTypes,
+
+  render: (args) => {
+    return (
+      <Center {...args} style={{ border: "1px solid black" }}>
+        <Component />
+      </Center>
+    );
+  },
+  parameters: {
+    installAndImport: {
+      install: installCode,
+      import: importCode,
+    },
+    examples: [
+      {
+        name: "Header Sections",
+        path: "/?path=/docs/examples-basic--docs#header-sections",
+      },
+    ],
+  },
+} satisfies Meta<typeof Center>;
+
+export default meta;
+
+type Story = StoryObj<typeof Center>;
+
+export const Playground: Story = {};
+
+/**
+ * The Center component will clamp the width at a defined `maxWidth`
+ * and center itself in its context. Please note that the `maxWidth`
+ * prop represents the `max-width` of the children and not the
+ * Center component itself.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-center style={{ "--maxwidth": "60ch"}}'>
+ *  <Component />
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Center maxWidth="60ch">
+ *  <Component />
+ * </Center>
+ * ```
+ *
+ * In the example shown below, the `maxWidth` is set to `75%`
+ * of the parent component's width.
+ */
+export const MaxWidth: Story = {
+  args: {
+    maxWidth: "75%",
+  },
+};
+
+/**
+ * You can also center the children by adding a `centerChildren` prop.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-center='centerChildren'>
+ *  <Component />
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Center centerChildren>
+ *  <Component />
+ * </Center>
+ * ```
+ *
+ * In the example shown below, the max width of the children is
+ * set to 75%.
+ */
+export const CenterChildren: Story = {
+  args: { centerChildren: true },
+};
+
+/**
+ * You can also center the text by adding a `centerText` prop.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-center='centerText'>
+ *  <Component />
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Center centerText>
+ *  <Component />
+ * </Center>
+ * ```
+ *
+ * In the example shown below, the max width of the children is
+ * set to 75% and the centerChildren prop is set to true.
+ */
+export const CenterText: Story = {
+  args: { centerText: true, centerChildren: true },
+};
