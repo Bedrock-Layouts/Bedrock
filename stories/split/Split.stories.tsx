@@ -193,8 +193,8 @@ export const MinItemWidth: Story = {
   render: () => {
     return (
       <Stack gutter="size5">
-        <strong>With fraction of 2/3 and minItemWidth of 40ch</strong>
-        <Split gutter="size3" fraction="2/3" minItemWidth="40ch">
+        <strong>With fraction of 2/3 and minItemWidth of 25ch</strong>
+        <Split gutter="size3" fraction="2/3" minItemWidth="25ch">
           <Component />
           <Component />
         </Split>
@@ -213,7 +213,7 @@ export const MinItemWidth: Story = {
  *
  * This can be used with `minItemWidth` and it will switch to a stacking layout at which ever size is largest.
  *
- * The below example will switch to a stack when it is less than `45rem`.
+ * The below example will switch to a stack when it is less than `35ch`.
  *
  * #### Usage examples
  * ```jsx
@@ -237,7 +237,7 @@ export const SwitchAt: Story = {
     return (
       <Stack gutter="size5">
         <strong>With fraction: 2/3</strong>
-        <Split fraction="2/3" gutter="size2" switchAt="45rem">
+        <Split fraction="2/3" gutter="size2" switchAt="35ch">
           <Component />
           <Component />
         </Split>
@@ -245,7 +245,7 @@ export const SwitchAt: Story = {
         <Split
           fraction="auto-start"
           gutter="size2"
-          switchAt="45rem"
+          switchAt="35ch"
           minItemWidth="20rem"
         >
           <Component />
