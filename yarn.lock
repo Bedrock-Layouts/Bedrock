@@ -3913,14 +3913,14 @@
     debug "^4.3.4"
 
 "@typescript-eslint/parser@^6.9.1":
-  version "6.13.1"
-  resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-6.13.1.tgz#29d6d4e5fab4669e58bc15f6904b67da65567487"
-  integrity sha512-fs2XOhWCzRhqMmQf0eicLa/CWSaYss2feXsy7xBD/pLyWke/jCIVc2s1ikEAtSW7ina1HNhv7kONoEfVNEcdDQ==
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-6.16.0.tgz#36f39f63b126aa25af2ad2df13d9891e9fd5b40c"
+  integrity sha512-H2GM3eUo12HpKZU9njig3DF5zJ58ja6ahj1GoHEHOgQvYxzoFJJEvC1MQ7T2l9Ha+69ZSOn7RTxOdpC/y3ikMw==
   dependencies:
-    "@typescript-eslint/scope-manager" "6.13.1"
-    "@typescript-eslint/types" "6.13.1"
-    "@typescript-eslint/typescript-estree" "6.13.1"
-    "@typescript-eslint/visitor-keys" "6.13.1"
+    "@typescript-eslint/scope-manager" "6.16.0"
+    "@typescript-eslint/types" "6.16.0"
+    "@typescript-eslint/typescript-estree" "6.16.0"
+    "@typescript-eslint/visitor-keys" "6.16.0"
     debug "^4.3.4"
 
 "@typescript-eslint/scope-manager@5.62.0":
@@ -3938,6 +3938,14 @@
   dependencies:
     "@typescript-eslint/types" "6.13.1"
     "@typescript-eslint/visitor-keys" "6.13.1"
+
+"@typescript-eslint/scope-manager@6.16.0":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-6.16.0.tgz#f3e9a00fbc1d0701356359cd56489c54d9e37168"
+  integrity sha512-0N7Y9DSPdaBQ3sqSCwlrm9zJwkpOuc6HYm7LpzLAPqBL7dmzAUimr4M29dMkOP/tEwvOCC/Cxo//yOfJD3HUiw==
+  dependencies:
+    "@typescript-eslint/types" "6.16.0"
+    "@typescript-eslint/visitor-keys" "6.16.0"
 
 "@typescript-eslint/type-utils@5.62.0":
   version "5.62.0"
@@ -3969,6 +3977,11 @@
   resolved "https://registry.npmjs.org/@typescript-eslint/types/-/types-6.13.1.tgz#b56f26130e7eb8fa1e429c75fb969cae6ad7bb5c"
   integrity sha512-gjeEskSmiEKKFIbnhDXUyiqVma1gRCQNbVZ1C8q7Zjcxh3WZMbzWVfGE9rHfWd1msQtPS0BVD9Jz9jded44eKg==
 
+"@typescript-eslint/types@6.16.0":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-6.16.0.tgz#a3abe0045737d44d8234708d5ed8fef5d59dc91e"
+  integrity sha512-hvDFpLEvTJoHutVl87+MG/c5C8I6LOgEx05zExTSJDEVU7hhR3jhV8M5zuggbdFCw98+HhZWPHZeKS97kS3JoQ==
+
 "@typescript-eslint/typescript-estree@5.62.0":
   version "5.62.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.62.0.tgz#7d17794b77fabcac615d6a48fb143330d962eb9b"
@@ -3992,6 +4005,20 @@
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
+    semver "^7.5.4"
+    ts-api-utils "^1.0.1"
+
+"@typescript-eslint/typescript-estree@6.16.0":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-6.16.0.tgz#d6e0578e4f593045f0df06c4b3a22bd6f13f2d03"
+  integrity sha512-VTWZuixh/vr7nih6CfrdpmFNLEnoVBF1skfjdyGnNwXOH1SLeHItGdZDHhhAIzd3ACazyY2Fg76zuzOVTaknGA==
+  dependencies:
+    "@typescript-eslint/types" "6.16.0"
+    "@typescript-eslint/visitor-keys" "6.16.0"
+    debug "^4.3.4"
+    globby "^11.1.0"
+    is-glob "^4.0.3"
+    minimatch "9.0.3"
     semver "^7.5.4"
     ts-api-utils "^1.0.1"
 
@@ -4036,6 +4063,14 @@
   integrity sha512-NDhQUy2tg6XGNBGDRm1XybOHSia8mcXmlbKWoQP+nm1BIIMxa55shyJfZkHpEBN62KNPLrocSM2PdPcaLgDKMQ==
   dependencies:
     "@typescript-eslint/types" "6.13.1"
+    eslint-visitor-keys "^3.4.1"
+
+"@typescript-eslint/visitor-keys@6.16.0":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-6.16.0.tgz#d50da18a05d91318ed3e7e8889bda0edc35f3a10"
+  integrity sha512-QSFQLruk7fhs91a/Ep/LqRdbJCZ1Rq03rqBdKT5Ky17Sz8zRLUksqIe9DW0pKtg/Z35/ztbLQ6qpOCN6rOC11A==
+  dependencies:
+    "@typescript-eslint/types" "6.16.0"
     eslint-visitor-keys "^3.4.1"
 
 "@ungap/structured-clone@^1.2.0":
@@ -10295,6 +10330,13 @@ minimatch@3.0.5:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@9.0.3, minimatch@^9.0.0, minimatch@^9.0.1:
+  version "9.0.3"
+  resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
+  integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==
+  dependencies:
+    brace-expansion "^2.0.1"
+
 minimatch@^3.0.2, minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
@@ -10313,13 +10355,6 @@ minimatch@^8.0.2:
   version "8.0.4"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-8.0.4.tgz#847c1b25c014d4e9a7f68aaf63dedd668a626229"
   integrity sha512-W0Wvr9HyFXZRGIDgCicunpQ299OKXs9RgZfaukz4qAW/pJhcpUfupc9c+OObPOFueNy8VSrZgEmDtk6Kh4WzDA==
-  dependencies:
-    brace-expansion "^2.0.1"
-
-minimatch@^9.0.0, minimatch@^9.0.1:
-  version "9.0.3"
-  resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
-  integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==
   dependencies:
     brace-expansion "^2.0.1"
 
