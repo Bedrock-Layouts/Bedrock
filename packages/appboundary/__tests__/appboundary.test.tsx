@@ -39,17 +39,19 @@ describe("AppBoundary", () => {
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
 
-    it.each([
+    const testsCases = [
       [639],
       ["60ch"],
-      ["xxsmall"],
-      ["xsmall"],
-      ["small"],
-      ["medium"],
-      ["large"],
-      ["xlarge"],
-      ["xxlarge"],
-    ])("renders boundarySize", (boundary) => {
+      ["sizeXxs"],
+      ["sizeXs"],
+      ["sizeSm"],
+      ["sizeMd"],
+      ["sizeLg"],
+      ["sizeXl"],
+      ["sizeXxl"],
+    ] as const;
+
+    it.each(testsCases)("renders boundarySize", (boundary) => {
       const appboundary = create(
         <AppBoundary boundarySize={boundary}>
           <Lorem />
@@ -61,6 +63,8 @@ describe("AppBoundary", () => {
     it("renders with theme overrides", () => {
       const appboundary = create(
         <ThemeProvider theme={{ sizes: { ultraWide: 2400 } }}>
+          {/* This should be overwritten using declaration merging */}
+          {/* @ts-expect-error */}
           <AppBoundary boundarySize="ultraWide">
             <Lorem />
           </AppBoundary>
