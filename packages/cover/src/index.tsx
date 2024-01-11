@@ -17,7 +17,7 @@ export type MinHeight = CSSLength | number | SizesOptions;
 /**
  * Props for the Cover component.
  */
-export interface CoverProps {
+export type CoverProps = {
   /**
    * Slot to be placed at the top of the cover component, above the centered content.
    */
@@ -40,7 +40,7 @@ export interface CoverProps {
    * Sets the content to stretch to the full height of the cover component minus the top and bottom slots.
    */
   stretchContent?: boolean;
-}
+};
 
 /**
  * The `Cover` component is designed to vertically cover a predefined area, `100vh` by default, and vertically center its children.
@@ -48,13 +48,14 @@ export interface CoverProps {
  */
 export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
   {
-    as,
+    as: Component = "div",
     children,
     gutter,
     top,
     bottom,
     minHeight,
-    style,
+    style = {},
+    //TODO: Change from boolean to string union of "stretch-content" | "default"
     stretchContent,
     ...props
   },
@@ -66,18 +67,15 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
 
   const attributeVal = stretchContent === true ? "stretch-content" : "";
 
-  const safeStyle = style ?? {};
-
-  const Component = as ?? "div";
   return (
     <Component
       ref={ref}
       data-bedrock-cover={attributeVal}
       style={
         {
-          ...safeStyle,
           "--gutter": maybeGutter,
           "--minHeight": maybeMinHeight,
+          ...style,
         } as CSSProperties
       }
       {...props}
