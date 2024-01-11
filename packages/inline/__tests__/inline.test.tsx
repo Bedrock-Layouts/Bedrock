@@ -27,6 +27,28 @@ describe("Inline", () => {
       expect(Inline).toBeTruthy();
     });
 
+    it("renders all the justify options", () => {
+      ["start", "center", "end"].forEach((justify) => {
+        const inlineCluster = create(
+          <Inline gutter="size3" justify={justify}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inlineCluster.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it("renders all the align options", () => {
+      ["start", "center", "end", "stretch"].forEach((align) => {
+        const inlineCluster = create(
+          <Inline gutter="size3" align={align}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inlineCluster.toJSON()).toMatchSnapshot();
+      });
+    });
+
     it("renders all the stretch options", () => {
       ["all", "start", "end", 0, 3].forEach((stretch) => {
         const inline = create(

@@ -46,7 +46,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     {
       as: Component = "div",
       gutter,
-      style,
+      style = {},
       minItemWidth,
       // TODO: Remove Boolean type in next major version
       noStretchedColumns = false,
@@ -61,7 +61,6 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
       noStretchedColumns === true ? "no-stretched-columns" : "";
 
     const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
-    const safeStyle = style ?? {};
 
     return (
       <Component
@@ -71,7 +70,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
           {
             "--gutter": maybeGutter,
             "--minItemWidth": maybeMinItemWidth,
-            ...safeStyle,
+            ...style,
           } as CSSProperties
         }
         {...props}

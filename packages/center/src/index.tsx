@@ -41,7 +41,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
     centerChildren,
     centerText,
     maxWidth,
-    style,
+    style = {},
     ...props
   },
   ref,
@@ -54,8 +54,6 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
     .filter(Boolean)
     .join(" ");
 
-  const safeStyle = style ?? {};
-
   return (
     <Component
       data-bedrock-center={centerProps}
@@ -63,7 +61,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
       style={
         {
           "--maxWidth": getSizeValue(theme, maxWidth) ?? maxWidth,
-          ...safeStyle,
+          ...style,
         } as CSSProperties
       }
       {...props}

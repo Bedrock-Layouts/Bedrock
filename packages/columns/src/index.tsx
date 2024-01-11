@@ -9,10 +9,19 @@ import {
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
+type Maybe<T> = NonNullable<T> | undefined;
+
+function convertToMaybe<T extends unknown>(val: T): Maybe<T> {
+  if (Number.isNaN(val)) {
+    return undefined;
+  }
+  return val ?? undefined;
+}
+
 /**
  * Props for the `Columns` component.
  */
-export interface ColumnsProps {
+export type ColumnsProps = {
   /**
    * Sets space between each element.
    */
@@ -26,7 +35,7 @@ export interface ColumnsProps {
    * will switch to a single column.
    */
   switchAt?: number | CSSLength | SizesOptions;
-}
+};
 
 /**
  * The `Columns` component is designed to create a n-column layout.
@@ -34,16 +43,20 @@ export interface ColumnsProps {
  * offset n-columns.
  */
 export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
-  { as, gutter, columns = 1, style, switchAt, ...props },
+  {
+    as: Component = "div",
+    gutter,
+    columns = 1,
+    style = {},
+    switchAt,
+    ...props
+  },
   ref,
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gutter);
-  const safeColumns = columns > 0 ? columns : 1;
-  const safeStyle = style ?? {};
-  const safeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
-
-  const Component = as ?? "div";
+  const maybeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
+  const safeColumns = convertToMaybe(Math.max(columns, 1)) ?? 1;
 
   return (
     <Component
@@ -51,10 +64,10 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
       data-bedrock-columns={""}
       style={
         {
-          ...safeStyle,
           "--gutter": maybeGutter,
           "--columns": safeColumns,
-          "--switchAt": safeSwitchAt,
+          "--switchAt": maybeSwitchAt,
+          ...style,
         } as CSSProperties
       }
       {...props}
@@ -80,24 +93,25 @@ export interface ColumnProps {
   offsetEnd?: number;
 }
 
-const safeSpan = (span: unknown) => {
-  return typeof span === "number" ? span : 1;
-};
-
 /**
  * The `Column` component is designed to be used in conjunction
  * with the `Columns` component.
  * It allows elements to span and offset n-columns.
  */
 export const Column = forwardRefWithAs<"div", ColumnProps>(function Column(
-  { as, span, style, offsetStart = 0, offsetEnd = 0, ...props },
+  {
+    as: Component = "div",
+    span = 1,
+    style = {},
+    offsetStart = 0,
+    offsetEnd = 0,
+    ...props
+  },
   ref,
 ) {
   const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
   const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;
-  const safeStyle = style ?? {};
-
-  const Component = as ?? "div";
+  const safeSpan = convertToMaybe(Math.max(span, 1)) ?? 1;
 
   return (
     <Component
@@ -105,10 +119,10 @@ export const Column = forwardRefWithAs<"div", ColumnProps>(function Column(
       ref={ref}
       style={
         {
-          ...safeStyle,
-          "--span": Math.max(safeSpan(span), 1),
+          "--span": safeSpan,
           "--offsetStart": safeOffsetStart,
           "--offsetEnd": safeOffsetEnd,
+          ...style,
         } as CSSProperties
       }
       {...props}
