@@ -15,7 +15,7 @@ export type MaxWidth = number | CSSLength | SizesOptions;
 /**
  * Props for the Center component.
  */
-export interface CenterProps {
+export type CenterProps = {
   /**
    * Sets the max-inline size of the component.
    * The `maxWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
@@ -29,14 +29,21 @@ export interface CenterProps {
    * Sets the alignment of the component's children to be centered.
    */
   centerChildren?: boolean;
-}
+};
 
 /**
  * The `Center` component is designed to center and clamp its width at a predefined value.
  * You can also center the children and text alignment as well.
  */
 export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
-  { as, centerChildren, centerText, maxWidth, style, ...props },
+  {
+    as: Component = "div",
+    centerChildren,
+    centerText,
+    maxWidth,
+    style,
+    ...props
+  },
   ref,
 ) {
   const theme = useTheme();
@@ -49,18 +56,13 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
 
   const safeStyle = style ?? {};
 
-  const Component = as ?? "div";
-
   return (
     <Component
       data-bedrock-center={centerProps}
       ref={ref}
       style={
         {
-          "--maxWidth":
-            typeof maxWidth === "number" && maxWidth > 0
-              ? `${maxWidth}px`
-              : getSizeValue(theme, maxWidth) ?? maxWidth,
+          "--maxWidth": getSizeValue(theme, maxWidth) ?? maxWidth,
           ...safeStyle,
         } as CSSProperties
       }
