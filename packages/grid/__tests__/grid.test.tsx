@@ -38,7 +38,8 @@ describe("Grid", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const grid = create(
           <Grid gutter={gutter}>
             <Lorem />
@@ -50,7 +51,7 @@ describe("Grid", () => {
 
     it("renders custom gutter with number", () => {
       const grid = create(
-        <Grid grid={20}>
+        <Grid gutter={20}>
           <Lorem />
         </Grid>,
       );
@@ -59,7 +60,7 @@ describe("Grid", () => {
 
     it("renders custom gutter with string", () => {
       const grid = create(
-        <Grid grid="3ch">
+        <Grid gutter="3ch">
           <Lorem />
         </Grid>,
       );
@@ -92,6 +93,7 @@ describe("Grid", () => {
             spacing: { "1x": "200px" },
           }}
         >
+          {/** @ts-ignore */}
           <Grid gutter="1x">
             <Lorem />
           </Grid>
@@ -104,6 +106,7 @@ describe("Grid", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Grid gutter={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
@@ -114,6 +117,7 @@ describe("Grid", () => {
 
     it("renders default with console error with minItemWidth input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Grid gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
@@ -124,6 +128,7 @@ describe("Grid", () => {
 
     it("renders default with console error when minItemWidth is not valid CSSLength", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Grid gutter="size3" minItemWidth="garbage">
           <Lorem />
         </Grid>,

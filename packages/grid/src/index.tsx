@@ -17,7 +17,7 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 /**
  * Props for the Grid component.
  */
-export interface GridProps {
+export type GridProps = {
   /**
    * Sets space between each element.
    */
@@ -27,31 +27,29 @@ export interface GridProps {
    * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
    */
   minItemWidth?: MinItemWidth;
-}
+};
 
 /**
  * The `Grid` component is designed to create a responsive grid of items
  * that will automatically wrap based on the number of children and the `minItemWidth`.
  */
 export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
-  { as, style, minItemWidth, gutter, ...props },
+  { as: Component = "div", style = {}, minItemWidth, gutter, ...props },
   ref,
 ) {
   const theme = useTheme();
-  const safeMinItemWidth = getSizeValue(theme, minItemWidth);
+  const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
+  const maybeGutter = getSafeGutter(theme, gutter);
 
-  const safeGutter = getSafeGutter(theme, gutter);
-  const safeStyle = style ?? {};
-  const Component = as ?? "div";
   return (
     <Component
       ref={ref}
       data-bedrock-grid
       style={
         {
-          ...safeStyle,
-          "--minItemWidth": safeMinItemWidth,
-          "--gutter": safeGutter,
+          "--minItemWidth": maybeMinItemWidth,
+          "--gutter": maybeGutter,
+          ...style,
         } as React.CSSProperties
       }
       {...props}
