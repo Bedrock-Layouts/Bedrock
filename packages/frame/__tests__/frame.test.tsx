@@ -77,6 +77,7 @@ describe("Frame", () => {
   describe("incorrect usage", () => {
     it("renders default position with incorrect value", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Frame ratio={[16, 9]} position={true}>
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
@@ -87,6 +88,7 @@ describe("Frame", () => {
 
     it("renders without ratio if ratio is not correct type", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Frame ratio={{ 0: 16, 1: 9 }}>
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
@@ -97,6 +99,7 @@ describe("Frame", () => {
 
     it("renders without ratio with error if array of length <1 provided", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Frame ratio={[16]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
@@ -107,6 +110,7 @@ describe("Frame", () => {
 
     it("renders without ratio with error if array of length >2 provided", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Frame ratio={[16, 9, 8, 6]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
@@ -117,6 +121,7 @@ describe("Frame", () => {
 
     it("renders without ratio with error if array of not numbers provided", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Frame ratio={["16", "9"]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,

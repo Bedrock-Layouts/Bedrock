@@ -1,5 +1,8 @@
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
+
+type Maybe<T> = NonNullable<T> | undefined;
+
 type RatioString =
   | `${number}/${number}`
   | `${number} / ${number}`
@@ -14,7 +17,7 @@ export type Ratio = readonly [number, number] | RatioString;
 /**
  * Props for the `Frame` component.
  */
-export interface FrameProps {
+export type FrameProps = {
   /**
    * The `ratio` prop is used to specify the aspect ratio of the content.
    */
@@ -23,42 +26,40 @@ export interface FrameProps {
    * The `position` prop is used to specify the position of the content within the frame.
    */
   position?: string;
+};
+
+type ValidRatioString = `${number}/${number}`;
+
+function getRatioString(ratio: Ratio): ValidRatioString {
+  const ratioArray = typeof ratio === "string" ? ratio.split(/\/|:/) : ratio;
+  return ratioArray.map((x) => String(x).trim()).join("/") as ValidRatioString;
 }
 
-function checkIsRatio(ratio: unknown): ratio is Ratio {
+function getSafeRatio(ratio: unknown): Maybe<ValidRatioString> {
   const isCorrectArray =
     Array.isArray(ratio) && ratio.length === 2 && ratio.every(Number.isFinite);
-  return (
-    isCorrectArray ||
-    (typeof ratio === "string" &&
-      /^\d{1,1000} {0,1}(\/|:) {0,1}\d{1,1000}$/.test(ratio))
-  );
-}
 
-function getRatioString(ratio: Ratio): `${number}/${number}` {
-  const ratioArray = typeof ratio === "string" ? ratio.split(/\/|:/) : ratio;
-  return ratioArray
-    .map((x) => String(x).trim())
-    .join("/") as `${number}/${number}`;
-}
+  if (isCorrectArray) {
+    return getRatioString(ratio as unknown as Ratio);
+  }
 
-function getSafeRatio(ratio: unknown): RatioString | undefined {
-  const isRatio = checkIsRatio(ratio);
+  const ratioStringRegex = /^\d{1,1000} {0,1}(\/|:) {0,1}\d{1,1000}$/;
 
-  return isRatio ? getRatioString(ratio) : undefined;
+  if (typeof ratio === "string" && ratioStringRegex.test(ratio)) {
+    return getRatioString(ratio as Ratio);
+  }
+
+  return undefined;
 }
 
 /**
  * The `Frame` component is useful for cropping content, typically media, to a desired aspect ratio.
  */
 export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
-  { as, ratio, style, position, ...props },
+  { as: Component = "div", ratio, style = {}, position, ...props },
   ref,
 ) {
-  const safeRatio = getSafeRatio(ratio);
-  const safeStyle = style ?? {};
-
-  const Component = as ?? "div";
+  const maybeRatio = getSafeRatio(ratio);
 
   return (
     <Component
@@ -66,9 +67,9 @@ export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
       ref={ref}
       style={
         {
-          ...safeStyle,
-          "--ratio": safeRatio,
+          "--ratio": maybeRatio,
           "--position": position,
+          ...style,
         } as CSSProperties
       }
       {...props}
