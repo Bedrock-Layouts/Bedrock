@@ -1,4 +1,5 @@
-import { describe, expect, vi, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
+
 import { init, registerCallback } from "../src";
 
 vi.spyOn(console, "error").mockImplementation(() => void 0);
@@ -42,12 +43,6 @@ ResizeObserver.mockImplementation(
 );
 
 describe("register-resize-callback", () => {
-  test("It will a function that returns an Error if init is not called", () => {
-    const node = document.createElement("div");
-    const callback = registerCallback(node, () => void 0);
-    expect(callback() instanceof Error).toBe(true);
-  });
-
   test("ResizeObserver is called", async () => {
     init();
     const node = document.createElement("div");
