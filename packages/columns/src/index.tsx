@@ -6,17 +6,8 @@ import {
   getSizeValue,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import { convertToMaybe, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
-
-type Maybe<T> = NonNullable<T> | undefined;
-
-function convertToMaybe<T extends unknown>(val: T): Maybe<T> {
-  if (Number.isNaN(val)) {
-    return undefined;
-  }
-  return val ?? undefined;
-}
 
 /**
  * Props for the `Columns` component.

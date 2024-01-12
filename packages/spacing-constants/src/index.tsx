@@ -210,6 +210,7 @@ export function getSpacingValue<T extends DefaultTheme>(
 
 export type Gutter = CSSLength | number | SpacingOptions;
 
+//TODO - change to getSpaceFromTheme in next version
 export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
   gutter?: Gutter,
@@ -222,6 +223,7 @@ export function getSafeGutter<T extends DefaultTheme>(
   return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
 
+//TODO - change to getSizeFromTheme in next version
 export function getSizeValue(
   theme: Readonly<{ sizes?: BaseTheme }>,
   sizeKey?: string | number,

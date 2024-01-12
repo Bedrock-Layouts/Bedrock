@@ -80,3 +80,10 @@ export function forwardRefWithAs<C extends React.ElementType, Props = {}>(
 ) {
   return React.forwardRef(render) as PolymorphicForwardedRefComponent<C, Props>;
 }
+
+export type Maybe<T> = NonNullable<T> | undefined;
+
+export function convertToMaybe<T extends unknown>(value: T): Maybe<T> {
+  if (Number.isNaN(value)) return undefined;
+  return value ?? undefined;
+}

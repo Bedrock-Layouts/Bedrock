@@ -1,3 +1,4 @@
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -25,6 +26,18 @@ describe("Inline", () => {
   describe("correct usage", () => {
     test("Inline is not null", () => {
       expect(Inline).toBeTruthy();
+    });
+
+    it("renders all the gutter options", () => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
+        const inline = create(
+          <Inline gutter={gutter}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inline.toJSON()).toMatchSnapshot();
+      });
     });
 
     it("renders all the justify options", () => {
