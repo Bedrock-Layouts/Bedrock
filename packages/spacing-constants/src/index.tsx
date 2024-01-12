@@ -60,9 +60,9 @@ type NonEmptyString = `${AllCharacter}${string}`;
 
 type CSSLengthUnit = `${number}${LengthUnit}`;
 
-type CSSCustomProperties = `--${NonEmptyString}`;
+type CSSCustomProperty = `--${NonEmptyString}`;
 
-type CSSCustomPropertiesWithVar = `var(${CSSCustomProperties})`;
+type CSSCustomPropertyWithVar = `var(${CSSCustomProperty})`;
 
 type LengthUnit =
   | "vmin"
@@ -91,22 +91,11 @@ type CSSSizeKeyword =
 
 export type CSSLength =
   | CSSLengthUnit
-  | CSSCustomPropertiesWithVar
-  | CSSCustomProperties
+  | CSSCustomPropertyWithVar
+  | CSSCustomProperty
   | CSSSizeKeyword;
 
-function fromEntries<K extends string | number, T>(
-  entries: Readonly<[s: K, value: T][]>,
-): Record<K, T> {
-  return entries.reduce(
-    (acc, [key, value]) => {
-      return { ...acc, [key]: value };
-    },
-    {} as Record<K, T>,
-  );
-}
-
-const space = {
+const spaceMap = {
   size000: "-.5rem",
   size00: "-.25rem",
   size1: ".25rem",
@@ -126,7 +115,7 @@ const space = {
   size15: "30rem",
 } as const;
 
-const size = {
+const sizeMap = {
   sizeContent1: "20ch",
   sizeContent2: "45ch",
   sizeContent3: "60ch",
@@ -142,28 +131,47 @@ const size = {
   sizeXxl: "1920px",
 } as const;
 
-export const spacing = space as Record<keyof typeof space, CSSLength>;
+//TODO export above instead of below in next version
+export const spacing = spaceMap as Record<keyof typeof spaceMap, CSSLength>;
 
-export const sizes = size as Record<keyof typeof size, CSSLength>;
+export const sizes = sizeMap as Record<keyof typeof sizeMap, CSSLength>;
 
 const customPropertyRegex = /^--\D{1}.{0,100}$/;
 
-function checkIsCSSCustomProperty(str: string): str is CSSCustomProperties {
-  return customPropertyRegex.test(str);
+type PropertyResult<TvalidProp, TinvalidProp> =
+  | {
+      result: "valid";
+      property: TvalidProp;
+    }
+  | {
+      result: "invalid";
+      property: TinvalidProp;
+    };
+
+type PropertyCheckFunction<T, K> = (property: K) => PropertyResult<T, K>;
+
+/** A Higher Order Function that takes a function that will validate if val K is of type T and return a validator function */
+function checkPropertyBy<T, K>(
+  fn: (val: K) => boolean,
+): PropertyCheckFunction<T, K> {
+  return (property) => {
+    return fn(property)
+      ? {
+          result: "valid",
+          property: property as unknown as T,
+        }
+      : {
+          result: "invalid",
+          property,
+        };
+  };
 }
 
-function checkIsCSSSizeKeyword(str: string): str is CSSSizeKeyword {
-  return [
-    "auto",
-    "inherit",
-    "none",
-    "min-content",
-    "max-content",
-    "fit-content",
-  ].includes(str);
-}
+const checkIsCSSCustomProperty = checkPropertyBy<CSSCustomProperty, string>(
+  (str) => customPropertyRegex.test(str),
+);
 
-export function checkIsCSSLength(str: unknown): str is CSSLength {
+const checkIsCSSLength = checkPropertyBy<CSSLength, unknown>((str) => {
   if (typeof str !== "string") return false;
 
   return (
@@ -171,9 +179,17 @@ export function checkIsCSSLength(str: unknown): str is CSSLength {
       /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
       /^var\(--\D{1}.{0,100}\)$/,
       customPropertyRegex,
-    ].some((regex) => regex.test(str)) || checkIsCSSSizeKeyword(str)
+    ].some((regex) => regex.test(str)) ||
+    [
+      "auto",
+      "inherit",
+      "none",
+      "min-content",
+      "max-content",
+      "fit-content",
+    ].includes(str)
   );
-}
+});
 
 export type BaseTheme = Record<string, CSSLength | string | number>;
 
@@ -192,55 +208,77 @@ type ThemeOrDefaultSizes<T> = T extends {
 export type SpacingOptions = ThemeOrDefaultSpace<DefaultTheme>;
 export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 
+//TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme and probably shouldn't be exported.
 export function getSpacingValue<T extends DefaultTheme>(
   theme: Readonly<T & { space?: BaseTheme }>,
   spacingKey: SpacingOptions,
 ): Maybe<CSSLength> {
-  const maybeSpacingOrDefault = theme.space ?? spacing;
+  const spaceMapFromThemeOrDefault = theme.space ?? spacing;
 
-  const safeSpacings = fromEntries(
-    Object.entries(maybeSpacingOrDefault).map(([spaceKey, value]) => [
+  const spaceMap = Object.fromEntries(
+    Object.entries(spaceMapFromThemeOrDefault).map(([spaceKey, value]) => [
       spaceKey as SpacingOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
     ]),
   );
 
-  return convertToMaybe(safeSpacings[spacingKey]);
+  return convertToMaybe(spaceMap[spacingKey]);
 }
 
 export type Gutter = CSSLength | number | SpacingOptions;
 
 //TODO - change to getSpaceFromTheme in next version
+//TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme.
 export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
   gutter?: Gutter,
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
-  if (typeof gutter === "string" && checkIsCSSLength(gutter))
-    return checkIsCSSCustomProperty(gutter) ? `var(${gutter})` : gutter;
+
+  const { result: cssLengthResult, property: cssLengthProperty } =
+    checkIsCSSLength(gutter);
+
+  if (typeof gutter === "string" && cssLengthResult === "valid") {
+    const { result: customPropertyResult, property: customProperty } =
+      checkIsCSSCustomProperty(cssLengthProperty);
+
+    return customPropertyResult === "valid"
+      ? `var(${customProperty})`
+      : cssLengthProperty;
+  }
 
   return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
 }
 
-//TODO - change to getSizeFromTheme in next version
+//TODO - shouldn't take the whole theme.  Should take the sizeMap from the theme.
 export function getSizeValue(
   theme: Readonly<{ sizes?: BaseTheme }>,
   sizeKey?: string | number,
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
-  if (typeof sizeKey === "string" && checkIsCSSLength(sizeKey))
-    return checkIsCSSCustomProperty(sizeKey) ? `var(${sizeKey})` : sizeKey;
 
-  const maybeSizesOrDefault = theme.sizes ?? sizes;
+  const { result: cssLengthResult, property: sizeLengthProperty } =
+    checkIsCSSLength(sizeKey);
 
-  const safeSizes = fromEntries(
-    Object.entries(maybeSizesOrDefault).map(([sizeKey, value]) => [
+  if (cssLengthResult === "valid") {
+    const { result: customPropertyResult, property: customProperty } =
+      checkIsCSSCustomProperty(sizeLengthProperty);
+
+    return customPropertyResult === "valid"
+      ? `var(${customProperty})`
+      : sizeLengthProperty;
+  }
+
+  const sizeMapFromThemeOrDefault = theme.sizes ?? sizes;
+
+  const sizeMap = Object.fromEntries(
+    Object.entries(sizeMapFromThemeOrDefault).map(([sizeKey, value]) => [
       sizeKey as SizesOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
     ]),
   );
 
-  return convertToMaybe(safeSizes[sizeKey as SizesOptions]);
+  return convertToMaybe(sizeMap[sizeKey as SizesOptions]);
 }
