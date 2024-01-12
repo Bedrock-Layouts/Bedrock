@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/type-utils@0.1.6...@bedrock-layout/type-utils@0.1.7) (2024-01-12)
+
+**Note:** Version bump only for package @bedrock-layout/type-utils
+
 ## 0.1.6 (2023-12-03)
 
 **Note:** Version bump only for package @bedrock-layout/type-utils

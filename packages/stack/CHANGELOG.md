@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.14](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/stack@3.1.13...@bedrock-layout/stack@3.1.14) (2024-01-12)
+
+**Note:** Version bump only for package @bedrock-layout/stack
+
 ## 3.1.13 (2023-12-03)
 
 **Note:** Version bump only for package @bedrock-layout/stack

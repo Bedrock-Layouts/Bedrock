@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.4](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@3.3.3...@bedrock-layout/cover@3.3.4) (2024-01-12)
+
+**Note:** Version bump only for package @bedrock-layout/cover
+
 ## 3.3.3 (2023-12-03)
 
 **Note:** Version bump only for package @bedrock-layout/cover

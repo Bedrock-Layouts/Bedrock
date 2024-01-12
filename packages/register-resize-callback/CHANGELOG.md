@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.6 (2024-01-12)
+
+**Note:** Version bump only for package @bedrock-layout/register-resize-callback
+
 ## [2.0.5](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/register-resize-callback@2.0.4...@bedrock-layout/register-resize-callback@2.0.5) (2023-10-15)
 
 ### Bug Fixes
