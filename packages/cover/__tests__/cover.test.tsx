@@ -82,7 +82,8 @@ describe("Cover", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const cover = create(
           <Cover gutter={gutter}>
             <Lorem />
@@ -138,7 +139,8 @@ describe("Cover", () => {
     });
 
     it("renders with minHeight as a size property", () => {
-      Object.keys(sizes).forEach((size) => {
+      const sizeKeys = Object.keys(sizes) as Array<keyof typeof sizes>;
+      sizeKeys.forEach((size) => {
         const cover = create(
           <Cover gutter="size3" minHeight={size}>
             <p>{size}</p>
@@ -160,6 +162,7 @@ describe("Cover", () => {
     it("renders with theme overrides", () => {
       const cover = create(
         <ThemeProvider theme={{ spacing: { "1x": 200 } }}>
+          {/* @ts-expect-error */}
           <Cover gutter="1x">
             <Lorem />
           </Cover>
@@ -172,6 +175,7 @@ describe("Cover", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Cover gutter={{ value: "incorrect" }}>
           <Lorem />
         </Cover>,
@@ -182,6 +186,7 @@ describe("Cover", () => {
 
     it("renders with min-height incorrect with invalid minHeight", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Cover gutter="size3" minHeight="incorrect">
           <Lorem />
         </Cover>,
@@ -192,6 +197,7 @@ describe("Cover", () => {
 
     it("renders without stretched conent with invalid stretchContent prop", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Cover gutter="size3" stretchContent="incorrect">
           <Lorem />
         </Cover>,

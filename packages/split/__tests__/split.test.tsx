@@ -2,7 +2,7 @@ import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
-import { describe, expect, it, test } from "vitest";
+import { describe, expect, it, test, vi } from "vitest";
 
 import { Split } from "../src";
 
@@ -41,7 +41,8 @@ describe("Split", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const split = create(
           <Split gutter={gutter}>
             <Lorem />
@@ -85,6 +86,7 @@ describe("Split", () => {
     it("renders with theme overrides", () => {
       const split = create(
         <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+          {/* @ts-expect-error */}
           <Split gutter="1x">
             <Lorem />
           </Split>
@@ -95,7 +97,6 @@ describe("Split", () => {
 
     it("should render a stack if container is below switchAt", () => {
       const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt + 1;
@@ -108,7 +109,6 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       useContainerQuery.mockRestore();
     });
@@ -125,7 +125,6 @@ describe("Split", () => {
 
     it("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
@@ -138,14 +137,14 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
       // @ts-expect-error
       useContainerQuery.mockRestore();
     });
 
     it("should render a split if container is above switchAt using a css string", () => {
       const widthToSwitchAt = 600;
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
       // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
@@ -158,7 +157,7 @@ describe("Split", () => {
       );
 
       expect(stack.toJSON()).toMatchSnapshot();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
       // @ts-expect-error
       useContainerQuery.mockRestore();
     });
@@ -167,6 +166,7 @@ describe("Split", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter input", async () => {
       const errorStack = create(
+        // @ts-expect-error
         <Split gutter={{ value: "incorrect" }}>
           <Lorem />
         </Split>,
@@ -197,6 +197,7 @@ describe("Split", () => {
 
     it("renders default with console error with wrong switchAt input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Split gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Split>,

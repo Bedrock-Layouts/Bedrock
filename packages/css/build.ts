@@ -26,7 +26,7 @@ const readDir = promisify(fs.readdir);
   const filesSorted = Array.from(new Set([...files]));
 
   const bedrockLayoutCSS = await concat(
-    filesSorted.map((file) => path.join(srcComponentPath, file))
+    filesSorted.map((file) => path.join(srcComponentPath, file)),
   );
 
   assertIsString(bedrockLayoutCSS);
@@ -39,9 +39,9 @@ const readDir = promisify(fs.readdir);
       console.info(`Copying ${file}`);
       copyFile(
         path.join(srcComponentPath, file),
-        path.join(libComponentPath, file)
+        path.join(libComponentPath, file),
       );
-    })
+    }),
   );
 
   await Promise.all(
@@ -51,10 +51,10 @@ const readDir = promisify(fs.readdir);
       exec(
         `npx postcss ${path.join(libComponentPath, file)} > ${path.join(
           libComponentPath,
-          file.replace(".css", ".min.css")
-        )}`
+          file.replace(".css", ".min.css"),
+        )}`,
       );
-    })
+    }),
   );
 
   copyFile(path.join(srcPath, "reset.css"), path.join(libPath, "reset.css"));

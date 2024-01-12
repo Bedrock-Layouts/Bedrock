@@ -17,7 +17,7 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 /**
  * Props for the ColumnDrop component.
  */
-export interface ColumnDropProps {
+export type ColumnDropProps = {
   /**
    * Sets space between each element.
    */
@@ -31,17 +31,7 @@ export interface ColumnDropProps {
    * Prevents columns from stretching to fill the space.
    */
   noStretchedColumns?: boolean;
-}
-
-function getSafeMinItemWidth(
-  theme: Readonly<{
-    space?: { [key: string]: string };
-    sizes?: { [key: string]: string };
-  }>,
-  minItemWidth?: MinItemWidth,
-) {
-  return getSizeValue(theme, minItemWidth);
-}
+};
 
 /**
  * The `ColumnDrop` component is used to create a layout
@@ -53,7 +43,15 @@ function getSafeMinItemWidth(
  */
 export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
   function ColumnDrop(
-    { as, gutter, style, minItemWidth, noStretchedColumns = false, ...props },
+    {
+      as: Component = "div",
+      gutter,
+      style = {},
+      minItemWidth,
+      // TODO: Remove Boolean type in next major version
+      noStretchedColumns = false,
+      ...props
+    },
     ref,
   ) {
     const theme = useTheme();
@@ -62,19 +60,17 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     const attributeValue =
       noStretchedColumns === true ? "no-stretched-columns" : "";
 
-    const safeMinItemWidth = getSafeMinItemWidth(theme, minItemWidth);
-    const safeStyle = style ?? {};
+    const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
 
-    const Component = as ?? "div";
     return (
       <Component
         ref={ref}
         data-bedrock-column-drop={attributeValue}
         style={
           {
-            ...safeStyle,
             "--gutter": maybeGutter,
-            "--minItemWidth": safeMinItemWidth,
+            "--minItemWidth": maybeMinItemWidth,
+            ...style,
           } as CSSProperties
         }
         {...props}

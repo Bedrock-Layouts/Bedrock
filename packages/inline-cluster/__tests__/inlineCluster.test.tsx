@@ -38,7 +38,8 @@ describe("InlineCluster", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const inlineCluster = create(
           <InlineCluster gutter={gutter}>
             <Lorem />
@@ -67,7 +68,8 @@ describe("InlineCluster", () => {
     });
 
     it("renders all the justify options", () => {
-      ["start", "center", "end"].forEach((justify) => {
+      const justifications = ["start", "center", "end"] as const;
+      justifications.forEach((justify) => {
         const inlineCluster = create(
           <InlineCluster gutter="size3" justify={justify}>
             <Lorem />
@@ -78,7 +80,8 @@ describe("InlineCluster", () => {
     });
 
     it("renders all the align options", () => {
-      ["start", "center", "end", "stretch"].forEach((align) => {
+      const justifications = ["start", "center", "end", "stretch"] as const;
+      justifications.forEach((align) => {
         const inlineCluster = create(
           <InlineCluster gutter="size3" align={align}>
             <Lorem />
@@ -90,7 +93,8 @@ describe("InlineCluster", () => {
 
     it("renders with theme overrides", () => {
       const inlineCluster = create(
-        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+          {/* @ts-expect-error */}
           <InlineCluster gutter="1x">
             <Lorem />
           </InlineCluster>
@@ -101,8 +105,9 @@ describe("InlineCluster", () => {
 
     it("renders with theme overrides using numbers", () => {
       const inlineCluster = create(
-        <ThemeProvider theme={{ spacing: { none: 0 } }}>
-          <InlineCluster gutter="size000">
+        <ThemeProvider theme={{ space: { sizeNone: 3 } }}>
+          {/* @ts-expect-error */}
+          <InlineCluster gutter="sizeNone">
             <Lorem />
           </InlineCluster>
         </ThemeProvider>,
@@ -123,6 +128,7 @@ describe("InlineCluster", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <InlineCluster gutter={{ value: "incorrect" }}>
           <Lorem />
         </InlineCluster>,
@@ -133,6 +139,7 @@ describe("InlineCluster", () => {
 
     it("renders default with console error with incorrect justify", () => {
       const errorStack = create(
+        // @ts-expect-error
         <InlineCluster gutter="size3" justify="incorrect">
           <Lorem />
         </InlineCluster>,
@@ -142,6 +149,7 @@ describe("InlineCluster", () => {
     });
     it("renders default with console error with incorrect align", () => {
       const errorStack = create(
+        // @ts-expect-error
         <InlineCluster gutter="size3" align="incorrect">
           <Lorem />
         </InlineCluster>,

@@ -29,7 +29,8 @@ describe("ColumnDrop", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const columnDrop = create(
           <ColumnDrop gutter={gutter}>
             <Lorem />
@@ -104,6 +105,7 @@ describe("ColumnDrop", () => {
             spacing: { "1x": "200px" },
           }}
         >
+          {/* @ts-expect-error */}
           <ColumnDrop gutter="1x">
             <Lorem />
           </ColumnDrop>
@@ -116,6 +118,7 @@ describe("ColumnDrop", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <ColumnDrop gutter={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>,
@@ -126,6 +129,7 @@ describe("ColumnDrop", () => {
 
     it("renders default with console error with minItemWidth input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <ColumnDrop gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>,
@@ -136,6 +140,7 @@ describe("ColumnDrop", () => {
 
     it("renders default with console error with incorrect noStretchColumns input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <ColumnDrop gutter="size3" noStretchedColumns={{ value: "incorrect" }}>
           <Lorem />
         </ColumnDrop>,
@@ -146,6 +151,7 @@ describe("ColumnDrop", () => {
 
     it("renders default with console error with an invalid CSS String", () => {
       const errorStack = create(
+        // @ts-expect-error
         <ColumnDrop gutter="size3" minItemWidth="garbage">
           <Lorem />
         </ColumnDrop>,

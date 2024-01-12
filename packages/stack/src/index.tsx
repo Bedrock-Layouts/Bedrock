@@ -20,19 +20,17 @@ export interface StackProps {
  * The `Stack` is designed to literally stack items on top of each other while maintaining a consistent gutter between each item.
  */
 export const Stack = forwardRefWithAs<"div", StackProps>(function Stack(
-  { as, gutter, style, ...props },
+  { as: Component = "div", gutter, style = {}, ...props },
   ref,
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gutter);
-  const safeStyle = style ?? {};
 
-  const Component = as ?? "div";
   return (
     <Component
       ref={ref}
       data-bedrock-stack
-      style={{ ...safeStyle, "--gutter": maybeGutter } as React.CSSProperties}
+      style={{ "--gutter": maybeGutter, ...style } as React.CSSProperties}
       {...props}
     />
   );

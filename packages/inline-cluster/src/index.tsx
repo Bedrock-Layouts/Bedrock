@@ -24,6 +24,15 @@ export interface InlineClusterProps {
   gutter?: Gutter;
 }
 
+function createAttributeString(
+  prefix: string,
+  value: string | number | undefined,
+) {
+  if (value === undefined) return undefined;
+
+  return `${prefix}:${value}`;
+}
+
 /**
  * The `InlineCluster` component is used to display a group of elements
  * in a row. When the group is too large to fit in a single row, the
@@ -31,16 +40,17 @@ export interface InlineClusterProps {
  * container and the justification of the cluster.
  */
 export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
-  function InlineCluster({ as, justify, align, style, gutter, ...props }, ref) {
+  function InlineCluster(
+    { as: Component = "div", justify, align, style = {}, gutter, ...props },
+    ref,
+  ) {
     const theme = useTheme();
-    const justifyValue = justify ? `justify:${justify}` : undefined;
-    const alignValue = align ? `align:${align}` : undefined;
+    const justifyValue = createAttributeString("justify", justify);
+    const alignValue = createAttributeString("align", align);
+
+    const maybeGutter = getSafeGutter(theme, gutter);
 
     const attributes = [justifyValue, alignValue].filter(Boolean).join(" ");
-
-    const safeStyle = style ?? {};
-
-    const Component = as ?? "div";
 
     return (
       <Component
@@ -48,8 +58,8 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
         ref={ref}
         style={
           {
-            ...safeStyle,
-            "--gutter": getSafeGutter(theme, gutter),
+            "--gutter": maybeGutter,
+            ...style,
           } as CSSProperties
         }
         {...props}

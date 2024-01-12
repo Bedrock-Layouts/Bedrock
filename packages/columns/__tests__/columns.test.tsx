@@ -88,6 +88,7 @@ describe("Column", () => {
     it("renders default with console error with wrong span input", () => {
       const errorStack = create(
         <Columns gutter="size3">
+          {/* @ts-expect-error */}
           <Column span="incorrect">
             <Lorem />
           </Column>
@@ -118,6 +119,18 @@ describe("Column", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
+    it("renders a span of 1 if given null", () => {
+      const columns = create(
+        <Columns gutter="size3">
+          {/* @ts-expect-error */}
+          <Column span={null}>
+            <Lorem />
+          </Column>
+        </Columns>,
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
   });
 });
 
@@ -135,7 +148,8 @@ describe("Columns", () => {
       expect(columns.toJSON()).toMatchSnapshot();
     });
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const columns = create(
           <Columns gutter={gutter}>
             <Lorem />
@@ -189,6 +203,7 @@ describe("Columns", () => {
     it("renders with theme overrides", () => {
       const columns = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          {/* @ts-expect-error */}
           <Columns gutter="1x">
             <Lorem />
           </Columns>
@@ -200,6 +215,7 @@ describe("Columns", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Columns gutter={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,
@@ -224,6 +240,7 @@ describe("Columns", () => {
     });
     it("renders default with console error with incorrect column type", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Columns columns="incorrect">
           <Lorem />
         </Columns>,
@@ -234,6 +251,7 @@ describe("Columns", () => {
 
     it("renders default with console error with wrong switchAt input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Columns gutter="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,

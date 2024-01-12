@@ -17,13 +17,13 @@ export type BoundarySize = number | CSSLength | SizesOptions;
 /**
  * Props for the AppBoundary component.
  */
-export interface AppBoundaryProps {
+export type AppBoundaryProps = {
   /**
    * Sets the size of the app boundary.
    * The `boundarySize` prop can accept any positive integer, `CSSLength`, `SizeOption`.
    */
   boundarySize?: BoundarySize;
-}
+};
 
 /**
  * The `AppBoundary` component is designed to wrap your entire app.
@@ -32,11 +32,14 @@ export interface AppBoundaryProps {
  * but can also be set to other the valid size options using the `boundarySize` prop.
  */
 export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
-  function AppBoundary({ as, boundarySize, children, style, ...props }, ref) {
+  function AppBoundary(
+    { as: Component = "div", boundarySize, children, style, ...props },
+    ref,
+  ) {
     const theme = useTheme();
     const maybeSize = getSizeValue(theme, boundarySize);
     const safeStyle = style ?? {};
-    const Component = as ?? "div";
+
     return (
       <Component
         data-bedrock-appboundary

@@ -27,7 +27,8 @@ describe("Reel", () => {
     });
 
     it("renders snapTypes", () => {
-      ["none", "mandatory", "proximity"].forEach((snapType) => {
+      const snapTypeOptions = ["none", "mandatory", "proximity"] as const;
+      snapTypeOptions.forEach((snapType) => {
         const reel = create(
           <Reel gutter="size3" snapType={snapType}>
             <Lorem />
@@ -47,7 +48,8 @@ describe("Reel", () => {
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const reel = create(
           <Reel gutter={gutter}>
             <Lorem />
@@ -79,6 +81,7 @@ describe("Reel", () => {
   describe("incorrect usage", () => {
     it("renders with console error with incorrect snapType", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Reel gutter="size3" snapType="incorrect">
           <Lorem />
         </Reel>,
@@ -89,6 +92,7 @@ describe("Reel", () => {
 
     it("renders with console error with incorrect gutter", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Reel gutter={{ value: "incorrect" }}>
           <Lorem />
         </Reel>,

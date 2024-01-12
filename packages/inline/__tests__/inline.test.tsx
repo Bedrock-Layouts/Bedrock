@@ -1,3 +1,4 @@
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -27,8 +28,45 @@ describe("Inline", () => {
       expect(Inline).toBeTruthy();
     });
 
+    it("renders all the gutter options", () => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
+        const inline = create(
+          <Inline gutter={gutter}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inline.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it("renders all the justify options", () => {
+      const justifications = ["start", "center", "end"] as const;
+      justifications.forEach((justify) => {
+        const inlineCluster = create(
+          <Inline gutter="size3" justify={justify}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inlineCluster.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    it("renders all the align options", () => {
+      const alignments = ["start", "center", "end", "stretch"] as const;
+      alignments.forEach((align) => {
+        const inlineCluster = create(
+          <Inline gutter="size3" align={align}>
+            <Lorem />
+          </Inline>,
+        );
+        expect(inlineCluster.toJSON()).toMatchSnapshot();
+      });
+    });
+
     it("renders all the stretch options", () => {
-      ["all", "start", "end", 0, 3].forEach((stretch) => {
+      const stretchOptions = ["all", "start", "end", 0, 3] as const;
+      stretchOptions.forEach((stretch) => {
         const inline = create(
           <Inline gutter="size3" stretch={stretch}>
             <Lorem />
@@ -39,7 +77,8 @@ describe("Inline", () => {
     });
 
     it("renders with switchAt", () => {
-      [42, "42rem", "sizeContent2"].forEach((switchAt) => {
+      const switchAtOptions = [42, "42rem", "sizeContent2"] as const;
+      switchAtOptions.forEach((switchAt) => {
         const inline = create(
           <Inline gutter="size3" switchAt={switchAt}>
             <Lorem />
@@ -50,7 +89,8 @@ describe("Inline", () => {
     });
 
     it("renders with minItemWidth", () => {
-      [42, "42rem"].forEach((minItemWidth) => {
+      const minItemWidthOptions = [42, "42rem"] as const;
+      minItemWidthOptions.forEach((minItemWidth) => {
         const inline = create(
           <Inline gutter="size3" minItemWidth={minItemWidth}>
             <Lorem />
@@ -64,6 +104,7 @@ describe("Inline", () => {
   describe("incorrect usage", () => {
     it("renders default with console error with wrong stretch input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Inline gutter="size3" stretch="incorrect">
           <Lorem />
         </Inline>,
@@ -74,6 +115,7 @@ describe("Inline", () => {
 
     it("renders default with console error with wrong minItemWidth input", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Inline gutter="size3" minItemWidth="incorrect">
           <Lorem />
         </Inline>,

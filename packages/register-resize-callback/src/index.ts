@@ -42,23 +42,13 @@ export function init(): ResizeObserver {
   }));
 }
 
-function checkIsResizeOberver(obj?: ResizeObserver): obj is ResizeObserver {
-  if (obj === undefined) {
-    return false;
-  }
-  return true;
-}
-
 export function registerCallback(
   node: Readonly<Element>,
   // eslint-disable-next-line functional/prefer-immutable-types
   cb: ObserverCallback,
 ): DeregisterFunc {
-  const isNotNull = checkIsResizeOberver(observer);
-
-  if (isNotNull === false) {
-    return () =>
-      new Error("ResizeObserver is not defined.  Please call init()");
+  if (observer === undefined) {
+    return () => void 0;
   }
 
   const callbacks = callBackMap.get(node) ?? [];
@@ -81,6 +71,5 @@ export function registerCallback(
       observer?.unobserve(node);
       callBackMap.delete(node);
     }
-    return observer;
   };
 }

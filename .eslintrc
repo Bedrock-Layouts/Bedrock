@@ -26,6 +26,7 @@
   ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": 0,
-    "no-console": "error"
+    "no-console": "error",
+    "functional/no-return-void": "off"
   }
 }

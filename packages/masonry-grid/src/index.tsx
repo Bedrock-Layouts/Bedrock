@@ -4,7 +4,7 @@ import {
   getSafeGutter,
   useTheme,
 } from "@bedrock-layout/spacing-constants";
-import { forwardRefWithAs } from "@bedrock-layout/type-utils";
+import { convertToMaybe, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import { useResizeObserver } from "@bedrock-layout/use-resize-observer";
 import React, {
   CSSProperties,
@@ -23,13 +23,12 @@ const isBrowser =
   (document as Document).nodeType === 9;
 
 const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
-  function RowSpanner({ style, ...props }, ref) {
-    const safeStyle = style ?? {};
+  function RowSpanner({ style = {}, ...props }, ref) {
     return (
       <div
         ref={ref}
+        style={{ gridRow: "span var(--rows, 1)", ...style }}
         {...props}
-        style={{ ...safeStyle, gridRow: "span var(--rows, 1)" }}
       />
     );
   },
@@ -47,7 +46,7 @@ function Resizer({ children, gutter }: ResizerProps) {
     setRowSpan(1);
     const gapString = getSafeGutter(theme, gutter) ?? "1px";
 
-    const maybeGap = isBrowser ? toPX(gapString, target) : null;
+    const maybeGap = isBrowser ? convertToMaybe(toPX(gapString, target)) : 1;
 
     const gap: number = Math.max(maybeGap ?? 1, 1);
 
@@ -57,8 +56,6 @@ function Resizer({ children, gutter }: ResizerProps) {
     const rowHeight = Math.ceil(height / gap);
 
     setRowSpan(rowHeight);
-
-    return target;
   });
 
   return (
@@ -93,14 +90,13 @@ export type MasonryGridProps = GridProps;
  * the space available.
  */
 export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
-  function MasonryGrid({ children, style, ...props }, ref) {
-    const safeStyle = style ?? {};
+  function MasonryGrid({ children, style = {}, ...props }, ref) {
     return (
       <Grid
         ref={ref}
         data-bedrock-masonry-grid
         {...props}
-        style={{ ...safeStyle, gridTemplateRows: "1px" }}
+        style={{ gridTemplateRows: "1px", ...style }}
       >
         {Children.map(children, (child) => (
           <Resizer gutter={props.gutter}>{child}</Resizer>
@@ -126,8 +122,8 @@ function parseUnit(str: string): [number, string] {
   return [num, unit];
 }
 
-function toPX(str: string, element?: Readonly<Element>): number | null {
-  if (!str) return null;
+function toPX(str: string, element?: Readonly<Element>): number | undefined {
+  if (!str) return undefined;
 
   const elementOrBody = element ?? document.body;
   const safeStr = (str ?? "px").trim().toLowerCase();
@@ -138,7 +134,7 @@ function toPX(str: string, element?: Readonly<Element>): number | null {
     case "vh":
     case "vw":
     case "%":
-      return null;
+      return undefined;
     case "ch":
     case "ex":
       return getSizeBrutal(safeStr, elementOrBody);
@@ -161,12 +157,12 @@ function toPX(str: string, element?: Readonly<Element>): number | null {
     default: {
       const [value, units] = parseUnit(safeStr);
 
-      if (isNaN(value)) return null;
+      if (isNaN(value)) return undefined;
 
       if (!units) return value;
 
       const px = toPX(units, element);
-      return typeof px === "number" ? value * px : null;
+      return typeof px === "number" ? value * px : undefined;
     }
   }
 }

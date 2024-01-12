@@ -88,6 +88,7 @@ describe("Center", () => {
   describe("incorrect usage", () => {
     it("renders default width if invalid CSS length", () => {
       const center = create(
+        // @ts-expect-error
         <Center maxWidth="320pixels">
           <Lorem />
         </Center>,
@@ -97,6 +98,7 @@ describe("Center", () => {
 
     it("renders default with console error with no children", () => {
       const errorStack = create(
+        // @ts-expect-error
         <Center maxWidth={["incorrect"]}>
           <Lorem />
         </Center>,

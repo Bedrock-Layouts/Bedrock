@@ -428,10 +428,9 @@ exports[`Grid > correct usage > renders all the gutter options 17`] = `
 exports[`Grid > correct usage > renders custom gutter with number 1`] = `
 <div
   data-bedrock-grid={true}
-  grid={20}
   style={
     {
-      "--gutter": undefined,
+      "--gutter": "20px",
       "--minItemWidth": undefined,
     }
   }
@@ -454,10 +453,9 @@ exports[`Grid > correct usage > renders custom gutter with number 1`] = `
 exports[`Grid > correct usage > renders custom gutter with string 1`] = `
 <div
   data-bedrock-grid={true}
-  grid="3ch"
   style={
     {
-      "--gutter": undefined,
+      "--gutter": "3ch",
       "--minItemWidth": undefined,
     }
   }

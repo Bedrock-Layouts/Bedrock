@@ -678,7 +678,7 @@ exports[`InlineCluster > correct usage > renders with theme overrides 1`] = `
   data-bedrock-inline-cluster=""
   style={
     {
-      "--gutter": undefined,
+      "--gutter": "200px",
     }
   }
 >
@@ -702,7 +702,7 @@ exports[`InlineCluster > correct usage > renders with theme overrides using numb
   data-bedrock-inline-cluster=""
   style={
     {
-      "--gutter": "-.5rem",
+      "--gutter": "3px",
     }
   }
 >
