@@ -20,7 +20,7 @@ export type Stretch = "all" | "start" | "end" | 0 | 1 | 2 | 3 | 4;
 /**
  * Props for the Inline component.
  */
-export interface InlineProps {
+export type InlineProps = {
   /**
    * The `stretch` prop can be used to specify a child component that will stretch to fill the excess space.
    */
@@ -45,14 +45,15 @@ export interface InlineProps {
    * The `gutter` prop can be used to specify the spacing between the children.
    */
   gutter?: Gutter;
-}
+};
 
-function shouldUseSwitch(switchAt?: SwitchAt) {
-  if (switchAt === undefined) {
-    return false;
-  }
+function createAttributeString(
+  prefix: string,
+  value: string | number | undefined,
+) {
+  if (value === undefined) return undefined;
 
-  return typeof switchAt === "string" || typeof switchAt === "number";
+  return `${prefix}:${value}`;
 }
 
 /**
@@ -67,12 +68,12 @@ function shouldUseSwitch(switchAt?: SwitchAt) {
  */
 export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
   {
-    as,
+    as: Component = "div",
     justify,
     align,
     gutter,
     stretch,
-    style,
+    style = {},
     switchAt,
     minItemWidth,
     ...props
@@ -80,21 +81,17 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
   ref,
 ) {
   const theme = useTheme();
-  const justifyValue = justify ? `justify:${justify}` : undefined;
-  const alignValue = align ? `align:${align}` : undefined;
 
-  const stretchValue = stretch ? `stretch:${stretch}` : undefined;
+  const justifyValue = createAttributeString("justify", justify);
+  const alignValue = createAttributeString("align", align);
+  const stretchValue = createAttributeString("stretch", stretch);
+
+  const maybeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
+  const switchAtValue = getSizeValue(theme, switchAt);
+
   const attributes = [justifyValue, alignValue, stretchValue]
     .filter(Boolean)
     .join(" ");
-  const safeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
-  const switchAtValue = shouldUseSwitch(switchAt)
-    ? getSizeValue(theme, switchAt)
-    : undefined;
-
-  const safeStyle = style ?? {};
-
-  const Component = as ?? "div";
 
   return (
     <Component
@@ -102,10 +99,10 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
       data-bedrock-inline={attributes}
       style={
         {
-          ...safeStyle,
           "--gutter": getSafeGutter(theme, gutter),
           "--switchAt": switchAtValue,
-          "--minItemWidth": safeMinItemWidth,
+          "--minItemWidth": maybeMinItemWidth,
+          ...style,
         } as CSSProperties
       }
       {...props}
