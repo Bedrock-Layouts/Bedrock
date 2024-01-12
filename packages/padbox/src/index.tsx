@@ -81,12 +81,12 @@ const paddingToStyleProps = (
 /**
  * Props for PadBox Component.
  */
-export interface PadBoxProps {
+export type PadBoxProps = {
   /**
    * Sets the padding around the content of the element.
    */
   padding?: PaddingTypes;
-}
+};
 
 /**
  * The `PadBox` component is designed to create consistent padding based on
@@ -96,21 +96,19 @@ export interface PadBoxProps {
  * padding.
  */
 export const PadBox = forwardRefWithAs<"div", PadBoxProps>(function PadBox(
-  { as, style, padding, ...props },
+  { as: Component = "div", style = {}, padding = "size00", ...props },
   ref,
 ) {
   const theme = useTheme();
-  const safeStyle = style ?? {};
 
-  const Component = as ?? "div";
-  const paddingStyles = paddingToStyleProps(theme, padding ?? "size00");
+  const paddingStyles = paddingToStyleProps(theme, padding);
 
   return (
     <Component
       data-bedrock-padbox
       {...props}
       ref={ref}
-      style={{ ...safeStyle, ...paddingStyles } as CSSProperties}
+      style={{ ...paddingStyles, ...style } as CSSProperties}
     />
   );
 });

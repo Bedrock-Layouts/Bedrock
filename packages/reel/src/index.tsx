@@ -9,7 +9,7 @@ import React, { CSSProperties } from "react";
 /**
  * Props for the Reel component.
  */
-export interface ReelProps {
+export type ReelProps = {
   /**
    * Sets the scroll snap type.
    */
@@ -18,6 +18,15 @@ export interface ReelProps {
    * Sets space between each element.
    */
   gutter?: Gutter;
+};
+
+function createAttributeString(
+  prefix: string,
+  value: string | number | undefined,
+) {
+  if (value === undefined) return undefined;
+
+  return `${prefix}:${value}`;
 }
 
 /**
@@ -27,19 +36,21 @@ export interface ReelProps {
  * snap points.
  */
 export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
-  { as, snapType, gutter, style, ...props },
+  { as: Component = "div", snapType, gutter, style = {}, ...props },
   ref,
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gutter);
-  const safeStyle = style ?? {};
 
-  const Component = as ?? "div";
+  const attributeString = [createAttributeString("snapType", snapType)]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <Component
       ref={ref}
-      data-bedrock-reel={snapType ? `snapType:${snapType}` : ""}
-      style={{ ...safeStyle, "--gutter": maybeGutter } as CSSProperties}
+      data-bedrock-reel={attributeString}
+      style={{ "--gutter": maybeGutter, ...style } as CSSProperties}
       {...props}
     />
   );
