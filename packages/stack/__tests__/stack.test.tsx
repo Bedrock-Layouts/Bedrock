@@ -32,17 +32,18 @@ describe("Stack", () => {
       const stack = create(
         <Stack>
           <Lorem />
-        </Stack>
+        </Stack>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
     it("renders all the gutter options", () => {
-      Object.keys(spacing).forEach((gutter) => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      spacingKeys.forEach((gutter) => {
         const stack = create(
           <Stack gutter={gutter}>
             <Lorem />
-          </Stack>
+          </Stack>,
         );
         expect(stack.toJSON()).toMatchSnapshot();
       });
@@ -52,16 +53,16 @@ describe("Stack", () => {
       const stack = create(
         <Stack gutter={20}>
           <Lorem />
-        </Stack>
+        </Stack>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders cutom gutter with string", () => {
+    it("renders custom gutter with string", () => {
       const stack = create(
         <Stack gutter="3ch">
           <Lorem />
-        </Stack>
+        </Stack>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
@@ -69,10 +70,11 @@ describe("Stack", () => {
     it("renders with theme overrides", () => {
       const stack = create(
         <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+          {/* @ts-expect-error */}
           <Stack gutter="1x">
             <Lorem />
           </Stack>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
@@ -80,10 +82,11 @@ describe("Stack", () => {
     it("renders with theme overrides using 'space' as key", () => {
       const stack = create(
         <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+          {/* @ts-expect-error */}
           <Stack gutter="1x">
             <Lorem />
           </Stack>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
@@ -94,7 +97,7 @@ describe("Stack", () => {
           <Stack gutter="size3">
             <Lorem />
           </Stack>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
@@ -103,9 +106,10 @@ describe("Stack", () => {
   describe("incorrect usage", () => {
     it("renders default with wrong gutter value", () => {
       const errorStack = create(
+        //@ts-expect-error
         <Stack gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Stack>
+        </Stack>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
