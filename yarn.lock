@@ -2240,10 +2240,10 @@
   resolved "https://registry.npmjs.org/@pkgr/core/-/core-0.1.0.tgz#7d8dacb7fdef0e4387caf7396cbd77f179867d06"
   integrity sha512-Zwq5OCzuwJC2jwqmpEQt7Ds1DTi6BWSwoGkbb1n9pO3hzb35BoJELx7c0T23iDkBGkh2e7tvOtjF3tr3OaQHDQ==
 
-"@putout/minify@^2.0.0":
-  version "2.11.0"
-  resolved "https://registry.npmjs.org/@putout/minify/-/minify-2.11.0.tgz#ee0d7e3f605bf32bde063d6bafefa0457f9c7431"
-  integrity sha512-HNOICCQIwKqjz9MZxQimWI8c3PvoehY4qlg5N5/tCWT+JJfZQUiRWQgm6RQ9rP85ReoSO20HShH22naVMpbFog==
+"@putout/minify@^3.0.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-3.6.0.tgz#b7d78abe2c65d7cee4821ed7e870620782b43c31"
+  integrity sha512-PiB+fAF15E2tq8flHwvVFr1XrfqLC/tjtEkAOavWv2JvFn0tQM2K7TD2MBVbPdrxVtJQ+Ymm3J1CMLPBPgsE+w==
 
 "@radix-ui/number@1.0.1":
   version "1.0.1"
@@ -7456,13 +7456,22 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-find-up@^6.1.0, find-up@^6.3.0:
+find-up@^6.3.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/find-up/-/find-up-6.3.0.tgz#2abab3d3280b2dc7ac10199ef324c4e002c8c790"
   integrity sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==
   dependencies:
     locate-path "^7.1.0"
     path-exists "^5.0.0"
+
+find-up@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-7.0.0.tgz#e8dec1455f74f78d888ad65bf7ca13dd2b4e66fb"
+  integrity sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g==
+  dependencies:
+    locate-path "^7.2.0"
+    path-exists "^5.0.0"
+    unicorn-magic "^0.1.0"
 
 findup-sync@^4.0.0:
   version "4.0.0"
@@ -9539,7 +9548,7 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-locate-path@^7.1.0:
+locate-path@^7.1.0, locate-path@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/locate-path/-/locate-path-7.2.0.tgz#69cb1779bd90b35ab1e771e1f2f89a202c2a8a8a"
   integrity sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==
@@ -10327,16 +10336,16 @@ min-indent@^1.0.0, min-indent@^1.0.1:
   resolved "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-minify@^10.2.0:
-  version "10.5.2"
-  resolved "https://registry.npmjs.org/minify/-/minify-10.5.2.tgz#6fad8cdecbb17e880888c0130bb622fc259c2f1d"
-  integrity sha512-/7aNrZ7kMe43o0NQUftL/H9QBi15FYEUo7tnw0Nrcc+XsmNS6nP4cIL4iqrNzSzv1rUaHLBxpmYbETKT9dKZiQ==
+minify@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-11.0.1.tgz#058743d36ab9abc1748326d0cd942afb70a789e2"
+  integrity sha512-J2C0fR+1DE4zPKMpIuxnBkqIPrcEUADZK9sDaXnruOj268hilhbgQenfuGh9gGJ0rI3irZNPwgjWcBBBCYMXqA==
   dependencies:
-    "@putout/minify" "^2.0.0"
+    "@putout/minify" "^3.0.0"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
-    find-up "^6.1.0"
+    find-up "^7.0.0"
     html-minifier-terser "^7.1.0"
     readjson "^2.2.2"
     simport "^1.2.0"
