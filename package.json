@@ -27,7 +27,7 @@
     "dedup": "npx yarn-deduplicate yarn.lock",
     "cz": "cz",
     "clean": "lerna clean",
-    "build": "yarn dedup && lerna run build",
+    "build": "lerna run build",
     "build:storybook": "storybook build --docs",
     "prepublish": "yarn build",
     "publish": "lerna publish",
