@@ -1,7 +1,7 @@
-import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
-import { Component } from './Component';
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Component } from "./Component";
 
-import "../../packages/css/src/components/column-drop.css"
+import "../../packages/css/src/components/column-drop.css";
 
 <Meta
   title="Bedrock Layout CSS/column-drop.css"
@@ -21,7 +21,7 @@ The ColumnDrop component is used to create a layout of columns that stretch to f
 First you need to import the appropriate stylesheet. The grid is part of the main CSS bundle or you can import it in individually from the components directory.
 
 ```javascript
-import '@bedrock-layout/css/lib/bedrock-layout.min.css';
+import "@bedrock-layout/css/lib/bedrock-layout.min.css";
 
 // or
 
@@ -36,7 +36,7 @@ The `gutter` prop defines the gutter size between elements. Bedrock has adopted 
 
 You can adjust the space between the child elements by setting the `gutter:` value to one of the open props size values, such as `size3`. You can also set the gutter value by passing the `--gutter` property in the inline style directly.
 
-<Canvas withSource="open">
+<Canvas>
   <Story name="gutter">
     <h3>Custom Properties</h3>
     <div
@@ -256,7 +256,7 @@ The grid will automatically optimize the number of columns based on the width of
 
 In the below example, The `--minItemWidth` is set to `15rem`. As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
-<Canvas withSource="open">
+<Canvas>
   <Story name="--minItemWidth">
     <div
       data-bedrock-column-drop="gutter:size3"
@@ -280,7 +280,7 @@ By default, the column-drop component will stretch the columns to fit the contai
 
 As you resize the window, the Grid will recalculate and potentially change the count of columns and rows.
 
-<Canvas withSource="open">
+<Canvas>
   <Story name="no-stretched-columns">
     <div data-bedrock-column-drop="no-stretched-columns gutter:size3">
       <Component />
