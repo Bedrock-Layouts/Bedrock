@@ -2773,12 +2773,24 @@
   resolved "https://registry.npmjs.org/@solidjs/router/-/router-0.9.1.tgz#d7ec28be68c67a32d16b6578cb63e70eb4d1415c"
   integrity sha512-kRY75piOQsyoH75E/RP6lr7uVGFCjeeCCCJx7Z2D1Vc6+I1yFQjLCvE+6agXGwqDoWi6vbETP1g7gmp/L1mNLg==
 
-"@storybook/addon-actions@7.6.7", "@storybook/addon-actions@^7.5.2":
+"@storybook/addon-actions@7.6.7":
   version "7.6.7"
   resolved "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-7.6.7.tgz#2985d5417c65a9a0bce75a487b09bf1d1140b943"
   integrity sha512-+6EZvhIeKEqG/RNsU3R5DxOrd60BL5GEvmzE2w60s2eKaNNxtyilDjiO1g4z2s2zDNyr7JL/Ft03pJ0Jgo0lew==
   dependencies:
     "@storybook/core-events" "7.6.7"
+    "@storybook/global" "^5.0.0"
+    "@types/uuid" "^9.0.1"
+    dequal "^2.0.2"
+    polished "^4.2.2"
+    uuid "^9.0.0"
+
+"@storybook/addon-actions@^7.5.2":
+  version "7.6.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.6.8.tgz#0aa35e0f622e11a41617640d4e9b341516f1a61b"
+  integrity sha512-/KQlr/nLsAazJuSVUoMjQdwAeeXkKEtElKdqXrqI1LVOi5a7kMgB+bmn9aKX+7VBQLfQ36Btyty+FaY7bRtehQ==
+  dependencies:
+    "@storybook/core-events" "7.6.8"
     "@storybook/global" "^5.0.0"
     "@types/uuid" "^9.0.1"
     dequal "^2.0.2"
@@ -3117,6 +3129,13 @@
   version "7.6.7"
   resolved "https://registry.npmjs.org/@storybook/core-events/-/core-events-7.6.7.tgz#ee8823090cc4e30fddebe72be29738e4b2e66b11"
   integrity sha512-KZ5d03c47pnr5/kY26pJtWq7WpmCPXLbgyjJZDSc+TTY153BdZksvlBXRHtqM1yj2UM6QsSyIuiJaADJNAbP2w==
+  dependencies:
+    ts-dedent "^2.0.0"
+
+"@storybook/core-events@7.6.8":
+  version "7.6.8"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.6.8.tgz#580b373755eb40fdd94263ebaa78aeaaa124b9bd"
+  integrity sha512-c1onJHG71JKbU4hMZC31rVTSbcfhcXaB0ikGnb7rJzlUZ1YkWnb0wf0/ikQR0seDOpR3HS+WQ0M3FIpqANyETg==
   dependencies:
     ts-dedent "^2.0.0"
 
