@@ -35,6 +35,14 @@ const meta = {
         name: "Product Card",
         path: "/?path=/docs/examples-basic--docs#product-card",
       },
+      {
+        name: "Avatar",
+        path: "/?path=/docs/examples-basic--docs#avatar",
+      },
+      {
+        name: "Aspect Ratio Image Card",
+        path: "/?path=/docs/examples-web-dev--docs#ratio-image-card",
+      },
     ],
   },
 } satisfies Meta<typeof Frame>;
