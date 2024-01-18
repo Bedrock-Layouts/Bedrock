@@ -19,11 +19,11 @@ export const Button = styled.button.attrs<{
   border-radius: 0.5rem;
   border: none;
   background-color: ${({ primary }) =>
-    primary ? "var(--gray-0)" : "var(--gray-9)"};
+    primary ? "var(--gray-0)" : "var(--gray-10)"};
   text-decoration: none;
   text-align: center;
   && {
-    color: ${({ primary }) => (primary ? "var(--gray-9)" : "var(--gray-0)")};
+    color: ${({ primary }) => (primary ? "var(--gray-10)" : "var(--gray-0)")};
   }
   :disabled {
     opacity: 0.5;

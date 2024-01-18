@@ -27,9 +27,8 @@ export type DynamicProps<T extends ValidConstructor> = T extends ValidElements
     ? U
     : Record<string, unknown>;
 
-type UnboxIntrinsicElements<T> = T extends JSX.HTMLAttributes<infer U>
-  ? U
-  : never;
+type UnboxIntrinsicElements<T> =
+  T extends JSX.HTMLAttributes<infer U> ? U : never;
 
 // eslint-disable-next-line functional/no-return-void
 type RefCallback<T> = (el: T) => void;
