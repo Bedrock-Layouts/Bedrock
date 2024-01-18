@@ -51,11 +51,15 @@ html:focus-within {
 }
 
 .sbdocs-content.sbdocs-content {
-  max-width: var(--size-xxlarge);
+  max-width: var(--size-lg);
 }
 
 :is(body, p, .sbdocs-p.sbdocs-p) {
   font-size: 100%;
+}
+
+.sbdocs.sbdocs {
+  background-color: var(--gray-10);
 }
 
 .sbdocs-preview.sbdocs-preview {

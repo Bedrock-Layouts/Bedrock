@@ -1,9 +1,9 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import { Stack } from "../../packages/stack/src/index";
 import { InlineCluster } from "../../packages/inline-cluster/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
+import { Stack } from "../../packages/stack/src/index";
 import { Component } from "./Component";
 
 const installCode = `
@@ -132,8 +132,6 @@ export const Gutter: Story = {
  *  <Component />
  * </InlineCluster>
  * ```
- *
- * Here are the possible values for `gutter` by default:
  */
 export const Justify: Story = {
   render: () => {
@@ -184,8 +182,6 @@ export const Justify: Story = {
  *  <Component />
  * </InlineCluster>
  * ```
- *
- * Here are the possible values for `gutter` by default:
  */
 export const Align: Story = {
   render: () => {

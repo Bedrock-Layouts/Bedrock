@@ -8,7 +8,7 @@ const CopyButton = styled("button")`
   right: -2px;
   border: none;
   background: var(--gray-3);
-  color: var(--gray-9);
+  color: var(--gray-10);
   border-radius: var(--radius-2);
   padding: 0.5rem 1rem;
 `;
