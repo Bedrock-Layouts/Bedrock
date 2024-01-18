@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.1.8...@bedrock-layout/solid@1.1.9) (2024-01-18)
+
+**Note:** Version bump only for package @bedrock-layout/solid
+
 ## 1.1.8 (2024-01-12)
 
 **Note:** Version bump only for package @bedrock-layout/solid
