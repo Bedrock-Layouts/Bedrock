@@ -1,10 +1,10 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import { Stack } from "../../packages/stack/src/index";
 import { Reel } from "../../packages/reel/src/index";
-
-import { colors, ColoredRect } from "./colors";
+import { spacing } from "../../packages/spacing-constants/src/index";
+import { Stack } from "../../packages/stack/src/index";
+import { ColoredRect, colors } from "./colors";
 
 const installCode = `
 yarn add @bedrock-layout/reel
@@ -24,6 +24,16 @@ const meta = {
   args: {
     gutter: "size3",
     snapType: "mandatory",
+  },
+  argTypes: {
+    gutter: {
+      control: {
+        type: "text",
+      },
+    },
+    as: {
+      control: "none",
+    },
   },
   render: (args) => {
     return (
@@ -82,14 +92,22 @@ export const Playground: Story = {};
  * ```
  *
  * Here are the possible values for `gutter` by default:
+ * (The width is maxed out at 45ch to show the reeling effect)
  */
 export const Gutter: Story = {
   render: () => {
     return (
-      <Stack gutter="size5" style={{ maxInlineSize: "45ch" }}>
+      <Stack
+        gutter="size5"
+        style={{
+          maxInlineSize: "47ch",
+          border: "1px solid black",
+          padding: "1rem",
+        }}
+      >
         <strong>Custom gutter as number (20)</strong>
         <Reel snapType="none" gutter={20}>
-          {colors.slice(0, colors.length / 4).map((color, ind) => {
+          {colors.map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
                 Lorem ipsum dolor sit amet.{" "}
@@ -99,7 +117,7 @@ export const Gutter: Story = {
         </Reel>
         <strong>Custom gutter as string ("3ch")</strong>
         <Reel snapType="none" gutter="3ch">
-          {colors.slice(0, colors.length / 4).map((color, ind) => {
+          {colors.map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
                 Lorem ipsum dolor sit amet.{" "}
@@ -107,32 +125,21 @@ export const Gutter: Story = {
             );
           })}
         </Reel>
-        <span>
-          (There is an issue with gutters rendering in the docs, but they work
-          in the playground above. Please see the{" "}
-          <a
-            href="https://github.com/Bedrock-Layouts/Bedrock/issues/2062"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://github.com/Bedrock-Layouts/Bedrock/issues/2062
-          </a>{" "}
-          for more information.)
-        </span>
-        {/* {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
+
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
           <React.Fragment key={gutter}>
             <strong>{gutter}</strong>
             <Reel gutter={gutter} snapType="none">
-              {colors.slice(0, colors.length / 4).map((color, ind) => {
+              {colors.map((color) => {
                 return (
-                  <ColoredRect key={ind} bgColor={color}>
+                  <ColoredRect key={color} bgColor={color}>
                     Lorem ipsum dolor sit amet.{" "}
                   </ColoredRect>
                 );
               })}
             </Reel>
           </React.Fragment>
-        ))} */}
+        ))}
       </Stack>
     );
   },
