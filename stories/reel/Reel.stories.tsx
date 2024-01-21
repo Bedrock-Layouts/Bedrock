@@ -53,7 +53,12 @@ const meta = {
       install: installCode,
       import: importCode,
     },
-    examples: [],
+    examples: [
+      {
+        name: "Card Reel",
+        path: "/?path=/docs/examples-basic--docs#card-reel",
+      },
+    ],
   },
 } satisfies Meta<typeof Reel>;
 
