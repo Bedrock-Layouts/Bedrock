@@ -1,14 +1,15 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { Stack } from '../packages/stack/src/';
-import { Cover } from '../packages/cover/src/';
-import { Inline } from '../packages/inline/src/';
-import { Center } from '../packages/center/src/';
-import { Frame } from '../packages/frame/src/';
-import { Columns, Column } from '../packages/columns/src/';
-import { Split } from '../packages/split/src/';
-import { PadBox } from '../packages/padbox/src/';
-import jacketPic from '../.storybook/assets/jacket-pic.jpg'
-import { plans } from './plans.ts'
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Stack } from "../packages/stack/src/";
+import { Cover } from "../packages/cover/src/";
+import { Inline } from "../packages/inline/src/";
+import { Center } from "../packages/center/src/";
+import { Frame } from "../packages/frame/src/";
+import { Columns, Column } from "../packages/columns/src/";
+import { Split } from "../packages/split/src/";
+import { Reel } from "../packages/reel/src/";
+import { PadBox } from "../packages/padbox/src/";
+import jacketPic from "../.storybook/assets/jacket-pic.jpg";
+import { plans } from "./plans.ts";
 
 <Meta title="Examples/Basic" parameters={{ viewMode: "docs" }} />
 
@@ -79,25 +80,13 @@ The Product card uses the [Split](/docs/spacer-components-split--docs) component
     </header>
     <p>In Stock</p>
     <Inline gutter="size3">
-      <PadBox
-        as="button"
-        data-product-card-button
-        padding={["size1", "size3"]}
-      >
+      <PadBox as="button" data-product-card-button padding={["size1", "size3"]}>
         Buy Now
       </PadBox>
-      <PadBox
-        as="button"
-        data-product-card-button
-        padding={["size1", "size3"]}
-      >
+      <PadBox as="button" data-product-card-button padding={["size1", "size3"]}>
         Add To Bag
       </PadBox>
-      <PadBox
-        as="button"
-        data-product-card-button
-        padding={["size1", "size3"]}
-      >
+      <PadBox as="button" data-product-card-button padding={["size1", "size3"]}>
         Like
       </PadBox>
     </Inline>
@@ -200,78 +189,43 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
   <Column span={3}>
     <Stack as="label" gutter="size3">
       First Name
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={3}>
     <Stack as="label" gutter="size3">
       Last Name
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={4}>
     <Stack as="label" gutter="size3">
       Email
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={6}>
     <Stack as="label" gutter="size3">
       Street Address
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
     <Stack as="label" gutter="size3">
       City
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
     <Stack as="label" gutter="size3">
       State
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
     <Stack as="label" gutter="size3">
       Zip Code
-      <PadBox
-        padding={["size1", "size2"]}
-        as="input"
-        data-input
-        type="text"
-      />
+      <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
 </Columns>
@@ -403,8 +357,8 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
       <p data-card-subtitle>Pricing</p>
       <h2 data-card-title>Take Control of Your Team.</h2>
       <Center as="p" maxWidth="sizeContent2">
-        Start building for free, then add a site plan to go live. Account
-        plans unlock additional features.
+        Start building for free, then add a site plan to go live. Account plans
+        unlock additional features.
       </Center>
     </Center>
   </Cover>
@@ -453,17 +407,12 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
     </Cover>
   </Split>
 
-  <Cover
-    as={PadBox}
-    padding="size7"
-    data-card="dark image"
-    minHeight="sizeXs"
-  >
+  <Cover as={PadBox} padding="size7" data-card="dark image" minHeight="sizeXs">
     <h2 data-card-title>Get in Touch</h2>
     <p>
-      Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
-      lacus nisi urna, arcu socis eu. Orci vel lectus nisl eget get ut
-      consectetur. Sit justo viverra non adipisicing elit distinctio.
+      Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus
+      nisi urna, arcu socis eu. Orci vel lectus nisl eget get ut consectetur.
+      Sit justo viverra non adipisicing elit distinctio.
     </p>
   </Cover>
 </Stack>
@@ -559,4 +508,54 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
     </PadBox>
   ))}
 </Columns>
+```
+
+## Card Reel
+
+<p id="card-reel">
+  A simple card reel that scrolls horizontally and snaps at a cards edge.
+</p>
+
+Uses the [Reel](/docs/spacer-components-reel--docs), [Stack](/docs/spacer-components-stack--docs), [Frame](/docs/wrapper-components-frame--docs), and the [PadBox](/docs/wrapper-components-padbox--docs) components.
+
+<Canvas>
+  <Story name="Card Reel">
+    <Reel as={PadBox} padding="size3" gutter="size5" snapType="mandatory">
+      {Array.from({ length: 15 }).map((_, i) => (
+        <PadBox
+          key={i}
+          as={Stack}
+          gutter="size3"
+          padding="size7"
+          style={{ border: "1px solid black", minWidth: "250px" }}
+        >
+          <h1>Video Title</h1>
+          <Frame ratio="16:9">
+            <img src={jacketPic} alt="Computer" />
+          </Frame>
+          <p>Descriptive Text goes here</p>
+        </PadBox>
+      ))}
+    </Reel>
+  </Story>
+</Canvas>
+
+```jsx
+<Reel as={PadBox} padding="size3" gutter="size5" snapType="mandatory">
+  {Array.from({ length: 15 }).map((_, i) => (
+    <PadBox
+      key={i}
+      as={Stack}
+      gutter="size3"
+      padding="size7"
+      style={{ border: "1px solid black", minWidth: "250px" }}
+    >
+      <h1>Video Title</h1>
+      <Frame ratio="16:9">
+        <img src={jacketPic} alt="Computer" />
+      </Frame>
+      <p>Descriptive Text goes here</p>
+    </PadBox>
+  ))}
+</Reel>
 ```
