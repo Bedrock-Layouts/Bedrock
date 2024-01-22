@@ -1,9 +1,8 @@
 body {
   font-family: var(--font-sans);
-  margin: 0 auto !important;
-  padding: 0 !important;
-  max-width: 90vw;
   font-size: 100%;
+  max-width: 90vw;
+  margin-inline: auto !important;
 }
 
 :focus:not(:focus-visible) {
@@ -258,46 +257,16 @@ html:focus-within {
   background-color: var(--violet-7);
 }
 
-:root {
-  --reach-tabs: 1;
-}
-
-[data-reach-tabs][data-orientation="vertical"] {
-  display: flex;
-}
-
-[data-reach-tab-list] {
+[data-radix-popper-content-wrapper] > [role="menu"] {
   display: flex;
   background: hsla(0, 0%, 0%, 0.05);
-}
-
-[data-reach-tab-list][aria-orientation="vertical"] {
-  flex-direction: column;
-}
-
-[data-reach-tab] {
-  display: inline-block;
   border: none;
   padding: 0.25em 0.5em;
   margin: 0;
   border-bottom: 1px solid transparent;
   background: none;
-  color: var(--gray-0);
   font: inherit;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-[data-reach-tab]:active {
-  background: hsla(0, 0%, 0%, 0.05);
-}
-
-[data-reach-tab]:disabled {
-  opacity: 0.25;
-  cursor: default;
-}
-
-[data-reach-tab][data-selected] {
-  border-bottom-color: currentColor;
 }

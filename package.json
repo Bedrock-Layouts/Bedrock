@@ -38,8 +38,7 @@
     "chromatic": "npx chromatic --build-script-name build:storybook --only-changed --untraced 'packages/primitives/package.json' --untraced 'package.json' --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
-    "@reach/menu-button": "^0.18.0",
-    "@reach/visually-hidden": "^0.18.0",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@vitest/coverage-c8": "^0.33.0",
     "axios": ">=1.6.0",
     "browserslist": "^4.16.5",
