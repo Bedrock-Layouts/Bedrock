@@ -60,6 +60,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/reel.min.css",
     },
     examples: [
       {

@@ -45,6 +45,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout//css/lib/components/stack.min.css",
     },
     examples: [
       {

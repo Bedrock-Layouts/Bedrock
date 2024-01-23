@@ -50,11 +50,17 @@ function InstallationAndImport() {
   const resolvedOfMeta = useOf("meta");
   if (resolvedOfMeta.type !== "meta") return null;
 
-  const { install, import: importCode } =
-    resolvedOfMeta.preparedMeta.parameters.installAndImport;
+  const {
+    install,
+    import: importCode,
+    cssImport,
+  } = resolvedOfMeta.preparedMeta.parameters.installAndImport;
 
   if (!install && !importCode) return null;
-
+  const cssImportString = cssImport
+    ? `// or
+import "${cssImport}";`
+    : "";
   return (
     <>
       <h2>Installation and Import</h2>
@@ -71,8 +77,7 @@ function InstallationAndImport() {
         language="javascript"
         code={`
 import "@bedrock-layout/css/lib/bedrock-layout.min.css";
-// or
-import "@bedrock-layout/css/lib/components/stack.min.css";`}
+${cssImportString}`}
       />
       <p>
         Optionally, you can install the package for your framework of choice

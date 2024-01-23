@@ -44,6 +44,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/split.min.css",
     },
     examples: [
       {
