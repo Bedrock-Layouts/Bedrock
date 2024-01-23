@@ -8,15 +8,23 @@ import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/column-drop
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
+// For React.js
 import { ColumnDrop } from '@bedrock-layout/column-drop'
   // or
 import { ColumnDrop } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { ColumnDrop } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -43,6 +51,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/column-drop.min.css",
     },
     examples: [
       {
@@ -61,6 +70,9 @@ export const Playground: Story = {};
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -68,20 +80,32 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-column-drop='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
- * // OR
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-column-drop style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
+ * <ColumnDrop gutter="size3">
+ *  <Component />
+ *  <Component />
+ * </ColumnDrop>
+ *
+ * // Or you can use a css value directly
  * <ColumnDrop gutter="3ch">
+ *  <Component />
+ *  <Component />
+ * </ColumnDrop>
+ *
+ * // or you can use a custom property
+ * <ColumnDrop gutter="--custom-size-4">
  *  <Component />
  *  <Component />
  * </ColumnDrop>
@@ -142,7 +166,7 @@ export const Gutter: Story = {
  * </ColumnDrop>
  * ```
  *
- * In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the Grid
+ * In the below example, The `minItemWidth` is set to `15rem`. As you resize the window, the ColumnDrop
  * will recalculate and potentially change the count of columns and rows.
  *
  * (Resize window to observe the changes)
