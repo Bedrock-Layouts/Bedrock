@@ -1,21 +1,30 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Stack } from "../../packages/stack/src/index";
+import React from "react";
+
 import { Cover } from "../../packages/cover/src/index";
-import { Component } from "./Component";
-import { argTypes } from "./argTypes";
 import { spacing } from "../../packages/spacing-constants/src/index";
+import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
+import { Component } from "./Component";
 
 const installCode = `
-yarn add @bedrock-layout/Cover
+## For React.js
+yarn add @bedrock-layout/cover
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
-import { Cover } from @bedrock-layout/cover
+// For React.js
+import { Cover } from '@bedrock-layout/cover'
   // or
 import { Cover } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Cover } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -37,6 +46,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/cover.min.css",
     },
     examples: [
       {
@@ -163,6 +173,9 @@ export const MinHeight: Story = {
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -170,6 +183,7 @@ export const MinHeight: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-cover='gutter:size3'>
  *  <span>I am on top.</span>
  *  <div data-bedrock-cover-centered>
@@ -178,8 +192,7 @@ export const MinHeight: Story = {
  *  <span>I am on bottom.</span>
  * </div>
  *
- * // or
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-cover style={{ "--gutter": "3ch" }}>
  *  <span>I am on top.</span>
  *  <div data-bedrock-cover-centered>
@@ -189,7 +202,17 @@ export const MinHeight: Story = {
  * </div>
  *
  * // React.js and Solid.js
+ * <Cover gutter="size3" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ *  <Component />
+ * </Cover>
+ *
+ * // Or you can use a css value directly
  * <Cover gutter="3ch" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ *  <Component />
+ * </Cover>
+ *
+ * // or you can use a custom property
+ * <Cover gutter="--custom-size-4" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
  *  <Component />
  * </Cover>
  * ```

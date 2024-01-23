@@ -7,15 +7,23 @@ import { Stack } from "../../packages/stack/src/index";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/inline-cluster
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
+// For React.js
 import { InlineCluster } from '@bedrock-layout/inline-cluster'
   // or
 import { InlineCluster } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { InlineCluster } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -38,6 +46,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/inline-cluster.min.css",
     },
     examples: [],
   },
@@ -51,6 +60,9 @@ export const Playground: Story = {};
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -58,20 +70,32 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-inline-cluster='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
- * // OR
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-inline-cluster style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
+ * <InlineCluster gutter="size3">
+ *  <Component />
+ *  <Component />
+ * </InlineCluster>
+ *
+ * // Or you can use a css value directly
  * <InlineCluster gutter="3ch">
+ *  <Component />
+ *  <Component />
+ * </InlineCluster>
+ *
+ * // or you can use a custom property
+ * <InlineCluster gutter="--custom-size-4">
  *  <Component />
  *  <Component />
  * </InlineCluster>

@@ -8,15 +8,23 @@ import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/grid
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
+// For React.js
 import { Grid } from '@bedrock-layout/grid'
   // or
 import { Grid } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Grid } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -24,7 +32,7 @@ const meta = {
   component: Grid,
   args: {
     gutter: "size3",
-    minItemWidth: "25rem",
+    minItemWidth: "15rem",
   },
   argTypes,
   render: (args) => {
@@ -45,6 +53,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/grid.min.css",
     },
     examples: [],
   },
@@ -58,6 +67,9 @@ export const Playground: Story = {};
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -65,29 +77,43 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-grid='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
- * // OR
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-grid style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
+ * <Grid gutter="size3">
+ *  <Component />
+ *  <Component />
+ * </Grid>
+ *
+ * // Or you can use a css value directly
  * <Grid gutter="3ch">
+ *  <Component />
+ *  <Component />
+ * </Grid>
+ *
+ * // or you can use a custom property
+ * <Grid gutter="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Grid>
  * ```
  *
  * Here are the possible values for `gutter` by default:
- * (The `minItemWidth` is set to `25rem` in all the examples)
  */
 export const Gutter: Story = {
+  args: {
+    minItemWidth: "20rem",
+  },
   render: (args) => {
     return (
       <Stack gutter="size5">
@@ -142,19 +168,4 @@ export const Gutter: Story = {
  *
  * (Resize window to observe the changes)
  */
-export const MinItemWidth: Story = {
-  render: () => {
-    return (
-      <Grid gutter="size3" minItemWidth="15rem">
-        <Component />
-        <Component />
-        <Component />
-        <Component />
-        <Component />
-        <Component />
-        <Component />
-        <Component />
-      </Grid>
-    );
-  },
-};
+export const MinItemWidth: Story = {};

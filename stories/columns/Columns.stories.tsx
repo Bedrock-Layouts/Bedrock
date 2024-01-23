@@ -8,15 +8,23 @@ import { columnsArgTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/columns
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
-import { Column, Columns } from '@bedrock-layout/columns'
+// For React.js
+import { Columns } from '@bedrock-layout/columns'
   // or
-import { Column, Columns } from '@bedrock-layout/primitives'
+import { Columns } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Columns } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -24,6 +32,7 @@ const meta = {
   component: Columns,
   args: {
     gutter: "size3",
+    columns: 4,
   },
   argTypes: columnsArgTypes,
   render: (args) => {
@@ -43,6 +52,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/columns.min.css",
     },
     examples: [
       {
@@ -69,6 +79,9 @@ export const Playground: Story = {};
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -76,20 +89,32 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-columns='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
- * // OR
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-columns style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
+ * <Columns gutter="size3">
+ *  <Component />
+ *  <Component />
+ * </Columns>
+ *
+ * // Or you can use a css value directly
  * <Columns gutter="3ch">
+ *  <Component />
+ *  <Component />
+ * </Columns>
+ *
+ * // or you can use a custom property
+ * <Columns gutter="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Columns>

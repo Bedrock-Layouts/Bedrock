@@ -6,15 +6,23 @@ import { Frame } from "../../packages/frame/src/index";
 import { argTypes } from "./argTypes";
 
 const installCode = `
-yarn add @bedrock-layout/Frame
+## For React.js
+yarn add @bedrock-layout/frame
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
-import { Cover } from @bedrock-layout/cover
+// For React.js
+import { Frame } from '@bedrock-layout/frame'
   // or
-import { Cover } from '@bedrock-layout/primitives'
+import { Frame } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Frame } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -29,6 +37,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/frame.min.css",
     },
     examples: [
       {

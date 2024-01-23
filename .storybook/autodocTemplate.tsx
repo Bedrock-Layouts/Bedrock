@@ -1,15 +1,14 @@
-import React from "react";
-
 import {
-  Title,
+  Controls,
   Description,
   Primary,
-  Controls,
-  Stories,
-  useOf,
-  Subheading,
   Source,
+  Stories,
+  Subheading,
+  Title,
+  useOf,
 } from "@storybook/blocks";
+import React from "react";
 
 function Examples() {
   const resolvedOf = useOf("component");
@@ -51,15 +50,39 @@ function InstallationAndImport() {
   const resolvedOfMeta = useOf("meta");
   if (resolvedOfMeta.type !== "meta") return null;
 
-  const { install, import: importCode } =
-    resolvedOfMeta.preparedMeta.parameters.installAndImport;
+  const {
+    install,
+    import: importCode,
+    cssImport,
+  } = resolvedOfMeta.preparedMeta.parameters.installAndImport;
 
   if (!install && !importCode) return null;
-
+  const cssImportString = cssImport
+    ? `// or
+import "${cssImport}";`
+    : "";
   return (
     <>
       <h2>Installation and Import</h2>
-      <p>To install use your favorite package manager CLI:</p>
+      <p>
+        First, you must install <code>@bedrock-layout/css</code>.
+      </p>
+      <Source language="bash" code={"yarn add @bedrock-layout/css"} />
+
+      <p>
+        Then, you can import the entire CSS or just the component's CSS in your
+        project:
+      </p>
+      <Source
+        language="javascript"
+        code={`
+import "@bedrock-layout/css/lib/bedrock-layout.min.css";
+${cssImportString}`}
+      />
+      <p>
+        Optionally, you can install the package for your framework of choice
+        (React.js, Solid.js) using your favorite package manager CLI:
+      </p>
       <Source language="bash" code={install} />
 
       <p>Then import the component in your project:</p>
