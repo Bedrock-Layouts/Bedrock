@@ -1,21 +1,29 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import { Stack } from "../../packages/stack/src/index";
-import { Split, SplitProps } from "../../packages/split/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
+import { Split, SplitProps } from "../../packages/split/src/index";
+import { Stack } from "../../packages/stack/src/index";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/split
-  ## or
+## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
+// For React.js
 import { Split } from '@bedrock-layout/split'
   // or
 import { Split } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Split } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -62,6 +70,9 @@ export const Playground: Story = {};
 
 /**
  * The `gutter` prop defines the gutter size between elements.
+ * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ *
+ * #### Default values
  * Bedrock has implemented a default spacing scheme,
  * but [it can be overridden using the ThemeProvider provided by `@bedrock-layout/spacing-constants`.](/docs/getting-started-lesson-3-spacing--docs#integrating-with-your-design-system)
  * You can also use any valid CSSLength or positive integer.
@@ -69,20 +80,32 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined spacing constants
  * <div data-bedrock-split='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
- * // or
- *
+ * // Or you can use a custom value directly
  * <div data-bedrock-split style={{ "--gutter": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
+ * <Split gutter="size3">
+ *  <Component />
+ *  <Component />
+ * </Split>
+ *
+ * // Or you can use a css value directly
  * <Split gutter="3ch">
+ *  <Component />
+ *  <Component />
+ * </Split>
+ *
+ * // or you can use a custom property
+ * <Split gutter="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Split>

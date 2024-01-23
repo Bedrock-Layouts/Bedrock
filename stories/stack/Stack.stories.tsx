@@ -6,13 +6,9 @@ import { Stack } from "../../packages/stack/src/index";
 import { Component } from "./Component";
 
 const installCode = `
-## You must install @bedrock-layout/css 
-yarn add @bedrock-layout/css
-
-## Optionally, you can install the package for your framework of choice(React.js, Solid.js).
 ## For React.js
 yarn add @bedrock-layout/stack
-  ## or
+## or
 yarn add @bedrock-layout/primitives
 
 ## For Solid.js
@@ -20,16 +16,6 @@ yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
-// You must import the CSS
-
-// You can import the entire CSS
-import "@bedrock-layout/css/lib/bedrock-layout.min.css";
-
-// or just the component's CSS
-import "@bedrock-layout/css/lib/components/stack.min.css";
-
-//Then you can import the component from the package
-
 // For React.js
 import { Stack } from '@bedrock-layout/stack'
   // or
