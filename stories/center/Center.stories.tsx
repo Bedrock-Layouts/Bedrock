@@ -1,20 +1,28 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
 import { Center } from "../../packages/center/src/index";
 import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
+## For React.js
 yarn add @bedrock-layout/center
   ## or
 yarn add @bedrock-layout/primitives
+
+## For Solid.js
+yarn add @bedrock-layout/solid
 `;
 
 const importCode = `
-import { Center } from @bedrock-layout/center
+// For React.js
+import { Center } from '@bedrock-layout/center'
   // or
 import { Center } from '@bedrock-layout/primitives'
+
+// For Solid.js
+import { Center } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -37,6 +45,7 @@ const meta = {
     installAndImport: {
       install: installCode,
       import: importCode,
+      cssImport: "@bedrock-layout/css/lib/components/center.min.css",
     },
     examples: [
       {
