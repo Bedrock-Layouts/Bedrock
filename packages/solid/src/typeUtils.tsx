@@ -8,13 +8,13 @@
  */
 import { JSX, createComponent, mergeProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
-export type OmitAndMerge<A, B> = A & Omit<B, keyof A>;
-export type Accessor<T = unknown> = () => T;
+type OmitAndMerge<A, B> = A & Omit<B, keyof A>;
+type Accessor<T = unknown> = () => T;
 
 export type Maybe<T> = NonNullable<T> | undefined;
 
-export type ValidElements = keyof JSX.IntrinsicElements;
-export type ValidComponent<P> = (props: P) => JSX.Element;
+type ValidElements = keyof JSX.IntrinsicElements;
+type ValidComponent<P> = (props: P) => JSX.Element;
 export type ValidConstructor =
   | ValidElements
   | ValidComponent<any>
@@ -36,17 +36,17 @@ type RefField<T> = T | RefCallback<T>;
 
 type UnboxComponentProp<U> = U extends { ref: infer X } ? X : never;
 
-export type DynamicNode<T extends ValidConstructor> = T extends ValidElements
+type DynamicNode<T extends ValidConstructor> = T extends ValidElements
   ? UnboxIntrinsicElements<JSX.IntrinsicElements[T]>
   : T extends ValidComponent<infer U>
     ? UnboxComponentProp<U>
     : never;
 
-export interface WithRef<T extends ValidConstructor> {
+interface WithRef<T extends ValidConstructor> {
   ref?: RefField<DynamicNode<T>>;
 }
 
-export interface DynamicComponentWithRef<T extends ValidConstructor>
+interface DynamicComponentWithRef<T extends ValidConstructor>
   extends WithRef<T> {
   as?: T;
 }

@@ -1,8 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-import "jest-styled-components";
-import "regenerator-runtime/runtime";
 
 import { vi } from "vitest";
 

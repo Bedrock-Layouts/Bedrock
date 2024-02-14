@@ -1,0 +1,16 @@
+{
+  "ignore": [
+    ".storybook/**",
+    "packages/**/__tests__/**",
+    "examples/**",
+    "stories/**"
+  ],
+  "ignoreBinaries": ["knip", "yarn-deduplicate"],
+  "ignoreDependencies": [
+    "tslib",
+    "nx",
+    "@radix-ui/.*",
+    "@vitest/.*",
+    "@storybook/.*"
+  ]
+}

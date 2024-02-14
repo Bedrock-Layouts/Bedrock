@@ -35,5 +35,3 @@ export function useContainerQuery<T extends Element>(
 
   return [matches, containerRef];
 }
-
-export default useContainerQuery;
