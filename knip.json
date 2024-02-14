@@ -8,9 +8,12 @@
   "ignoreBinaries": ["knip", "yarn-deduplicate"],
   "ignoreDependencies": [
     "tslib",
+    "@typescript-eslint/eslint-plugin",
     "nx",
     "@radix-ui/.*",
     "@vitest/.*",
-    "@storybook/.*"
+    "@storybook/.*",
+    "@nrwl/.*",
+    "@types/.*"
   ]
 }
