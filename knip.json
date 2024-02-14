@@ -3,7 +3,10 @@
     ".storybook/**",
     "packages/**/__tests__/**",
     "examples/**",
-    "stories/**"
+    "stories/**",
+    "packages/css/postcss.config.js",
+    "packages/solid-doc-site/babel.config.js",
+    "packages/solid/babel.config.js"
   ],
   "ignoreBinaries": ["knip", "yarn-deduplicate"],
   "ignoreDependencies": [
@@ -14,6 +17,16 @@
     "@vitest/.*",
     "@storybook/.*",
     "@nrwl/.*",
-    "@types/.*"
+    "@types/.*",
+    "minify",
+    "postcss",
+    "postcss-cli",
+    "prettier-plugin-import-sort",
+    "typescript-eslint",
+    "import-sort-style-module",
+    "eslint-plugin-import",
+    "eslint-plugin-prettier",
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks"
   ]
 }
