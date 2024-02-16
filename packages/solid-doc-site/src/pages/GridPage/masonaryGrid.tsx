@@ -1,14 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-export const Component = styled.div`
-  background: black;
-  min-height: 50px;
-  min-width: 50px;
-`;
+import { Grid } from "@bedrock-layout/solid";
+import { JSXElement } from "solid-js";
 
-export function MasonryChildren() {
+export function MasonaryGrid(): JSXElement {
   return (
-    <>
+    <Grid variant="masonry" gutter="size3" minItemWidth="15rem">
       <div>
         1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident
@@ -65,6 +60,6 @@ export function MasonryChildren() {
         ipsum. Donec ultrices vel nisi vehicula facilisis. Vestibulum cursus
         nisi tellus, sit amet sagittis nisl luctus ut.
       </div>
-    </>
+    </Grid>
   );
 }

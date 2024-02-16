@@ -18,6 +18,11 @@
   margin: 0;
 }
 
+[data-bedrock-grid~="variant:masonry"] {
+  grid-template-rows: masonry;
+  masonry-auto-flow: next;
+}
+
 /* Gutter Sizes */
 [data-bedrock-grid~="gutter:size000"] {
   --gutter: -0.5rem;

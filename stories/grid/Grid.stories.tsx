@@ -5,7 +5,7 @@ import { Grid } from "../../packages/grid/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
 import { argTypes } from "./argTypes";
-import { Component } from "./Component";
+import { Component, MasonryChildren } from "./Component";
 
 const installCode = `
 ## For React.js
@@ -168,4 +168,44 @@ export const Gutter: Story = {
  *
  * (Resize window to observe the changes)
  */
+
 export const MinItemWidth: Story = {};
+
+/**
+ * The `variant` prop can be set to "grid" or "masonry". The default value is "grid".
+ * The `masonry` variant will optimize the layout of the children based on the `minItemWidth` and the available block space.
+ *
+ * **Note**: The `masonry` variant is a new feature coming to CSS.  It is not supported in all browsers yet. To see if the feature is supported in your browser, check [caniuse.com](https://caniuse.com/mdn-css_properties_grid-template-rows_masonry).
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-grid="variant:masonry" style={{--minItemWidth: '30ch'}}>
+ *   <Component />
+ *   <Component />
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Grid variant="masonry" minItemWidth="30ch">
+ *   <Component />
+ *   <Component />
+ * </Grid>
+ * ```
+ *
+ * In the below example, The `minItemWidth` is set to `15rem`. As you resize the
+ * window, the Grid will recalculate and potentially change the count of columns and rows.
+ *
+ * (Resize window to observe the changes)
+ */
+export const MasonryVariant: Story = {
+  args: {
+    variant: "masonry",
+  },
+  render: (args) => {
+    return (
+      <Grid {...args}>
+        <MasonryChildren />
+      </Grid>
+    );
+  },
+};

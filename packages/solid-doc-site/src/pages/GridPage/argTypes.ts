@@ -10,6 +10,14 @@ export const argTypes: ArgType = {
     control: "select",
     options: Object.keys(spacing),
   },
+  variant: {
+    description: "Sets the variant of the grid to be default grid or masonry",
+    summary: "grid | masonry",
+    defaultValue: "grid",
+    initialValue: "grid",
+    control: "select",
+    options: ["grid", "masonry"],
+  },
   minItemWidth: {
     description: "Sets the basis of each of the children",
     summary: "CSSLength",

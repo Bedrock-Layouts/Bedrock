@@ -76,6 +76,9 @@ const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
   );
 };
 
+/**
+ * @deprecated Use the `Grid` component with the `variant` prop set to "masonry" instead.
+ */
 export const MasonryGrid: Component<GridProps> = (props) => {
   const childrenMemo = children(() => props.children);
   const emptyResolvedChildren: ResolvedChildren = [];

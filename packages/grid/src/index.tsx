@@ -27,6 +27,10 @@ export type GridProps = {
    * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
    */
   minItemWidth?: MinItemWidth;
+  /**
+   * The `variant` prop can be set to "grid" or "masonry".
+   */
+  variant?: "grid" | "masonry";
 };
 
 /**
@@ -34,17 +38,26 @@ export type GridProps = {
  * that will automatically wrap based on the number of children and the `minItemWidth`.
  */
 export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
-  { as: Component = "div", style = {}, minItemWidth, gutter, ...props },
+  {
+    as: Component = "div",
+    style = {},
+    minItemWidth,
+    gutter,
+    variant,
+    ...props
+  },
   ref,
 ) {
   const theme = useTheme();
   const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
   const maybeGutter = getSafeGutter(theme, gutter);
 
+  const attributeValue = variant === "masonry" ? "variant:masonry" : true;
+
   return (
     <Component
       ref={ref}
-      data-bedrock-grid
+      data-bedrock-grid={attributeValue}
       style={
         {
           "--minItemWidth": maybeMinItemWidth,
