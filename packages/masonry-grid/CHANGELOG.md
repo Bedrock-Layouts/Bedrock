@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@4.2.12...@bedrock-layout/masonry-grid@4.3.0) (2024-02-16)
+
+### Features
+
+- **grid:** add masonry variant to grid component ([8126335](https://github.com/Bedrock-Layouts/Bedrock/commit/8126335fbf15e0a67d04c9b89c6a56471d2f637b)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 ## [4.2.12](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/masonry-grid@4.2.9...@bedrock-layout/masonry-grid@4.2.12) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid

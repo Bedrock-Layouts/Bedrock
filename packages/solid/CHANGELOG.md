@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.1.12...@bedrock-layout/solid@1.2.0) (2024-02-16)
+
+### Features
+
+- **grid:** add masonry variant to grid component ([8126335](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/8126335fbf15e0a67d04c9b89c6a56471d2f637b)), closes [#2207](https://github.com/Bedrock-Layouts/Solid-Bedrock/issues/2207)
+
 ## [1.1.12](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.1.9...@bedrock-layout/solid@1.1.12) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/solid

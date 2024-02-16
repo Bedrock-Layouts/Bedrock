@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2024-02-16)
+
+### Features
+
+- **grid:** add masonry variant to grid component ([8126335](https://github.com/Bedrock-Layouts/Bedrock/commit/8126335fbf15e0a67d04c9b89c6a56471d2f637b)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 ## 2.3.2 (2024-01-12)
 
 **Note:** Version bump only for package @bedrock-layout/css
