@@ -24,10 +24,11 @@ type MinItemWidth =
   | "min-content"
   | "auto";
 
-export interface GridBaseProps {
+export type GridBaseProps = {
   gutter?: SpacingOptions;
   minItemWidth?: MinItemWidth;
-}
+  variant?: "grid" | "masonry";
+};
 
 export type GridProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, GridBaseProps>;
@@ -63,7 +64,8 @@ export function Grid<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "minItemWidth"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-grid": () => "",
+        "data-bedrock-grid": () =>
+          props.variant === "masonry" ? "variant:masonry" : "",
       }),
     ) as DynamicProps<T>,
   );

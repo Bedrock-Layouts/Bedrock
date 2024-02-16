@@ -8,6 +8,8 @@ import { Story } from "../../components/Story";
 import { argTypes } from "./argTypes";
 import { Gutter } from "./gutters";
 import gutterCode from "./gutters?raw";
+import { MasonaryGrid } from "./masonaryGrid";
+import masonaryGridCode from "./masonaryGrid?raw";
 import { MinItemWidth } from "./minItemWidth";
 import minItemWidthCode from "./minItemWidth?raw";
 import { Playground } from "./playground";
@@ -61,6 +63,26 @@ export function GridPage(): JSXElement {
         </p>
         <Story code={minItemWidthCode}>
           <MinItemWidth />
+        </Story>
+      </PageSection>
+      <PageSection title="masonry Variant">
+        <p>
+          The variant prop can be set to "grid" or "masonry". The default value
+          is "grid". The masonry variant will optimize the layout of the
+          children based on the minItemWidth and the available block space.
+        </p>
+
+        <p>
+          <strong>Note:</strong> The masonry variant is a new feature coming to
+          CSS. It is not supported in all browsers yet. To see if the feature is
+          supported in your browser, check{" "}
+          <a href="https://caniuse.com/mdn-css_properties_grid-template-rows_masonry">
+            caniuse.com
+          </a>
+          .
+        </p>
+        <Story code={masonaryGridCode}>
+          <MasonaryGrid />
         </Story>
       </PageSection>
 

@@ -85,6 +85,15 @@ describe("Grid", () => {
       expect(grid.toJSON()).toMatchSnapshot();
     });
 
+    it("renders masonry variant", () => {
+      const grid = create(
+        <Grid variant="masonry" gutter="size3" minItemWidth="32rem">
+          <Lorem />
+        </Grid>,
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
+    });
+
     it("renders with theme overrides", () => {
       const grid = create(
         <ThemeProvider
@@ -135,6 +144,16 @@ describe("Grid", () => {
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders grid if anything used as variant other than `masonry`", () => {
+      const grid = create(
+        // @ts-expect-error
+        <Grid variant="incorrect" gutter="size3" minItemWidth="32rem">
+          <Lorem />
+        </Grid>,
+      );
+      expect(grid.toJSON()).toMatchSnapshot();
     });
   });
 });

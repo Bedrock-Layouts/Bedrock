@@ -88,6 +88,8 @@ export type MasonryGridProps = GridProps;
  * `MasonryGrid` does not create standard rows. Instead, it will
  * optimize for the most dense vertical layout that it can achieve based on
  * the space available.
+ *
+ * @deprecated Use the `Grid` component with the `variant` prop set to "masonry" instead.
  */
 export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
   function MasonryGrid({ children, style = {}, ...props }, ref) {

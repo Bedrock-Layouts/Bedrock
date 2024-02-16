@@ -21,6 +21,10 @@ export const argTypes = {
       "size15",
     ],
   },
+  variant: {
+    control: "select",
+    options: ["grid", "masonry"],
+  },
   minItemWidth: {
     control: "text",
   },
