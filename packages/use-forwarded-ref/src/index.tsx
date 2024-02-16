@@ -6,6 +6,9 @@ export interface Config {
   isStateful: boolean;
 }
 
+/**
+ * @deprecated This hook is deprecated and will be removed in the next major version.
+ */
 export function useForwardedRef<T>(
   forwardedRef?: React.Ref<T>,
   config: Config = { isStateful: true },

@@ -7,6 +7,9 @@ interface UseContainerQueryProps {
   maxWidth?: number;
 }
 
+/**
+ * @deprecated This hook is deprecated and will be removed in the next major version.
+ */
 export function useContainerQuery<T extends Element>(
   { width = 1, maxWidth }: Readonly<UseContainerQueryProps>,
   forwardedRef?: React.Ref<T>,

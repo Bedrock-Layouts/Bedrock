@@ -10,8 +10,12 @@ import {
   onCleanup,
   onMount,
 } from "solid-js";
+
 import { convertToMaybe } from "./typeUtils";
 
+/**
+ * @deprecated this function is deprecated and will be removed in the next major version
+ */
 export function createContainerQuery<T extends Element>(
   width: number,
   maybeRef?: (ref: T) => unknown,
@@ -21,11 +25,10 @@ export function createContainerQuery<T extends Element>(
 
   onMount(() => {
     init();
-    return 0;
   });
 
   createEffect(() => {
-    if (convertToMaybe(node()) === undefined) return 0;
+    if (convertToMaybe(node()) === undefined) return;
 
     if (maybeRef) {
       maybeRef(node() as T);
@@ -43,12 +46,9 @@ export function createContainerQuery<T extends Element>(
 
         setMatch(newMatch);
       }
-
-      return 0;
     });
 
     onCleanup(cleanup);
-    return 0;
   });
 
   return [matches, nodeRef];

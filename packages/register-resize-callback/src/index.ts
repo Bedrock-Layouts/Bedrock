@@ -12,8 +12,11 @@ let observer: ResizeObserver | undefined;
 
 const callBackMap = new WeakMap<Element, ObserverCallback[]>();
 
-/* c8 ignore next */
+/**
+ * @deprecated This hook is deprecated and will be removed in the next major version.
+ */
 export function init(): ResizeObserver {
+  /* c8 ignore next */
   if (observer) return observer;
 
   return (observer = new ResizeObserver((entries) => {

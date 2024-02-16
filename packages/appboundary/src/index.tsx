@@ -30,6 +30,8 @@ export type AppBoundaryProps = {
  * Your app will be clamped at the `boundarySize` and stay centered on the screen.
  * By default, it will clamp the width at the `sizeXxl` option,
  * but can also be set to other the valid size options using the `boundarySize` prop.
+ *
+ * @deprecated this component is deprecated and will be removed in the next major version
  */
 export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
   function AppBoundary(
