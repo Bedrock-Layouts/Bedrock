@@ -1,6 +1,6 @@
 {
   "name": "@bedrock-layout/primitives",
-  "version": "3.0.35",
+  "version": "3.0.36",
   "description": "bedrock-layout primitives",
   "sideEffects": false,
   "private": false,
@@ -40,7 +40,7 @@
     "lib"
   ],
   "dependencies": {
-    "@bedrock-layout/appboundary": "^3.2.10",
+    "@bedrock-layout/appboundary": "^3.2.11",
     "@bedrock-layout/center": "^3.2.10",
     "@bedrock-layout/column-drop": "^3.2.10",
     "@bedrock-layout/columns": "^3.1.19",
@@ -49,17 +49,17 @@
     "@bedrock-layout/grid": "^4.3.0",
     "@bedrock-layout/inline": "^4.2.10",
     "@bedrock-layout/inline-cluster": "^3.2.10",
-    "@bedrock-layout/masonry-grid": "^4.3.0",
+    "@bedrock-layout/masonry-grid": "^4.3.1",
     "@bedrock-layout/padbox": "^3.2.11",
     "@bedrock-layout/reel": "^2.1.18",
-    "@bedrock-layout/register-resize-callback": "^2.0.10",
+    "@bedrock-layout/register-resize-callback": "^2.0.11",
     "@bedrock-layout/spacing-constants": "^3.3.7",
     "@bedrock-layout/split": "^3.1.19",
     "@bedrock-layout/stack": "^3.1.18",
-    "@bedrock-layout/use-container-query": "^2.0.13",
-    "@bedrock-layout/use-forwarded-ref": "^2.0.12",
-    "@bedrock-layout/use-resize-observer": "^2.0.13",
-    "@bedrock-layout/use-stateful-ref": "^2.0.12"
+    "@bedrock-layout/use-container-query": "^2.0.14",
+    "@bedrock-layout/use-forwarded-ref": "^2.0.13",
+    "@bedrock-layout/use-resize-observer": "^2.0.14",
+    "@bedrock-layout/use-stateful-ref": "^2.0.13"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17 || ^18"
