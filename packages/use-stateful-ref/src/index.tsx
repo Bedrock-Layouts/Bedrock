@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * @deprecated This hook is deprecated and will be removed in the next major version.
+ */
 export function useStatefulRef<T>(initialVal?: T): React.MutableRefObject<T> {
   // eslint-disable-next-line prefer-const, functional/no-let
   let [cur, setCur] = React.useState<T | undefined>(initialVal);

@@ -6,6 +6,9 @@ import {
 import { useStatefulRef } from "@bedrock-layout/use-stateful-ref";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
+/**
+ * @deprecated This hook is deprecated and will be removed in the next major version.
+ */
 export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
   node?: T,
