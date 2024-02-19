@@ -5,6 +5,7 @@
 [data-bedrock-column-drop] {
   --gutter: initial;
   --minItemWidth: initial;
+  --min-item-width: initial;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +15,7 @@
 
 [data-bedrock-column-drop] > * {
   margin: 0;
-  flex-basis: var(--minItemWidth, 159px);
+  flex-basis: var(--min-item-width, var(--minItemWidth, 159px));
   flex-grow: 1;
   flex-shrink: 1;
 }

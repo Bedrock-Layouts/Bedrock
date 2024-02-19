@@ -4,11 +4,13 @@
 
 [data-bedrock-cover] {
   --gutter: initial;
+  --minHeight: initial;
+  --min-height: initial;
   display: flex;
   flex-direction: column;
   gap: var(--gutter, 0px);
 
-  min-block-size: var(--minHeight, 100vh);
+  min-block-size: var(--min-height, var(--minHeight, 100vh));
 }
 
 [data-bedrock-cover] > * {

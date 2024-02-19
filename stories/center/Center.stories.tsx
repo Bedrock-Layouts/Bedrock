@@ -71,7 +71,7 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-center style={{ "--maxwidth": "60ch"}}'>
+ * <div data-bedrock-center style={{ "--max-width": "60ch"}}'>
  *  <Component />
  * </div>
  *

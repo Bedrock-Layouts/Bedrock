@@ -96,7 +96,7 @@ export const Playground: Story = {};
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-columns style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-columns style="--gutter: 3ch">
  *  <Component />
  *  <Component />
  * </div>
@@ -164,7 +164,7 @@ export const Gutter: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-columns style={{ "--columns": 4 }}>
+ * <div data-bedrock-columns style="--columns: 4">
  *  <Component />
  *  <Component />
  * </div>
@@ -200,8 +200,18 @@ export const ColumnsProp: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // you can span 1 to 12 columns using the `data-bedrock-column` attribute.
  * <div data-bedrock-columns>
- *  <div data-bedrock-column >
+ *  <div data-bedrock-column="span:3" >
+ *    <Component />
+ *  </div>
+ *  <Component />
+ * </div>
+ *
+ * // if you need to span more than 12 columns, you can use the `--span` custom property directly.
+ * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
+ * <div data-bedrock-columns>
+ *  <div data-bedrock-column style="--span:13" >
  *    <Component />
  *  </div>
  *  <Component />
@@ -246,8 +256,19 @@ export const Span: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // you can offset 1 to 12 columns using the `data-bedrock-column` attribute.
  * <div data-bedrock-columns>
- *  <div data-bedrock-column style={{ "--offsetStart": 1, "--offsetEnd": 2 }}>
+ *  <div data-bedrock-column="offsetStart:1 offsetEnd:2">
+ *    <Component />
+ *  </div>
+ *  <Component />
+ * </div>
+ *
+ * // CSS
+ * // if you need to offset more than 12 columns, you can use the `--offset-start` and `--offset-end` custom properties directly.
+ * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
+ * <div data-bedrock-columns>
+ *  <div data-bedrock-column style="--offsetStart: 1; --offsetEnd: 2">
  *    <Component />
  *  </div>
  *  <Component />
