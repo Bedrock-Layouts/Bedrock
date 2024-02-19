@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.5.0 (2024-02-19)
+
+### Features
+
+- add support for kebab case properties ([b100f07](https://github.com/Bedrock-Layouts/Bedrock/commit/b100f0769fb7c3335c6a12805b2d770e4d0362dd)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 # 2.4.0 (2024-02-16)
 
 ### Features
