@@ -308,7 +308,8 @@ export const Stretch: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline style={{--minItemWidth: '30ch'}}>
+ * // Use the `--min-item-width` custom property
+ * <div data-bedrock-inline style="--min-item-width: 30ch">
  *   <Component />
  *   <Component />
  * </div>
@@ -344,7 +345,8 @@ export const MinItemWidth: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline style={{--switchAt: '30ch'}}>
+ * // Use the `--switch-at` custom property
+ * <div data-bedrock-inline style="--switch-at: 30ch">
  *   <Component />
  *   <Component />
  * </div>

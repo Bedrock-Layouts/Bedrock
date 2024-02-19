@@ -89,7 +89,44 @@
   column component
 */
 
-[data-bedrock-column][style*="--span"] {
+[data-bedrock-column~="span:1"] {
+  --span: 1;
+}
+[data-bedrock-column~="span:2"] {
+  --span: 2;
+}
+[data-bedrock-column~="span:3"] {
+  --span: 3;
+}
+[data-bedrock-column~="span:4"] {
+  --span: 4;
+}
+[data-bedrock-column~="span:5"] {
+  --span: 5;
+}
+[data-bedrock-column~="span:6"] {
+  --span: 6;
+}
+[data-bedrock-column~="span:7"] {
+  --span: 7;
+}
+[data-bedrock-column~="span:8"] {
+  --span: 8;
+}
+[data-bedrock-column~="span:9"] {
+  --span: 9;
+}
+[data-bedrock-column~="span:10"] {
+  --span: 10;
+}
+[data-bedrock-column~="span:11"] {
+  --span: 11;
+}
+[data-bedrock-column~="span:12"] {
+  --span: 12;
+}
+
+:is([data-bedrock-column][style*="--span"], [data-bedrock-column*="span"]) {
   --maxSpan: min(var(--span, 1), var(--columns, 1));
   --guttersToAdd: calc(var(--maxSpan, 1) - 1);
   --gutterSize: calc(var(--gutter, 0px) * var(--guttersToAdd));
@@ -99,8 +136,52 @@
   );
 }
 
-[data-bedrock-column][style*="--offsetStart"] {
-  --maxOffsetStart: min(var(--offsetStart, 1), var(--columns, 1));
+[data-bedrock-column~="offsetStart:1"] {
+  --offset-start: 1;
+}
+[data-bedrock-column~="offsetStart:2"] {
+  --offset-start: 2;
+}
+[data-bedrock-column~="offsetStart:3"] {
+  --offset-start: 3;
+}
+[data-bedrock-column~="offsetStart:4"] {
+  --offset-start: 4;
+}
+[data-bedrock-column~="offsetStart:5"] {
+  --offset-start: 5;
+}
+[data-bedrock-column~="offsetStart:6"] {
+  --offset-start: 6;
+}
+[data-bedrock-column~="offsetStart:7"] {
+  --offset-start: 7;
+}
+[data-bedrock-column~="offsetStart:8"] {
+  --offset-start: 8;
+}
+[data-bedrock-column~="offsetStart:9"] {
+  --offset-start: 9;
+}
+[data-bedrock-column~="offsetStart:10"] {
+  --offset-start: 10;
+}
+[data-bedrock-column~="offsetStart:11"] {
+  --offset-start: 11;
+}
+[data-bedrock-column~="offsetStart:12"] {
+  --offset-start: 12;
+}
+
+:is(
+    [data-bedrock-column][style*="--offsetStart"],
+    [data-bedrock-column][style*="--offset-start"],
+    [data-bedrock-column*="offsetStart"]
+  ) {
+  --maxOffsetStart: min(
+    var(--offset-start, var(--offsetStart, 1)),
+    var(--columns, 1)
+  );
   --marginOffsetStartGutters: calc(var(--gutter, 0px) * var(--maxOffsetStart));
   --marginOffsetStart: calc(
     (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetStart, 1) +
@@ -110,8 +191,52 @@
   margin-inline-start: min(var(--marginOffsetStart), var(--basisSwitcher));
 }
 
-[data-bedrock-column][style*="--offsetEnd"] {
-  --maxOffsetEnd: min(var(--offsetEnd, 1), var(--columns, 1));
+[data-bedrock-column~="offsetEnd:1"] {
+  --offset-end: 1;
+}
+[data-bedrock-column~="offsetEnd:2"] {
+  --offset-end: 2;
+}
+[data-bedrock-column~="offsetEnd:3"] {
+  --offset-end: 3;
+}
+[data-bedrock-column~="offsetEnd:4"] {
+  --offset-end: 4;
+}
+[data-bedrock-column~="offsetEnd:5"] {
+  --offset-end: 5;
+}
+[data-bedrock-column~="offsetEnd:6"] {
+  --offset-end: 6;
+}
+[data-bedrock-column~="offsetEnd:7"] {
+  --offset-end: 7;
+}
+[data-bedrock-column~="offsetEnd:8"] {
+  --offset-end: 8;
+}
+[data-bedrock-column~="offsetEnd:9"] {
+  --offset-end: 9;
+}
+[data-bedrock-column~="offsetEnd:10"] {
+  --offset-end: 10;
+}
+[data-bedrock-column~="offsetEnd:11"] {
+  --offset-end: 11;
+}
+[data-bedrock-column~="offsetEnd:12"] {
+  --offset-end: 12;
+}
+
+:is(
+    [data-bedrock-column][style*="--offsetEnd"],
+    [data-bedrock-column][style*="--offset-end"],
+    [data-bedrock-column*="offsetEnd"]
+  ) {
+  --maxOffsetEnd: min(
+    var(--offset-end, var(--offsetEnd, 1)),
+    var(--columns, 1)
+  );
   --marginOffsetEndGutters: calc(var(--gutter, 0px) * var(--maxOffsetEnd));
   --marginOffsetEnd: calc(
     (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetEnd, 1) +

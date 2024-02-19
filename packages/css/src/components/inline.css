@@ -5,7 +5,9 @@
 [data-bedrock-inline] {
   --gutter: initial;
   --switchAt: initial;
+  --switch-at: initial;
   --minItemWidth: initial;
+  --min-item-width: initial;
   display: flex;
   flex-wrap: nowrap;
   gap: var(--gutter, 0px);
@@ -17,16 +19,26 @@
   margin: 0;
 }
 
-[data-bedrock-inline][style*="--switchAt"] {
+:is(
+    [data-bedrock-inline][style*="--switchAt"],
+    [data-bedrock-inline][style*="--switch-at"]
+  ) {
   flex-wrap: wrap;
 }
 
 [data-bedrock-inline][style*="--switchAt"] > * {
   flex-basis: calc((var(--switchAt) - (100% - var(--gutter, 0px))) * 999);
 }
+[data-bedrock-inline][style*="--switch-at"] > * {
+  flex-basis: calc((var(--switch-at) - (100% - var(--gutter, 0px))) * 999);
+}
 
 [data-bedrock-inline][style*="--minItemWidth"] > * {
   min-inline-size: var(--minItemWidth, 0);
+}
+
+[data-bedrock-inline][style*="--min-item-width"] > * {
+  min-inline-size: var(--min-item-width, 0);
 }
 
 [data-bedrock-inline~="justify:start"] {

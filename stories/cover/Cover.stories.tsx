@@ -148,7 +148,8 @@ export const TopAndBottom: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-cover style={{"--minHeight": "500px"}}>
+ * // Setting the minHeight using the `--min-height` custom property
+ * <div data-bedrock-cover style="--min-height: 500px">
  *  <span>I am on top.</span>
  *  <div data-bedrock-cover-centered>
  *    <Component />

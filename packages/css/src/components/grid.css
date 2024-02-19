@@ -5,12 +5,13 @@
 [data-bedrock-grid] {
   --gutter: initial;
   --minItemWidth: initial;
+  --min-item-width: initial;
   box-sizing: border-box;
   display: grid;
   gap: var(--gutter, 0);
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--minItemWidth, 639px), 100%), 1fr)
+    minmax(min(var(--min-item-width, var(--minItemWidth, 639px)), 100%), 1fr)
   );
 }
 

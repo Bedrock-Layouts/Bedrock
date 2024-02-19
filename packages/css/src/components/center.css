@@ -3,9 +3,11 @@
 */
 
 [data-bedrock-center] {
+  --maxWidth: initial;
+  --max-width: var(--maxWidth, initial);
   box-sizing: content-box;
 
-  max-inline-size: var(--maxWidth, 100%);
+  max-inline-size: var(--max-width, 100%);
 }
 [data-bedrock-center][data-bedrock-center] {
   margin-inline-start: auto;
