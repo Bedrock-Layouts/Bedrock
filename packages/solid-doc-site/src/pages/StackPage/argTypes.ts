@@ -10,4 +10,12 @@ export const argTypes: ArgType = {
     control: "select",
     options: Object.keys(spacing),
   },
+  align: {
+    description: "Sets the block alignment of the children",
+    summary: "start | end | center | stretch",
+    defaultValue: "stretch",
+    initialValue: "stretch",
+    control: "select",
+    options: ["start", "end", "center", "stretch"],
+  },
 };

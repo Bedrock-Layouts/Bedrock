@@ -49,6 +49,18 @@ describe("Stack", () => {
       });
     });
 
+    it("renders all the align options", () => {
+      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
+      (["start", "stretch", "end", "center"] as const).forEach((align) => {
+        const stack = create(
+          <Stack align={align}>
+            <Lorem />
+          </Stack>,
+        );
+        expect(stack.toJSON()).toMatchSnapshot();
+      });
+    });
+
     it("renders custom gutter with number", () => {
       const stack = create(
         <Stack gutter={20}>
