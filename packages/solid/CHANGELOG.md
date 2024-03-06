@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2024-03-06)
+
+### Features
+
+- **stack:** add alignment props to stack ([8ea8732](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/8ea873266402b7eddbae46160d14ff2fc8254448)), closes [#2207](https://github.com/Bedrock-Layouts/Solid-Bedrock/issues/2207)
+
 ## [1.2.1](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.2.0...@bedrock-layout/solid@1.2.1) (2024-02-17)
 
 **Note:** Version bump only for package @bedrock-layout/solid

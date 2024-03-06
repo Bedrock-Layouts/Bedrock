@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.5.0...@bedrock-layout/css@2.6.0) (2024-03-06)
+
+### Features
+
+- **stack:** add alignment props to stack ([8ea8732](https://github.com/Bedrock-Layouts/Bedrock/commit/8ea873266402b7eddbae46160d14ff2fc8254448)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 # 2.5.0 (2024-02-19)
 
 ### Features
