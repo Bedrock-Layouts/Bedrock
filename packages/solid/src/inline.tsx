@@ -94,7 +94,7 @@ export function Inline<T extends ValidConstructor = "div">(
   const style = () =>
     [propsStyle(), gutter(), switchAt(), minItemWidth()].join("; ");
 
-  const attrAssesor = () =>
+  const attrAssessor = () =>
     [justify(), align(), stretch()].filter(Boolean).join(" ");
 
   return createDynamic(
@@ -110,7 +110,7 @@ export function Inline<T extends ValidConstructor = "div">(
       ]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-inline": attrAssesor,
+        "data-bedrock-inline": attrAssessor,
       }),
     ) as DynamicProps<T>,
   );

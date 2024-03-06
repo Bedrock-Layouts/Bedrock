@@ -150,3 +150,56 @@ export const Gutter: Story = {
     );
   },
 };
+
+/**
+ * The `align` prop defines the horizontal alignment of the
+ * elements within the stack. It accepts the following
+ * values: `start`, `end`, `center`, `stretch`.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-stack='align:end'>
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Stack align="end">
+ *  <Component />
+ *  <Component />
+ * </Stack>
+ * ```
+ */
+export const Align: Story = {
+  render: () => {
+    return (
+      <Stack gutter="size5">
+        <strong>start</strong>
+        <Stack align="start" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+        </Stack>
+        <strong>end</strong>
+        <Stack align="end" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+        </Stack>
+        <strong>center</strong>
+        <Stack align="center" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+        </Stack>
+        <strong>stretch</strong>
+        <Stack align="stretch" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+        </Stack>
+      </Stack>
+    );
+  },
+};

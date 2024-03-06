@@ -14,8 +14,17 @@
   margin: 0;
 }
 
-[data-bedrock-stack] > [data-bedrock-column] {
-  grid-column: span 1 / auto;
+[data-bedrock-stack~="align:start"] {
+  align-items: flex-start;
+}
+[data-bedrock-stack~="align:center"] {
+  align-items: center;
+}
+[data-bedrock-stack~="align:end"] {
+  align-items: flex-end;
+}
+[data-bedrock-stack~="align:stretch"] {
+  align-items: stretch;
 }
 
 /* Gutter Sizes */

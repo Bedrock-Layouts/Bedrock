@@ -5,6 +5,8 @@ import { ArgsTable } from "../../components/ArgsTable";
 import { Heading } from "../../components/Heading";
 import { PageSection } from "../../components/PageSection";
 import { Story } from "../../components/Story";
+import { Align } from "./align";
+import alignCode from "./align?raw";
 import { argTypes } from "./argTypes";
 import { Gutter } from "./gutters";
 import gutterCode from "./gutters?raw";
@@ -42,6 +44,17 @@ export function StackPage(): JSXElement {
         <p>Here are the possible values for gutter by default:</p>
         <Story code={gutterCode}>
           <Gutter />
+        </Story>
+      </PageSection>
+      <PageSection title="align">
+        <p>
+          The `align` prop defines the inline alignment of the elements within
+          the stack. It accepts the following values: `start`, `end`, `center`,
+          `stretch`.
+        </p>
+
+        <Story code={alignCode}>
+          <Align />
         </Story>
       </PageSection>
       <PageSection title="Playground">

@@ -10,8 +10,16 @@ import createDynamic, {
   omitProps,
 } from "./typeUtils";
 
+const alignMap = {
+  start: "align:start",
+  end: "align:end",
+  center: "align:center",
+  stretch: "align:stretch",
+} as const;
+
 export interface StackPropsBase {
   gutter?: SpacingOptions;
+  align?: keyof typeof alignMap;
 }
 
 export type StackProps<T extends ValidConstructor = "div"> =
@@ -34,11 +42,16 @@ export function Stack<T extends ValidConstructor = "div">(
 
   const style = () => [propsStyle(), gutter()].join("; ");
 
+  const align = () =>
+    props.align !== undefined ? alignMap[props.align] : undefined;
+
+  const attrAssessor = () => [align()].filter(Boolean).join(" ");
+
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
       omitProps(props, ["as", "gutter"]),
-      createPropsFromAccessors({ style, "data-bedrock-stack": () => "" }),
+      createPropsFromAccessors({ style, "data-bedrock-stack": attrAssessor }),
     ) as DynamicProps<T>,
   );
 }
