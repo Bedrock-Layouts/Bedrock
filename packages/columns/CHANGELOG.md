@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2024-03-07)
+
+### Features
+
+- **columns:** move to using colCount prop ([85ec346](https://github.com/Bedrock-Layouts/Bedrock/commit/85ec346aceb23ad47fdef1797b9a7158d16bac27)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 ## [3.1.19](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/columns@3.1.16...@bedrock-layout/columns@3.1.19) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/columns
