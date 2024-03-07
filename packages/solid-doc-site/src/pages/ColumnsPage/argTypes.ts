@@ -10,18 +10,16 @@ export const argTypes: ArgType = {
     control: "select",
     options: Object.keys(spacing),
   },
-  columns: {
+  colCount: {
     description: "Sets the number of columns",
     defaultValue: "1",
-    initialValue: 2,
+    initialValue: 4,
     summary: "number",
     control: "number",
   },
-
   switchAt: {
     description:
       "Sets the width threshold that the split will switch to a Stack layout",
-
     summary: "string | number",
     control: "text",
     initialValue: "25rem",
