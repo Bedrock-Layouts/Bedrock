@@ -5,7 +5,7 @@ import { Box } from "../../components/Box";
 
 export function ColumnPlayground(props: Readonly<ColumnProps>): JSXElement {
   return (
-    <Columns gutter="size3" columns={5}>
+    <Columns gutter="size3" colCount={5}>
       <Box />
       <Box />
       <Column {...props}>

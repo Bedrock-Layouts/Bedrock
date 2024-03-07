@@ -5,7 +5,7 @@ import { Box } from "../../components/Box";
 
 export function SwitchAt(): JSXElement {
   return (
-    <Columns gutter="size3" columns={3} switchAt="45rem">
+    <Columns gutter="size3" colCount={3} switchAt="45rem">
       <Box />
       <Box />
       <Box />

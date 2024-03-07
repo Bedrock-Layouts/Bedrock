@@ -174,6 +174,16 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
+    it("renders custom colCount", () => {
+      const columns = create(
+        <Columns gutter="size3" colCount={5}>
+          <Lorem />
+        </Columns>,
+      );
+      expect(columns.toJSON()).toMatchSnapshot();
+    });
+
     it("renders custom columns", () => {
       const columns = create(
         <Columns gutter="size3" columns={5}>
@@ -182,6 +192,7 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
+
     it("renders switchAt as number", () => {
       const columns = create(
         <Columns gutter="size3" switchAt={500}>

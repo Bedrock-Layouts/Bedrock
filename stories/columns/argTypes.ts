@@ -1,8 +1,5 @@
 export const columnsArgTypes = {
   gutter: {
-    table: {
-      type: { summary: "number, CSSLength, SpacingOption" },
-    },
     control: "select",
     options: [
       "size000",
@@ -24,17 +21,14 @@ export const columnsArgTypes = {
       "size15",
     ],
   },
-  columns: {
-    table: {
-      type: { summary: "number" },
-    },
+  colCount: {
     control: "number",
   },
   switchAt: {
-    table: {
-      type: { summary: "css length as string or number" },
-    },
     control: "text",
+  },
+  as: {
+    control: "none",
   },
 };
 

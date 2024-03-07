@@ -57,7 +57,7 @@ export function ColumnsPage(): JSXElement {
         <ArgsTable args={columnArgTypes} />
       </PageSection>
 
-      <PageSection title="columns">
+      <PageSection title="colCount">
         <p>
           The below example gives us a 4 column layout. By default, each box
           will take up one column.

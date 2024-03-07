@@ -32,7 +32,7 @@ const meta = {
   component: Columns,
   args: {
     gutter: "size3",
-    columns: 4,
+    colCount: 4,
   },
   argTypes: columnsArgTypes,
   render: (args) => {
@@ -90,7 +90,7 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-columns='gutter:size3'>
+ * <div data-bedrock-colCount='gutter:size3'>
  *  <Component />
  *  <Component />
  * </div>
@@ -127,7 +127,7 @@ export const Gutter: Story = {
     return (
       <Stack gutter="size5">
         <strong>Custom gutter as number (20)</strong>
-        <Columns gutter={20} columns={4}>
+        <Columns gutter={20} colCount={4}>
           <Component />
           <Component />
           <Component />
@@ -135,7 +135,7 @@ export const Gutter: Story = {
           <Component />
         </Columns>
         <strong>Custom gutter as string ("3ch")</strong>
-        <Columns gutter="3ch" columns={4}>
+        <Columns gutter="3ch" colCount={4}>
           <Component />
           <Component />
           <Component />
@@ -145,7 +145,7 @@ export const Gutter: Story = {
         {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
           <React.Fragment key={gutter}>
             <strong>{gutter}</strong>
-            <Columns gutter={gutter} columns={4}>
+            <Columns gutter={gutter} colCount={4}>
               <Component />
               <Component />
               <Component />
@@ -159,18 +159,18 @@ export const Gutter: Story = {
 };
 
 /**
- * The `columns` prop defines the number of columns in the grid.
+ * The `colCount` prop defines the number of columns in the grid.
  *
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-columns style="--columns: 4">
+ * <div data-bedrock-columns style="--colCount: 4">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Columns columns={4}>
+ * <Columns colCount={4}>
  *  <Component />
  *  <Component />
  * </Columns>
@@ -181,7 +181,7 @@ export const Gutter: Story = {
 export const ColumnsProp: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" columns={4}>
+      <Columns gutter="size3" colCount={4}>
         <Component />
         <Component />
         <Component />
@@ -233,7 +233,7 @@ export const ColumnsProp: Story = {
 export const Span: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" columns={4}>
+      <Columns gutter="size3" colCount={4}>
         <Component />
         <Component />
         <Column span={3}>
@@ -290,7 +290,7 @@ export const Span: Story = {
 export const OffsetStartAndOffsetEnd: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" columns={5}>
+      <Columns gutter="size3" colCount={5}>
         <Component />
         <Component />
         <Column span={2} offsetStart={1}>
@@ -335,7 +335,7 @@ export const OffsetStartAndOffsetEnd: Story = {
 export const SwitchAt: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" columns={3} switchAt="45rem">
+      <Columns gutter="size3" colCount={3} switchAt="45rem">
         <Component />
         <Component />
         <Component />

@@ -12,13 +12,18 @@ import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
   ValidConstructor,
+  convertToMaybe,
   createPropsFromAccessors,
   omitProps,
 } from "./typeUtils";
 
 interface ColumnsBaseProps {
   gutter?: SpacingOptions;
+  /**
+   * @deprecated Use `colCount` instead.
+   */
   columns?: number;
+  colCount?: number;
   switchAt?: number | CSSLength | SizesOptions;
 }
 
@@ -41,7 +46,7 @@ export function Columns<T extends ValidConstructor = "div">(
     `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
 
   const columns = () =>
-    `--columns: ${props.columns && props.columns > 0 ? props.columns : 1};`;
+    `--columns: ${convertToMaybe(Math.max(props.colCount ?? props.columns ?? 1, 1)) ?? 1};`;
 
   const switchAt = () =>
     props.switchAt
@@ -49,12 +54,12 @@ export function Columns<T extends ValidConstructor = "div">(
       : "";
 
   const style = () =>
-    [propsStyle(), gutter(), columns(), switchAt()].join("; ");
+    [propsStyle(), gutter(), columns(), switchAt()].filter(Boolean).join("; ");
 
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter", "columns", "switchAt"]),
+      omitProps(props, ["as", "gutter", "columns", "colCount", "switchAt"]),
       createPropsFromAccessors({
         style,
         "data-bedrock-columns": () => "",

@@ -20,6 +20,11 @@ export type ColumnsProps = {
   /**
    * Sets the number of columns.
    */
+  colCount?: number;
+  /**
+   * Sets the number of columns.
+   * @deprecated Use `colCount` instead.
+   */
   columns?: number;
   /**
    * Sets the width breakpoint at which the columns
@@ -38,6 +43,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
     as: Component = "div",
     gutter,
     columns = 1,
+    colCount,
     style = {},
     switchAt,
     ...props
@@ -47,7 +53,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gutter);
   const maybeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
-  const safeColumns = convertToMaybe(Math.max(columns, 1)) ?? 1;
+  const safeColumns = convertToMaybe(Math.max(colCount ?? columns, 1)) ?? 1;
 
   return (
     <Component

@@ -7,13 +7,14 @@
 */
 
 [data-bedrock-columns] {
+  --safeColumns: var(--col-count, var(--columns, 1));
   --gutter: initial;
   --switchAt: initial;
-  --numberOfGutters: calc(var(--columns, 1) - 1);
+  --numberOfGutters: calc(var(--safeColumns) - 1);
   --largestWidth: calc(
     100% - max(var(--gutter, 0px) * var(--numberOfGutters), 0px)
   );
-  --columnWidth: calc(var(--largestWidth) / var(--columns, 1));
+  --columnWidth: calc(var(--largestWidth) / var(--safeColumns));
   --basis: calc(
     (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
   );
@@ -127,11 +128,11 @@
 }
 
 :is([data-bedrock-column][style*="--span"], [data-bedrock-column*="span"]) {
-  --maxSpan: min(var(--span, 1), var(--columns, 1));
+  --maxSpan: min(var(--span, 1), var(--safeColumns));
   --guttersToAdd: calc(var(--maxSpan, 1) - 1);
   --gutterSize: calc(var(--gutter, 0px) * var(--guttersToAdd));
   --columnWidth: calc(
-    ((var(--largestWidth) / var(--columns, 1)) * var(--maxSpan, 1)) +
+    ((var(--largestWidth) / var(--safeColumns)) * var(--maxSpan, 1)) +
       var(--gutterSize)
   );
 }
@@ -180,11 +181,11 @@
   ) {
   --maxOffsetStart: min(
     var(--offset-start, var(--offsetStart, 1)),
-    var(--columns, 1)
+    var(--safeColumns)
   );
   --marginOffsetStartGutters: calc(var(--gutter, 0px) * var(--maxOffsetStart));
   --marginOffsetStart: calc(
-    (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetStart, 1) +
+    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetStart, 1) +
       var(--marginOffsetStartGutters)
   );
   --basisSwitcher: max(var(--basis) * -1, 0px);
@@ -235,11 +236,11 @@
   ) {
   --maxOffsetEnd: min(
     var(--offset-end, var(--offsetEnd, 1)),
-    var(--columns, 1)
+    var(--safeColumns)
   );
   --marginOffsetEndGutters: calc(var(--gutter, 0px) * var(--maxOffsetEnd));
   --marginOffsetEnd: calc(
-    (var(--largestWidth) / var(--columns, 1)) * var(--maxOffsetEnd, 1) +
+    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetEnd, 1) +
       var(--marginOffsetEndGutters)
   );
   --basisSwitcher: max(var(--basis) * -1, 0px);

@@ -104,7 +104,8 @@ export function createPropsFromAccessors<T extends Record<string, Accessor>>(
 
   return Object.keys(props).reduce((getterObj, key) => {
     const accessor = props[key];
-    return Object.defineProperty({ ...getterObj }, key, {
+    // eslint-disable-next-line functional/immutable-data
+    return Object.defineProperty(getterObj, key, {
       get() {
         return accessor();
       },
