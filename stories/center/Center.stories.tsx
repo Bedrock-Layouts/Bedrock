@@ -99,6 +99,9 @@ export const MaxWidth: Story = {
 /**
  * You can also center the children by adding a `centerChildren` prop.
  *
+ * **Note,** This is deprecated and should be used with the stack component set to
+ * `align="center"` instead.
+ *
  * #### Usage examples
  * ```jsx
  * // CSS
