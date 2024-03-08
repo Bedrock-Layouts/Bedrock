@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.8.0...@bedrock-layout/css@2.9.0) (2024-03-08)
+
+### Features
+
+- add size constants to css ([d81f2ab](https://github.com/Bedrock-Layouts/Bedrock/commit/d81f2abb3f197614a8ee31b9eef22df9dc07bbea)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 # [2.8.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.7.0...@bedrock-layout/css@2.8.0) (2024-03-08)
 
 ### Features
