@@ -27,6 +27,7 @@ export type CenterProps = {
   centerText?: boolean;
   /**
    * Sets the alignment of the component's children to be centered.
+   * @deprecated Use with the stack component set to align="center" instead.
    */
   centerChildren?: boolean;
 };
