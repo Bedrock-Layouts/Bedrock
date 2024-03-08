@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.4.0...@bedrock-layout/solid@1.5.0) (2024-03-08)
+
+### Features
+
+- add more justification options to inline and inline-cluster ([ff85e39](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/ff85e39497e94be286d2ffed38abc2cdb007ca90))
+
 # [1.4.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.3.0...@bedrock-layout/solid@1.4.0) (2024-03-07)
 
 ### Features

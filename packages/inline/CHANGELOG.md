@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.3.0 (2024-03-08)
+
+### Features
+
+- add more justification options to inline and inline-cluster ([ff85e39](https://github.com/Bedrock-Layouts/Bedrock/commit/ff85e39497e94be286d2ffed38abc2cdb007ca90))
+
 ## [4.2.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/inline@4.2.7...@bedrock-layout/inline@4.2.10) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/inline
