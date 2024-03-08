@@ -4,6 +4,7 @@ import React from "react";
 import { InlineCluster } from "../../packages/inline-cluster/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
@@ -32,6 +33,7 @@ const meta = {
   args: {
     gutter: "size3",
   },
+  argTypes,
   render: (args) => {
     return (
       <InlineCluster {...args}>
@@ -177,6 +179,20 @@ export const Justify: Story = {
         </InlineCluster>
         <strong>center</strong>
         <InlineCluster justify="center" gutter="size7">
+          <Component widthLevel={5} />
+          <Component widthLevel={0.5} />
+          <Component />
+          <Component widthLevel={4} />
+        </InlineCluster>
+        <strong>space-around</strong>
+        <InlineCluster justify="space-around" gutter="size7">
+          <Component widthLevel={5} />
+          <Component widthLevel={0.5} />
+          <Component />
+          <Component widthLevel={4} />
+        </InlineCluster>
+        <strong>space-between</strong>
+        <InlineCluster justify="space-between" gutter="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />

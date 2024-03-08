@@ -31,6 +31,8 @@ const justifyMap = {
   start: "justify:start",
   end: "justify:end",
   center: "justify:center",
+  "space-between": "justify:space-between",
+  "space-around": "justify:space-around",
 } as const;
 
 const alignMap = {

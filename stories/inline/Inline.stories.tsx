@@ -4,6 +4,7 @@ import React from "react";
 import { Inline } from "../../packages/inline/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
@@ -32,6 +33,7 @@ const meta = {
   args: {
     gutter: "size3",
   },
+  argTypes,
   render: (args) => {
     return (
       <Inline {...args}>
@@ -140,7 +142,7 @@ export const Gutter: Story = {
 /**
  * The `justify` prop defines the inline justification of the
  * elements within the cluster. It accepts the following
- * values: `start`, `end`, `center`.
+ * values: `start`, `end`, `center`, `space-around`, `space-between`.
  *
  * #### Usage examples
  * ```jsx
@@ -177,6 +179,20 @@ export const Justify: Story = {
         </Inline>
         <strong>center</strong>
         <Inline justify="center" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+          <Component />
+        </Inline>
+        <strong>space-around</strong>
+        <Inline justify="space-around" gutter="size7">
+          <Component />
+          <Component />
+          <Component />
+          <Component />
+        </Inline>
+        <strong>space-between</strong>
+        <Inline justify="space-between" gutter="size7">
           <Component />
           <Component />
           <Component />
