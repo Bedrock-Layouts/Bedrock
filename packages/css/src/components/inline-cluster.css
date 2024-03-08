@@ -24,6 +24,12 @@
 [data-bedrock-inline-cluster~="justify:end"] {
   justify-content: flex-end;
 }
+[data-bedrock-inline-cluster~="justify:space-between"] {
+  justify-content: space-between;
+}
+[data-bedrock-inline-cluster~="justify:space-around"] {
+  justify-content: space-around;
+}
 
 [data-bedrock-inline-cluster~="align:start"] {
   align-items: flex-start;

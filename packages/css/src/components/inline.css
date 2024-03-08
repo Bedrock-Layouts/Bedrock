@@ -50,6 +50,12 @@
 [data-bedrock-inline~="justify:end"] {
   justify-content: flex-end;
 }
+[data-bedrock-inline~="justify:space-between"] {
+  justify-content: space-between;
+}
+[data-bedrock-inline~="justify:space-around"] {
+  justify-content: space-around;
+}
 
 [data-bedrock-inline~="align:start"] {
   align-items: flex-start;

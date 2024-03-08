@@ -13,7 +13,7 @@ export interface InlineClusterProps {
   /**
    * The `justify` prop can be used to specify the inline alignment of the children.
    */
-  justify?: "start" | "end" | "center";
+  justify?: "start" | "end" | "center" | "space-between" | "space-around";
   /**
    * The `align` prop can be used to specify the block alignment of the children.
    */

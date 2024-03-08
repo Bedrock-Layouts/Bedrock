@@ -29,16 +29,4 @@ export const argTypes = {
     control: "select",
     options: ["start", "end", "center", "stretch"],
   },
-  stretch: {
-    control: "select",
-    options: ["all", "start", "end"],
-  },
-  switchAt: {
-    description:
-      "Sets the width threshold that the split will switch to a Stack layout",
-    control: "text",
-  },
-  minItemWidth: {
-    control: "text",
-  },
 };

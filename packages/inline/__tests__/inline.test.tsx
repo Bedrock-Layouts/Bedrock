@@ -41,7 +41,13 @@ describe("Inline", () => {
     });
 
     it("renders all the justify options", () => {
-      const justifications = ["start", "center", "end"] as const;
+      const justifications = [
+        "start",
+        "center",
+        "end",
+        "space-around",
+        "space-between",
+      ] as const;
       justifications.forEach((justify) => {
         const inlineCluster = create(
           <Inline gutter="size3" justify={justify}>
