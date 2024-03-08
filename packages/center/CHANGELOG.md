@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.11 (2024-03-08)
+
+**Note:** Version bump only for package @bedrock-layout/center
+
 ## [3.2.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/center@3.2.7...@bedrock-layout/center@3.2.10) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/center
