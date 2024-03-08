@@ -24,3 +24,43 @@
 [data-bedrock-center~="center-text"] {
   text-align: center;
 }
+
+[data-bedrock-center~="maxWidth:sizeContent1"] {
+  --max-width: 20ch;
+}
+[data-bedrock-center~="maxWidth:sizeContent2"] {
+  --max-width: 45ch;
+}
+[data-bedrock-center~="maxWidth:sizeContent3"] {
+  --max-width: 60ch;
+}
+[data-bedrock-center~="maxWidth:sizeHeader1"] {
+  --max-width: 20ch;
+}
+[data-bedrock-center~="maxWidth:sizeHeader2"] {
+  --max-width: 25ch;
+}
+[data-bedrock-center~="maxWidth:sizeHeader3"] {
+  --max-width: 35ch;
+}
+[data-bedrock-center~="maxWidth:sizeXxs"] {
+  --max-width: 240px;
+}
+[data-bedrock-center~="maxWidth:sizeXs"] {
+  --max-width: 360px;
+}
+[data-bedrock-center~="maxWidth:sizeSm"] {
+  --max-width: 480px;
+}
+[data-bedrock-center~="maxWidth:sizeMd"] {
+  --max-width: 768px;
+}
+[data-bedrock-center~="maxWidth:sizeLg"] {
+  --max-width: 1024px;
+}
+[data-bedrock-center~="maxWidth:sizeXl"] {
+  --max-width: 1440px;
+}
+[data-bedrock-center~="maxWidth:sizeXxl"] {
+  --max-width: 1920px;
+}

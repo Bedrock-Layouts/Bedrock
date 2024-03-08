@@ -199,7 +199,13 @@ export const Fraction: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * // use the `--min-item-width` custom property
+ * // Using the predefined size constants
+ * <div data-bedrock-split="minItemWidth:sizeXs">
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
+ * // Use the `--min-item-width` custom property
  * <div data-bedrock-split style="--min-item-width: 30ch"">
  *  <Component />
  *  <Component />
@@ -243,7 +249,14 @@ export const MinItemWidth: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined size constants
+ * <div data-bedrock-split="switchAt:sizeContent2">
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
  * // use the `--switch-at` custom property
+ * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
  * <div data-bedrock-split style="--switch-at: 45rem">
  *  <Component />
  *  <Component />

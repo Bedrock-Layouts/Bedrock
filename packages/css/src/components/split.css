@@ -161,3 +161,85 @@
 [data-bedrock-split~="gutter:size15"] {
   --gutter: 30rem;
 }
+
+/* Min Item Widths */
+[data-bedrock-split~="minItemWidth:sizeContent1"] {
+  --min-item-width: 20ch;
+}
+[data-bedrock-split~="minItemWidth:sizeContent2"] {
+  --min-item-width: 45ch;
+}
+[data-bedrock-split~="minItemWidth:sizeContent3"] {
+  --min-item-width: 60ch;
+}
+[data-bedrock-split~="minItemWidth:sizeHeader1"] {
+  --min-item-width: 20ch;
+}
+[data-bedrock-split~="minItemWidth:sizeHeader2"] {
+  --min-item-width: 25ch;
+}
+[data-bedrock-split~="minItemWidth:sizeHeader3"] {
+  --min-item-width: 35ch;
+}
+[data-bedrock-split~="minItemWidth:sizeXxs"] {
+  --min-item-width: 240px;
+}
+[data-bedrock-split~="minItemWidth:sizeXs"] {
+  --min-item-width: 360px;
+}
+[data-bedrock-split~="minItemWidth:sizeSm"] {
+  --min-item-width: 480px;
+}
+[data-bedrock-split~="minItemWidth:sizeMd"] {
+  --min-item-width: 768px;
+}
+[data-bedrock-split~="minItemWidth:sizeLg"] {
+  --min-item-width: 1024px;
+}
+[data-bedrock-split~="minItemWidth:sizeXl"] {
+  --min-item-width: 1440px;
+}
+[data-bedrock-split~="minItemWidth:sizeXxl"] {
+  --min-item-width: 1920px;
+}
+
+/* Switch at Widths */
+[data-bedrock-split~="switchAt:sizeContent1"] {
+  --switch-at: 20ch;
+}
+[data-bedrock-split~="switchAt:sizeContent2"] {
+  --switch-at: 45ch;
+}
+[data-bedrock-split~="switchAt:sizeContent3"] {
+  --switch-at: 60ch;
+}
+[data-bedrock-split~="switchAt:sizeHeader1"] {
+  --switch-at: 20ch;
+}
+[data-bedrock-split~="switchAt:sizeHeader2"] {
+  --switch-at: 25ch;
+}
+[data-bedrock-split~="switchAt:sizeHeader3"] {
+  --switch-at: 35ch;
+}
+[data-bedrock-split~="switchAt:sizeXxs"] {
+  --switch-at: 240px;
+}
+[data-bedrock-split~="switchAt:sizeXs"] {
+  --switch-at: 360px;
+}
+[data-bedrock-split~="switchAt:sizeSm"] {
+  --switch-at: 480px;
+}
+[data-bedrock-split~="switchAt:sizeMd"] {
+  --switch-at: 768px;
+}
+[data-bedrock-split~="switchAt:sizeLg"] {
+  --switch-at: 1024px;
+}
+[data-bedrock-split~="switchAt:sizeXl"] {
+  --switch-at: 1440px;
+}
+[data-bedrock-split~="switchAt:sizeXxl"] {
+  --switch-at: 1920px;
+}
