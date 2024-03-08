@@ -313,6 +313,16 @@ export const OffsetStartAndOffsetEnd: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined size constants
+ * <div data-bedrock-columns="switchAt:sizeContent2">
+ *  <div data-bedrock-column>
+ *    <Component />
+ *  </div>
+ *  <Component />
+ * </div>
+ *
+ * // use the `--switch-at` custom property
+ * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
  * <div data-bedrock-columns style={{ "--switchAt": 45rem }}>
  *  <div data-bedrock-column>
  *    <Component />

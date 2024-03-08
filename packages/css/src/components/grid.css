@@ -76,3 +76,44 @@
 [data-bedrock-grid~="gutter:size15"] {
   --gutter: 30rem;
 }
+
+/* Min Item Widths */
+[data-bedrock-grid~="minItemWidth:sizeContent1"] {
+  --min-item-width: 20ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeContent2"] {
+  --min-item-width: 45ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeContent3"] {
+  --min-item-width: 60ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeHeader1"] {
+  --min-item-width: 20ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeHeader2"] {
+  --min-item-width: 25ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeHeader3"] {
+  --min-item-width: 35ch;
+}
+[data-bedrock-grid~="minItemWidth:sizeXxs"] {
+  --min-item-width: 240px;
+}
+[data-bedrock-grid~="minItemWidth:sizeXs"] {
+  --min-item-width: 360px;
+}
+[data-bedrock-grid~="minItemWidth:sizeSm"] {
+  --min-item-width: 480px;
+}
+[data-bedrock-grid~="minItemWidth:sizeMd"] {
+  --min-item-width: 768px;
+}
+[data-bedrock-grid~="minItemWidth:sizeLg"] {
+  --min-item-width: 1024px;
+}
+[data-bedrock-grid~="minItemWidth:sizeXl"] {
+  --min-item-width: 1440px;
+}
+[data-bedrock-grid~="minItemWidth:sizeXxl"] {
+  --min-item-width: 1920px;
+}

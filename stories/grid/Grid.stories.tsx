@@ -151,6 +151,12 @@ export const Gutter: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
+ * // Using the predefined size constants
+ * <div data-bedrock-grid="minItemWidth:sizeXs">
+ *  <Component />
+ *  <Component />
+ * </div>
+ *
  * // Use the `--min-item-width` custom property
  * <div data-bedrock-grid style="--min-item-width: 30ch">
  *   <Component />
