@@ -1,32 +1,29 @@
 import { dirname, join } from "path";
-const turbosnap = require("vite-plugin-turbosnap");
 
 import type { InlineConfig } from "vite";
+const turbosnap = require("vite-plugin-turbosnap");
 
 export const stories = [
-  "./pages/Landing.stories.mdx",
-  "./pages/introduction.stories.mdx",
-  "./pages/installation.stories.mdx",
-  "./pages/stack.stories.mdx",
-  "./pages/spacing.stories.mdx",
-  "./pages/menu.stories.mdx",
-  "./pages/hero.stories.mdx",
-  "./pages/new-arrivals.stories.mdx",
-  "../stories/**/*.stories.@(js|ts|tsx|mdx)",
-  "./pages/contributing.stories.mdx",
-  "../examples/examples.stories.mdx",
-  "../examples/web.dev.stories.mdx",
+  "./pages/Landing.mdx",
+  "./pages/introduction.mdx",
+  "./pages/installation.mdx",
+  "./pages/stack.mdx",
+  "./pages/spacing.mdx",
+  "./pages/menu.mdx",
+  "./pages/hero.mdx",
+  "./pages/new-arrivals.mdx",
+  "../stories/**/*.@(mdx|stories.@(js|ts|tsx))",
+  "./pages/contributing.mdx",
+  "../examples/examples.mdx",
+  "../examples/web.dev.mdx"
 ];
 export const addons = [
   getAbsolutePath("@storybook/addon-essentials"),
   getAbsolutePath("@chromaui/addon-visual-tests"),
+  getAbsolutePath("@storybook/addon-mdx-gfm")
 ];
 
 export const staticDirs = ["../public"];
-
-export const features = {
-  storyStoreV7: true,
-};
 
 export const viteFinal = async (config: InlineConfig, { configType }) => {
   // Turbosnap is only useful when building for production

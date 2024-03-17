@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs';
+import { Meta } from "@storybook/addon-docs";
 
 <Meta
   title="Hooks/register-resize-callback"
@@ -24,7 +24,7 @@ Before you can use the `register-resize-callback` package, you need to initializ
 For example, if you want to use the `register-resize-callback` package in a React application, you can call `init` in the `useEffect` function, like this:
 
 ```js
-import { init } from '@bedrock-layout/register-resize-callback';
+import { init } from "@bedrock-layout/register-resize-callback";
 
 useEffect(() => {
   init();
@@ -38,7 +38,7 @@ After you have initialized the `register-resize-callback` you can use the `regis
 The `registerCallback` function returns a function that can be used to unregister the callback.
 
 ```javascript
-import { registerCallback } from '@bedrock-layout/register-resize-callback';
+import { registerCallback } from "@bedrock-layout/register-resize-callback";
 
 const callback = (entry) => {
   console.log(entry);
@@ -47,23 +47,23 @@ const callback = (entry) => {
 const callbackObj = {
   current: (entry) => {
     console.log(entry);
-  }
+  },
 };
 
-const header = document.querySelector('header');
+const header = document.querySelector("header");
 
-const article = document.querySelector('article');
+const article = document.querySelector("article");
 
 //register a callback for a node
-const cleanupHeader = registerCallback(header, callback)
+const cleanupHeader = registerCallback(header, callback);
 
-const cleanupArticle = registerCallback(article, callbackObj)
+const cleanupArticle = registerCallback(article, callbackObj);
 
-callbackObj.current = (entry)=>{
-  console.log('new callback', entry);
+callbackObj.current = (entry) => {
+  console.log("new callback", entry);
 };
 
 //unregister the callback
-cleanupHeader()
-cleanupArticle()
+cleanupHeader();
+cleanupArticle();
 ```

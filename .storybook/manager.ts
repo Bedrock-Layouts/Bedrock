@@ -3,7 +3,7 @@ import "open-props/open-props.min.css";
 
 import "./manager-styles.css";
 
-import { addons } from "@storybook/addons";
+import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
 import openProps from "open-props";
 
