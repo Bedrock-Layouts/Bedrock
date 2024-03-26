@@ -25,7 +25,11 @@ type MinItemWidth =
   | "auto";
 
 export type GridBaseProps = {
+  /**
+   * @deprecated Use `gap` instead
+   */
   gutter?: SpacingOptions;
+  gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
   variant?: "grid" | "masonry";
 };
@@ -47,7 +51,7 @@ export function Grid<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const minItemWidth = () =>
     `--minItemWidth: ${

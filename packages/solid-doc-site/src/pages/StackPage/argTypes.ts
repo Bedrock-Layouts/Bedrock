@@ -2,7 +2,7 @@ import { spacing } from "@bedrock-layout/solid";
 import { ArgType } from "src/types/argType";
 
 export const argTypes: ArgType = {
-  gutter: {
+  gap: {
     description: "Sets space between each element",
     summary: "Space",
     defaultValue: "0px",

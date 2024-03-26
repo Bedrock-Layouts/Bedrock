@@ -18,7 +18,11 @@ import createDynamic, {
 } from "./typeUtils";
 
 interface ColumnsBaseProps {
+  /**
+   * @deprecated Use `gap` instead
+   */
   gutter?: SpacingOptions;
+  gap?: SpacingOptions;
   /**
    * @deprecated Use `colCount` instead.
    */
@@ -43,7 +47,7 @@ export function Columns<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const columns = () =>
     `--columns: ${convertToMaybe(Math.max(props.colCount ?? props.columns ?? 1, 1)) ?? 1};`;

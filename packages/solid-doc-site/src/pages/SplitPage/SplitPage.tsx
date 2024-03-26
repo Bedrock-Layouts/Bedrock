@@ -8,8 +8,8 @@ import { Story } from "../../components/Story";
 import { argTypes } from "./argTypes";
 import { Fraction } from "./fractions";
 import fractionCode from "./fractions?raw";
-import { Gutter } from "./gutters";
-import gutterCode from "./gutters?raw";
+import { Gap } from "./gaps";
+import gapCode from "./gaps?raw";
 import { MinItemWidth } from "./minItemWidth";
 import minItemWidthCode from "./minItemWidth?raw";
 import { Playground } from "./playground";
@@ -27,13 +27,13 @@ export function SplitPage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Split</Heading>
       <PageSection title="Use Case">
         <p>
           The <code>Split</code> component is designed to create a split layout
           based on a fractional ratio. The <code>Split</code> component will
-          enforce a standard spacing scheme through the <code>gutter</code> prop
+          enforce a standard spacing scheme through the <code>gap</code> prop
           and will optionally switch to a stack layout when the provided
           threshhold is reached.
         </p>
@@ -41,16 +41,16 @@ export function SplitPage(): JSXElement {
       <PageSection title="API">
         <ArgsTable args={argTypes} />
       </PageSection>
-      <PageSection title="gutter">
+      <PageSection title="gap">
         <p>
-          The gutter prop defines the gutter size between elements. Bedrock has
+          The gap prop defines the gap size between elements. Bedrock has
           implemented a default spacing scheme, but it can be overridden using
           the ThemeProvider provided by styled-components.
         </p>
 
-        <p>Here are the possible values for gutter by default:</p>
-        <Story code={gutterCode}>
-          <Gutter />
+        <p>Here are the possible values for gap by default:</p>
+        <Story code={gapCode}>
+          <Gap />
         </Story>
       </PageSection>
       <PageSection title="fraction">

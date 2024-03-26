@@ -6,7 +6,7 @@ import { Box } from "../../components/Box";
 
 export function ICProps(): JSXElement {
   return (
-    <Inline gutter="size7" justify="center" align="center">
+    <Inline gap="size7" justify="center" align="center">
       <Box style="height:200px;" />
       <Box />
       <Box />

@@ -8,8 +8,8 @@ import { Story } from "../../components/Story";
 import { argTypes } from "./argTypes";
 import { Basis } from "./basis";
 import minItemWidth from "./basis?raw";
-import { Gutter } from "./gutters";
-import gutterCode from "./gutters?raw";
+import { Gap } from "./gap";
+import gapCode from "./gap?raw";
 import { NoStretch } from "./noStretch";
 import noStretchCode from "./noStretch?raw";
 import { Playground } from "./playground";
@@ -26,30 +26,30 @@ export function ColumnDropPage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">ColumnDrop</Heading>
       <PageSection title="Use Case">
         <p>
           The <code>ColumnDrop</code> component is used to create a layout of
           columns that stretch to fit the space, and snaps to the next line at a
           minimum size. As columns drop down to a new row, they will be laid out
-          independantly of the column layout above. This is a common layout for
+          independently of the column layout above. This is a common layout for
           marketing sites.
         </p>
       </PageSection>
       <PageSection title="API">
         <ArgsTable args={argTypes} />
       </PageSection>
-      <PageSection title="gutter">
+      <PageSection title="gap">
         <p>
-          The gutter prop defines the gutter size between elements. Bedrock has
+          The gap prop defines the gap size between elements. Bedrock has
           implemented a default spacing scheme, but it can be overridden using
           the ThemeProvider provided by styled-components.
         </p>
 
-        <p>Here are the possible values for gutter by default:</p>
-        <Story code={gutterCode}>
-          <Gutter />
+        <p>Here are the possible values for gap by default:</p>
+        <Story code={gapCode}>
+          <Gap />
         </Story>
       </PageSection>
       <PageSection title="minItemWidth">
