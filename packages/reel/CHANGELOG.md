@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2024-03-26)
+
+### Features
+
+- add gap prop to react components ([17a1d52](https://github.com/Bedrock-Layouts/Bedrock/commit/17a1d52a54cf6d497ee5f0737abbea0a6a8ff712))
+
 ## [2.1.18](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/reel@2.1.15...@bedrock-layout/reel@2.1.18) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/reel

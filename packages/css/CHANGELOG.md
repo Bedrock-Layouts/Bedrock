@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.8.0...@bedrock-layout/css@2.10.0) (2024-03-26)
+
+### Features
+
+- add gap prop to react components ([17a1d52](https://github.com/Bedrock-Layouts/Bedrock/commit/17a1d52a54cf6d497ee5f0737abbea0a6a8ff712))
+- **css:** add --gap support in css ([b8569e3](https://github.com/Bedrock-Layouts/Bedrock/commit/b8569e33dc1e91ec421d4352ef98fd014a545243)), closes [re#2207](https://github.com/re/issues/2207)
+
 # [2.9.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.8.0...@bedrock-layout/css@2.9.0) (2024-03-08)
 
 ### Features

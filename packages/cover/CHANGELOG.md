@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2024-03-26)
+
+### Features
+
+- add gap prop to react components ([17a1d52](https://github.com/Bedrock-Layouts/Bedrock/commit/17a1d52a54cf6d497ee5f0737abbea0a6a8ff712))
+
 ## [3.3.8](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/cover@3.3.5...@bedrock-layout/cover@3.3.8) (2024-02-14)
 
 **Note:** Version bump only for package @bedrock-layout/cover

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0 (2024-03-26)
+
+### Features
+
+- add gap prop to react components ([17a1d52](https://github.com/Bedrock-Layouts/Bedrock/commit/17a1d52a54cf6d497ee5f0737abbea0a6a8ff712))
+
 # [4.3.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/grid@4.2.10...@bedrock-layout/grid@4.3.0) (2024-02-16)
 
 ### Features

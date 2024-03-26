@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.5.0...@bedrock-layout/solid-doc-site@1.6.0) (2024-03-26)
+
+### Features
+
+- **solid:** add gap support to solid components ([8b59378](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/8b59378d0ad8ff4dbd858a15f4bbeb7fc5f2b863))
+
 ## [1.5.1](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.5.0...@bedrock-layout/solid-doc-site@1.5.1) (2024-03-08)
 
 **Note:** Version bump only for package @bedrock-layout/solid-doc-site
