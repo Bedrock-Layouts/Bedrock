@@ -4,6 +4,7 @@ import React from "react";
 import { Reel } from "../../packages/reel/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { ColoredRect, colors } from "./colors";
 
 const installCode = `
@@ -30,15 +31,11 @@ const meta = {
   title: "Spacer Components/Reel",
   component: Reel,
   args: {
-    gutter: "size3",
+    gap: "size3",
     snapType: "mandatory",
   },
   argTypes: {
-    gutter: {
-      control: {
-        type: "text",
-      },
-    },
+    ...argTypes,
     as: {
       control: "none",
     },
@@ -78,8 +75,8 @@ type Story = StoryObj<typeof Reel>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -90,51 +87,51 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-reel='gutter:size3'>
+ * <div data-bedrock-reel='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-reel style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-reel style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Reel gutter="size3">
+ * <Reel gap="size3">
  *  <Component />
  *  <Component />
  * </Reel>
  *
  * // Or you can use a css value directly
- * <Reel gutter="3ch">
+ * <Reel gap="3ch">
  *  <Component />
  *  <Component />
  * </Reel>
  *
  * // or you can use a custom property
- * <Reel gutter="--custom-size-4">
+ * <Reel gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Reel>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
       <Stack
-        gutter="size5"
+        gap="size5"
         style={{
           maxInlineSize: "47ch",
           border: "1px solid black",
           padding: "1rem",
         }}
       >
-        <strong>Custom gutter as number (20)</strong>
-        <Reel snapType="none" gutter={20}>
+        <strong>Custom gap as number (20)</strong>
+        <Reel snapType="none" gap={20}>
           {colors.map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
@@ -143,8 +140,8 @@ export const Gutter: Story = {
             );
           })}
         </Reel>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Reel snapType="none" gutter="3ch">
+        <strong>Custom gap as string ("3ch")</strong>
+        <Reel snapType="none" gap="3ch">
           {colors.map((color, ind) => {
             return (
               <ColoredRect key={ind} bgColor={color}>
@@ -154,10 +151,10 @@ export const Gutter: Story = {
           })}
         </Reel>
 
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Reel gutter={gutter} snapType="none">
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Reel gap={gap} snapType="none">
               {colors.map((color) => {
                 return (
                   <ColoredRect key={color} bgColor={color}>
@@ -197,9 +194,9 @@ export const Gutter: Story = {
 export const SnapType: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>none</strong>
-        <Reel snapType="none" gutter="size3">
+        <Reel snapType="none" gap="size3">
           {colors.map((color, i) => {
             return (
               <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>
@@ -209,7 +206,7 @@ export const SnapType: Story = {
           })}
         </Reel>
         <strong>mandatory</strong>
-        <Reel snapType="mandatory" gutter="size3">
+        <Reel snapType="mandatory" gap="size3">
           {colors.map((color, i) => {
             return (
               <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>
@@ -219,7 +216,7 @@ export const SnapType: Story = {
           })}
         </Reel>
         <strong>proximity</strong>
-        <Reel snapType="proximity" gutter="size3">
+        <Reel snapType="proximity" gap="size3">
           {colors.map((color, i) => {
             return (
               <ColoredRect key={i} bgColor={color} style={{ minWidth: "70vw" }}>

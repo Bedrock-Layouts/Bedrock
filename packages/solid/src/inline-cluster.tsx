@@ -28,7 +28,11 @@ const alignMap = {
 export interface InlineClusterBaseProps {
   justify?: keyof typeof justifyMap;
   align?: keyof typeof alignMap;
-  gutter: SpacingOptions;
+  /**
+   * @deprecated Use `gap` instead
+   */
+  gutter?: SpacingOptions;
+  gap?: SpacingOptions;
 }
 
 export type InlineClusterProps<T extends ValidConstructor = "div"> =
@@ -48,7 +52,7 @@ export function InlineCluster<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const justify = () =>
     props.justify !== undefined ? justifyMap[props.justify] : undefined;

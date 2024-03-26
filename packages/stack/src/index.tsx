@@ -12,8 +12,13 @@ import React from "react";
 export interface StackProps {
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
 
   /**
    * The `align` prop can be used to specify the inline alignment of the children.
@@ -34,14 +39,14 @@ function createAttributeString(
  * The `Stack` is designed to literally stack items on top of each other while maintaining a consistent gutter between each item.
  */
 export const Stack = forwardRefWithAs<"div", StackProps>(function Stack(
-  { as: Component = "div", gutter, align, style = {}, ...props },
+  { as: Component = "div", gutter, gap, align, style = {}, ...props },
   ref,
 ) {
   const theme = useTheme();
 
   const alignValue = createAttributeString("align", align);
 
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
   const attributes = [alignValue].filter(Boolean).join(" ");
 

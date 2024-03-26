@@ -29,8 +29,13 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 export type SplitProps = {
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
   /**
    * Sets the fractional ratio of the split.
    */
@@ -58,6 +63,7 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
     as: Component = "div",
     fraction,
     gutter,
+    gap,
     minItemWidth,
     switchAt,
     style = {},
@@ -71,7 +77,7 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
       ? `fraction:${fraction}`
       : "";
 
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
   const maybeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
 

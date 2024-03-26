@@ -8,8 +8,8 @@ import { Story } from "../../components/Story";
 import { Align } from "./align";
 import alignCode from "./align?raw";
 import { argTypes } from "./argTypes";
-import { Gutter } from "./gutters";
-import gutterCode from "./gutters?raw";
+import { Gap } from "./gaps";
+import gapCode from "./gaps?raw";
 import { Playground } from "./playground";
 import playgroundCode from "./playground?raw";
 
@@ -23,27 +23,27 @@ export function StackPage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Stack</Heading>
       <PageSection title="Use Case">
         <p>
           The Stack is designed to literally 'stack' items on top of each other
-          while maintaining a consistent gutter between each item.
+          while maintaining a consistent gap between each item.
         </p>
       </PageSection>
       <PageSection title="API">
         <ArgsTable args={argTypes} />
       </PageSection>
-      <PageSection title="gutter">
+      <PageSection title="gap">
         <p>
-          The gutter prop defines the gutter size between elements. Bedrock has
+          The gap prop defines the gap size between elements. Bedrock has
           implemented a default spacing scheme, but it can be overridden using
           the ThemeProvider provided by styled-components.
         </p>
 
-        <p>Here are the possible values for gutter by default:</p>
-        <Story code={gutterCode}>
-          <Gutter />
+        <p>Here are the possible values for gap by default:</p>
+        <Story code={gapCode}>
+          <Gap />
         </Story>
       </PageSection>
       <PageSection title="align">

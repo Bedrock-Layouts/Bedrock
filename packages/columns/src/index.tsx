@@ -15,8 +15,13 @@ import React, { CSSProperties } from "react";
 export type ColumnsProps = {
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
   /**
    * Sets the number of columns.
    */
@@ -41,6 +46,7 @@ export type ColumnsProps = {
 export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   {
     as: Component = "div",
+    gap,
     gutter,
     columns = 1,
     colCount,
@@ -51,7 +57,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   ref,
 ) {
   const theme = useTheme();
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
   const maybeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
   const safeColumns = convertToMaybe(Math.max(colCount ?? columns, 1)) ?? 1;
 

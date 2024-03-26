@@ -19,9 +19,14 @@ export interface InlineClusterProps {
    */
   align?: "start" | "end" | "center" | "stretch";
   /**
-   * The `gutter` prop can be used to specify the spacing between the children.
+   * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
 }
 
 function createAttributeString(
@@ -41,14 +46,22 @@ function createAttributeString(
  */
 export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
   function InlineCluster(
-    { as: Component = "div", justify, align, style = {}, gutter, ...props },
+    {
+      as: Component = "div",
+      justify,
+      align,
+      style = {},
+      gutter,
+      gap,
+      ...props
+    },
     ref,
   ) {
     const theme = useTheme();
     const justifyValue = createAttributeString("justify", justify);
     const alignValue = createAttributeString("align", align);
 
-    const maybeGutter = getSafeGutter(theme, gutter);
+    const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
     const attributes = [justifyValue, alignValue].filter(Boolean).join(" ");
 

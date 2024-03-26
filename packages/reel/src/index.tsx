@@ -16,8 +16,13 @@ export type ReelProps = {
   snapType?: "none" | "proximity" | "mandatory";
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
 };
 
 function createAttributeString(
@@ -36,11 +41,11 @@ function createAttributeString(
  * snap points.
  */
 export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
-  { as: Component = "div", snapType, gutter, style = {}, ...props },
+  { as: Component = "div", snapType, gutter, gap, style = {}, ...props },
   ref,
 ) {
   const theme = useTheme();
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
   const attributeString = [createAttributeString("snapType", snapType)]
     .filter(Boolean)

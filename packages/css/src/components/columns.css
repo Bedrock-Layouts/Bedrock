@@ -7,12 +7,13 @@
 */
 
 [data-bedrock-columns] {
-  --safeColumns: var(--col-count, var(--columns, 1));
+  --gap: initial;
   --gutter: initial;
   --switchAt: initial;
+  --safeColumns: var(--col-count, var(--columns, 1));
   --numberOfGutters: calc(var(--safeColumns) - 1);
   --largestWidth: calc(
-    100% - max(var(--gutter, 0px) * var(--numberOfGutters), 0px)
+    100% - max(var(--gap, var(--gutter, 0px)) * var(--numberOfGutters), 0px)
   );
   --columnWidth: calc(var(--largestWidth) / var(--safeColumns));
   --basis: calc(
@@ -21,7 +22,7 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter, 0);
+  gap: var(--gap, var(--gutter, 0px));
 }
 
 [data-bedrock-columns][data-bedrock-columns] > * {
@@ -84,6 +85,59 @@
 }
 [data-bedrock-columns~="gutter:size15"] {
   --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-bedrock-columns~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-bedrock-columns~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-bedrock-columns~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-bedrock-columns~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-bedrock-columns~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-bedrock-columns~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-bedrock-columns~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-bedrock-columns~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-bedrock-columns~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-bedrock-columns~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-bedrock-columns~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-bedrock-columns~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-bedrock-columns~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-bedrock-columns~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-bedrock-columns~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-bedrock-columns~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-bedrock-columns~="gap:size15"] {
+  --gap: 30rem;
 }
 
 /* Switch at Widths */
@@ -171,7 +225,7 @@
 :is([data-bedrock-column][style*="--span"], [data-bedrock-column*="span"]) {
   --maxSpan: min(var(--span, 1), var(--safeColumns));
   --guttersToAdd: calc(var(--maxSpan, 1) - 1);
-  --gutterSize: calc(var(--gutter, 0px) * var(--guttersToAdd));
+  --gutterSize: calc(var(--gap, var(--gutter, 0px)) * var(--guttersToAdd));
   --columnWidth: calc(
     ((var(--largestWidth) / var(--safeColumns)) * var(--maxSpan, 1)) +
       var(--gutterSize)
@@ -224,7 +278,9 @@
     var(--offset-start, var(--offsetStart, 1)),
     var(--safeColumns)
   );
-  --marginOffsetStartGutters: calc(var(--gutter, 0px) * var(--maxOffsetStart));
+  --marginOffsetStartGutters: calc(
+    var(--gap, var(--gutter, 0px)) * var(--maxOffsetStart)
+  );
   --marginOffsetStart: calc(
     (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetStart, 1) +
       var(--marginOffsetStartGutters)
@@ -279,7 +335,9 @@
     var(--offset-end, var(--offsetEnd, 1)),
     var(--safeColumns)
   );
-  --marginOffsetEndGutters: calc(var(--gutter, 0px) * var(--maxOffsetEnd));
+  --marginOffsetEndGutters: calc(
+    var(--gap, var(--gutter, 0px)) * var(--maxOffsetEnd)
+  );
   --marginOffsetEnd: calc(
     (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetEnd, 1) +
       var(--marginOffsetEndGutters)

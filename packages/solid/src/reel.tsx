@@ -12,7 +12,11 @@ import createDynamic, {
 
 export interface ReelBaseProps {
   snapType?: "none" | "proximity" | "mandatory";
+  /**
+   * @deprecated Use `gap` instead
+   */
   gutter?: SpacingOptions;
+  gap?: SpacingOptions;
 }
 
 export type ReelProps<T extends ValidConstructor = "div"> =
@@ -31,7 +35,7 @@ export function Reel<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const snapType = () => {
     switch (props.snapType) {

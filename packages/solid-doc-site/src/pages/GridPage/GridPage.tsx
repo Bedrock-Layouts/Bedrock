@@ -6,8 +6,8 @@ import { Heading } from "../../components/Heading";
 import { PageSection } from "../../components/PageSection";
 import { Story } from "../../components/Story";
 import { argTypes } from "./argTypes";
-import { Gutter } from "./gutters";
-import gutterCode from "./gutters?raw";
+import { Gap } from "./gaps";
+import gapCode from "./gaps?raw";
 import { MasonaryGrid } from "./masonaryGrid";
 import masonaryGridCode from "./masonaryGrid?raw";
 import { MinItemWidth } from "./minItemWidth";
@@ -25,7 +25,7 @@ export function GridPage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Grid</Heading>
       <PageSection title="Use Case">
         <p>
@@ -37,16 +37,16 @@ export function GridPage(): JSXElement {
       <PageSection title="API">
         <ArgsTable args={argTypes} />
       </PageSection>
-      <PageSection title="gutter">
+      <PageSection title="gap">
         <p>
-          The gutter prop defines the gutter size between elements. Bedrock has
+          The gap prop defines the gap size between elements. Bedrock has
           implemented a default spacing scheme, but it can be overridden using
           the ThemeProvider provided by styled-components.
         </p>
 
-        <p>Here are the possible values for gutter by default:</p>
-        <Story code={gutterCode}>
-          <Gutter />
+        <p>Here are the possible values for gap by default:</p>
+        <Story code={gapCode}>
+          <Gap />
         </Story>
       </PageSection>
       <PageSection title="minItemWidth">

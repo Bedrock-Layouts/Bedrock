@@ -47,7 +47,11 @@ export interface InlineBaseProps {
   switchAt?: number | CSSLength | SizesOptions;
   justify?: keyof typeof justifyMap;
   align?: keyof typeof alignMap;
+  /**
+   * @deprecated Use `gap` instead
+   */
   gutter?: SpacingOptions;
+  gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
 }
 
@@ -68,7 +72,7 @@ export function Inline<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"};`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const minItemWidth = () =>
     props.minItemWidth

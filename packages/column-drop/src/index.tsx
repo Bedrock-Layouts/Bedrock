@@ -20,8 +20,13 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 export type ColumnDropProps = {
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
   /**
    * Sets the minimum width of each child.
    * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
@@ -46,6 +51,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     {
       as: Component = "div",
       gutter,
+      gap,
       style = {},
       minItemWidth,
       // TODO: Remove Boolean type in next major version
@@ -55,7 +61,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     ref,
   ) {
     const theme = useTheme();
-    const maybeGutter = getSafeGutter(theme, gutter);
+    const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
     const attributeValue =
       noStretchedColumns === true ? "no-stretched-columns" : "";

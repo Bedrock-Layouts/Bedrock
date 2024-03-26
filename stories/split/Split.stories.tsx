@@ -4,6 +4,7 @@ import React from "react";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Split, SplitProps } from "../../packages/split/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
@@ -30,7 +31,13 @@ const meta = {
   title: "Spacer Components/Split",
   component: Split,
   args: {
-    gutter: "size3",
+    gap: "size3",
+  },
+  argTypes: {
+    ...argTypes,
+    as: {
+      control: "none",
+    },
   },
   render: (args) => {
     return (
@@ -70,8 +77,8 @@ type Story = StoryObj<typeof Split>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -82,56 +89,56 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-split='gutter:size3'>
+ * <div data-bedrock-split='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-split style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-split style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Split gutter="size3">
+ * <Split gap="size3">
  *  <Component />
  *  <Component />
  * </Split>
  *
  * // Or you can use a css value directly
- * <Split gutter="3ch">
+ * <Split gap="3ch">
  *  <Component />
  *  <Component />
  * </Split>
  *
  * // or you can use a custom property
- * <Split gutter="--custom-size-4">
+ * <Split gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Split>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Split gutter={20} fraction="1/2">
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Split gap={20} fraction="1/2">
           <Component />
           <Component />
         </Split>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Split gutter="3ch" fraction="1/2">
+        <strong>Custom gap as string ("3ch")</strong>
+        <Split gap="3ch" fraction="1/2">
           <Component />
           <Component />
         </Split>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Split gutter={gutter} fraction="1/2">
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Split gap={gap} fraction="1/2">
               <Component />
               <Component />
             </Split>
@@ -166,7 +173,7 @@ export const Gutter: Story = {
 export const Fraction: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         {(
           [
             "1/4",
@@ -180,7 +187,7 @@ export const Fraction: Story = {
         ).map((fraction) => (
           <React.Fragment key={fraction}>
             <strong>{fraction}</strong>
-            <Split gutter="size3" fraction={fraction}>
+            <Split gap="size3" fraction={fraction}>
               <Component />
               <Component />
             </Split>
@@ -223,14 +230,14 @@ export const Fraction: Story = {
 export const MinItemWidth: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>With fraction of 2/3 and minItemWidth of 40ch</strong>
-        <Split gutter="size3" fraction="2/3" minItemWidth="40ch">
+        <Split gap="size3" fraction="2/3" minItemWidth="40ch">
           <Component />
           <Component />
         </Split>
         <strong>With auto-start and minItemWidth of 30ch</strong>
-        <Split gutter="size3" fraction="auto-start" minItemWidth="30ch">
+        <Split gap="size3" fraction="auto-start" minItemWidth="30ch">
           <Component />
           <Component />
         </Split>
@@ -274,16 +281,16 @@ export const MinItemWidth: Story = {
 export const SwitchAt: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>With fraction: 2/3</strong>
-        <Split fraction="2/3" gutter="size2" switchAt="45rem">
+        <Split fraction="2/3" gap="size2" switchAt="45rem">
           <Component />
           <Component />
         </Split>
         <strong>With auto-start with 20rem minItemWidth</strong>
         <Split
           fraction="auto-start"
-          gutter="size2"
+          gap="size2"
           switchAt="45rem"
           minItemWidth="20rem"
         >

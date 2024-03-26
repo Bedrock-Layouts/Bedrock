@@ -10,8 +10,8 @@ import { ColumnPlayground } from "./column-playground";
 import columnPlaygroundCode from "./column-playground?raw";
 import { ColumnsExample } from "./columns";
 import columnsCode from "./columns?raw";
-import { Gutter } from "./gutters";
-import gutterCode from "./gutters?raw";
+import { Gap } from "./gaps";
+import gapCode from "./gaps?raw";
 import { Offset } from "./offset";
 import offsetCode from "./offset?raw";
 import { Playground } from "./playground";
@@ -40,7 +40,7 @@ export function ColumnsPage(): JSXElement {
   const [colProps, setColProps] = createSignal(columnInitial);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Columns</Heading>
       <PageSection title="Use Case">
         <p>
@@ -68,16 +68,16 @@ export function ColumnsPage(): JSXElement {
         </Story>
       </PageSection>
 
-      <PageSection title="gutter">
+      <PageSection title="gap">
         <p>
-          The gutter prop defines the gutter size between elements. Bedrock has
+          The gap prop defines the gap size between elements. Bedrock has
           implemented a default spacing scheme, but it can be overridden using
           the ThemeProvider provided by styled-components.
         </p>
 
-        <p>Here are the possible values for gutter by default:</p>
-        <Story code={gutterCode}>
-          <Gutter />
+        <p>Here are the possible values for gap by default:</p>
+        <Story code={gapCode}>
+          <Gap />
         </Story>
       </PageSection>
 

@@ -31,7 +31,7 @@ const meta = {
   title: "Spacer Components/Columns",
   component: Columns,
   args: {
-    gutter: "size3",
+    gap: "size3",
     colCount: 4,
   },
   argTypes: columnsArgTypes,
@@ -78,8 +78,8 @@ type Story = StoryObj<typeof Columns>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -90,62 +90,62 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-colCount='gutter:size3'>
+ * <div data-bedrock-colCount='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-columns style="--gutter: 3ch">
+ * <div data-bedrock-columns style="--gap: 3ch">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Columns gutter="size3">
+ * <Columns gap="size3">
  *  <Component />
  *  <Component />
  * </Columns>
  *
  * // Or you can use a css value directly
- * <Columns gutter="3ch">
+ * <Columns gap="3ch">
  *  <Component />
  *  <Component />
  * </Columns>
  *
  * // or you can use a custom property
- * <Columns gutter="--custom-size-4">
+ * <Columns gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Columns>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Columns gutter={20} colCount={4}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Columns gap={20} colCount={4}>
           <Component />
           <Component />
           <Component />
           <Component />
           <Component />
         </Columns>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Columns gutter="3ch" colCount={4}>
+        <strong>Custom gap as string ("3ch")</strong>
+        <Columns gap="3ch" colCount={4}>
           <Component />
           <Component />
           <Component />
           <Component />
           <Component />
         </Columns>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Columns gutter={gutter} colCount={4}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Columns gap={gap} colCount={4}>
               <Component />
               <Component />
               <Component />
@@ -181,7 +181,7 @@ export const Gutter: Story = {
 export const ColumnsProp: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" colCount={4}>
+      <Columns gap="size3" colCount={4}>
         <Component />
         <Component />
         <Component />
@@ -233,7 +233,7 @@ export const ColumnsProp: Story = {
 export const Span: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" colCount={4}>
+      <Columns gap="size3" colCount={4}>
         <Component />
         <Component />
         <Column span={3}>
@@ -290,7 +290,7 @@ export const Span: Story = {
 export const OffsetStartAndOffsetEnd: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" colCount={5}>
+      <Columns gap="size3" colCount={5}>
         <Component />
         <Component />
         <Column span={2} offsetStart={1}>
@@ -345,7 +345,7 @@ export const OffsetStartAndOffsetEnd: Story = {
 export const SwitchAt: Story = {
   render: () => {
     return (
-      <Columns gutter="size3" colCount={3} switchAt="45rem">
+      <Columns gap="size3" colCount={3} switchAt="45rem">
         <Component />
         <Component />
         <Component />

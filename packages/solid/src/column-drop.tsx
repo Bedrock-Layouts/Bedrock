@@ -26,7 +26,11 @@ type MinItemWidth =
   | "auto";
 
 export interface ColumnDropBaseProps {
+  /**
+   * @deprecated Use `gap` instead
+   */
   gutter?: SpacingOptions;
+  gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
   noStretchedColumns?: boolean;
 }
@@ -58,7 +62,7 @@ export function ColumnDrop<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const minItemWidth = () =>
     `--minItemWidth: ${getSafeMinItemWidth(theme, props.minItemWidth)}`;
