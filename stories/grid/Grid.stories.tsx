@@ -66,8 +66,8 @@ type Story = StoryObj<typeof Grid>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -78,61 +78,61 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-grid='gutter:size3'>
+ * <div data-bedrock-grid='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-grid style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-grid style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Grid gutter="size3">
+ * <Grid gap="size3">
  *  <Component />
  *  <Component />
  * </Grid>
  *
  * // Or you can use a css value directly
- * <Grid gutter="3ch">
+ * <Grid gap="3ch">
  *  <Component />
  *  <Component />
  * </Grid>
  *
  * // or you can use a custom property
- * <Grid gutter="--custom-size-4">
+ * <Grid gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Grid>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   args: {
     minItemWidth: "20rem",
   },
   render: (args) => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Grid gutter={20} {...args}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Grid gap={20} {...args}>
           <Component />
           <Component />
           <Component />
         </Grid>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Grid gutter="3ch" {...args}>
+        <strong>Custom gap as string ("3ch")</strong>
+        <Grid gap="3ch" {...args}>
           <Component />
           <Component />
           <Component />
         </Grid>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Grid gutter={gutter} {...args}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Grid gap={gap} {...args}>
               <Component />
               <Component />
               <Component />

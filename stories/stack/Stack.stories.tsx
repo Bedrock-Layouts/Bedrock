@@ -86,8 +86,8 @@ type Story = StoryObj<typeof Stack>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -98,56 +98,56 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-stack='gutter:size3'>
+ * <div data-bedrock-stack='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-stack style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-stack style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Stack gutter="size3">
+ * <Stack gap="size3">
  *  <Component />
  *  <Component />
  * </Stack>
  *
  * // Or you can use a css value directly
- * <Stack gutter="3ch">
+ * <Stack gap="3ch">
  *  <Component />
  *  <Component />
  * </Stack>
  *
  * // or you can use a custom property
- * <Stack gutter="--custom-size-4">
+ * <Stack gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Stack>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Stack gutter={20}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Stack gap={20}>
           <Component />
           <Component />
         </Stack>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Stack gutter="3ch">
+        <strong>Custom gap as string ("3ch")</strong>
+        <Stack gap="3ch">
           <Component />
           <Component />
         </Stack>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Stack gutter={gutter}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Stack gap={gap}>
               <Component />
               <Component />
             </Stack>
@@ -181,27 +181,27 @@ export const Gutter: Story = {
 export const Align: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <Stack align="start" gutter="size7">
+        <Stack align="start" gap="size7">
           <Component />
           <Component />
           <Component />
         </Stack>
         <strong>end</strong>
-        <Stack align="end" gutter="size7">
+        <Stack align="end" gap="size7">
           <Component />
           <Component />
           <Component />
         </Stack>
         <strong>center</strong>
-        <Stack align="center" gutter="size7">
+        <Stack align="center" gap="size7">
           <Component />
           <Component />
           <Component />
         </Stack>
         <strong>stretch</strong>
-        <Stack align="stretch" gutter="size7">
+        <Stack align="stretch" gap="size7">
           <Component />
           <Component />
           <Component />

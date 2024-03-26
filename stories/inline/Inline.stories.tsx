@@ -61,8 +61,8 @@ type Story = StoryObj<typeof Inline>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -73,60 +73,60 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-inline='gutter:size3'>
+ * <div data-bedrock-inline='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-inline style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-inline style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <Inline gutter="size3">
+ * <Inline gap="size3">
  *  <Component />
  *  <Component />
  * </Inline>
  *
  * // Or you can use a css value directly
- * <Inline gutter="3ch">
+ * <Inline gap="3ch">
  *  <Component />
  *  <Component />
  * </Inline>
  *
  * // or you can use a custom property
- * <Inline gutter="--custom-size-4">
+ * <Inline gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </Inline>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Inline gutter={20}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Inline gap={20}>
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Inline gutter="3ch">
+        <strong>Custom gap as string ("3ch")</strong>
+        <Inline gap="3ch">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Inline gutter={gutter}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Inline gap={gap}>
               <Component />
               <Component />
               <Component />
@@ -162,37 +162,37 @@ export const Gutter: Story = {
 export const Justify: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <Inline justify="start" gutter="size7">
+        <Inline justify="start" gap="size7">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>end</strong>
-        <Inline justify="end" gutter="size7">
+        <Inline justify="end" gap="size7">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>center</strong>
-        <Inline justify="center" gutter="size7">
+        <Inline justify="center" gap="size7">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>space-around</strong>
-        <Inline justify="space-around" gutter="size7">
+        <Inline justify="space-around" gap="size7">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>space-between</strong>
-        <Inline justify="space-between" gutter="size7">
+        <Inline justify="space-between" gap="size7">
           <Component />
           <Component />
           <Component />
@@ -226,27 +226,27 @@ export const Justify: Story = {
 export const Align: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <Inline align="start" gutter="size7">
+        <Inline align="start" gap="size7">
           <Component style={{ height: 200 }} />
           <Component />
           <Component />
         </Inline>
         <strong>end</strong>
-        <Inline align="end" gutter="size7">
+        <Inline align="end" gap="size7">
           <Component style={{ height: 200 }} />
           <Component />
           <Component />
         </Inline>
         <strong>center</strong>
-        <Inline align="center" gutter="size7">
+        <Inline align="center" gap="size7">
           <Component style={{ height: 200 }} />
           <Component />
           <Component />
         </Inline>
         <strong>stretch</strong>
-        <Inline align="stretch" gutter="size7">
+        <Inline align="stretch" gap="size7">
           <Component style={{ height: 200 }} />
           <Component />
           <Component />
@@ -279,30 +279,30 @@ export const Align: Story = {
 export const Stretch: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <Inline gutter="size3" stretch="start">
+        <Inline gap="size3" stretch="start">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>end</strong>
-        <Inline gutter="size3" stretch="end">
+        <Inline gap="size3" stretch="end">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>all</strong>
-        <Inline gutter="size3" stretch="all">
+        <Inline gap="size3" stretch="all">
           <Component />
           <Component />
           <Component />
           <Component />
         </Inline>
         <strong>2 index</strong>
-        <Inline gutter="size3" stretch={2}>
+        <Inline gap="size3" stretch={2}>
           <Component />
           <Component />
           <Component />
@@ -351,7 +351,7 @@ export const Stretch: Story = {
 export const MinItemWidth: Story = {
   render: () => {
     return (
-      <Inline gutter="size3" minItemWidth={150}>
+      <Inline gap="size3" minItemWidth={150}>
         <Component />
         <Component />
         <Component />
@@ -395,7 +395,7 @@ export const MinItemWidth: Story = {
 export const SwitchAt: Story = {
   render: () => {
     return (
-      <Inline gutter="size3" switchAt="45rem" minItemWidth={100}>
+      <Inline gap="size3" switchAt="45rem" minItemWidth={100}>
         <Component />
         <Component />
         <Component />

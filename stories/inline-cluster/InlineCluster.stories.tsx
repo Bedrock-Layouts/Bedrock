@@ -61,8 +61,8 @@ type Story = StoryObj<typeof InlineCluster>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -73,60 +73,60 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-inline-cluster='gutter:size3'>
+ * <div data-bedrock-inline-cluster='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-inline-cluster style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-inline-cluster style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <InlineCluster gutter="size3">
+ * <InlineCluster gap="size3">
  *  <Component />
  *  <Component />
  * </InlineCluster>
  *
  * // Or you can use a css value directly
- * <InlineCluster gutter="3ch">
+ * <InlineCluster gap="3ch">
  *  <Component />
  *  <Component />
  * </InlineCluster>
  *
  * // or you can use a custom property
- * <InlineCluster gutter="--custom-size-4">
+ * <InlineCluster gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </InlineCluster>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <InlineCluster gutter={20}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <InlineCluster gap={20}>
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <InlineCluster gutter="3ch">
+        <strong>Custom gap as string ("3ch")</strong>
+        <InlineCluster gap="3ch">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <InlineCluster gutter={gutter}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <InlineCluster gap={gap}>
               <Component widthLevel={5} />
               <Component widthLevel={0.5} />
               <Component />
@@ -162,37 +162,37 @@ export const Gutter: Story = {
 export const Justify: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <InlineCluster justify="start" gutter="size7">
+        <InlineCluster justify="start" gap="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
         <strong>end</strong>
-        <InlineCluster justify="end" gutter="size7">
+        <InlineCluster justify="end" gap="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
         <strong>center</strong>
-        <InlineCluster justify="center" gutter="size7">
+        <InlineCluster justify="center" gap="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
         <strong>space-around</strong>
-        <InlineCluster justify="space-around" gutter="size7">
+        <InlineCluster justify="space-around" gap="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
           <Component widthLevel={4} />
         </InlineCluster>
         <strong>space-between</strong>
-        <InlineCluster justify="space-between" gutter="size7">
+        <InlineCluster justify="space-between" gap="size7">
           <Component widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
@@ -226,27 +226,27 @@ export const Justify: Story = {
 export const Align: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <strong>start</strong>
-        <InlineCluster align="start" gutter="size7">
+        <InlineCluster align="start" gap="size7">
           <Component style={{ height: 200 }} widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
         </InlineCluster>
         <strong>end</strong>
-        <InlineCluster align="end" gutter="size7">
+        <InlineCluster align="end" gap="size7">
           <Component style={{ height: 200 }} widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
         </InlineCluster>
         <strong>center</strong>
-        <InlineCluster align="center" gutter="size7">
+        <InlineCluster align="center" gap="size7">
           <Component style={{ height: 200 }} widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />
         </InlineCluster>
         <strong>stretch</strong>
-        <InlineCluster align="stretch" gutter="size7">
+        <InlineCluster align="stretch" gap="size7">
           <Component style={{ height: 200 }} widthLevel={5} />
           <Component widthLevel={0.5} />
           <Component />

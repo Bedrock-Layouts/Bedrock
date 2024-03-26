@@ -168,13 +168,13 @@ export const MinHeight: Story = {
     top: <span>I am on top.</span>,
     bottom: <span>I am on bottom.</span>,
     minHeight: "500px",
-    gutter: "size2",
+    gap: "size2",
   },
 };
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -185,7 +185,7 @@ export const MinHeight: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-cover='gutter:size3'>
+ * <div data-bedrock-cover='gap:size3'>
  *  <span>I am on top.</span>
  *  <div data-bedrock-cover-centered>
  *    <Component />
@@ -194,7 +194,7 @@ export const MinHeight: Story = {
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-cover style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-cover style={{ "--gap": "3ch" }}>
  *  <span>I am on top.</span>
  *  <div data-bedrock-cover-centered>
  *    <Component />
@@ -203,24 +203,24 @@ export const MinHeight: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover gutter="size3" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ * <Cover gap="size3" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
  *  <Component />
  * </Cover>
  *
  * // Or you can use a css value directly
- * <Cover gutter="3ch" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ * <Cover gap="3ch" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
  *  <Component />
  * </Cover>
  *
  * // or you can use a custom property
- * <Cover gutter="--custom-size-4" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ * <Cover gap="--custom-size-4" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
  *  <Component />
  * </Cover>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   args: {
     top: <span>I am on top.</span>,
     bottom: <span>I am on bottom.</span>,
@@ -228,19 +228,19 @@ export const Gutter: Story = {
   },
   render: (args) => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <Cover gutter={20} {...args}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <Cover gap={20} {...args}>
           <div>I am a child.</div>
         </Cover>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <Cover gutter="3ch" {...args}>
+        <strong>Custom gap as string ("3ch")</strong>
+        <Cover gap="3ch" {...args}>
           <div>I am a child.</div>
         </Cover>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <Cover gutter={gutter} {...args}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <Cover gap={gap} {...args}>
               <div>I am a child.</div>
             </Cover>
           </React.Fragment>

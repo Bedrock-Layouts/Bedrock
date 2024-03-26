@@ -69,8 +69,8 @@ type Story = StoryObj<typeof ColumnDrop>;
 export const Playground: Story = {};
 
 /**
- * The `gutter` prop defines the gutter size between elements.
- * Ultimately, the space is controlled by setting the `--gutter` CSS variable.
+ * The `gap` prop defines the gap size between elements.
+ * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
  * #### Default values
  * Bedrock has implemented a default spacing scheme,
@@ -81,60 +81,60 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-column-drop='gutter:size3'>
+ * <div data-bedrock-column-drop='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-column-drop style={{ "--gutter": "3ch" }}>
+ * <div data-bedrock-column-drop style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <ColumnDrop gutter="size3">
+ * <ColumnDrop gap="size3">
  *  <Component />
  *  <Component />
  * </ColumnDrop>
  *
  * // Or you can use a css value directly
- * <ColumnDrop gutter="3ch">
+ * <ColumnDrop gap="3ch">
  *  <Component />
  *  <Component />
  * </ColumnDrop>
  *
  * // or you can use a custom property
- * <ColumnDrop gutter="--custom-size-4">
+ * <ColumnDrop gap="--custom-size-4">
  *  <Component />
  *  <Component />
  * </ColumnDrop>
  * ```
  *
- * Here are the possible values for `gutter` by default:
+ * Here are the possible values for `gap` by default:
  */
-export const Gutter: Story = {
+export const gap: Story = {
   render: () => {
     return (
-      <Stack gutter="size5">
-        <strong>Custom gutter as number (20)</strong>
-        <ColumnDrop gutter={20}>
+      <Stack gap="size5">
+        <strong>Custom gap as number (20)</strong>
+        <ColumnDrop gap={20}>
           <Component />
           <Component />
           <Component />
           <Component />
         </ColumnDrop>
-        <strong>Custom gutter as string ("3ch")</strong>
-        <ColumnDrop gutter="3ch">
+        <strong>Custom gap as string ("3ch")</strong>
+        <ColumnDrop gap="3ch">
           <Component />
           <Component />
           <Component />
           <Component />
         </ColumnDrop>
-        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gutter) => (
-          <React.Fragment key={gutter}>
-            <strong>{gutter}</strong>
-            <ColumnDrop gutter={gutter}>
+        {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
+          <React.Fragment key={gap}>
+            <strong>{gap}</strong>
+            <ColumnDrop gap={gap}>
               <Component />
               <Component />
               <Component />
@@ -181,7 +181,7 @@ export const Gutter: Story = {
 export const MinItemWidth: Story = {
   render: () => {
     return (
-      <ColumnDrop gutter="size3" minItemWidth="15rem">
+      <ColumnDrop gap="size3" minItemWidth="15rem">
         <Component />
         <Component />
         <Component />
@@ -220,7 +220,7 @@ export const MinItemWidth: Story = {
 export const NoStretchedColumns: Story = {
   render: () => {
     return (
-      <ColumnDrop noStretchedColumns gutter="size3" minItemWidth="15rem">
+      <ColumnDrop noStretchedColumns gap="size3" minItemWidth="15rem">
         <Component />
         <Component />
         <Component />
