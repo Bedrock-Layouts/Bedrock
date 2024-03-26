@@ -4,6 +4,7 @@ import React from "react";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Split, SplitProps } from "../../packages/split/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
@@ -30,7 +31,13 @@ const meta = {
   title: "Spacer Components/Split",
   component: Split,
   args: {
-    gutter: "size3",
+    gap: "size3",
+  },
+  argTypes: {
+    ...argTypes,
+    as: {
+      control: "none",
+    },
   },
   render: (args) => {
     return (

@@ -31,7 +31,7 @@ const meta = {
   title: "Spacer Components/Grid",
   component: Grid,
   args: {
-    gutter: "size3",
+    gap: "size3",
     minItemWidth: "15rem",
   },
   argTypes,

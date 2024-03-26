@@ -31,7 +31,7 @@ const meta = {
   title: "Spacer Components/InlineCluster",
   component: InlineCluster,
   args: {
-    gutter: "size3",
+    gap: "size3",
   },
   argTypes,
   render: (args) => {

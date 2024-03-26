@@ -3,6 +3,7 @@ import React from "react";
 
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { Component } from "./Component";
 
 const installCode = `
@@ -29,7 +30,13 @@ const meta = {
   title: "Spacer Components/Stack",
   component: Stack,
   args: {
-    gutter: "size3",
+    gap: "size3",
+  },
+  argTypes: {
+    ...argTypes,
+    as: {
+      control: "none",
+    },
   },
   render: (args) => {
     return (

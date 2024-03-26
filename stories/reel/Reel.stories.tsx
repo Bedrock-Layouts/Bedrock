@@ -4,6 +4,7 @@ import React from "react";
 import { Reel } from "../../packages/reel/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
+import { argTypes } from "./argTypes";
 import { ColoredRect, colors } from "./colors";
 
 const installCode = `
@@ -30,15 +31,11 @@ const meta = {
   title: "Spacer Components/Reel",
   component: Reel,
   args: {
-    gutter: "size3",
+    gap: "size3",
     snapType: "mandatory",
   },
   argTypes: {
-    gutter: {
-      control: {
-        type: "text",
-      },
-    },
+    ...argTypes,
     as: {
       control: "none",
     },

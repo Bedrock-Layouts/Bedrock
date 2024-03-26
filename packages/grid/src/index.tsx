@@ -20,8 +20,13 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 export type GridProps = {
   /**
    * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
   /**
    * Sets the minimum width of each child.
    * The `minItemWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
@@ -42,6 +47,7 @@ export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
     as: Component = "div",
     style = {},
     minItemWidth,
+    gap,
     gutter,
     variant,
     ...props
@@ -50,7 +56,7 @@ export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
 ) {
   const theme = useTheme();
   const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
   const attributeValue = variant === "masonry" ? "variant:masonry" : true;
 

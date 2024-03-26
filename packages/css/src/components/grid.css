@@ -10,7 +10,7 @@
   box-sizing: border-box;
   display: grid;
   gap: var(--gap, var(--gutter, 0px));
-  grid-template-grid: repeat(
+  grid-template-columns: repeat(
     auto-fit,
     minmax(min(var(--min-item-width, var(--minItemWidth, 639px)), 100%), 1fr)
   );

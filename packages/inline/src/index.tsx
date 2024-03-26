@@ -42,9 +42,14 @@ export type InlineProps = {
    */
   align?: "start" | "end" | "center" | "stretch";
   /**
-   * The `gutter` prop can be used to specify the spacing between the children.
+   * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
 };
 
 function createAttributeString(
@@ -71,6 +76,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
     as: Component = "div",
     justify,
     align,
+    gap,
     gutter,
     stretch,
     style = {},
@@ -99,7 +105,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
       data-bedrock-inline={attributes}
       style={
         {
-          "--gutter": getSafeGutter(theme, gutter),
+          "--gutter": getSafeGutter(theme, gap ?? gutter),
           "--switchAt": switchAtValue,
           "--minItemWidth": maybeMinItemWidth,
           ...style,

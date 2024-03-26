@@ -31,7 +31,7 @@ const meta = {
   title: "Spacer Components/Columns",
   component: Columns,
   args: {
-    gutter: "size3",
+    gap: "size3",
     colCount: 4,
   },
   argTypes: columnsArgTypes,

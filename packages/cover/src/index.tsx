@@ -27,9 +27,14 @@ export type CoverProps = {
    */
   bottom?: React.ReactNode;
   /**
-   * Sets the space between the centered content and the top and bottom slots.
+   * Sets space between each element.
+   * @deprecated Use `gap` instead.
    */
   gutter?: Gutter;
+  /**
+   * Sets space between each element.
+   */
+  gap?: Gutter;
   /**
    * Sets the minimum height of the cover component.
    * `minHeight` can be a CSSLength, a number, or a key of the theme's sizes object
@@ -50,6 +55,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
   {
     as: Component = "div",
     children,
+    gap,
     gutter,
     top,
     bottom,
@@ -62,7 +68,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
   ref,
 ) {
   const theme = useTheme();
-  const maybeGutter = getSafeGutter(theme, gutter);
+  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
   const maybeMinHeight = getSizeValue(theme, minHeight);
 
   const attributeVal = stretchContent === true ? "stretch-content" : "";

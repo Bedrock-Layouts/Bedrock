@@ -31,7 +31,7 @@ const meta = {
   title: "Spacer Components/ColumnDrop",
   component: ColumnDrop,
   args: {
-    gutter: "size3",
+    gap: "size3",
   },
   argTypes,
   render: (args) => {
