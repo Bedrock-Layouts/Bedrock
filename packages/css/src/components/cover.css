@@ -3,12 +3,13 @@
 */
 
 [data-bedrock-cover] {
+  --gap: initial;
   --gutter: initial;
   --minHeight: initial;
   --min-height: initial;
   display: flex;
   flex-direction: column;
-  gap: var(--gutter, 0px);
+  gap: var(--gap, var(--gutter, 0px));
 
   min-block-size: var(--min-height, var(--minHeight, 100vh));
 }
@@ -83,4 +84,57 @@
 }
 [data-bedrock-cover~="gutter:size15"] {
   --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-bedrock-cover~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-bedrock-cover~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-bedrock-cover~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-bedrock-cover~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-bedrock-cover~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-bedrock-cover~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-bedrock-cover~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-bedrock-cover~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-bedrock-cover~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-bedrock-cover~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-bedrock-cover~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-bedrock-cover~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-bedrock-cover~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-bedrock-cover~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-bedrock-cover~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-bedrock-cover~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-bedrock-cover~="gap:size15"] {
+  --gap: 30rem;
 }

@@ -3,13 +3,14 @@
 */
 
 [data-bedrock-grid] {
+  --gap: initial;
   --gutter: initial;
   --minItemWidth: initial;
   --min-item-width: initial;
   box-sizing: border-box;
   display: grid;
-  gap: var(--gutter, 0);
-  grid-template-columns: repeat(
+  gap: var(--gap, var(--gutter, 0px));
+  grid-template-grid: repeat(
     auto-fit,
     minmax(min(var(--min-item-width, var(--minItemWidth, 639px)), 100%), 1fr)
   );
@@ -75,6 +76,59 @@
 }
 [data-bedrock-grid~="gutter:size15"] {
   --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-bedrock-grid~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-bedrock-grid~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-bedrock-grid~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-bedrock-grid~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-bedrock-grid~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-bedrock-grid~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-bedrock-grid~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-bedrock-grid~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-bedrock-grid~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-bedrock-grid~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-bedrock-grid~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-bedrock-grid~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-bedrock-grid~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-bedrock-grid~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-bedrock-grid~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-bedrock-grid~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-bedrock-grid~="gap:size15"] {
+  --gap: 30rem;
 }
 
 /* Min Item Widths */
