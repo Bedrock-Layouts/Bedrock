@@ -1,6 +1,7 @@
 import { dirname, join } from "path";
 
 import type { InlineConfig } from "vite";
+
 const turbosnap = require("vite-plugin-turbosnap");
 
 export const stories = [
@@ -14,13 +15,14 @@ export const stories = [
   "./pages/new-arrivals.mdx",
   "../stories/**/*.@(mdx|stories.@(js|ts|tsx))",
   "./pages/contributing.mdx",
+  "./pages/roadmap.mdx",
   "../examples/examples.mdx",
-  "../examples/web.dev.mdx"
+  "../examples/web.dev.mdx",
 ];
 export const addons = [
   getAbsolutePath("@storybook/addon-essentials"),
   getAbsolutePath("@chromaui/addon-visual-tests"),
-  getAbsolutePath("@storybook/addon-mdx-gfm")
+  getAbsolutePath("@storybook/addon-mdx-gfm"),
 ];
 
 export const staticDirs = ["../public"];

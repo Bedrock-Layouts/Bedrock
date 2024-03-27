@@ -1,0 +1,68 @@
+import { Meta } from "@storybook/addon-docs";
+import { Intl, NameSpace } from "../ui-components/Intl";
+import { LocaleFab } from "../ui-components/LocaleFab";
+
+<LocaleFab />
+
+<NameSpace ns="roadmap" />
+
+<Meta title="Overview/Roadmap" parameters={{ viewMode: "docs" }} />
+
+# Roadmap
+
+This is the roadmap for the next version of the library. It is subject to change as we get feedback from the community. If you have any suggestions or feedback, please open an issue on the GitHub repository.
+
+## Planned Breaking Changes
+
+There is a plan to make some breaking changes in the next version of the library. These changes are necessary to improve the library and make it more consistent.
+
+The breaking changes are as follows:
+
+- [x] deprecate components and hooks in React and Solid
+  - [x] `MasonryGrid`
+  - [x] `Padbox`
+  - [x] `AppBoundry`
+  - [x] `useForwardedRef`
+  - [x] `useResizeObserver`
+  - [x] `useContainerQuery`
+  - [x] `useStatefulRef`
+  - [x] `register-resize-callback`
+- [ ] deprecate the `center-children` prop from the center components and recommend that they use the Stack component instead
+- [x] document deprecation of original Solid repo and do PR at Solid Docs to point to monorepo where the solid components are now located
+- [x] deprecate the `columns` prop from the columns components and recommend that they use the `colCount` prop instead
+- [x] deprecate the `gutter` prop from applicable components and recommend that they use the `gap` prop instead
+- [ ] deprecate the `noStretchColumns` prop from the `ColumnDrop` component and recommend that they use the `variant:centered` prop instead
+- [ ] remove above deprecated components and hooks
+- [ ] remove the `center-children` prop from the center components
+- [ ] remove the `columns` prop from the columns components
+- [ ] remove the `gutter` prop from applicable components
+- [ ] remove the camelCase custom properties in favor of kebab-case custom properties, e.g. `--min-item-width` instead of `--minItemWidth`
+- [ ] change the default alignment for the `Inline` and `InlineCluster` components to `center` instead of `start`
+- [ ] change default widths for components to be `100%` instead of specific widths/heights
+- [ ] remove the `noStretchColumns` prop from the `ColumnDrop` component
+- [ ] remove the `data-bedrock-` css selectors in favor of `data-br-` css selectors
+- [ ] remove the ThemeProvider component and related theme hooks
+- [ ] make spacing constants able to be used by both react and solid. Also make a note that the spacing constants will no longer follow semver and will be updated as needed
+- [ ] React and Solid will no longer use `top` and `bottom` props for slots and will instead export a component for the content that needs to be vertically centered
+
+**Note:** The breaking changes will be released in a major version bump, so you will need to update your code to use the new version of the library. Also those items marked with a checkmark (deprecation items) have already been implemented and are available in the latest version of the library.
+
+## Non-breaking Changes
+
+The following are some of the non-breaking changes that are planned for the next version of the library. The items marked with a checkmark have already been implemented and are available in the latest version of the library.
+
+- [x] Add `variant:masonry` to grid in both CSS and react/solid
+- [x] Add support for `gap` prop
+- [x] Add support for `colCount` prop
+- [ ] Add support for the `variant:centered` prop for the `ColumnDrop` component to replace the `noStretchColumns` prop
+- [ ] Add support for the "-br-" in the attributes e.g,. `data-br-grid` or `data-br-stack` instead of `data-bedrock-grid` or `data-bedrock-stack`
+- [x] Add support for size props in CSS strings e.g., `data-br-grid="minItemWidth:sizeContent3"`
+- [x] Add alignment props to stack component
+- [x] add support for space-around for inline and inline cluster
+- [x] Add support for Kebab case on custom properties
+
+## Documentation Improvements
+
+- [ ] Add more examples
+- [ ] Update lessons to use React + Vite instead of create-react-app (probably in conjuction with breaking changes)
+- [ ] Add more use cases
