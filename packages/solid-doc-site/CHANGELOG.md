@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.6.0...@bedrock-layout/solid-doc-site@1.6.1) (2024-03-29)
+
+**Note:** Version bump only for package @bedrock-layout/solid-doc-site
+
 # [1.6.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.5.0...@bedrock-layout/solid-doc-site@1.6.0) (2024-03-26)
 
 ### Features

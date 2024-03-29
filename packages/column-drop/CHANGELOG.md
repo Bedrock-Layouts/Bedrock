@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/column-drop@3.3.0...@bedrock-layout/column-drop@3.4.0) (2024-03-29)
+
+### Features
+
+- **column-drop:** support variant:centered in column drop component ([a342abc](https://github.com/Bedrock-Layouts/Bedrock/commit/a342abc0e0414baaf251d8e88b81bfe4081f7c2a))
+
 # 3.3.0 (2024-03-26)
 
 ### Features
