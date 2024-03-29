@@ -44,21 +44,16 @@ export const argTypes = {
     ],
   },
   minItemWidth: {
-    table: {
-      type: { summary: "CSSLength" },
-    },
     control: "text",
   },
   noStretchedColumns: {
-    table: {
-      type: { summary: "boolean" },
-    },
     control: "boolean",
   },
+  variant: {
+    control: "select",
+    options: ["default", "centered"],
+  },
   as: {
-    table: {
-      type: { summary: "string" },
-    },
     control: "none",
   },
 };

@@ -113,7 +113,7 @@ export const Playground: Story = {};
  *
  * Here are the possible values for `gap` by default:
  */
-export const gap: Story = {
+export const Gap: Story = {
   render: () => {
     return (
       <Stack gap="size5">
@@ -197,18 +197,18 @@ export const MinItemWidth: Story = {
 
 /**
  * By default, the column-drop component will stretch the columns to fit the container.
- * If you want to prevent this behavior, you can add the `noStretchedColumns` prop. The `ColumnDrop` will then use the `minItemWidth` prop to determine the width of each column and center the columns on each row.
+ * If you want to prevent this behavior, you can add the `variant:centered` prop. The `ColumnDrop` will then use the `minItemWidth` prop to determine the width of each column and center the columns on each row.
  *
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-column-drop='no-stretched-columns'}>
+ * <div data-bedrock-column-drop='variant:centered'}>
  *   <Component />
  *   <Component />
  * </div>
  *
  * // React.js and Solid.js
- * <ColumnDrop noStretchedColumns>
+ * <ColumnDrop variant='centered'>
  *   <Component />
  *   <Component />
  * </ColumnDrop>
@@ -220,7 +220,7 @@ export const MinItemWidth: Story = {
 export const NoStretchedColumns: Story = {
   render: () => {
     return (
-      <ColumnDrop noStretchedColumns gap="size3" minItemWidth="15rem">
+      <ColumnDrop variant="centered" gap="size3" minItemWidth="15rem">
         <Component />
         <Component />
         <Component />
