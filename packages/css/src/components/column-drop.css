@@ -25,6 +25,10 @@
   flex-grow: 0;
 }
 
+[data-bedrock-column-drop~="variant:centered"] > * {
+  flex-grow: 0;
+}
+
 /* Gutter Sizes */
 [data-bedrock-column-drop~="gutter:size000"] {
   --gutter: -0.5rem;

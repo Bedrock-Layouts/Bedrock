@@ -34,8 +34,13 @@ export type ColumnDropProps = {
   minItemWidth?: MinItemWidth;
   /**
    * Prevents columns from stretching to fill the space.
+   * @deprecated use `variant` set to `centered` instead.
    */
   noStretchedColumns?: boolean;
+  /**
+   * Setting it to `centered` will prevents columns from stretching to fill the space.
+   */
+  variant?: "default" | "centered";
 };
 
 /**
@@ -54,8 +59,8 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
       gap,
       style = {},
       minItemWidth,
-      // TODO: Remove Boolean type in next major version
       noStretchedColumns = false,
+      variant = "default",
       ...props
     },
     ref,
@@ -64,7 +69,9 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     const maybeGutter = getSafeGutter(theme, gap ?? gutter);
 
     const attributeValue =
-      noStretchedColumns === true ? "no-stretched-columns" : "";
+      variant === "centered" || noStretchedColumns === true
+        ? "no-stretched-columns"
+        : "";
 
     const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
 
