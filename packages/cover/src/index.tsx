@@ -43,8 +43,13 @@ export type CoverProps = {
   minHeight?: MinHeight;
   /**
    * Sets the content to stretch to the full height of the cover component minus the top and bottom slots.
+   * @deprecated Use `variant` set to `stretch-content` instead.
    */
   stretchContent?: boolean;
+  /**
+   * Sets the content to stretch to the full height of the cover component minus the top and bottom slots.
+   */
+  variant?: "default" | "stretch-content";
 };
 
 /**
@@ -61,8 +66,8 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
     bottom,
     minHeight,
     style = {},
-    //TODO: Change from boolean to string union of "stretch-content" | "default"
     stretchContent,
+    variant = "default",
     ...props
   },
   ref,
@@ -71,7 +76,10 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
   const maybeGutter = getSafeGutter(theme, gap ?? gutter);
   const maybeMinHeight = getSizeValue(theme, minHeight);
 
-  const attributeVal = stretchContent === true ? "stretch-content" : "";
+  const attributeVal =
+    variant === "stretch-content" || stretchContent === true
+      ? "stretch-content"
+      : "";
 
   return (
     <Component

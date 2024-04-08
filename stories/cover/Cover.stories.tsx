@@ -173,6 +173,37 @@ export const MinHeight: Story = {
 };
 
 /**
+ * The `variant` prop can be used to change the cover to a `stretch-content` variant. This variant will make the centered children stretch
+ * to fill the available space in the block direction.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // CSS
+ * <div data-bedrock-cover="variant:stretch-content">
+ *  <span>I am on top.</span>
+ *  <div data-bedrock-cover-centered>
+ *    <Component />
+ *  </div>
+ *  <span>I am on bottom.</span>
+ * </div>
+ *
+ * // React.js and Solid.js
+ * <Cover variant="stretch-content" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
+ *  <Component />
+ * </Cover>
+ * ```
+ */
+export const StretchContent: Story = {
+  args: {
+    top: <span>I am on top.</span>,
+    bottom: <span>I am on bottom.</span>,
+    minHeight: "500px",
+    gap: "size2",
+    variant: "stretch-content",
+  },
+};
+
+/**
  * The `gap` prop defines the gap size between elements.
  * Ultimately, the space is controlled by setting the `--gap` CSS variable.
  *
@@ -220,7 +251,7 @@ export const MinHeight: Story = {
  *
  * Here are the possible values for `gap` by default:
  */
-export const gap: Story = {
+export const Gap: Story = {
   args: {
     top: <span>I am on top.</span>,
     bottom: <span>I am on bottom.</span>,

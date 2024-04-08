@@ -32,6 +32,7 @@ The breaking changes are as follows:
 - [x] deprecate the `columns` prop from the columns components and recommend that they use the `colCount` prop instead
 - [x] deprecate the `gutter` prop from applicable components and recommend that they use the `gap` prop instead
 - [x] deprecate the `noStretchColumns` prop from the `ColumnDrop` component and recommend that they use the `variant:centered` prop instead
+- [x] deprecate the stretchContent prop from the Cover component and recommend that they use the variant:stretch-content prop instead
 - [ ] remove above deprecated components and hooks
 - [ ] remove the `center-children` prop from the center components
 - [ ] remove the `columns` prop from the columns components
@@ -51,11 +52,12 @@ The breaking changes are as follows:
 
 The following are some of the non-breaking changes that are planned for the next version of the library. The items marked with a checkmark have already been implemented and are available in the latest version of the library.
 
+- [ ] Add support for the "-br-" in the attributes e.g,. `data-br-grid` or `data-br-stack` instead of `data-bedrock-grid` or `data-bedrock-stack`
 - [x] Add `variant:masonry` to grid in both CSS and react/solid
 - [x] Add support for `gap` prop
 - [x] Add support for `colCount` prop
 - [x] Add support for the `variant:centered` prop for the `ColumnDrop` component to replace the `noStretchColumns` prop
-- [ ] Add support for the "-br-" in the attributes e.g,. `data-br-grid` or `data-br-stack` instead of `data-bedrock-grid` or `data-bedrock-stack`
+- [x] Add support for the `variant:stretch-content` prop for the `Cover` component to replace the `stretchContent` prop
 - [x] Add support for size props in CSS strings e.g., `data-br-grid="minItemWidth:sizeContent3"`
 - [x] Add alignment props to stack component
 - [x] add support for space-around for inline and inline cluster

@@ -24,7 +24,12 @@ interface CoverWrapperBaseProps {
   gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minHeight?: MinHeight;
+  /**
+   * Sets the content to stretch to the full height of the cover component minus the top and bottom slots.
+   * @deprecated Use `variant` set to `stretch-content` instead.
+   */
   stretchContent?: boolean;
+  variant?: "default" | "stretch-content";
 }
 
 export type CoverWrapperProps<T extends ValidConstructor = "div"> =
@@ -55,7 +60,9 @@ function CoverWrapper<T extends ValidConstructor = "div">(
   const minHeight = () => `--minHeight: ${getSafeMinHeight(props.minHeight)};`;
 
   const stretchContent = () =>
-    props.stretchContent === true ? "stretch-content" : "";
+    props.variant === "stretch-content" || props.stretchContent === true
+      ? "stretch-content"
+      : "";
 
   const style = () => [propsStyle(), gutter(), minHeight()].join("; ");
 
