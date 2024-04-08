@@ -60,7 +60,10 @@ export function CoverPage(): JSXElement {
         </Story>
       </PageSection>
       <PageSection title="stretchContent">
-        <p>You can also center the text by adding a centerText prop.</p>
+        <p>
+          You can add a stretched content variant by setting the variant props
+          to stretch-content
+        </p>
 
         <Story code={noStretchCode}>
           <NoStretch />

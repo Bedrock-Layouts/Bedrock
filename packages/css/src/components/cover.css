@@ -33,6 +33,19 @@
   flex: 1;
 }
 
+[data-bedrock-cover~="variant:stretch-content"]
+  > [data-bedrock-cover-centered] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+[data-bedrock-cover~="variant:stretch-content"]
+  > [data-bedrock-cover-centered]
+  > * {
+  flex: 1;
+}
+
 /* Gutter Sizes */
 [data-bedrock-cover~="gutter:size000"] {
   --gutter: -0.5rem;
