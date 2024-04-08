@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.11.0...@bedrock-layout/css@2.12.0) (2024-04-08)
+
+### Features
+
+- **cover:** add support for stretch-content variant ([e35bd92](https://github.com/Bedrock-Layouts/Bedrock/commit/e35bd92c90a8bdde0e7bfb2327f22ab8c4157818))
+
 # [2.11.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.10.0...@bedrock-layout/css@2.11.0) (2024-03-29)
 
 ### Features

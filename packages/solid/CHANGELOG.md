@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2024-04-08)
+
+### Features
+
+- **cover:** add support for stretch-content variant ([e35bd92](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/e35bd92c90a8bdde0e7bfb2327f22ab8c4157818))
+
 # [1.6.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid@1.5.0...@bedrock-layout/solid@1.6.0) (2024-03-26)
 
 ### Features
