@@ -150,3 +150,156 @@
 [data-bedrock-inline-cluster~="gap:size15"] {
   --gap: 30rem;
 }
+
+/*
+  inline-cluster.css
+*/
+
+[data-br-inline-cluster] {
+  --gap: initial;
+  --gutter: initial;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--gutter, 0px));
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+[data-br-inline-cluster] > * {
+  margin: 0;
+}
+
+[data-br-inline-cluster~="justify:start"] {
+  justify-content: flex-start;
+}
+[data-br-inline-cluster~="justify:center"] {
+  justify-content: center;
+}
+[data-br-inline-cluster~="justify:end"] {
+  justify-content: flex-end;
+}
+[data-br-inline-cluster~="justify:space-between"] {
+  justify-content: space-between;
+}
+[data-br-inline-cluster~="justify:space-around"] {
+  justify-content: space-around;
+}
+
+[data-br-inline-cluster~="align:start"] {
+  align-items: flex-start;
+}
+[data-br-inline-cluster~="align:center"] {
+  align-items: center;
+}
+[data-br-inline-cluster~="align:end"] {
+  align-items: flex-end;
+}
+[data-br-inline-cluster~="align:stretch"] {
+  align-items: stretch;
+}
+
+/* Gutter Sizes */
+[data-br-inline-cluster~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-br-inline-cluster~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-br-inline-cluster~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-br-inline-cluster~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-br-inline-cluster~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-br-inline-cluster~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-br-inline-cluster~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-br-inline-cluster~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-br-inline-cluster~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-br-inline-cluster~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-br-inline-cluster~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-br-inline-cluster~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-br-inline-cluster~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-br-inline-cluster~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-br-inline-cluster~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-br-inline-cluster~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-br-inline-cluster~="gutter:size15"] {
+  --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-br-inline-cluster~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-br-inline-cluster~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-br-inline-cluster~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-br-inline-cluster~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-br-inline-cluster~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-br-inline-cluster~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-br-inline-cluster~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-br-inline-cluster~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-br-inline-cluster~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-br-inline-cluster~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-br-inline-cluster~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-br-inline-cluster~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-br-inline-cluster~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-br-inline-cluster~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-br-inline-cluster~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-br-inline-cluster~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-br-inline-cluster~="gap:size15"] {
+  --gap: 30rem;
+}

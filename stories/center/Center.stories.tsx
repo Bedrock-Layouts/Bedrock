@@ -72,12 +72,12 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-center="maxWidth:sizeContent3">
+ * <div data-br-center="maxWidth:sizeContent3">
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-center style={{ "--max-width": "60ch"}}>
+ * <div data-br-center style={{ "--max-width": "60ch"}}>
  *  <Component />
  * </div>
  *
@@ -105,7 +105,7 @@ export const MaxWidth: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-center='centerChildren'>
+ * <div data-br-center='centerChildren'>
  *  <Component />
  * </div>
  *
@@ -128,7 +128,7 @@ export const CenterChildren: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-center='centerText'>
+ * <div data-br-center='centerText'>
  *  <Component />
  * </div>
  *

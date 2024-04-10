@@ -134,3 +134,140 @@
 [data-bedrock-reel~="gap:size15"] {
   --gap: 30rem;
 }
+
+/*
+  reel.css
+*/
+
+[data-br-reel] {
+  --gap: initial;
+  --gutter: initial;
+  display: flex;
+  gap: var(--gap, var(--gutter, 0px));
+  overflow-x: auto;
+  scroll-snap-type: none;
+}
+
+[data-br-reel] > * {
+  margin: 0;
+}
+
+[data-br-reel~="snapType:none"] {
+  scroll-snap-type: none;
+}
+[data-br-reel~="snapType:proximity"] {
+  scroll-snap-type: x proximity;
+}
+[data-br-reel~="snapType:mandatory"] {
+  scroll-snap-type: x mandatory;
+}
+
+[data-br-reel] > * {
+  scroll-snap-align: start;
+}
+
+/* Gutter Sizes */
+[data-br-reel~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-br-reel~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-br-reel~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-br-reel~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-br-reel~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-br-reel~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-br-reel~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-br-reel~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-br-reel~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-br-reel~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-br-reel~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-br-reel~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-br-reel~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-br-reel~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-br-reel~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-br-reel~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-br-reel~="gutter:size15"] {
+  --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-br-reel~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-br-reel~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-br-reel~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-br-reel~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-br-reel~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-br-reel~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-br-reel~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-br-reel~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-br-reel~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-br-reel~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-br-reel~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-br-reel~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-br-reel~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-br-reel~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-br-reel~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-br-reel~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-br-reel~="gap:size15"] {
+  --gap: 30rem;
+}

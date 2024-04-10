@@ -133,3 +133,139 @@
 [data-bedrock-stack~="gap:size15"] {
   --gap: 30rem;
 }
+
+/*
+  stack.css
+*/
+
+[data-br-stack] {
+  --gap: initial;
+  --gutter: initial;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, var(--gutter, 0px));
+}
+
+[data-br-stack] > * {
+  margin: 0;
+}
+
+[data-br-stack~="align:start"] {
+  align-items: flex-start;
+}
+[data-br-stack~="align:center"] {
+  align-items: center;
+}
+[data-br-stack~="align:end"] {
+  align-items: flex-end;
+}
+[data-br-stack~="align:stretch"] {
+  align-items: stretch;
+}
+
+/* Gutter Sizes */
+[data-br-stack~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-br-stack~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-br-stack~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-br-stack~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-br-stack~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-br-stack~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-br-stack~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-br-stack~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-br-stack~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-br-stack~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-br-stack~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-br-stack~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-br-stack~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-br-stack~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-br-stack~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-br-stack~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-br-stack~="gutter:size15"] {
+  --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-br-stack~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-br-stack~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-br-stack~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-br-stack~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-br-stack~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-br-stack~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-br-stack~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-br-stack~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-br-stack~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-br-stack~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-br-stack~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-br-stack~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-br-stack~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-br-stack~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-br-stack~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-br-stack~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-br-stack~="gap:size15"] {
+  --gap: 30rem;
+}

@@ -69,9 +69,9 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-cover>
+ * <div data-br-cover>
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  * </div>
@@ -94,8 +94,8 @@ export const Top: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-cover>
- *  <div data-bedrock-cover-centered>
+ * <div data-br-cover>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>
@@ -120,9 +120,9 @@ export const Bottom: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-cover>
+ * <div data-br-cover>
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>
@@ -149,9 +149,9 @@ export const TopAndBottom: Story = {
  * ```jsx
  * // CSS
  * // Setting the minHeight using the `--min-height` custom property
- * <div data-bedrock-cover style="--min-height: 500px">
+ * <div data-br-cover style="--min-height: 500px">
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>
@@ -179,9 +179,9 @@ export const MinHeight: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-cover="variant:stretch-content">
+ * <div data-br-cover="variant:stretch-content">
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>
@@ -216,18 +216,18 @@ export const StretchContent: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-cover='gap:size3'>
+ * <div data-br-cover='gap:size3'>
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-cover style={{ "--gap": "3ch" }}>
+ * <div data-br-cover style={{ "--gap": "3ch" }}>
  *  <span>I am on top.</span>
- *  <div data-bedrock-cover-centered>
+ *  <div data-br-cover-centered>
  *    <Component />
  *  </div>
  *  <span>I am on bottom.</span>

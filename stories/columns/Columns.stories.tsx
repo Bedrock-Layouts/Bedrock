@@ -90,13 +90,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-colCount='gap:size3'>
+ * <div data-br-colCount='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-columns style="--gap: 3ch">
+ * <div data-br-columns style="--gap: 3ch">
  *  <Component />
  *  <Component />
  * </div>
@@ -164,7 +164,7 @@ export const gap: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-columns style="--colCount: 4">
+ * <div data-br-columns style="--colCount: 4">
  *  <Component />
  *  <Component />
  * </div>
@@ -200,9 +200,9 @@ export const ColumnsProp: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * // you can span 1 to 12 columns using the `data-bedrock-column` attribute.
- * <div data-bedrock-columns>
- *  <div data-bedrock-column="span:3" >
+ * // you can span 1 to 12 columns using the `data-br-column` attribute.
+ * <div data-br-columns>
+ *  <div data-br-column="span:3" >
  *    <Component />
  *  </div>
  *  <Component />
@@ -210,8 +210,8 @@ export const ColumnsProp: Story = {
  *
  * // if you need to span more than 12 columns, you can use the `--span` custom property directly.
  * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
- * <div data-bedrock-columns>
- *  <div data-bedrock-column style="--span:13" >
+ * <div data-br-columns>
+ *  <div data-br-column style="--span:13" >
  *    <Component />
  *  </div>
  *  <Component />
@@ -256,9 +256,9 @@ export const Span: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * // you can offset 1 to 12 columns using the `data-bedrock-column` attribute.
- * <div data-bedrock-columns>
- *  <div data-bedrock-column="offsetStart:1 offsetEnd:2">
+ * // you can offset 1 to 12 columns using the `data-br-column` attribute.
+ * <div data-br-columns>
+ *  <div data-br-column="offsetStart:1 offsetEnd:2">
  *    <Component />
  *  </div>
  *  <Component />
@@ -267,8 +267,8 @@ export const Span: Story = {
  * // CSS
  * // if you need to offset more than 12 columns, you can use the `--offset-start` and `--offset-end` custom properties directly.
  * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
- * <div data-bedrock-columns>
- *  <div data-bedrock-column style="--offsetStart: 1; --offsetEnd: 2">
+ * <div data-br-columns>
+ *  <div data-br-column style="--offsetStart: 1; --offsetEnd: 2">
  *    <Component />
  *  </div>
  *  <Component />
@@ -314,8 +314,8 @@ export const OffsetStartAndOffsetEnd: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-columns="switchAt:sizeContent2">
- *  <div data-bedrock-column>
+ * <div data-br-columns="switchAt:sizeContent2">
+ *  <div data-br-column>
  *    <Component />
  *  </div>
  *  <Component />
@@ -323,8 +323,8 @@ export const OffsetStartAndOffsetEnd: Story = {
  *
  * // use the `--switch-at` custom property
  * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
- * <div data-bedrock-columns style={{ "--switchAt": 45rem }}>
- *  <div data-bedrock-column>
+ * <div data-br-columns style={{ "--switchAt": 45rem }}>
+ *  <div data-br-column>
  *    <Component />
  *  </div>
  *  <Component />

@@ -39,3 +39,45 @@
 [data-bedrock-frame][style*="--ratio"] {
   aspect-ratio: var(--ratio);
 }
+
+/*
+  frame.css
+*/
+
+[data-br-frame] {
+  box-sizing: border-box;
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-br-frame] > * {
+  position: absolute;
+
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+
+  inset-block: 0;
+  inset-inline: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-br-frame] > :is(img, video) {
+  inline-size: 100%;
+  block-size: 100%;
+  size: 100%;
+
+  object-fit: cover;
+
+  object-position: var(--position, "50%");
+}
+
+[data-br-frame][style*="--ratio"] {
+  aspect-ratio: var(--ratio);
+}

@@ -89,13 +89,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-split='gap:size3'>
+ * <div data-br-split='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-split style={{ "--gap": "3ch" }}>
+ * <div data-br-split style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -156,7 +156,7 @@ export const gap: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-split="fraction:1/4">
+ * <div data-br-split="fraction:1/4">
  *  <Component />
  *  <Component />
  * </div>
@@ -207,13 +207,13 @@ export const Fraction: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-split="minItemWidth:sizeXs">
+ * <div data-br-split="minItemWidth:sizeXs">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Use the `--min-item-width` custom property
- * <div data-bedrock-split style="--min-item-width: 30ch"">
+ * <div data-br-split style="--min-item-width: 30ch"">
  *  <Component />
  *  <Component />
  * </div>
@@ -257,14 +257,14 @@ export const MinItemWidth: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-split="switchAt:sizeContent2">
+ * <div data-br-split="switchAt:sizeContent2">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // use the `--switch-at` custom property
  * // It is recommended that you do this either with inline styles or selecting the bedrock data attribute.
- * <div data-bedrock-split style="--switch-at: 45rem">
+ * <div data-br-split style="--switch-at: 45rem">
  *  <Component />
  *  <Component />
  * </div>

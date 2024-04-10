@@ -73,13 +73,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-inline='gap:size3'>
+ * <div data-br-inline='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-inline style={{ "--gap": "3ch" }}>
+ * <div data-br-inline style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -147,7 +147,7 @@ export const gap: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline='justify:end'>
+ * <div data-br-inline='justify:end'>
  *  <Component />
  *  <Component />
  * </div>
@@ -211,7 +211,7 @@ export const Justify: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline='align:end'>
+ * <div data-br-inline='align:end'>
  *  <Component />
  *  <Component />
  * </div>
@@ -264,7 +264,7 @@ export const Align: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline='stretch:end'>
+ * <div data-br-inline='stretch:end'>
  *  <Component />
  *  <Component />
  * </div>
@@ -325,13 +325,13 @@ export const Stretch: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-inline="minItemWidth:sizeXs">
+ * <div data-br-inline="minItemWidth:sizeXs">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Use the `--min-item-width` custom property
- * <div data-bedrock-inline style="--min-item-width: 30ch">
+ * <div data-br-inline style="--min-item-width: 30ch">
  *   <Component />
  *   <Component />
  * </div>
@@ -368,13 +368,13 @@ export const MinItemWidth: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-inline="switchAt:sizeContent2">
+ * <div data-br-inline="switchAt:sizeContent2">
  *   <Component />
  *   <Component />
  * </div>
  *
  * // use the `--switch-at` custom property
- * <div data-bedrock-inline style="--switch-at: 30ch">
+ * <div data-br-inline style="--switch-at: 30ch">
  *   <Component />
  *   <Component />
  * </div>

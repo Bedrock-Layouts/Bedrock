@@ -87,13 +87,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-reel='gap:size3'>
+ * <div data-br-reel='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-reel style={{ "--gap": "3ch" }}>
+ * <div data-br-reel style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -177,7 +177,7 @@ export const gap: Story = {
  *
  * ```jsx
  * // CSS
- * <div data-bedrock-reel='snapType:mandatory'>
+ * <div data-br-reel='snapType:mandatory'>
  *  <Component />
  *  <Component />
  * </div>

@@ -345,3 +345,351 @@
   --basisSwitcher: max(var(--basis) * -1, 0px);
   margin-inline-end: min(var(--marginOffsetEnd), var(--basisSwitcher));
 }
+
+/*
+  columns.css
+*/
+
+/*
+  columns component
+*/
+
+[data-br-columns] {
+  --gap: initial;
+  --gutter: initial;
+  --switchAt: initial;
+  --safeColumns: var(--col-count, var(--columns, 1));
+  --numberOfGutters: calc(var(--safeColumns) - 1);
+  --largestWidth: calc(
+    100% - max(var(--gap, var(--gutter, 0px)) * var(--numberOfGutters), 0px)
+  );
+  --columnWidth: calc(var(--largestWidth) / var(--safeColumns));
+  --basis: calc(
+    (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
+  );
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--gutter, 0px));
+}
+
+[data-br-columns][data-br-columns] > * {
+  margin: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: var(--basis);
+  min-inline-size: min(min(var(--columnWidth), 100%), 100%);
+  max-inline-size: min(max(var(--basis), var(--columnWidth)), 100%);
+}
+
+/* Gutter Sizes */
+[data-br-columns~="gutter:size000"] {
+  --gutter: -0.5rem;
+}
+[data-br-columns~="gutter:size00"] {
+  --gutter: -0.25rem;
+}
+[data-br-columns~="gutter:size1"] {
+  --gutter: 0.25rem;
+}
+[data-br-columns~="gutter:size2"] {
+  --gutter: 0.5rem;
+}
+[data-br-columns~="gutter:size3"] {
+  --gutter: 1rem;
+}
+[data-br-columns~="gutter:size4"] {
+  --gutter: 1.25rem;
+}
+[data-br-columns~="gutter:size5"] {
+  --gutter: 1.5rem;
+}
+[data-br-columns~="gutter:size6"] {
+  --gutter: 1.75rem;
+}
+[data-br-columns~="gutter:size7"] {
+  --gutter: 2rem;
+}
+[data-br-columns~="gutter:size8"] {
+  --gutter: 3rem;
+}
+[data-br-columns~="gutter:size9"] {
+  --gutter: 4rem;
+}
+[data-br-columns~="gutter:size10"] {
+  --gutter: 5rem;
+}
+[data-br-columns~="gutter:size11"] {
+  --gutter: 7.5rem;
+}
+[data-br-columns~="gutter:size12"] {
+  --gutter: 10rem;
+}
+[data-br-columns~="gutter:size13"] {
+  --gutter: 15rem;
+}
+[data-br-columns~="gutter:size14"] {
+  --gutter: 20rem;
+}
+[data-br-columns~="gutter:size15"] {
+  --gutter: 30rem;
+}
+
+/* gap sizes */
+[data-br-columns~="gap:size000"] {
+  --gap: -0.5rem;
+}
+[data-br-columns~="gap:size00"] {
+  --gap: -0.25rem;
+}
+[data-br-columns~="gap:size1"] {
+  --gap: 0.25rem;
+}
+[data-br-columns~="gap:size2"] {
+  --gap: 0.5rem;
+}
+[data-br-columns~="gap:size3"] {
+  --gap: 1rem;
+}
+[data-br-columns~="gap:size4"] {
+  --gap: 1.25rem;
+}
+[data-br-columns~="gap:size5"] {
+  --gap: 1.5rem;
+}
+[data-br-columns~="gap:size6"] {
+  --gap: 1.75rem;
+}
+[data-br-columns~="gap:size7"] {
+  --gap: 2rem;
+}
+[data-br-columns~="gap:size8"] {
+  --gap: 3rem;
+}
+[data-br-columns~="gap:size9"] {
+  --gap: 4rem;
+}
+[data-br-columns~="gap:size10"] {
+  --gap: 5rem;
+}
+[data-br-columns~="gap:size11"] {
+  --gap: 7.5rem;
+}
+[data-br-columns~="gap:size12"] {
+  --gap: 10rem;
+}
+[data-br-columns~="gap:size13"] {
+  --gap: 15rem;
+}
+[data-br-columns~="gap:size14"] {
+  --gap: 20rem;
+}
+[data-br-columns~="gap:size15"] {
+  --gap: 30rem;
+}
+
+/* Switch at Widths */
+[data-br-columns~="switchAt:sizeContent1"] {
+  --switch-at: 20ch;
+}
+[data-br-columns~="switchAt:sizeContent2"] {
+  --switch-at: 45ch;
+}
+[data-br-columns~="switchAt:sizeContent3"] {
+  --switch-at: 60ch;
+}
+[data-br-columns~="switchAt:sizeHeader1"] {
+  --switch-at: 20ch;
+}
+[data-br-columns~="switchAt:sizeHeader2"] {
+  --switch-at: 25ch;
+}
+[data-br-columns~="switchAt:sizeHeader3"] {
+  --switch-at: 35ch;
+}
+[data-br-columns~="switchAt:sizeXxs"] {
+  --switch-at: 240px;
+}
+[data-br-columns~="switchAt:sizeXs"] {
+  --switch-at: 360px;
+}
+[data-br-columns~="switchAt:sizeSm"] {
+  --switch-at: 480px;
+}
+[data-br-columns~="switchAt:sizeMd"] {
+  --switch-at: 768px;
+}
+[data-br-columns~="switchAt:sizeLg"] {
+  --switch-at: 1024px;
+}
+[data-br-columns~="switchAt:sizeXl"] {
+  --switch-at: 1440px;
+}
+[data-br-columns~="switchAt:sizeXxl"] {
+  --switch-at: 1920px;
+}
+
+/*
+  column component
+*/
+
+[data-br-column~="span:1"] {
+  --span: 1;
+}
+[data-br-column~="span:2"] {
+  --span: 2;
+}
+[data-br-column~="span:3"] {
+  --span: 3;
+}
+[data-br-column~="span:4"] {
+  --span: 4;
+}
+[data-br-column~="span:5"] {
+  --span: 5;
+}
+[data-br-column~="span:6"] {
+  --span: 6;
+}
+[data-br-column~="span:7"] {
+  --span: 7;
+}
+[data-br-column~="span:8"] {
+  --span: 8;
+}
+[data-br-column~="span:9"] {
+  --span: 9;
+}
+[data-br-column~="span:10"] {
+  --span: 10;
+}
+[data-br-column~="span:11"] {
+  --span: 11;
+}
+[data-br-column~="span:12"] {
+  --span: 12;
+}
+
+:is([data-br-column][style*="--span"], [data-br-column*="span"]) {
+  --maxSpan: min(var(--span, 1), var(--safeColumns));
+  --guttersToAdd: calc(var(--maxSpan, 1) - 1);
+  --gutterSize: calc(var(--gap, var(--gutter, 0px)) * var(--guttersToAdd));
+  --columnWidth: calc(
+    ((var(--largestWidth) / var(--safeColumns)) * var(--maxSpan, 1)) +
+      var(--gutterSize)
+  );
+}
+
+[data-br-column~="offsetStart:1"] {
+  --offset-start: 1;
+}
+[data-br-column~="offsetStart:2"] {
+  --offset-start: 2;
+}
+[data-br-column~="offsetStart:3"] {
+  --offset-start: 3;
+}
+[data-br-column~="offsetStart:4"] {
+  --offset-start: 4;
+}
+[data-br-column~="offsetStart:5"] {
+  --offset-start: 5;
+}
+[data-br-column~="offsetStart:6"] {
+  --offset-start: 6;
+}
+[data-br-column~="offsetStart:7"] {
+  --offset-start: 7;
+}
+[data-br-column~="offsetStart:8"] {
+  --offset-start: 8;
+}
+[data-br-column~="offsetStart:9"] {
+  --offset-start: 9;
+}
+[data-br-column~="offsetStart:10"] {
+  --offset-start: 10;
+}
+[data-br-column~="offsetStart:11"] {
+  --offset-start: 11;
+}
+[data-br-column~="offsetStart:12"] {
+  --offset-start: 12;
+}
+
+:is(
+    [data-br-column][style*="--offsetStart"],
+    [data-br-column][style*="--offset-start"],
+    [data-br-column*="offsetStart"]
+  ) {
+  --maxOffsetStart: min(
+    var(--offset-start, var(--offsetStart, 1)),
+    var(--safeColumns)
+  );
+  --marginOffsetStartGutters: calc(
+    var(--gap, var(--gutter, 0px)) * var(--maxOffsetStart)
+  );
+  --marginOffsetStart: calc(
+    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetStart, 1) +
+      var(--marginOffsetStartGutters)
+  );
+  --basisSwitcher: max(var(--basis) * -1, 0px);
+  margin-inline-start: min(var(--marginOffsetStart), var(--basisSwitcher));
+}
+
+[data-br-column~="offsetEnd:1"] {
+  --offset-end: 1;
+}
+[data-br-column~="offsetEnd:2"] {
+  --offset-end: 2;
+}
+[data-br-column~="offsetEnd:3"] {
+  --offset-end: 3;
+}
+[data-br-column~="offsetEnd:4"] {
+  --offset-end: 4;
+}
+[data-br-column~="offsetEnd:5"] {
+  --offset-end: 5;
+}
+[data-br-column~="offsetEnd:6"] {
+  --offset-end: 6;
+}
+[data-br-column~="offsetEnd:7"] {
+  --offset-end: 7;
+}
+[data-br-column~="offsetEnd:8"] {
+  --offset-end: 8;
+}
+[data-br-column~="offsetEnd:9"] {
+  --offset-end: 9;
+}
+[data-br-column~="offsetEnd:10"] {
+  --offset-end: 10;
+}
+[data-br-column~="offsetEnd:11"] {
+  --offset-end: 11;
+}
+[data-br-column~="offsetEnd:12"] {
+  --offset-end: 12;
+}
+
+:is(
+    [data-br-column][style*="--offsetEnd"],
+    [data-br-column][style*="--offset-end"],
+    [data-br-column*="offsetEnd"]
+  ) {
+  --maxOffsetEnd: min(
+    var(--offset-end, var(--offsetEnd, 1)),
+    var(--safeColumns)
+  );
+  --marginOffsetEndGutters: calc(
+    var(--gap, var(--gutter, 0px)) * var(--maxOffsetEnd)
+  );
+  --marginOffsetEnd: calc(
+    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetEnd, 1) +
+      var(--marginOffsetEndGutters)
+  );
+  --basisSwitcher: max(var(--basis) * -1, 0px);
+  margin-inline-end: min(var(--marginOffsetEnd), var(--basisSwitcher));
+}

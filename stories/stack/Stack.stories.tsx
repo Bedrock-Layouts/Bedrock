@@ -98,13 +98,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-stack='gap:size3'>
+ * <div data-br-stack='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-stack style={{ "--gap": "3ch" }}>
+ * <div data-br-stack style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -166,7 +166,7 @@ export const gap: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-stack='align:end'>
+ * <div data-br-stack='align:end'>
  *  <Component />
  *  <Component />
  * </div>
