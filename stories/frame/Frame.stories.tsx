@@ -71,7 +71,7 @@ export const Playground: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-frame style={{ "--ratio": "4/3" }}>
+ * <div data-br-frame style={{ "--ratio": "4/3" }}>
  *   <img src={imgSrc} alt="computer with data" />
  * </div>
  *
@@ -119,7 +119,7 @@ export const RatioAsArray: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-frame style={{ height: "50vh", width: "50%" }}>
+ * <div data-br-frame style={{ height: "50vh", width: "50%" }}>
  *   <img src={imgSrc} alt="computer with data" />
  * </div>
  *

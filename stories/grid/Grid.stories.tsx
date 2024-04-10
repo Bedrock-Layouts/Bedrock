@@ -78,13 +78,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-grid='gap:size3'>
+ * <div data-br-grid='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-grid style={{ "--gap": "3ch" }}>
+ * <div data-br-grid style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -152,13 +152,13 @@ export const gap: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-grid="minItemWidth:sizeXs">
+ * <div data-br-grid="minItemWidth:sizeXs">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Use the `--min-item-width` custom property
- * <div data-bedrock-grid style="--min-item-width: 30ch">
+ * <div data-br-grid style="--min-item-width: 30ch">
  *   <Component />
  *   <Component />
  * </div>
@@ -187,7 +187,7 @@ export const MinItemWidth: Story = {};
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-grid="variant:masonry" style="--min-item-width: 30ch">
+ * <div data-br-grid="variant:masonry" style="--min-item-width: 30ch">
  *   <Component />
  *   <Component />
  * </div>

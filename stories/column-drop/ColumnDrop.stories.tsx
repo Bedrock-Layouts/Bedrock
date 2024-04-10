@@ -81,13 +81,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-column-drop='gap:size3'>
+ * <div data-br-column-drop='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-column-drop style={{ "--gap": "3ch" }}>
+ * <div data-br-column-drop style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -155,13 +155,13 @@ export const Gap: Story = {
  * ```jsx
  * // CSS
  * // Using the predefined size constants
- * <div data-bedrock-column-drop="minItemWidth:sizeXs">
+ * <div data-br-column-drop="minItemWidth:sizeXs">
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Use the `--min-item-width` custom property
- * <div data-bedrock-column-drop style="--min-item-width: 30ch">
+ * <div data-br-column-drop style="--min-item-width: 30ch">
  *   <Component />
  *   <Component />
  * </div>
@@ -202,7 +202,7 @@ export const MinItemWidth: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-column-drop='variant:centered'}>
+ * <div data-br-column-drop='variant:centered'}>
  *   <Component />
  *   <Component />
  * </div>

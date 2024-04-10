@@ -73,13 +73,13 @@ export const Playground: Story = {};
  * ```jsx
  * // CSS
  * // Using the predefined spacing constants
- * <div data-bedrock-inline-cluster='gap:size3'>
+ * <div data-br-inline-cluster='gap:size3'>
  *  <Component />
  *  <Component />
  * </div>
  *
  * // Or you can use a custom value directly
- * <div data-bedrock-inline-cluster style={{ "--gap": "3ch" }}>
+ * <div data-br-inline-cluster style={{ "--gap": "3ch" }}>
  *  <Component />
  *  <Component />
  * </div>
@@ -147,7 +147,7 @@ export const gap: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline-cluster='justify:end'>
+ * <div data-br-inline-cluster='justify:end'>
  *  <Component />
  *  <Component />
  * </div>
@@ -211,7 +211,7 @@ export const Justify: Story = {
  * #### Usage examples
  * ```jsx
  * // CSS
- * <div data-bedrock-inline-cluster='align:end'>
+ * <div data-br-inline-cluster='align:end'>
  *  <Component />
  *  <Component />
  * </div>

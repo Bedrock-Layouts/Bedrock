@@ -64,3 +64,70 @@
 [data-bedrock-center~="maxWidth:sizeXxl"] {
   --max-width: 1920px;
 }
+
+/*
+  center.css
+*/
+
+[data-br-center] {
+  --maxWidth: initial;
+  --max-width: var(--maxWidth, initial);
+  box-sizing: content-box;
+
+  max-inline-size: var(--max-width, 100%);
+}
+[data-br-center][data-br-center] {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-inline: auto;
+}
+
+[data-br-center~="center-children"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-br-center~="center-text"] {
+  text-align: center;
+}
+
+[data-br-center~="maxWidth:sizeContent1"] {
+  --max-width: 20ch;
+}
+[data-br-center~="maxWidth:sizeContent2"] {
+  --max-width: 45ch;
+}
+[data-br-center~="maxWidth:sizeContent3"] {
+  --max-width: 60ch;
+}
+[data-br-center~="maxWidth:sizeHeader1"] {
+  --max-width: 20ch;
+}
+[data-br-center~="maxWidth:sizeHeader2"] {
+  --max-width: 25ch;
+}
+[data-br-center~="maxWidth:sizeHeader3"] {
+  --max-width: 35ch;
+}
+[data-br-center~="maxWidth:sizeXxs"] {
+  --max-width: 240px;
+}
+[data-br-center~="maxWidth:sizeXs"] {
+  --max-width: 360px;
+}
+[data-br-center~="maxWidth:sizeSm"] {
+  --max-width: 480px;
+}
+[data-br-center~="maxWidth:sizeMd"] {
+  --max-width: 768px;
+}
+[data-br-center~="maxWidth:sizeLg"] {
+  --max-width: 1024px;
+}
+[data-br-center~="maxWidth:sizeXl"] {
+  --max-width: 1440px;
+}
+[data-br-center~="maxWidth:sizeXxl"] {
+  --max-width: 1920px;
+}
