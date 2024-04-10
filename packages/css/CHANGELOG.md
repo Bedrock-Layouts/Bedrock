@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.12.0...@bedrock-layout/css@2.13.0) (2024-04-10)
+
+### Features
+
+- **css:** support -br- selectors in css ([a311607](https://github.com/Bedrock-Layouts/Bedrock/commit/a311607e3e71070fe36eb19dfa015f08922cbf77)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+
 # [2.12.0](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/css@2.11.0...@bedrock-layout/css@2.12.0) (2024-04-08)
 
 ### Features
