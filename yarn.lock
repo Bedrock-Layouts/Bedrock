@@ -2597,9 +2597,9 @@
     "@storybook/global" "^5.0.0"
 
 "@storybook/addon-links@^8.0.9":
-  version "8.0.9"
-  resolved "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-8.0.9.tgz#1f7375896c8e2ffd28eec24edc0e938bc16525cd"
-  integrity sha512-FVt+AdW3JFSqbJzkKiqKsMRWqHXqEvCBqFs7lNfk3OW0w0jfv1iREtrxE0dVdJoUFQC9V/2Im/EpJ7UB3C2bNQ==
+  version "8.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-8.0.10.tgz#6852c5a046df137f1d16dd971b14ef4191f4f79e"
+  integrity sha512-+mIyH2UcrgQfAyRM4+ARkB/D0OOY8UMwkZsD8dD23APZ8oru7W/NHX3lXl0WjPfQcOIx/QwWNWI3+DgVZJY3jw==
   dependencies:
     "@storybook/csf" "^0.1.4"
     "@storybook/global" "^5.0.0"
@@ -2964,14 +2964,7 @@
   dependencies:
     lodash "^4.17.15"
 
-"@storybook/csf@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/@storybook/csf/-/csf-0.1.2.tgz#8e7452f0097507f5841b5ade3f5da1525bc9afb2"
-  integrity sha512-ePrvE/pS1vsKR9Xr+o+YwdqNgHUyXvg+1Xjx0h9LrVx7Zq4zNe06pd63F5EvzTbCbJsHj7GHr9tkiaqm7U8WRA==
-  dependencies:
-    type-fest "^2.19.0"
-
-"@storybook/csf@^0.1.4":
+"@storybook/csf@^0.1.2", "@storybook/csf@^0.1.4":
   version "0.1.5"
   resolved "https://registry.npmjs.org/@storybook/csf/-/csf-0.1.5.tgz#58c489f443ad8642957565dac0c7cd860a85162f"
   integrity sha512-pW7Dtk/bE2JGrAe/KuBY4Io02NBe/2CLP2DkgVgWlSwvEVdm/rbQyiwy8RaL0lQlJCv9CsGBY+n9HQG8d4bZjQ==
