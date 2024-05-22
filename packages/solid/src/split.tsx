@@ -81,7 +81,9 @@ export function Split<T extends ValidConstructor = "div">(
       : "";
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const fraction = () => fractions[props.fraction ?? "1/2"] ?? fractions["1/2"];
 
