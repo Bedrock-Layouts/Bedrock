@@ -70,7 +70,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
     variant = "default",
     ...props
   },
-  ref,
+  ref
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gap ?? gutter);

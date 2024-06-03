@@ -21,7 +21,7 @@ describe("Spacing Constants", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     expect(constants.getSpacingValue({ space: { "1x": "1rem" } }, "1x")).toBe(
-      "1rem",
+      "1rem"
     );
   });
 
@@ -33,7 +33,7 @@ describe("Spacing Constants", () => {
 
   it("should return a undefined if spacing provided with incorrect key", () => {
     expect(
-      constants.getSpacingValue({ space: { "1x": "1rem" } }, "size3"),
+      constants.getSpacingValue({ space: { "1x": "1rem" } }, "size3")
     ).toBe(undefined);
   });
 });
@@ -98,7 +98,7 @@ describe("Size Constants", () => {
 
   it("should return a string if sizes provided", () => {
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "1x")).toBe(
-      "1199px",
+      "1199px"
     );
   });
 
@@ -112,13 +112,13 @@ describe("Size Constants", () => {
 
   it("should return a undefined if sizes provided with incorrect key", () => {
     expect(constants.getSizeValue({ sizes: { "1x": "1199px" } }, "size3")).toBe(
-      undefined,
+      undefined
     );
   });
 
   it("should return a undefined if size key is undefined", () => {
     expect(
-      constants.getSizeValue({ sizes: { "1x": "1199px" } }, undefined),
+      constants.getSizeValue({ sizes: { "1x": "1199px" } }, undefined)
     ).toBe(undefined);
   });
 });

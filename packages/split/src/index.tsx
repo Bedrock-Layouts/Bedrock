@@ -69,7 +69,7 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
     style = {},
     ...props
   },
-  ref,
+  ref
 ) {
   const theme = useTheme();
   const attrString =

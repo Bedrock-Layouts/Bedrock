@@ -35,7 +35,7 @@ export type ColumnsProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnsBaseProps>;
 
 export function Columns<T extends ValidConstructor = "div">(
-  props: Readonly<ColumnsProps<T>>,
+  props: Readonly<ColumnsProps<T>>
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>
@@ -43,14 +43,18 @@ export function Columns<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const columns = () =>
-    `--columns: ${convertToMaybe(Math.max(props.colCount ?? props.columns ?? 1, 1)) ?? 1};`;
+    `--columns: ${
+      convertToMaybe(Math.max(props.colCount ?? props.columns ?? 1, 1)) ?? 1
+    };`;
 
   const switchAt = () =>
     props.switchAt
@@ -67,8 +71,8 @@ export function Columns<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-columns": () => "",
-      }),
-    ) as DynamicProps<T>,
+      })
+    ) as DynamicProps<T>
   );
 }
 
@@ -86,14 +90,14 @@ export type ColumnProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnBaseProps>;
 
 export function Column<T extends ValidConstructor = "div">(
-  props: Readonly<ColumnProps<T>>,
+  props: Readonly<ColumnProps<T>>
 ): JSX.Element {
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const span = () => `--span: ${safeSpan(props.span)};`;
@@ -118,7 +122,7 @@ export function Column<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-column": () => "",
-      }),
-    ) as DynamicProps<T>,
+      })
+    ) as DynamicProps<T>
   );
 }

@@ -23,7 +23,7 @@ export function InlinePage(): JSXElement {
     Object.entries(argTypes).map(([key, { initialValue }]) => [
       key,
       initialValue,
-    ]),
+    ])
   );
   const [props, setProps] = createSignal(initialValues);
 

@@ -23,10 +23,10 @@ export function CodeBlock(
   props: Readonly<{
     code: string;
     language?: string;
-  }>,
+  }>
 ): JSXElement {
   const [textCopied, setTextCopied] = createSignal<"copied" | "not copied">(
-    "not copied",
+    "not copied"
   );
   const safeLanguage = props.language ?? "javascript";
 

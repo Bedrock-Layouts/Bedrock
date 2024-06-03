@@ -45,7 +45,7 @@ ResizeObserver.mockImplementation(
       disconnect: vi.fn(map.clear),
       unobserve: vi.fn((node) => map.delete(node)),
     };
-  }),
+  })
 );
 
 const callback = vi.fn();

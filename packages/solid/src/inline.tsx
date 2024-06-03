@@ -59,7 +59,7 @@ export type InlineProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, InlineBaseProps>;
 
 export function Inline<T extends ValidConstructor = "div">(
-  props: Readonly<InlineProps<T>>,
+  props: Readonly<InlineProps<T>>
 ): JSX.Element {
   const theme = useTheme();
 
@@ -68,11 +68,13 @@ export function Inline<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const minItemWidth = () =>
     props.minItemWidth
@@ -117,7 +119,7 @@ export function Inline<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-inline": attrAssessor,
-      }),
-    ) as DynamicProps<T>,
+      })
+    ) as DynamicProps<T>
   );
 }

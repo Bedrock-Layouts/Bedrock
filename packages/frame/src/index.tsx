@@ -57,7 +57,7 @@ function getSafeRatio(ratio: unknown): Maybe<ValidRatioString> {
  */
 export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
   { as: Component = "div", ratio, style = {}, position, ...props },
-  ref,
+  ref
 ) {
   const maybeRatio = getSafeRatio(ratio);
 

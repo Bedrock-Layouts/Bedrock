@@ -30,7 +30,7 @@ export type StackProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, StackPropsBase>;
 
 export function Stack<T extends ValidConstructor = "div">(
-  props: Readonly<StackProps<T>>,
+  props: Readonly<StackProps<T>>
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>
@@ -38,11 +38,13 @@ export function Stack<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const style = () => [propsStyle(), gutter()].join("; ");
 
@@ -55,7 +57,7 @@ export function Stack<T extends ValidConstructor = "div">(
     () => props.as ?? ("div" as T),
     mergeProps(
       omitProps(props, ["as", "gutter"]),
-      createPropsFromAccessors({ style, "data-bedrock-stack": attrAssessor }),
-    ) as DynamicProps<T>,
+      createPropsFromAccessors({ style, "data-bedrock-stack": attrAssessor })
+    ) as DynamicProps<T>
   );
 }

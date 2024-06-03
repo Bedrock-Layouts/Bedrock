@@ -11,7 +11,7 @@ export function Story(
     code:
       | string
       | ((props: { dedent: (literals: string) => string }) => string);
-  }>,
+  }>
 ): JSX.Element {
   const finalCode =
     typeof props.code === "string" ? props.code : props.code({ dedent });

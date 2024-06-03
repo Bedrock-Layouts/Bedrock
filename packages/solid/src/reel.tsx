@@ -23,7 +23,7 @@ export type ReelProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ReelBaseProps>;
 
 export function Reel<T extends ValidConstructor = "div">(
-  props: Readonly<ReelProps<T>>,
+  props: Readonly<ReelProps<T>>
 ): JSX.Element {
   const theme = useTheme();
   const propsStyle = () =>
@@ -31,11 +31,13 @@ export function Reel<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const snapType = () => {
     switch (props.snapType) {
@@ -60,7 +62,7 @@ export function Reel<T extends ValidConstructor = "div">(
     () => props.as ?? ("div" as T),
     mergeProps(
       omitProps(props, ["as", "gutter"]),
-      createPropsFromAccessors({ style, "data-bedrock-reel": snapType }),
-    ) as DynamicProps<T>,
+      createPropsFromAccessors({ style, "data-bedrock-reel": snapType })
+    ) as DynamicProps<T>
   );
 }

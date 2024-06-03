@@ -39,7 +39,7 @@ ResizeObserver.mockImplementation(
       disconnect: vi.fn(map.clear),
       unobserve,
     };
-  }),
+  })
 );
 
 describe("register-resize-callback", () => {

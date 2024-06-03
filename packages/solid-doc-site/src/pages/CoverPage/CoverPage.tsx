@@ -22,7 +22,7 @@ export function CoverPage(): JSXElement {
     Object.entries(argTypes).map(([key, { initialValue }]) => [
       key,
       initialValue,
-    ]),
+    ])
   );
   const [props, setProps] = createSignal(initialValues);
 

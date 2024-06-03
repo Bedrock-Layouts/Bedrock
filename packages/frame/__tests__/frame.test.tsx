@@ -14,7 +14,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio={[16, 9]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -23,7 +23,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio="16/9">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio="16 / 9">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio="16:9">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -50,7 +50,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio="16 : 9">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -59,7 +59,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -68,7 +68,7 @@ describe("Frame", () => {
       const frame = create(
         <Frame ratio={[16, 9]} position="top left">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
       expect(frame.toJSON()).toMatchSnapshot();
     });
@@ -80,7 +80,7 @@ describe("Frame", () => {
         // @ts-expect-error
         <Frame ratio={[16, 9]} position={true}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe("Frame", () => {
         // @ts-expect-error
         <Frame ratio={{ 0: 16, 1: 9 }}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -102,7 +102,7 @@ describe("Frame", () => {
         // @ts-expect-error
         <Frame ratio={[16]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe("Frame", () => {
         // @ts-expect-error
         <Frame ratio={[16, 9, 8, 6]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -124,7 +124,7 @@ describe("Frame", () => {
         // @ts-expect-error
         <Frame ratio={["16", "9"]}>
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -134,7 +134,7 @@ describe("Frame", () => {
       const errorStack = create(
         <Frame ratio="16:9">
           <img src="https://picsum.photos/5000" alt="random thing" />
-        </Frame>,
+        </Frame>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

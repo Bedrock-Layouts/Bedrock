@@ -6,7 +6,7 @@ export function PageSection(
   props: Readonly<{
     title: string;
     children: JSXElement;
-  }>,
+  }>
 ): JSXElement {
   return (
     <Stack gutter="size3" style="max-width:80vw">
