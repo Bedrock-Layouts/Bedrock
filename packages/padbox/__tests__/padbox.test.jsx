@@ -34,7 +34,7 @@ describe("PadBox", () => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
-          </PadBox>,
+          </PadBox>
         );
         expect(padbox.toJSON()).toMatchSnapshot();
       });
@@ -50,7 +50,7 @@ describe("PadBox", () => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
-          </PadBox>,
+          </PadBox>
         );
         expect(padbox.toJSON()).toMatchSnapshot();
       });
@@ -70,7 +70,7 @@ describe("PadBox", () => {
         const padbox = create(
           <PadBox padding={padding}>
             <Lorem />
-          </PadBox>,
+          </PadBox>
         );
         expect(padbox.toJSON()).toMatchSnapshot();
       });
@@ -82,7 +82,7 @@ describe("PadBox", () => {
           <PadBox padding="1x">
             <Lorem />
           </PadBox>
-        </ThemeProvider>,
+        </ThemeProvider>
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
@@ -106,7 +106,7 @@ describe("PadBox", () => {
       const errorStack = create(
         <PadBox>
           <Lorem />
-        </PadBox>,
+        </PadBox>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -118,7 +118,7 @@ describe("PadBox", () => {
       const errorStack = create(
         <PadBox padding="incorrect">
           <Lorem />
-        </PadBox>,
+        </PadBox>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -130,7 +130,7 @@ describe("PadBox", () => {
       const errorStack = create(
         <PadBox padding={["incorrect", "incorrect"]}>
           <Lorem />
-        </PadBox>,
+        </PadBox>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -142,7 +142,7 @@ describe("PadBox", () => {
       const errorStack = create(
         <PadBox padding={{ incorrect: "incorrect", left: "incorrect" }}>
           <Lorem />
-        </PadBox>,
+        </PadBox>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

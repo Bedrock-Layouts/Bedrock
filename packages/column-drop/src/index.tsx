@@ -63,7 +63,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
       variant = "default",
       ...props
     },
-    ref,
+    ref
   ) {
     const theme = useTheme();
     const maybeGutter = getSafeGutter(theme, gap ?? gutter);
@@ -89,5 +89,5 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
         {...props}
       />
     );
-  },
+  }
 );

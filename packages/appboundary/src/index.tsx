@@ -36,7 +36,7 @@ export type AppBoundaryProps = {
 export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
   function AppBoundary(
     { as: Component = "div", boundarySize, children, style, ...props },
-    ref,
+    ref
   ) {
     const theme = useTheme();
     const maybeSize = getSizeValue(theme, boundarySize);
@@ -57,5 +57,5 @@ export const AppBoundary = forwardRefWithAs<"div", AppBoundaryProps>(
         <Center maxWidth={maybeSize ?? sizes.sizeXxl}>{children}</Center>
       </Component>
     );
-  },
+  }
 );

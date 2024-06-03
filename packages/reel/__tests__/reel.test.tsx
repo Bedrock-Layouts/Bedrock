@@ -32,7 +32,7 @@ describe("Reel", () => {
         const reel = create(
           <Reel gutter="size3" snapType={snapType}>
             <Lorem />
-          </Reel>,
+          </Reel>
         );
         expect(reel.toJSON()).toMatchSnapshot();
       });
@@ -42,7 +42,7 @@ describe("Reel", () => {
       const reel = create(
         <Reel>
           <Lorem />
-        </Reel>,
+        </Reel>
       );
       expect(reel.toJSON()).toMatchSnapshot();
     });
@@ -53,7 +53,7 @@ describe("Reel", () => {
         const reel = create(
           <Reel gutter={gutter}>
             <Lorem />
-          </Reel>,
+          </Reel>
         );
         expect(reel.toJSON()).toMatchSnapshot();
       });
@@ -63,7 +63,7 @@ describe("Reel", () => {
       const reel = create(
         <Reel gutter={20}>
           <Lorem />
-        </Reel>,
+        </Reel>
       );
       expect(reel.toJSON()).toMatchSnapshot();
     });
@@ -72,7 +72,7 @@ describe("Reel", () => {
       const reel = create(
         <Reel gutter="3ch">
           <Lorem />
-        </Reel>,
+        </Reel>
       );
       expect(reel.toJSON()).toMatchSnapshot();
     });
@@ -84,7 +84,7 @@ describe("Reel", () => {
         // @ts-expect-error
         <Reel gutter="size3" snapType="incorrect">
           <Lorem />
-        </Reel>,
+        </Reel>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -95,7 +95,7 @@ describe("Reel", () => {
         // @ts-expect-error
         <Reel gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Reel>,
+        </Reel>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

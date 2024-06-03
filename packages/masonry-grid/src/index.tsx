@@ -31,7 +31,7 @@ const RowSpanner = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<"div">>(
         {...props}
       />
     );
-  },
+  }
 );
 
 type ResizerProps = Readonly<React.PropsWithChildren<{ gutter?: Gutter }>>;
@@ -105,7 +105,7 @@ export const MasonryGrid = forwardRefWithAs<"div", MasonryGridProps>(
         ))}
       </Grid>
     );
-  },
+  }
 );
 
 /**
@@ -172,7 +172,7 @@ function toPX(str: string, element?: Readonly<Element>): number | undefined {
 /* c8 ignore next */
 function getPropertyInPX(element: Readonly<Element>, prop: string): number {
   const [value, units] = parseUnit(
-    getComputedStyle(element).getPropertyValue(prop),
+    getComputedStyle(element).getPropertyValue(prop)
   );
   return value * (toPX(units, element) ?? 1);
 }

@@ -168,7 +168,7 @@ type ThemeOrDefaultSizes<T> = T extends {
   : keyof typeof sizes;
 
 function fromEntries<T>(
-  entries: Readonly<[s: string, value: T][]>,
+  entries: Readonly<[s: string, value: T][]>
 ): Record<string, T> {
   return entries.reduce((acc, [key, value]) => {
     return { ...acc, [key]: value };
@@ -179,7 +179,7 @@ export type Gutter = CSSLength | number | SpacingOptions;
 
 export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
-  gutter?: Gutter,
+  gutter?: Gutter
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
@@ -195,7 +195,7 @@ export function getSpacingValue<T extends DefaultTheme>(
       space?: BaseTheme;
     }
   >,
-  spacingKey: SpacingOptions,
+  spacingKey: SpacingOptions
 ): Maybe<CSSLength> {
   const maybeSpacingOrDefault = theme.space ?? spacing;
 
@@ -203,7 +203,7 @@ export function getSpacingValue<T extends DefaultTheme>(
     Object.entries(maybeSpacingOrDefault).map(([spaceKey, value]) => [
       spaceKey as SpacingOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ]),
+    ])
   );
 
   return convertToMaybe(safeSpacings[spacingKey]);
@@ -222,7 +222,7 @@ export function getSizeValue<T extends DefaultTheme>(
     | "fit-content"
     | "max-content"
     | "min-content"
-    | "auto",
+    | "auto"
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
@@ -235,7 +235,7 @@ export function getSizeValue<T extends DefaultTheme>(
     Object.entries(maybeSizesOrDefault).map(([sizeKey, value]) => [
       sizeKey as SizesOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ]),
+    ])
   );
 
   return convertToMaybe(safeSizes[sizeKey as SizesOptions]);

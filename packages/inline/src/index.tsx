@@ -54,7 +54,7 @@ export type InlineProps = {
 
 function createAttributeString(
   prefix: string,
-  value: string | number | undefined,
+  value: string | number | undefined
 ) {
   if (value === undefined) return undefined;
 
@@ -84,7 +84,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
     minItemWidth,
     ...props
   },
-  ref,
+  ref
 ) {
   const theme = useTheme();
 

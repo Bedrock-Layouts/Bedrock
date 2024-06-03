@@ -45,7 +45,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
     style = {},
     ...props
   },
-  ref,
+  ref
 ) {
   const theme = useTheme();
   const centerProps = [

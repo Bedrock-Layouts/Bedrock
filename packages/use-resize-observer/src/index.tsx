@@ -11,7 +11,7 @@ import { useEffect, useLayoutEffect, useRef } from "react";
  */
 export function useResizeObserver<T extends Element>(
   callback: ResizeFunc,
-  node?: T,
+  node?: T
 ): React.MutableRefObject<T> {
   const callbackRef = useRef<ResizeFunc>(callback);
 

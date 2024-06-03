@@ -32,7 +32,7 @@ describe("Center", () => {
       const center = create(
         <Center>
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe("Center", () => {
       const center = create(
         <Center maxWidth={320}>
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -50,7 +50,7 @@ describe("Center", () => {
       const center = create(
         <Center maxWidth="320px">
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -59,7 +59,7 @@ describe("Center", () => {
       const center = create(
         <Center centerText>
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -68,7 +68,7 @@ describe("Center", () => {
       const center = create(
         <Center centerChildren>
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -79,7 +79,7 @@ describe("Center", () => {
           <Center>
             <Lorem />
           </Center>
-        </ThemeProvider>,
+        </ThemeProvider>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -91,7 +91,7 @@ describe("Center", () => {
         // @ts-expect-error
         <Center maxWidth="320pixels">
           <Lorem />
-        </Center>,
+        </Center>
       );
       expect(center.toJSON()).toMatchSnapshot();
     });
@@ -101,7 +101,7 @@ describe("Center", () => {
         // @ts-expect-error
         <Center maxWidth={["incorrect"]}>
           <Lorem />
-        </Center>,
+        </Center>
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

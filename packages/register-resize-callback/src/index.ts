@@ -48,7 +48,7 @@ export function init(): ResizeObserver {
 export function registerCallback(
   node: Readonly<Element>,
   // eslint-disable-next-line functional/prefer-immutable-types
-  cb: ObserverCallback,
+  cb: ObserverCallback
 ): DeregisterFunc {
   if (observer === undefined) {
     return () => void 0;

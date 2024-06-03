@@ -42,7 +42,7 @@ function getSafeMinHeight(minHeight?: MinHeight) {
 }
 
 function CoverWrapper<T extends ValidConstructor = "div">(
-  props: Readonly<CoverWrapperProps<T>>,
+  props: Readonly<CoverWrapperProps<T>>
 ): JSX.Element {
   const theme = useTheme();
 
@@ -51,11 +51,13 @@ function CoverWrapper<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const minHeight = () => `--minHeight: ${getSafeMinHeight(props.minHeight)};`;
 
@@ -73,8 +75,8 @@ function CoverWrapper<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-cover": stretchContent,
-      }),
-    ) as DynamicProps<T>,
+      })
+    ) as DynamicProps<T>
   );
 }
 
@@ -85,7 +87,7 @@ export interface CoverProps {
 }
 
 export function Cover<T extends ValidConstructor = "div">(
-  props: Readonly<CoverWrapperProps<T> & CoverProps>,
+  props: Readonly<CoverWrapperProps<T> & CoverProps>
 ): JSX.Element {
   const [local, restProps] = splitProps(props, ["children", "top", "bottom"]);
 

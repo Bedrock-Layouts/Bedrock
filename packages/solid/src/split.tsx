@@ -63,7 +63,7 @@ export type SplitProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, SplitBase>;
 
 export function Split<T extends ValidConstructor = "div">(
-  props: Readonly<SplitProps<T>>,
+  props: Readonly<SplitProps<T>>
 ): JSX.Element {
   const theme = useTheme();
 
@@ -72,7 +72,7 @@ export function Split<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          "",
+          ""
         );
 
   const switchAt = () =>
@@ -81,7 +81,9 @@ export function Split<T extends ValidConstructor = "div">(
       : "";
 
   const gutter = () =>
-    `--gutter: ${getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
+    `--gutter: ${
+      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
+    }`;
 
   const fraction = () => fractions[props.fraction ?? "1/2"] ?? fractions["1/2"];
 
@@ -104,7 +106,7 @@ export function Split<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-split": fraction,
-      }),
-    ) as DynamicProps<T>,
+      })
+    ) as DynamicProps<T>
   );
 }

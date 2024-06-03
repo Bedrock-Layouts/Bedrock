@@ -33,7 +33,7 @@ const HookWrapper = React.forwardRef(
     safeRef = useForwardedRef(ref, config);
     safeRef.current = "safeRef:current";
     return null;
-  },
+  }
 );
 
 describe("useForwardedRef", () => {

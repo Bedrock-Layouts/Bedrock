@@ -65,7 +65,7 @@ describe("useStatefulRef", () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       ReactDOM.createRoot(container).render(
-        <HookWrapper value={undefined} initialValue={undefined} />,
+        <HookWrapper value={undefined} initialValue={undefined} />
       );
     });
 
@@ -77,7 +77,7 @@ describe("useStatefulRef", () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       ReactDOM.createRoot(container).render(
-        <HookWrapper initialValue="Testing" value="Test" />,
+        <HookWrapper initialValue="Testing" value="Test" />
       );
     });
 
@@ -92,7 +92,7 @@ describe("useStatefulRef", () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       ReactDOM.createRoot(container).render(
-        <HookWrapper initialValue="Test" value="Test" />,
+        <HookWrapper initialValue="Test" value="Test" />
       );
     });
 
