@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.3 (2024-06-03)
+
+**Note:** Version bump only for package @bedrock-layout/masonry-grid
+
 ## 4.3.2 (2024-03-26)
 
 **Note:** Version bump only for package @bedrock-layout/masonry-grid
