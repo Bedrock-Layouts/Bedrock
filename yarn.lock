@@ -1932,20 +1932,12 @@
   dependencies:
     nx-cloud "18.0.1"
 
-"@nrwl/tao@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nrwl/tao/-/tao-18.3.5.tgz#0280c43812e2b854f84d7801798b17ae046928cc"
-  integrity sha512-gB7Vxa6FReZZEGva03Eh+84W8BSZOjsNyXboglOINu6d8iZZ0eotSXGziKgjpkj3feZ1ofKZMs0PRObVAOROVw==
+"@nrwl/tao@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-19.3.2.tgz#ae146339373f328397460b3e4d5995ccf68422e0"
+  integrity sha512-I1gW7woqwU6rdlgwj6XXAKcreJ5ptRKI2WpLdZErkrPmaRG/jMZx/yjZrG4PWdIEuZ4ZmYnRsoXbKN6ilCknQw==
   dependencies:
-    nx "18.3.5"
-    tslib "^2.3.0"
-
-"@nrwl/tao@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nrwl/tao/-/tao-19.3.0.tgz#3acd1f957af975655fbea7ecfc5ade8409e97e15"
-  integrity sha512-MyGYeHbh9O4Tv9xmz3Du+/leY5sKUHaPy4ancfNyShHgYi21hemX0/YYjzzoYHi44D8GzSc1XG2rAuwba7Kilw==
-  dependencies:
-    nx "19.3.0"
+    nx "19.3.2"
     tslib "^2.3.0"
 
 "@nx/devkit@19.3.0", "@nx/devkit@>=17.1.2 < 20":
@@ -1963,105 +1955,55 @@
     tslib "^2.3.0"
     yargs-parser "21.1.1"
 
-"@nx/nx-darwin-arm64@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-arm64/-/nx-darwin-arm64-18.3.5.tgz#5320a7b00a2e9c43e994dc72a0340379ae3d9afc"
-  integrity sha512-4I5UpZ/x2WO9OQyETXKjaYhXiZKUTYcLPewruRMODWu6lgTM9hHci0SqMQB+TWe3f80K8VT8J8x3+uJjvllGlg==
+"@nx/nx-darwin-arm64@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-arm64/-/nx-darwin-arm64-19.3.2.tgz#20b38b60c1df384e28811ad1576b80dca7de1986"
+  integrity sha512-MTqPTR1FwfVfIkHKUw95dFlPBN6mbqfJ+KzLHvUSPcqLKelhi82tsisjMoB5sNK0YWcNNVqYW72ojCnHVB0TUg==
 
-"@nx/nx-darwin-arm64@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-arm64/-/nx-darwin-arm64-19.3.0.tgz#1bebc5c820af797768cd38dd859f3adab73d763a"
-  integrity sha512-TMTxjrN7Y/UsKFjmz0YfhVItLTGWqvud8cmQchw5NEjdNakfjXk0mREufO5/5PwoiRIsen6MbThoTprLpjOUiQ==
+"@nx/nx-darwin-x64@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-x64/-/nx-darwin-x64-19.3.2.tgz#82d93880112e41fbac6ea5f7a4ba0033b14b589a"
+  integrity sha512-C8s9X5AlVgl3V5PycLdX+75lpAWq0qQs6QUEAnyxrLM9l+/HRecgoW6uZ7tX6Fnd8WGfMIwyahBw4LyZgk6zTw==
 
-"@nx/nx-darwin-x64@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-x64/-/nx-darwin-x64-18.3.5.tgz#7dbf4c43be6a25decbae1a41ea69620c95926d2f"
-  integrity sha512-Drn6jOG237AD/s6OWPt06bsMj0coGKA5Ce1y5gfLhptOGk4S4UPE/Ay5YCjq+/yhTo1gDHzCHxH0uW2X9MN9Fg==
+"@nx/nx-freebsd-x64@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-freebsd-x64/-/nx-freebsd-x64-19.3.2.tgz#4458c55603199b26addc8f1974d729faf1b2ab28"
+  integrity sha512-XeEpEU0iqJ/5cAPMmjqJ0Sdz89ZtDRj4NdksioyhAHri94X5/3lm3lDs4tB3nObT7p3QL7r/HP1itq5DHYmMSQ==
 
-"@nx/nx-darwin-x64@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-x64/-/nx-darwin-x64-19.3.0.tgz#fb5773076633bb9767686eeb63c31b5fa935e8dd"
-  integrity sha512-GH2L6ftnzdIs7JEdv7ZPCdbpAdB5sW6NijK07riYZSONzq5fEruD1yDWDkyZbYBb8RTxsparUWJnq8q1qxEPHQ==
+"@nx/nx-linux-arm-gnueabihf@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-19.3.2.tgz#a5b20cc8a13a9c449bdb54d1168e35186b82f975"
+  integrity sha512-r4Wl0P94QRBUyiexUcfwKxqFXp48avMG3L0no/ZuNWGODbw1w8ppA4vhnkXtXbIaMdaTGx9eIYO7kFJ2SwMCng==
 
-"@nx/nx-freebsd-x64@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-freebsd-x64/-/nx-freebsd-x64-18.3.5.tgz#51b33dfda4f5aad4c0cfd524b59b41fedd9f802a"
-  integrity sha512-8tA8Yw0Iir4liFjffIFS5THTS3TtWY/No2tkVj91gwy/QQ/otvKbOyc5RCIPpbZU6GS3ZWfG92VyCSm06dtMFg==
+"@nx/nx-linux-arm64-gnu@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-19.3.2.tgz#ddc6c201f9cda4e68416deb8004fcf85c0dd9255"
+  integrity sha512-oaTC4iS1fXnc61ZgSxwCQ2GGIqY64G22udRqNsX9TOtgrT7UA/mjE3Si01r+0xODimOiB525ueyxdIh1MAu6Vg==
 
-"@nx/nx-freebsd-x64@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-freebsd-x64/-/nx-freebsd-x64-19.3.0.tgz#16b9a12a3cf31c3496d336fbd30ba809c26885a3"
-  integrity sha512-1ow7Xku1yyjHviCKsWiuHCAnTd3fD+5O5c+e4DXHVthT8wnadKSotvBIWf38DMbMthl7na82e72OzxcdSbrVqQ==
+"@nx/nx-linux-arm64-musl@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-19.3.2.tgz#0a8d60d5fca5a494774c401df1ebd0cd681db8b9"
+  integrity sha512-yyO9bTM7FW7HTYsSQlL4lgbAexUBpzfhdK+RkgsCiW+U/5bi+jFRxo/SbqGUL+IVliFavWyRXahMqOOM6nBq/w==
 
-"@nx/nx-linux-arm-gnueabihf@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-18.3.5.tgz#d85a0a859d7cea455d1f32bdcceab5d621b6c6a5"
-  integrity sha512-BrPGAHM9FCGkB9/hbvlJhe+qtjmvpjIjYixGIlUxL3gGc8E/ucTyCnz5pRFFPFQlBM7Z/9XmbHvGPoUi/LYn5A==
+"@nx/nx-linux-x64-gnu@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-19.3.2.tgz#be538b37c6a0aee55ff3e58975881c945d6651da"
+  integrity sha512-DC+llVdL4toLjQkDGBgzoCe26FWIOT+SzRdVcKePoNliZ4jDhkOh3+p75NEIOEcDUgoE9M2iCWEBUjkV978ogw==
 
-"@nx/nx-linux-arm-gnueabihf@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-19.3.0.tgz#387defff2e730512934ff318db1a35870d40650f"
-  integrity sha512-mYQMIUvNr2gww8vbg766uk/C1RxoC1fwioeP87bmV5NRUKSzJ8WEJVxAsqc9RGhAOUaNXOgEuKYrMcVhKyIKJQ==
+"@nx/nx-linux-x64-musl@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-19.3.2.tgz#041fe76575bbfd9486c5469738c80ee957aab420"
+  integrity sha512-Wun4v+kuuqv20tJiCENkHGisDqfx029bFufqxx2IOe9TvD6vK4rMMkFVPUoK3FP8EBdaMW4nrR0ZucTFnStl6w==
 
-"@nx/nx-linux-arm64-gnu@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-18.3.5.tgz#1d7074ee2f74d2ef9c6d0ee532ec9eede2e84c34"
-  integrity sha512-/Xd0Q3LBgJeigJqXC/Jck/9l5b+fK+FCM0nRFMXgPXrhZPhoxWouFkoYl2F1Ofr+AQf4jup4DkVTB5r98uxSCA==
+"@nx/nx-win32-arm64-msvc@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-19.3.2.tgz#1ee9336a75b48d7289011e4ffa6e51de942b749d"
+  integrity sha512-bNVf6eu5rWFjHvn0rKHeZYlHUcs3naXvvbduW1g0DPkHG6mt8FYffQmyboN+CSeBd/uWDPNyTUekVWwU7PjtLA==
 
-"@nx/nx-linux-arm64-gnu@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-19.3.0.tgz#5a3c23cbfc622d31bececfc56025e1ced14a7bfb"
-  integrity sha512-rHL3eQ0RHkeAXnhHHu/NIyouN/ykiXvgyNU3TuCd50+2MZcAbjB+Xq3mwL0MwiP+BQuptiE+snTuxFUJp4ZH6A==
-
-"@nx/nx-linux-arm64-musl@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-18.3.5.tgz#f923459128b94220ed25fb71a71ab2a548609e3e"
-  integrity sha512-r18qd7pUrl1haAZ/e9Q+xaFTsLJnxGARQcf/Y76q+K2psKmiUXoRlqd3HAOw43KTllaUJ5HkzLq2pIwg3p+xBw==
-
-"@nx/nx-linux-arm64-musl@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-19.3.0.tgz#a3cd9bc62a234875738298923ae63e78defc7c52"
-  integrity sha512-im0+OgOD6ShpTkI9ZRz7BjzxhQ/Lk3xjYmmCu+PFGmaybEnkNNDFwsgS0iEVKMdWZ/EQoQvJrqOYsX125iIBuQ==
-
-"@nx/nx-linux-x64-gnu@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-18.3.5.tgz#2ea832b2018614609a633376c29e6e0a42a73d29"
-  integrity sha512-vYrikG6ff4I9cvr3Ysk3y3gjQ9cDcvr3iAr+4qqcQ4qVE+OLL2++JDS6xfPvG/TbS3GTQpyy2STRBwiHgxTeJw==
-
-"@nx/nx-linux-x64-gnu@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-19.3.0.tgz#75f8760fd9ee2330bbb92a16517fb04a12b22b07"
-  integrity sha512-k8q/d6WBSXOeUpBq6Mw69yMKL4n9LaX3o4LBNwBkVCEZ8p6s0njwKefLtjwnKlai0g/k5f0NcilU2zTwP/Ex8g==
-
-"@nx/nx-linux-x64-musl@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-18.3.5.tgz#6c6ece5ab1c536d9c22fc8d8ebfcbfe043d9dd57"
-  integrity sha512-6np86lcYy3+x6kkW/HrBHIdNWbUu/MIsvMuNH5UXgyFs60l5Z7Cocay2f7WOaAbTLVAr0W7p4RxRPamHLRwWFA==
-
-"@nx/nx-linux-x64-musl@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-19.3.0.tgz#dafa78ec12101d83fb16fd4c5cb24c4d80e06a18"
-  integrity sha512-sahEV99glBlpGKG1TIQ5PkJ0QvpHp69wWsBFK2DKtCETxOtsWqwvIjemxTCXRirTqeHiP7BiR6VWsf2YqqqBdw==
-
-"@nx/nx-win32-arm64-msvc@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-18.3.5.tgz#f78d67d590b62c61dcf791ebd9a4ffad2be8986d"
-  integrity sha512-H3p2ZVhHV1WQWTICrQUTplOkNId0y3c23X3A2fXXFDbWSBs0UgW7m55LhMcA9p0XZ7wDHgh+yFtVgu55TXLjug==
-
-"@nx/nx-win32-arm64-msvc@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-19.3.0.tgz#e9fe3306e917a40634ca2908536a318eb1132483"
-  integrity sha512-w03gFwLijStmhUji70QJHYo/U16ovybNczxGO7+5TT330X8/y+ihw9FCGHiIcujAjTAE88h0DKGn05WlNqRmfg==
-
-"@nx/nx-win32-x64-msvc@18.3.5":
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-18.3.5.tgz#fe5eee2d01dd4d1da556869ef465d624942cd01e"
-  integrity sha512-xFwKVTIXSgjdfxkpriqHv5NpmmFILTrWLEkUGSoimuRaAm1u15YWx/VmaUQ+UWuJnmgqvB/so4SMHSfNkq3ijA==
-
-"@nx/nx-win32-x64-msvc@19.3.0":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-19.3.0.tgz#f451ba810a52d26c020e73d1d02d9110aef7e847"
-  integrity sha512-M7e2zXGfTjH8NLiwqKLdWC9VlfMSQDYlI4/SM4OSpPqhUTfPlRPa+wNKNTG7perKfDXxE9ei8yjocujknXJk/A==
+"@nx/nx-win32-x64-msvc@19.3.2":
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-19.3.2.tgz#412492218fad54c674ab7f4587eb820b8baad2eb"
+  integrity sha512-8DD5BPa5YrxTOKL3HTAgEd+IXNqRtJfwvbrn2MbOMNMyoMG9Zi5yhFvTH/HTT9Tz6VUHvXP16QWYA3R7eFi7Gg==
 
 "@octokit/auth-token@^3.0.0":
   version "3.0.4"
@@ -4063,13 +4005,6 @@
     js-yaml "^3.10.0"
     tslib "^2.4.0"
 
-"@zkochan/js-yaml@0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@zkochan/js-yaml/-/js-yaml-0.0.6.tgz#975f0b306e705e28b8068a07737fa46d3fc04826"
-  integrity sha512-nzvgl3VfhcELQ8LyVrYOru+UtAy1nrygk2+AGbTm8a5YcO6o8lSjAT+pfg3vJWxIoZKOUhrK6UU7xW/+00kQrg==
-  dependencies:
-    argparse "^2.0.1"
-
 "@zkochan/js-yaml@0.0.7":
   version "0.0.7"
   resolved "https://registry.npmjs.org/@zkochan/js-yaml/-/js-yaml-0.0.7.tgz#4b0cb785220d7c28ce0ec4d0804deb5d821eae89"
@@ -5986,12 +5921,19 @@ dot-prop@^5.1.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv-expand@^10.0.0, dotenv-expand@~10.0.0:
+dotenv-expand@^10.0.0:
   version "10.0.0"
   resolved "https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-10.0.0.tgz#12605d00fb0af6d0a592e6558585784032e4ef37"
   integrity sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==
 
-dotenv@^16.0.0:
+dotenv-expand@~11.0.6:
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-11.0.6.tgz#f2c840fd924d7c77a94eff98f153331d876882d3"
+  integrity sha512-8NHi73otpWsZGBSZwwknTXS5pqMOrk9+Ssrna8xCaxkzEpU9OTf9R5ArQGVw03//Zmk9MOwLPng9WwndvpAJ5g==
+  dependencies:
+    dotenv "^16.4.4"
+
+dotenv@^16.0.0, dotenv@^16.4.4, dotenv@~16.4.5:
   version "16.4.5"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
@@ -6000,11 +5942,6 @@ dotenv@~10.0.0:
   version "10.0.0"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
-
-dotenv@~16.3.1:
-  version "16.3.2"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.3.2.tgz#3cb611ce5a63002dbabf7c281bc331f69d28f03f"
-  integrity sha512-HTlk5nmhkm8F6JcdXvHIzaorzCoziNQT9mGxLPVXW8wJF1TiGSL60ZGB4gHWabHOaMmWmhvk2/lPHfnBiT78AQ==
 
 duplexer@^0.1.1:
   version "0.1.2"
@@ -10127,63 +10064,12 @@ nx-cloud@18.0.1:
     tar "6.2.1"
     yargs-parser ">=21.1.1"
 
-nx@18.3.5, nx@^18.3.4:
-  version "18.3.5"
-  resolved "https://registry.npmjs.org/nx/-/nx-18.3.5.tgz#870a975d08c581f0cff4ec724dbb58f93268b73e"
-  integrity sha512-wWcvwoTgiT5okdrG0RIWm1tepC17bDmSpw+MrOxnjfBjARQNTURkiq4U6cxjCVsCxNHxCrlAaBSQLZeBgJZTzQ==
+nx@19.3.2, "nx@>=17.1.2 < 20", nx@^19.3.2:
+  version "19.3.2"
+  resolved "https://registry.yarnpkg.com/nx/-/nx-19.3.2.tgz#4538f4a919c179fea811bcb33ee409ad1e4fc782"
+  integrity sha512-eKWs+ahkTKnq9EeWJCE4u8JLeq1cOHnq5DKoiisy2nwUg4KGy1odReegxUMLeEgNBcMI40EUtEJFiTMJSXZQeg==
   dependencies:
-    "@nrwl/tao" "18.3.5"
-    "@yarnpkg/lockfile" "^1.1.0"
-    "@yarnpkg/parsers" "3.0.0-rc.46"
-    "@zkochan/js-yaml" "0.0.6"
-    axios "^1.6.0"
-    chalk "^4.1.0"
-    cli-cursor "3.1.0"
-    cli-spinners "2.6.1"
-    cliui "^8.0.1"
-    dotenv "~16.3.1"
-    dotenv-expand "~10.0.0"
-    enquirer "~2.3.6"
-    figures "3.2.0"
-    flat "^5.0.2"
-    fs-extra "^11.1.0"
-    ignore "^5.0.4"
-    jest-diff "^29.4.1"
-    js-yaml "4.1.0"
-    jsonc-parser "3.2.0"
-    lines-and-columns "~2.0.3"
-    minimatch "9.0.3"
-    node-machine-id "1.1.12"
-    npm-run-path "^4.0.1"
-    open "^8.4.0"
-    ora "5.3.0"
-    semver "^7.5.3"
-    string-width "^4.2.3"
-    strong-log-transformer "^2.1.0"
-    tar-stream "~2.2.0"
-    tmp "~0.2.1"
-    tsconfig-paths "^4.1.2"
-    tslib "^2.3.0"
-    yargs "^17.6.2"
-    yargs-parser "21.1.1"
-  optionalDependencies:
-    "@nx/nx-darwin-arm64" "18.3.5"
-    "@nx/nx-darwin-x64" "18.3.5"
-    "@nx/nx-freebsd-x64" "18.3.5"
-    "@nx/nx-linux-arm-gnueabihf" "18.3.5"
-    "@nx/nx-linux-arm64-gnu" "18.3.5"
-    "@nx/nx-linux-arm64-musl" "18.3.5"
-    "@nx/nx-linux-x64-gnu" "18.3.5"
-    "@nx/nx-linux-x64-musl" "18.3.5"
-    "@nx/nx-win32-arm64-msvc" "18.3.5"
-    "@nx/nx-win32-x64-msvc" "18.3.5"
-
-nx@19.3.0, "nx@>=17.1.2 < 20":
-  version "19.3.0"
-  resolved "https://registry.npmjs.org/nx/-/nx-19.3.0.tgz#b26d0b1b62baaa8e9623226df97f23753e94c625"
-  integrity sha512-WILWiROUkZWwuPJ12tP24Z0NULPEhxFN9i55/fECuVXYaFtkg6FvEne9C4d4bRqhZPcbrz6WhHnzE3NhdjH7XQ==
-  dependencies:
-    "@nrwl/tao" "19.3.0"
+    "@nrwl/tao" "19.3.2"
     "@yarnpkg/lockfile" "^1.1.0"
     "@yarnpkg/parsers" "3.0.0-rc.46"
     "@zkochan/js-yaml" "0.0.7"
@@ -10192,8 +10078,8 @@ nx@19.3.0, "nx@>=17.1.2 < 20":
     cli-cursor "3.1.0"
     cli-spinners "2.6.1"
     cliui "^8.0.1"
-    dotenv "~16.3.1"
-    dotenv-expand "~10.0.0"
+    dotenv "~16.4.5"
+    dotenv-expand "~11.0.6"
     enquirer "~2.3.6"
     figures "3.2.0"
     flat "^5.0.2"
@@ -10218,16 +10104,16 @@ nx@19.3.0, "nx@>=17.1.2 < 20":
     yargs "^17.6.2"
     yargs-parser "21.1.1"
   optionalDependencies:
-    "@nx/nx-darwin-arm64" "19.3.0"
-    "@nx/nx-darwin-x64" "19.3.0"
-    "@nx/nx-freebsd-x64" "19.3.0"
-    "@nx/nx-linux-arm-gnueabihf" "19.3.0"
-    "@nx/nx-linux-arm64-gnu" "19.3.0"
-    "@nx/nx-linux-arm64-musl" "19.3.0"
-    "@nx/nx-linux-x64-gnu" "19.3.0"
-    "@nx/nx-linux-x64-musl" "19.3.0"
-    "@nx/nx-win32-arm64-msvc" "19.3.0"
-    "@nx/nx-win32-x64-msvc" "19.3.0"
+    "@nx/nx-darwin-arm64" "19.3.2"
+    "@nx/nx-darwin-x64" "19.3.2"
+    "@nx/nx-freebsd-x64" "19.3.2"
+    "@nx/nx-linux-arm-gnueabihf" "19.3.2"
+    "@nx/nx-linux-arm64-gnu" "19.3.2"
+    "@nx/nx-linux-arm64-musl" "19.3.2"
+    "@nx/nx-linux-x64-gnu" "19.3.2"
+    "@nx/nx-linux-x64-musl" "19.3.2"
+    "@nx/nx-win32-arm64-msvc" "19.3.2"
+    "@nx/nx-win32-x64-msvc" "19.3.2"
 
 nypm@^0.3.8:
   version "0.3.8"
@@ -11088,8 +10974,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-"prettier-fallback@npm:prettier@^3", prettier@^3.1.1, prettier@^3.3.2:
-  name prettier-fallback
+"prettier-fallback@npm:prettier@^3":
   version "3.3.2"
   resolved "https://registry.npmjs.org/prettier/-/prettier-3.3.2.tgz#03ff86dc7c835f2d2559ee76876a3914cec4a90a"
   integrity sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==
@@ -11115,6 +11000,11 @@ prettier@^2.8.0:
   version "2.8.8"
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+
+prettier@^3.1.1, prettier@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.3.2.tgz#03ff86dc7c835f2d2559ee76876a3914cec4a90a"
+  integrity sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==
 
 pretty-format@^29.5.0, pretty-format@^29.7.0:
   version "29.7.0"
@@ -12357,7 +12247,16 @@ string-natural-compare@^3.0.1:
   resolved "https://registry.npmjs.org/string-natural-compare/-/string-natural-compare-3.0.1.tgz#7a42d58474454963759e8e8b7ae63d71c1e7fdf4"
   integrity sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw==
 
-"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -12452,7 +12351,14 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -13598,7 +13504,7 @@ wordwrap@^1.0.0:
   resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -13611,6 +13517,15 @@ wrap-ansi@^6.0.1:
   version "6.2.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
