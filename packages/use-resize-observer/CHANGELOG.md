@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.16](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-resize-observer@2.0.15...@bedrock-layout/use-resize-observer@2.0.16) (2024-08-20)
+
+**Note:** Version bump only for package @bedrock-layout/use-resize-observer
+
 ## 2.0.15 (2024-06-03)
 
 **Note:** Version bump only for package @bedrock-layout/use-resize-observer
