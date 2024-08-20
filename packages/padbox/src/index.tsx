@@ -60,7 +60,7 @@ function keyToProperty(key: string) {
 
 const paddingToStyleProps = (
   theme: Readonly<{ space?: BaseTheme }>,
-  padding: Readonly<PaddingTypes>
+  padding: Readonly<PaddingTypes>,
 ) => {
   return typeof padding === "object" && !Array.isArray(padding)
     ? Object.entries(padding).reduce(
@@ -68,7 +68,7 @@ const paddingToStyleProps = (
           ...acc,
           [keyToProperty(key)]: getSafeGutter(theme, val) ?? "0px",
         }),
-        {}
+        {},
       )
     : {
         padding: Array.from(Array.isArray(padding) ? padding : [padding])
@@ -97,7 +97,7 @@ export type PadBoxProps = {
  */
 export const PadBox = forwardRefWithAs<"div", PadBoxProps>(function PadBox(
   { as: Component = "div", style = {}, padding = "size00", ...props },
-  ref
+  ref,
 ) {
   const theme = useTheme();
 

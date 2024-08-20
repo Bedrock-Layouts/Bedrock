@@ -34,7 +34,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter={gutter}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -52,7 +52,7 @@ describe("Inline", () => {
         const inlineCluster = create(
           <Inline gutter="size3" justify={justify}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
@@ -64,7 +64,7 @@ describe("Inline", () => {
         const inlineCluster = create(
           <Inline gutter="size3" align={align}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
@@ -76,7 +76,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" stretch={stretch}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -88,7 +88,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" switchAt={switchAt}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -100,7 +100,7 @@ describe("Inline", () => {
         const inline = create(
           <Inline gutter="size3" minItemWidth={minItemWidth}>
             <Lorem />
-          </Inline>
+          </Inline>,
         );
         expect(inline.toJSON()).toMatchSnapshot();
       });
@@ -113,7 +113,7 @@ describe("Inline", () => {
         // @ts-expect-error
         <Inline gutter="size3" stretch="incorrect">
           <Lorem />
-        </Inline>
+        </Inline>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -124,7 +124,7 @@ describe("Inline", () => {
         // @ts-expect-error
         <Inline gutter="size3" minItemWidth="incorrect">
           <Lorem />
-        </Inline>
+        </Inline>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

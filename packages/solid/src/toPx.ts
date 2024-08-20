@@ -65,7 +65,7 @@ export function toPX(str: string, element?: Readonly<Element>): Maybe<number> {
 /* c8 ignore next */
 function getPropertyInPX(element: Readonly<Element>, prop: string): number {
   const [value, units] = parseUnit(
-    getComputedStyle(element).getPropertyValue(prop)
+    getComputedStyle(element).getPropertyValue(prop),
   );
   return value * (toPX(units, element) ?? 1);
 }

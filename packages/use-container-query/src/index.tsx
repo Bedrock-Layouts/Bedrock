@@ -12,7 +12,7 @@ interface UseContainerQueryProps {
  */
 export function useContainerQuery<T extends Element>(
   { width = 1, maxWidth }: Readonly<UseContainerQueryProps>,
-  forwardedRef?: React.Ref<T>
+  forwardedRef?: React.Ref<T>,
 ): [boolean, React.MutableRefObject<T>] {
   const [matches, setMatch] = React.useState(false);
   const containerRef = useForwardedRef(forwardedRef);

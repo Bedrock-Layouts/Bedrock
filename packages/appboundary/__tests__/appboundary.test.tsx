@@ -34,7 +34,7 @@ describe("AppBoundary", () => {
       const appboundary = create(
         <AppBoundary>
           <Lorem />
-        </AppBoundary>
+        </AppBoundary>,
       );
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
@@ -55,7 +55,7 @@ describe("AppBoundary", () => {
       const appboundary = create(
         <AppBoundary boundarySize={boundary}>
           <Lorem />
-        </AppBoundary>
+        </AppBoundary>,
       );
       expect(appboundary.toJSON()).toMatchSnapshot();
     });
@@ -68,7 +68,7 @@ describe("AppBoundary", () => {
           <AppBoundary boundarySize="ultraWide">
             <Lorem />
           </AppBoundary>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(appboundary.toJSON()).toMatchSnapshot();
     });

@@ -24,12 +24,11 @@ export type ValidConstructor =
 export type DynamicProps<T extends ValidConstructor> = T extends ValidElements
   ? JSX.IntrinsicElements[T]
   : T extends ValidComponent<infer U>
-  ? U
-  : Record<string, unknown>;
+    ? U
+    : Record<string, unknown>;
 
-type UnboxIntrinsicElements<T> = T extends JSX.HTMLAttributes<infer U>
-  ? U
-  : never;
+type UnboxIntrinsicElements<T> =
+  T extends JSX.HTMLAttributes<infer U> ? U : never;
 
 // eslint-disable-next-line functional/no-return-void
 type RefCallback<T> = (el: T) => void;
@@ -40,8 +39,8 @@ type UnboxComponentProp<U> = U extends { ref: infer X } ? X : never;
 type DynamicNode<T extends ValidConstructor> = T extends ValidElements
   ? UnboxIntrinsicElements<JSX.IntrinsicElements[T]>
   : T extends ValidComponent<infer U>
-  ? UnboxComponentProp<U>
-  : never;
+    ? UnboxComponentProp<U>
+    : never;
 
 interface WithRef<T extends ValidConstructor> {
   ref?: RefField<DynamicNode<T>>;
@@ -56,7 +55,7 @@ interface DynamicComponentWithRef<T extends ValidConstructor>
 export type HeadlessPropsWithRef<
   T extends ValidConstructor,
   // eslint-disable-next-line @typescript-eslint/ban-types
-  V = {}
+  V = {},
 > = OmitAndMerge<V & DynamicComponentWithRef<T>, DynamicProps<T>>;
 
 export function convertToMaybe<T>(value: T): Maybe<T> {
@@ -65,7 +64,7 @@ export function convertToMaybe<T>(value: T): Maybe<T> {
 
 export function omitProps<T extends Record<string, any>, K extends keyof T>(
   value: T,
-  keys: readonly K[]
+  keys: readonly K[],
 ): Omit<T, K> {
   return Object.keys(value)
     .filter((k) => !keys.includes(k as K))
@@ -82,7 +81,7 @@ export function omitProps<T extends Record<string, any>, K extends keyof T>(
 
 export default function createDynamic<T extends ValidConstructor>(
   source: () => T,
-  props: DynamicProps<T>
+  props: DynamicProps<T>,
 ): JSX.Element {
   return createComponent(
     Dynamic,
@@ -92,13 +91,13 @@ export default function createDynamic<T extends ValidConstructor>(
           return source();
         },
       },
-      props
-    ) as any
+      props,
+    ) as any,
   );
 }
 
 export function createPropsFromAccessors<T extends Record<string, Accessor>>(
-  props: T
+  props: T,
 ): { [P in keyof T]: ReturnType<T[P]> } | Error {
   if (!Object.values(props).every((x) => typeof x === "function"))
     return new Error("Please provide an object with accessor values only.");

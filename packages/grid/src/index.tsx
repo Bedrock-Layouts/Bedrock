@@ -52,7 +52,7 @@ export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
     variant,
     ...props
   },
-  ref
+  ref,
 ) {
   const theme = useTheme();
   const maybeMinItemWidth = getSizeValue(theme, minItemWidth);

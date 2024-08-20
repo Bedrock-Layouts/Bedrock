@@ -18,7 +18,7 @@ import { convertToMaybe } from "./typeUtils";
  */
 export function createContainerQuery<T extends Element>(
   width: number,
-  maybeRef?: (ref: T) => unknown
+  maybeRef?: (ref: T) => unknown,
 ): [Accessor<boolean>, Setter<T | undefined>] {
   const [matches, setMatch] = createSignal(false);
   const [node, nodeRef] = createSignal<T>();
