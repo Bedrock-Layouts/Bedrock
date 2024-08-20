@@ -33,7 +33,7 @@ function SideNavGroup(
   props: Readonly<{
     title: string;
     links: { href: string; name: string }[];
-  }>
+  }>,
 ) {
   return (
     <Stack gutter="size2">

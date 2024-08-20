@@ -32,7 +32,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid>
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -43,7 +43,7 @@ describe("Grid", () => {
         const grid = create(
           <Grid gutter={gutter}>
             <Lorem />
-          </Grid>
+          </Grid>,
         );
         expect(grid.toJSON()).toMatchSnapshot();
       });
@@ -53,7 +53,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid gutter={20}>
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid gutter="3ch">
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -71,7 +71,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid gutter="size3" minItemWidth={320}>
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -80,7 +80,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid gutter="size3" minItemWidth="32rem">
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -89,7 +89,7 @@ describe("Grid", () => {
       const grid = create(
         <Grid variant="masonry" gutter="size3" minItemWidth="32rem">
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -106,7 +106,7 @@ describe("Grid", () => {
           <Grid gutter="1x">
             <Lorem />
           </Grid>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
@@ -118,7 +118,7 @@ describe("Grid", () => {
         // @ts-expect-error
         <Grid gutter={{ value: "incorrect" }}>
           <Lorem />
-        </Grid>
+        </Grid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -129,7 +129,7 @@ describe("Grid", () => {
         // @ts-expect-error
         <Grid gutter="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
-        </Grid>
+        </Grid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -140,7 +140,7 @@ describe("Grid", () => {
         // @ts-expect-error
         <Grid gutter="size3" minItemWidth="garbage">
           <Lorem />
-        </Grid>
+        </Grid>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -151,7 +151,7 @@ describe("Grid", () => {
         // @ts-expect-error
         <Grid variant="incorrect" gutter="size3" minItemWidth="32rem">
           <Lorem />
-        </Grid>
+        </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });

@@ -30,7 +30,7 @@ const isBrowser =
   document.nodeType === 9;
 
 const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
-  props
+  props,
 ) => {
   const [rowSpan, setRowSpan] = createSignal(1);
   const [node, nodeRef] = createSignal<HTMLElement>();
@@ -49,7 +49,7 @@ const Resizer: Component<{ gutter?: SpacingOptions; children?: JSXElement }> = (
     const cleanup = registerCallback(ref, ({ target }) => {
       setRowSpan(1);
       const gapString = props.gutter
-        ? getSpacingValue(theme, props.gutter) ?? "1px"
+        ? (getSpacingValue(theme, props.gutter) ?? "1px")
         : "1px";
 
       const maybeGap = isBrowser ? toPX(gapString, target) : undefined;

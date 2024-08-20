@@ -54,7 +54,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
     switchAt,
     ...props
   },
-  ref
+  ref,
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gap ?? gutter);
@@ -110,7 +110,7 @@ export const Column = forwardRefWithAs<"div", ColumnProps>(function Column(
     offsetEnd = 0,
     ...props
   },
-  ref
+  ref,
 ) {
   const safeOffsetStart = offsetStart > 0 ? offsetStart : undefined;
   const safeOffsetEnd = offsetEnd > 0 ? offsetEnd : undefined;

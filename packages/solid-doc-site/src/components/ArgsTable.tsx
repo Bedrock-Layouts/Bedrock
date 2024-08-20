@@ -77,7 +77,7 @@ const BodyRow = styled("tr")`
 `;
 
 function HeadingCell(
-  props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>
+  props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>,
 ) {
   return <PadBox as="th" padding="size7" {...props} />;
 }
@@ -98,9 +98,9 @@ function SelectInput(
     options: string[];
     initialValue: string;
     onChange?: (
-      params: Readonly<{ propName: string; value: string }>
+      params: Readonly<{ propName: string; value: string }>,
     ) => unknown;
-  }>
+  }>,
 ) {
   return (
     <SelectWrapper>
@@ -135,9 +135,9 @@ export function ArgsTable(
       params: Readonly<{
         propName: string;
         value: string | boolean | number;
-      }>
+      }>,
     ) => unknown;
-  }>
+  }>,
 ): JSXElement {
   const [shouldSwitch, ref] = createContainerQuery(655);
 

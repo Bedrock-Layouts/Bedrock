@@ -41,7 +41,7 @@ ResizeObserver.mockImplementation(
       disconnect: vi.fn(map.clear),
       unobserve,
     };
-  })
+  }),
 );
 
 let matches;
@@ -49,17 +49,17 @@ const HookWrapper = forwardRef(
   ({ minWidth, maxWidth, withNode = true }, ref) => {
     const [doesMatch, nodeRef] = useContainerQuery(
       { width: minWidth, maxWidth },
-      ref
+      ref,
     );
 
     matches = doesMatch;
 
     nodeRef.current = withNode
-      ? nodeRef.current ?? document.createElement("div")
+      ? (nodeRef.current ?? document.createElement("div"))
       : null;
 
     return null;
-  }
+  },
 );
 
 describe("useContainerQuery", () => {

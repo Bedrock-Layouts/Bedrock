@@ -11,7 +11,7 @@ export interface Config {
  */
 export function useForwardedRef<T>(
   forwardedRef?: React.Ref<T>,
-  config: Config = { isStateful: true }
+  config: Config = { isStateful: true },
 ): React.MutableRefObject<T> {
   const statefulRef = useStatefulRef<T>();
   const ref = useRef<T>();

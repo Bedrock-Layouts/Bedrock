@@ -32,7 +32,7 @@ describe("InlineCluster", () => {
       const inlineCluster = create(
         <InlineCluster>
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -43,7 +43,7 @@ describe("InlineCluster", () => {
         const inlineCluster = create(
           <InlineCluster gutter={gutter}>
             <Lorem />
-          </InlineCluster>
+          </InlineCluster>,
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
@@ -53,7 +53,7 @@ describe("InlineCluster", () => {
       const inlineCluster = create(
         <InlineCluster gutter={20}>
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe("InlineCluster", () => {
       const inlineCluster = create(
         <InlineCluster gutter="3ch">
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -79,7 +79,7 @@ describe("InlineCluster", () => {
         const inlineCluster = create(
           <InlineCluster gutter="size3" justify={justify}>
             <Lorem />
-          </InlineCluster>
+          </InlineCluster>,
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
@@ -91,7 +91,7 @@ describe("InlineCluster", () => {
         const inlineCluster = create(
           <InlineCluster gutter="size3" align={align}>
             <Lorem />
-          </InlineCluster>
+          </InlineCluster>,
         );
         expect(inlineCluster.toJSON()).toMatchSnapshot();
       });
@@ -104,7 +104,7 @@ describe("InlineCluster", () => {
           <InlineCluster gutter="1x">
             <Lorem />
           </InlineCluster>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -116,7 +116,7 @@ describe("InlineCluster", () => {
           <InlineCluster gutter="sizeNone">
             <Lorem />
           </InlineCluster>
-        </ThemeProvider>
+        </ThemeProvider>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -125,7 +125,7 @@ describe("InlineCluster", () => {
       const inlineCluster = create(
         <InlineCluster gutter="size3" className="CLASSNAME">
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
@@ -137,7 +137,7 @@ describe("InlineCluster", () => {
         // @ts-expect-error
         <InlineCluster gutter={{ value: "incorrect" }}>
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -148,7 +148,7 @@ describe("InlineCluster", () => {
         // @ts-expect-error
         <InlineCluster gutter="size3" justify="incorrect">
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
@@ -158,7 +158,7 @@ describe("InlineCluster", () => {
         // @ts-expect-error
         <InlineCluster gutter="size3" align="incorrect">
           <Lorem />
-        </InlineCluster>
+        </InlineCluster>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();

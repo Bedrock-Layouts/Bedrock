@@ -40,7 +40,7 @@ function getSafeMinItemWidth(
     space?: { [key: string]: string };
     sizes?: { [key: string]: string };
   }>,
-  minItemWidth?: MinItemWidth
+  minItemWidth?: MinItemWidth,
 ) {
   return getSizeValue(theme, minItemWidth);
 }
@@ -49,7 +49,7 @@ export type ColumnDropProps<T extends ValidConstructor = "div"> =
   HeadlessPropsWithRef<T, ColumnDropBaseProps>;
 
 export function ColumnDrop<T extends ValidConstructor = "div">(
-  props: Readonly<ColumnDropProps<T>>
+  props: Readonly<ColumnDropProps<T>>,
 ): JSX.Element {
   const theme = useTheme();
 
@@ -58,7 +58,7 @@ export function ColumnDrop<T extends ValidConstructor = "div">(
       ? props.style
       : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
           (str, [key, value]) => str + `${key}:${value};`,
-          ""
+          "",
         );
 
   const gutter = () =>
@@ -81,7 +81,7 @@ export function ColumnDrop<T extends ValidConstructor = "div">(
       createPropsFromAccessors({
         style,
         "data-bedrock-column-drop": noStretchedColumns,
-      })
-    ) as DynamicProps<T>
+      }),
+    ) as DynamicProps<T>,
   );
 }

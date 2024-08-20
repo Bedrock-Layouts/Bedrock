@@ -31,7 +31,7 @@ export interface InlineClusterProps {
 
 function createAttributeString(
   prefix: string,
-  value: string | number | undefined
+  value: string | number | undefined,
 ) {
   if (value === undefined) return undefined;
 
@@ -55,7 +55,7 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
       gap,
       ...props
     },
-    ref
+    ref,
   ) {
     const theme = useTheme();
     const justifyValue = createAttributeString("justify", justify);
@@ -78,5 +78,5 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
         {...props}
       />
     );
-  }
+  },
 );

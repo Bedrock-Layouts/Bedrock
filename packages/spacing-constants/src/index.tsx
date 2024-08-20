@@ -152,7 +152,7 @@ type PropertyCheckFunction<T, K> = (property: K) => PropertyResult<T, K>;
 
 /** A Higher Order Function that takes a function that will validate if val K is of type T and return a validator function */
 function checkPropertyBy<T, K>(
-  fn: (val: K) => boolean
+  fn: (val: K) => boolean,
 ): PropertyCheckFunction<T, K> {
   return (property) => {
     return fn(property)
@@ -168,7 +168,7 @@ function checkPropertyBy<T, K>(
 }
 
 const checkIsCSSCustomProperty = checkPropertyBy<CSSCustomProperty, string>(
-  (str) => customPropertyRegex.test(str)
+  (str) => customPropertyRegex.test(str),
 );
 
 const checkIsCSSLength = checkPropertyBy<CSSLength, unknown>((str) => {
@@ -211,7 +211,7 @@ export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
 //TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme and probably shouldn't be exported.
 export function getSpacingValue<T extends DefaultTheme>(
   theme: Readonly<T & { space?: BaseTheme }>,
-  spacingKey: SpacingOptions
+  spacingKey: SpacingOptions,
 ): Maybe<CSSLength> {
   const spaceMapFromThemeOrDefault = theme.space ?? spacing;
 
@@ -219,7 +219,7 @@ export function getSpacingValue<T extends DefaultTheme>(
     Object.entries(spaceMapFromThemeOrDefault).map(([spaceKey, value]) => [
       spaceKey as SpacingOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ])
+    ]),
   );
 
   return convertToMaybe(spaceMap[spacingKey]);
@@ -231,7 +231,7 @@ export type Gutter = CSSLength | number | SpacingOptions;
 //TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme.
 export function getSafeGutter<T extends DefaultTheme>(
   theme: T,
-  gutter?: Gutter
+  gutter?: Gutter,
 ): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
@@ -254,7 +254,7 @@ export function getSafeGutter<T extends DefaultTheme>(
 //TODO - shouldn't take the whole theme.  Should take the sizeMap from the theme.
 export function getSizeValue(
   theme: Readonly<{ sizes?: BaseTheme }>,
-  sizeKey?: string | number
+  sizeKey?: string | number,
 ): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
@@ -277,7 +277,7 @@ export function getSizeValue(
     Object.entries(sizeMapFromThemeOrDefault).map(([sizeKey, value]) => [
       sizeKey as SizesOptions,
       (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ])
+    ]),
   );
 
   return convertToMaybe(sizeMap[sizeKey as SizesOptions]);

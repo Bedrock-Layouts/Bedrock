@@ -27,7 +27,7 @@ export type ReelProps = {
 
 function createAttributeString(
   prefix: string,
-  value: string | number | undefined
+  value: string | number | undefined,
 ) {
   if (value === undefined) return undefined;
 
@@ -42,7 +42,7 @@ function createAttributeString(
  */
 export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
   { as: Component = "div", snapType, gutter, gap, style = {}, ...props },
-  ref
+  ref,
 ) {
   const theme = useTheme();
   const maybeGutter = getSafeGutter(theme, gap ?? gutter);
