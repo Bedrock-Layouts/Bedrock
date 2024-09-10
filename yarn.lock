@@ -2006,12 +2006,12 @@
   dependencies:
     "@nx/devkit" "19.3.0"
 
-"@nrwl/nx-cloud@18.0.1", "@nrwl/nx-cloud@^18.0.1":
-  version "18.0.1"
-  resolved "https://registry.npmjs.org/@nrwl/nx-cloud/-/nx-cloud-18.0.1.tgz#adbc7202f5e0478c14ddb9c65d3ef80f5613b65c"
-  integrity sha512-uYVxoOXf0xlWJX8O5GBWajmIeL0PfIGvfqtvVNVnl7C6FiZRbmKEhXkWxEDekI6Jq+mI1G86o7d5YsIzq6e36A==
+"@nrwl/nx-cloud@19.1.0", "@nrwl/nx-cloud@^19.1.0":
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-19.1.0.tgz#5338910b7cbc0d974f374e8d5ca4ef31ccdc16df"
+  integrity sha512-krngXVPfX0Zf6+zJDtcI59/Pt3JfcMPMZ9C/+/x6rvz4WGgyv1s0MI4crEUM0Lx5ZpS4QI0WNDCFVQSfGEBXUg==
   dependencies:
-    nx-cloud "18.0.1"
+    nx-cloud "19.1.0"
 
 "@nrwl/tao@19.6.5":
   version "19.6.5"
@@ -4126,16 +4126,7 @@ axe-core@^4.9.1:
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.9.1.tgz#fcd0f4496dad09e0c899b44f6c4bb7848da912ae"
   integrity sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==
 
-axios@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.1.3.tgz#8274250dada2edf53814ed7db644b9c2866c1e35"
-  integrity sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==
-  dependencies:
-    follow-redirects "^1.15.0"
-    form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
-
-axios@^1.7.4:
+axios@^1.6.0, axios@^1.7.4:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
   integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
@@ -6573,7 +6564,7 @@ flow-parser@0.*:
   resolved "https://registry.npmjs.org/flow-parser/-/flow-parser-0.238.0.tgz#b465753c2630a38f459413a745c69ec11a0b5291"
   integrity sha512-VE7XSv1epljsIN2YeBnxCmGJihpNIAnLLu/pPOdA+Gkso7qDltJwUi6vfHjgxdBbjSdAuPGnhuOHJUQG+yYwIg==
 
-follow-redirects@^1.15.0, follow-redirects@^1.15.6:
+follow-redirects@^1.15.6:
   version "1.15.6"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
   integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
@@ -7394,6 +7385,11 @@ ini@4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/ini/-/ini-4.1.1.tgz#d95b3d843b1e906e56d6747d5447904ff50ce7a1"
   integrity sha512-QQnnxNyfvmHFIsj7gkPcYymR8Jdw/o7mp5ZFihxn6h8Ci6fh3Dx4E1gPjpQEpIuPo9XVNY/ZUwh4BPMjGyL01g==
+
+ini@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-4.1.3.tgz#4c359675a6071a46985eb39b14e4a2c0ec98a795"
+  integrity sha512-X7rqawQBvfdjS10YU1y1YVreA3SsLrW9dX2CewP2EbBJM4ypVNLDkO5y04gejPwKIY9lR+7r9gn3rFPt/kmWFg==
 
 ini@^1.3.2, ini@^1.3.4, ini@^1.3.8:
   version "1.3.8"
@@ -9544,19 +9540,19 @@ nwsapi@^2.2.12:
   resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.12.tgz#fb6af5c0ec35b27b4581eb3bbad34ec9e5c696f8"
   integrity sha512-qXDmcVlZV4XRtKFzddidpfVP4oMSGhga+xdMc25mv8kaLUHtgzCDhUxkrN8exkGdTlLNaXj7CV3GtON7zuGZ+w==
 
-nx-cloud@18.0.1:
-  version "18.0.1"
-  resolved "https://registry.npmjs.org/nx-cloud/-/nx-cloud-18.0.1.tgz#c506fd4935a391c734aafd3762d006201e447589"
-  integrity sha512-nxJfz0ZmW+DKSr8evmVVm6t1XcLn9WHR5I8kiE2BFNkLVwC+nx+MimjJ53opfHOepMqQiGJAdstZ5Ks630bJgg==
+nx-cloud@19.1.0:
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/nx-cloud/-/nx-cloud-19.1.0.tgz#3edb6eaad70f7ab09b2008fdd02fa5ac0f9df940"
+  integrity sha512-f24vd5/57/MFSXNMfkerdDiK0EvScGOKO71iOWgJNgI1xVweDRmOA/EfjnPMRd5m+pnoPs/4A7DzuwSW0jZVyw==
   dependencies:
-    "@nrwl/nx-cloud" "18.0.1"
-    axios "1.1.3"
+    "@nrwl/nx-cloud" "19.1.0"
+    axios "^1.6.0"
     chalk "^4.1.0"
     dotenv "~10.0.0"
     fs-extra "^11.1.0"
+    ini "4.1.3"
     node-machine-id "^1.1.12"
     open "~8.4.0"
-    strip-json-comments "^3.1.1"
     tar "6.2.1"
     yargs-parser ">=21.1.1"
 
