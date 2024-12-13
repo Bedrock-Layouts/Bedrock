@@ -1136,10 +1136,10 @@
   resolved "https://registry.npmjs.org/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.24.7"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.7.tgz#f4f0d5530e8dbdf59b3451b9b3e594b6ba082e12"
-  integrity sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.2", "@babel/runtime@^7.25.0", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+  version "7.26.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.0.tgz#8600c2f595f277c60815256418b85356a65173c1"
+  integrity sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -10798,12 +10798,12 @@ react-github-button@^0.1.11:
   dependencies:
     prop-types "^15.5.10"
 
-react-i18next@^14.1.2:
-  version "14.1.2"
-  resolved "https://registry.npmjs.org/react-i18next/-/react-i18next-14.1.2.tgz#cd57a755f25a32a5fcc3dbe546cf3cc62b4f3ebd"
-  integrity sha512-FSIcJy6oauJbGEXfhUgVeLzvWBhIBIS+/9c6Lj4niwKZyGaGb4V4vUbATXSlsHJDXXB+ociNxqFNiFuV1gmoqg==
+react-i18next@^15.2.0:
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-15.2.0.tgz#6b51650e1e93eb4d235a4d533fcf61b3bbf4ea10"
+  integrity sha512-iJNc8111EaDtVTVMKigvBtPHyrJV+KblWG73cUxqp+WmJCcwkzhWNFXmkAD5pwP2Z4woeDj/oXDdbjDsb3Gutg==
   dependencies:
-    "@babel/runtime" "^7.23.9"
+    "@babel/runtime" "^7.25.0"
     html-parse-stringify "^3.0.1"
 
 react-is@18.1.0:
