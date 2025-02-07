@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.3.9...@bedrock-layout/spacing-constants@3.3.10) (2025-02-07)
+
+**Note:** Version bump only for package @bedrock-layout/spacing-constants
+
 ## [3.3.9](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.3.8...@bedrock-layout/spacing-constants@3.3.9) (2024-08-20)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.16](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-stateful-ref@2.0.15...@bedrock-layout/use-stateful-ref@2.0.16) (2025-02-07)
+
+**Note:** Version bump only for package @bedrock-layout/use-stateful-ref
+
 ## [2.0.15](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/use-stateful-ref@2.0.14...@bedrock-layout/use-stateful-ref@2.0.15) (2024-08-20)
 
 **Note:** Version bump only for package @bedrock-layout/use-stateful-ref
