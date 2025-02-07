@@ -78,7 +78,10 @@ export function forwardRefWithAs<C extends React.ElementType, Props = {}>(
     ref: PolymorphicRef<C>,
   ) => React.ReactElement | null,
 ) {
-  return React.forwardRef(render) as PolymorphicForwardedRefComponent<C, Props>;
+  return React.forwardRef(render as any) as PolymorphicForwardedRefComponent<
+    C,
+    Props
+  >;
 }
 
 export type Maybe<T> = NonNullable<T> | undefined;

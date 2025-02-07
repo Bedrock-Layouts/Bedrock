@@ -1,19 +1,30 @@
 {
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "test",
-          "test:coverage",
-          "verify",
-          "check-types",
-          "lint",
-          "check-format",
-          "knip"
-        ],
-        "accessToken": "NzI4NTdmYmYtMTMyZS00YjE4LWE4OTEtMDcyZjUxZDVmNmVifHJlYWQtd3JpdGU="
-      }
+  "nxCloudAccessToken": "NzI4NTdmYmYtMTMyZS00YjE4LWE4OTEtMDcyZjUxZDVmNmVifHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "test": {
+      "cache": true
+    },
+    "test:coverage": {
+      "cache": true
+    },
+    "verify": {
+      "cache": true
+    },
+    "check-types": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "check-format": {
+      "cache": true
+    },
+    "knip": {
+      "cache": true
+    },
+    "build": {
+      "cache": false,
+      "dependsOn": ["^build"]
     }
   }
 }
