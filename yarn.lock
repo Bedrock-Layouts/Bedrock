@@ -2175,10 +2175,10 @@
   resolved "https://registry.npmjs.org/@pkgr/core/-/core-0.1.1.tgz#1ec17e2edbec25c8306d424ecfbf13c7de1aaa31"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
-"@putout/minify@^4.0.0":
-  version "4.11.0"
-  resolved "https://registry.npmjs.org/@putout/minify/-/minify-4.11.0.tgz#37d755132e3e16069239fef22df6ce784be980dc"
-  integrity sha512-NzDcsNgZCxyc128McSuk9MWzimbgJ2Xs7T36iGhBQp3FvU1ksHofds3HpqD6oFNgGyLqkRnjiknaBVsomNhi9A==
+"@putout/minify@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-5.0.0.tgz#8bc572d49d70d7712b948f67338e7c277e1a3496"
+  integrity sha512-rmRz+7QGZTDQreA2CR0626TGpGr3AC0o0mwPIpHHSHQ7gy3tJ7b1EQehefbgSPldNQrCAym/5CIUDe/HnPdygA==
 
 "@radix-ui/primitive@1.1.1":
   version "1.1.1"
@@ -5560,7 +5560,7 @@ esbuild-register@^3.5.0:
   dependencies:
     debug "^4.3.4"
 
-"esbuild@^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0", esbuild@^0.24.0:
+"esbuild@^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0":
   version "0.24.2"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.24.2.tgz#b5b55bee7de017bff5fb8a4e3e44f2ebe2c3567d"
   integrity sha512-+9egpBW8I3CD5XPe0n6BfT5fxLzxrlDzqydF3aviG+9ni1lDC/OvMHcxqEFV0+LANZG5R1bFMWfUrjVsdwxJvA==
@@ -5620,7 +5620,7 @@ esbuild@^0.21.3:
     "@esbuild/win32-ia32" "0.21.5"
     "@esbuild/win32-x64" "0.21.5"
 
-esbuild@^0.25.0:
+esbuild@^0.25.0, esbuild@^0.25.1:
   version "0.25.2"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.25.2.tgz#55a1d9ebcb3aa2f95e8bba9e900c1a5061bc168b"
   integrity sha512-16854zccKPnC+toMywC+uKNeYSv+/eXkevRAfwRD/G9Cleq66m8XFIrigkbvauLLlCfDL45Q2cWegSg53gGBnQ==
@@ -8670,17 +8670,17 @@ min-indent@^1.0.0, min-indent@^1.0.1:
   resolved "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-minify@^13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-13.0.0.tgz#3d0e681f7491b09112fef27702b182ce5a841345"
-  integrity sha512-a8l1p6RWDDHjH9kAaSAapu2m20ozhJ+sfkY9GljvDVXDRSDQME+5zZPbooOC8e17ej95y5k8q47NfN/ceCkLqg==
+minify@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-14.0.0.tgz#9ecbb8c8527c91cd1ca139421deec3f90187f87a"
+  integrity sha512-vFM9k94b8admPvIuCJnsTy2Fl5yQHmlCJeIFALdJ7fyc0FkddrT2bGGGzmngLHw3B66esP5RAa/I6R+A5mTjyA==
   dependencies:
-    "@putout/minify" "^4.0.0"
+    "@putout/minify" "^5.0.0"
     "@swc/core" "^1.6.7"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
-    esbuild "^0.24.0"
+    esbuild "^0.25.1"
     find-up "^7.0.0"
     html-minifier-terser "^7.1.0"
     lightningcss "^1.28.1"
