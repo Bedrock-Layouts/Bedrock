@@ -57,7 +57,7 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
 
   return (
     <Component
-      data-bedrock-center={centerProps}
+      data-br-center={centerProps}
       ref={ref}
       style={
         {

@@ -54,7 +54,7 @@ export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
   return (
     <Component
       ref={ref}
-      data-bedrock-reel={attributeString}
+      data-br-reel={attributeString}
       style={{ "--gutter": maybeGutter, ...style } as CSSProperties}
       {...props}
     />

@@ -70,7 +70,7 @@ export function Columns<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "columns", "colCount", "switchAt"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-columns": () => "",
+        "data-br-columns": () => "",
       }),
     ) as DynamicProps<T>,
   );
@@ -121,7 +121,7 @@ export function Column<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "span", "offsetStart", "offsetEnd"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-column": () => "",
+        "data-br-column": () => "",
       }),
     ) as DynamicProps<T>,
   );

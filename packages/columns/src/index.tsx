@@ -64,7 +64,7 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   return (
     <Component
       ref={ref}
-      data-bedrock-columns={""}
+      data-br-columns=""
       style={
         {
           "--gutter": maybeGutter,
@@ -118,7 +118,7 @@ export const Column = forwardRefWithAs<"div", ColumnProps>(function Column(
 
   return (
     <Component
-      data-bedrock-column
+      data-br-column=""
       ref={ref}
       style={
         {

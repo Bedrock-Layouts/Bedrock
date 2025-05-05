@@ -74,7 +74,7 @@ function CoverWrapper<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "minHeight", "stretchContent"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-cover": stretchContent,
+        "data-br-cover": stretchContent,
       }),
     ) as DynamicProps<T>,
   );
@@ -94,7 +94,7 @@ export function Cover<T extends ValidConstructor = "div">(
   return (
     <CoverWrapper {...(restProps as CoverWrapperProps)}>
       {local.top}
-      <div data-bedrock-cover-centered>{local.children}</div>
+      <div data-br-cover-centered>{local.children}</div>
       {local.bottom}
     </CoverWrapper>
   );

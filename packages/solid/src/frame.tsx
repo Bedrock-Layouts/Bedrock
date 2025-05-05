@@ -69,7 +69,7 @@ export function Frame<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "ratio", "position"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-frame": () => "",
+        "data-br-frame": () => "",
       }),
     ) as DynamicProps<T>,
   );

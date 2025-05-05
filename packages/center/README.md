@@ -25,7 +25,7 @@ or
 ## Usage
 
 ```javascript
-import { Center } from '@bedrock-layout/center';
+import { Center } from "@bedrock-layout/center";
 
 <Center>
   <div>1</div>
@@ -41,14 +41,14 @@ import { Center } from '@bedrock-layout/center';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-center`.
+For styling purposes, you can select `data-br-center`.
 
 ---
 
 ## API
 
-| Property       | Description                       | Type           | Default           |
-| :------------: | :-------------------------------: | :------------: | :---------------: |
-| maxWidth       | Max width of the content          | number, string | medium (1023px)   |
-| centerText     | Center align the text             | boolean        | false             |
-| centerChildren | Center align the child components | boolean        | false             |
+|    Property    |            Description            |      Type      |     Default     |
+| :------------: | :-------------------------------: | :------------: | :-------------: |
+|    maxWidth    |     Max width of the content      | number, string | medium (1023px) |
+|   centerText   |       Center align the text       |    boolean     |      false      |
+| centerChildren | Center align the child components |    boolean     |      false      |

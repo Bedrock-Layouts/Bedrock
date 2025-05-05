@@ -84,7 +84,7 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
   return (
     <Component
       ref={ref}
-      data-bedrock-cover={attributeVal}
+      data-br-cover={attributeVal}
       style={
         {
           "--gutter": maybeGutter,
@@ -94,9 +94,9 @@ export const Cover = forwardRefWithAs<"div", CoverProps>(function Cover(
       }
       {...props}
     >
-      {top && <div data-bedrock-cover-top="">{top}</div>}
-      <div data-bedrock-cover-centered="">{children}</div>
-      {bottom && <div data-bedrock-cover-bottom="">{bottom}</div>}
+      {top && <div data-br-cover-top="">{top}</div>}
+      <div data-br-cover-centered="">{children}</div>
+      {bottom && <div data-br-cover-bottom="">{bottom}</div>}
     </Component>
   );
 });

@@ -2,7 +2,7 @@
 
 exports[`Frame > correct usage > renders custom position 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": "top left",
@@ -19,7 +19,7 @@ exports[`Frame > correct usage > renders custom position 1`] = `
 
 exports[`Frame > correct usage > renders with ratio as a string 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -36,7 +36,7 @@ exports[`Frame > correct usage > renders with ratio as a string 1`] = `
 
 exports[`Frame > correct usage > renders with ratio as a string with spaces 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -53,7 +53,7 @@ exports[`Frame > correct usage > renders with ratio as a string with spaces 1`] 
 
 exports[`Frame > correct usage > renders with ratio as an array 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -70,7 +70,7 @@ exports[`Frame > correct usage > renders with ratio as an array 1`] = `
 
 exports[`Frame > correct usage > renders with ratio string using a colon 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -87,7 +87,7 @@ exports[`Frame > correct usage > renders with ratio string using a colon 1`] = `
 
 exports[`Frame > correct usage > renders with ratio string using a colon and with spaces 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -104,7 +104,7 @@ exports[`Frame > correct usage > renders with ratio string using a colon and wit
 
 exports[`Frame > correct usage > renders without ratio 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -121,7 +121,7 @@ exports[`Frame > correct usage > renders without ratio 1`] = `
 
 exports[`Frame > incorrect usage > renders default position with incorrect value 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": true,
@@ -138,7 +138,7 @@ exports[`Frame > incorrect usage > renders default position with incorrect value
 
 exports[`Frame > incorrect usage > renders without ratio if ratio is not correct type 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -155,7 +155,7 @@ exports[`Frame > incorrect usage > renders without ratio if ratio is not correct
 
 exports[`Frame > incorrect usage > renders without ratio with error if array of length <1 provided 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -172,7 +172,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
 
 exports[`Frame > incorrect usage > renders without ratio with error if array of length >2 provided 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -189,7 +189,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
 
 exports[`Frame > incorrect usage > renders without ratio with error if array of not numbers provided 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,
@@ -206,7 +206,7 @@ exports[`Frame > incorrect usage > renders without ratio with error if array of 
 
 exports[`Frame > incorrect usage > renders without ratio with error if ratio string is not correct format 1`] = `
 <div
-  data-bedrock-frame={true}
+  data-br-frame={true}
   style={
     {
       "--position": undefined,

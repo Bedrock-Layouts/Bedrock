@@ -78,7 +78,7 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
     return (
       <Component
         ref={ref}
-        data-bedrock-column-drop={attributeValue}
+        data-br-column-drop={attributeValue}
         style={
           {
             "--gutter": maybeGutter,

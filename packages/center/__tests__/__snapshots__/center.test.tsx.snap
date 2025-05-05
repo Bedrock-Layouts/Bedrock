@@ -2,7 +2,7 @@
 
 exports[`Center > correct usage > renders custom width 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": "320px",
@@ -26,7 +26,7 @@ exports[`Center > correct usage > renders custom width 1`] = `
 
 exports[`Center > correct usage > renders custom width as string 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": "320px",
@@ -50,7 +50,7 @@ exports[`Center > correct usage > renders custom width as string 1`] = `
 
 exports[`Center > correct usage > renders default width 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": undefined,
@@ -74,7 +74,7 @@ exports[`Center > correct usage > renders default width 1`] = `
 
 exports[`Center > correct usage > renders with centered children 1`] = `
 <div
-  data-bedrock-center="center-children"
+  data-br-center="center-children"
   style={
     {
       "--maxWidth": undefined,
@@ -98,7 +98,7 @@ exports[`Center > correct usage > renders with centered children 1`] = `
 
 exports[`Center > correct usage > renders with centered text 1`] = `
 <div
-  data-bedrock-center="center-text"
+  data-br-center="center-text"
   style={
     {
       "--maxWidth": undefined,
@@ -122,7 +122,7 @@ exports[`Center > correct usage > renders with centered text 1`] = `
 
 exports[`Center > correct usage > renders with theme overrides 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": undefined,
@@ -146,7 +146,7 @@ exports[`Center > correct usage > renders with theme overrides 1`] = `
 
 exports[`Center > incorrect usage > renders default width if invalid CSS length 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": "320pixels",
@@ -170,7 +170,7 @@ exports[`Center > incorrect usage > renders default width if invalid CSS length 
 
 exports[`Center > incorrect usage > renders default with console error with no children 1`] = `
 <div
-  data-bedrock-center=""
+  data-br-center=""
   style={
     {
       "--maxWidth": [

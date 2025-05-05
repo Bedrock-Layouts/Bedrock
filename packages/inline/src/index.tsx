@@ -102,7 +102,7 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
   return (
     <Component
       ref={ref}
-      data-bedrock-inline={attributes}
+      data-br-inline={attributes}
       style={
         {
           "--gutter": getSafeGutter(theme, gap ?? gutter),

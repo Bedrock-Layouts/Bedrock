@@ -112,7 +112,7 @@ export function PadBox<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "padding"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-padbox": () => "",
+        "data-br-padbox": () => "",
       }),
     ) as DynamicProps<T>,
   );

@@ -29,7 +29,7 @@ or
 ## Usage
 
 ```javascript
-import { Cover } from '@bedrock-layout/cover';
+import { Cover } from "@bedrock-layout/cover";
 
 <Cover>
   <div>1</div>
@@ -40,7 +40,7 @@ import { Cover } from '@bedrock-layout/cover';
 
 ## data-attribute
 
-For purpose of styling, you can select the outer wrapper as `data-bedrock-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an element with the data attributes of `data-bedrock-cover-top`, `data-bedrock-cover-child`, and `data-bedrock-cover-bottom` respectively.
+For purpose of styling, you can select the outer wrapper as `data-br-cover` data attribute. The `top`, `children`, and `bottom` are wrapped in an element with the data attributes of `data-br-cover-top`, `data-br-cover-child`, and `data-br-cover-bottom` respectively.
 
 ---
 

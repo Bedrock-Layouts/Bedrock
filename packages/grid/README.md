@@ -25,7 +25,7 @@ or
 ## Usage
 
 ```javascript
-import { Grid } from '@bedrock-layout/grid';
+import { Grid } from "@bedrock-layout/grid";
 
 <Grid minItemWidth={300}>
   <div>1</div>
@@ -41,7 +41,7 @@ import { Grid } from '@bedrock-layout/grid';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-grid`.
+For styling purposes, you can select `data-br-grid`.
 
 ---
 

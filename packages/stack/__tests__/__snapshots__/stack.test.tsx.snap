@@ -2,7 +2,7 @@
 
 exports[`Stack > correct usage > renders 0px default with no gutter provided 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": undefined,
@@ -26,7 +26,7 @@ exports[`Stack > correct usage > renders 0px default with no gutter provided 1`]
 
 exports[`Stack > correct usage > renders 0px with theme overrides 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "1rem",
@@ -50,7 +50,7 @@ exports[`Stack > correct usage > renders 0px with theme overrides 1`] = `
 
 exports[`Stack > correct usage > renders all the align options 1`] = `
 <div
-  data-bedrock-stack="align:start"
+  data-br-stack="align:start"
   style={
     {
       "--gutter": undefined,
@@ -74,7 +74,7 @@ exports[`Stack > correct usage > renders all the align options 1`] = `
 
 exports[`Stack > correct usage > renders all the align options 2`] = `
 <div
-  data-bedrock-stack="align:stretch"
+  data-br-stack="align:stretch"
   style={
     {
       "--gutter": undefined,
@@ -98,7 +98,7 @@ exports[`Stack > correct usage > renders all the align options 2`] = `
 
 exports[`Stack > correct usage > renders all the align options 3`] = `
 <div
-  data-bedrock-stack="align:end"
+  data-br-stack="align:end"
   style={
     {
       "--gutter": undefined,
@@ -122,7 +122,7 @@ exports[`Stack > correct usage > renders all the align options 3`] = `
 
 exports[`Stack > correct usage > renders all the align options 4`] = `
 <div
-  data-bedrock-stack="align:center"
+  data-br-stack="align:center"
   style={
     {
       "--gutter": undefined,
@@ -146,7 +146,7 @@ exports[`Stack > correct usage > renders all the align options 4`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "-.5rem",
@@ -170,7 +170,7 @@ exports[`Stack > correct usage > renders all the gutter options 1`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 2`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "-.25rem",
@@ -194,7 +194,7 @@ exports[`Stack > correct usage > renders all the gutter options 2`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 3`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": ".25rem",
@@ -218,7 +218,7 @@ exports[`Stack > correct usage > renders all the gutter options 3`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 4`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": ".5rem",
@@ -242,7 +242,7 @@ exports[`Stack > correct usage > renders all the gutter options 4`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 5`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "1rem",
@@ -266,7 +266,7 @@ exports[`Stack > correct usage > renders all the gutter options 5`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 6`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "1.25rem",
@@ -290,7 +290,7 @@ exports[`Stack > correct usage > renders all the gutter options 6`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 7`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "1.5rem",
@@ -314,7 +314,7 @@ exports[`Stack > correct usage > renders all the gutter options 7`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 8`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "1.75rem",
@@ -338,7 +338,7 @@ exports[`Stack > correct usage > renders all the gutter options 8`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 9`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "2rem",
@@ -362,7 +362,7 @@ exports[`Stack > correct usage > renders all the gutter options 9`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 10`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "3rem",
@@ -386,7 +386,7 @@ exports[`Stack > correct usage > renders all the gutter options 10`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 11`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "4rem",
@@ -410,7 +410,7 @@ exports[`Stack > correct usage > renders all the gutter options 11`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 12`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "5rem",
@@ -434,7 +434,7 @@ exports[`Stack > correct usage > renders all the gutter options 12`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 13`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "7.5rem",
@@ -458,7 +458,7 @@ exports[`Stack > correct usage > renders all the gutter options 13`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 14`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "10rem",
@@ -482,7 +482,7 @@ exports[`Stack > correct usage > renders all the gutter options 14`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 15`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "15rem",
@@ -506,7 +506,7 @@ exports[`Stack > correct usage > renders all the gutter options 15`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 16`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "20rem",
@@ -530,7 +530,7 @@ exports[`Stack > correct usage > renders all the gutter options 16`] = `
 
 exports[`Stack > correct usage > renders all the gutter options 17`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "30rem",
@@ -554,7 +554,7 @@ exports[`Stack > correct usage > renders all the gutter options 17`] = `
 
 exports[`Stack > correct usage > renders custom gutter with number 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "20px",
@@ -578,7 +578,7 @@ exports[`Stack > correct usage > renders custom gutter with number 1`] = `
 
 exports[`Stack > correct usage > renders custom gutter with string 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "3ch",
@@ -602,7 +602,7 @@ exports[`Stack > correct usage > renders custom gutter with string 1`] = `
 
 exports[`Stack > correct usage > renders with theme overrides 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": undefined,
@@ -626,7 +626,7 @@ exports[`Stack > correct usage > renders with theme overrides 1`] = `
 
 exports[`Stack > correct usage > renders with theme overrides using 'space' as key 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": "200px",
@@ -650,7 +650,7 @@ exports[`Stack > correct usage > renders with theme overrides using 'space' as k
 
 exports[`Stack > incorrect usage > renders default with wrong gutter value 1`] = `
 <div
-  data-bedrock-stack=""
+  data-br-stack=""
   style={
     {
       "--gutter": undefined,

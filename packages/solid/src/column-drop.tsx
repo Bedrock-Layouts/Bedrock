@@ -80,7 +80,7 @@ export function ColumnDrop<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "minItemWidth", "noStretchedColumns"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-column-drop": noStretchedColumns,
+        "data-br-column-drop": noStretchedColumns,
       }),
     ) as DynamicProps<T>,
   );

@@ -118,7 +118,7 @@ export function Inline<T extends ValidConstructor = "div">(
       ]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-inline": attrAssessor,
+        "data-br-inline": attrAssessor,
       }),
     ) as DynamicProps<T>,
   );
