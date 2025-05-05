@@ -57,7 +57,7 @@ export function Stack<T extends ValidConstructor = "div">(
     () => props.as ?? ("div" as T),
     mergeProps(
       omitProps(props, ["as", "gutter"]),
-      createPropsFromAccessors({ style, "data-bedrock-stack": attrAssessor }),
+      createPropsFromAccessors({ style, "data-br-stack": attrAssessor }),
     ) as DynamicProps<T>,
   );
 }

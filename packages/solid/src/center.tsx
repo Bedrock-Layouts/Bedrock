@@ -54,7 +54,7 @@ export function Center<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "maxWidth", "centerText", "centerChildren"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-center": attrString,
+        "data-br-center": attrString,
       }),
     ) as DynamicProps<T>,
   );

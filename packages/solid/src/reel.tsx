@@ -62,7 +62,7 @@ export function Reel<T extends ValidConstructor = "div">(
     () => props.as ?? ("div" as T),
     mergeProps(
       omitProps(props, ["as", "gutter"]),
-      createPropsFromAccessors({ style, "data-bedrock-reel": snapType }),
+      createPropsFromAccessors({ style, "data-br-reel": snapType }),
     ) as DynamicProps<T>,
   );
 }

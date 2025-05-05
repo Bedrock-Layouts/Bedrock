@@ -25,9 +25,9 @@ or
 ## Usage
 
 ```javascript
-import { Stack } from '@bedrock-layout/stack';
+import { Stack } from "@bedrock-layout/stack";
 
-<Stack gutter='size3'>
+<Stack gutter="size3">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -41,7 +41,7 @@ import { Stack } from '@bedrock-layout/stack';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-stack`.
+For styling purposes, you can select `data-br-stack`.
 
 ---
 

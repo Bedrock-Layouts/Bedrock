@@ -53,7 +53,7 @@ export const Stack = forwardRefWithAs<"div", StackProps>(function Stack(
   return (
     <Component
       ref={ref}
-      data-bedrock-stack={attributes}
+      data-br-stack={attributes}
       style={{ "--gutter": maybeGutter, ...style } as React.CSSProperties}
       {...props}
     />

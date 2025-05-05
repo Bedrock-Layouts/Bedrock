@@ -63,7 +63,7 @@ export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
 
   return (
     <Component
-      data-bedrock-frame
+      data-br-frame
       ref={ref}
       style={
         {

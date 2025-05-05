@@ -25,9 +25,9 @@ or
 ## Usage
 
 ```javascript
-import { Split } from '@bedrock-layout/split';
+import { Split } from "@bedrock-layout/split";
 
-<Split gutter='size3' fraction='2/3'>
+<Split gutter="size3" fraction="2/3">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -41,7 +41,7 @@ import { Split } from '@bedrock-layout/split';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-split`.
+For styling purposes, you can select `data-br-split`.
 
 ---
 

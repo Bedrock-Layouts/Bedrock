@@ -86,7 +86,7 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
   return (
     <Component
       ref={ref}
-      data-bedrock-split={attrString}
+      data-br-split={attrString}
       style={
         {
           "--gutter": maybeGutter,

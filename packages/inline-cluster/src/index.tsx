@@ -67,7 +67,7 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
 
     return (
       <Component
-        data-bedrock-inline-cluster={attributes}
+        data-br-inline-cluster={attributes}
         ref={ref}
         style={
           {

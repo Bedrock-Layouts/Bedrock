@@ -29,9 +29,9 @@ or
 The following example creates a simple columned layout containing `5` columns of equal size.
 
 ```javascript
-import { Columns } from '@bedrock-layout/columns';
+import { Columns } from "@bedrock-layout/columns";
 
-<Columns gutter='size3' columns={5}>
+<Columns gutter="size3" columns={5}>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -48,9 +48,9 @@ import { Columns } from '@bedrock-layout/columns';
 `@bedrock-layout/columns` also contains a `Column` component which can be used within `Columns` to define individual sizes of the columns, using the `span` props, as shown below:
 
 ```javascript
-import { Columns, Column } from '@bedrock-layout/columns';
+import { Columns, Column } from "@bedrock-layout/columns";
 
-<Columns gutter='size3' columns={3} dense>
+<Columns gutter="size3" columns={3} dense>
   <Column span={2}>
     <div>1</div>
   </Column>
@@ -76,7 +76,7 @@ import { Columns, Column } from '@bedrock-layout/columns';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-columns` and `data-bedrock-column` for `Columns` and `Column` respectively.
+For styling purposes, you can select `data-br-columns` and `data-br-column` for `Columns` and `Column` respectively.
 
 ---
 

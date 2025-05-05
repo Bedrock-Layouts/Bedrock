@@ -63,7 +63,7 @@ export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
   return (
     <Component
       ref={ref}
-      data-bedrock-grid={attributeValue}
+      data-br-grid={attributeValue}
       style={
         {
           "--minItemWidth": maybeMinItemWidth,

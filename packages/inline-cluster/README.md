@@ -25,9 +25,9 @@ or
 ## Usage
 
 ```javascript
-import { InlineCluster } from '@bedrock-layout/inline-cluster';
+import { InlineCluster } from "@bedrock-layout/inline-cluster";
 
-<InlineCLuster gutter='size3' justify='start' align='start'>
+<InlineCLuster gutter="size3" justify="start" align="start">
   <span>Lorem ipsum dolor</span>
   <span>sit amet consectetur</span>
   <span>adipisicing elit.</span>
@@ -38,7 +38,7 @@ import { InlineCluster } from '@bedrock-layout/inline-cluster';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-inline-cluster`.
+For styling purposes, you can select `data-br-inline-cluster`.
 
 ---
 

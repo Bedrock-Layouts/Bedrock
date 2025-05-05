@@ -70,7 +70,7 @@ export function Grid<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "minItemWidth"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-grid": () =>
+        "data-br-grid": () =>
           props.variant === "masonry" ? "variant:masonry" : "",
       }),
     ) as DynamicProps<T>,

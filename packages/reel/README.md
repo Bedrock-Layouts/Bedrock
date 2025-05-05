@@ -23,9 +23,9 @@ or
 ## Usage
 
 ```javascript
-import { Reel } from '@bedrock-layout/reel';
+import { Reel } from "@bedrock-layout/reel";
 
-<Reel gutter='size3' snapType='mandatory'>
+<Reel gutter="size3" snapType="mandatory">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -39,7 +39,7 @@ import { Reel } from '@bedrock-layout/reel';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-reel`.
+For styling purposes, you can select `data-br-reel`.
 
 ---
 

@@ -1,15 +1,15 @@
 import { Meta } from "@storybook/addon-docs";
-import { Center } from "../../packages/center/src"
-import { PadBox } from "../../packages/padbox/src"
-import { Grid } from "../../packages/grid/src"
-import { ColumnDrop } from "../../packages/column-drop/src"
-import { Cover } from "../../packages/cover/src"
-import { Stack } from "../../packages/stack/src"
-import { Split } from "../../packages/split/src"
-import { Frame } from "../../packages/frame/src"
-import { Reel } from "../../packages/reel/src"
-import { Inline } from "../../packages/inline/src"
-import { InlineCluster } from "../../packages/inline-cluster/src"
+import { Center } from "../../packages/center/src";
+import { PadBox } from "../../packages/padbox/src";
+import { Grid } from "../../packages/grid/src";
+import { ColumnDrop } from "../../packages/column-drop/src";
+import { Cover } from "../../packages/cover/src";
+import { Stack } from "../../packages/stack/src";
+import { Split } from "../../packages/split/src";
+import { Frame } from "../../packages/frame/src";
+import { Reel } from "../../packages/reel/src";
+import { Inline } from "../../packages/inline/src";
+import { InlineCluster } from "../../packages/inline-cluster/src";
 import { Button } from "../ui-components/Button";
 import { Heading, SubHeading } from "../ui-components/Heading";
 import { Avatar } from "../ui-components/Avatar";
@@ -178,18 +178,15 @@ export function Hero() {
 <Reel style={{flexDirection:'column'}}>
 
 ```jsx
-<header data-bedrock-cover>
-  <nav data-bedrock-inline-cluster>
+<header data-br-cover>
+  <nav data-br-inline-cluster>
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
-  <div
-    data-bedrock-cover-centered
-    data-bedrock-stack
-  >
+  <div data-br-cover-centered data-br-stack>
     <h1>Coco Le Belle</h1>
-    <div data-bedrock-split="fraction:1/3">
+    <div data-br-split="fraction:1/3">
       <p>
         <strong>Coco Le Belle</strong>
         is an online fashion boutique.

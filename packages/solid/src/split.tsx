@@ -105,7 +105,7 @@ export function Split<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "fraction"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-split": fraction,
+        "data-br-split": fraction,
       }),
     ) as DynamicProps<T>,
   );

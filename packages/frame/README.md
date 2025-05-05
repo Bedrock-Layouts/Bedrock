@@ -25,10 +25,10 @@ or
 ## Usage
 
 ```javascript
-import { Frame } from '@bedrock-layout/frame';
+import { Frame } from "@bedrock-layout/frame";
 
 <Frame>
-  <img src='...' />
+  <img src="..." />
 </Frame>;
 ```
 
@@ -36,7 +36,7 @@ import { Frame } from '@bedrock-layout/frame';
 
 ## data-attribute
 
-For styling purposes, you can select `data-bedrock-frame`.
+For styling purposes, you can select `data-br-frame`.
 
 ---
 

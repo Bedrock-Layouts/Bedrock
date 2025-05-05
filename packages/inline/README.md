@@ -25,9 +25,9 @@ or
 ## Usage
 
 ```javascript
-import { Inline } from '@bedrock-layout/inline';
+import { Inline } from "@bedrock-layout/inline";
 
-<Inline stretch={1} gutter='size3' justify='start' align='start'>
+<Inline stretch={1} gutter="size3" justify="start" align="start">
   <span>Lorem ipsum dolor</span>
   <span>sit amet consectetur</span>
   <span>adipisicing elit.</span>
@@ -38,7 +38,7 @@ import { Inline } from '@bedrock-layout/inline';
 
 ## data-attribute
 
-For styliing purposes, you can select `data-bedrock-inline`.
+For styliing purposes, you can select `data-br-inline`.
 
 ---
 

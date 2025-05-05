@@ -72,7 +72,7 @@ export function InlineCluster<T extends ValidConstructor = "div">(
       omitProps(props, ["as", "gutter", "justify", "align"]),
       createPropsFromAccessors({
         style,
-        "data-bedrock-inline-cluster": attrAssesor,
+        "data-br-inline-cluster": attrAssesor,
       }),
     ) as DynamicProps<T>,
   );
