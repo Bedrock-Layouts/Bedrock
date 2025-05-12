@@ -1,0 +1,4078 @@
+/*
+  padbox.css
+*/
+
+/* padding Sizes */
+:is(
+  [data-bedrock-center~="padding:size000"],
+  [data-bedrock-column-drop~="padding:size000"],
+  [data-bedrock-columns~="padding:size000"],
+  [data-bedrock-column~="padding:size000"],
+  [data-bedrock-cover~="padding:size000"],
+  [data-bedrock-cover-centered~="padding:size000"],
+  [data-bedrock-frame~="padding:size000"],
+  [data-bedrock-inline-cluster~="padding:size000"],
+  [data-bedrock-inline~="padding:size000"],
+  [data-bedrock-reel~="padding:size000"],
+  [data-bedrock-split~="padding:size000"],
+  [data-bedrock-stack~="padding:size000"],
+
+) {
+  padding: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="padding:size00"],
+  [data-bedrock-column-drop~="padding:size00"],
+  [data-bedrock-columns~="padding:size00"],
+  [data-bedrock-column~="padding:size00"],
+  [data-bedrock-cover~="padding:size00"],
+  [data-bedrock-cover-centered~="padding:size00"],
+  [data-bedrock-frame~="padding:size00"],
+  [data-bedrock-inline-cluster~="padding:size00"],
+  [data-bedrock-inline~="padding:size00"],
+  [data-bedrock-reel~="padding:size00"],
+  [data-bedrock-split~="padding:size00"],
+  [data-bedrock-stack~="padding:size00"],
+
+) {
+  padding: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="padding:size1"],
+  [data-bedrock-column-drop~="padding:size1"],
+  [data-bedrock-columns~="padding:size1"],
+  [data-bedrock-column~="padding:size1"],
+  [data-bedrock-cover~="padding:size1"],
+  [data-bedrock-cover-centered~="padding:size1"],
+  [data-bedrock-frame~="padding:size1"],
+  [data-bedrock-inline-cluster~="padding:size1"],
+  [data-bedrock-inline~="padding:size1"],
+  [data-bedrock-reel~="padding:size1"],
+  [data-bedrock-split~="padding:size1"],
+  [data-bedrock-stack~="padding:size1"],
+
+) {
+  padding: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="padding:size2"],
+  [data-bedrock-column-drop~="padding:size2"],
+  [data-bedrock-columns~="padding:size2"],
+  [data-bedrock-column~="padding:size2"],
+  [data-bedrock-cover~="padding:size2"],
+  [data-bedrock-cover-centered~="padding:size2"],
+  [data-bedrock-frame~="padding:size2"],
+  [data-bedrock-inline-cluster~="padding:size2"],
+  [data-bedrock-inline~="padding:size2"],
+  [data-bedrock-reel~="padding:size2"],
+  [data-bedrock-split~="padding:size2"],
+  [data-bedrock-stack~="padding:size2"],
+
+) {
+  padding: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="padding:size3"],
+  [data-bedrock-column-drop~="padding:size3"],
+  [data-bedrock-columns~="padding:size3"],
+  [data-bedrock-column~="padding:size3"],
+  [data-bedrock-cover~="padding:size3"],
+  [data-bedrock-cover-centered~="padding:size3"],
+  [data-bedrock-frame~="padding:size3"],
+  [data-bedrock-inline-cluster~="padding:size3"],
+  [data-bedrock-inline~="padding:size3"],
+  [data-bedrock-reel~="padding:size3"],
+  [data-bedrock-split~="padding:size3"],
+  [data-bedrock-stack~="padding:size3"],
+
+) {
+  padding: 1rem;
+}
+:is(
+  [data-bedrock-center~="padding:size4"],
+  [data-bedrock-column-drop~="padding:size4"],
+  [data-bedrock-columns~="padding:size4"],
+  [data-bedrock-column~="padding:size4"],
+  [data-bedrock-cover~="padding:size4"],
+  [data-bedrock-cover-centered~="padding:size4"],
+  [data-bedrock-frame~="padding:size4"],
+  [data-bedrock-inline-cluster~="padding:size4"],
+  [data-bedrock-inline~="padding:size4"],
+  [data-bedrock-reel~="padding:size4"],
+  [data-bedrock-split~="padding:size4"],
+  [data-bedrock-stack~="padding:size4"],
+
+) {
+  padding: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="padding:size5"],
+  [data-bedrock-column-drop~="padding:size5"],
+  [data-bedrock-columns~="padding:size5"],
+  [data-bedrock-column~="padding:size5"],
+  [data-bedrock-cover~="padding:size5"],
+  [data-bedrock-cover-centered~="padding:size5"],
+  [data-bedrock-frame~="padding:size5"],
+  [data-bedrock-inline-cluster~="padding:size5"],
+  [data-bedrock-inline~="padding:size5"],
+  [data-bedrock-reel~="padding:size5"],
+  [data-bedrock-split~="padding:size5"],
+  [data-bedrock-stack~="padding:size5"],
+
+) {
+  padding: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="padding:size6"],
+  [data-bedrock-column-drop~="padding:size6"],
+  [data-bedrock-columns~="padding:size6"],
+  [data-bedrock-column~="padding:size6"],
+  [data-bedrock-cover~="padding:size6"],
+  [data-bedrock-cover-centered~="padding:size6"],
+  [data-bedrock-frame~="padding:size6"],
+  [data-bedrock-inline-cluster~="padding:size6"],
+  [data-bedrock-inline~="padding:size6"],
+  [data-bedrock-reel~="padding:size6"],
+  [data-bedrock-split~="padding:size6"],
+  [data-bedrock-stack~="padding:size6"],
+
+) {
+  padding: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="padding:size7"],
+  [data-bedrock-column-drop~="padding:size7"],
+  [data-bedrock-columns~="padding:size7"],
+  [data-bedrock-column~="padding:size7"],
+  [data-bedrock-cover~="padding:size7"],
+  [data-bedrock-cover-centered~="padding:size7"],
+  [data-bedrock-frame~="padding:size7"],
+  [data-bedrock-inline-cluster~="padding:size7"],
+  [data-bedrock-inline~="padding:size7"],
+  [data-bedrock-reel~="padding:size7"],
+  [data-bedrock-split~="padding:size7"],
+  [data-bedrock-stack~="padding:size7"],
+
+) {
+  padding: 2rem;
+}
+:is(
+  [data-bedrock-center~="padding:size8"],
+  [data-bedrock-column-drop~="padding:size8"],
+  [data-bedrock-columns~="padding:size8"],
+  [data-bedrock-column~="padding:size8"],
+  [data-bedrock-cover~="padding:size8"],
+  [data-bedrock-cover-centered~="padding:size8"],
+  [data-bedrock-frame~="padding:size8"],
+  [data-bedrock-inline-cluster~="padding:size8"],
+  [data-bedrock-inline~="padding:size8"],
+  [data-bedrock-reel~="padding:size8"],
+  [data-bedrock-split~="padding:size8"],
+  [data-bedrock-stack~="padding:size8"],
+
+) {
+  padding: 3rem;
+}
+:is(
+  [data-bedrock-center~="padding:size9"],
+  [data-bedrock-column-drop~="padding:size9"],
+  [data-bedrock-columns~="padding:size9"],
+  [data-bedrock-column~="padding:size9"],
+  [data-bedrock-cover~="padding:size9"],
+  [data-bedrock-cover-centered~="padding:size9"],
+  [data-bedrock-frame~="padding:size9"],
+  [data-bedrock-inline-cluster~="padding:size9"],
+  [data-bedrock-inline~="padding:size9"],
+  [data-bedrock-reel~="padding:size9"],
+  [data-bedrock-split~="padding:size9"],
+  [data-bedrock-stack~="padding:size9"],
+
+) {
+  padding: 4rem;
+}
+:is(
+  [data-bedrock-center~="padding:size10"],
+  [data-bedrock-column-drop~="padding:size10"],
+  [data-bedrock-columns~="padding:size10"],
+  [data-bedrock-column~="padding:size10"],
+  [data-bedrock-cover~="padding:size10"],
+  [data-bedrock-cover-centered~="padding:size10"],
+  [data-bedrock-frame~="padding:size10"],
+  [data-bedrock-inline-cluster~="padding:size10"],
+  [data-bedrock-inline~="padding:size10"],
+  [data-bedrock-reel~="padding:size10"],
+  [data-bedrock-split~="padding:size10"],
+  [data-bedrock-stack~="padding:size10"],
+
+) {
+  padding: 5rem;
+}
+:is(
+  [data-bedrock-center~="padding:size11"],
+  [data-bedrock-column-drop~="padding:size11"],
+  [data-bedrock-columns~="padding:size11"],
+  [data-bedrock-column~="padding:size11"],
+  [data-bedrock-cover~="padding:size11"],
+  [data-bedrock-cover-centered~="padding:size11"],
+  [data-bedrock-frame~="padding:size11"],
+  [data-bedrock-inline-cluster~="padding:size11"],
+  [data-bedrock-inline~="padding:size11"],
+  [data-bedrock-reel~="padding:size11"],
+  [data-bedrock-split~="padding:size11"],
+  [data-bedrock-stack~="padding:size11"],
+
+) {
+  padding: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="padding:size12"],
+  [data-bedrock-column-drop~="padding:size12"],
+  [data-bedrock-columns~="padding:size12"],
+  [data-bedrock-column~="padding:size12"],
+  [data-bedrock-cover~="padding:size12"],
+  [data-bedrock-cover-centered~="padding:size12"],
+  [data-bedrock-frame~="padding:size12"],
+  [data-bedrock-inline-cluster~="padding:size12"],
+  [data-bedrock-inline~="padding:size12"],
+  [data-bedrock-reel~="padding:size12"],
+  [data-bedrock-split~="padding:size12"],
+  [data-bedrock-stack~="padding:size12"],
+
+) {
+  padding: 10rem;
+}
+:is(
+  [data-bedrock-center~="padding:size13"],
+  [data-bedrock-column-drop~="padding:size13"],
+  [data-bedrock-columns~="padding:size13"],
+  [data-bedrock-column~="padding:size13"],
+  [data-bedrock-cover~="padding:size13"],
+  [data-bedrock-cover-centered~="padding:size13"],
+  [data-bedrock-frame~="padding:size13"],
+  [data-bedrock-inline-cluster~="padding:size13"],
+  [data-bedrock-inline~="padding:size13"],
+  [data-bedrock-reel~="padding:size13"],
+  [data-bedrock-split~="padding:size13"],
+  [data-bedrock-stack~="padding:size13"],
+
+) {
+  padding: 15rem;
+}
+:is(
+  [data-bedrock-center~="padding:size14"],
+  [data-bedrock-column-drop~="padding:size14"],
+  [data-bedrock-columns~="padding:size14"],
+  [data-bedrock-column~="padding:size14"],
+  [data-bedrock-cover~="padding:size14"],
+  [data-bedrock-cover-centered~="padding:size14"],
+  [data-bedrock-frame~="padding:size14"],
+  [data-bedrock-inline-cluster~="padding:size14"],
+  [data-bedrock-inline~="padding:size14"],
+  [data-bedrock-reel~="padding:size14"],
+  [data-bedrock-split~="padding:size14"],
+  [data-bedrock-stack~="padding:size14"],
+
+) {
+  padding: 20rem;
+}
+:is(
+  [data-bedrock-center~="padding:size15"],
+  [data-bedrock-column-drop~="padding:size15"],
+  [data-bedrock-columns~="padding:size15"],
+  [data-bedrock-column~="padding:size15"],
+  [data-bedrock-cover~="padding:size15"],
+  [data-bedrock-cover-centered~="padding:size15"],
+  [data-bedrock-frame~="padding:size15"],
+  [data-bedrock-inline-cluster~="padding:size15"],
+  [data-bedrock-inline~="padding:size15"],
+  [data-bedrock-reel~="padding:size15"],
+  [data-bedrock-split~="padding:size15"],
+  [data-bedrock-stack~="padding:size15"],
+
+) {
+  padding: 30rem;
+}
+
+/* padding-inline Sizes */
+:is(
+  [data-bedrock-center~="paddingInline:size000"],
+  [data-bedrock-column-drop~="paddingInline:size000"],
+  [data-bedrock-columns~="paddingInline:size000"],
+  [data-bedrock-column~="paddingInline:size000"],
+  [data-bedrock-cover~="paddingInline:size000"],
+  [data-bedrock-cover-centered~="paddingInline:size000"],
+  [data-bedrock-frame~="paddingInline:size000"],
+  [data-bedrock-inline-cluster~="paddingInline:size000"],
+  [data-bedrock-inline~="paddingInline:size000"],
+  [data-bedrock-reel~="paddingInline:size000"],
+  [data-bedrock-split~="paddingInline:size000"],
+  [data-bedrock-stack~="paddingInline:size000"],
+
+) {
+  padding-inline: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size00"],
+  [data-bedrock-column-drop~="paddingInline:size00"],
+  [data-bedrock-columns~="paddingInline:size00"],
+  [data-bedrock-column~="paddingInline:size00"],
+  [data-bedrock-cover~="paddingInline:size00"],
+  [data-bedrock-cover-centered~="paddingInline:size00"],
+  [data-bedrock-frame~="paddingInline:size00"],
+  [data-bedrock-inline-cluster~="paddingInline:size00"],
+  [data-bedrock-inline~="paddingInline:size00"],
+  [data-bedrock-reel~="paddingInline:size00"],
+  [data-bedrock-split~="paddingInline:size00"],
+  [data-bedrock-stack~="paddingInline:size00"],
+
+) {
+  padding-inline: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size1"],
+  [data-bedrock-column-drop~="paddingInline:size1"],
+  [data-bedrock-columns~="paddingInline:size1"],
+  [data-bedrock-column~="paddingInline:size1"],
+  [data-bedrock-cover~="paddingInline:size1"],
+  [data-bedrock-cover-centered~="paddingInline:size1"],
+  [data-bedrock-frame~="paddingInline:size1"],
+  [data-bedrock-inline-cluster~="paddingInline:size1"],
+  [data-bedrock-inline~="paddingInline:size1"],
+  [data-bedrock-reel~="paddingInline:size1"],
+  [data-bedrock-split~="paddingInline:size1"],
+  [data-bedrock-stack~="paddingInline:size1"],
+
+) {
+  padding-inline: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size2"],
+  [data-bedrock-column-drop~="paddingInline:size2"],
+  [data-bedrock-columns~="paddingInline:size2"],
+  [data-bedrock-column~="paddingInline:size2"],
+  [data-bedrock-cover~="paddingInline:size2"],
+  [data-bedrock-cover-centered~="paddingInline:size2"],
+  [data-bedrock-frame~="paddingInline:size2"],
+  [data-bedrock-inline-cluster~="paddingInline:size2"],
+  [data-bedrock-inline~="paddingInline:size2"],
+  [data-bedrock-reel~="paddingInline:size2"],
+  [data-bedrock-split~="paddingInline:size2"],
+  [data-bedrock-stack~="paddingInline:size2"],
+
+) {
+  padding-inline: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size3"],
+  [data-bedrock-column-drop~="paddingInline:size3"],
+  [data-bedrock-columns~="paddingInline:size3"],
+  [data-bedrock-column~="paddingInline:size3"],
+  [data-bedrock-cover~="paddingInline:size3"],
+  [data-bedrock-cover-centered~="paddingInline:size3"],
+  [data-bedrock-frame~="paddingInline:size3"],
+  [data-bedrock-inline-cluster~="paddingInline:size3"],
+  [data-bedrock-inline~="paddingInline:size3"],
+  [data-bedrock-reel~="paddingInline:size3"],
+  [data-bedrock-split~="paddingInline:size3"],
+  [data-bedrock-stack~="paddingInline:size3"],
+
+) {
+  padding-inline: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size4"],
+  [data-bedrock-column-drop~="paddingInline:size4"],
+  [data-bedrock-columns~="paddingInline:size4"],
+  [data-bedrock-column~="paddingInline:size4"],
+  [data-bedrock-cover~="paddingInline:size4"],
+  [data-bedrock-cover-centered~="paddingInline:size4"],
+  [data-bedrock-frame~="paddingInline:size4"],
+  [data-bedrock-inline-cluster~="paddingInline:size4"],
+  [data-bedrock-inline~="paddingInline:size4"],
+  [data-bedrock-reel~="paddingInline:size4"],
+  [data-bedrock-split~="paddingInline:size4"],
+  [data-bedrock-stack~="paddingInline:size4"],
+
+) {
+  padding-inline: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size5"],
+  [data-bedrock-column-drop~="paddingInline:size5"],
+  [data-bedrock-columns~="paddingInline:size5"],
+  [data-bedrock-column~="paddingInline:size5"],
+  [data-bedrock-cover~="paddingInline:size5"],
+  [data-bedrock-cover-centered~="paddingInline:size5"],
+  [data-bedrock-frame~="paddingInline:size5"],
+  [data-bedrock-inline-cluster~="paddingInline:size5"],
+  [data-bedrock-inline~="paddingInline:size5"],
+  [data-bedrock-reel~="paddingInline:size5"],
+  [data-bedrock-split~="paddingInline:size5"],
+  [data-bedrock-stack~="paddingInline:size5"],
+
+) {
+  padding-inline: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size6"],
+  [data-bedrock-column-drop~="paddingInline:size6"],
+  [data-bedrock-columns~="paddingInline:size6"],
+  [data-bedrock-column~="paddingInline:size6"],
+  [data-bedrock-cover~="paddingInline:size6"],
+  [data-bedrock-cover-centered~="paddingInline:size6"],
+  [data-bedrock-frame~="paddingInline:size6"],
+  [data-bedrock-inline-cluster~="paddingInline:size6"],
+  [data-bedrock-inline~="paddingInline:size6"],
+  [data-bedrock-reel~="paddingInline:size6"],
+  [data-bedrock-split~="paddingInline:size6"],
+  [data-bedrock-stack~="paddingInline:size6"],
+
+) {
+  padding-inline: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size7"],
+  [data-bedrock-column-drop~="paddingInline:size7"],
+  [data-bedrock-columns~="paddingInline:size7"],
+  [data-bedrock-column~="paddingInline:size7"],
+  [data-bedrock-cover~="paddingInline:size7"],
+  [data-bedrock-cover-centered~="paddingInline:size7"],
+  [data-bedrock-frame~="paddingInline:size7"],
+  [data-bedrock-inline-cluster~="paddingInline:size7"],
+  [data-bedrock-inline~="paddingInline:size7"],
+  [data-bedrock-reel~="paddingInline:size7"],
+  [data-bedrock-split~="paddingInline:size7"],
+  [data-bedrock-stack~="paddingInline:size7"],
+
+) {
+  padding-inline: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size8"],
+  [data-bedrock-column-drop~="paddingInline:size8"],
+  [data-bedrock-columns~="paddingInline:size8"],
+  [data-bedrock-column~="paddingInline:size8"],
+  [data-bedrock-cover~="paddingInline:size8"],
+  [data-bedrock-cover-centered~="paddingInline:size8"],
+  [data-bedrock-frame~="paddingInline:size8"],
+  [data-bedrock-inline-cluster~="paddingInline:size8"],
+  [data-bedrock-inline~="paddingInline:size8"],
+  [data-bedrock-reel~="paddingInline:size8"],
+  [data-bedrock-split~="paddingInline:size8"],
+  [data-bedrock-stack~="paddingInline:size8"],
+
+) {
+  padding-inline: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size9"],
+  [data-bedrock-column-drop~="paddingInline:size9"],
+  [data-bedrock-columns~="paddingInline:size9"],
+  [data-bedrock-column~="paddingInline:size9"],
+  [data-bedrock-cover~="paddingInline:size9"],
+  [data-bedrock-cover-centered~="paddingInline:size9"],
+  [data-bedrock-frame~="paddingInline:size9"],
+  [data-bedrock-inline-cluster~="paddingInline:size9"],
+  [data-bedrock-inline~="paddingInline:size9"],
+  [data-bedrock-reel~="paddingInline:size9"],
+  [data-bedrock-split~="paddingInline:size9"],
+  [data-bedrock-stack~="paddingInline:size9"],
+
+) {
+  padding-inline: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size10"],
+  [data-bedrock-column-drop~="paddingInline:size10"],
+  [data-bedrock-columns~="paddingInline:size10"],
+  [data-bedrock-column~="paddingInline:size10"],
+  [data-bedrock-cover~="paddingInline:size10"],
+  [data-bedrock-cover-centered~="paddingInline:size10"],
+  [data-bedrock-frame~="paddingInline:size10"],
+  [data-bedrock-inline-cluster~="paddingInline:size10"],
+  [data-bedrock-inline~="paddingInline:size10"],
+  [data-bedrock-reel~="paddingInline:size10"],
+  [data-bedrock-split~="paddingInline:size10"],
+  [data-bedrock-stack~="paddingInline:size10"],
+
+) {
+  padding-inline: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size11"],
+  [data-bedrock-column-drop~="paddingInline:size11"],
+  [data-bedrock-columns~="paddingInline:size11"],
+  [data-bedrock-column~="paddingInline:size11"],
+  [data-bedrock-cover~="paddingInline:size11"],
+  [data-bedrock-cover-centered~="paddingInline:size11"],
+  [data-bedrock-frame~="paddingInline:size11"],
+  [data-bedrock-inline-cluster~="paddingInline:size11"],
+  [data-bedrock-inline~="paddingInline:size11"],
+  [data-bedrock-reel~="paddingInline:size11"],
+  [data-bedrock-split~="paddingInline:size11"],
+  [data-bedrock-stack~="paddingInline:size11"],
+
+) {
+  padding-inline: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size12"],
+  [data-bedrock-column-drop~="paddingInline:size12"],
+  [data-bedrock-columns~="paddingInline:size12"],
+  [data-bedrock-column~="paddingInline:size12"],
+  [data-bedrock-cover~="paddingInline:size12"],
+  [data-bedrock-cover-centered~="paddingInline:size12"],
+  [data-bedrock-frame~="paddingInline:size12"],
+  [data-bedrock-inline-cluster~="paddingInline:size12"],
+  [data-bedrock-inline~="paddingInline:size12"],
+  [data-bedrock-reel~="paddingInline:size12"],
+  [data-bedrock-split~="paddingInline:size12"],
+  [data-bedrock-stack~="paddingInline:size12"],
+
+) {
+  padding-inline: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size13"],
+  [data-bedrock-column-drop~="paddingInline:size13"],
+  [data-bedrock-columns~="paddingInline:size13"],
+  [data-bedrock-column~="paddingInline:size13"],
+  [data-bedrock-cover~="paddingInline:size13"],
+  [data-bedrock-cover-centered~="paddingInline:size13"],
+  [data-bedrock-frame~="paddingInline:size13"],
+  [data-bedrock-inline-cluster~="paddingInline:size13"],
+  [data-bedrock-inline~="paddingInline:size13"],
+  [data-bedrock-reel~="paddingInline:size13"],
+  [data-bedrock-split~="paddingInline:size13"],
+  [data-bedrock-stack~="paddingInline:size13"],
+
+) {
+  padding-inline: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size14"],
+  [data-bedrock-column-drop~="paddingInline:size14"],
+  [data-bedrock-columns~="paddingInline:size14"],
+  [data-bedrock-column~="paddingInline:size14"],
+  [data-bedrock-cover~="paddingInline:size14"],
+  [data-bedrock-cover-centered~="paddingInline:size14"],
+  [data-bedrock-frame~="paddingInline:size14"],
+  [data-bedrock-inline-cluster~="paddingInline:size14"],
+  [data-bedrock-inline~="paddingInline:size14"],
+  [data-bedrock-reel~="paddingInline:size14"],
+  [data-bedrock-split~="paddingInline:size14"],
+  [data-bedrock-stack~="paddingInline:size14"],
+
+) {
+  padding-inline: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingInline:size15"],
+  [data-bedrock-column-drop~="paddingInline:size15"],
+  [data-bedrock-columns~="paddingInline:size15"],
+  [data-bedrock-column~="paddingInline:size15"],
+  [data-bedrock-cover~="paddingInline:size15"],
+  [data-bedrock-cover-centered~="paddingInline:size15"],
+  [data-bedrock-frame~="paddingInline:size15"],
+  [data-bedrock-inline-cluster~="paddingInline:size15"],
+  [data-bedrock-inline~="paddingInline:size15"],
+  [data-bedrock-reel~="paddingInline:size15"],
+  [data-bedrock-split~="paddingInline:size15"],
+  [data-bedrock-stack~="paddingInline:size15"],
+
+) {
+  padding-inline: 30rem;
+}
+
+/* padding inline start Sizes */
+:is(
+  [data-bedrock-center~="paddingInlineStart:size000"],
+  [data-bedrock-column-drop~="paddingInlineStart:size000"],
+  [data-bedrock-columns~="paddingInlineStart:size000"],
+  [data-bedrock-column~="paddingInlineStart:size000"],
+  [data-bedrock-cover~="paddingInlineStart:size000"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size000"],
+  [data-bedrock-frame~="paddingInlineStart:size000"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size000"],
+  [data-bedrock-inline~="paddingInlineStart:size000"],
+  [data-bedrock-reel~="paddingInlineStart:size000"],
+  [data-bedrock-split~="paddingInlineStart:size000"],
+  [data-bedrock-stack~="paddingInlineStart:size000"],
+
+) {
+  padding-inline-start: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size00"],
+  [data-bedrock-column-drop~="paddingInlineStart:size00"],
+  [data-bedrock-columns~="paddingInlineStart:size00"],
+  [data-bedrock-column~="paddingInlineStart:size00"],
+  [data-bedrock-cover~="paddingInlineStart:size00"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size00"],
+  [data-bedrock-frame~="paddingInlineStart:size00"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size00"],
+  [data-bedrock-inline~="paddingInlineStart:size00"],
+  [data-bedrock-reel~="paddingInlineStart:size00"],
+  [data-bedrock-split~="paddingInlineStart:size00"],
+  [data-bedrock-stack~="paddingInlineStart:size00"],
+
+) {
+  padding-inline-start: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size1"],
+  [data-bedrock-column-drop~="paddingInlineStart:size1"],
+  [data-bedrock-columns~="paddingInlineStart:size1"],
+  [data-bedrock-column~="paddingInlineStart:size1"],
+  [data-bedrock-cover~="paddingInlineStart:size1"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size1"],
+  [data-bedrock-frame~="paddingInlineStart:size1"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size1"],
+  [data-bedrock-inline~="paddingInlineStart:size1"],
+  [data-bedrock-reel~="paddingInlineStart:size1"],
+  [data-bedrock-split~="paddingInlineStart:size1"],
+  [data-bedrock-stack~="paddingInlineStart:size1"],
+
+) {
+  padding-inline-start: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size2"],
+  [data-bedrock-column-drop~="paddingInlineStart:size2"],
+  [data-bedrock-columns~="paddingInlineStart:size2"],
+  [data-bedrock-column~="paddingInlineStart:size2"],
+  [data-bedrock-cover~="paddingInlineStart:size2"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size2"],
+  [data-bedrock-frame~="paddingInlineStart:size2"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size2"],
+  [data-bedrock-inline~="paddingInlineStart:size2"],
+  [data-bedrock-reel~="paddingInlineStart:size2"],
+  [data-bedrock-split~="paddingInlineStart:size2"],
+  [data-bedrock-stack~="paddingInlineStart:size2"],
+
+) {
+  padding-inline-start: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size3"],
+  [data-bedrock-column-drop~="paddingInlineStart:size3"],
+  [data-bedrock-columns~="paddingInlineStart:size3"],
+  [data-bedrock-column~="paddingInlineStart:size3"],
+  [data-bedrock-cover~="paddingInlineStart:size3"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size3"],
+  [data-bedrock-frame~="paddingInlineStart:size3"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size3"],
+  [data-bedrock-inline~="paddingInlineStart:size3"],
+  [data-bedrock-reel~="paddingInlineStart:size3"],
+  [data-bedrock-split~="paddingInlineStart:size3"],
+  [data-bedrock-stack~="paddingInlineStart:size3"],
+
+) {
+  padding-inline-start: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size4"],
+  [data-bedrock-column-drop~="paddingInlineStart:size4"],
+  [data-bedrock-columns~="paddingInlineStart:size4"],
+  [data-bedrock-column~="paddingInlineStart:size4"],
+  [data-bedrock-cover~="paddingInlineStart:size4"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size4"],
+  [data-bedrock-frame~="paddingInlineStart:size4"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size4"],
+  [data-bedrock-inline~="paddingInlineStart:size4"],
+  [data-bedrock-reel~="paddingInlineStart:size4"],
+  [data-bedrock-split~="paddingInlineStart:size4"],
+  [data-bedrock-stack~="paddingInlineStart:size4"],
+
+) {
+  padding-inline-start: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size5"],
+  [data-bedrock-column-drop~="paddingInlineStart:size5"],
+  [data-bedrock-columns~="paddingInlineStart:size5"],
+  [data-bedrock-column~="paddingInlineStart:size5"],
+  [data-bedrock-cover~="paddingInlineStart:size5"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size5"],
+  [data-bedrock-frame~="paddingInlineStart:size5"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size5"],
+  [data-bedrock-inline~="paddingInlineStart:size5"],
+  [data-bedrock-reel~="paddingInlineStart:size5"],
+  [data-bedrock-split~="paddingInlineStart:size5"],
+  [data-bedrock-stack~="paddingInlineStart:size5"],
+
+) {
+  padding-inline-start: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size6"],
+  [data-bedrock-column-drop~="paddingInlineStart:size6"],
+  [data-bedrock-columns~="paddingInlineStart:size6"],
+  [data-bedrock-column~="paddingInlineStart:size6"],
+  [data-bedrock-cover~="paddingInlineStart:size6"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size6"],
+  [data-bedrock-frame~="paddingInlineStart:size6"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size6"],
+  [data-bedrock-inline~="paddingInlineStart:size6"],
+  [data-bedrock-reel~="paddingInlineStart:size6"],
+  [data-bedrock-split~="paddingInlineStart:size6"],
+  [data-bedrock-stack~="paddingInlineStart:size6"],
+
+) {
+  padding-inline-start: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size7"],
+  [data-bedrock-column-drop~="paddingInlineStart:size7"],
+  [data-bedrock-columns~="paddingInlineStart:size7"],
+  [data-bedrock-column~="paddingInlineStart:size7"],
+  [data-bedrock-cover~="paddingInlineStart:size7"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size7"],
+  [data-bedrock-frame~="paddingInlineStart:size7"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size7"],
+  [data-bedrock-inline~="paddingInlineStart:size7"],
+  [data-bedrock-reel~="paddingInlineStart:size7"],
+  [data-bedrock-split~="paddingInlineStart:size7"],
+  [data-bedrock-stack~="paddingInlineStart:size7"],
+
+) {
+  padding-inline-start: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size8"],
+  [data-bedrock-column-drop~="paddingInlineStart:size8"],
+  [data-bedrock-columns~="paddingInlineStart:size8"],
+  [data-bedrock-column~="paddingInlineStart:size8"],
+  [data-bedrock-cover~="paddingInlineStart:size8"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size8"],
+  [data-bedrock-frame~="paddingInlineStart:size8"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size8"],
+  [data-bedrock-inline~="paddingInlineStart:size8"],
+  [data-bedrock-reel~="paddingInlineStart:size8"],
+  [data-bedrock-split~="paddingInlineStart:size8"],
+  [data-bedrock-stack~="paddingInlineStart:size8"],
+
+) {
+  padding-inline-start: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size9"],
+  [data-bedrock-column-drop~="paddingInlineStart:size9"],
+  [data-bedrock-columns~="paddingInlineStart:size9"],
+  [data-bedrock-column~="paddingInlineStart:size9"],
+  [data-bedrock-cover~="paddingInlineStart:size9"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size9"],
+  [data-bedrock-frame~="paddingInlineStart:size9"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size9"],
+  [data-bedrock-inline~="paddingInlineStart:size9"],
+  [data-bedrock-reel~="paddingInlineStart:size9"],
+  [data-bedrock-split~="paddingInlineStart:size9"],
+  [data-bedrock-stack~="paddingInlineStart:size9"],
+
+) {
+  padding-inline-start: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size10"],
+  [data-bedrock-column-drop~="paddingInlineStart:size10"],
+  [data-bedrock-columns~="paddingInlineStart:size10"],
+  [data-bedrock-column~="paddingInlineStart:size10"],
+  [data-bedrock-cover~="paddingInlineStart:size10"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size10"],
+  [data-bedrock-frame~="paddingInlineStart:size10"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size10"],
+  [data-bedrock-inline~="paddingInlineStart:size10"],
+  [data-bedrock-reel~="paddingInlineStart:size10"],
+  [data-bedrock-split~="paddingInlineStart:size10"],
+  [data-bedrock-stack~="paddingInlineStart:size10"],
+
+) {
+  padding-inline-start: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size11"],
+  [data-bedrock-column-drop~="paddingInlineStart:size11"],
+  [data-bedrock-columns~="paddingInlineStart:size11"],
+  [data-bedrock-column~="paddingInlineStart:size11"],
+  [data-bedrock-cover~="paddingInlineStart:size11"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size11"],
+  [data-bedrock-frame~="paddingInlineStart:size11"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size11"],
+  [data-bedrock-inline~="paddingInlineStart:size11"],
+  [data-bedrock-reel~="paddingInlineStart:size11"],
+  [data-bedrock-split~="paddingInlineStart:size11"],
+  [data-bedrock-stack~="paddingInlineStart:size11"],
+
+) {
+  padding-inline-start: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size12"],
+  [data-bedrock-column-drop~="paddingInlineStart:size12"],
+  [data-bedrock-columns~="paddingInlineStart:size12"],
+  [data-bedrock-column~="paddingInlineStart:size12"],
+  [data-bedrock-cover~="paddingInlineStart:size12"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size12"],
+  [data-bedrock-frame~="paddingInlineStart:size12"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size12"],
+  [data-bedrock-inline~="paddingInlineStart:size12"],
+  [data-bedrock-reel~="paddingInlineStart:size12"],
+  [data-bedrock-split~="paddingInlineStart:size12"],
+  [data-bedrock-stack~="paddingInlineStart:size12"],
+
+) {
+  padding-inline-start: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size13"],
+  [data-bedrock-column-drop~="paddingInlineStart:size13"],
+  [data-bedrock-columns~="paddingInlineStart:size13"],
+  [data-bedrock-column~="paddingInlineStart:size13"],
+  [data-bedrock-cover~="paddingInlineStart:size13"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size13"],
+  [data-bedrock-frame~="paddingInlineStart:size13"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size13"],
+  [data-bedrock-inline~="paddingInlineStart:size13"],
+  [data-bedrock-reel~="paddingInlineStart:size13"],
+  [data-bedrock-split~="paddingInlineStart:size13"],
+  [data-bedrock-stack~="paddingInlineStart:size13"],
+
+) {
+  padding-inline-start: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size14"],
+  [data-bedrock-column-drop~="paddingInlineStart:size14"],
+  [data-bedrock-columns~="paddingInlineStart:size14"],
+  [data-bedrock-column~="paddingInlineStart:size14"],
+  [data-bedrock-cover~="paddingInlineStart:size14"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size14"],
+  [data-bedrock-frame~="paddingInlineStart:size14"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size14"],
+  [data-bedrock-inline~="paddingInlineStart:size14"],
+  [data-bedrock-reel~="paddingInlineStart:size14"],
+  [data-bedrock-split~="paddingInlineStart:size14"],
+  [data-bedrock-stack~="paddingInlineStart:size14"],
+
+) {
+  padding-inline-start: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineStart:size15"],
+  [data-bedrock-column-drop~="paddingInlineStart:size15"],
+  [data-bedrock-columns~="paddingInlineStart:size15"],
+  [data-bedrock-column~="paddingInlineStart:size15"],
+  [data-bedrock-cover~="paddingInlineStart:size15"],
+  [data-bedrock-cover-centered~="paddingInlineStart:size15"],
+  [data-bedrock-frame~="paddingInlineStart:size15"],
+  [data-bedrock-inline-cluster~="paddingInlineStart:size15"],
+  [data-bedrock-inline~="paddingInlineStart:size15"],
+  [data-bedrock-reel~="paddingInlineStart:size15"],
+  [data-bedrock-split~="paddingInlineStart:size15"],
+  [data-bedrock-stack~="paddingInlineStart:size15"],
+
+) {
+  padding-inline-start: 30rem;
+}
+
+/* padding inline end Sizes */
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size000"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size000"],
+  [data-bedrock-columns~="paddingInlineEnd:size000"],
+  [data-bedrock-column~="paddingInlineEnd:size000"],
+  [data-bedrock-cover~="paddingInlineEnd:size000"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size000"],
+  [data-bedrock-frame~="paddingInlineEnd:size000"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size000"],
+  [data-bedrock-inline~="paddingInlineEnd:size000"],
+  [data-bedrock-reel~="paddingInlineEnd:size000"],
+  [data-bedrock-split~="paddingInlineEnd:size000"],
+  [data-bedrock-stack~="paddingInlineEnd:size000"],
+
+) {
+  padding-inline-end: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size00"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size00"],
+  [data-bedrock-columns~="paddingInlineEnd:size00"],
+  [data-bedrock-column~="paddingInlineEnd:size00"],
+  [data-bedrock-cover~="paddingInlineEnd:size00"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size00"],
+  [data-bedrock-frame~="paddingInlineEnd:size00"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size00"],
+  [data-bedrock-inline~="paddingInlineEnd:size00"],
+  [data-bedrock-reel~="paddingInlineEnd:size00"],
+  [data-bedrock-split~="paddingInlineEnd:size00"],
+  [data-bedrock-stack~="paddingInlineEnd:size00"],
+
+) {
+  padding-inline-end: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size1"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size1"],
+  [data-bedrock-columns~="paddingInlineEnd:size1"],
+  [data-bedrock-column~="paddingInlineEnd:size1"],
+  [data-bedrock-cover~="paddingInlineEnd:size1"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size1"],
+  [data-bedrock-frame~="paddingInlineEnd:size1"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size1"],
+  [data-bedrock-inline~="paddingInlineEnd:size1"],
+  [data-bedrock-reel~="paddingInlineEnd:size1"],
+  [data-bedrock-split~="paddingInlineEnd:size1"],
+  [data-bedrock-stack~="paddingInlineEnd:size1"],
+
+) {
+  padding-inline-end: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size2"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size2"],
+  [data-bedrock-columns~="paddingInlineEnd:size2"],
+  [data-bedrock-column~="paddingInlineEnd:size2"],
+  [data-bedrock-cover~="paddingInlineEnd:size2"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size2"],
+  [data-bedrock-frame~="paddingInlineEnd:size2"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size2"],
+  [data-bedrock-inline~="paddingInlineEnd:size2"],
+  [data-bedrock-reel~="paddingInlineEnd:size2"],
+  [data-bedrock-split~="paddingInlineEnd:size2"],
+  [data-bedrock-stack~="paddingInlineEnd:size2"],
+
+) {
+  padding-inline-end: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size3"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size3"],
+  [data-bedrock-columns~="paddingInlineEnd:size3"],
+  [data-bedrock-column~="paddingInlineEnd:size3"],
+  [data-bedrock-cover~="paddingInlineEnd:size3"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size3"],
+  [data-bedrock-frame~="paddingInlineEnd:size3"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size3"],
+  [data-bedrock-inline~="paddingInlineEnd:size3"],
+  [data-bedrock-reel~="paddingInlineEnd:size3"],
+  [data-bedrock-split~="paddingInlineEnd:size3"],
+  [data-bedrock-stack~="paddingInlineEnd:size3"],
+
+) {
+  padding-inline-end: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size4"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size4"],
+  [data-bedrock-columns~="paddingInlineEnd:size4"],
+  [data-bedrock-column~="paddingInlineEnd:size4"],
+  [data-bedrock-cover~="paddingInlineEnd:size4"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size4"],
+  [data-bedrock-frame~="paddingInlineEnd:size4"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size4"],
+  [data-bedrock-inline~="paddingInlineEnd:size4"],
+  [data-bedrock-reel~="paddingInlineEnd:size4"],
+  [data-bedrock-split~="paddingInlineEnd:size4"],
+  [data-bedrock-stack~="paddingInlineEnd:size4"],
+
+) {
+  padding-inline-end: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size5"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size5"],
+  [data-bedrock-columns~="paddingInlineEnd:size5"],
+  [data-bedrock-column~="paddingInlineEnd:size5"],
+  [data-bedrock-cover~="paddingInlineEnd:size5"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size5"],
+  [data-bedrock-frame~="paddingInlineEnd:size5"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size5"],
+  [data-bedrock-inline~="paddingInlineEnd:size5"],
+  [data-bedrock-reel~="paddingInlineEnd:size5"],
+  [data-bedrock-split~="paddingInlineEnd:size5"],
+  [data-bedrock-stack~="paddingInlineEnd:size5"],
+
+) {
+  padding-inline-end: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size6"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size6"],
+  [data-bedrock-columns~="paddingInlineEnd:size6"],
+  [data-bedrock-column~="paddingInlineEnd:size6"],
+  [data-bedrock-cover~="paddingInlineEnd:size6"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size6"],
+  [data-bedrock-frame~="paddingInlineEnd:size6"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size6"],
+  [data-bedrock-inline~="paddingInlineEnd:size6"],
+  [data-bedrock-reel~="paddingInlineEnd:size6"],
+  [data-bedrock-split~="paddingInlineEnd:size6"],
+  [data-bedrock-stack~="paddingInlineEnd:size6"],
+
+) {
+  padding-inline-end: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size7"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size7"],
+  [data-bedrock-columns~="paddingInlineEnd:size7"],
+  [data-bedrock-column~="paddingInlineEnd:size7"],
+  [data-bedrock-cover~="paddingInlineEnd:size7"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size7"],
+  [data-bedrock-frame~="paddingInlineEnd:size7"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size7"],
+  [data-bedrock-inline~="paddingInlineEnd:size7"],
+  [data-bedrock-reel~="paddingInlineEnd:size7"],
+  [data-bedrock-split~="paddingInlineEnd:size7"],
+  [data-bedrock-stack~="paddingInlineEnd:size7"],
+
+) {
+  padding-inline-end: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size8"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size8"],
+  [data-bedrock-columns~="paddingInlineEnd:size8"],
+  [data-bedrock-column~="paddingInlineEnd:size8"],
+  [data-bedrock-cover~="paddingInlineEnd:size8"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size8"],
+  [data-bedrock-frame~="paddingInlineEnd:size8"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size8"],
+  [data-bedrock-inline~="paddingInlineEnd:size8"],
+  [data-bedrock-reel~="paddingInlineEnd:size8"],
+  [data-bedrock-split~="paddingInlineEnd:size8"],
+  [data-bedrock-stack~="paddingInlineEnd:size8"],
+
+) {
+  padding-inline-end: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size9"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size9"],
+  [data-bedrock-columns~="paddingInlineEnd:size9"],
+  [data-bedrock-column~="paddingInlineEnd:size9"],
+  [data-bedrock-cover~="paddingInlineEnd:size9"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size9"],
+  [data-bedrock-frame~="paddingInlineEnd:size9"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size9"],
+  [data-bedrock-inline~="paddingInlineEnd:size9"],
+  [data-bedrock-reel~="paddingInlineEnd:size9"],
+  [data-bedrock-split~="paddingInlineEnd:size9"],
+  [data-bedrock-stack~="paddingInlineEnd:size9"],
+
+) {
+  padding-inline-end: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size10"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size10"],
+  [data-bedrock-columns~="paddingInlineEnd:size10"],
+  [data-bedrock-column~="paddingInlineEnd:size10"],
+  [data-bedrock-cover~="paddingInlineEnd:size10"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size10"],
+  [data-bedrock-frame~="paddingInlineEnd:size10"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size10"],
+  [data-bedrock-inline~="paddingInlineEnd:size10"],
+  [data-bedrock-reel~="paddingInlineEnd:size10"],
+  [data-bedrock-split~="paddingInlineEnd:size10"],
+  [data-bedrock-stack~="paddingInlineEnd:size10"],
+
+) {
+  padding-inline-end: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size11"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size11"],
+  [data-bedrock-columns~="paddingInlineEnd:size11"],
+  [data-bedrock-column~="paddingInlineEnd:size11"],
+  [data-bedrock-cover~="paddingInlineEnd:size11"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size11"],
+  [data-bedrock-frame~="paddingInlineEnd:size11"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size11"],
+  [data-bedrock-inline~="paddingInlineEnd:size11"],
+  [data-bedrock-reel~="paddingInlineEnd:size11"],
+  [data-bedrock-split~="paddingInlineEnd:size11"],
+  [data-bedrock-stack~="paddingInlineEnd:size11"],
+
+) {
+  padding-inline-end: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size12"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size12"],
+  [data-bedrock-columns~="paddingInlineEnd:size12"],
+  [data-bedrock-column~="paddingInlineEnd:size12"],
+  [data-bedrock-cover~="paddingInlineEnd:size12"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size12"],
+  [data-bedrock-frame~="paddingInlineEnd:size12"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size12"],
+  [data-bedrock-inline~="paddingInlineEnd:size12"],
+  [data-bedrock-reel~="paddingInlineEnd:size12"],
+  [data-bedrock-split~="paddingInlineEnd:size12"],
+  [data-bedrock-stack~="paddingInlineEnd:size12"],
+
+) {
+  padding-inline-end: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size13"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size13"],
+  [data-bedrock-columns~="paddingInlineEnd:size13"],
+  [data-bedrock-column~="paddingInlineEnd:size13"],
+  [data-bedrock-cover~="paddingInlineEnd:size13"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size13"],
+  [data-bedrock-frame~="paddingInlineEnd:size13"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size13"],
+  [data-bedrock-inline~="paddingInlineEnd:size13"],
+  [data-bedrock-reel~="paddingInlineEnd:size13"],
+  [data-bedrock-split~="paddingInlineEnd:size13"],
+  [data-bedrock-stack~="paddingInlineEnd:size13"],
+
+) {
+  padding-inline-end: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size14"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size14"],
+  [data-bedrock-columns~="paddingInlineEnd:size14"],
+  [data-bedrock-column~="paddingInlineEnd:size14"],
+  [data-bedrock-cover~="paddingInlineEnd:size14"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size14"],
+  [data-bedrock-frame~="paddingInlineEnd:size14"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size14"],
+  [data-bedrock-inline~="paddingInlineEnd:size14"],
+  [data-bedrock-reel~="paddingInlineEnd:size14"],
+  [data-bedrock-split~="paddingInlineEnd:size14"],
+  [data-bedrock-stack~="paddingInlineEnd:size14"],
+
+) {
+  padding-inline-end: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingInlineEnd:size15"],
+  [data-bedrock-column-drop~="paddingInlineEnd:size15"],
+  [data-bedrock-columns~="paddingInlineEnd:size15"],
+  [data-bedrock-column~="paddingInlineEnd:size15"],
+  [data-bedrock-cover~="paddingInlineEnd:size15"],
+  [data-bedrock-cover-centered~="paddingInlineEnd:size15"],
+  [data-bedrock-frame~="paddingInlineEnd:size15"],
+  [data-bedrock-inline-cluster~="paddingInlineEnd:size15"],
+  [data-bedrock-inline~="paddingInlineEnd:size15"],
+  [data-bedrock-reel~="paddingInlineEnd:size15"],
+  [data-bedrock-split~="paddingInlineEnd:size15"],
+  [data-bedrock-stack~="paddingInlineEnd:size15"],
+
+) {
+  padding-inline-end: 30rem;
+}
+
+/* padding-block Sizes */
+:is(
+  [data-bedrock-center~="paddingBlock:size000"],
+  [data-bedrock-column-drop~="paddingBlock:size000"],
+  [data-bedrock-columns~="paddingBlock:size000"],
+  [data-bedrock-column~="paddingBlock:size000"],
+  [data-bedrock-cover~="paddingBlock:size000"],
+  [data-bedrock-cover-centered~="paddingBlock:size000"],
+  [data-bedrock-frame~="paddingBlock:size000"],
+  [data-bedrock-inline-cluster~="paddingBlock:size000"],
+  [data-bedrock-inline~="paddingBlock:size000"],
+  [data-bedrock-reel~="paddingBlock:size000"],
+  [data-bedrock-split~="paddingBlock:size000"],
+  [data-bedrock-stack~="paddingBlock:size000"],
+
+) {
+  padding-block: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size00"],
+  [data-bedrock-column-drop~="paddingBlock:size00"],
+  [data-bedrock-columns~="paddingBlock:size00"],
+  [data-bedrock-column~="paddingBlock:size00"],
+  [data-bedrock-cover~="paddingBlock:size00"],
+  [data-bedrock-cover-centered~="paddingBlock:size00"],
+  [data-bedrock-frame~="paddingBlock:size00"],
+  [data-bedrock-inline-cluster~="paddingBlock:size00"],
+  [data-bedrock-inline~="paddingBlock:size00"],
+  [data-bedrock-reel~="paddingBlock:size00"],
+  [data-bedrock-split~="paddingBlock:size00"],
+  [data-bedrock-stack~="paddingBlock:size00"],
+
+) {
+  padding-block: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size1"],
+  [data-bedrock-column-drop~="paddingBlock:size1"],
+  [data-bedrock-columns~="paddingBlock:size1"],
+  [data-bedrock-column~="paddingBlock:size1"],
+  [data-bedrock-cover~="paddingBlock:size1"],
+  [data-bedrock-cover-centered~="paddingBlock:size1"],
+  [data-bedrock-frame~="paddingBlock:size1"],
+  [data-bedrock-inline-cluster~="paddingBlock:size1"],
+  [data-bedrock-inline~="paddingBlock:size1"],
+  [data-bedrock-reel~="paddingBlock:size1"],
+  [data-bedrock-split~="paddingBlock:size1"],
+  [data-bedrock-stack~="paddingBlock:size1"],
+
+) {
+  padding-block: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size2"],
+  [data-bedrock-column-drop~="paddingBlock:size2"],
+  [data-bedrock-columns~="paddingBlock:size2"],
+  [data-bedrock-column~="paddingBlock:size2"],
+  [data-bedrock-cover~="paddingBlock:size2"],
+  [data-bedrock-cover-centered~="paddingBlock:size2"],
+  [data-bedrock-frame~="paddingBlock:size2"],
+  [data-bedrock-inline-cluster~="paddingBlock:size2"],
+  [data-bedrock-inline~="paddingBlock:size2"],
+  [data-bedrock-reel~="paddingBlock:size2"],
+  [data-bedrock-split~="paddingBlock:size2"],
+  [data-bedrock-stack~="paddingBlock:size2"],
+
+) {
+  padding-block: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size3"],
+  [data-bedrock-column-drop~="paddingBlock:size3"],
+  [data-bedrock-columns~="paddingBlock:size3"],
+  [data-bedrock-column~="paddingBlock:size3"],
+  [data-bedrock-cover~="paddingBlock:size3"],
+  [data-bedrock-cover-centered~="paddingBlock:size3"],
+  [data-bedrock-frame~="paddingBlock:size3"],
+  [data-bedrock-inline-cluster~="paddingBlock:size3"],
+  [data-bedrock-inline~="paddingBlock:size3"],
+  [data-bedrock-reel~="paddingBlock:size3"],
+  [data-bedrock-split~="paddingBlock:size3"],
+  [data-bedrock-stack~="paddingBlock:size3"],
+
+) {
+  padding-block: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size4"],
+  [data-bedrock-column-drop~="paddingBlock:size4"],
+  [data-bedrock-columns~="paddingBlock:size4"],
+  [data-bedrock-column~="paddingBlock:size4"],
+  [data-bedrock-cover~="paddingBlock:size4"],
+  [data-bedrock-cover-centered~="paddingBlock:size4"],
+  [data-bedrock-frame~="paddingBlock:size4"],
+  [data-bedrock-inline-cluster~="paddingBlock:size4"],
+  [data-bedrock-inline~="paddingBlock:size4"],
+  [data-bedrock-reel~="paddingBlock:size4"],
+  [data-bedrock-split~="paddingBlock:size4"],
+  [data-bedrock-stack~="paddingBlock:size4"],
+
+) {
+  padding-block: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size5"],
+  [data-bedrock-column-drop~="paddingBlock:size5"],
+  [data-bedrock-columns~="paddingBlock:size5"],
+  [data-bedrock-column~="paddingBlock:size5"],
+  [data-bedrock-cover~="paddingBlock:size5"],
+  [data-bedrock-cover-centered~="paddingBlock:size5"],
+  [data-bedrock-frame~="paddingBlock:size5"],
+  [data-bedrock-inline-cluster~="paddingBlock:size5"],
+  [data-bedrock-inline~="paddingBlock:size5"],
+  [data-bedrock-reel~="paddingBlock:size5"],
+  [data-bedrock-split~="paddingBlock:size5"],
+  [data-bedrock-stack~="paddingBlock:size5"],
+
+) {
+  padding-block: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size6"],
+  [data-bedrock-column-drop~="paddingBlock:size6"],
+  [data-bedrock-columns~="paddingBlock:size6"],
+  [data-bedrock-column~="paddingBlock:size6"],
+  [data-bedrock-cover~="paddingBlock:size6"],
+  [data-bedrock-cover-centered~="paddingBlock:size6"],
+  [data-bedrock-frame~="paddingBlock:size6"],
+  [data-bedrock-inline-cluster~="paddingBlock:size6"],
+  [data-bedrock-inline~="paddingBlock:size6"],
+  [data-bedrock-reel~="paddingBlock:size6"],
+  [data-bedrock-split~="paddingBlock:size6"],
+  [data-bedrock-stack~="paddingBlock:size6"],
+
+) {
+  padding-block: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size7"],
+  [data-bedrock-column-drop~="paddingBlock:size7"],
+  [data-bedrock-columns~="paddingBlock:size7"],
+  [data-bedrock-column~="paddingBlock:size7"],
+  [data-bedrock-cover~="paddingBlock:size7"],
+  [data-bedrock-cover-centered~="paddingBlock:size7"],
+  [data-bedrock-frame~="paddingBlock:size7"],
+  [data-bedrock-inline-cluster~="paddingBlock:size7"],
+  [data-bedrock-inline~="paddingBlock:size7"],
+  [data-bedrock-reel~="paddingBlock:size7"],
+  [data-bedrock-split~="paddingBlock:size7"],
+  [data-bedrock-stack~="paddingBlock:size7"],
+
+) {
+  padding-block: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size8"],
+  [data-bedrock-column-drop~="paddingBlock:size8"],
+  [data-bedrock-columns~="paddingBlock:size8"],
+  [data-bedrock-column~="paddingBlock:size8"],
+  [data-bedrock-cover~="paddingBlock:size8"],
+  [data-bedrock-cover-centered~="paddingBlock:size8"],
+  [data-bedrock-frame~="paddingBlock:size8"],
+  [data-bedrock-inline-cluster~="paddingBlock:size8"],
+  [data-bedrock-inline~="paddingBlock:size8"],
+  [data-bedrock-reel~="paddingBlock:size8"],
+  [data-bedrock-split~="paddingBlock:size8"],
+  [data-bedrock-stack~="paddingBlock:size8"],
+
+) {
+  padding-block: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size9"],
+  [data-bedrock-column-drop~="paddingBlock:size9"],
+  [data-bedrock-columns~="paddingBlock:size9"],
+  [data-bedrock-column~="paddingBlock:size9"],
+  [data-bedrock-cover~="paddingBlock:size9"],
+  [data-bedrock-cover-centered~="paddingBlock:size9"],
+  [data-bedrock-frame~="paddingBlock:size9"],
+  [data-bedrock-inline-cluster~="paddingBlock:size9"],
+  [data-bedrock-inline~="paddingBlock:size9"],
+  [data-bedrock-reel~="paddingBlock:size9"],
+  [data-bedrock-split~="paddingBlock:size9"],
+  [data-bedrock-stack~="paddingBlock:size9"],
+
+) {
+  padding-block: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size10"],
+  [data-bedrock-column-drop~="paddingBlock:size10"],
+  [data-bedrock-columns~="paddingBlock:size10"],
+  [data-bedrock-column~="paddingBlock:size10"],
+  [data-bedrock-cover~="paddingBlock:size10"],
+  [data-bedrock-cover-centered~="paddingBlock:size10"],
+  [data-bedrock-frame~="paddingBlock:size10"],
+  [data-bedrock-inline-cluster~="paddingBlock:size10"],
+  [data-bedrock-inline~="paddingBlock:size10"],
+  [data-bedrock-reel~="paddingBlock:size10"],
+  [data-bedrock-split~="paddingBlock:size10"],
+  [data-bedrock-stack~="paddingBlock:size10"],
+
+) {
+  padding-block: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size11"],
+  [data-bedrock-column-drop~="paddingBlock:size11"],
+  [data-bedrock-columns~="paddingBlock:size11"],
+  [data-bedrock-column~="paddingBlock:size11"],
+  [data-bedrock-cover~="paddingBlock:size11"],
+  [data-bedrock-cover-centered~="paddingBlock:size11"],
+  [data-bedrock-frame~="paddingBlock:size11"],
+  [data-bedrock-inline-cluster~="paddingBlock:size11"],
+  [data-bedrock-inline~="paddingBlock:size11"],
+  [data-bedrock-reel~="paddingBlock:size11"],
+  [data-bedrock-split~="paddingBlock:size11"],
+  [data-bedrock-stack~="paddingBlock:size11"],
+
+) {
+  padding-block: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size12"],
+  [data-bedrock-column-drop~="paddingBlock:size12"],
+  [data-bedrock-columns~="paddingBlock:size12"],
+  [data-bedrock-column~="paddingBlock:size12"],
+  [data-bedrock-cover~="paddingBlock:size12"],
+  [data-bedrock-cover-centered~="paddingBlock:size12"],
+  [data-bedrock-frame~="paddingBlock:size12"],
+  [data-bedrock-inline-cluster~="paddingBlock:size12"],
+  [data-bedrock-inline~="paddingBlock:size12"],
+  [data-bedrock-reel~="paddingBlock:size12"],
+  [data-bedrock-split~="paddingBlock:size12"],
+  [data-bedrock-stack~="paddingBlock:size12"],
+
+) {
+  padding-block: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size13"],
+  [data-bedrock-column-drop~="paddingBlock:size13"],
+  [data-bedrock-columns~="paddingBlock:size13"],
+  [data-bedrock-column~="paddingBlock:size13"],
+  [data-bedrock-cover~="paddingBlock:size13"],
+  [data-bedrock-cover-centered~="paddingBlock:size13"],
+  [data-bedrock-frame~="paddingBlock:size13"],
+  [data-bedrock-inline-cluster~="paddingBlock:size13"],
+  [data-bedrock-inline~="paddingBlock:size13"],
+  [data-bedrock-reel~="paddingBlock:size13"],
+  [data-bedrock-split~="paddingBlock:size13"],
+  [data-bedrock-stack~="paddingBlock:size13"],
+
+) {
+  padding-block: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size14"],
+  [data-bedrock-column-drop~="paddingBlock:size14"],
+  [data-bedrock-columns~="paddingBlock:size14"],
+  [data-bedrock-column~="paddingBlock:size14"],
+  [data-bedrock-cover~="paddingBlock:size14"],
+  [data-bedrock-cover-centered~="paddingBlock:size14"],
+  [data-bedrock-frame~="paddingBlock:size14"],
+  [data-bedrock-inline-cluster~="paddingBlock:size14"],
+  [data-bedrock-inline~="paddingBlock:size14"],
+  [data-bedrock-reel~="paddingBlock:size14"],
+  [data-bedrock-split~="paddingBlock:size14"],
+  [data-bedrock-stack~="paddingBlock:size14"],
+
+) {
+  padding-block: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlock:size15"],
+  [data-bedrock-column-drop~="paddingBlock:size15"],
+  [data-bedrock-columns~="paddingBlock:size15"],
+  [data-bedrock-column~="paddingBlock:size15"],
+  [data-bedrock-cover~="paddingBlock:size15"],
+  [data-bedrock-cover-centered~="paddingBlock:size15"],
+  [data-bedrock-frame~="paddingBlock:size15"],
+  [data-bedrock-inline-cluster~="paddingBlock:size15"],
+  [data-bedrock-inline~="paddingBlock:size15"],
+  [data-bedrock-reel~="paddingBlock:size15"],
+  [data-bedrock-split~="paddingBlock:size15"],
+  [data-bedrock-stack~="paddingBlock:size15"],
+
+) {
+  padding-block: 30rem;
+}
+
+/* padding block start Sizes */
+:is(
+  [data-bedrock-center~="paddingBlockStart:size000"],
+  [data-bedrock-column-drop~="paddingBlockStart:size000"],
+  [data-bedrock-columns~="paddingBlockStart:size000"],
+  [data-bedrock-column~="paddingBlockStart:size000"],
+  [data-bedrock-cover~="paddingBlockStart:size000"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size000"],
+  [data-bedrock-frame~="paddingBlockStart:size000"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size000"],
+  [data-bedrock-inline~="paddingBlockStart:size000"],
+  [data-bedrock-reel~="paddingBlockStart:size000"],
+  [data-bedrock-split~="paddingBlockStart:size000"],
+  [data-bedrock-stack~="paddingBlockStart:size000"],
+
+) {
+  padding-block-start: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size00"],
+  [data-bedrock-column-drop~="paddingBlockStart:size00"],
+  [data-bedrock-columns~="paddingBlockStart:size00"],
+  [data-bedrock-column~="paddingBlockStart:size00"],
+  [data-bedrock-cover~="paddingBlockStart:size00"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size00"],
+  [data-bedrock-frame~="paddingBlockStart:size00"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size00"],
+  [data-bedrock-inline~="paddingBlockStart:size00"],
+  [data-bedrock-reel~="paddingBlockStart:size00"],
+  [data-bedrock-split~="paddingBlockStart:size00"],
+  [data-bedrock-stack~="paddingBlockStart:size00"],
+
+) {
+  padding-block-start: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size1"],
+  [data-bedrock-column-drop~="paddingBlockStart:size1"],
+  [data-bedrock-columns~="paddingBlockStart:size1"],
+  [data-bedrock-column~="paddingBlockStart:size1"],
+  [data-bedrock-cover~="paddingBlockStart:size1"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size1"],
+  [data-bedrock-frame~="paddingBlockStart:size1"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size1"],
+  [data-bedrock-inline~="paddingBlockStart:size1"],
+  [data-bedrock-reel~="paddingBlockStart:size1"],
+  [data-bedrock-split~="paddingBlockStart:size1"],
+  [data-bedrock-stack~="paddingBlockStart:size1"],
+
+) {
+  padding-block-start: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size2"],
+  [data-bedrock-column-drop~="paddingBlockStart:size2"],
+  [data-bedrock-columns~="paddingBlockStart:size2"],
+  [data-bedrock-column~="paddingBlockStart:size2"],
+  [data-bedrock-cover~="paddingBlockStart:size2"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size2"],
+  [data-bedrock-frame~="paddingBlockStart:size2"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size2"],
+  [data-bedrock-inline~="paddingBlockStart:size2"],
+  [data-bedrock-reel~="paddingBlockStart:size2"],
+  [data-bedrock-split~="paddingBlockStart:size2"],
+  [data-bedrock-stack~="paddingBlockStart:size2"],
+
+) {
+  padding-block-start: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size3"],
+  [data-bedrock-column-drop~="paddingBlockStart:size3"],
+  [data-bedrock-columns~="paddingBlockStart:size3"],
+  [data-bedrock-column~="paddingBlockStart:size3"],
+  [data-bedrock-cover~="paddingBlockStart:size3"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size3"],
+  [data-bedrock-frame~="paddingBlockStart:size3"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size3"],
+  [data-bedrock-inline~="paddingBlockStart:size3"],
+  [data-bedrock-reel~="paddingBlockStart:size3"],
+  [data-bedrock-split~="paddingBlockStart:size3"],
+  [data-bedrock-stack~="paddingBlockStart:size3"],
+
+) {
+  padding-block-start: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size4"],
+  [data-bedrock-column-drop~="paddingBlockStart:size4"],
+  [data-bedrock-columns~="paddingBlockStart:size4"],
+  [data-bedrock-column~="paddingBlockStart:size4"],
+  [data-bedrock-cover~="paddingBlockStart:size4"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size4"],
+  [data-bedrock-frame~="paddingBlockStart:size4"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size4"],
+  [data-bedrock-inline~="paddingBlockStart:size4"],
+  [data-bedrock-reel~="paddingBlockStart:size4"],
+  [data-bedrock-split~="paddingBlockStart:size4"],
+  [data-bedrock-stack~="paddingBlockStart:size4"],
+
+) {
+  padding-block-start: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size5"],
+  [data-bedrock-column-drop~="paddingBlockStart:size5"],
+  [data-bedrock-columns~="paddingBlockStart:size5"],
+  [data-bedrock-column~="paddingBlockStart:size5"],
+  [data-bedrock-cover~="paddingBlockStart:size5"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size5"],
+  [data-bedrock-frame~="paddingBlockStart:size5"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size5"],
+  [data-bedrock-inline~="paddingBlockStart:size5"],
+  [data-bedrock-reel~="paddingBlockStart:size5"],
+  [data-bedrock-split~="paddingBlockStart:size5"],
+  [data-bedrock-stack~="paddingBlockStart:size5"],
+
+) {
+  padding-block-start: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size6"],
+  [data-bedrock-column-drop~="paddingBlockStart:size6"],
+  [data-bedrock-columns~="paddingBlockStart:size6"],
+  [data-bedrock-column~="paddingBlockStart:size6"],
+  [data-bedrock-cover~="paddingBlockStart:size6"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size6"],
+  [data-bedrock-frame~="paddingBlockStart:size6"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size6"],
+  [data-bedrock-inline~="paddingBlockStart:size6"],
+  [data-bedrock-reel~="paddingBlockStart:size6"],
+  [data-bedrock-split~="paddingBlockStart:size6"],
+  [data-bedrock-stack~="paddingBlockStart:size6"],
+
+) {
+  padding-block-start: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size7"],
+  [data-bedrock-column-drop~="paddingBlockStart:size7"],
+  [data-bedrock-columns~="paddingBlockStart:size7"],
+  [data-bedrock-column~="paddingBlockStart:size7"],
+  [data-bedrock-cover~="paddingBlockStart:size7"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size7"],
+  [data-bedrock-frame~="paddingBlockStart:size7"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size7"],
+  [data-bedrock-inline~="paddingBlockStart:size7"],
+  [data-bedrock-reel~="paddingBlockStart:size7"],
+  [data-bedrock-split~="paddingBlockStart:size7"],
+  [data-bedrock-stack~="paddingBlockStart:size7"],
+
+) {
+  padding-block-start: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size8"],
+  [data-bedrock-column-drop~="paddingBlockStart:size8"],
+  [data-bedrock-columns~="paddingBlockStart:size8"],
+  [data-bedrock-column~="paddingBlockStart:size8"],
+  [data-bedrock-cover~="paddingBlockStart:size8"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size8"],
+  [data-bedrock-frame~="paddingBlockStart:size8"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size8"],
+  [data-bedrock-inline~="paddingBlockStart:size8"],
+  [data-bedrock-reel~="paddingBlockStart:size8"],
+  [data-bedrock-split~="paddingBlockStart:size8"],
+  [data-bedrock-stack~="paddingBlockStart:size8"],
+
+) {
+  padding-block-start: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size9"],
+  [data-bedrock-column-drop~="paddingBlockStart:size9"],
+  [data-bedrock-columns~="paddingBlockStart:size9"],
+  [data-bedrock-column~="paddingBlockStart:size9"],
+  [data-bedrock-cover~="paddingBlockStart:size9"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size9"],
+  [data-bedrock-frame~="paddingBlockStart:size9"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size9"],
+  [data-bedrock-inline~="paddingBlockStart:size9"],
+  [data-bedrock-reel~="paddingBlockStart:size9"],
+  [data-bedrock-split~="paddingBlockStart:size9"],
+  [data-bedrock-stack~="paddingBlockStart:size9"],
+
+) {
+  padding-block-start: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size10"],
+  [data-bedrock-column-drop~="paddingBlockStart:size10"],
+  [data-bedrock-columns~="paddingBlockStart:size10"],
+  [data-bedrock-column~="paddingBlockStart:size10"],
+  [data-bedrock-cover~="paddingBlockStart:size10"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size10"],
+  [data-bedrock-frame~="paddingBlockStart:size10"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size10"],
+  [data-bedrock-inline~="paddingBlockStart:size10"],
+  [data-bedrock-reel~="paddingBlockStart:size10"],
+  [data-bedrock-split~="paddingBlockStart:size10"],
+  [data-bedrock-stack~="paddingBlockStart:size10"],
+
+) {
+  padding-block-start: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size11"],
+  [data-bedrock-column-drop~="paddingBlockStart:size11"],
+  [data-bedrock-columns~="paddingBlockStart:size11"],
+  [data-bedrock-column~="paddingBlockStart:size11"],
+  [data-bedrock-cover~="paddingBlockStart:size11"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size11"],
+  [data-bedrock-frame~="paddingBlockStart:size11"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size11"],
+  [data-bedrock-inline~="paddingBlockStart:size11"],
+  [data-bedrock-reel~="paddingBlockStart:size11"],
+  [data-bedrock-split~="paddingBlockStart:size11"],
+  [data-bedrock-stack~="paddingBlockStart:size11"],
+
+) {
+  padding-block-start: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size12"],
+  [data-bedrock-column-drop~="paddingBlockStart:size12"],
+  [data-bedrock-columns~="paddingBlockStart:size12"],
+  [data-bedrock-column~="paddingBlockStart:size12"],
+  [data-bedrock-cover~="paddingBlockStart:size12"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size12"],
+  [data-bedrock-frame~="paddingBlockStart:size12"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size12"],
+  [data-bedrock-inline~="paddingBlockStart:size12"],
+  [data-bedrock-reel~="paddingBlockStart:size12"],
+  [data-bedrock-split~="paddingBlockStart:size12"],
+  [data-bedrock-stack~="paddingBlockStart:size12"],
+
+) {
+  padding-block-start: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size13"],
+  [data-bedrock-column-drop~="paddingBlockStart:size13"],
+  [data-bedrock-columns~="paddingBlockStart:size13"],
+  [data-bedrock-column~="paddingBlockStart:size13"],
+  [data-bedrock-cover~="paddingBlockStart:size13"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size13"],
+  [data-bedrock-frame~="paddingBlockStart:size13"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size13"],
+  [data-bedrock-inline~="paddingBlockStart:size13"],
+  [data-bedrock-reel~="paddingBlockStart:size13"],
+  [data-bedrock-split~="paddingBlockStart:size13"],
+  [data-bedrock-stack~="paddingBlockStart:size13"],
+
+) {
+  padding-block-start: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size14"],
+  [data-bedrock-column-drop~="paddingBlockStart:size14"],
+  [data-bedrock-columns~="paddingBlockStart:size14"],
+  [data-bedrock-column~="paddingBlockStart:size14"],
+  [data-bedrock-cover~="paddingBlockStart:size14"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size14"],
+  [data-bedrock-frame~="paddingBlockStart:size14"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size14"],
+  [data-bedrock-inline~="paddingBlockStart:size14"],
+  [data-bedrock-reel~="paddingBlockStart:size14"],
+  [data-bedrock-split~="paddingBlockStart:size14"],
+  [data-bedrock-stack~="paddingBlockStart:size14"],
+
+) {
+  padding-block-start: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockStart:size15"],
+  [data-bedrock-column-drop~="paddingBlockStart:size15"],
+  [data-bedrock-columns~="paddingBlockStart:size15"],
+  [data-bedrock-column~="paddingBlockStart:size15"],
+  [data-bedrock-cover~="paddingBlockStart:size15"],
+  [data-bedrock-cover-centered~="paddingBlockStart:size15"],
+  [data-bedrock-frame~="paddingBlockStart:size15"],
+  [data-bedrock-inline-cluster~="paddingBlockStart:size15"],
+  [data-bedrock-inline~="paddingBlockStart:size15"],
+  [data-bedrock-reel~="paddingBlockStart:size15"],
+  [data-bedrock-split~="paddingBlockStart:size15"],
+  [data-bedrock-stack~="paddingBlockStart:size15"],
+
+) {
+  padding-block-start: 30rem;
+}
+
+/* padding block end Sizes */
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size000"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size000"],
+  [data-bedrock-columns~="paddingBlockEnd:size000"],
+  [data-bedrock-column~="paddingBlockEnd:size000"],
+  [data-bedrock-cover~="paddingBlockEnd:size000"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size000"],
+  [data-bedrock-frame~="paddingBlockEnd:size000"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size000"],
+  [data-bedrock-inline~="paddingBlockEnd:size000"],
+  [data-bedrock-reel~="paddingBlockEnd:size000"],
+  [data-bedrock-split~="paddingBlockEnd:size000"],
+  [data-bedrock-stack~="paddingBlockEnd:size000"],
+
+) {
+  padding-block-end: -0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size00"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size00"],
+  [data-bedrock-columns~="paddingBlockEnd:size00"],
+  [data-bedrock-column~="paddingBlockEnd:size00"],
+  [data-bedrock-cover~="paddingBlockEnd:size00"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size00"],
+  [data-bedrock-frame~="paddingBlockEnd:size00"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size00"],
+  [data-bedrock-inline~="paddingBlockEnd:size00"],
+  [data-bedrock-reel~="paddingBlockEnd:size00"],
+  [data-bedrock-split~="paddingBlockEnd:size00"],
+  [data-bedrock-stack~="paddingBlockEnd:size00"],
+
+) {
+  padding-block-end: -0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size1"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size1"],
+  [data-bedrock-columns~="paddingBlockEnd:size1"],
+  [data-bedrock-column~="paddingBlockEnd:size1"],
+  [data-bedrock-cover~="paddingBlockEnd:size1"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size1"],
+  [data-bedrock-frame~="paddingBlockEnd:size1"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size1"],
+  [data-bedrock-inline~="paddingBlockEnd:size1"],
+  [data-bedrock-reel~="paddingBlockEnd:size1"],
+  [data-bedrock-split~="paddingBlockEnd:size1"],
+  [data-bedrock-stack~="paddingBlockEnd:size1"],
+
+) {
+  padding-block-end: 0.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size2"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size2"],
+  [data-bedrock-columns~="paddingBlockEnd:size2"],
+  [data-bedrock-column~="paddingBlockEnd:size2"],
+  [data-bedrock-cover~="paddingBlockEnd:size2"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size2"],
+  [data-bedrock-frame~="paddingBlockEnd:size2"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size2"],
+  [data-bedrock-inline~="paddingBlockEnd:size2"],
+  [data-bedrock-reel~="paddingBlockEnd:size2"],
+  [data-bedrock-split~="paddingBlockEnd:size2"],
+  [data-bedrock-stack~="paddingBlockEnd:size2"],
+
+) {
+  padding-block-end: 0.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size3"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size3"],
+  [data-bedrock-columns~="paddingBlockEnd:size3"],
+  [data-bedrock-column~="paddingBlockEnd:size3"],
+  [data-bedrock-cover~="paddingBlockEnd:size3"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size3"],
+  [data-bedrock-frame~="paddingBlockEnd:size3"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size3"],
+  [data-bedrock-inline~="paddingBlockEnd:size3"],
+  [data-bedrock-reel~="paddingBlockEnd:size3"],
+  [data-bedrock-split~="paddingBlockEnd:size3"],
+  [data-bedrock-stack~="paddingBlockEnd:size3"],
+
+) {
+  padding-block-end: 1rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size4"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size4"],
+  [data-bedrock-columns~="paddingBlockEnd:size4"],
+  [data-bedrock-column~="paddingBlockEnd:size4"],
+  [data-bedrock-cover~="paddingBlockEnd:size4"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size4"],
+  [data-bedrock-frame~="paddingBlockEnd:size4"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size4"],
+  [data-bedrock-inline~="paddingBlockEnd:size4"],
+  [data-bedrock-reel~="paddingBlockEnd:size4"],
+  [data-bedrock-split~="paddingBlockEnd:size4"],
+  [data-bedrock-stack~="paddingBlockEnd:size4"],
+
+) {
+  padding-block-end: 1.25rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size5"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size5"],
+  [data-bedrock-columns~="paddingBlockEnd:size5"],
+  [data-bedrock-column~="paddingBlockEnd:size5"],
+  [data-bedrock-cover~="paddingBlockEnd:size5"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size5"],
+  [data-bedrock-frame~="paddingBlockEnd:size5"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size5"],
+  [data-bedrock-inline~="paddingBlockEnd:size5"],
+  [data-bedrock-reel~="paddingBlockEnd:size5"],
+  [data-bedrock-split~="paddingBlockEnd:size5"],
+  [data-bedrock-stack~="paddingBlockEnd:size5"],
+
+) {
+  padding-block-end: 1.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size6"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size6"],
+  [data-bedrock-columns~="paddingBlockEnd:size6"],
+  [data-bedrock-column~="paddingBlockEnd:size6"],
+  [data-bedrock-cover~="paddingBlockEnd:size6"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size6"],
+  [data-bedrock-frame~="paddingBlockEnd:size6"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size6"],
+  [data-bedrock-inline~="paddingBlockEnd:size6"],
+  [data-bedrock-reel~="paddingBlockEnd:size6"],
+  [data-bedrock-split~="paddingBlockEnd:size6"],
+  [data-bedrock-stack~="paddingBlockEnd:size6"],
+
+) {
+  padding-block-end: 1.75rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size7"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size7"],
+  [data-bedrock-columns~="paddingBlockEnd:size7"],
+  [data-bedrock-column~="paddingBlockEnd:size7"],
+  [data-bedrock-cover~="paddingBlockEnd:size7"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size7"],
+  [data-bedrock-frame~="paddingBlockEnd:size7"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size7"],
+  [data-bedrock-inline~="paddingBlockEnd:size7"],
+  [data-bedrock-reel~="paddingBlockEnd:size7"],
+  [data-bedrock-split~="paddingBlockEnd:size7"],
+  [data-bedrock-stack~="paddingBlockEnd:size7"],
+
+) {
+  padding-block-end: 2rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size8"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size8"],
+  [data-bedrock-columns~="paddingBlockEnd:size8"],
+  [data-bedrock-column~="paddingBlockEnd:size8"],
+  [data-bedrock-cover~="paddingBlockEnd:size8"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size8"],
+  [data-bedrock-frame~="paddingBlockEnd:size8"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size8"],
+  [data-bedrock-inline~="paddingBlockEnd:size8"],
+  [data-bedrock-reel~="paddingBlockEnd:size8"],
+  [data-bedrock-split~="paddingBlockEnd:size8"],
+  [data-bedrock-stack~="paddingBlockEnd:size8"],
+
+) {
+  padding-block-end: 3rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size9"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size9"],
+  [data-bedrock-columns~="paddingBlockEnd:size9"],
+  [data-bedrock-column~="paddingBlockEnd:size9"],
+  [data-bedrock-cover~="paddingBlockEnd:size9"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size9"],
+  [data-bedrock-frame~="paddingBlockEnd:size9"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size9"],
+  [data-bedrock-inline~="paddingBlockEnd:size9"],
+  [data-bedrock-reel~="paddingBlockEnd:size9"],
+  [data-bedrock-split~="paddingBlockEnd:size9"],
+  [data-bedrock-stack~="paddingBlockEnd:size9"],
+
+) {
+  padding-block-end: 4rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size10"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size10"],
+  [data-bedrock-columns~="paddingBlockEnd:size10"],
+  [data-bedrock-column~="paddingBlockEnd:size10"],
+  [data-bedrock-cover~="paddingBlockEnd:size10"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size10"],
+  [data-bedrock-frame~="paddingBlockEnd:size10"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size10"],
+  [data-bedrock-inline~="paddingBlockEnd:size10"],
+  [data-bedrock-reel~="paddingBlockEnd:size10"],
+  [data-bedrock-split~="paddingBlockEnd:size10"],
+  [data-bedrock-stack~="paddingBlockEnd:size10"],
+
+) {
+  padding-block-end: 5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size11"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size11"],
+  [data-bedrock-columns~="paddingBlockEnd:size11"],
+  [data-bedrock-column~="paddingBlockEnd:size11"],
+  [data-bedrock-cover~="paddingBlockEnd:size11"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size11"],
+  [data-bedrock-frame~="paddingBlockEnd:size11"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size11"],
+  [data-bedrock-inline~="paddingBlockEnd:size11"],
+  [data-bedrock-reel~="paddingBlockEnd:size11"],
+  [data-bedrock-split~="paddingBlockEnd:size11"],
+  [data-bedrock-stack~="paddingBlockEnd:size11"],
+
+) {
+  padding-block-end: 7.5rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size12"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size12"],
+  [data-bedrock-columns~="paddingBlockEnd:size12"],
+  [data-bedrock-column~="paddingBlockEnd:size12"],
+  [data-bedrock-cover~="paddingBlockEnd:size12"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size12"],
+  [data-bedrock-frame~="paddingBlockEnd:size12"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size12"],
+  [data-bedrock-inline~="paddingBlockEnd:size12"],
+  [data-bedrock-reel~="paddingBlockEnd:size12"],
+  [data-bedrock-split~="paddingBlockEnd:size12"],
+  [data-bedrock-stack~="paddingBlockEnd:size12"],
+
+) {
+  padding-block-end: 10rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size13"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size13"],
+  [data-bedrock-columns~="paddingBlockEnd:size13"],
+  [data-bedrock-column~="paddingBlockEnd:size13"],
+  [data-bedrock-cover~="paddingBlockEnd:size13"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size13"],
+  [data-bedrock-frame~="paddingBlockEnd:size13"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size13"],
+  [data-bedrock-inline~="paddingBlockEnd:size13"],
+  [data-bedrock-reel~="paddingBlockEnd:size13"],
+  [data-bedrock-split~="paddingBlockEnd:size13"],
+  [data-bedrock-stack~="paddingBlockEnd:size13"],
+
+) {
+  padding-block-end: 15rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size14"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size14"],
+  [data-bedrock-columns~="paddingBlockEnd:size14"],
+  [data-bedrock-column~="paddingBlockEnd:size14"],
+  [data-bedrock-cover~="paddingBlockEnd:size14"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size14"],
+  [data-bedrock-frame~="paddingBlockEnd:size14"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size14"],
+  [data-bedrock-inline~="paddingBlockEnd:size14"],
+  [data-bedrock-reel~="paddingBlockEnd:size14"],
+  [data-bedrock-split~="paddingBlockEnd:size14"],
+  [data-bedrock-stack~="paddingBlockEnd:size14"],
+
+) {
+  padding-block-end: 20rem;
+}
+:is(
+  [data-bedrock-center~="paddingBlockEnd:size15"],
+  [data-bedrock-column-drop~="paddingBlockEnd:size15"],
+  [data-bedrock-columns~="paddingBlockEnd:size15"],
+  [data-bedrock-column~="paddingBlockEnd:size15"],
+  [data-bedrock-cover~="paddingBlockEnd:size15"],
+  [data-bedrock-cover-centered~="paddingBlockEnd:size15"],
+  [data-bedrock-frame~="paddingBlockEnd:size15"],
+  [data-bedrock-inline-cluster~="paddingBlockEnd:size15"],
+  [data-bedrock-inline~="paddingBlockEnd:size15"],
+  [data-bedrock-reel~="paddingBlockEnd:size15"],
+  [data-bedrock-split~="paddingBlockEnd:size15"],
+  [data-bedrock-stack~="paddingBlockEnd:size15"],
+
+) {
+  padding-block-end: 30rem;
+}
+
+/* future-br-prefix */
+/* padding Sizes */
+:is(
+  [data-br-center~="padding:size000"],
+  [data-br-column-drop~="padding:size000"],
+  [data-br-columns~="padding:size000"],
+  [data-br-column~="padding:size000"],
+  [data-br-cover~="padding:size000"],
+  [data-br-cover-centered~="padding:size000"],
+  [data-br-frame~="padding:size000"],
+  [data-br-inline-cluster~="padding:size000"],
+  [data-br-inline~="padding:size000"],
+  [data-br-reel~="padding:size000"],
+  [data-br-split~="padding:size000"],
+  [data-br-stack~="padding:size000"],
+
+) {
+  padding: -0.5rem;
+}
+:is(
+  [data-br-center~="padding:size00"],
+  [data-br-column-drop~="padding:size00"],
+  [data-br-columns~="padding:size00"],
+  [data-br-column~="padding:size00"],
+  [data-br-cover~="padding:size00"],
+  [data-br-cover-centered~="padding:size00"],
+  [data-br-frame~="padding:size00"],
+  [data-br-inline-cluster~="padding:size00"],
+  [data-br-inline~="padding:size00"],
+  [data-br-reel~="padding:size00"],
+  [data-br-split~="padding:size00"],
+  [data-br-stack~="padding:size00"],
+
+) {
+  padding: -0.25rem;
+}
+:is(
+  [data-br-center~="padding:size1"],
+  [data-br-column-drop~="padding:size1"],
+  [data-br-columns~="padding:size1"],
+  [data-br-column~="padding:size1"],
+  [data-br-cover~="padding:size1"],
+  [data-br-cover-centered~="padding:size1"],
+  [data-br-frame~="padding:size1"],
+  [data-br-inline-cluster~="padding:size1"],
+  [data-br-inline~="padding:size1"],
+  [data-br-reel~="padding:size1"],
+  [data-br-split~="padding:size1"],
+  [data-br-stack~="padding:size1"],
+
+) {
+  padding: 0.25rem;
+}
+:is(
+  [data-br-center~="padding:size2"],
+  [data-br-column-drop~="padding:size2"],
+  [data-br-columns~="padding:size2"],
+  [data-br-column~="padding:size2"],
+  [data-br-cover~="padding:size2"],
+  [data-br-cover-centered~="padding:size2"],
+  [data-br-frame~="padding:size2"],
+  [data-br-inline-cluster~="padding:size2"],
+  [data-br-inline~="padding:size2"],
+  [data-br-reel~="padding:size2"],
+  [data-br-split~="padding:size2"],
+  [data-br-stack~="padding:size2"],
+
+) {
+  padding: 0.5rem;
+}
+:is(
+  [data-br-center~="padding:size3"],
+  [data-br-column-drop~="padding:size3"],
+  [data-br-columns~="padding:size3"],
+  [data-br-column~="padding:size3"],
+  [data-br-cover~="padding:size3"],
+  [data-br-cover-centered~="padding:size3"],
+  [data-br-frame~="padding:size3"],
+  [data-br-inline-cluster~="padding:size3"],
+  [data-br-inline~="padding:size3"],
+  [data-br-reel~="padding:size3"],
+  [data-br-split~="padding:size3"],
+  [data-br-stack~="padding:size3"],
+
+) {
+  padding: 1rem;
+}
+:is(
+  [data-br-center~="padding:size4"],
+  [data-br-column-drop~="padding:size4"],
+  [data-br-columns~="padding:size4"],
+  [data-br-column~="padding:size4"],
+  [data-br-cover~="padding:size4"],
+  [data-br-cover-centered~="padding:size4"],
+  [data-br-frame~="padding:size4"],
+  [data-br-inline-cluster~="padding:size4"],
+  [data-br-inline~="padding:size4"],
+  [data-br-reel~="padding:size4"],
+  [data-br-split~="padding:size4"],
+  [data-br-stack~="padding:size4"],
+
+) {
+  padding: 1.25rem;
+}
+:is(
+  [data-br-center~="padding:size5"],
+  [data-br-column-drop~="padding:size5"],
+  [data-br-columns~="padding:size5"],
+  [data-br-column~="padding:size5"],
+  [data-br-cover~="padding:size5"],
+  [data-br-cover-centered~="padding:size5"],
+  [data-br-frame~="padding:size5"],
+  [data-br-inline-cluster~="padding:size5"],
+  [data-br-inline~="padding:size5"],
+  [data-br-reel~="padding:size5"],
+  [data-br-split~="padding:size5"],
+  [data-br-stack~="padding:size5"],
+
+) {
+  padding: 1.5rem;
+}
+:is(
+  [data-br-center~="padding:size6"],
+  [data-br-column-drop~="padding:size6"],
+  [data-br-columns~="padding:size6"],
+  [data-br-column~="padding:size6"],
+  [data-br-cover~="padding:size6"],
+  [data-br-cover-centered~="padding:size6"],
+  [data-br-frame~="padding:size6"],
+  [data-br-inline-cluster~="padding:size6"],
+  [data-br-inline~="padding:size6"],
+  [data-br-reel~="padding:size6"],
+  [data-br-split~="padding:size6"],
+  [data-br-stack~="padding:size6"],
+
+) {
+  padding: 1.75rem;
+}
+:is(
+  [data-br-center~="padding:size7"],
+  [data-br-column-drop~="padding:size7"],
+  [data-br-columns~="padding:size7"],
+  [data-br-column~="padding:size7"],
+  [data-br-cover~="padding:size7"],
+  [data-br-cover-centered~="padding:size7"],
+  [data-br-frame~="padding:size7"],
+  [data-br-inline-cluster~="padding:size7"],
+  [data-br-inline~="padding:size7"],
+  [data-br-reel~="padding:size7"],
+  [data-br-split~="padding:size7"],
+  [data-br-stack~="padding:size7"],
+
+) {
+  padding: 2rem;
+}
+:is(
+  [data-br-center~="padding:size8"],
+  [data-br-column-drop~="padding:size8"],
+  [data-br-columns~="padding:size8"],
+  [data-br-column~="padding:size8"],
+  [data-br-cover~="padding:size8"],
+  [data-br-cover-centered~="padding:size8"],
+  [data-br-frame~="padding:size8"],
+  [data-br-inline-cluster~="padding:size8"],
+  [data-br-inline~="padding:size8"],
+  [data-br-reel~="padding:size8"],
+  [data-br-split~="padding:size8"],
+  [data-br-stack~="padding:size8"],
+
+) {
+  padding: 3rem;
+}
+:is(
+  [data-br-center~="padding:size9"],
+  [data-br-column-drop~="padding:size9"],
+  [data-br-columns~="padding:size9"],
+  [data-br-column~="padding:size9"],
+  [data-br-cover~="padding:size9"],
+  [data-br-cover-centered~="padding:size9"],
+  [data-br-frame~="padding:size9"],
+  [data-br-inline-cluster~="padding:size9"],
+  [data-br-inline~="padding:size9"],
+  [data-br-reel~="padding:size9"],
+  [data-br-split~="padding:size9"],
+  [data-br-stack~="padding:size9"],
+
+) {
+  padding: 4rem;
+}
+:is(
+  [data-br-center~="padding:size10"],
+  [data-br-column-drop~="padding:size10"],
+  [data-br-columns~="padding:size10"],
+  [data-br-column~="padding:size10"],
+  [data-br-cover~="padding:size10"],
+  [data-br-cover-centered~="padding:size10"],
+  [data-br-frame~="padding:size10"],
+  [data-br-inline-cluster~="padding:size10"],
+  [data-br-inline~="padding:size10"],
+  [data-br-reel~="padding:size10"],
+  [data-br-split~="padding:size10"],
+  [data-br-stack~="padding:size10"],
+
+) {
+  padding: 5rem;
+}
+:is(
+  [data-br-center~="padding:size11"],
+  [data-br-column-drop~="padding:size11"],
+  [data-br-columns~="padding:size11"],
+  [data-br-column~="padding:size11"],
+  [data-br-cover~="padding:size11"],
+  [data-br-cover-centered~="padding:size11"],
+  [data-br-frame~="padding:size11"],
+  [data-br-inline-cluster~="padding:size11"],
+  [data-br-inline~="padding:size11"],
+  [data-br-reel~="padding:size11"],
+  [data-br-split~="padding:size11"],
+  [data-br-stack~="padding:size11"],
+
+) {
+  padding: 7.5rem;
+}
+:is(
+  [data-br-center~="padding:size12"],
+  [data-br-column-drop~="padding:size12"],
+  [data-br-columns~="padding:size12"],
+  [data-br-column~="padding:size12"],
+  [data-br-cover~="padding:size12"],
+  [data-br-cover-centered~="padding:size12"],
+  [data-br-frame~="padding:size12"],
+  [data-br-inline-cluster~="padding:size12"],
+  [data-br-inline~="padding:size12"],
+  [data-br-reel~="padding:size12"],
+  [data-br-split~="padding:size12"],
+  [data-br-stack~="padding:size12"],
+
+) {
+  padding: 10rem;
+}
+:is(
+  [data-br-center~="padding:size13"],
+  [data-br-column-drop~="padding:size13"],
+  [data-br-columns~="padding:size13"],
+  [data-br-column~="padding:size13"],
+  [data-br-cover~="padding:size13"],
+  [data-br-cover-centered~="padding:size13"],
+  [data-br-frame~="padding:size13"],
+  [data-br-inline-cluster~="padding:size13"],
+  [data-br-inline~="padding:size13"],
+  [data-br-reel~="padding:size13"],
+  [data-br-split~="padding:size13"],
+  [data-br-stack~="padding:size13"],
+
+) {
+  padding: 15rem;
+}
+:is(
+  [data-br-center~="padding:size14"],
+  [data-br-column-drop~="padding:size14"],
+  [data-br-columns~="padding:size14"],
+  [data-br-column~="padding:size14"],
+  [data-br-cover~="padding:size14"],
+  [data-br-cover-centered~="padding:size14"],
+  [data-br-frame~="padding:size14"],
+  [data-br-inline-cluster~="padding:size14"],
+  [data-br-inline~="padding:size14"],
+  [data-br-reel~="padding:size14"],
+  [data-br-split~="padding:size14"],
+  [data-br-stack~="padding:size14"],
+
+) {
+  padding: 20rem;
+}
+:is(
+  [data-br-center~="padding:size15"],
+  [data-br-column-drop~="padding:size15"],
+  [data-br-columns~="padding:size15"],
+  [data-br-column~="padding:size15"],
+  [data-br-cover~="padding:size15"],
+  [data-br-cover-centered~="padding:size15"],
+  [data-br-frame~="padding:size15"],
+  [data-br-inline-cluster~="padding:size15"],
+  [data-br-inline~="padding:size15"],
+  [data-br-reel~="padding:size15"],
+  [data-br-split~="padding:size15"],
+  [data-br-stack~="padding:size15"],
+
+) {
+  padding: 30rem;
+}
+
+/* padding-inline Sizes */
+:is(
+  [data-br-center~="paddingInline:size000"],
+  [data-br-column-drop~="paddingInline:size000"],
+  [data-br-columns~="paddingInline:size000"],
+  [data-br-column~="paddingInline:size000"],
+  [data-br-cover~="paddingInline:size000"],
+  [data-br-cover-centered~="paddingInline:size000"],
+  [data-br-frame~="paddingInline:size000"],
+  [data-br-inline-cluster~="paddingInline:size000"],
+  [data-br-inline~="paddingInline:size000"],
+  [data-br-reel~="paddingInline:size000"],
+  [data-br-split~="paddingInline:size000"],
+  [data-br-stack~="paddingInline:size000"],
+
+) {
+  padding-inline: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingInline:size00"],
+  [data-br-column-drop~="paddingInline:size00"],
+  [data-br-columns~="paddingInline:size00"],
+  [data-br-column~="paddingInline:size00"],
+  [data-br-cover~="paddingInline:size00"],
+  [data-br-cover-centered~="paddingInline:size00"],
+  [data-br-frame~="paddingInline:size00"],
+  [data-br-inline-cluster~="paddingInline:size00"],
+  [data-br-inline~="paddingInline:size00"],
+  [data-br-reel~="paddingInline:size00"],
+  [data-br-split~="paddingInline:size00"],
+  [data-br-stack~="paddingInline:size00"],
+
+) {
+  padding-inline: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingInline:size1"],
+  [data-br-column-drop~="paddingInline:size1"],
+  [data-br-columns~="paddingInline:size1"],
+  [data-br-column~="paddingInline:size1"],
+  [data-br-cover~="paddingInline:size1"],
+  [data-br-cover-centered~="paddingInline:size1"],
+  [data-br-frame~="paddingInline:size1"],
+  [data-br-inline-cluster~="paddingInline:size1"],
+  [data-br-inline~="paddingInline:size1"],
+  [data-br-reel~="paddingInline:size1"],
+  [data-br-split~="paddingInline:size1"],
+  [data-br-stack~="paddingInline:size1"],
+
+) {
+  padding-inline: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingInline:size2"],
+  [data-br-column-drop~="paddingInline:size2"],
+  [data-br-columns~="paddingInline:size2"],
+  [data-br-column~="paddingInline:size2"],
+  [data-br-cover~="paddingInline:size2"],
+  [data-br-cover-centered~="paddingInline:size2"],
+  [data-br-frame~="paddingInline:size2"],
+  [data-br-inline-cluster~="paddingInline:size2"],
+  [data-br-inline~="paddingInline:size2"],
+  [data-br-reel~="paddingInline:size2"],
+  [data-br-split~="paddingInline:size2"],
+  [data-br-stack~="paddingInline:size2"],
+
+) {
+  padding-inline: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingInline:size3"],
+  [data-br-column-drop~="paddingInline:size3"],
+  [data-br-columns~="paddingInline:size3"],
+  [data-br-column~="paddingInline:size3"],
+  [data-br-cover~="paddingInline:size3"],
+  [data-br-cover-centered~="paddingInline:size3"],
+  [data-br-frame~="paddingInline:size3"],
+  [data-br-inline-cluster~="paddingInline:size3"],
+  [data-br-inline~="paddingInline:size3"],
+  [data-br-reel~="paddingInline:size3"],
+  [data-br-split~="paddingInline:size3"],
+  [data-br-stack~="paddingInline:size3"],
+
+) {
+  padding-inline: 1rem;
+}
+:is(
+  [data-br-center~="paddingInline:size4"],
+  [data-br-column-drop~="paddingInline:size4"],
+  [data-br-columns~="paddingInline:size4"],
+  [data-br-column~="paddingInline:size4"],
+  [data-br-cover~="paddingInline:size4"],
+  [data-br-cover-centered~="paddingInline:size4"],
+  [data-br-frame~="paddingInline:size4"],
+  [data-br-inline-cluster~="paddingInline:size4"],
+  [data-br-inline~="paddingInline:size4"],
+  [data-br-reel~="paddingInline:size4"],
+  [data-br-split~="paddingInline:size4"],
+  [data-br-stack~="paddingInline:size4"],
+
+) {
+  padding-inline: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingInline:size5"],
+  [data-br-column-drop~="paddingInline:size5"],
+  [data-br-columns~="paddingInline:size5"],
+  [data-br-column~="paddingInline:size5"],
+  [data-br-cover~="paddingInline:size5"],
+  [data-br-cover-centered~="paddingInline:size5"],
+  [data-br-frame~="paddingInline:size5"],
+  [data-br-inline-cluster~="paddingInline:size5"],
+  [data-br-inline~="paddingInline:size5"],
+  [data-br-reel~="paddingInline:size5"],
+  [data-br-split~="paddingInline:size5"],
+  [data-br-stack~="paddingInline:size5"],
+
+) {
+  padding-inline: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingInline:size6"],
+  [data-br-column-drop~="paddingInline:size6"],
+  [data-br-columns~="paddingInline:size6"],
+  [data-br-column~="paddingInline:size6"],
+  [data-br-cover~="paddingInline:size6"],
+  [data-br-cover-centered~="paddingInline:size6"],
+  [data-br-frame~="paddingInline:size6"],
+  [data-br-inline-cluster~="paddingInline:size6"],
+  [data-br-inline~="paddingInline:size6"],
+  [data-br-reel~="paddingInline:size6"],
+  [data-br-split~="paddingInline:size6"],
+  [data-br-stack~="paddingInline:size6"],
+
+) {
+  padding-inline: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingInline:size7"],
+  [data-br-column-drop~="paddingInline:size7"],
+  [data-br-columns~="paddingInline:size7"],
+  [data-br-column~="paddingInline:size7"],
+  [data-br-cover~="paddingInline:size7"],
+  [data-br-cover-centered~="paddingInline:size7"],
+  [data-br-frame~="paddingInline:size7"],
+  [data-br-inline-cluster~="paddingInline:size7"],
+  [data-br-inline~="paddingInline:size7"],
+  [data-br-reel~="paddingInline:size7"],
+  [data-br-split~="paddingInline:size7"],
+  [data-br-stack~="paddingInline:size7"],
+
+) {
+  padding-inline: 2rem;
+}
+:is(
+  [data-br-center~="paddingInline:size8"],
+  [data-br-column-drop~="paddingInline:size8"],
+  [data-br-columns~="paddingInline:size8"],
+  [data-br-column~="paddingInline:size8"],
+  [data-br-cover~="paddingInline:size8"],
+  [data-br-cover-centered~="paddingInline:size8"],
+  [data-br-frame~="paddingInline:size8"],
+  [data-br-inline-cluster~="paddingInline:size8"],
+  [data-br-inline~="paddingInline:size8"],
+  [data-br-reel~="paddingInline:size8"],
+  [data-br-split~="paddingInline:size8"],
+  [data-br-stack~="paddingInline:size8"],
+
+) {
+  padding-inline: 3rem;
+}
+:is(
+  [data-br-center~="paddingInline:size9"],
+  [data-br-column-drop~="paddingInline:size9"],
+  [data-br-columns~="paddingInline:size9"],
+  [data-br-column~="paddingInline:size9"],
+  [data-br-cover~="paddingInline:size9"],
+  [data-br-cover-centered~="paddingInline:size9"],
+  [data-br-frame~="paddingInline:size9"],
+  [data-br-inline-cluster~="paddingInline:size9"],
+  [data-br-inline~="paddingInline:size9"],
+  [data-br-reel~="paddingInline:size9"],
+  [data-br-split~="paddingInline:size9"],
+  [data-br-stack~="paddingInline:size9"],
+
+) {
+  padding-inline: 4rem;
+}
+:is(
+  [data-br-center~="paddingInline:size10"],
+  [data-br-column-drop~="paddingInline:size10"],
+  [data-br-columns~="paddingInline:size10"],
+  [data-br-column~="paddingInline:size10"],
+  [data-br-cover~="paddingInline:size10"],
+  [data-br-cover-centered~="paddingInline:size10"],
+  [data-br-frame~="paddingInline:size10"],
+  [data-br-inline-cluster~="paddingInline:size10"],
+  [data-br-inline~="paddingInline:size10"],
+  [data-br-reel~="paddingInline:size10"],
+  [data-br-split~="paddingInline:size10"],
+  [data-br-stack~="paddingInline:size10"],
+
+) {
+  padding-inline: 5rem;
+}
+:is(
+  [data-br-center~="paddingInline:size11"],
+  [data-br-column-drop~="paddingInline:size11"],
+  [data-br-columns~="paddingInline:size11"],
+  [data-br-column~="paddingInline:size11"],
+  [data-br-cover~="paddingInline:size11"],
+  [data-br-cover-centered~="paddingInline:size11"],
+  [data-br-frame~="paddingInline:size11"],
+  [data-br-inline-cluster~="paddingInline:size11"],
+  [data-br-inline~="paddingInline:size11"],
+  [data-br-reel~="paddingInline:size11"],
+  [data-br-split~="paddingInline:size11"],
+  [data-br-stack~="paddingInline:size11"],
+
+) {
+  padding-inline: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingInline:size12"],
+  [data-br-column-drop~="paddingInline:size12"],
+  [data-br-columns~="paddingInline:size12"],
+  [data-br-column~="paddingInline:size12"],
+  [data-br-cover~="paddingInline:size12"],
+  [data-br-cover-centered~="paddingInline:size12"],
+  [data-br-frame~="paddingInline:size12"],
+  [data-br-inline-cluster~="paddingInline:size12"],
+  [data-br-inline~="paddingInline:size12"],
+  [data-br-reel~="paddingInline:size12"],
+  [data-br-split~="paddingInline:size12"],
+  [data-br-stack~="paddingInline:size12"],
+
+) {
+  padding-inline: 10rem;
+}
+:is(
+  [data-br-center~="paddingInline:size13"],
+  [data-br-column-drop~="paddingInline:size13"],
+  [data-br-columns~="paddingInline:size13"],
+  [data-br-column~="paddingInline:size13"],
+  [data-br-cover~="paddingInline:size13"],
+  [data-br-cover-centered~="paddingInline:size13"],
+  [data-br-frame~="paddingInline:size13"],
+  [data-br-inline-cluster~="paddingInline:size13"],
+  [data-br-inline~="paddingInline:size13"],
+  [data-br-reel~="paddingInline:size13"],
+  [data-br-split~="paddingInline:size13"],
+  [data-br-stack~="paddingInline:size13"],
+
+) {
+  padding-inline: 15rem;
+}
+:is(
+  [data-br-center~="paddingInline:size14"],
+  [data-br-column-drop~="paddingInline:size14"],
+  [data-br-columns~="paddingInline:size14"],
+  [data-br-column~="paddingInline:size14"],
+  [data-br-cover~="paddingInline:size14"],
+  [data-br-cover-centered~="paddingInline:size14"],
+  [data-br-frame~="paddingInline:size14"],
+  [data-br-inline-cluster~="paddingInline:size14"],
+  [data-br-inline~="paddingInline:size14"],
+  [data-br-reel~="paddingInline:size14"],
+  [data-br-split~="paddingInline:size14"],
+  [data-br-stack~="paddingInline:size14"],
+
+) {
+  padding-inline: 20rem;
+}
+:is(
+  [data-br-center~="paddingInline:size15"],
+  [data-br-column-drop~="paddingInline:size15"],
+  [data-br-columns~="paddingInline:size15"],
+  [data-br-column~="paddingInline:size15"],
+  [data-br-cover~="paddingInline:size15"],
+  [data-br-cover-centered~="paddingInline:size15"],
+  [data-br-frame~="paddingInline:size15"],
+  [data-br-inline-cluster~="paddingInline:size15"],
+  [data-br-inline~="paddingInline:size15"],
+  [data-br-reel~="paddingInline:size15"],
+  [data-br-split~="paddingInline:size15"],
+  [data-br-stack~="paddingInline:size15"],
+
+) {
+  padding-inline: 30rem;
+}
+
+/* padding inline start Sizes */
+:is(
+  [data-br-center~="paddingInlineStart:size000"],
+  [data-br-column-drop~="paddingInlineStart:size000"],
+  [data-br-columns~="paddingInlineStart:size000"],
+  [data-br-column~="paddingInlineStart:size000"],
+  [data-br-cover~="paddingInlineStart:size000"],
+  [data-br-cover-centered~="paddingInlineStart:size000"],
+  [data-br-frame~="paddingInlineStart:size000"],
+  [data-br-inline-cluster~="paddingInlineStart:size000"],
+  [data-br-inline~="paddingInlineStart:size000"],
+  [data-br-reel~="paddingInlineStart:size000"],
+  [data-br-split~="paddingInlineStart:size000"],
+  [data-br-stack~="paddingInlineStart:size000"],
+
+) {
+  padding-inline-start: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size00"],
+  [data-br-column-drop~="paddingInlineStart:size00"],
+  [data-br-columns~="paddingInlineStart:size00"],
+  [data-br-column~="paddingInlineStart:size00"],
+  [data-br-cover~="paddingInlineStart:size00"],
+  [data-br-cover-centered~="paddingInlineStart:size00"],
+  [data-br-frame~="paddingInlineStart:size00"],
+  [data-br-inline-cluster~="paddingInlineStart:size00"],
+  [data-br-inline~="paddingInlineStart:size00"],
+  [data-br-reel~="paddingInlineStart:size00"],
+  [data-br-split~="paddingInlineStart:size00"],
+  [data-br-stack~="paddingInlineStart:size00"],
+
+) {
+  padding-inline-start: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size1"],
+  [data-br-column-drop~="paddingInlineStart:size1"],
+  [data-br-columns~="paddingInlineStart:size1"],
+  [data-br-column~="paddingInlineStart:size1"],
+  [data-br-cover~="paddingInlineStart:size1"],
+  [data-br-cover-centered~="paddingInlineStart:size1"],
+  [data-br-frame~="paddingInlineStart:size1"],
+  [data-br-inline-cluster~="paddingInlineStart:size1"],
+  [data-br-inline~="paddingInlineStart:size1"],
+  [data-br-reel~="paddingInlineStart:size1"],
+  [data-br-split~="paddingInlineStart:size1"],
+  [data-br-stack~="paddingInlineStart:size1"],
+
+) {
+  padding-inline-start: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size2"],
+  [data-br-column-drop~="paddingInlineStart:size2"],
+  [data-br-columns~="paddingInlineStart:size2"],
+  [data-br-column~="paddingInlineStart:size2"],
+  [data-br-cover~="paddingInlineStart:size2"],
+  [data-br-cover-centered~="paddingInlineStart:size2"],
+  [data-br-frame~="paddingInlineStart:size2"],
+  [data-br-inline-cluster~="paddingInlineStart:size2"],
+  [data-br-inline~="paddingInlineStart:size2"],
+  [data-br-reel~="paddingInlineStart:size2"],
+  [data-br-split~="paddingInlineStart:size2"],
+  [data-br-stack~="paddingInlineStart:size2"],
+
+) {
+  padding-inline-start: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size3"],
+  [data-br-column-drop~="paddingInlineStart:size3"],
+  [data-br-columns~="paddingInlineStart:size3"],
+  [data-br-column~="paddingInlineStart:size3"],
+  [data-br-cover~="paddingInlineStart:size3"],
+  [data-br-cover-centered~="paddingInlineStart:size3"],
+  [data-br-frame~="paddingInlineStart:size3"],
+  [data-br-inline-cluster~="paddingInlineStart:size3"],
+  [data-br-inline~="paddingInlineStart:size3"],
+  [data-br-reel~="paddingInlineStart:size3"],
+  [data-br-split~="paddingInlineStart:size3"],
+  [data-br-stack~="paddingInlineStart:size3"],
+
+) {
+  padding-inline-start: 1rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size4"],
+  [data-br-column-drop~="paddingInlineStart:size4"],
+  [data-br-columns~="paddingInlineStart:size4"],
+  [data-br-column~="paddingInlineStart:size4"],
+  [data-br-cover~="paddingInlineStart:size4"],
+  [data-br-cover-centered~="paddingInlineStart:size4"],
+  [data-br-frame~="paddingInlineStart:size4"],
+  [data-br-inline-cluster~="paddingInlineStart:size4"],
+  [data-br-inline~="paddingInlineStart:size4"],
+  [data-br-reel~="paddingInlineStart:size4"],
+  [data-br-split~="paddingInlineStart:size4"],
+  [data-br-stack~="paddingInlineStart:size4"],
+
+) {
+  padding-inline-start: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size5"],
+  [data-br-column-drop~="paddingInlineStart:size5"],
+  [data-br-columns~="paddingInlineStart:size5"],
+  [data-br-column~="paddingInlineStart:size5"],
+  [data-br-cover~="paddingInlineStart:size5"],
+  [data-br-cover-centered~="paddingInlineStart:size5"],
+  [data-br-frame~="paddingInlineStart:size5"],
+  [data-br-inline-cluster~="paddingInlineStart:size5"],
+  [data-br-inline~="paddingInlineStart:size5"],
+  [data-br-reel~="paddingInlineStart:size5"],
+  [data-br-split~="paddingInlineStart:size5"],
+  [data-br-stack~="paddingInlineStart:size5"],
+
+) {
+  padding-inline-start: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size6"],
+  [data-br-column-drop~="paddingInlineStart:size6"],
+  [data-br-columns~="paddingInlineStart:size6"],
+  [data-br-column~="paddingInlineStart:size6"],
+  [data-br-cover~="paddingInlineStart:size6"],
+  [data-br-cover-centered~="paddingInlineStart:size6"],
+  [data-br-frame~="paddingInlineStart:size6"],
+  [data-br-inline-cluster~="paddingInlineStart:size6"],
+  [data-br-inline~="paddingInlineStart:size6"],
+  [data-br-reel~="paddingInlineStart:size6"],
+  [data-br-split~="paddingInlineStart:size6"],
+  [data-br-stack~="paddingInlineStart:size6"],
+
+) {
+  padding-inline-start: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size7"],
+  [data-br-column-drop~="paddingInlineStart:size7"],
+  [data-br-columns~="paddingInlineStart:size7"],
+  [data-br-column~="paddingInlineStart:size7"],
+  [data-br-cover~="paddingInlineStart:size7"],
+  [data-br-cover-centered~="paddingInlineStart:size7"],
+  [data-br-frame~="paddingInlineStart:size7"],
+  [data-br-inline-cluster~="paddingInlineStart:size7"],
+  [data-br-inline~="paddingInlineStart:size7"],
+  [data-br-reel~="paddingInlineStart:size7"],
+  [data-br-split~="paddingInlineStart:size7"],
+  [data-br-stack~="paddingInlineStart:size7"],
+
+) {
+  padding-inline-start: 2rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size8"],
+  [data-br-column-drop~="paddingInlineStart:size8"],
+  [data-br-columns~="paddingInlineStart:size8"],
+  [data-br-column~="paddingInlineStart:size8"],
+  [data-br-cover~="paddingInlineStart:size8"],
+  [data-br-cover-centered~="paddingInlineStart:size8"],
+  [data-br-frame~="paddingInlineStart:size8"],
+  [data-br-inline-cluster~="paddingInlineStart:size8"],
+  [data-br-inline~="paddingInlineStart:size8"],
+  [data-br-reel~="paddingInlineStart:size8"],
+  [data-br-split~="paddingInlineStart:size8"],
+  [data-br-stack~="paddingInlineStart:size8"],
+
+) {
+  padding-inline-start: 3rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size9"],
+  [data-br-column-drop~="paddingInlineStart:size9"],
+  [data-br-columns~="paddingInlineStart:size9"],
+  [data-br-column~="paddingInlineStart:size9"],
+  [data-br-cover~="paddingInlineStart:size9"],
+  [data-br-cover-centered~="paddingInlineStart:size9"],
+  [data-br-frame~="paddingInlineStart:size9"],
+  [data-br-inline-cluster~="paddingInlineStart:size9"],
+  [data-br-inline~="paddingInlineStart:size9"],
+  [data-br-reel~="paddingInlineStart:size9"],
+  [data-br-split~="paddingInlineStart:size9"],
+  [data-br-stack~="paddingInlineStart:size9"],
+
+) {
+  padding-inline-start: 4rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size10"],
+  [data-br-column-drop~="paddingInlineStart:size10"],
+  [data-br-columns~="paddingInlineStart:size10"],
+  [data-br-column~="paddingInlineStart:size10"],
+  [data-br-cover~="paddingInlineStart:size10"],
+  [data-br-cover-centered~="paddingInlineStart:size10"],
+  [data-br-frame~="paddingInlineStart:size10"],
+  [data-br-inline-cluster~="paddingInlineStart:size10"],
+  [data-br-inline~="paddingInlineStart:size10"],
+  [data-br-reel~="paddingInlineStart:size10"],
+  [data-br-split~="paddingInlineStart:size10"],
+  [data-br-stack~="paddingInlineStart:size10"],
+
+) {
+  padding-inline-start: 5rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size11"],
+  [data-br-column-drop~="paddingInlineStart:size11"],
+  [data-br-columns~="paddingInlineStart:size11"],
+  [data-br-column~="paddingInlineStart:size11"],
+  [data-br-cover~="paddingInlineStart:size11"],
+  [data-br-cover-centered~="paddingInlineStart:size11"],
+  [data-br-frame~="paddingInlineStart:size11"],
+  [data-br-inline-cluster~="paddingInlineStart:size11"],
+  [data-br-inline~="paddingInlineStart:size11"],
+  [data-br-reel~="paddingInlineStart:size11"],
+  [data-br-split~="paddingInlineStart:size11"],
+  [data-br-stack~="paddingInlineStart:size11"],
+
+) {
+  padding-inline-start: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size12"],
+  [data-br-column-drop~="paddingInlineStart:size12"],
+  [data-br-columns~="paddingInlineStart:size12"],
+  [data-br-column~="paddingInlineStart:size12"],
+  [data-br-cover~="paddingInlineStart:size12"],
+  [data-br-cover-centered~="paddingInlineStart:size12"],
+  [data-br-frame~="paddingInlineStart:size12"],
+  [data-br-inline-cluster~="paddingInlineStart:size12"],
+  [data-br-inline~="paddingInlineStart:size12"],
+  [data-br-reel~="paddingInlineStart:size12"],
+  [data-br-split~="paddingInlineStart:size12"],
+  [data-br-stack~="paddingInlineStart:size12"],
+
+) {
+  padding-inline-start: 10rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size13"],
+  [data-br-column-drop~="paddingInlineStart:size13"],
+  [data-br-columns~="paddingInlineStart:size13"],
+  [data-br-column~="paddingInlineStart:size13"],
+  [data-br-cover~="paddingInlineStart:size13"],
+  [data-br-cover-centered~="paddingInlineStart:size13"],
+  [data-br-frame~="paddingInlineStart:size13"],
+  [data-br-inline-cluster~="paddingInlineStart:size13"],
+  [data-br-inline~="paddingInlineStart:size13"],
+  [data-br-reel~="paddingInlineStart:size13"],
+  [data-br-split~="paddingInlineStart:size13"],
+  [data-br-stack~="paddingInlineStart:size13"],
+
+) {
+  padding-inline-start: 15rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size14"],
+  [data-br-column-drop~="paddingInlineStart:size14"],
+  [data-br-columns~="paddingInlineStart:size14"],
+  [data-br-column~="paddingInlineStart:size14"],
+  [data-br-cover~="paddingInlineStart:size14"],
+  [data-br-cover-centered~="paddingInlineStart:size14"],
+  [data-br-frame~="paddingInlineStart:size14"],
+  [data-br-inline-cluster~="paddingInlineStart:size14"],
+  [data-br-inline~="paddingInlineStart:size14"],
+  [data-br-reel~="paddingInlineStart:size14"],
+  [data-br-split~="paddingInlineStart:size14"],
+  [data-br-stack~="paddingInlineStart:size14"],
+
+) {
+  padding-inline-start: 20rem;
+}
+:is(
+  [data-br-center~="paddingInlineStart:size15"],
+  [data-br-column-drop~="paddingInlineStart:size15"],
+  [data-br-columns~="paddingInlineStart:size15"],
+  [data-br-column~="paddingInlineStart:size15"],
+  [data-br-cover~="paddingInlineStart:size15"],
+  [data-br-cover-centered~="paddingInlineStart:size15"],
+  [data-br-frame~="paddingInlineStart:size15"],
+  [data-br-inline-cluster~="paddingInlineStart:size15"],
+  [data-br-inline~="paddingInlineStart:size15"],
+  [data-br-reel~="paddingInlineStart:size15"],
+  [data-br-split~="paddingInlineStart:size15"],
+  [data-br-stack~="paddingInlineStart:size15"],
+
+) {
+  padding-inline-start: 30rem;
+}
+
+/* padding inline end Sizes */
+:is(
+  [data-br-center~="paddingInlineEnd:size000"],
+  [data-br-column-drop~="paddingInlineEnd:size000"],
+  [data-br-columns~="paddingInlineEnd:size000"],
+  [data-br-column~="paddingInlineEnd:size000"],
+  [data-br-cover~="paddingInlineEnd:size000"],
+  [data-br-cover-centered~="paddingInlineEnd:size000"],
+  [data-br-frame~="paddingInlineEnd:size000"],
+  [data-br-inline-cluster~="paddingInlineEnd:size000"],
+  [data-br-inline~="paddingInlineEnd:size000"],
+  [data-br-reel~="paddingInlineEnd:size000"],
+  [data-br-split~="paddingInlineEnd:size000"],
+  [data-br-stack~="paddingInlineEnd:size000"],
+
+) {
+  padding-inline-end: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size00"],
+  [data-br-column-drop~="paddingInlineEnd:size00"],
+  [data-br-columns~="paddingInlineEnd:size00"],
+  [data-br-column~="paddingInlineEnd:size00"],
+  [data-br-cover~="paddingInlineEnd:size00"],
+  [data-br-cover-centered~="paddingInlineEnd:size00"],
+  [data-br-frame~="paddingInlineEnd:size00"],
+  [data-br-inline-cluster~="paddingInlineEnd:size00"],
+  [data-br-inline~="paddingInlineEnd:size00"],
+  [data-br-reel~="paddingInlineEnd:size00"],
+  [data-br-split~="paddingInlineEnd:size00"],
+  [data-br-stack~="paddingInlineEnd:size00"],
+
+) {
+  padding-inline-end: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size1"],
+  [data-br-column-drop~="paddingInlineEnd:size1"],
+  [data-br-columns~="paddingInlineEnd:size1"],
+  [data-br-column~="paddingInlineEnd:size1"],
+  [data-br-cover~="paddingInlineEnd:size1"],
+  [data-br-cover-centered~="paddingInlineEnd:size1"],
+  [data-br-frame~="paddingInlineEnd:size1"],
+  [data-br-inline-cluster~="paddingInlineEnd:size1"],
+  [data-br-inline~="paddingInlineEnd:size1"],
+  [data-br-reel~="paddingInlineEnd:size1"],
+  [data-br-split~="paddingInlineEnd:size1"],
+  [data-br-stack~="paddingInlineEnd:size1"],
+
+) {
+  padding-inline-end: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size2"],
+  [data-br-column-drop~="paddingInlineEnd:size2"],
+  [data-br-columns~="paddingInlineEnd:size2"],
+  [data-br-column~="paddingInlineEnd:size2"],
+  [data-br-cover~="paddingInlineEnd:size2"],
+  [data-br-cover-centered~="paddingInlineEnd:size2"],
+  [data-br-frame~="paddingInlineEnd:size2"],
+  [data-br-inline-cluster~="paddingInlineEnd:size2"],
+  [data-br-inline~="paddingInlineEnd:size2"],
+  [data-br-reel~="paddingInlineEnd:size2"],
+  [data-br-split~="paddingInlineEnd:size2"],
+  [data-br-stack~="paddingInlineEnd:size2"],
+
+) {
+  padding-inline-end: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size3"],
+  [data-br-column-drop~="paddingInlineEnd:size3"],
+  [data-br-columns~="paddingInlineEnd:size3"],
+  [data-br-column~="paddingInlineEnd:size3"],
+  [data-br-cover~="paddingInlineEnd:size3"],
+  [data-br-cover-centered~="paddingInlineEnd:size3"],
+  [data-br-frame~="paddingInlineEnd:size3"],
+  [data-br-inline-cluster~="paddingInlineEnd:size3"],
+  [data-br-inline~="paddingInlineEnd:size3"],
+  [data-br-reel~="paddingInlineEnd:size3"],
+  [data-br-split~="paddingInlineEnd:size3"],
+  [data-br-stack~="paddingInlineEnd:size3"],
+
+) {
+  padding-inline-end: 1rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size4"],
+  [data-br-column-drop~="paddingInlineEnd:size4"],
+  [data-br-columns~="paddingInlineEnd:size4"],
+  [data-br-column~="paddingInlineEnd:size4"],
+  [data-br-cover~="paddingInlineEnd:size4"],
+  [data-br-cover-centered~="paddingInlineEnd:size4"],
+  [data-br-frame~="paddingInlineEnd:size4"],
+  [data-br-inline-cluster~="paddingInlineEnd:size4"],
+  [data-br-inline~="paddingInlineEnd:size4"],
+  [data-br-reel~="paddingInlineEnd:size4"],
+  [data-br-split~="paddingInlineEnd:size4"],
+  [data-br-stack~="paddingInlineEnd:size4"],
+
+) {
+  padding-inline-end: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size5"],
+  [data-br-column-drop~="paddingInlineEnd:size5"],
+  [data-br-columns~="paddingInlineEnd:size5"],
+  [data-br-column~="paddingInlineEnd:size5"],
+  [data-br-cover~="paddingInlineEnd:size5"],
+  [data-br-cover-centered~="paddingInlineEnd:size5"],
+  [data-br-frame~="paddingInlineEnd:size5"],
+  [data-br-inline-cluster~="paddingInlineEnd:size5"],
+  [data-br-inline~="paddingInlineEnd:size5"],
+  [data-br-reel~="paddingInlineEnd:size5"],
+  [data-br-split~="paddingInlineEnd:size5"],
+  [data-br-stack~="paddingInlineEnd:size5"],
+
+) {
+  padding-inline-end: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size6"],
+  [data-br-column-drop~="paddingInlineEnd:size6"],
+  [data-br-columns~="paddingInlineEnd:size6"],
+  [data-br-column~="paddingInlineEnd:size6"],
+  [data-br-cover~="paddingInlineEnd:size6"],
+  [data-br-cover-centered~="paddingInlineEnd:size6"],
+  [data-br-frame~="paddingInlineEnd:size6"],
+  [data-br-inline-cluster~="paddingInlineEnd:size6"],
+  [data-br-inline~="paddingInlineEnd:size6"],
+  [data-br-reel~="paddingInlineEnd:size6"],
+  [data-br-split~="paddingInlineEnd:size6"],
+  [data-br-stack~="paddingInlineEnd:size6"],
+
+) {
+  padding-inline-end: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size7"],
+  [data-br-column-drop~="paddingInlineEnd:size7"],
+  [data-br-columns~="paddingInlineEnd:size7"],
+  [data-br-column~="paddingInlineEnd:size7"],
+  [data-br-cover~="paddingInlineEnd:size7"],
+  [data-br-cover-centered~="paddingInlineEnd:size7"],
+  [data-br-frame~="paddingInlineEnd:size7"],
+  [data-br-inline-cluster~="paddingInlineEnd:size7"],
+  [data-br-inline~="paddingInlineEnd:size7"],
+  [data-br-reel~="paddingInlineEnd:size7"],
+  [data-br-split~="paddingInlineEnd:size7"],
+  [data-br-stack~="paddingInlineEnd:size7"],
+
+) {
+  padding-inline-end: 2rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size8"],
+  [data-br-column-drop~="paddingInlineEnd:size8"],
+  [data-br-columns~="paddingInlineEnd:size8"],
+  [data-br-column~="paddingInlineEnd:size8"],
+  [data-br-cover~="paddingInlineEnd:size8"],
+  [data-br-cover-centered~="paddingInlineEnd:size8"],
+  [data-br-frame~="paddingInlineEnd:size8"],
+  [data-br-inline-cluster~="paddingInlineEnd:size8"],
+  [data-br-inline~="paddingInlineEnd:size8"],
+  [data-br-reel~="paddingInlineEnd:size8"],
+  [data-br-split~="paddingInlineEnd:size8"],
+  [data-br-stack~="paddingInlineEnd:size8"],
+
+) {
+  padding-inline-end: 3rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size9"],
+  [data-br-column-drop~="paddingInlineEnd:size9"],
+  [data-br-columns~="paddingInlineEnd:size9"],
+  [data-br-column~="paddingInlineEnd:size9"],
+  [data-br-cover~="paddingInlineEnd:size9"],
+  [data-br-cover-centered~="paddingInlineEnd:size9"],
+  [data-br-frame~="paddingInlineEnd:size9"],
+  [data-br-inline-cluster~="paddingInlineEnd:size9"],
+  [data-br-inline~="paddingInlineEnd:size9"],
+  [data-br-reel~="paddingInlineEnd:size9"],
+  [data-br-split~="paddingInlineEnd:size9"],
+  [data-br-stack~="paddingInlineEnd:size9"],
+
+) {
+  padding-inline-end: 4rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size10"],
+  [data-br-column-drop~="paddingInlineEnd:size10"],
+  [data-br-columns~="paddingInlineEnd:size10"],
+  [data-br-column~="paddingInlineEnd:size10"],
+  [data-br-cover~="paddingInlineEnd:size10"],
+  [data-br-cover-centered~="paddingInlineEnd:size10"],
+  [data-br-frame~="paddingInlineEnd:size10"],
+  [data-br-inline-cluster~="paddingInlineEnd:size10"],
+  [data-br-inline~="paddingInlineEnd:size10"],
+  [data-br-reel~="paddingInlineEnd:size10"],
+  [data-br-split~="paddingInlineEnd:size10"],
+  [data-br-stack~="paddingInlineEnd:size10"],
+
+) {
+  padding-inline-end: 5rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size11"],
+  [data-br-column-drop~="paddingInlineEnd:size11"],
+  [data-br-columns~="paddingInlineEnd:size11"],
+  [data-br-column~="paddingInlineEnd:size11"],
+  [data-br-cover~="paddingInlineEnd:size11"],
+  [data-br-cover-centered~="paddingInlineEnd:size11"],
+  [data-br-frame~="paddingInlineEnd:size11"],
+  [data-br-inline-cluster~="paddingInlineEnd:size11"],
+  [data-br-inline~="paddingInlineEnd:size11"],
+  [data-br-reel~="paddingInlineEnd:size11"],
+  [data-br-split~="paddingInlineEnd:size11"],
+  [data-br-stack~="paddingInlineEnd:size11"],
+
+) {
+  padding-inline-end: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size12"],
+  [data-br-column-drop~="paddingInlineEnd:size12"],
+  [data-br-columns~="paddingInlineEnd:size12"],
+  [data-br-column~="paddingInlineEnd:size12"],
+  [data-br-cover~="paddingInlineEnd:size12"],
+  [data-br-cover-centered~="paddingInlineEnd:size12"],
+  [data-br-frame~="paddingInlineEnd:size12"],
+  [data-br-inline-cluster~="paddingInlineEnd:size12"],
+  [data-br-inline~="paddingInlineEnd:size12"],
+  [data-br-reel~="paddingInlineEnd:size12"],
+  [data-br-split~="paddingInlineEnd:size12"],
+  [data-br-stack~="paddingInlineEnd:size12"],
+
+) {
+  padding-inline-end: 10rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size13"],
+  [data-br-column-drop~="paddingInlineEnd:size13"],
+  [data-br-columns~="paddingInlineEnd:size13"],
+  [data-br-column~="paddingInlineEnd:size13"],
+  [data-br-cover~="paddingInlineEnd:size13"],
+  [data-br-cover-centered~="paddingInlineEnd:size13"],
+  [data-br-frame~="paddingInlineEnd:size13"],
+  [data-br-inline-cluster~="paddingInlineEnd:size13"],
+  [data-br-inline~="paddingInlineEnd:size13"],
+  [data-br-reel~="paddingInlineEnd:size13"],
+  [data-br-split~="paddingInlineEnd:size13"],
+  [data-br-stack~="paddingInlineEnd:size13"],
+
+) {
+  padding-inline-end: 15rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size14"],
+  [data-br-column-drop~="paddingInlineEnd:size14"],
+  [data-br-columns~="paddingInlineEnd:size14"],
+  [data-br-column~="paddingInlineEnd:size14"],
+  [data-br-cover~="paddingInlineEnd:size14"],
+  [data-br-cover-centered~="paddingInlineEnd:size14"],
+  [data-br-frame~="paddingInlineEnd:size14"],
+  [data-br-inline-cluster~="paddingInlineEnd:size14"],
+  [data-br-inline~="paddingInlineEnd:size14"],
+  [data-br-reel~="paddingInlineEnd:size14"],
+  [data-br-split~="paddingInlineEnd:size14"],
+  [data-br-stack~="paddingInlineEnd:size14"],
+
+) {
+  padding-inline-end: 20rem;
+}
+:is(
+  [data-br-center~="paddingInlineEnd:size15"],
+  [data-br-column-drop~="paddingInlineEnd:size15"],
+  [data-br-columns~="paddingInlineEnd:size15"],
+  [data-br-column~="paddingInlineEnd:size15"],
+  [data-br-cover~="paddingInlineEnd:size15"],
+  [data-br-cover-centered~="paddingInlineEnd:size15"],
+  [data-br-frame~="paddingInlineEnd:size15"],
+  [data-br-inline-cluster~="paddingInlineEnd:size15"],
+  [data-br-inline~="paddingInlineEnd:size15"],
+  [data-br-reel~="paddingInlineEnd:size15"],
+  [data-br-split~="paddingInlineEnd:size15"],
+  [data-br-stack~="paddingInlineEnd:size15"],
+
+) {
+  padding-inline-end: 30rem;
+}
+
+/* padding-block Sizes */
+:is(
+  [data-br-center~="paddingBlock:size000"],
+  [data-br-column-drop~="paddingBlock:size000"],
+  [data-br-columns~="paddingBlock:size000"],
+  [data-br-column~="paddingBlock:size000"],
+  [data-br-cover~="paddingBlock:size000"],
+  [data-br-cover-centered~="paddingBlock:size000"],
+  [data-br-frame~="paddingBlock:size000"],
+  [data-br-inline-cluster~="paddingBlock:size000"],
+  [data-br-inline~="paddingBlock:size000"],
+  [data-br-reel~="paddingBlock:size000"],
+  [data-br-split~="paddingBlock:size000"],
+  [data-br-stack~="paddingBlock:size000"],
+
+) {
+  padding-block: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size00"],
+  [data-br-column-drop~="paddingBlock:size00"],
+  [data-br-columns~="paddingBlock:size00"],
+  [data-br-column~="paddingBlock:size00"],
+  [data-br-cover~="paddingBlock:size00"],
+  [data-br-cover-centered~="paddingBlock:size00"],
+  [data-br-frame~="paddingBlock:size00"],
+  [data-br-inline-cluster~="paddingBlock:size00"],
+  [data-br-inline~="paddingBlock:size00"],
+  [data-br-reel~="paddingBlock:size00"],
+  [data-br-split~="paddingBlock:size00"],
+  [data-br-stack~="paddingBlock:size00"],
+
+) {
+  padding-block: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size1"],
+  [data-br-column-drop~="paddingBlock:size1"],
+  [data-br-columns~="paddingBlock:size1"],
+  [data-br-column~="paddingBlock:size1"],
+  [data-br-cover~="paddingBlock:size1"],
+  [data-br-cover-centered~="paddingBlock:size1"],
+  [data-br-frame~="paddingBlock:size1"],
+  [data-br-inline-cluster~="paddingBlock:size1"],
+  [data-br-inline~="paddingBlock:size1"],
+  [data-br-reel~="paddingBlock:size1"],
+  [data-br-split~="paddingBlock:size1"],
+  [data-br-stack~="paddingBlock:size1"],
+
+) {
+  padding-block: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size2"],
+  [data-br-column-drop~="paddingBlock:size2"],
+  [data-br-columns~="paddingBlock:size2"],
+  [data-br-column~="paddingBlock:size2"],
+  [data-br-cover~="paddingBlock:size2"],
+  [data-br-cover-centered~="paddingBlock:size2"],
+  [data-br-frame~="paddingBlock:size2"],
+  [data-br-inline-cluster~="paddingBlock:size2"],
+  [data-br-inline~="paddingBlock:size2"],
+  [data-br-reel~="paddingBlock:size2"],
+  [data-br-split~="paddingBlock:size2"],
+  [data-br-stack~="paddingBlock:size2"],
+
+) {
+  padding-block: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size3"],
+  [data-br-column-drop~="paddingBlock:size3"],
+  [data-br-columns~="paddingBlock:size3"],
+  [data-br-column~="paddingBlock:size3"],
+  [data-br-cover~="paddingBlock:size3"],
+  [data-br-cover-centered~="paddingBlock:size3"],
+  [data-br-frame~="paddingBlock:size3"],
+  [data-br-inline-cluster~="paddingBlock:size3"],
+  [data-br-inline~="paddingBlock:size3"],
+  [data-br-reel~="paddingBlock:size3"],
+  [data-br-split~="paddingBlock:size3"],
+  [data-br-stack~="paddingBlock:size3"],
+
+) {
+  padding-block: 1rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size4"],
+  [data-br-column-drop~="paddingBlock:size4"],
+  [data-br-columns~="paddingBlock:size4"],
+  [data-br-column~="paddingBlock:size4"],
+  [data-br-cover~="paddingBlock:size4"],
+  [data-br-cover-centered~="paddingBlock:size4"],
+  [data-br-frame~="paddingBlock:size4"],
+  [data-br-inline-cluster~="paddingBlock:size4"],
+  [data-br-inline~="paddingBlock:size4"],
+  [data-br-reel~="paddingBlock:size4"],
+  [data-br-split~="paddingBlock:size4"],
+  [data-br-stack~="paddingBlock:size4"],
+
+) {
+  padding-block: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size5"],
+  [data-br-column-drop~="paddingBlock:size5"],
+  [data-br-columns~="paddingBlock:size5"],
+  [data-br-column~="paddingBlock:size5"],
+  [data-br-cover~="paddingBlock:size5"],
+  [data-br-cover-centered~="paddingBlock:size5"],
+  [data-br-frame~="paddingBlock:size5"],
+  [data-br-inline-cluster~="paddingBlock:size5"],
+  [data-br-inline~="paddingBlock:size5"],
+  [data-br-reel~="paddingBlock:size5"],
+  [data-br-split~="paddingBlock:size5"],
+  [data-br-stack~="paddingBlock:size5"],
+
+) {
+  padding-block: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size6"],
+  [data-br-column-drop~="paddingBlock:size6"],
+  [data-br-columns~="paddingBlock:size6"],
+  [data-br-column~="paddingBlock:size6"],
+  [data-br-cover~="paddingBlock:size6"],
+  [data-br-cover-centered~="paddingBlock:size6"],
+  [data-br-frame~="paddingBlock:size6"],
+  [data-br-inline-cluster~="paddingBlock:size6"],
+  [data-br-inline~="paddingBlock:size6"],
+  [data-br-reel~="paddingBlock:size6"],
+  [data-br-split~="paddingBlock:size6"],
+  [data-br-stack~="paddingBlock:size6"],
+
+) {
+  padding-block: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size7"],
+  [data-br-column-drop~="paddingBlock:size7"],
+  [data-br-columns~="paddingBlock:size7"],
+  [data-br-column~="paddingBlock:size7"],
+  [data-br-cover~="paddingBlock:size7"],
+  [data-br-cover-centered~="paddingBlock:size7"],
+  [data-br-frame~="paddingBlock:size7"],
+  [data-br-inline-cluster~="paddingBlock:size7"],
+  [data-br-inline~="paddingBlock:size7"],
+  [data-br-reel~="paddingBlock:size7"],
+  [data-br-split~="paddingBlock:size7"],
+  [data-br-stack~="paddingBlock:size7"],
+
+) {
+  padding-block: 2rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size8"],
+  [data-br-column-drop~="paddingBlock:size8"],
+  [data-br-columns~="paddingBlock:size8"],
+  [data-br-column~="paddingBlock:size8"],
+  [data-br-cover~="paddingBlock:size8"],
+  [data-br-cover-centered~="paddingBlock:size8"],
+  [data-br-frame~="paddingBlock:size8"],
+  [data-br-inline-cluster~="paddingBlock:size8"],
+  [data-br-inline~="paddingBlock:size8"],
+  [data-br-reel~="paddingBlock:size8"],
+  [data-br-split~="paddingBlock:size8"],
+  [data-br-stack~="paddingBlock:size8"],
+
+) {
+  padding-block: 3rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size9"],
+  [data-br-column-drop~="paddingBlock:size9"],
+  [data-br-columns~="paddingBlock:size9"],
+  [data-br-column~="paddingBlock:size9"],
+  [data-br-cover~="paddingBlock:size9"],
+  [data-br-cover-centered~="paddingBlock:size9"],
+  [data-br-frame~="paddingBlock:size9"],
+  [data-br-inline-cluster~="paddingBlock:size9"],
+  [data-br-inline~="paddingBlock:size9"],
+  [data-br-reel~="paddingBlock:size9"],
+  [data-br-split~="paddingBlock:size9"],
+  [data-br-stack~="paddingBlock:size9"],
+
+) {
+  padding-block: 4rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size10"],
+  [data-br-column-drop~="paddingBlock:size10"],
+  [data-br-columns~="paddingBlock:size10"],
+  [data-br-column~="paddingBlock:size10"],
+  [data-br-cover~="paddingBlock:size10"],
+  [data-br-cover-centered~="paddingBlock:size10"],
+  [data-br-frame~="paddingBlock:size10"],
+  [data-br-inline-cluster~="paddingBlock:size10"],
+  [data-br-inline~="paddingBlock:size10"],
+  [data-br-reel~="paddingBlock:size10"],
+  [data-br-split~="paddingBlock:size10"],
+  [data-br-stack~="paddingBlock:size10"],
+
+) {
+  padding-block: 5rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size11"],
+  [data-br-column-drop~="paddingBlock:size11"],
+  [data-br-columns~="paddingBlock:size11"],
+  [data-br-column~="paddingBlock:size11"],
+  [data-br-cover~="paddingBlock:size11"],
+  [data-br-cover-centered~="paddingBlock:size11"],
+  [data-br-frame~="paddingBlock:size11"],
+  [data-br-inline-cluster~="paddingBlock:size11"],
+  [data-br-inline~="paddingBlock:size11"],
+  [data-br-reel~="paddingBlock:size11"],
+  [data-br-split~="paddingBlock:size11"],
+  [data-br-stack~="paddingBlock:size11"],
+
+) {
+  padding-block: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size12"],
+  [data-br-column-drop~="paddingBlock:size12"],
+  [data-br-columns~="paddingBlock:size12"],
+  [data-br-column~="paddingBlock:size12"],
+  [data-br-cover~="paddingBlock:size12"],
+  [data-br-cover-centered~="paddingBlock:size12"],
+  [data-br-frame~="paddingBlock:size12"],
+  [data-br-inline-cluster~="paddingBlock:size12"],
+  [data-br-inline~="paddingBlock:size12"],
+  [data-br-reel~="paddingBlock:size12"],
+  [data-br-split~="paddingBlock:size12"],
+  [data-br-stack~="paddingBlock:size12"],
+
+) {
+  padding-block: 10rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size13"],
+  [data-br-column-drop~="paddingBlock:size13"],
+  [data-br-columns~="paddingBlock:size13"],
+  [data-br-column~="paddingBlock:size13"],
+  [data-br-cover~="paddingBlock:size13"],
+  [data-br-cover-centered~="paddingBlock:size13"],
+  [data-br-frame~="paddingBlock:size13"],
+  [data-br-inline-cluster~="paddingBlock:size13"],
+  [data-br-inline~="paddingBlock:size13"],
+  [data-br-reel~="paddingBlock:size13"],
+  [data-br-split~="paddingBlock:size13"],
+  [data-br-stack~="paddingBlock:size13"],
+
+) {
+  padding-block: 15rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size14"],
+  [data-br-column-drop~="paddingBlock:size14"],
+  [data-br-columns~="paddingBlock:size14"],
+  [data-br-column~="paddingBlock:size14"],
+  [data-br-cover~="paddingBlock:size14"],
+  [data-br-cover-centered~="paddingBlock:size14"],
+  [data-br-frame~="paddingBlock:size14"],
+  [data-br-inline-cluster~="paddingBlock:size14"],
+  [data-br-inline~="paddingBlock:size14"],
+  [data-br-reel~="paddingBlock:size14"],
+  [data-br-split~="paddingBlock:size14"],
+  [data-br-stack~="paddingBlock:size14"],
+
+) {
+  padding-block: 20rem;
+}
+:is(
+  [data-br-center~="paddingBlock:size15"],
+  [data-br-column-drop~="paddingBlock:size15"],
+  [data-br-columns~="paddingBlock:size15"],
+  [data-br-column~="paddingBlock:size15"],
+  [data-br-cover~="paddingBlock:size15"],
+  [data-br-cover-centered~="paddingBlock:size15"],
+  [data-br-frame~="paddingBlock:size15"],
+  [data-br-inline-cluster~="paddingBlock:size15"],
+  [data-br-inline~="paddingBlock:size15"],
+  [data-br-reel~="paddingBlock:size15"],
+  [data-br-split~="paddingBlock:size15"],
+  [data-br-stack~="paddingBlock:size15"],
+
+) {
+  padding-block: 30rem;
+}
+
+/* padding block start Sizes */
+:is(
+  [data-br-center~="paddingBlockStart:size000"],
+  [data-br-column-drop~="paddingBlockStart:size000"],
+  [data-br-columns~="paddingBlockStart:size000"],
+  [data-br-column~="paddingBlockStart:size000"],
+  [data-br-cover~="paddingBlockStart:size000"],
+  [data-br-cover-centered~="paddingBlockStart:size000"],
+  [data-br-frame~="paddingBlockStart:size000"],
+  [data-br-inline-cluster~="paddingBlockStart:size000"],
+  [data-br-inline~="paddingBlockStart:size000"],
+  [data-br-reel~="paddingBlockStart:size000"],
+  [data-br-split~="paddingBlockStart:size000"],
+  [data-br-stack~="paddingBlockStart:size000"],
+
+) {
+  padding-block-start: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size00"],
+  [data-br-column-drop~="paddingBlockStart:size00"],
+  [data-br-columns~="paddingBlockStart:size00"],
+  [data-br-column~="paddingBlockStart:size00"],
+  [data-br-cover~="paddingBlockStart:size00"],
+  [data-br-cover-centered~="paddingBlockStart:size00"],
+  [data-br-frame~="paddingBlockStart:size00"],
+  [data-br-inline-cluster~="paddingBlockStart:size00"],
+  [data-br-inline~="paddingBlockStart:size00"],
+  [data-br-reel~="paddingBlockStart:size00"],
+  [data-br-split~="paddingBlockStart:size00"],
+  [data-br-stack~="paddingBlockStart:size00"],
+
+) {
+  padding-block-start: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size1"],
+  [data-br-column-drop~="paddingBlockStart:size1"],
+  [data-br-columns~="paddingBlockStart:size1"],
+  [data-br-column~="paddingBlockStart:size1"],
+  [data-br-cover~="paddingBlockStart:size1"],
+  [data-br-cover-centered~="paddingBlockStart:size1"],
+  [data-br-frame~="paddingBlockStart:size1"],
+  [data-br-inline-cluster~="paddingBlockStart:size1"],
+  [data-br-inline~="paddingBlockStart:size1"],
+  [data-br-reel~="paddingBlockStart:size1"],
+  [data-br-split~="paddingBlockStart:size1"],
+  [data-br-stack~="paddingBlockStart:size1"],
+
+) {
+  padding-block-start: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size2"],
+  [data-br-column-drop~="paddingBlockStart:size2"],
+  [data-br-columns~="paddingBlockStart:size2"],
+  [data-br-column~="paddingBlockStart:size2"],
+  [data-br-cover~="paddingBlockStart:size2"],
+  [data-br-cover-centered~="paddingBlockStart:size2"],
+  [data-br-frame~="paddingBlockStart:size2"],
+  [data-br-inline-cluster~="paddingBlockStart:size2"],
+  [data-br-inline~="paddingBlockStart:size2"],
+  [data-br-reel~="paddingBlockStart:size2"],
+  [data-br-split~="paddingBlockStart:size2"],
+  [data-br-stack~="paddingBlockStart:size2"],
+
+) {
+  padding-block-start: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size3"],
+  [data-br-column-drop~="paddingBlockStart:size3"],
+  [data-br-columns~="paddingBlockStart:size3"],
+  [data-br-column~="paddingBlockStart:size3"],
+  [data-br-cover~="paddingBlockStart:size3"],
+  [data-br-cover-centered~="paddingBlockStart:size3"],
+  [data-br-frame~="paddingBlockStart:size3"],
+  [data-br-inline-cluster~="paddingBlockStart:size3"],
+  [data-br-inline~="paddingBlockStart:size3"],
+  [data-br-reel~="paddingBlockStart:size3"],
+  [data-br-split~="paddingBlockStart:size3"],
+  [data-br-stack~="paddingBlockStart:size3"],
+
+) {
+  padding-block-start: 1rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size4"],
+  [data-br-column-drop~="paddingBlockStart:size4"],
+  [data-br-columns~="paddingBlockStart:size4"],
+  [data-br-column~="paddingBlockStart:size4"],
+  [data-br-cover~="paddingBlockStart:size4"],
+  [data-br-cover-centered~="paddingBlockStart:size4"],
+  [data-br-frame~="paddingBlockStart:size4"],
+  [data-br-inline-cluster~="paddingBlockStart:size4"],
+  [data-br-inline~="paddingBlockStart:size4"],
+  [data-br-reel~="paddingBlockStart:size4"],
+  [data-br-split~="paddingBlockStart:size4"],
+  [data-br-stack~="paddingBlockStart:size4"],
+
+) {
+  padding-block-start: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size5"],
+  [data-br-column-drop~="paddingBlockStart:size5"],
+  [data-br-columns~="paddingBlockStart:size5"],
+  [data-br-column~="paddingBlockStart:size5"],
+  [data-br-cover~="paddingBlockStart:size5"],
+  [data-br-cover-centered~="paddingBlockStart:size5"],
+  [data-br-frame~="paddingBlockStart:size5"],
+  [data-br-inline-cluster~="paddingBlockStart:size5"],
+  [data-br-inline~="paddingBlockStart:size5"],
+  [data-br-reel~="paddingBlockStart:size5"],
+  [data-br-split~="paddingBlockStart:size5"],
+  [data-br-stack~="paddingBlockStart:size5"],
+
+) {
+  padding-block-start: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size6"],
+  [data-br-column-drop~="paddingBlockStart:size6"],
+  [data-br-columns~="paddingBlockStart:size6"],
+  [data-br-column~="paddingBlockStart:size6"],
+  [data-br-cover~="paddingBlockStart:size6"],
+  [data-br-cover-centered~="paddingBlockStart:size6"],
+  [data-br-frame~="paddingBlockStart:size6"],
+  [data-br-inline-cluster~="paddingBlockStart:size6"],
+  [data-br-inline~="paddingBlockStart:size6"],
+  [data-br-reel~="paddingBlockStart:size6"],
+  [data-br-split~="paddingBlockStart:size6"],
+  [data-br-stack~="paddingBlockStart:size6"],
+
+) {
+  padding-block-start: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size7"],
+  [data-br-column-drop~="paddingBlockStart:size7"],
+  [data-br-columns~="paddingBlockStart:size7"],
+  [data-br-column~="paddingBlockStart:size7"],
+  [data-br-cover~="paddingBlockStart:size7"],
+  [data-br-cover-centered~="paddingBlockStart:size7"],
+  [data-br-frame~="paddingBlockStart:size7"],
+  [data-br-inline-cluster~="paddingBlockStart:size7"],
+  [data-br-inline~="paddingBlockStart:size7"],
+  [data-br-reel~="paddingBlockStart:size7"],
+  [data-br-split~="paddingBlockStart:size7"],
+  [data-br-stack~="paddingBlockStart:size7"],
+
+) {
+  padding-block-start: 2rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size8"],
+  [data-br-column-drop~="paddingBlockStart:size8"],
+  [data-br-columns~="paddingBlockStart:size8"],
+  [data-br-column~="paddingBlockStart:size8"],
+  [data-br-cover~="paddingBlockStart:size8"],
+  [data-br-cover-centered~="paddingBlockStart:size8"],
+  [data-br-frame~="paddingBlockStart:size8"],
+  [data-br-inline-cluster~="paddingBlockStart:size8"],
+  [data-br-inline~="paddingBlockStart:size8"],
+  [data-br-reel~="paddingBlockStart:size8"],
+  [data-br-split~="paddingBlockStart:size8"],
+  [data-br-stack~="paddingBlockStart:size8"],
+
+) {
+  padding-block-start: 3rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size9"],
+  [data-br-column-drop~="paddingBlockStart:size9"],
+  [data-br-columns~="paddingBlockStart:size9"],
+  [data-br-column~="paddingBlockStart:size9"],
+  [data-br-cover~="paddingBlockStart:size9"],
+  [data-br-cover-centered~="paddingBlockStart:size9"],
+  [data-br-frame~="paddingBlockStart:size9"],
+  [data-br-inline-cluster~="paddingBlockStart:size9"],
+  [data-br-inline~="paddingBlockStart:size9"],
+  [data-br-reel~="paddingBlockStart:size9"],
+  [data-br-split~="paddingBlockStart:size9"],
+  [data-br-stack~="paddingBlockStart:size9"],
+
+) {
+  padding-block-start: 4rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size10"],
+  [data-br-column-drop~="paddingBlockStart:size10"],
+  [data-br-columns~="paddingBlockStart:size10"],
+  [data-br-column~="paddingBlockStart:size10"],
+  [data-br-cover~="paddingBlockStart:size10"],
+  [data-br-cover-centered~="paddingBlockStart:size10"],
+  [data-br-frame~="paddingBlockStart:size10"],
+  [data-br-inline-cluster~="paddingBlockStart:size10"],
+  [data-br-inline~="paddingBlockStart:size10"],
+  [data-br-reel~="paddingBlockStart:size10"],
+  [data-br-split~="paddingBlockStart:size10"],
+  [data-br-stack~="paddingBlockStart:size10"],
+
+) {
+  padding-block-start: 5rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size11"],
+  [data-br-column-drop~="paddingBlockStart:size11"],
+  [data-br-columns~="paddingBlockStart:size11"],
+  [data-br-column~="paddingBlockStart:size11"],
+  [data-br-cover~="paddingBlockStart:size11"],
+  [data-br-cover-centered~="paddingBlockStart:size11"],
+  [data-br-frame~="paddingBlockStart:size11"],
+  [data-br-inline-cluster~="paddingBlockStart:size11"],
+  [data-br-inline~="paddingBlockStart:size11"],
+  [data-br-reel~="paddingBlockStart:size11"],
+  [data-br-split~="paddingBlockStart:size11"],
+  [data-br-stack~="paddingBlockStart:size11"],
+
+) {
+  padding-block-start: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size12"],
+  [data-br-column-drop~="paddingBlockStart:size12"],
+  [data-br-columns~="paddingBlockStart:size12"],
+  [data-br-column~="paddingBlockStart:size12"],
+  [data-br-cover~="paddingBlockStart:size12"],
+  [data-br-cover-centered~="paddingBlockStart:size12"],
+  [data-br-frame~="paddingBlockStart:size12"],
+  [data-br-inline-cluster~="paddingBlockStart:size12"],
+  [data-br-inline~="paddingBlockStart:size12"],
+  [data-br-reel~="paddingBlockStart:size12"],
+  [data-br-split~="paddingBlockStart:size12"],
+  [data-br-stack~="paddingBlockStart:size12"],
+
+) {
+  padding-block-start: 10rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size13"],
+  [data-br-column-drop~="paddingBlockStart:size13"],
+  [data-br-columns~="paddingBlockStart:size13"],
+  [data-br-column~="paddingBlockStart:size13"],
+  [data-br-cover~="paddingBlockStart:size13"],
+  [data-br-cover-centered~="paddingBlockStart:size13"],
+  [data-br-frame~="paddingBlockStart:size13"],
+  [data-br-inline-cluster~="paddingBlockStart:size13"],
+  [data-br-inline~="paddingBlockStart:size13"],
+  [data-br-reel~="paddingBlockStart:size13"],
+  [data-br-split~="paddingBlockStart:size13"],
+  [data-br-stack~="paddingBlockStart:size13"],
+
+) {
+  padding-block-start: 15rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size14"],
+  [data-br-column-drop~="paddingBlockStart:size14"],
+  [data-br-columns~="paddingBlockStart:size14"],
+  [data-br-column~="paddingBlockStart:size14"],
+  [data-br-cover~="paddingBlockStart:size14"],
+  [data-br-cover-centered~="paddingBlockStart:size14"],
+  [data-br-frame~="paddingBlockStart:size14"],
+  [data-br-inline-cluster~="paddingBlockStart:size14"],
+  [data-br-inline~="paddingBlockStart:size14"],
+  [data-br-reel~="paddingBlockStart:size14"],
+  [data-br-split~="paddingBlockStart:size14"],
+  [data-br-stack~="paddingBlockStart:size14"],
+
+) {
+  padding-block-start: 20rem;
+}
+:is(
+  [data-br-center~="paddingBlockStart:size15"],
+  [data-br-column-drop~="paddingBlockStart:size15"],
+  [data-br-columns~="paddingBlockStart:size15"],
+  [data-br-column~="paddingBlockStart:size15"],
+  [data-br-cover~="paddingBlockStart:size15"],
+  [data-br-cover-centered~="paddingBlockStart:size15"],
+  [data-br-frame~="paddingBlockStart:size15"],
+  [data-br-inline-cluster~="paddingBlockStart:size15"],
+  [data-br-inline~="paddingBlockStart:size15"],
+  [data-br-reel~="paddingBlockStart:size15"],
+  [data-br-split~="paddingBlockStart:size15"],
+  [data-br-stack~="paddingBlockStart:size15"],
+
+) {
+  padding-block-start: 30rem;
+}
+
+/* padding block end Sizes */
+:is(
+  [data-br-center~="paddingBlockEnd:size000"],
+  [data-br-column-drop~="paddingBlockEnd:size000"],
+  [data-br-columns~="paddingBlockEnd:size000"],
+  [data-br-column~="paddingBlockEnd:size000"],
+  [data-br-cover~="paddingBlockEnd:size000"],
+  [data-br-cover-centered~="paddingBlockEnd:size000"],
+  [data-br-frame~="paddingBlockEnd:size000"],
+  [data-br-inline-cluster~="paddingBlockEnd:size000"],
+  [data-br-inline~="paddingBlockEnd:size000"],
+  [data-br-reel~="paddingBlockEnd:size000"],
+  [data-br-split~="paddingBlockEnd:size000"],
+  [data-br-stack~="paddingBlockEnd:size000"],
+
+) {
+  padding-block-end: -0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size00"],
+  [data-br-column-drop~="paddingBlockEnd:size00"],
+  [data-br-columns~="paddingBlockEnd:size00"],
+  [data-br-column~="paddingBlockEnd:size00"],
+  [data-br-cover~="paddingBlockEnd:size00"],
+  [data-br-cover-centered~="paddingBlockEnd:size00"],
+  [data-br-frame~="paddingBlockEnd:size00"],
+  [data-br-inline-cluster~="paddingBlockEnd:size00"],
+  [data-br-inline~="paddingBlockEnd:size00"],
+  [data-br-reel~="paddingBlockEnd:size00"],
+  [data-br-split~="paddingBlockEnd:size00"],
+  [data-br-stack~="paddingBlockEnd:size00"],
+
+) {
+  padding-block-end: -0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size1"],
+  [data-br-column-drop~="paddingBlockEnd:size1"],
+  [data-br-columns~="paddingBlockEnd:size1"],
+  [data-br-column~="paddingBlockEnd:size1"],
+  [data-br-cover~="paddingBlockEnd:size1"],
+  [data-br-cover-centered~="paddingBlockEnd:size1"],
+  [data-br-frame~="paddingBlockEnd:size1"],
+  [data-br-inline-cluster~="paddingBlockEnd:size1"],
+  [data-br-inline~="paddingBlockEnd:size1"],
+  [data-br-reel~="paddingBlockEnd:size1"],
+  [data-br-split~="paddingBlockEnd:size1"],
+  [data-br-stack~="paddingBlockEnd:size1"],
+
+) {
+  padding-block-end: 0.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size2"],
+  [data-br-column-drop~="paddingBlockEnd:size2"],
+  [data-br-columns~="paddingBlockEnd:size2"],
+  [data-br-column~="paddingBlockEnd:size2"],
+  [data-br-cover~="paddingBlockEnd:size2"],
+  [data-br-cover-centered~="paddingBlockEnd:size2"],
+  [data-br-frame~="paddingBlockEnd:size2"],
+  [data-br-inline-cluster~="paddingBlockEnd:size2"],
+  [data-br-inline~="paddingBlockEnd:size2"],
+  [data-br-reel~="paddingBlockEnd:size2"],
+  [data-br-split~="paddingBlockEnd:size2"],
+  [data-br-stack~="paddingBlockEnd:size2"],
+
+) {
+  padding-block-end: 0.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size3"],
+  [data-br-column-drop~="paddingBlockEnd:size3"],
+  [data-br-columns~="paddingBlockEnd:size3"],
+  [data-br-column~="paddingBlockEnd:size3"],
+  [data-br-cover~="paddingBlockEnd:size3"],
+  [data-br-cover-centered~="paddingBlockEnd:size3"],
+  [data-br-frame~="paddingBlockEnd:size3"],
+  [data-br-inline-cluster~="paddingBlockEnd:size3"],
+  [data-br-inline~="paddingBlockEnd:size3"],
+  [data-br-reel~="paddingBlockEnd:size3"],
+  [data-br-split~="paddingBlockEnd:size3"],
+  [data-br-stack~="paddingBlockEnd:size3"],
+
+) {
+  padding-block-end: 1rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size4"],
+  [data-br-column-drop~="paddingBlockEnd:size4"],
+  [data-br-columns~="paddingBlockEnd:size4"],
+  [data-br-column~="paddingBlockEnd:size4"],
+  [data-br-cover~="paddingBlockEnd:size4"],
+  [data-br-cover-centered~="paddingBlockEnd:size4"],
+  [data-br-frame~="paddingBlockEnd:size4"],
+  [data-br-inline-cluster~="paddingBlockEnd:size4"],
+  [data-br-inline~="paddingBlockEnd:size4"],
+  [data-br-reel~="paddingBlockEnd:size4"],
+  [data-br-split~="paddingBlockEnd:size4"],
+  [data-br-stack~="paddingBlockEnd:size4"],
+
+) {
+  padding-block-end: 1.25rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size5"],
+  [data-br-column-drop~="paddingBlockEnd:size5"],
+  [data-br-columns~="paddingBlockEnd:size5"],
+  [data-br-column~="paddingBlockEnd:size5"],
+  [data-br-cover~="paddingBlockEnd:size5"],
+  [data-br-cover-centered~="paddingBlockEnd:size5"],
+  [data-br-frame~="paddingBlockEnd:size5"],
+  [data-br-inline-cluster~="paddingBlockEnd:size5"],
+  [data-br-inline~="paddingBlockEnd:size5"],
+  [data-br-reel~="paddingBlockEnd:size5"],
+  [data-br-split~="paddingBlockEnd:size5"],
+  [data-br-stack~="paddingBlockEnd:size5"],
+
+) {
+  padding-block-end: 1.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size6"],
+  [data-br-column-drop~="paddingBlockEnd:size6"],
+  [data-br-columns~="paddingBlockEnd:size6"],
+  [data-br-column~="paddingBlockEnd:size6"],
+  [data-br-cover~="paddingBlockEnd:size6"],
+  [data-br-cover-centered~="paddingBlockEnd:size6"],
+  [data-br-frame~="paddingBlockEnd:size6"],
+  [data-br-inline-cluster~="paddingBlockEnd:size6"],
+  [data-br-inline~="paddingBlockEnd:size6"],
+  [data-br-reel~="paddingBlockEnd:size6"],
+  [data-br-split~="paddingBlockEnd:size6"],
+  [data-br-stack~="paddingBlockEnd:size6"],
+
+) {
+  padding-block-end: 1.75rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size7"],
+  [data-br-column-drop~="paddingBlockEnd:size7"],
+  [data-br-columns~="paddingBlockEnd:size7"],
+  [data-br-column~="paddingBlockEnd:size7"],
+  [data-br-cover~="paddingBlockEnd:size7"],
+  [data-br-cover-centered~="paddingBlockEnd:size7"],
+  [data-br-frame~="paddingBlockEnd:size7"],
+  [data-br-inline-cluster~="paddingBlockEnd:size7"],
+  [data-br-inline~="paddingBlockEnd:size7"],
+  [data-br-reel~="paddingBlockEnd:size7"],
+  [data-br-split~="paddingBlockEnd:size7"],
+  [data-br-stack~="paddingBlockEnd:size7"],
+
+) {
+  padding-block-end: 2rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size8"],
+  [data-br-column-drop~="paddingBlockEnd:size8"],
+  [data-br-columns~="paddingBlockEnd:size8"],
+  [data-br-column~="paddingBlockEnd:size8"],
+  [data-br-cover~="paddingBlockEnd:size8"],
+  [data-br-cover-centered~="paddingBlockEnd:size8"],
+  [data-br-frame~="paddingBlockEnd:size8"],
+  [data-br-inline-cluster~="paddingBlockEnd:size8"],
+  [data-br-inline~="paddingBlockEnd:size8"],
+  [data-br-reel~="paddingBlockEnd:size8"],
+  [data-br-split~="paddingBlockEnd:size8"],
+  [data-br-stack~="paddingBlockEnd:size8"],
+
+) {
+  padding-block-end: 3rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size9"],
+  [data-br-column-drop~="paddingBlockEnd:size9"],
+  [data-br-columns~="paddingBlockEnd:size9"],
+  [data-br-column~="paddingBlockEnd:size9"],
+  [data-br-cover~="paddingBlockEnd:size9"],
+  [data-br-cover-centered~="paddingBlockEnd:size9"],
+  [data-br-frame~="paddingBlockEnd:size9"],
+  [data-br-inline-cluster~="paddingBlockEnd:size9"],
+  [data-br-inline~="paddingBlockEnd:size9"],
+  [data-br-reel~="paddingBlockEnd:size9"],
+  [data-br-split~="paddingBlockEnd:size9"],
+  [data-br-stack~="paddingBlockEnd:size9"],
+
+) {
+  padding-block-end: 4rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size10"],
+  [data-br-column-drop~="paddingBlockEnd:size10"],
+  [data-br-columns~="paddingBlockEnd:size10"],
+  [data-br-column~="paddingBlockEnd:size10"],
+  [data-br-cover~="paddingBlockEnd:size10"],
+  [data-br-cover-centered~="paddingBlockEnd:size10"],
+  [data-br-frame~="paddingBlockEnd:size10"],
+  [data-br-inline-cluster~="paddingBlockEnd:size10"],
+  [data-br-inline~="paddingBlockEnd:size10"],
+  [data-br-reel~="paddingBlockEnd:size10"],
+  [data-br-split~="paddingBlockEnd:size10"],
+  [data-br-stack~="paddingBlockEnd:size10"],
+
+) {
+  padding-block-end: 5rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size11"],
+  [data-br-column-drop~="paddingBlockEnd:size11"],
+  [data-br-columns~="paddingBlockEnd:size11"],
+  [data-br-column~="paddingBlockEnd:size11"],
+  [data-br-cover~="paddingBlockEnd:size11"],
+  [data-br-cover-centered~="paddingBlockEnd:size11"],
+  [data-br-frame~="paddingBlockEnd:size11"],
+  [data-br-inline-cluster~="paddingBlockEnd:size11"],
+  [data-br-inline~="paddingBlockEnd:size11"],
+  [data-br-reel~="paddingBlockEnd:size11"],
+  [data-br-split~="paddingBlockEnd:size11"],
+  [data-br-stack~="paddingBlockEnd:size11"],
+
+) {
+  padding-block-end: 7.5rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size12"],
+  [data-br-column-drop~="paddingBlockEnd:size12"],
+  [data-br-columns~="paddingBlockEnd:size12"],
+  [data-br-column~="paddingBlockEnd:size12"],
+  [data-br-cover~="paddingBlockEnd:size12"],
+  [data-br-cover-centered~="paddingBlockEnd:size12"],
+  [data-br-frame~="paddingBlockEnd:size12"],
+  [data-br-inline-cluster~="paddingBlockEnd:size12"],
+  [data-br-inline~="paddingBlockEnd:size12"],
+  [data-br-reel~="paddingBlockEnd:size12"],
+  [data-br-split~="paddingBlockEnd:size12"],
+  [data-br-stack~="paddingBlockEnd:size12"],
+
+) {
+  padding-block-end: 10rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size13"],
+  [data-br-column-drop~="paddingBlockEnd:size13"],
+  [data-br-columns~="paddingBlockEnd:size13"],
+  [data-br-column~="paddingBlockEnd:size13"],
+  [data-br-cover~="paddingBlockEnd:size13"],
+  [data-br-cover-centered~="paddingBlockEnd:size13"],
+  [data-br-frame~="paddingBlockEnd:size13"],
+  [data-br-inline-cluster~="paddingBlockEnd:size13"],
+  [data-br-inline~="paddingBlockEnd:size13"],
+  [data-br-reel~="paddingBlockEnd:size13"],
+  [data-br-split~="paddingBlockEnd:size13"],
+  [data-br-stack~="paddingBlockEnd:size13"],
+
+) {
+  padding-block-end: 15rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size14"],
+  [data-br-column-drop~="paddingBlockEnd:size14"],
+  [data-br-columns~="paddingBlockEnd:size14"],
+  [data-br-column~="paddingBlockEnd:size14"],
+  [data-br-cover~="paddingBlockEnd:size14"],
+  [data-br-cover-centered~="paddingBlockEnd:size14"],
+  [data-br-frame~="paddingBlockEnd:size14"],
+  [data-br-inline-cluster~="paddingBlockEnd:size14"],
+  [data-br-inline~="paddingBlockEnd:size14"],
+  [data-br-reel~="paddingBlockEnd:size14"],
+  [data-br-split~="paddingBlockEnd:size14"],
+  [data-br-stack~="paddingBlockEnd:size14"],
+
+) {
+  padding-block-end: 20rem;
+}
+:is(
+  [data-br-center~="paddingBlockEnd:size15"],
+  [data-br-column-drop~="paddingBlockEnd:size15"],
+  [data-br-columns~="paddingBlockEnd:size15"],
+  [data-br-column~="paddingBlockEnd:size15"],
+  [data-br-cover~="paddingBlockEnd:size15"],
+  [data-br-cover-centered~="paddingBlockEnd:size15"],
+  [data-br-frame~="paddingBlockEnd:size15"],
+  [data-br-inline-cluster~="paddingBlockEnd:size15"],
+  [data-br-inline~="paddingBlockEnd:size15"],
+  [data-br-reel~="paddingBlockEnd:size15"],
+  [data-br-split~="paddingBlockEnd:size15"],
+  [data-br-stack~="paddingBlockEnd:size15"],
+
+) {
+  padding-block-end: 30rem;
+}
