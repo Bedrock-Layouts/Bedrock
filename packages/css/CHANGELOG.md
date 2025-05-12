@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.14.0 (2025-05-12)
+
+### Features
+
+- **css:** add padding options to the css ([a192ea2](https://github.com/Bedrock-Layouts/Bedrock/commit/a192ea26063529c6bb847df2a3fdfdd8a7c99a7b))
+
 ## 2.13.1 (2025-02-07)
 
 **Note:** Version bump only for package @bedrock-layout/css
