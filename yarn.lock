@@ -1018,6 +1018,39 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bedrock-layout/register-resize-callback@^2.0.14", "@bedrock-layout/register-resize-callback@^2.0.15":
+  version "2.0.15"
+  resolved "https://registry.npmjs.org/@bedrock-layout/register-resize-callback/-/register-resize-callback-2.0.15.tgz#e47d303d3375c7abebbfede7bd00d31ff73838ff"
+  integrity sha512-/YcVzgl3QINa9n1m3VMvR+cG9d9m/zWl/1T8JVhPKmj7g34ASn4kGsDVP3GXbg1dgkvt+lVnyToiHUf0fvOG4g==
+
+"@bedrock-layout/use-container-query@^2.0.17":
+  version "2.0.18"
+  resolved "https://registry.npmjs.org/@bedrock-layout/use-container-query/-/use-container-query-2.0.18.tgz#86ba2f4b8af0a4702dd54384c80b424186a2aa4b"
+  integrity sha512-lpV7xjGuCjbm4JD8iYI/0eelOeKief6Uf6PiUqo2efJ3e7Mhn+RO2mYlw5pB9vPQ619bE5VENk6ApIlX1ZmJVw==
+  dependencies:
+    "@bedrock-layout/use-forwarded-ref" "^2.0.17"
+    "@bedrock-layout/use-resize-observer" "^2.0.18"
+
+"@bedrock-layout/use-forwarded-ref@^2.0.16", "@bedrock-layout/use-forwarded-ref@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.npmjs.org/@bedrock-layout/use-forwarded-ref/-/use-forwarded-ref-2.0.17.tgz#b5246101c0851275777784baeb065f30d32825e3"
+  integrity sha512-4meaaQjg2ZtP9eg0F2LsL0tENmxZ6CTNz4tLheOOyKjqTSjM11yKjSOsMwaEJ8uRyQf+XBDFBmb/IfpHAuCqug==
+  dependencies:
+    "@bedrock-layout/use-stateful-ref" "^2.0.17"
+
+"@bedrock-layout/use-resize-observer@^2.0.17", "@bedrock-layout/use-resize-observer@^2.0.18":
+  version "2.0.18"
+  resolved "https://registry.npmjs.org/@bedrock-layout/use-resize-observer/-/use-resize-observer-2.0.18.tgz#97debfc754df356947915fd4e29a56e7efd5facd"
+  integrity sha512-202I2Lta+l1KZ5JfyWqvrpcqw1bH63TpfivGI36XgCecKwMl9D/Eal/RjuU1KkHHO7gzrh9d4de6Pmbc0bC2Eg==
+  dependencies:
+    "@bedrock-layout/register-resize-callback" "^2.0.15"
+    "@bedrock-layout/use-stateful-ref" "^2.0.17"
+
+"@bedrock-layout/use-stateful-ref@^2.0.16", "@bedrock-layout/use-stateful-ref@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.npmjs.org/@bedrock-layout/use-stateful-ref/-/use-stateful-ref-2.0.17.tgz#16b1654ff5454dc396ceb7802df7ff662b6be86e"
+  integrity sha512-pzVUYMTa32E9dGa2xadOFej96gYJEHg+Qh4Tg0fMj6zYT4y5LZpE+XkCiPcFafR3kTFhqSGfjRTIJbnSyeEAxQ==
+
 "@chromaui/addon-visual-tests@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@chromaui/addon-visual-tests/-/addon-visual-tests-1.0.0.tgz#164e9a51a545ac8ba0a41de64f28a578636f26d5"
@@ -11073,16 +11106,7 @@ string-natural-compare@^3.0.1:
   resolved "https://registry.npmjs.org/string-natural-compare/-/string-natural-compare-3.0.1.tgz#7a42d58474454963759e8e8b7ae63d71c1e7fdf4"
   integrity sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw==
 
-"string-width-cjs@npm:string-width@^4.2.0":
-  version "4.2.3"
-  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-  dependencies:
-    emoji-regex "^8.0.0"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
-
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -11191,14 +11215,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -12262,7 +12279,7 @@ wordwrap@^1.0.0:
   resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -12275,15 +12292,6 @@ wrap-ansi@^6.0.1:
   version "6.2.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
-wrap-ansi@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
-  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
