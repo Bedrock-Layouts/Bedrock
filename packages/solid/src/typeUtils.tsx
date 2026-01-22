@@ -46,8 +46,9 @@ interface WithRef<T extends ValidConstructor> {
   ref?: RefField<DynamicNode<T>>;
 }
 
-interface DynamicComponentWithRef<T extends ValidConstructor>
-  extends WithRef<T> {
+interface DynamicComponentWithRef<
+  T extends ValidConstructor,
+> extends WithRef<T> {
   as?: T;
 }
 
