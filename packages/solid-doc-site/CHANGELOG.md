@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.9](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.7.8...@bedrock-layout/solid-doc-site@1.7.9) (2026-02-01)
+
+### Bug Fixes
+
+- fix build error at netlify ([5ae3692](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/5ae36920329edefe1b74e08ea4b4baba002b024d))
+
 ## [1.7.8](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.7.7...@bedrock-layout/solid-doc-site@1.7.8) (2026-01-23)
 
 **Note:** Version bump only for package @bedrock-layout/solid-doc-site
