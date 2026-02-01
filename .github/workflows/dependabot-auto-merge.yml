@@ -1,0 +1,84 @@
+name: Dependabot Auto-Review and Merge
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot-review:
+    runs-on: ubuntu-latest
+    # Only run on Dependabot PRs
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Check update type
+        id: check-update
+        run: |
+          echo "Update type: ${{ steps.metadata.outputs.update-type }}"
+          echo "Dependency names: ${{ steps.metadata.outputs.dependency-names }}"
+          
+          # Determine if this is a safe auto-merge candidate
+          if [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-patch" ]] || \
+             [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-minor" ]]; then
+            echo "safe-update=true" >> $GITHUB_OUTPUT
+          else
+            echo "safe-update=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Auto-approve patch and minor updates
+        if: steps.check-update.outputs.safe-update == 'true'
+        run: |
+          gh pr review --approve "$PR_URL" --body "✅ **Dependabot PR Auto-Review**
+
+          **Update Type**: ${{ steps.metadata.outputs.update-type }}
+          **Dependencies**: ${{ steps.metadata.outputs.dependency-names }}
+
+          This is a ${{ steps.metadata.outputs.update-type }} update. After CI checks pass, this PR will be automatically merged.
+
+          If you need to prevent auto-merge, disable it with:
+          \`\`\`
+          gh pr merge --disable-auto ${{ github.event.pull_request.number }}
+          \`\`\`
+          "
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Enable auto-merge for patch and minor updates
+        if: steps.check-update.outputs.safe-update == 'true'
+        run: |
+          gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Comment on major updates
+        if: steps.check-update.outputs.safe-update == 'false'
+        run: |
+          gh pr comment "$PR_URL" --body "⚠️ **Dependabot PR Review - Manual Review Required**
+
+          **Update Type**: ${{ steps.metadata.outputs.update-type }}
+          **Dependencies**: ${{ steps.metadata.outputs.dependency-names }}
+
+          This is a ${{ steps.metadata.outputs.update-type }} update and requires manual review.
+
+          Please:
+          1. Review the changelog for breaking changes
+          2. Verify all CI checks pass
+          3. Test locally if needed
+          4. Manually approve and merge when ready
+
+          See \`.github/agents/dependabot-reviewer.md\` for full review guidelines.
+          "
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
