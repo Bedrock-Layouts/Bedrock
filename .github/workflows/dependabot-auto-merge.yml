@@ -46,7 +46,7 @@ jobs:
 
           If you need to prevent auto-merge, disable it with:
           \`\`\`
-          gh pr merge --disable-auto ${{ github.event.pull_request.number }}
+          gh pr merge --disable-auto <PR_NUMBER>
           \`\`\`
           "
         env:
