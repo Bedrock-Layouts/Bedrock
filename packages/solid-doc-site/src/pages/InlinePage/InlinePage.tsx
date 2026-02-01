@@ -1,5 +1,5 @@
 import { InlineClusterProps, Stack } from "@bedrock-layout/solid";
-import { Link } from "@solidjs/router";
+import { A } from "@solidjs/router";
 import { JSXElement, createSignal } from "solid-js";
 
 import { ArgsTable } from "../../components/ArgsTable";
@@ -46,9 +46,7 @@ export function InlinePage(): JSXElement {
         <p>
           The `Inline` component has all the same props as the `InlineCluster`
           component. (check the{" "}
-          <Link href="/inline-cluster">
-            InlineCluster component for more details
-          </Link>
+          <A href="/inline-cluster">InlineCluster component for more details</A>
           )
         </p>
 

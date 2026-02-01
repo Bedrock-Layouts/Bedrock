@@ -7,8 +7,9 @@ import {
   Stack,
   createContainerQuery,
 } from "@bedrock-layout/solid";
-import { Link, Route, Routes } from "@solidjs/router";
+import { Route, Routes } from "@solidjs/router";
 import { Component, For, Show } from "solid-js";
+import { A } from "@solidjs/router";
 import { styled } from "solid-styled-components";
 
 import { LogoOnly } from "./components/LogoOnly";
@@ -46,7 +47,7 @@ function SideNavGroup(
         switchAt="sizeSm"
       >
         <For each={props.links}>
-          {(link) => <Link href={link.href}>{link.name}</Link>}
+          {(link) => <A href={link.href}>{link.name}</A>}
         </For>
       </Inline>
     </Stack>
@@ -72,7 +73,7 @@ const wrapperComponents = [
   { href: "/padbox", name: "PadBox" },
 ];
 
-const LogoLink = styled(Link)`
+const LogoLink = styled(A)`
   color: inherit;
   text-decoration: none;
 `;
@@ -129,7 +130,7 @@ const App: Component = () => {
               <PadBox as={Stack} gutter="size7" padding="size7">
                 <h1>Page Not Found</h1>
                 <p>
-                  Click <Link href="/">Home</Link> to go back to the site
+                  Click <A href="/">Home</A> to go back to the site
                 </p>
               </PadBox>
             }

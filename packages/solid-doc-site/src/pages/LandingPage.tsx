@@ -8,7 +8,7 @@ import {
   PadBox,
   Stack,
 } from "@bedrock-layout/solid";
-import { Link } from "@solidjs/router";
+import { A } from "@solidjs/router";
 import { JSXElement } from "solid-js";
 import { styled } from "solid-styled-components";
 
@@ -120,7 +120,7 @@ function Hero() {
                   justify="center"
                 >
                   {/* @ts-expect-error */}
-                  <Button primary as={Link} href="/getting-started">
+                  <Button primary as={A} href="/getting-started">
                     Get Started
                   </Button>
                   <Button
