@@ -23,3 +23,12 @@ To make a pull request, do the following:
 1. Use commitizen to do git commit by running `yarn cz` (be sure to stage your changes first). Doing this will automatically run `yarn verify` as a pre-commit hook when you do this. If anything fails, fix and follow this step again.
 1. **DO NOT BUMP ANY VERSION NUMBERS OR UPDATE CHANGELOG.**
 1. Send a pull request 🙏
+
+## Automated Dependency Management
+
+Bedrock Layout Primitives uses Dependabot to automatically keep dependencies up to date. The repository includes an automated review and merge workflow for Dependabot PRs:
+
+- **Patch and minor version updates** are automatically approved and merged after CI checks pass
+- **Major version updates** are flagged for manual review to check for breaking changes
+
+For more information about the Dependabot automation, see the [agents documentation](.github/agents/README.md).
