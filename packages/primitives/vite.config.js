@@ -17,7 +17,6 @@ module.exports = defineConfig({
     rollupOptions: {
       external: [
         "react",
-        "@bedrock-layout/appboundary",
         "@bedrock-layout/center",
         "@bedrock-layout/column-drop",
         "@bedrock-layout/columns",
@@ -26,8 +25,6 @@ module.exports = defineConfig({
         "@bedrock-layout/grid",
         "@bedrock-layout/inline",
         "@bedrock-layout/inline-cluster",
-        "@bedrock-layout/masonry-grid",
-        "@bedrock-layout/padbox",
         "@bedrock-layout/reel",
         "@bedrock-layout/spacing-constants",
         "@bedrock-layout/split",

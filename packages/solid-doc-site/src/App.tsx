@@ -2,7 +2,6 @@
 import {
   Center,
   Inline,
-  PadBox,
   Split,
   Stack,
   createContainerQuery,
@@ -22,8 +21,6 @@ import { GridPage } from "./pages/GridPage";
 import { InlineClusterPage } from "./pages/InlineClusterPage";
 import { InlinePage } from "./pages/InlinePage";
 import { LandingPage } from "./pages/LandingPage";
-import { MasonaryGridPage } from "./pages/MasonryGridPage";
-import { PadBoxPage } from "./pages/PadBoxPage";
 import { ReelPage } from "./pages/ReelPage";
 import { SplitPage } from "./pages/SplitPage";
 import { StackPage } from "./pages/StackPage";
@@ -41,10 +38,9 @@ function SideNavGroup(
       <strong>{props.title}</strong>
 
       <Inline
-        as={PadBox}
-        padding={["lg", "sm"]}
         gutter="size2"
         switchAt="sizeSm"
+        style="padding: var(--spacing-lg) var(--spacing-sm)"
       >
         <For each={props.links}>
           {(link) => <A href={link.href}>{link.name}</A>}
@@ -60,7 +56,6 @@ const spacerComponents = [
   { href: "/grid", name: "Grid" },
   { href: "/inline-cluster", name: "InlineCluster" },
   { href: "/inline", name: "Inline" },
-  { href: "/masonry-grid", name: "MasonryGrid" },
   { href: "/reel", name: "Reel" },
   { href: "/split", name: "Split" },
   { href: "/stack", name: "Stack" },
@@ -70,7 +65,6 @@ const wrapperComponents = [
   { href: "/center", name: "Center" },
   { href: "/cover", name: "Cover" },
   { href: "/frame", name: "Frame" },
-  { href: "/padbox", name: "PadBox" },
 ];
 
 const LogoLink = styled(A)`
@@ -92,7 +86,7 @@ const App: Component = () => {
       gutter="size3"
       switchAt={WIDTH_BREAKPOINT}
     >
-      <PadBox padding="size7" style={`background: var(--stone-1);`}>
+      <div style={`background: var(--stone-1); padding: var(--spacing-size-7);`}>
         <Stack gutter="size7">
           <LogoLink href="/">
             <Inline align="center" gutter="size7">
@@ -106,9 +100,9 @@ const App: Component = () => {
           <SideNavGroup title="Spacer Components" links={spacerComponents} />
           <SideNavGroup title="Wrapper Components" links={wrapperComponents} />
         </Stack>
-      </PadBox>
+      </div>
 
-      <Center as={PadBox} padding="size7" maxWidth="90%">
+      <Center maxWidth="90%" style="padding: var(--spacing-size-7)">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/column-drop" element={<ColumnDropPage />} />
@@ -116,23 +110,21 @@ const App: Component = () => {
           <Route path="/grid" element={<GridPage />} />
           <Route path="/inline" element={<InlinePage />} />
           <Route path="/inline-cluster" element={<InlineClusterPage />} />
-          <Route path="/masonry-grid" element={<MasonaryGridPage />} />
           <Route path="/reel" element={<ReelPage />} />
           <Route path="/split" element={<SplitPage />} />
           <Route path="/stack" element={<StackPage />} />
           <Route path="/center" element={<CenterPage />} />
           <Route path="/frame" element={<FramePage />} />
-          <Route path="/padbox" element={<PadBoxPage />} />
           <Route path="/cover" element={<CoverPage />} />
           <Route
             path="/*all"
             element={
-              <PadBox as={Stack} gutter="size7" padding="size7">
+              <Stack gutter="size7" style="padding: var(--spacing-size-7)">
                 <h1>Page Not Found</h1>
                 <p>
                   Click <A href="/">Home</A> to go back to the site
                 </p>
-              </PadBox>
+              </Stack>
             }
           />
         </Routes>
