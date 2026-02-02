@@ -32,16 +32,16 @@ The Product card uses the [Split](/docs/spacer-components-split--docs) component
 
 <Canvas>
   <Story name="Product Card">
-    <Split data-product-card fraction="1/4" gutter="size000">
+    <Split data-product-card fraction="1/4" gap="size000">
       <Frame>
         <img src={jacketPic} alt="Computer" />
       </Frame>
-      <Stack as={PadBox} padding="size3" gutter="size3">
+      <Stack as={PadBox} padding="size3" gap="size3">
         <header>
           <span data-product-card-heading>Classic Utility Jacket</span>
         </header>
         <p>In Stock</p>
-        <Inline gutter="size3">
+        <Inline gap="size3">
           <PadBox
             as="button"
             data-product-card-button
@@ -70,16 +70,16 @@ The Product card uses the [Split](/docs/spacer-components-split--docs) component
 </Canvas>
 
 ```jsx
-<Split data-product-card fraction="1/4" gutter="size000">
+<Split data-product-card fraction="1/4" gap="size000">
   <Frame>
     <img src={jacketPic} alt="Computer" />
   </Frame>
-  <Stack as={PadBox} padding="size3" gutter="size3">
+  <Stack as={PadBox} padding="size3" gap="size3">
     <header>
       <span data-product-card-heading>Classic Utility Jacket</span>
     </header>
     <p>In Stock</p>
-    <Inline gutter="size3">
+    <Inline gap="size3">
       <PadBox as="button" data-product-card-button padding={["size1", "size3"]}>
         Buy Now
       </PadBox>
@@ -102,9 +102,9 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
 
 <Canvas>
   <Story name="Form">
-    <Columns as="form" gutter="size3" columns={6}>
+    <Columns as="form" gap="size3" colCount={6}>
       <Column span={3}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           First Name
           <PadBox
             padding={["size1", "size2"]}
@@ -115,7 +115,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={3}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           Last Name
           <PadBox
             padding={["size1", "size2"]}
@@ -126,7 +126,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={4}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           Email
           <PadBox
             padding={["size1", "size2"]}
@@ -137,7 +137,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={6}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           Street Address
           <PadBox
             padding={["size1", "size2"]}
@@ -148,7 +148,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           City
           <PadBox
             padding={["size1", "size2"]}
@@ -159,7 +159,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           State
           <PadBox
             padding={["size1", "size2"]}
@@ -170,7 +170,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
         </Stack>
       </Column>
       <Column span={2}>
-        <Stack as="label" gutter="size3">
+        <Stack as="label" gap="size3">
           Zip Code
           <PadBox
             padding={["size1", "size2"]}
@@ -185,45 +185,45 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Columns](/docs/spacer-co
 </Canvas>
 
 ```jsx
-<Columns as="form" gutter="size3" columns={6}>
+<Columns as="form" gap="size3" colCount={6}>
   <Column span={3}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       First Name
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={3}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       Last Name
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={4}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       Email
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={6}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       Street Address
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       City
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       State
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
   </Column>
   <Column span={2}>
-    <Stack as="label" gutter="size3">
+    <Stack as="label" gap="size3">
       Zip Code
       <PadBox padding={["size1", "size2"]} as="input" data-input type="text" />
     </Stack>
@@ -276,9 +276,17 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
 
 <Canvas>
   <Story name="Header Sections">
- <Stack as="main" gutter="size7">
+ <Stack as="main" gap="size7">
       <Cover as={PadBox} padding="size7" data-card minHeight="sizeXs">
-        <Center maxWidth="sizeContent3" centerChildren centerText>
+        <Center
+          maxWidth="sizeContent3"
+          style={{
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <p data-card-subtitle>Pricing</p>
           <h2 data-card-title>Take Control of Your Team.</h2>
           <Center as="p" maxWidth="sizeContent2">
@@ -301,7 +309,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
           <p>Account plans unlock additional features.</p>
         </Cover>
         <Cover minHeight="0px">
-          <Stack data-select as="label" gutter="size2">
+          <Stack data-select as="label" gap="size2">
             Currency
             <select data-select>
               <option>United States (USD)</option>
@@ -323,7 +331,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
           <p>Account plans unlock additional features.</p>
         </Cover>
         <Cover minHeight="0px">
-          <Stack data-select as="label" gutter="size2">
+          <Stack data-select as="label" gap="size2">
             Currency
             <select data-select>
               <option>United States (USD)</option>
@@ -351,9 +359,17 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
 </Canvas>
 
 ```jsx
-<Stack as="main" gutter="size7">
+<Stack as="main" gap="size7">
   <Cover as={PadBox} padding="size7" data-card minHeight="sizeXs">
-    <Center maxWidth="sizeContent3" centerChildren centerText>
+    <Center
+      maxWidth="sizeContent3"
+      style={{
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <p data-card-subtitle>Pricing</p>
       <h2 data-card-title>Take Control of Your Team.</h2>
       <Center as="p" maxWidth="sizeContent2">
@@ -376,7 +392,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
       <p>Account plans unlock additional features.</p>
     </Cover>
     <Cover minHeight="0px">
-      <Stack data-select as="label" gutter="size2">
+      <Stack data-select as="label" gap="size2">
         Currency
         <select data-select>
           <option>United States (USD)</option>
@@ -398,7 +414,7 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
       <p>Account plans unlock additional features.</p>
     </Cover>
     <Cover minHeight="0px">
-      <Stack data-select as="label" gutter="size2">
+      <Stack data-select as="label" gap="size2">
         Currency
         <select data-select>
           <option>United States (USD)</option>
@@ -431,8 +447,8 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
     <Columns
       as={PadBox}
       padding="size3"
-      gutter="size5"
-      columns={3}
+      gap="size5"
+      colCount={3}
       switchAt="sizeMd"
     >
       {plans.map(({ planName, description, price, benefits = [] }) => (
@@ -441,23 +457,23 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
           data-plan-card
           as={Split}
           fraction="1/2"
-          gutter="size7"
+          gap="size7"
           padding={["size9", "size7"]}
         >
-          <Stack gutter="size5">
+          <Stack gap="size5">
             <h2 data-plan-name>{planName}</h2>
             <p data-plan-description>{description}</p>
             <p data-plan-price>{price}</p>
             <button data-plan-button>Buy Plan</button>
           </Stack>
-          <Stack data-plan-benefits as="ul" role="list" gutter="size2">
+          <Stack data-plan-benefits as="ul" role="list" gap="size2">
             {benefits.map((benefit, i) => (
               <Inline
                 key={i}
                 data-benefit-item
                 as="li"
                 align="center"
-                gutter="size3"
+                gap="size3"
               >
                 {benefit}
               </Inline>
@@ -473,8 +489,8 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
 <Columns
   as={PadBox}
   padding="size3"
-  gutter="size5"
-  columns={3}
+  gap="size5"
+  colCount={3}
   switchAt="sizeMd"
 >
   {plans.map(({ planName, description, price, benefits = [] }) => (
@@ -483,23 +499,23 @@ Uses the [Stack](/docs/spacer-components-stack--docs), [Split](/docs/spacer-comp
       data-plan-card
       as={Split}
       fraction="1/2"
-      gutter="size7"
+      gap="size7"
       padding={["size9", "size7"]}
     >
-      <Stack gutter="size5">
+      <Stack gap="size5">
         <h2 data-plan-name>{planName}</h2>
         <p data-plan-description>{description}</p>
         <p data-plan-price>{price}</p>
         <button data-plan-button>Buy Plan</button>
       </Stack>
-      <Stack data-plan-benefits as="ul" role="list" gutter="size2">
+      <Stack data-plan-benefits as="ul" role="list" gap="size2">
         {benefits.map((benefit, i) => (
           <Inline
             key={i}
             data-benefit-item
             as="li"
             align="center"
-            gutter="size3"
+            gap="size3"
           >
             {benefit}
           </Inline>
@@ -520,12 +536,12 @@ Uses the [Reel](/docs/spacer-components-reel--docs), [Stack](/docs/spacer-compon
 
 <Canvas>
   <Story name="Card Reel">
-    <Reel as={PadBox} padding="size3" gutter="size5" snapType="mandatory">
+    <Reel as={PadBox} padding="size3" gap="size5" snapType="mandatory">
       {Array.from({ length: 15 }).map((_, i) => (
         <PadBox
           key={i}
           as={Stack}
-          gutter="size3"
+          gap="size3"
           padding="size7"
           style={{ border: "1px solid black", minWidth: "250px" }}
         >
@@ -541,12 +557,12 @@ Uses the [Reel](/docs/spacer-components-reel--docs), [Stack](/docs/spacer-compon
 </Canvas>
 
 ```jsx
-<Reel as={PadBox} padding="size3" gutter="size5" snapType="mandatory">
+<Reel as={PadBox} padding="size3" gap="size5" snapType="mandatory">
   {Array.from({ length: 15 }).map((_, i) => (
     <PadBox
       key={i}
       as={Stack}
-      gutter="size3"
+      gap="size3"
       padding="size7"
       style={{ border: "1px solid black", minWidth: "250px" }}
     >

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import { Cover } from "../../packages/cover/src/index";
+import { Cover, CoverCentered } from "../../packages/cover/src/index";
 import { spacing } from "../../packages/spacing-constants/src/index";
 import { Stack } from "../../packages/stack/src/index";
 import { argTypes } from "./argTypes";
@@ -19,12 +19,12 @@ yarn add @bedrock-layout/solid
 
 const importCode = `
 // For React.js
-import { Cover } from '@bedrock-layout/cover'
+import { Cover, CoverCentered } from '@bedrock-layout/cover'
   // or
-import { Cover } from '@bedrock-layout/primitives'
+import { Cover, CoverCentered } from '@bedrock-layout/primitives'
 
 // For Solid.js
-import { Cover } from '@bedrock-layout/solid'
+import { Cover, CoverCentered } from '@bedrock-layout/solid'
 `;
 
 const meta = {
@@ -38,7 +38,9 @@ const meta = {
   render: (args) => {
     return (
       <Cover {...args} style={{ border: "1px solid black" }}>
-        <Component />
+        <CoverCentered>
+          <Component />
+        </CoverCentered>
       </Cover>
     );
   },
@@ -64,7 +66,7 @@ type Story = StoryObj<typeof Cover>;
 export const Playground: Story = {};
 
 /**
- * The `top` prop can be used to render a top section.
+ * The `CoverCentered` component marks which child should be vertically centered.
  *
  * #### Usage examples
  * ```jsx
@@ -77,19 +79,27 @@ export const Playground: Story = {};
  * </div>
  *
  * // React.js and Solid.js
- * <Cover top={<span>I am on top.</span>}>
- *  <Component />
+ * <Cover>
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
  * </Cover>
  * ```
  */
 export const Top: Story = {
-  args: {
-    top: <span>I am on top.</span>,
-  },
+  render: () => (
+    <Cover style={{ border: "1px solid black" }} minHeight="50vh">
+      <span>I am on top.</span>
+      <CoverCentered>
+        <Component />
+      </CoverCentered>
+    </Cover>
+  ),
 };
 
 /**
- * The `bottom` prop can be used to render a bottom section.
+ * You can have multiple children, with the `CoverCentered` component marking which one is centered.
  *
  * #### Usage examples
  * ```jsx
@@ -102,20 +112,27 @@ export const Top: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  * ```
  */
 export const Bottom: Story = {
-  args: {
-    bottom: <span>I am on bottom.</span>,
-  },
+  render: () => (
+    <Cover style={{ border: "1px solid black" }} minHeight="50vh">
+      <CoverCentered>
+        <Component />
+      </CoverCentered>
+      <span>I am on bottom.</span>
+    </Cover>
+  ),
 };
 
 /**
- * Both the `top` and `bottom` props can be used to render
- * a top and bottom section.
+ * You can have content before and after the centered element.
  *
  * #### Usage examples
  * ```jsx
@@ -129,21 +146,30 @@ export const Bottom: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover>
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  * ```
  */
 export const TopAndBottom: Story = {
-  args: {
-    top: <span>I am on top.</span>,
-    bottom: <span>I am on bottom.</span>,
-  },
+  render: () => (
+    <Cover style={{ border: "1px solid black" }} minHeight="50vh">
+      <span>I am on top.</span>
+      <CoverCentered>
+        <Component />
+      </CoverCentered>
+      <span>I am on bottom.</span>
+    </Cover>
+  ),
 };
 
 /**
  * The `minHeight` prop can be used to set the minimum height of the cover.
- * The default is `100vh`.
+ * The default is `100%`.
  *
  * #### Usage examples
  * ```jsx
@@ -158,18 +184,25 @@ export const TopAndBottom: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover minHeight="500px" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover minHeight="500px">
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  * ```
  */
 export const MinHeight: Story = {
-  args: {
-    top: <span>I am on top.</span>,
-    bottom: <span>I am on bottom.</span>,
-    minHeight: "500px",
-    gap: "size2",
-  },
+  render: () => (
+    <Cover style={{ border: "1px solid black" }} minHeight="500px" gap="size2">
+      <span>I am on top.</span>
+      <CoverCentered>
+        <Component />
+      </CoverCentered>
+      <span>I am on bottom.</span>
+    </Cover>
+  ),
 };
 
 /**
@@ -188,19 +221,30 @@ export const MinHeight: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover variant="stretch-content" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover variant="stretch-content">
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  * ```
  */
 export const StretchContent: Story = {
-  args: {
-    top: <span>I am on top.</span>,
-    bottom: <span>I am on bottom.</span>,
-    minHeight: "500px",
-    gap: "size2",
-    variant: "stretch-content",
-  },
+  render: () => (
+    <Cover
+      style={{ border: "1px solid black" }}
+      minHeight="500px"
+      gap="size2"
+      variant="stretch-content"
+    >
+      <span>I am on top.</span>
+      <CoverCentered>
+        <Component />
+      </CoverCentered>
+      <span>I am on bottom.</span>
+    </Cover>
+  ),
 };
 
 /**
@@ -234,49 +278,93 @@ export const StretchContent: Story = {
  * </div>
  *
  * // React.js and Solid.js
- * <Cover gap="size3" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover gap="size3">
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  *
  * // Or you can use a css value directly
- * <Cover gap="3ch" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover gap="3ch">
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  *
  * // or you can use a custom property
- * <Cover gap="--custom-size-4" top={<span>I am on top.</span>} bottom={<span>I am on bottom.</span>}>
- *  <Component />
+ * <Cover gap="--custom-size-4">
+ *  <span>I am on top.</span>
+ *  <CoverCentered>
+ *    <Component />
+ *  </CoverCentered>
+ *  <span>I am on bottom.</span>
  * </Cover>
  * ```
  *
  * Here are the possible values for `gap` by default:
  */
 export const Gap: Story = {
-  args: {
-    top: <span>I am on top.</span>,
-    bottom: <span>I am on bottom.</span>,
-    minHeight: 0,
-  },
-  render: (args) => {
+  render: () => {
     return (
       <Stack gap="size5">
         <strong>Custom gap as number (20)</strong>
-        <Cover gap={20} {...args}>
-          <div>I am a child.</div>
+        <Cover gap={20} minHeight={0}>
+          <span>I am on top.</span>
+          <CoverCentered>
+            <div>I am a child.</div>
+          </CoverCentered>
+          <span>I am on bottom.</span>
         </Cover>
         <strong>Custom gap as string ("3ch")</strong>
-        <Cover gap="3ch" {...args}>
-          <div>I am a child.</div>
+        <Cover gap="3ch" minHeight={0}>
+          <span>I am on top.</span>
+          <CoverCentered>
+            <div>I am a child.</div>
+          </CoverCentered>
+          <span>I am on bottom.</span>
         </Cover>
         {(Object.keys(spacing) as Array<keyof typeof spacing>).map((gap) => (
           <React.Fragment key={gap}>
             <strong>{gap}</strong>
-            <Cover gap={gap} {...args}>
-              <div>I am a child.</div>
+            <Cover gap={gap} minHeight={0}>
+              <span>I am on top.</span>
+              <CoverCentered>
+                <div>I am a child.</div>
+              </CoverCentered>
+              <span>I am on bottom.</span>
             </Cover>
           </React.Fragment>
         ))}
       </Stack>
+    );
+  },
+};
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * <Cover padding="size3">
+ *  <Component />
+ * </Cover>
+ * ```
+ */
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+    minHeight: "20rem",
+  },
+  render: (args) => {
+    return (
+      <Cover {...args}>
+        <Component />
+      </Cover>
     );
   },
 };

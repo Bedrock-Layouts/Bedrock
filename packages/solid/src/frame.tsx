@@ -25,8 +25,7 @@ function checkIsRatio(ratio: unknown): ratio is Ratio {
     Array.isArray(ratio) && ratio.length === 2 && ratio.every(Number.isFinite);
   return (
     isCorrectArray ||
-    (typeof ratio === "string" &&
-      /^\d{1,1000} {0,1}\/ {0,1}\d{1,1000}$/.test(ratio))
+    (typeof ratio === "string" && /^\d{1,1000} ?\/ ?\d{1,1000}$/.test(ratio))
   );
 }
 
@@ -46,15 +45,14 @@ export function Frame<T extends ValidConstructor = "div">(
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
-      : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
-          (str, [key, value]) => str + `${key}:${value};`,
-          "",
-        );
+      : Object.entries(
+          props.style ?? ({} as Readonly<JSX.CSSProperties>),
+        ).reduce((str, [key, value]) => str + `${key}:${value};`, "");
 
-  const maybeRatioAssesor = () => getSafeRatio(props.ratio);
+  const maybeRatioAssessor = () => getSafeRatio(props.ratio);
 
   const ratio = () =>
-    maybeRatioAssesor() ? `--ratio: ${maybeRatioAssesor()}` : "";
+    maybeRatioAssessor() ? `--ratio: ${maybeRatioAssessor()}` : "";
 
   const position = () =>
     typeof props.position === "string"

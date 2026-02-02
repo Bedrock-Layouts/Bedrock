@@ -210,3 +210,31 @@ export const Align: Story = {
     );
   },
 };
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * <Stack padding="size3">
+ *  <Component />
+ *  <Component />
+ * </Stack>
+ * ```
+ */
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+  },
+  render: (args) => {
+    return (
+      <Stack {...args}>
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+      </Stack>
+    );
+  },
+};

@@ -320,3 +320,79 @@ export const MoreThanTwoChildren: Story = {
     );
   },
 };
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ * You can use predefined spacing constants, CSS lengths, or pixel values.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * // Using predefined spacing constants
+ * <Split padding="size3">
+ *  <Component />
+ *  <Component />
+ * </Split>
+ *
+ * // Using CSS length
+ * <Split padding="2rem">
+ *  <Component />
+ *  <Component />
+ * </Split>
+ *
+ * // Using pixel value
+ * <Split padding={20}>
+ *  <Component />
+ *  <Component />
+ * </Split>
+ *
+ * // Using object syntax for specific sides
+ * <Split padding={{ inline: "size3", block: "size2" }}>
+ *  <Component />
+ *  <Component />
+ * </Split>
+ * ```
+ *
+ * The `padding` prop supports the following keys in object syntax:
+ * - `all` - applies padding to all sides
+ * - `inline` - applies padding to inline sides (left and right in LTR)
+ * - `inlineStart` - applies padding to the start of the inline axis
+ * - `inlineEnd` - applies padding to the end of the inline axis
+ * - `block` - applies padding to block sides (top and bottom)
+ * - `blockStart` - applies padding to the start of the block axis (top)
+ * - `blockEnd` - applies padding to the end of the block axis (bottom)
+ */
+export const Padding: Story = {
+  render: () => {
+    return (
+      <Stack gap="size5">
+        <strong>Padding with spacing constant (size3)</strong>
+        <Split gap="size3" padding="size3" fraction="1/2">
+          <Component />
+          <Component />
+        </Split>
+        <strong>Padding with CSS value (2rem)</strong>
+        <Split gap="size3" padding="2rem" fraction="1/2">
+          <Component />
+          <Component />
+        </Split>
+        <strong>
+          Padding with object syntax (inline: size3, block: size2)
+        </strong>
+        <Split
+          gap="size3"
+          padding={{ inline: "size3", block: "size2" }}
+          fraction="1/2"
+        >
+          <Component />
+          <Component />
+        </Split>
+        <strong>Padding all sides (size4)</strong>
+        <Split gap="size3" padding={{ all: "size4" }} fraction="1/2">
+          <Component />
+          <Component />
+        </Split>
+      </Stack>
+    );
+  },
+};

@@ -4,7 +4,8 @@ import {
   SizesOptions,
   getSafeGutter,
   getSizeValue,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -20,11 +21,6 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 export type ColumnDropProps = {
   /**
    * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
-  /**
-   * Sets space between each element.
    */
   gap?: Gutter;
   /**
@@ -33,14 +29,13 @@ export type ColumnDropProps = {
    */
   minItemWidth?: MinItemWidth;
   /**
-   * Prevents columns from stretching to fill the space.
-   * @deprecated use `variant` set to `centered` instead.
-   */
-  noStretchedColumns?: boolean;
-  /**
    * Setting it to `centered` will prevents columns from stretching to fill the space.
    */
   variant?: "default" | "centered";
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 };
 
 /**
@@ -55,34 +50,33 @@ export const ColumnDrop = forwardRefWithAs<"div", ColumnDropProps>(
   function ColumnDrop(
     {
       as: Component = "div",
-      gutter,
       gap,
       style = {},
       minItemWidth,
-      noStretchedColumns = false,
       variant = "default",
+      padding,
       ...props
     },
     ref,
   ) {
-    const theme = useTheme();
-    const maybeGutter = getSafeGutter(theme, gap ?? gutter);
+    const maybeGutter = getSafeGutter(gap);
 
-    const attributeValue =
-      variant === "centered" || noStretchedColumns === true
-        ? "no-stretched-columns"
-        : "";
+    const attributeValue = variant === "centered" ? "variant:centered" : "";
 
-    const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
+    const paddingAttrs = getPaddingAttributes(padding);
+
+    const attrs = [attributeValue, ...paddingAttrs].filter(Boolean).join(" ");
+
+    const maybeMinItemWidth = getSizeValue(minItemWidth);
 
     return (
       <Component
         ref={ref}
-        data-br-column-drop={attributeValue}
+        data-br-column-drop={attrs}
         style={
           {
-            "--gutter": maybeGutter,
-            "--minItemWidth": maybeMinItemWidth,
+            "--gap": maybeGutter,
+            "--min-item-width": maybeMinItemWidth,
             ...style,
           } as CSSProperties
         }

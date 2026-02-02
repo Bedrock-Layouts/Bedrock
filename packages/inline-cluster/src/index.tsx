@@ -1,7 +1,9 @@
 import {
   Gutter,
+  createAttributeString,
   getSafeGutter,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -20,22 +22,12 @@ export interface InlineClusterProps {
   align?: "start" | "end" | "center" | "stretch";
   /**
    * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
-  /**
-   * Sets space between each element.
    */
   gap?: Gutter;
-}
-
-function createAttributeString(
-  prefix: string,
-  value: string | number | undefined,
-) {
-  if (value === undefined) return undefined;
-
-  return `${prefix}:${value}`;
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 }
 
 /**
@@ -51,19 +43,21 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
       justify,
       align,
       style = {},
-      gutter,
       gap,
+      padding,
       ...props
     },
     ref,
   ) {
-    const theme = useTheme();
     const justifyValue = createAttributeString("justify", justify);
-    const alignValue = createAttributeString("align", align);
+    const alignValue = createAttributeString("align", align ?? "center");
+    const paddingAttrs = getPaddingAttributes(padding);
 
-    const maybeGutter = getSafeGutter(theme, gap ?? gutter);
+    const maybeGutter = getSafeGutter(gap);
 
-    const attributes = [justifyValue, alignValue].filter(Boolean).join(" ");
+    const attributes = [justifyValue, alignValue, ...paddingAttrs]
+      .filter(Boolean)
+      .join(" ");
 
     return (
       <Component
@@ -71,7 +65,7 @@ export const InlineCluster = forwardRefWithAs<"div", InlineClusterProps>(
         ref={ref}
         style={
           {
-            "--gutter": maybeGutter,
+            "--gap": maybeGutter,
             ...style,
           } as CSSProperties
         }

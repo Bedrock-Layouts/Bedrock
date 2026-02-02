@@ -4,7 +4,8 @@ import {
   SizesOptions,
   getSafeGutter,
   getSizeValue,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -29,11 +30,6 @@ type MinItemWidth = number | CSSLength | SizesOptions;
 export type SplitProps = {
   /**
    * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
-  /**
-   * Sets space between each element.
    */
   gap?: Gutter;
   /**
@@ -49,6 +45,10 @@ export type SplitProps = {
    * Sets the minimum inline-size of each of the children.
    */
   minItemWidth?: MinItemWidth;
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 };
 
 /**
@@ -62,26 +62,29 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
   {
     as: Component = "div",
     fraction,
-    gutter,
     gap,
     minItemWidth,
     switchAt,
+    padding,
     style = {},
     ...props
   },
   ref,
 ) {
-  const theme = useTheme();
-  const attrString =
+  const fractionAttr =
     typeof fraction === "string" && fractionTypes.includes(fraction)
       ? `fraction:${fraction}`
       : "";
 
-  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
+  const maybeGutter = getSafeGutter(gap);
 
-  const maybeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
+  const maybeMinItemWidth = getSizeValue(minItemWidth) ?? minItemWidth;
 
-  const maybeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
+  const maybeSwitchAt = getSizeValue(switchAt) ?? switchAt;
+
+  const paddingAttrs = getPaddingAttributes(padding);
+
+  const attrString = [fractionAttr, ...paddingAttrs].filter(Boolean).join(" ");
 
   return (
     <Component
@@ -89,9 +92,9 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
       data-br-split={attrString}
       style={
         {
-          "--gutter": maybeGutter,
-          "--minItemWidth": maybeMinItemWidth,
-          "--switchAt": maybeSwitchAt,
+          "--gap": maybeGutter,
+          "--min-item-width": maybeMinItemWidth,
+          "--switch-at": maybeSwitchAt,
           ...style,
         } as CSSProperties
       }

@@ -1,4 +1,4 @@
-import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -28,7 +28,7 @@ describe("Stack", () => {
       expect(Stack).toBeTruthy();
     });
 
-    it("renders 0px default with no gutter provided", () => {
+    it("renders 0px default with no gap provided", () => {
       const stack = create(
         <Stack>
           <Lorem />
@@ -37,11 +37,11 @@ describe("Stack", () => {
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const stack = create(
-          <Stack gutter={gutter}>
+          <Stack gap={gap}>
             <Lorem />
           </Stack>,
         );
@@ -61,18 +61,18 @@ describe("Stack", () => {
       });
     });
 
-    it("renders custom gutter with number", () => {
+    it("renders custom gap with number", () => {
       const stack = create(
-        <Stack gutter={20}>
+        <Stack gap={20}>
           <Lorem />
         </Stack>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom gutter with string", () => {
+    it("renders custom gap with string", () => {
       const stack = create(
-        <Stack gutter="3ch">
+        <Stack gap="3ch">
           <Lorem />
         </Stack>,
       );
@@ -81,45 +81,45 @@ describe("Stack", () => {
 
     it("renders with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+        <>
           {/* @ts-expect-error */}
-          <Stack gutter="1x">
+          <Stack gap="1x">
             <Lorem />
           </Stack>
-        </ThemeProvider>,
+        </>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
     it("renders with theme overrides using 'space' as key", () => {
       const stack = create(
-        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+        <>
           {/* @ts-expect-error */}
-          <Stack gutter="1x">
+          <Stack gap="1x">
             <Lorem />
           </Stack>
-        </ThemeProvider>,
+        </>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
 
     it("renders 0px with theme overrides", () => {
       const stack = create(
-        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
-          <Stack gutter="size3">
+        <>
+          <Stack gap="size3">
             <Lorem />
           </Stack>
-        </ThemeProvider>,
+        </>,
       );
       expect(stack.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter value", () => {
+    it("renders default with wrong gap value", () => {
       const errorStack = create(
         //@ts-expect-error
-        <Stack gutter={{ value: "incorrect" }}>
+        <Stack gap={{ value: "incorrect" }}>
           <Lorem />
         </Stack>,
       );

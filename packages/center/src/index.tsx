@@ -2,7 +2,8 @@ import {
   CSSLength,
   SizesOptions,
   getSizeValue,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -22,46 +23,28 @@ export type CenterProps = {
    */
   maxWidth?: MaxWidth;
   /**
-   * Sets the text alignment of the component to center.
+   * Sets padding on the component using design system spacing scale.
    */
-  centerText?: boolean;
-  /**
-   * Sets the alignment of the component's children to be centered.
-   * @deprecated Use with the stack component set to align="center" instead.
-   */
-  centerChildren?: boolean;
+  padding?: PaddingConfig;
 };
 
 /**
  * The `Center` component is designed to center and clamp its width at a predefined value.
- * You can also center the children and text alignment as well.
  */
 export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
-  {
-    as: Component = "div",
-    centerChildren,
-    centerText,
-    maxWidth,
-    style = {},
-    ...props
-  },
+  { as: Component = "div", maxWidth, padding, style = {}, ...props },
   ref,
 ) {
-  const theme = useTheme();
-  const centerProps = [
-    centerText && "center-text",
-    centerChildren && "center-children",
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const paddingAttrs = getPaddingAttributes(padding);
+  const attrString = paddingAttrs.join(" ");
 
   return (
     <Component
-      data-br-center={centerProps}
+      data-br-center={attrString}
       ref={ref}
       style={
         {
-          "--maxWidth": getSizeValue(theme, maxWidth) ?? maxWidth,
+          "--max-width": getSizeValue(maxWidth) ?? maxWidth,
           ...style,
         } as CSSProperties
       }

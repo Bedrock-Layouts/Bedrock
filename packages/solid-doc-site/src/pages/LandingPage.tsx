@@ -5,7 +5,6 @@ import {
   ColumnDrop,
   Cover,
   Inline,
-  PadBox,
   Stack,
 } from "@bedrock-layout/solid";
 import { A } from "@solidjs/router";
@@ -30,15 +29,11 @@ const SubTitle = styled("span")`
 
 export function LandingPage(): JSXElement {
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Hero />
-      <PadBox style="background: var(--stone-1)" padding="size7">
-        <ColumnDrop
-          noStretchedColumns
-          minItemWidth="sizeContent3"
-          gutter="size7"
-        >
-          <Stack gutter="size2">
+      <Stack style="background: var(--stone-1); padding: var(--spacing-size-7)">
+        <ColumnDrop minItemWidth="sizeContent3">
+          <Stack gap="size2">
             <h2>Bedrock Layout CSS</h2>
             <p>
               Bedrock Layout Primitives are built using{" "}
@@ -53,7 +48,7 @@ export function LandingPage(): JSXElement {
               ready to go.
             </p>
           </Stack>
-          <Stack gutter="size2">
+          <Stack gap="size2">
             <h2>Composable Layouts</h2>
             <p>
               Bedrock Layout Primitives are built to allow you to compose them
@@ -61,7 +56,7 @@ export function LandingPage(): JSXElement {
               can be created by composing Bedrock Layout Primitives.
             </p>
           </Stack>
-          <Stack gutter="size2">
+          <Stack gap="size2">
             <h2>Use With Any Design System</h2>
             <p>
               You can use Bedrock Layout Primitives with any design system.
@@ -70,32 +65,31 @@ export function LandingPage(): JSXElement {
             </p>
           </Stack>
         </ColumnDrop>
-      </PadBox>
+      </Stack>
     </Stack>
   );
 }
 
 function Hero() {
   return (
-    <Cover as={PadBox} padding="size7" minHeight="60vh">
-      <Stack as={Center} gutter="size3">
+    <Cover minHeight="60vh" style="padding: var(--spacing-size-7)">
+      <Stack as={Center} gap="size3">
         <header>
-          <Inline stretch="all" gutter="size9" switchAt="40rem">
+          <Inline stretch="all" gap="size9" switchAt="40rem">
             <Center maxWidth="20rem">
               <LogoOnly />
             </Center>
             <Center maxWidth="60rem">
-              <Stack gutter="size8">
+              <Stack gap="size8">
                 <Heading id="title">
-                  <Stack gutter="size2">
+                  <Stack gap="size2">
                     SOLID BEDROCK
                     <SubTitle>LAYOUT PRIMITIVES</SubTitle>
                   </Stack>
                 </Heading>
                 <Center
                   as="p"
-                  centerText
-                  style="font-size: var(--font-size-fluid-0);"
+                  style="text-align: center; font-size: var(--font-size-fluid-0);"
                 >
                   <strong>
                     Foundational layout building blocks for your Solid.js app
@@ -103,7 +97,6 @@ function Hero() {
                 </Center>
                 <Center
                   as="a"
-                  centerChildren
                   href="https://github.com/Bedrock-Layouts/Solid-Bedrock/stargazers"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -115,7 +108,7 @@ function Hero() {
                 </Center>
                 <Inline
                   minItemWidth="fit-content"
-                  gutter="size3"
+                  gap="size3"
                   switchAt="20rem"
                   justify="center"
                 >

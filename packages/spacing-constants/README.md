@@ -47,56 +47,22 @@ Bedrock Layout's spacing constants are based on the [Open-props size scale](http
 }
 ```
 
-## Integrating With Your Design System
+## Using CSS Custom Properties
 
-Bedrock Layout Primitives is designed to be able to be integrated easily into any design system or style guide. Bedrock's Spacing values can be overridden using the `ThemeProvider` provided by `@bedrock-layout/spacing-constants`.
+The spacing constants (e.g., `size3`) can be used as string values directly in the `gap` and `padding` props. Alternatively, you can use CSS custom properties by wrapping them in `var()`. The library provides CSS custom properties for each spacing value, with names transformed from camelCase to kebab-case (e.g., `size3` → `--size-3`).
 
-Bedrock Layout Primitives follow the [System UI Theme Specification](https://system-ui.com/theme/#:~:text=This%20specification%20is%20a%20work%2Din%2Dprogress.&text=The%20theme%20object%20is%20intended,%2C%20and%2For%20design%20tokens) when overriding theme values. To override Bedrock Layout's default space values, you will need to pass in your new spacing values as an object of key/value pairs to the `space` key of the theme. For example, you can pass in the following object to override the default spacing values:
-
-```jsx
-import { ThemeProvider } from '@bedrock-layout/spacing-constants';
-
-const newSpacings = {
-    "0x": 0,
-    "1x":'45px',
-    "3x":'100ch'
-}
-
-<ThemeProvider theme={{ space: newSpacings }}>
-    <Stack gutter="1x">
-     {...}
-    </Stack>
-</ThemeProvider>;
-```
-
-The spacing values can either be any valid CSS size unit or percentage written as a string, or a positive number for the number of pixels
-
-## Overriding Spacing Types in TypeScript
-
-If you are in a TypeScript project you will also need to override the default types. The spacing types are overridden by defining your theme types through [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). For example, to define the types of you `newSpacings` from the example above, we need to create a type declaration file, for example `bedrock.d.ts`, in the same directory as your `index.tsx` file where we define our new spacing types. This file will look something like this:
+You can use CSS custom properties with the `gap` prop like this:
 
 ```typescript
-import type { CSSLength } from "@bedrock-layout/spacing-constants";
-
-declare module "@bedrock-layout/spacing-constants" {
-  export interface DefaultTheme {
-    space: {
-      "0x": number;
-      "1x": CSSLength;
-      "3x": CSSLength;
-    };
-  }
-}
+  <Stack gap="var(--size-3)">
+    {...}
+  </Stack>
 ```
 
-It is important to note that space values can only be of type `string`, `CSSLength` or `number`. `CSSLength` is the prefered type over `string` since it will validate that your string is in the format of `${number}${length-unit}`. You can import the `CSSLength` type from the`@bedrock-layout/spacing-constants` package.
-
-**Note: If you use any other type for your space values, the types will revert back to Bedrock's default spacing types.**
-
-If you prefer to not to use the `ThemeProvider` and instead use CSS custom properties, you can simply pass in any custom property wrapped in `var()` to the `gutter` or `padding` prop, like this:
+Or with the `padding` prop:
 
 ```typescript
-  <Stack gutter="var(--size-3)">
+  <Stack padding="var(--size-3)">
     {...}
   </Stack>
 ```

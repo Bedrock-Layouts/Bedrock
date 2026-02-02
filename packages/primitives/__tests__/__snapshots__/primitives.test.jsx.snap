@@ -2,10 +2,6 @@
 
 exports[`primitives > primitives snapshot 1`] = `
 {
-  "AppBoundary": {
-    "$$typeof": Symbol(react.forward_ref),
-    "render": [Function],
-  },
   "Center": {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -26,6 +22,10 @@ exports[`primitives > primitives snapshot 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
   },
+  "CoverCentered": {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
   "Frame": {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -42,14 +42,6 @@ exports[`primitives > primitives snapshot 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
   },
-  "MasonryGrid": {
-    "$$typeof": Symbol(react.forward_ref),
-    "render": [Function],
-  },
-  "PadBox": {
-    "$$typeof": Symbol(react.forward_ref),
-    "render": [Function],
-  },
   "Reel": {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -62,25 +54,10 @@ exports[`primitives > primitives snapshot 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
   },
-  "ThemeContext": {
-    "$$typeof": Symbol(react.context),
-    "Consumer": {
-      "$$typeof": Symbol(react.context),
-      "_context": [Circular],
-    },
-    "Provider": {
-      "$$typeof": Symbol(react.provider),
-      "_context": [Circular],
-    },
-    "_currentRenderer": null,
-    "_currentRenderer2": null,
-    "_currentValue": {},
-    "_currentValue2": {},
-    "_defaultValue": null,
-    "_globalName": null,
-    "_threadCount": 0,
-  },
-  "ThemeProvider": [Function],
+  "checkIsCSSCustomProperty": [Function],
+  "checkIsCSSLength": [Function],
+  "createAttributeString": [Function],
+  "getPaddingAttributes": [Function],
   "getSafeGutter": [Function],
   "getSizeValue": [Function],
   "getSpacingValue": [Function],
@@ -124,6 +101,5 @@ exports[`primitives > primitives snapshot 1`] = `
   "useForwardedRef": [Function],
   "useResizeObserver": [Function],
   "useStatefulRef": [Function],
-  "useTheme": [Function],
 }
 `;

@@ -3,11 +3,10 @@ import { JSX, mergeProps } from "solid-js";
 import {
   CSSLength,
   SizesOptions,
-  SpacingOptions,
+  Gutter,
   getSizeValue,
-  getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+  getSafeGutter,
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -17,16 +16,18 @@ import createDynamic, {
   omitProps,
 } from "./typeUtils";
 
+const getPropsStyle = (
+  style: string | Readonly<JSX.CSSProperties> | undefined,
+) =>
+  typeof style === "string"
+    ? style
+    : Object.entries(style ?? ({} as JSX.CSSProperties)).reduce(
+        (str, [key, value]) => str + `${key}:${value};`,
+        "",
+      );
+
 interface ColumnsBaseProps {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
-  gap?: SpacingOptions;
-  /**
-   * @deprecated Use `colCount` instead.
-   */
-  columns?: number;
+  gap?: Gutter;
   colCount?: number;
   switchAt?: number | CSSLength | SizesOptions;
 }
@@ -37,28 +38,19 @@ export type ColumnsProps<T extends ValidConstructor = "div"> =
 export function Columns<T extends ValidConstructor = "div">(
   props: Readonly<ColumnsProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-  const propsStyle = () =>
-    typeof props.style === "string"
-      ? props.style
-      : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
-          (str, [key, value]) => str + `${key}:${value};`,
-          "",
-        );
+  const propsStyle = () => getPropsStyle(props.style);
 
-  const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+  const gutter = () => {
+    const safeGutter = getSafeGutter(props.gap);
+    return safeGutter ? `--gap: ${safeGutter};` : "";
+  };
 
   const columns = () =>
-    `--columns: ${
-      convertToMaybe(Math.max(props.colCount ?? props.columns ?? 1, 1)) ?? 1
-    };`;
+    `--col-count: ${convertToMaybe(Math.max(props.colCount ?? 1, 1)) ?? 1};`;
 
   const switchAt = () =>
     props.switchAt
-      ? `--switchAt: ${getSizeValue(theme, props.switchAt) ?? "0px"};`
+      ? `--switch-at: ${getSizeValue(props.switchAt) ?? "0px"};`
       : "";
 
   const style = () =>
@@ -67,7 +59,7 @@ export function Columns<T extends ValidConstructor = "div">(
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter", "columns", "colCount", "switchAt"]),
+      omitProps(props, ["as", "colCount", "switchAt"]),
       createPropsFromAccessors({
         style,
         "data-br-columns": () => "",
@@ -92,24 +84,18 @@ export type ColumnProps<T extends ValidConstructor = "div"> =
 export function Column<T extends ValidConstructor = "div">(
   props: Readonly<ColumnProps<T>>,
 ): JSX.Element {
-  const propsStyle = () =>
-    typeof props.style === "string"
-      ? props.style
-      : Object.entries(props.style ?? ({} as JSX.CSSProperties)).reduce(
-          (str, [key, value]) => str + `${key}:${value};`,
-          "",
-        );
+  const propsStyle = () => getPropsStyle(props.style);
 
-  const span = () => `--span: ${safeSpan(props.span)};`;
+  const span = () => `--col-span: ${safeSpan(props.span)};`;
 
   const offsetStart = () =>
     props.offsetStart && props.offsetStart > 0
-      ? `--offsetStart: ${props.offsetStart};`
+      ? `--offset-start: ${props.offsetStart};`
       : "";
 
   const offsetEnd = () =>
     props.offsetEnd && props.offsetEnd > 0
-      ? `--offsetEnd: ${props.offsetEnd};`
+      ? `--offset-end: ${props.offsetEnd};`
       : "";
 
   const style = () =>

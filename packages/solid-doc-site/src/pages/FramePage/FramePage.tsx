@@ -27,7 +27,7 @@ export function FramePage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Frame</Heading>
       <PageSection title="Use Case">
         <p>

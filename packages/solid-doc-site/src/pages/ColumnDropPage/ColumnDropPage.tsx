@@ -43,8 +43,8 @@ export function ColumnDropPage(): JSXElement {
       <PageSection title="gap">
         <p>
           The gap prop defines the gap size between elements. Bedrock has
-          implemented a default spacing scheme, but it can be overridden using
-          the ThemeProvider provided by styled-components.
+          implemented a default spacing scheme, but it can be overridden with
+          custom CSS length values.
         </p>
 
         <p>Here are the possible values for gap by default:</p>

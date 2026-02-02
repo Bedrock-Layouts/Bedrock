@@ -1,12 +1,6 @@
 /* eslint-disable react/style-prop-object */
-import {
-  Center,
-  Inline,
-  Split,
-  Stack,
-  createContainerQuery,
-} from "@bedrock-layout/solid";
-import { Route, Routes } from "@solidjs/router";
+import { Center, Inline, Split, Stack } from "@bedrock-layout/solid";
+import { Route } from "@solidjs/router";
 import { Component, For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import { styled } from "solid-styled-components";
@@ -34,11 +28,11 @@ function SideNavGroup(
   }>,
 ) {
   return (
-    <Stack gutter="size2">
+    <Stack gap="size2">
       <strong>{props.title}</strong>
 
       <Inline
-        gutter="size2"
+        gap="size2"
         switchAt="sizeSm"
         style="padding: var(--spacing-lg) var(--spacing-sm)"
       >
@@ -77,22 +71,17 @@ const LogoTitle = styled("strong")`
 `;
 
 const App: Component = () => {
-  const [shouldSwitch, ref] = createContainerQuery(WIDTH_BREAKPOINT);
-
   return (
-    <Split
-      ref={ref}
-      fraction="auto-start"
-      gutter="size3"
-      switchAt={WIDTH_BREAKPOINT}
-    >
-      <div style={`background: var(--stone-1); padding: var(--spacing-size-7);`}>
-        <Stack gutter="size7">
+    <Split fraction="auto-start" gap="size3" switchAt={WIDTH_BREAKPOINT}>
+      <div
+        style={`background: var(--stone-1); padding: var(--spacing-size-7);`}
+      >
+        <Stack gap="size7">
           <LogoLink href="/">
-            <Inline align="center" gutter="size7">
+            <Inline align="center" gap="size7">
               <LogoOnly style="max-width:8rem;" />
 
-              <Show when={shouldSwitch() === true}>
+              <Show when={true}>
                 <LogoTitle>Solid-Bedrock</LogoTitle>
               </Show>
             </Inline>
@@ -103,31 +92,31 @@ const App: Component = () => {
       </div>
 
       <Center maxWidth="90%" style="padding: var(--spacing-size-7)">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/column-drop" element={<ColumnDropPage />} />
-          <Route path="/columns" element={<ColumnsPage />} />
-          <Route path="/grid" element={<GridPage />} />
-          <Route path="/inline" element={<InlinePage />} />
-          <Route path="/inline-cluster" element={<InlineClusterPage />} />
-          <Route path="/reel" element={<ReelPage />} />
-          <Route path="/split" element={<SplitPage />} />
-          <Route path="/stack" element={<StackPage />} />
-          <Route path="/center" element={<CenterPage />} />
-          <Route path="/frame" element={<FramePage />} />
-          <Route path="/cover" element={<CoverPage />} />
+        <>
+          <Route path="/" component={LandingPage} />
+          <Route path="/column-drop" component={ColumnDropPage} />
+          <Route path="/columns" component={ColumnsPage} />
+          <Route path="/grid" component={GridPage} />
+          <Route path="/inline" component={InlinePage} />
+          <Route path="/inline-cluster" component={InlineClusterPage} />
+          <Route path="/reel" component={ReelPage} />
+          <Route path="/split" component={SplitPage} />
+          <Route path="/stack" component={StackPage} />
+          <Route path="/center" component={CenterPage} />
+          <Route path="/frame" component={FramePage} />
+          <Route path="/cover" component={CoverPage} />
           <Route
             path="/*all"
-            element={
-              <Stack gutter="size7" style="padding: var(--spacing-size-7)">
+            component={() => (
+              <Stack gap="size7" style="padding: var(--spacing-size-7)">
                 <h1>Page Not Found</h1>
                 <p>
                   Click <A href="/">Home</A> to go back to the site
                 </p>
               </Stack>
-            }
+            )}
           />
-        </Routes>
+        </>
       </Center>
     </Split>
   );

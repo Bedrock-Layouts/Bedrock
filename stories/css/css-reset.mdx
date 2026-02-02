@@ -4,10 +4,35 @@ import { Meta } from "@storybook/addon-docs";
 
 # CSS Reset
 
-A CSS Reset that compliments well with the Bedrock Layout Primitives
+A CSS Reset that complements the Bedrock Layout Primitives beautifully.
 
-The reset is not included in the main CSS bundle, so you will need to bring it in individually.
+## About the Reset
+
+This CSS reset is **optional** but highly recommended if you're using Bedrock Layout. It removes default browser styles and inconsistencies across different browsers, providing a clean foundation for your layout primitives to work on. The reset normalizes spacing, typography, and element behavior, making your layouts more predictable and consistent across all platforms.
+
+## Installation
+
+The reset is not included in the main CSS bundle, so you will need to import it individually at the start of your application:
 
 ```javascript
 import "@bedrock-layout/css/lib/reset.min.css";
 ```
+
+We recommend importing the reset before importing the main Bedrock Layout CSS:
+
+```javascript
+import "@bedrock-layout/css/lib/reset.min.css";
+import "@bedrock-layout/css/lib/bedrock-layout.min.css";
+```
+
+## Why Use It?
+
+The reset ensures:
+
+- Consistent default margins and padding across all elements
+- Proper line-height and font sizing
+- Normalized form elements and buttons
+- Consistent box-sizing model
+- Predictable overflow handling
+
+When combined with Bedrock Layout primitives, this reset allows you to focus on layout and design without worrying about browser defaults interfering with your component styling.

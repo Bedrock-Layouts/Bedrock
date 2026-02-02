@@ -4,7 +4,8 @@ import {
   SizesOptions,
   getSafeGutter,
   getSizeValue,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { convertToMaybe, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -15,11 +16,6 @@ import React, { CSSProperties } from "react";
 export type ColumnsProps = {
   /**
    * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
-  /**
-   * Sets space between each element.
    */
   gap?: Gutter;
   /**
@@ -27,15 +23,14 @@ export type ColumnsProps = {
    */
   colCount?: number;
   /**
-   * Sets the number of columns.
-   * @deprecated Use `colCount` instead.
-   */
-  columns?: number;
-  /**
    * Sets the width breakpoint at which the columns
    * will switch to a single column.
    */
   switchAt?: number | CSSLength | SizesOptions;
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 };
 
 /**
@@ -47,29 +42,29 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   {
     as: Component = "div",
     gap,
-    gutter,
-    columns = 1,
     colCount,
     style = {},
     switchAt,
+    padding,
     ...props
   },
   ref,
 ) {
-  const theme = useTheme();
-  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
-  const maybeSwitchAt = getSizeValue(theme, switchAt) ?? switchAt;
-  const safeColumns = convertToMaybe(Math.max(colCount ?? columns, 1)) ?? 1;
+  const maybeGutter = getSafeGutter(gap);
+  const maybeSwitchAt = getSizeValue(switchAt) ?? switchAt;
+  const safeColumns = convertToMaybe(Math.max(colCount ?? 1, 1)) ?? 1;
+  const paddingAttrs = getPaddingAttributes(padding);
+  const attrString = paddingAttrs.join(" ");
 
   return (
     <Component
       ref={ref}
-      data-br-columns=""
+      data-br-columns={attrString}
       style={
         {
-          "--gutter": maybeGutter,
-          "--columns": safeColumns,
-          "--switchAt": maybeSwitchAt,
+          "--gap": maybeGutter,
+          "--col-count": safeColumns,
+          "--switch-at": maybeSwitchAt,
           ...style,
         } as CSSProperties
       }
@@ -122,9 +117,9 @@ export const Column = forwardRefWithAs<"div", ColumnProps>(function Column(
       ref={ref}
       style={
         {
-          "--span": safeSpan,
-          "--offsetStart": safeOffsetStart,
-          "--offsetEnd": safeOffsetEnd,
+          "--col-span": safeSpan,
+          "--offset-start": safeOffsetStart,
+          "--offset-end": safeOffsetEnd,
           ...style,
         } as CSSProperties
       }

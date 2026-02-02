@@ -30,14 +30,14 @@ yarn add @bedrock-layout/css @bedrock-layout/stack
 Now that we have our dependencies installed, let's import the `@bedrock-layout/css` into our `index.js` file:
 
 ```jsx
-import from '@bedrock-layout/css'
+import "@bedrock-layout/css";
 ```
 
 If you would prefer to only import the css of the components you are using, you can import the css from the individual components:
 
 ```jsx
-import '@bedrock-layout/css/lib/components/stack.min.css';
-import '@bedrock-layout/css/lib/components/center.min.css';
+import "@bedrock-layout/css/lib/components/stack.min.css";
+import "@bedrock-layout/css/lib/components/center.min.css";
 ```
 
 ## App.js
@@ -51,7 +51,7 @@ import { Stack } from "@bedrock-layout/stack";
 
 function App() {
   return (
-    <Stack gutter='size3'>
+    <Stack gap="size3">
       <header>
         <h1>Coco Le Belle</h1>
       </header>
@@ -64,7 +64,7 @@ export default App;
 
 Finally, let's start the development server by running `yarn start`. Navigate to `http://localhost:3000/` in your browser and you should see the following output:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 500 }}
     src={initialSetup}
@@ -74,7 +74,7 @@ Finally, let's start the development server by running `yarn start`. Navigate to
 
 We are now ready to start building our layout. In the next section, we will learn how to use the `Stack` component to create our first component in our landing page.
 
-<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gap="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-introduction--docs">
     <Intl>Introduction</Intl>
   </Button>

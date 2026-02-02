@@ -1,3 +1,5 @@
-# `@bedrock-layout/type-util`
+# `@bedrock-layout/type-utils`
 
-This is a utility package for building bedrock layout primitives in React. This package does not follow semver and should not be used directly by anyone. If you want to use it, I recommend forking it and using it in your code base.
+Utility helpers for building Bedrock Layout primitives in React.
+
+This package does not follow semver and is not intended for direct use. If you want to use it, consider forking it and maintaining it in your own codebase.

@@ -10,12 +10,10 @@ import { Gap } from "./gaps";
 import gapCode from "./gaps?raw";
 import { MinHeight } from "./minHeight";
 import minHeightCode from "./minHeight?raw";
-import { NoStretch } from "./noStretch";
-import noStretchCode from "./noStretch?raw";
+import { StretchContent } from "./stretchContent";
+import stretchContentCode from "./stretchContent?raw";
 import { Playground } from "./playground";
 import playgroundCode from "./playground?raw";
-import { TopAndBottom } from "./topAndBottom";
-import topAndBottomCode from "./topAndBottom?raw";
 
 export function CoverPage(): JSXElement {
   const initialValues = Object.fromEntries(
@@ -31,9 +29,10 @@ export function CoverPage(): JSXElement {
       <Heading id="title">Cover</Heading>
       <PageSection title="Use Case">
         <p>
-          The <code>Cover</code> component is designed to cover a predefined
-          area, 100vh by default, and vertically center its child component. You
-          can also conditionally render a top and bottom component as well.
+          The <code>Cover</code> component is designed to vertically cover a
+          predefined area, 100% by default, and vertically center its children.
+          Use the <code>CoverCentered</code> component to mark which child
+          should be vertically centered.
         </p>
       </PageSection>
       <PageSection title="API">
@@ -41,39 +40,30 @@ export function CoverPage(): JSXElement {
       </PageSection>
       <PageSection title="minHeight">
         <p>
-          The `minHeight` prop can be used to set the minimum height of the
-          cover. The default is `100vh`.
+          The <code>minHeight</code> prop can be used to set the minimum height
+          of the cover. The default is <code>100%</code>. It can be a CSSLength,
+          a number, or a key of the theme's sizes options.
         </p>
 
         <Story code={minHeightCode}>
           <MinHeight />
         </Story>
       </PageSection>
-      <PageSection title="top and bottom">
-        <p>
-          Both the `top` and `bottom` props can be used to render a top and
-          bottom section.
-        </p>
-
-        <Story code={topAndBottomCode}>
-          <TopAndBottom />
-        </Story>
-      </PageSection>
-      <PageSection title="stretchContent">
+      <PageSection title="stretch-content">
         <p>
           You can add a stretched content variant by setting the variant props
           to stretch-content
         </p>
 
-        <Story code={noStretchCode}>
-          <NoStretch />
+        <Story code={stretchContentCode}>
+          <StretchContent />
         </Story>
       </PageSection>
       <PageSection title="gap">
         <p>
           The gap prop defines the gap size between elements. Bedrock has
-          implemented a default spacing scheme, but it can be overridden using
-          the ThemeProvider provided by styled-components.
+          implemented a default spacing scheme, but it can be overridden with
+          custom CSS length values.
         </p>
 
         <p>Here are the possible values for gap by default:</p>

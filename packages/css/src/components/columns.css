@@ -6,371 +6,22 @@
   columns component
 */
 
-[data-bedrock-columns] {
-  --gap: initial;
-  --gutter: initial;
-  --switchAt: initial;
-  --safeColumns: var(--col-count, var(--columns, 1));
-  --numberOfGutters: calc(var(--safeColumns) - 1);
-  --largestWidth: calc(
-    100% - max(var(--gap, var(--gutter, 0px)) * var(--numberOfGutters), 0px)
-  );
-  --columnWidth: calc(var(--largestWidth) / var(--safeColumns));
-  --basis: calc(
-    (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
-  );
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap, var(--gutter, 0px));
-}
-
-[data-bedrock-columns][data-bedrock-columns] > * {
-  margin: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: var(--basis);
-  min-inline-size: min(min(var(--columnWidth), 100%), 100%);
-  max-inline-size: min(max(var(--basis), var(--columnWidth)), 100%);
-}
-
-/* Gutter Sizes */
-[data-bedrock-columns~="gutter:size000"] {
-  --gutter: -0.5rem;
-}
-[data-bedrock-columns~="gutter:size00"] {
-  --gutter: -0.25rem;
-}
-[data-bedrock-columns~="gutter:size1"] {
-  --gutter: 0.25rem;
-}
-[data-bedrock-columns~="gutter:size2"] {
-  --gutter: 0.5rem;
-}
-[data-bedrock-columns~="gutter:size3"] {
-  --gutter: 1rem;
-}
-[data-bedrock-columns~="gutter:size4"] {
-  --gutter: 1.25rem;
-}
-[data-bedrock-columns~="gutter:size5"] {
-  --gutter: 1.5rem;
-}
-[data-bedrock-columns~="gutter:size6"] {
-  --gutter: 1.75rem;
-}
-[data-bedrock-columns~="gutter:size7"] {
-  --gutter: 2rem;
-}
-[data-bedrock-columns~="gutter:size8"] {
-  --gutter: 3rem;
-}
-[data-bedrock-columns~="gutter:size9"] {
-  --gutter: 4rem;
-}
-[data-bedrock-columns~="gutter:size10"] {
-  --gutter: 5rem;
-}
-[data-bedrock-columns~="gutter:size11"] {
-  --gutter: 7.5rem;
-}
-[data-bedrock-columns~="gutter:size12"] {
-  --gutter: 10rem;
-}
-[data-bedrock-columns~="gutter:size13"] {
-  --gutter: 15rem;
-}
-[data-bedrock-columns~="gutter:size14"] {
-  --gutter: 20rem;
-}
-[data-bedrock-columns~="gutter:size15"] {
-  --gutter: 30rem;
-}
-
-/* gap sizes */
-[data-bedrock-columns~="gap:size000"] {
-  --gap: -0.5rem;
-}
-[data-bedrock-columns~="gap:size00"] {
-  --gap: -0.25rem;
-}
-[data-bedrock-columns~="gap:size1"] {
-  --gap: 0.25rem;
-}
-[data-bedrock-columns~="gap:size2"] {
-  --gap: 0.5rem;
-}
-[data-bedrock-columns~="gap:size3"] {
-  --gap: 1rem;
-}
-[data-bedrock-columns~="gap:size4"] {
-  --gap: 1.25rem;
-}
-[data-bedrock-columns~="gap:size5"] {
-  --gap: 1.5rem;
-}
-[data-bedrock-columns~="gap:size6"] {
-  --gap: 1.75rem;
-}
-[data-bedrock-columns~="gap:size7"] {
-  --gap: 2rem;
-}
-[data-bedrock-columns~="gap:size8"] {
-  --gap: 3rem;
-}
-[data-bedrock-columns~="gap:size9"] {
-  --gap: 4rem;
-}
-[data-bedrock-columns~="gap:size10"] {
-  --gap: 5rem;
-}
-[data-bedrock-columns~="gap:size11"] {
-  --gap: 7.5rem;
-}
-[data-bedrock-columns~="gap:size12"] {
-  --gap: 10rem;
-}
-[data-bedrock-columns~="gap:size13"] {
-  --gap: 15rem;
-}
-[data-bedrock-columns~="gap:size14"] {
-  --gap: 20rem;
-}
-[data-bedrock-columns~="gap:size15"] {
-  --gap: 30rem;
-}
-
-/* Switch at Widths */
-[data-bedrock-columns~="switchAt:sizeContent1"] {
-  --switch-at: 20ch;
-}
-[data-bedrock-columns~="switchAt:sizeContent2"] {
-  --switch-at: 45ch;
-}
-[data-bedrock-columns~="switchAt:sizeContent3"] {
-  --switch-at: 60ch;
-}
-[data-bedrock-columns~="switchAt:sizeHeader1"] {
-  --switch-at: 20ch;
-}
-[data-bedrock-columns~="switchAt:sizeHeader2"] {
-  --switch-at: 25ch;
-}
-[data-bedrock-columns~="switchAt:sizeHeader3"] {
-  --switch-at: 35ch;
-}
-[data-bedrock-columns~="switchAt:sizeXxs"] {
-  --switch-at: 240px;
-}
-[data-bedrock-columns~="switchAt:sizeXs"] {
-  --switch-at: 360px;
-}
-[data-bedrock-columns~="switchAt:sizeSm"] {
-  --switch-at: 480px;
-}
-[data-bedrock-columns~="switchAt:sizeMd"] {
-  --switch-at: 768px;
-}
-[data-bedrock-columns~="switchAt:sizeLg"] {
-  --switch-at: 1024px;
-}
-[data-bedrock-columns~="switchAt:sizeXl"] {
-  --switch-at: 1440px;
-}
-[data-bedrock-columns~="switchAt:sizeXxl"] {
-  --switch-at: 1920px;
-}
-
-/*
-  column component
-*/
-
-[data-bedrock-column~="span:1"] {
-  --span: 1;
-}
-[data-bedrock-column~="span:2"] {
-  --span: 2;
-}
-[data-bedrock-column~="span:3"] {
-  --span: 3;
-}
-[data-bedrock-column~="span:4"] {
-  --span: 4;
-}
-[data-bedrock-column~="span:5"] {
-  --span: 5;
-}
-[data-bedrock-column~="span:6"] {
-  --span: 6;
-}
-[data-bedrock-column~="span:7"] {
-  --span: 7;
-}
-[data-bedrock-column~="span:8"] {
-  --span: 8;
-}
-[data-bedrock-column~="span:9"] {
-  --span: 9;
-}
-[data-bedrock-column~="span:10"] {
-  --span: 10;
-}
-[data-bedrock-column~="span:11"] {
-  --span: 11;
-}
-[data-bedrock-column~="span:12"] {
-  --span: 12;
-}
-
-:is([data-bedrock-column][style*="--span"], [data-bedrock-column*="span"]) {
-  --maxSpan: min(var(--span, 1), var(--safeColumns));
-  --guttersToAdd: calc(var(--maxSpan, 1) - 1);
-  --gutterSize: calc(var(--gap, var(--gutter, 0px)) * var(--guttersToAdd));
-  --columnWidth: calc(
-    ((var(--largestWidth) / var(--safeColumns)) * var(--maxSpan, 1)) +
-      var(--gutterSize)
-  );
-}
-
-[data-bedrock-column~="offsetStart:1"] {
-  --offset-start: 1;
-}
-[data-bedrock-column~="offsetStart:2"] {
-  --offset-start: 2;
-}
-[data-bedrock-column~="offsetStart:3"] {
-  --offset-start: 3;
-}
-[data-bedrock-column~="offsetStart:4"] {
-  --offset-start: 4;
-}
-[data-bedrock-column~="offsetStart:5"] {
-  --offset-start: 5;
-}
-[data-bedrock-column~="offsetStart:6"] {
-  --offset-start: 6;
-}
-[data-bedrock-column~="offsetStart:7"] {
-  --offset-start: 7;
-}
-[data-bedrock-column~="offsetStart:8"] {
-  --offset-start: 8;
-}
-[data-bedrock-column~="offsetStart:9"] {
-  --offset-start: 9;
-}
-[data-bedrock-column~="offsetStart:10"] {
-  --offset-start: 10;
-}
-[data-bedrock-column~="offsetStart:11"] {
-  --offset-start: 11;
-}
-[data-bedrock-column~="offsetStart:12"] {
-  --offset-start: 12;
-}
-
-:is(
-    [data-bedrock-column][style*="--offsetStart"],
-    [data-bedrock-column][style*="--offset-start"],
-    [data-bedrock-column*="offsetStart"]
-  ) {
-  --maxOffsetStart: min(
-    var(--offset-start, var(--offsetStart, 1)),
-    var(--safeColumns)
-  );
-  --marginOffsetStartGutters: calc(
-    var(--gap, var(--gutter, 0px)) * var(--maxOffsetStart)
-  );
-  --marginOffsetStart: calc(
-    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetStart, 1) +
-      var(--marginOffsetStartGutters)
-  );
-  --basisSwitcher: max(var(--basis) * -1, 0px);
-  margin-inline-start: min(var(--marginOffsetStart), var(--basisSwitcher));
-}
-
-[data-bedrock-column~="offsetEnd:1"] {
-  --offset-end: 1;
-}
-[data-bedrock-column~="offsetEnd:2"] {
-  --offset-end: 2;
-}
-[data-bedrock-column~="offsetEnd:3"] {
-  --offset-end: 3;
-}
-[data-bedrock-column~="offsetEnd:4"] {
-  --offset-end: 4;
-}
-[data-bedrock-column~="offsetEnd:5"] {
-  --offset-end: 5;
-}
-[data-bedrock-column~="offsetEnd:6"] {
-  --offset-end: 6;
-}
-[data-bedrock-column~="offsetEnd:7"] {
-  --offset-end: 7;
-}
-[data-bedrock-column~="offsetEnd:8"] {
-  --offset-end: 8;
-}
-[data-bedrock-column~="offsetEnd:9"] {
-  --offset-end: 9;
-}
-[data-bedrock-column~="offsetEnd:10"] {
-  --offset-end: 10;
-}
-[data-bedrock-column~="offsetEnd:11"] {
-  --offset-end: 11;
-}
-[data-bedrock-column~="offsetEnd:12"] {
-  --offset-end: 12;
-}
-
-:is(
-    [data-bedrock-column][style*="--offsetEnd"],
-    [data-bedrock-column][style*="--offset-end"],
-    [data-bedrock-column*="offsetEnd"]
-  ) {
-  --maxOffsetEnd: min(
-    var(--offset-end, var(--offsetEnd, 1)),
-    var(--safeColumns)
-  );
-  --marginOffsetEndGutters: calc(
-    var(--gap, var(--gutter, 0px)) * var(--maxOffsetEnd)
-  );
-  --marginOffsetEnd: calc(
-    (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetEnd, 1) +
-      var(--marginOffsetEndGutters)
-  );
-  --basisSwitcher: max(var(--basis) * -1, 0px);
-  margin-inline-end: min(var(--marginOffsetEnd), var(--basisSwitcher));
-}
-
-/*
-  columns.css
-*/
-
-/*
-  columns component
-*/
-
 [data-br-columns] {
   --gap: initial;
-  --gutter: initial;
-  --switchAt: initial;
-  --safeColumns: var(--col-count, var(--columns, 1));
+  --switch-at: initial;
+  --safeColumns: var(--col-count, 1);
   --numberOfGutters: calc(var(--safeColumns) - 1);
   --largestWidth: calc(
-    100% - max(var(--gap, var(--gutter, 0px)) * var(--numberOfGutters), 0px)
+    100% - max(var(--gap, 0px) * var(--numberOfGutters), 0px)
   );
   --columnWidth: calc(var(--largestWidth) / var(--safeColumns));
   --basis: calc(
-    (var(--switchAt, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
+    (var(--switch-at, var(--largestWidth)) - (var(--largestWidth) + 1px)) * 999
   );
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap, var(--gutter, 0px));
+  gap: var(--gap, 0px);
 }
 
 [data-br-columns][data-br-columns] > * {
@@ -380,59 +31,6 @@
   flex-basis: var(--basis);
   min-inline-size: min(min(var(--columnWidth), 100%), 100%);
   max-inline-size: min(max(var(--basis), var(--columnWidth)), 100%);
-}
-
-/* Gutter Sizes */
-[data-br-columns~="gutter:size000"] {
-  --gutter: -0.5rem;
-}
-[data-br-columns~="gutter:size00"] {
-  --gutter: -0.25rem;
-}
-[data-br-columns~="gutter:size1"] {
-  --gutter: 0.25rem;
-}
-[data-br-columns~="gutter:size2"] {
-  --gutter: 0.5rem;
-}
-[data-br-columns~="gutter:size3"] {
-  --gutter: 1rem;
-}
-[data-br-columns~="gutter:size4"] {
-  --gutter: 1.25rem;
-}
-[data-br-columns~="gutter:size5"] {
-  --gutter: 1.5rem;
-}
-[data-br-columns~="gutter:size6"] {
-  --gutter: 1.75rem;
-}
-[data-br-columns~="gutter:size7"] {
-  --gutter: 2rem;
-}
-[data-br-columns~="gutter:size8"] {
-  --gutter: 3rem;
-}
-[data-br-columns~="gutter:size9"] {
-  --gutter: 4rem;
-}
-[data-br-columns~="gutter:size10"] {
-  --gutter: 5rem;
-}
-[data-br-columns~="gutter:size11"] {
-  --gutter: 7.5rem;
-}
-[data-br-columns~="gutter:size12"] {
-  --gutter: 10rem;
-}
-[data-br-columns~="gutter:size13"] {
-  --gutter: 15rem;
-}
-[data-br-columns~="gutter:size14"] {
-  --gutter: 20rem;
-}
-[data-br-columns~="gutter:size15"] {
-  --gutter: 30rem;
 }
 
 /* gap sizes */
@@ -534,46 +132,46 @@
 */
 
 [data-br-column~="span:1"] {
-  --span: 1;
+  --col-span: 1;
 }
 [data-br-column~="span:2"] {
-  --span: 2;
+  --col-span: 2;
 }
 [data-br-column~="span:3"] {
-  --span: 3;
+  --col-span: 3;
 }
 [data-br-column~="span:4"] {
-  --span: 4;
+  --col-span: 4;
 }
 [data-br-column~="span:5"] {
-  --span: 5;
+  --col-span: 5;
 }
 [data-br-column~="span:6"] {
-  --span: 6;
+  --col-span: 6;
 }
 [data-br-column~="span:7"] {
-  --span: 7;
+  --col-span: 7;
 }
 [data-br-column~="span:8"] {
-  --span: 8;
+  --col-span: 8;
 }
 [data-br-column~="span:9"] {
-  --span: 9;
+  --col-span: 9;
 }
 [data-br-column~="span:10"] {
-  --span: 10;
+  --col-span: 10;
 }
 [data-br-column~="span:11"] {
-  --span: 11;
+  --col-span: 11;
 }
 [data-br-column~="span:12"] {
-  --span: 12;
+  --col-span: 12;
 }
 
-:is([data-br-column][style*="--span"], [data-br-column*="span"]) {
-  --maxSpan: min(var(--span, 1), var(--safeColumns));
+:is([data-br-column][style*="--col-span"], [data-br-column*="span"]) {
+  --maxSpan: min(var(--col-span, 1), var(--safeColumns));
   --guttersToAdd: calc(var(--maxSpan, 1) - 1);
-  --gutterSize: calc(var(--gap, var(--gutter, 0px)) * var(--guttersToAdd));
+  --gutterSize: calc(var(--gap, 0px) * var(--guttersToAdd));
   --columnWidth: calc(
     ((var(--largestWidth) / var(--safeColumns)) * var(--maxSpan, 1)) +
       var(--gutterSize)
@@ -618,17 +216,11 @@
 }
 
 :is(
-    [data-br-column][style*="--offsetStart"],
-    [data-br-column][style*="--offset-start"],
-    [data-br-column*="offsetStart"]
-  ) {
-  --maxOffsetStart: min(
-    var(--offset-start, var(--offsetStart, 1)),
-    var(--safeColumns)
-  );
-  --marginOffsetStartGutters: calc(
-    var(--gap, var(--gutter, 0px)) * var(--maxOffsetStart)
-  );
+  [data-br-column][style*="--offset-start"],
+  [data-br-column*="offsetStart"]
+) {
+  --maxOffsetStart: min(var(--offset-start, 1), var(--safeColumns));
+  --marginOffsetStartGutters: calc(var(--gap, 0px) * var(--maxOffsetStart));
   --marginOffsetStart: calc(
     (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetStart, 1) +
       var(--marginOffsetStartGutters)
@@ -674,18 +266,9 @@
   --offset-end: 12;
 }
 
-:is(
-    [data-br-column][style*="--offsetEnd"],
-    [data-br-column][style*="--offset-end"],
-    [data-br-column*="offsetEnd"]
-  ) {
-  --maxOffsetEnd: min(
-    var(--offset-end, var(--offsetEnd, 1)),
-    var(--safeColumns)
-  );
-  --marginOffsetEndGutters: calc(
-    var(--gap, var(--gutter, 0px)) * var(--maxOffsetEnd)
-  );
+:is([data-br-column][style*="--offset-end"], [data-br-column*="offsetEnd"]) {
+  --maxOffsetEnd: min(var(--offset-end, 1), var(--safeColumns));
+  --marginOffsetEndGutters: calc(var(--gap, 0px) * var(--maxOffsetEnd));
   --marginOffsetEnd: calc(
     (var(--largestWidth) / var(--safeColumns)) * var(--maxOffsetEnd, 1) +
       var(--marginOffsetEndGutters)
@@ -694,821 +277,55 @@
   margin-inline-end: min(var(--marginOffsetEnd), var(--basisSwitcher));
 }
 
-/* Padding styles from padbox.css */
-:is(
-  [data-bedrock-columns~="padding:size000"],
-  [data-bedrock-column~="padding:size000"]
-) {
+:is([data-br-columns~="padding:size000"], [data-br-column~="padding:size000"]) {
   padding: 0;
 }
-:is(
-  [data-bedrock-columns~="padding:size00"],
-  [data-bedrock-column~="padding:size00"]
-) {
+:is([data-br-columns~="padding:size00"], [data-br-column~="padding:size00"]) {
   padding: 0;
 }
-:is(
-  [data-bedrock-columns~="padding:size1"],
-  [data-bedrock-column~="padding:size1"]
-) {
+:is([data-br-columns~="padding:size1"], [data-br-column~="padding:size1"]) {
   padding: 0.25rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size2"],
-  [data-bedrock-column~="padding:size2"]
-) {
+:is([data-br-columns~="padding:size2"], [data-br-column~="padding:size2"]) {
   padding: 0.5rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size3"],
-  [data-bedrock-column~="padding:size3"]
-) {
+:is([data-br-columns~="padding:size3"], [data-br-column~="padding:size3"]) {
   padding: 1rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size4"],
-  [data-bedrock-column~="padding:size4"]
-) {
+:is([data-br-columns~="padding:size4"], [data-br-column~="padding:size4"]) {
   padding: 1.25rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size5"],
-  [data-bedrock-column~="padding:size5"]
-) {
+:is([data-br-columns~="padding:size5"], [data-br-column~="padding:size5"]) {
   padding: 1.5rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size6"],
-  [data-bedrock-column~="padding:size6"]
-) {
+:is([data-br-columns~="padding:size6"], [data-br-column~="padding:size6"]) {
   padding: 1.75rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size7"],
-  [data-bedrock-column~="padding:size7"]
-) {
+:is([data-br-columns~="padding:size7"], [data-br-column~="padding:size7"]) {
   padding: 2rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size8"],
-  [data-bedrock-column~="padding:size8"]
-) {
+:is([data-br-columns~="padding:size8"], [data-br-column~="padding:size8"]) {
   padding: 3rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size9"],
-  [data-bedrock-column~="padding:size9"]
-) {
+:is([data-br-columns~="padding:size9"], [data-br-column~="padding:size9"]) {
   padding: 4rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size10"],
-  [data-bedrock-column~="padding:size10"]
-) {
+:is([data-br-columns~="padding:size10"], [data-br-column~="padding:size10"]) {
   padding: 5rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size11"],
-  [data-bedrock-column~="padding:size11"]
-) {
+:is([data-br-columns~="padding:size11"], [data-br-column~="padding:size11"]) {
   padding: 7.5rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size12"],
-  [data-bedrock-column~="padding:size12"]
-) {
+:is([data-br-columns~="padding:size12"], [data-br-column~="padding:size12"]) {
   padding: 10rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size13"],
-  [data-bedrock-column~="padding:size13"]
-) {
+:is([data-br-columns~="padding:size13"], [data-br-column~="padding:size13"]) {
   padding: 15rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size14"],
-  [data-bedrock-column~="padding:size14"]
-) {
+:is([data-br-columns~="padding:size14"], [data-br-column~="padding:size14"]) {
   padding: 20rem;
 }
-:is(
-  [data-bedrock-columns~="padding:size15"],
-  [data-bedrock-column~="padding:size15"]
-) {
-  padding: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size000"],
-  [data-bedrock-column~="paddingInline:size000"]
-) {
-  padding-inline: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size00"],
-  [data-bedrock-column~="paddingInline:size00"]
-) {
-  padding-inline: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size1"],
-  [data-bedrock-column~="paddingInline:size1"]
-) {
-  padding-inline: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size2"],
-  [data-bedrock-column~="paddingInline:size2"]
-) {
-  padding-inline: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size3"],
-  [data-bedrock-column~="paddingInline:size3"]
-) {
-  padding-inline: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size4"],
-  [data-bedrock-column~="paddingInline:size4"]
-) {
-  padding-inline: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size5"],
-  [data-bedrock-column~="paddingInline:size5"]
-) {
-  padding-inline: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size6"],
-  [data-bedrock-column~="paddingInline:size6"]
-) {
-  padding-inline: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size7"],
-  [data-bedrock-column~="paddingInline:size7"]
-) {
-  padding-inline: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size8"],
-  [data-bedrock-column~="paddingInline:size8"]
-) {
-  padding-inline: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size9"],
-  [data-bedrock-column~="paddingInline:size9"]
-) {
-  padding-inline: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size10"],
-  [data-bedrock-column~="paddingInline:size10"]
-) {
-  padding-inline: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size11"],
-  [data-bedrock-column~="paddingInline:size11"]
-) {
-  padding-inline: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size12"],
-  [data-bedrock-column~="paddingInline:size12"]
-) {
-  padding-inline: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size13"],
-  [data-bedrock-column~="paddingInline:size13"]
-) {
-  padding-inline: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size14"],
-  [data-bedrock-column~="paddingInline:size14"]
-) {
-  padding-inline: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInline:size15"],
-  [data-bedrock-column~="paddingInline:size15"]
-) {
-  padding-inline: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size000"],
-  [data-bedrock-column~="paddingInlineStart:size000"]
-) {
-  padding-inline-start: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size00"],
-  [data-bedrock-column~="paddingInlineStart:size00"]
-) {
-  padding-inline-start: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size1"],
-  [data-bedrock-column~="paddingInlineStart:size1"]
-) {
-  padding-inline-start: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size2"],
-  [data-bedrock-column~="paddingInlineStart:size2"]
-) {
-  padding-inline-start: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size3"],
-  [data-bedrock-column~="paddingInlineStart:size3"]
-) {
-  padding-inline-start: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size4"],
-  [data-bedrock-column~="paddingInlineStart:size4"]
-) {
-  padding-inline-start: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size5"],
-  [data-bedrock-column~="paddingInlineStart:size5"]
-) {
-  padding-inline-start: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size6"],
-  [data-bedrock-column~="paddingInlineStart:size6"]
-) {
-  padding-inline-start: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size7"],
-  [data-bedrock-column~="paddingInlineStart:size7"]
-) {
-  padding-inline-start: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size8"],
-  [data-bedrock-column~="paddingInlineStart:size8"]
-) {
-  padding-inline-start: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size9"],
-  [data-bedrock-column~="paddingInlineStart:size9"]
-) {
-  padding-inline-start: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size10"],
-  [data-bedrock-column~="paddingInlineStart:size10"]
-) {
-  padding-inline-start: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size11"],
-  [data-bedrock-column~="paddingInlineStart:size11"]
-) {
-  padding-inline-start: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size12"],
-  [data-bedrock-column~="paddingInlineStart:size12"]
-) {
-  padding-inline-start: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size13"],
-  [data-bedrock-column~="paddingInlineStart:size13"]
-) {
-  padding-inline-start: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size14"],
-  [data-bedrock-column~="paddingInlineStart:size14"]
-) {
-  padding-inline-start: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineStart:size15"],
-  [data-bedrock-column~="paddingInlineStart:size15"]
-) {
-  padding-inline-start: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size000"],
-  [data-bedrock-column~="paddingInlineEnd:size000"]
-) {
-  padding-inline-end: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size00"],
-  [data-bedrock-column~="paddingInlineEnd:size00"]
-) {
-  padding-inline-end: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size1"],
-  [data-bedrock-column~="paddingInlineEnd:size1"]
-) {
-  padding-inline-end: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size2"],
-  [data-bedrock-column~="paddingInlineEnd:size2"]
-) {
-  padding-inline-end: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size3"],
-  [data-bedrock-column~="paddingInlineEnd:size3"]
-) {
-  padding-inline-end: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size4"],
-  [data-bedrock-column~="paddingInlineEnd:size4"]
-) {
-  padding-inline-end: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size5"],
-  [data-bedrock-column~="paddingInlineEnd:size5"]
-) {
-  padding-inline-end: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size6"],
-  [data-bedrock-column~="paddingInlineEnd:size6"]
-) {
-  padding-inline-end: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size7"],
-  [data-bedrock-column~="paddingInlineEnd:size7"]
-) {
-  padding-inline-end: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size8"],
-  [data-bedrock-column~="paddingInlineEnd:size8"]
-) {
-  padding-inline-end: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size9"],
-  [data-bedrock-column~="paddingInlineEnd:size9"]
-) {
-  padding-inline-end: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size10"],
-  [data-bedrock-column~="paddingInlineEnd:size10"]
-) {
-  padding-inline-end: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size11"],
-  [data-bedrock-column~="paddingInlineEnd:size11"]
-) {
-  padding-inline-end: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size12"],
-  [data-bedrock-column~="paddingInlineEnd:size12"]
-) {
-  padding-inline-end: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size13"],
-  [data-bedrock-column~="paddingInlineEnd:size13"]
-) {
-  padding-inline-end: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size14"],
-  [data-bedrock-column~="paddingInlineEnd:size14"]
-) {
-  padding-inline-end: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingInlineEnd:size15"],
-  [data-bedrock-column~="paddingInlineEnd:size15"]
-) {
-  padding-inline-end: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size000"],
-  [data-bedrock-column~="paddingBlock:size000"]
-) {
-  padding-block: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size00"],
-  [data-bedrock-column~="paddingBlock:size00"]
-) {
-  padding-block: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size1"],
-  [data-bedrock-column~="paddingBlock:size1"]
-) {
-  padding-block: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size2"],
-  [data-bedrock-column~="paddingBlock:size2"]
-) {
-  padding-block: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size3"],
-  [data-bedrock-column~="paddingBlock:size3"]
-) {
-  padding-block: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size4"],
-  [data-bedrock-column~="paddingBlock:size4"]
-) {
-  padding-block: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size5"],
-  [data-bedrock-column~="paddingBlock:size5"]
-) {
-  padding-block: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size6"],
-  [data-bedrock-column~="paddingBlock:size6"]
-) {
-  padding-block: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size7"],
-  [data-bedrock-column~="paddingBlock:size7"]
-) {
-  padding-block: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size8"],
-  [data-bedrock-column~="paddingBlock:size8"]
-) {
-  padding-block: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size9"],
-  [data-bedrock-column~="paddingBlock:size9"]
-) {
-  padding-block: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size10"],
-  [data-bedrock-column~="paddingBlock:size10"]
-) {
-  padding-block: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size11"],
-  [data-bedrock-column~="paddingBlock:size11"]
-) {
-  padding-block: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size12"],
-  [data-bedrock-column~="paddingBlock:size12"]
-) {
-  padding-block: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size13"],
-  [data-bedrock-column~="paddingBlock:size13"]
-) {
-  padding-block: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size14"],
-  [data-bedrock-column~="paddingBlock:size14"]
-) {
-  padding-block: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlock:size15"],
-  [data-bedrock-column~="paddingBlock:size15"]
-) {
-  padding-block: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size000"],
-  [data-bedrock-column~="paddingBlockStart:size000"]
-) {
-  padding-block-start: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size00"],
-  [data-bedrock-column~="paddingBlockStart:size00"]
-) {
-  padding-block-start: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size1"],
-  [data-bedrock-column~="paddingBlockStart:size1"]
-) {
-  padding-block-start: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size2"],
-  [data-bedrock-column~="paddingBlockStart:size2"]
-) {
-  padding-block-start: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size3"],
-  [data-bedrock-column~="paddingBlockStart:size3"]
-) {
-  padding-block-start: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size4"],
-  [data-bedrock-column~="paddingBlockStart:size4"]
-) {
-  padding-block-start: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size5"],
-  [data-bedrock-column~="paddingBlockStart:size5"]
-) {
-  padding-block-start: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size6"],
-  [data-bedrock-column~="paddingBlockStart:size6"]
-) {
-  padding-block-start: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size7"],
-  [data-bedrock-column~="paddingBlockStart:size7"]
-) {
-  padding-block-start: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size8"],
-  [data-bedrock-column~="paddingBlockStart:size8"]
-) {
-  padding-block-start: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size9"],
-  [data-bedrock-column~="paddingBlockStart:size9"]
-) {
-  padding-block-start: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size10"],
-  [data-bedrock-column~="paddingBlockStart:size10"]
-) {
-  padding-block-start: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size11"],
-  [data-bedrock-column~="paddingBlockStart:size11"]
-) {
-  padding-block-start: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size12"],
-  [data-bedrock-column~="paddingBlockStart:size12"]
-) {
-  padding-block-start: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size13"],
-  [data-bedrock-column~="paddingBlockStart:size13"]
-) {
-  padding-block-start: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size14"],
-  [data-bedrock-column~="paddingBlockStart:size14"]
-) {
-  padding-block-start: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockStart:size15"],
-  [data-bedrock-column~="paddingBlockStart:size15"]
-) {
-  padding-block-start: 30rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size000"],
-  [data-bedrock-column~="paddingBlockEnd:size000"]
-) {
-  padding-block-end: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size00"],
-  [data-bedrock-column~="paddingBlockEnd:size00"]
-) {
-  padding-block-end: 0;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size1"],
-  [data-bedrock-column~="paddingBlockEnd:size1"]
-) {
-  padding-block-end: 0.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size2"],
-  [data-bedrock-column~="paddingBlockEnd:size2"]
-) {
-  padding-block-end: 0.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size3"],
-  [data-bedrock-column~="paddingBlockEnd:size3"]
-) {
-  padding-block-end: 1rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size4"],
-  [data-bedrock-column~="paddingBlockEnd:size4"]
-) {
-  padding-block-end: 1.25rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size5"],
-  [data-bedrock-column~="paddingBlockEnd:size5"]
-) {
-  padding-block-end: 1.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size6"],
-  [data-bedrock-column~="paddingBlockEnd:size6"]
-) {
-  padding-block-end: 1.75rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size7"],
-  [data-bedrock-column~="paddingBlockEnd:size7"]
-) {
-  padding-block-end: 2rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size8"],
-  [data-bedrock-column~="paddingBlockEnd:size8"]
-) {
-  padding-block-end: 3rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size9"],
-  [data-bedrock-column~="paddingBlockEnd:size9"]
-) {
-  padding-block-end: 4rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size10"],
-  [data-bedrock-column~="paddingBlockEnd:size10"]
-) {
-  padding-block-end: 5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size11"],
-  [data-bedrock-column~="paddingBlockEnd:size11"]
-) {
-  padding-block-end: 7.5rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size12"],
-  [data-bedrock-column~="paddingBlockEnd:size12"]
-) {
-  padding-block-end: 10rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size13"],
-  [data-bedrock-column~="paddingBlockEnd:size13"]
-) {
-  padding-block-end: 15rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size14"],
-  [data-bedrock-column~="paddingBlockEnd:size14"]
-) {
-  padding-block-end: 20rem;
-}
-:is(
-  [data-bedrock-columns~="paddingBlockEnd:size15"],
-  [data-bedrock-column~="paddingBlockEnd:size15"]
-) {
-  padding-block-end: 30rem;
-}
-:is(
-  [data-br-columns~="padding:size000"],
-  [data-br-column~="padding:size000"]
-) {
-  padding: 0;
-}
-:is(
-  [data-br-columns~="padding:size00"],
-  [data-br-column~="padding:size00"]
-) {
-  padding: 0;
-}
-:is(
-  [data-br-columns~="padding:size1"],
-  [data-br-column~="padding:size1"]
-) {
-  padding: 0.25rem;
-}
-:is(
-  [data-br-columns~="padding:size2"],
-  [data-br-column~="padding:size2"]
-) {
-  padding: 0.5rem;
-}
-:is(
-  [data-br-columns~="padding:size3"],
-  [data-br-column~="padding:size3"]
-) {
-  padding: 1rem;
-}
-:is(
-  [data-br-columns~="padding:size4"],
-  [data-br-column~="padding:size4"]
-) {
-  padding: 1.25rem;
-}
-:is(
-  [data-br-columns~="padding:size5"],
-  [data-br-column~="padding:size5"]
-) {
-  padding: 1.5rem;
-}
-:is(
-  [data-br-columns~="padding:size6"],
-  [data-br-column~="padding:size6"]
-) {
-  padding: 1.75rem;
-}
-:is(
-  [data-br-columns~="padding:size7"],
-  [data-br-column~="padding:size7"]
-) {
-  padding: 2rem;
-}
-:is(
-  [data-br-columns~="padding:size8"],
-  [data-br-column~="padding:size8"]
-) {
-  padding: 3rem;
-}
-:is(
-  [data-br-columns~="padding:size9"],
-  [data-br-column~="padding:size9"]
-) {
-  padding: 4rem;
-}
-:is(
-  [data-br-columns~="padding:size10"],
-  [data-br-column~="padding:size10"]
-) {
-  padding: 5rem;
-}
-:is(
-  [data-br-columns~="padding:size11"],
-  [data-br-column~="padding:size11"]
-) {
-  padding: 7.5rem;
-}
-:is(
-  [data-br-columns~="padding:size12"],
-  [data-br-column~="padding:size12"]
-) {
-  padding: 10rem;
-}
-:is(
-  [data-br-columns~="padding:size13"],
-  [data-br-column~="padding:size13"]
-) {
-  padding: 15rem;
-}
-:is(
-  [data-br-columns~="padding:size14"],
-  [data-br-column~="padding:size14"]
-) {
-  padding: 20rem;
-}
-:is(
-  [data-br-columns~="padding:size15"],
-  [data-br-column~="padding:size15"]
-) {
+:is([data-br-columns~="padding:size15"], [data-br-column~="padding:size15"]) {
   padding: 30rem;
 }
 :is(

@@ -14,7 +14,7 @@ import newsletterAfter from "../assets/newsletter-after.png";
 
 # Your First Component
 
-One of the simplest and yet most common layout patterns found on the web is putting one element on top of another element with consistent space between the elements. This problem is precisely what the [**Stack**](http://localhost:9001/?path=/docs/spacer-components-stack) primitive solves.
+One of the simplest and yet most common layout patterns found on the web is putting one element on top of another element with consistent space between the elements. This problem is precisely what the [**Stack**](/?path=/docs/spacer-components-stack--api) primitive solves.
 
 Let's take the following component design mock up as an example:
 
@@ -71,7 +71,7 @@ import { Subscribe } from "./Subscribe";
 
 function App() {
   return (
-    <Stack gutter='size3'>
+    <Stack gap="size3">
       <header>
         <h1>Coco Le Belle</h1>
       </header>
@@ -100,8 +100,8 @@ import { Stack } from "@bedrock-layout/stack";
 
 export function Subscribe() {
   return (
-    <Stack as="form" gutter='size7'>
-      <Stack gutter='size3'>
+    <Stack as="form" gap="size7">
+      <Stack gap="size3">
         <h2>Subscribe To Our Newsletter</h2>
         <p>
           Subscribe to our newsletter to keep up to date on all our amazing
@@ -109,13 +109,13 @@ export function Subscribe() {
         </p>
       </Stack>
 
-      <Stack gutter='size3'>
-        <Stack as="label" gutter='size2'>
+      <Stack gap="size3">
+        <Stack as="label" gap="size2">
           Name
           <input type="text" />
         </Stack>
 
-        <Stack as="label" gutter='size2'>
+        <Stack as="label" gap="size2">
           Email
           <input type="email" />
         </Stack>
@@ -139,9 +139,9 @@ Your browser should now show the following:
 
 In the above `Subscribe` component, we are taking advantage of two import parts of Bedrock Layout Primitives. The first is that all Bedrock Layout Primitives expose the polymorphic `as` prop. This prop allows us to control exactly which element is rendered on to our page. We have used the `Stack` as a `form` element, which is a container for the all the elements. We have also used the `Stack` primitive as a `label` element, to stack the input label text above its corresponding input field.
 
-The other part of the Stack primitive is the `gutter` prop. This allows you to control the space between the elements. Bedrock Layout Primitives has implemented a default spacing scheme, but this can be adjusted to fit any style guide. In the next section we will learn more about Bedrock Layout Primitives spacing scheme and how to override it with our own.
+The other part of the Stack primitive is the `gap` prop. This allows you to control the space between the elements. Bedrock Layout Primitives has implemented a default spacing scheme, but this can be adjusted to fit any style guide. In the next section we will learn more about Bedrock Layout Primitives spacing scheme and how to override it with our own.
 
-<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gap="size3" minItemWidth="fit-content">
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-1-installation--docs"

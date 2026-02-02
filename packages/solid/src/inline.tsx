@@ -6,8 +6,7 @@ import {
   SpacingOptions,
   getSizeValue,
   getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -47,10 +46,6 @@ export interface InlineBaseProps {
   switchAt?: number | CSSLength | SizesOptions;
   justify?: keyof typeof justifyMap;
   align?: keyof typeof alignMap;
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
 }
@@ -61,8 +56,6 @@ export type InlineProps<T extends ValidConstructor = "div"> =
 export function Inline<T extends ValidConstructor = "div">(
   props: Readonly<InlineProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -72,29 +65,29 @@ export function Inline<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
+
+  const getMinItemWidthValue = (value: MinItemWidth) => {
+    if (typeof value === "string") {
+      return getSizeValue(value) ?? value;
+    }
+    return `${value}px`;
+  };
 
   const minItemWidth = () =>
     props.minItemWidth
-      ? `--minItemWidth: ${
-          typeof props.minItemWidth === "string"
-            ? props.minItemWidth
-            : `${props.minItemWidth}px`
-        };`
+      ? `--min-item-width: ${getMinItemWidthValue(props.minItemWidth)};`
       : undefined;
 
   const switchAt = () =>
     props.switchAt
-      ? `--switchAt: ${getSizeValue(theme, props.switchAt) ?? "0px"};`
+      ? `--switch-at: ${getSizeValue(props.switchAt) ?? "0px"};`
       : "";
 
-  const justify = () =>
-    props.justify !== undefined ? justifyMap[props.justify] : undefined;
+  const justify = () => (props.justify ? justifyMap[props.justify] : undefined);
 
   const align = () =>
-    props.align !== undefined ? alignMap[props.align] : undefined;
+    props.align === undefined ? alignMap.center : alignMap[props.align];
 
   const stretch = () =>
     props.stretch ? `stretch:${props.stretch}` : undefined;
@@ -108,14 +101,7 @@ export function Inline<T extends ValidConstructor = "div">(
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, [
-        "as",
-        "gutter",
-        "justify",
-        "align",
-        "stretch",
-        "switchAt",
-      ]),
+      omitProps(props, ["as", "justify", "align", "stretch", "switchAt"]),
       createPropsFromAccessors({
         style,
         "data-br-inline": attrAssessor,

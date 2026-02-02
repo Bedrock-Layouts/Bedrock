@@ -10,14 +10,14 @@ Full docs at: [solid.bedrock-layout.dev](https://solid.bedrock-layout.dev/)
 
 or
 
-`yarn add @bedrock-laylock/solid`
+`yarn add @bedrock-layout/solid`
 
 ---
 
 ## Usage
 
 ```javascript
-import { Stack, Inline, Split, Cover, Frame } from '@bedrock-layout/solid';
+import { Stack, Inline, Split, Cover, Frame } from "@bedrock-layout/solid";
 
 export function Hero() {
   return (

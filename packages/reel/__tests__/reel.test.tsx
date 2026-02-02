@@ -30,7 +30,7 @@ describe("Reel", () => {
       const snapTypeOptions = ["none", "mandatory", "proximity"] as const;
       snapTypeOptions.forEach((snapType) => {
         const reel = create(
-          <Reel gutter="size3" snapType={snapType}>
+          <Reel gap="size3" snapType={snapType}>
             <Lorem />
           </Reel>,
         );
@@ -38,7 +38,7 @@ describe("Reel", () => {
       });
     });
 
-    it("renders default gutter when none supplied", () => {
+    it("renders default gap when none supplied", () => {
       const reel = create(
         <Reel>
           <Lorem />
@@ -47,11 +47,11 @@ describe("Reel", () => {
       expect(reel.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const reel = create(
-          <Reel gutter={gutter}>
+          <Reel gap={gap}>
             <Lorem />
           </Reel>,
         );
@@ -59,18 +59,18 @@ describe("Reel", () => {
       });
     });
 
-    it("renders custom gutter as number", () => {
+    it("renders custom gap as number", () => {
       const reel = create(
-        <Reel gutter={20}>
+        <Reel gap={20}>
           <Lorem />
         </Reel>,
       );
       expect(reel.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom gutter as string", () => {
+    it("renders custom gap as string", () => {
       const reel = create(
-        <Reel gutter="3ch">
+        <Reel gap="3ch">
           <Lorem />
         </Reel>,
       );
@@ -82,7 +82,7 @@ describe("Reel", () => {
     it("renders with console error with incorrect snapType", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Reel gutter="size3" snapType="incorrect">
+        <Reel gap="size3" snapType="incorrect">
           <Lorem />
         </Reel>,
       );
@@ -90,10 +90,10 @@ describe("Reel", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders with console error with incorrect gutter", () => {
+    it("renders with console error with incorrect gap", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Reel gutter={{ value: "incorrect" }}>
+        <Reel gap={{ value: "incorrect" }}>
           <Lorem />
         </Reel>,
       );

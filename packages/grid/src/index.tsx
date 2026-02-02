@@ -4,7 +4,6 @@ import {
   SizesOptions,
   getSafeGutter,
   getSizeValue,
-  useTheme,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React from "react";
@@ -18,11 +17,6 @@ type MinItemWidth = number | CSSLength | SizesOptions;
  * Props for the Grid component.
  */
 export type GridProps = {
-  /**
-   * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
   /**
    * Sets space between each element.
    */
@@ -43,20 +37,11 @@ export type GridProps = {
  * that will automatically wrap based on the number of children and the `minItemWidth`.
  */
 export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
-  {
-    as: Component = "div",
-    style = {},
-    minItemWidth,
-    gap,
-    gutter,
-    variant,
-    ...props
-  },
+  { as: Component = "div", style = {}, minItemWidth, gap, variant, ...props },
   ref,
 ) {
-  const theme = useTheme();
-  const maybeMinItemWidth = getSizeValue(theme, minItemWidth);
-  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
+  const maybeMinItemWidth = getSizeValue(minItemWidth);
+  const maybeGutter = getSafeGutter(gap);
 
   const attributeValue = variant === "masonry" ? "variant:masonry" : true;
 
@@ -66,8 +51,8 @@ export const Grid = forwardRefWithAs<"div", GridProps>(function Grid(
       data-br-grid={attributeValue}
       style={
         {
-          "--minItemWidth": maybeMinItemWidth,
-          "--gutter": maybeGutter,
+          "--min-item-width": maybeMinItemWidth,
+          "--gap": maybeGutter,
           ...style,
         } as React.CSSProperties
       }

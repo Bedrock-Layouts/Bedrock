@@ -28,7 +28,7 @@ export function InlinePage(): JSXElement {
   const [props, setProps] = createSignal(initialValues);
 
   return (
-    <Stack gutter="size9">
+    <Stack gap="size9">
       <Heading id="title">Inline</Heading>
       <PageSection title="Use Case">
         <p>

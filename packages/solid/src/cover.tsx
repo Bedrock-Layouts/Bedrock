@@ -1,12 +1,12 @@
-import { JSX, JSXElement, mergeProps, splitProps } from "solid-js";
+import { JSX, JSXElement, mergeProps } from "solid-js";
 
 import {
   CSSLength,
+  SizesOptions,
   SpacingOptions,
-  checkIsCSSLength,
+  getSizeValue,
   getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -15,20 +15,11 @@ import createDynamic, {
   omitProps,
 } from "./typeUtils";
 
-type MinHeight = CSSLength | number;
+type MinHeight = CSSLength | number | SizesOptions;
 
 interface CoverWrapperBaseProps {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minHeight?: MinHeight;
-  /**
-   * Sets the content to stretch to the full height of the cover component minus the top and bottom slots.
-   * @deprecated Use `variant` set to `stretch-content` instead.
-   */
-  stretchContent?: boolean;
   variant?: "default" | "stretch-content";
 }
 
@@ -37,15 +28,13 @@ export type CoverWrapperProps<T extends ValidConstructor = "div"> =
 
 function getSafeMinHeight(minHeight?: MinHeight) {
   if (typeof minHeight === "number") return `${minHeight}px`;
-
-  return minHeight && checkIsCSSLength(minHeight) ? minHeight : "100vh";
+  const sizeValue = getSizeValue(minHeight);
+  return sizeValue ?? "100%";
 }
 
 function CoverWrapper<T extends ValidConstructor = "div">(
   props: Readonly<CoverWrapperProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -55,23 +44,19 @@ function CoverWrapper<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
 
-  const minHeight = () => `--minHeight: ${getSafeMinHeight(props.minHeight)};`;
+  const minHeight = () => `--min-height: ${getSafeMinHeight(props.minHeight)};`;
 
   const stretchContent = () =>
-    props.variant === "stretch-content" || props.stretchContent === true
-      ? "stretch-content"
-      : "";
+    props.variant === "stretch-content" ? "stretch-content" : "";
 
   const style = () => [propsStyle(), gutter(), minHeight()].join("; ");
 
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "minHeight", "stretchContent"]),
+      omitProps(props, ["as", "minHeight"]),
       createPropsFromAccessors({
         style,
         "data-br-cover": stretchContent,
@@ -80,22 +65,33 @@ function CoverWrapper<T extends ValidConstructor = "div">(
   );
 }
 
+/**
+ * The `CoverCentered` component is used to mark the centered child in a Cover layout.
+ */
+export function CoverCentered<T extends ValidConstructor = "div">(
+  props: Readonly<HeadlessPropsWithRef<T>>,
+): JSX.Element {
+  return createDynamic(
+    () => props.as ?? ("div" as T),
+    mergeProps(omitProps(props, ["as"]), {
+      "data-br-cover-centered": "",
+    }) as DynamicProps<T>,
+  );
+}
+
 export interface CoverProps {
-  top?: JSXElement;
-  bottom?: JSXElement;
   children?: JSXElement;
 }
 
+/**
+ * The `Cover` component is designed to vertically cover a predefined area, `100%` by default, and vertically center its children.
+ */
 export function Cover<T extends ValidConstructor = "div">(
   props: Readonly<CoverWrapperProps<T> & CoverProps>,
 ): JSX.Element {
-  const [local, restProps] = splitProps(props, ["children", "top", "bottom"]);
-
   return (
-    <CoverWrapper {...(restProps as CoverWrapperProps)}>
-      {local.top}
-      <div data-br-cover-centered>{local.children}</div>
-      {local.bottom}
+    <CoverWrapper {...(props as CoverWrapperProps)}>
+      {props.children}
     </CoverWrapper>
   );
 }

@@ -1,7 +1,9 @@
 import { JSX, mergeProps } from "solid-js";
 
-import { SpacingOptions, getSpacingValue } from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+import {
+  SpacingOptions,
+  getSpacingValue,
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -18,10 +20,6 @@ const alignMap = {
 } as const;
 
 export interface StackPropsBase {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   align?: keyof typeof alignMap;
 }
@@ -32,7 +30,6 @@ export type StackProps<T extends ValidConstructor = "div"> =
 export function Stack<T extends ValidConstructor = "div">(
   props: Readonly<StackProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -42,21 +39,18 @@ export function Stack<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
 
   const style = () => [propsStyle(), gutter()].join("; ");
 
-  const align = () =>
-    props.align !== undefined ? alignMap[props.align] : undefined;
+  const align = () => (props.align ? alignMap[props.align] : undefined);
 
   const attrAssessor = () => [align()].filter(Boolean).join(" ");
 
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter"]),
+      omitProps(props, ["as"]),
       createPropsFromAccessors({ style, "data-br-stack": attrAssessor }),
     ) as DynamicProps<T>,
   );

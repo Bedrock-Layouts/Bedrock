@@ -16,11 +16,7 @@ export default defineConfig({
       },
     },
     rollupOptions: {
-      external: [
-        "solid-js",
-        "@bedrock-layout/register-resize-callback",
-        "open-props",
-      ],
+      external: ["solid-js", "@bedrock-layout/spacing-constants", "open-props"],
     },
   },
 });
