@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-02-03)
+
+### Features
+
+- feat: A new feature ([04df100](https://github.com/Bedrock-Layouts/Bedrock/commit/04df100ed61e0ba4a42052d2c0669bb3e1084a8d)), closes [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207)
+- this implements the breaking changes found at [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207) ([40e8b47](https://github.com/Bedrock-Layouts/Bedrock/commit/40e8b47d24a52fb486555900dce4e4bcaefaca8a))
+
+### BREAKING CHANGES
+
+- this removes components and props and updates the underlying css to only use the
+  data-br-\* style attributes
+
 ## [3.0.47](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/primitives@3.0.46...@bedrock-layout/primitives@3.0.47) (2025-05-05)
 
 **Note:** Version bump only for package @bedrock-layout/primitives

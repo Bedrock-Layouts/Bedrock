@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.7.9...@bedrock-layout/solid-doc-site@2.0.0) (2026-02-03)
+
+### Features
+
+- feat: A new feature ([04df100](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/04df100ed61e0ba4a42052d2c0669bb3e1084a8d)), closes [#2207](https://github.com/Bedrock-Layouts/Solid-Bedrock/issues/2207)
+- this implements the breaking changes found at [#2207](https://github.com/Bedrock-Layouts/Solid-Bedrock/issues/2207) ([40e8b47](https://github.com/Bedrock-Layouts/Solid-Bedrock/commit/40e8b47d24a52fb486555900dce4e4bcaefaca8a))
+
+### BREAKING CHANGES
+
+- this removes components and props and updates the underlying css to only use the
+  data-br-\* style attributes
+
 ## [1.7.9](https://github.com/Bedrock-Layouts/Solid-Bedrock/compare/@bedrock-layout/solid-doc-site@1.7.8...@bedrock-layout/solid-doc-site@1.7.9) (2026-02-01)
 
 ### Bug Fixes

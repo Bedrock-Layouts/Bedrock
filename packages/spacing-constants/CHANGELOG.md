@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-02-03)
+
+### Features
+
+- this implements the breaking changes found at [#2207](https://github.com/Bedrock-Layouts/Bedrock/issues/2207) ([40e8b47](https://github.com/Bedrock-Layouts/Bedrock/commit/40e8b47d24a52fb486555900dce4e4bcaefaca8a))
+
+### BREAKING CHANGES
+
+- this removes components and props and updates the underlying css to only use the
+  data-br-\* style attributes
+
 ## [3.3.10](https://github.com/Bedrock-Layouts/Bedrock/compare/@bedrock-layout/spacing-constants@3.3.9...@bedrock-layout/spacing-constants@3.3.10) (2025-02-07)
 
 **Note:** Version bump only for package @bedrock-layout/spacing-constants
