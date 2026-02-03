@@ -33,7 +33,9 @@ describe("Center", () => {
           <Lorem />
         </Center>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--max-width")).toBe("");
     });
 
     it("renders custom width", () => {
@@ -42,7 +44,9 @@ describe("Center", () => {
           <Lorem />
         </Center>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--max-width": "320px" });
     });
 
     it("renders custom width as string", () => {
@@ -51,7 +55,9 @@ describe("Center", () => {
           <Lorem />
         </Center>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--max-width": "320px" });
     });
   });
 
@@ -63,10 +69,12 @@ describe("Center", () => {
           <Lorem />
         </Center>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--max-width")).toBe("320pixels");
     });
 
-    it("renders default with console error with no children", () => {
+    it("renders default with invalid maxWidth input", () => {
       const { container } = render(
         // @ts-expect-error
         <Center maxWidth={["incorrect"]}>
@@ -74,7 +82,9 @@ describe("Center", () => {
         </Center>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--max-width")).toBe("incorrect");
     });
   });
 });

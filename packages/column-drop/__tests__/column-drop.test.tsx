@@ -36,7 +36,9 @@ describe("ColumnDrop", () => {
             <Lorem />
           </ColumnDrop>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-column-drop]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
@@ -47,7 +49,9 @@ describe("ColumnDrop", () => {
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders custom gap with number", () => {
@@ -57,17 +61,21 @@ describe("ColumnDrop", () => {
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("320px");
     });
 
-    it("renders custom gap with number", () => {
+    it("renders custom gap with string", () => {
       const { container } = render(
         <ColumnDrop gap="60ch">
           <Lorem />
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("60ch");
     });
 
     it("renders custom minItemWidth", () => {
@@ -76,7 +84,9 @@ describe("ColumnDrop", () => {
           <Lorem />
         </ColumnDrop>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("320px");
     });
 
     it("renders custom minItemWidth as string", () => {
@@ -85,7 +95,9 @@ describe("ColumnDrop", () => {
           <Lorem />
         </ColumnDrop>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("32rem");
     });
 
     it("renders with theme overrides", () => {
@@ -97,7 +109,9 @@ describe("ColumnDrop", () => {
           </ColumnDrop>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 
@@ -110,10 +124,12 @@ describe("ColumnDrop", () => {
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with minItemWidth input", () => {
+    it("renders default with invalid minItemWidth input", () => {
       const { container } = render(
         // @ts-expect-error
         <ColumnDrop gap="size3" minItemWidth={{ value: "incorrect" }}>
@@ -121,10 +137,12 @@ describe("ColumnDrop", () => {
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
 
-    it("renders default with console error with an invalid CSS String", () => {
+    it("renders default with invalid CSS length string", () => {
       const { container } = render(
         // @ts-expect-error
         <ColumnDrop gap="size3" minItemWidth="garbage">
@@ -132,7 +150,9 @@ describe("ColumnDrop", () => {
         </ColumnDrop>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-column-drop]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
   });
 });

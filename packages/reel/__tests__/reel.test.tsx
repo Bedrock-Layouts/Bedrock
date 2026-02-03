@@ -34,7 +34,11 @@ describe("Reel", () => {
             <Lorem />
           </Reel>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-reel]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-reel")).toContain(
+          `snapType:${snapType}`,
+        );
       });
     });
 
@@ -44,7 +48,9 @@ describe("Reel", () => {
           <Lorem />
         </Reel>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
@@ -55,7 +61,9 @@ describe("Reel", () => {
             <Lorem />
           </Reel>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-reel]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
@@ -65,7 +73,9 @@ describe("Reel", () => {
           <Lorem />
         </Reel>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders custom gap as string", () => {
@@ -74,12 +84,14 @@ describe("Reel", () => {
           <Lorem />
         </Reel>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders with console error with incorrect snapType", () => {
+    it("renders with invalid snapType", () => {
       const { container } = render(
         // @ts-expect-error
         <Reel gap="size3" snapType="incorrect">
@@ -87,10 +99,14 @@ describe("Reel", () => {
         </Reel>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-reel")).toContain(
+        "snapType:incorrect",
+      );
     });
 
-    it("renders with console error with incorrect gap", () => {
+    it("renders with invalid gap input", () => {
       const { container } = render(
         // @ts-expect-error
         <Reel gap={{ value: "incorrect" }}>
@@ -98,7 +114,9 @@ describe("Reel", () => {
         </Reel>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 });

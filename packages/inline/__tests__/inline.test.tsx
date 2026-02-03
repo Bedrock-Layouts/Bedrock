@@ -1,4 +1,4 @@
-import { spacing } from "@bedrock-layout/spacing-constants";
+import { sizes, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
@@ -36,7 +36,9 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
@@ -54,7 +56,11 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-inline")).toContain(
+          `justify:${justify}`,
+        );
       });
     });
 
@@ -66,7 +72,11 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-inline")).toContain(
+          `align:${align}`,
+        );
       });
     });
 
@@ -78,7 +88,11 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-inline")).toContain(
+          `stretch:${stretch}`,
+        );
       });
     });
 
@@ -90,7 +104,17 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        if (switchAt === "sizeContent2") {
+          expect(element?.style.getPropertyValue("--switch-at")).toBe(
+            sizes.sizeContent2,
+          );
+        } else if (typeof switchAt === "number") {
+          expect(element?.style.getPropertyValue("--switch-at")).toBe("42px");
+        } else {
+          expect(element?.style.getPropertyValue("--switch-at")).toBe("42rem");
+        }
       });
     });
 
@@ -102,13 +126,23 @@ describe("Inline", () => {
             <Lorem />
           </Inline>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline]");
+        expect(element).toBeInTheDocument();
+        if (typeof minItemWidth === "number") {
+          expect(element?.style.getPropertyValue("--min-item-width")).toBe(
+            "42px",
+          );
+        } else {
+          expect(element?.style.getPropertyValue("--min-item-width")).toBe(
+            "42rem",
+          );
+        }
       });
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with console error with wrong stretch input", () => {
+    it("renders default with invalid stretch input", () => {
       const { container } = render(
         // @ts-expect-error
         <Inline gap="size3" stretch="incorrect">
@@ -116,10 +150,14 @@ describe("Inline", () => {
         </Inline>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-inline")).toContain(
+        "stretch:incorrect",
+      );
     });
 
-    it("renders default with console error with wrong minItemWidth input", () => {
+    it("renders default with invalid minItemWidth input", () => {
       const { container } = render(
         // @ts-expect-error
         <Inline gap="size3" minItemWidth="incorrect">
@@ -127,7 +165,11 @@ describe("Inline", () => {
         </Inline>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe(
+        "incorrect",
+      );
     });
   });
 });

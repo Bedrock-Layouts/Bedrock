@@ -16,7 +16,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("16/9");
     });
 
     it("renders with ratio as a string", () => {
@@ -25,7 +27,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("16/9");
     });
 
     it("renders with ratio as a string with spaces", () => {
@@ -34,7 +38,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("16/9");
     });
 
     it("renders with ratio string using a colon", () => {
@@ -43,7 +49,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("16/9");
     });
 
     it("renders with ratio string using a colon and with spaces", () => {
@@ -52,7 +60,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("16/9");
     });
 
     it("renders without ratio", () => {
@@ -61,7 +71,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
 
     it("renders custom position", () => {
@@ -70,7 +82,9 @@ describe("Frame", () => {
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--position")).toBe("top left");
     });
   });
 
@@ -83,7 +97,9 @@ describe("Frame", () => {
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--position")).toBe("");
     });
 
     it("renders without ratio if ratio is not correct type", () => {
@@ -94,7 +110,9 @@ describe("Frame", () => {
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
 
     it("renders without ratio with error if array of length <1 provided", () => {
@@ -105,7 +123,9 @@ describe("Frame", () => {
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
 
     it("renders without ratio with error if array of length >2 provided", () => {
@@ -116,7 +136,9 @@ describe("Frame", () => {
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
 
     it("renders without ratio with error if array of not numbers provided", () => {
@@ -127,17 +149,21 @@ describe("Frame", () => {
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
 
     it("renders without ratio with error if ratio string is not correct format", () => {
       const { container } = render(
-        <Frame ratio="16:9">
+        <Frame ratio="16x9">
           <img src="https://picsum.photos/5000" alt="random thing" />
         </Frame>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-frame]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--ratio")).toBe("");
     });
   });
 });

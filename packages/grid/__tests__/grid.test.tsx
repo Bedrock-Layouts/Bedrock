@@ -34,7 +34,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
@@ -45,7 +47,9 @@ describe("Grid", () => {
             <Lorem />
           </Grid>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-grid]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
@@ -55,7 +59,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders custom gap with string", () => {
@@ -64,7 +70,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders custom minItemWidth", () => {
@@ -73,7 +81,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("320px");
     });
 
     it("renders custom minItemWidth as string", () => {
@@ -82,7 +92,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("32rem");
     });
 
     it("renders masonry variant", () => {
@@ -91,7 +103,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("data-br-grid", "variant:masonry");
     });
 
     it("renders with theme overrides", () => {
@@ -103,7 +117,9 @@ describe("Grid", () => {
           </Grid>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 
@@ -116,10 +132,12 @@ describe("Grid", () => {
         </Grid>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with minItemWidth input", () => {
+    it("renders default with invalid minItemWidth input", () => {
       const { container } = render(
         // @ts-expect-error
         <Grid gap="size3" minItemWidth={{ value: "incorrect" }}>
@@ -127,10 +145,12 @@ describe("Grid", () => {
         </Grid>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
 
-    it("renders default with console error when minItemWidth is not valid CSSLength", () => {
+    it("renders default with invalid CSS length string", () => {
       const { container } = render(
         // @ts-expect-error
         <Grid gap="size3" minItemWidth="garbage">
@@ -138,7 +158,9 @@ describe("Grid", () => {
         </Grid>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
 
     it("renders grid if anything used as variant other than `masonry`", () => {
@@ -148,7 +170,9 @@ describe("Grid", () => {
           <Lorem />
         </Grid>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("data-br-grid", "true");
     });
   });
 });

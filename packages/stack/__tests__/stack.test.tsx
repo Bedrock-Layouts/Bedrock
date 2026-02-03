@@ -34,7 +34,9 @@ describe("Stack", () => {
           <Lorem />
         </Stack>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
@@ -45,19 +47,24 @@ describe("Stack", () => {
             <Lorem />
           </Stack>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-stack]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders all the align options", () => {
-      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       (["start", "stretch", "end", "center"] as const).forEach((align) => {
         const { container } = render(
           <Stack align={align}>
             <Lorem />
           </Stack>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-stack]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-stack")).toContain(
+          `align:${align}`,
+        );
       });
     });
 
@@ -67,7 +74,9 @@ describe("Stack", () => {
           <Lorem />
         </Stack>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--gap": "20px" });
     });
 
     it("renders custom gap with string", () => {
@@ -76,7 +85,9 @@ describe("Stack", () => {
           <Lorem />
         </Stack>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--gap": "3ch" });
     });
 
     it("renders with theme overrides", () => {
@@ -88,7 +99,9 @@ describe("Stack", () => {
           </Stack>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders with theme overrides using 'space' as key", () => {
@@ -100,7 +113,9 @@ describe("Stack", () => {
           </Stack>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders 0px with theme overrides", () => {
@@ -111,7 +126,9 @@ describe("Stack", () => {
           </Stack>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe(spacing.size3);
     });
   });
 
@@ -124,7 +141,9 @@ describe("Stack", () => {
         </Stack>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 });

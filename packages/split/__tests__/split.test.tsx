@@ -37,7 +37,9 @@ describe("Split", () => {
           <Lorem />
         </Split>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
@@ -48,7 +50,9 @@ describe("Split", () => {
             <Lorem />
           </Split>,
         );
-        expect(container).toMatchSnapshot();
+        const element = container.querySelector("[data-br-split]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
@@ -58,7 +62,9 @@ describe("Split", () => {
           <Lorem />
         </Split>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("1px");
     });
 
     it("renders custom gap with string", () => {
@@ -67,7 +73,9 @@ describe("Split", () => {
           <Lorem />
         </Split>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders all the fraction options", () => {
@@ -78,7 +86,11 @@ describe("Split", () => {
               <Lorem />
             </Split>,
           );
-          expect(container).toMatchSnapshot();
+          const element = container.querySelector("[data-br-split]");
+          expect(element).toBeInTheDocument();
+          expect(element?.getAttribute("data-br-split")).toContain(
+            `fraction:${fraction}`,
+          );
         },
       );
     });
@@ -92,7 +104,9 @@ describe("Split", () => {
           </Split>
         </>,
       );
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("should render a stack if container is below switchAt", () => {
@@ -108,7 +122,9 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("600px");
       // @ts-expect-error
       useContainerQuery.mockRestore();
     });
@@ -120,7 +136,9 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.tagName).toBe("MAIN");
     });
 
     it("should render a split if container is above switchAt", () => {
@@ -136,7 +154,9 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("601px");
 
       // @ts-expect-error
       useContainerQuery.mockRestore();
@@ -144,6 +164,7 @@ describe("Split", () => {
 
     it("should render a split if container is above switchAt using a css string", () => {
       const widthToSwitchAt = 600;
+      const expectedSwitchAt = `${(widthToSwitchAt + 1) / 16}rem`;
 
       // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
@@ -151,12 +172,16 @@ describe("Split", () => {
       });
 
       const { container } = render(
-        <Split gap="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
+        <Split gap="size3" switchAt={expectedSwitchAt}>
           <Lorem />
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe(
+        expectedSwitchAt,
+      );
 
       // @ts-expect-error
       useContainerQuery.mockRestore();
@@ -172,7 +197,9 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders default with negative number for gap", () => {
@@ -182,20 +209,24 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with fraction input", () => {
+    it("renders default with invalid fraction", () => {
       const { container } = render(
         <Split fraction="incorrect">
           <Lorem />
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-split")).toBe("");
     });
 
-    it("renders default with console error with wrong switchAt input", () => {
+    it("renders default with invalid switchAt input", () => {
       const { container } = render(
         // @ts-expect-error
         <Split gap="size3" switchAt={{ value: "incorrect" }}>
@@ -203,7 +234,11 @@ describe("Split", () => {
         </Split>,
       );
 
-      expect(container).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe(
+        "[object Object]",
+      );
     });
   });
 });
