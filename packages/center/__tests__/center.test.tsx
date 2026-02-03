@@ -1,5 +1,5 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Center } from "../src";
@@ -28,53 +28,53 @@ describe("Center", () => {
     });
 
     it("renders default width", () => {
-      const center = create(
+      const { container } = render(
         <Center>
           <Lorem />
         </Center>,
       );
-      expect(center.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders custom width", () => {
-      const center = create(
+      const { container } = render(
         <Center maxWidth={320}>
           <Lorem />
         </Center>,
       );
-      expect(center.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders custom width as string", () => {
-      const center = create(
+      const { container } = render(
         <Center maxWidth="320px">
           <Lorem />
         </Center>,
       );
-      expect(center.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default width if invalid CSS length", () => {
-      const center = create(
+      const { container } = render(
         // @ts-expect-error
         <Center maxWidth="320pixels">
           <Lorem />
         </Center>,
       );
-      expect(center.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders default with console error with no children", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Center maxWidth={["incorrect"]}>
           <Lorem />
         </Center>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });

@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Stack } from "../src";
@@ -29,58 +29,58 @@ describe("Stack", () => {
     });
 
     it("renders 0px default with no gap provided", () => {
-      const stack = create(
+      const { container } = render(
         <Stack>
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const stack = create(
+        const { container } = render(
           <Stack gap={gap}>
             <Lorem />
           </Stack>,
         );
-        expect(stack.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders all the align options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       (["start", "stretch", "end", "center"] as const).forEach((align) => {
-        const stack = create(
+        const { container } = render(
           <Stack align={align}>
             <Lorem />
           </Stack>,
         );
-        expect(stack.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders custom gap with number", () => {
-      const stack = create(
+      const { container } = render(
         <Stack gap={20}>
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders custom gap with string", () => {
-      const stack = create(
+      const { container } = render(
         <Stack gap="3ch">
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders with theme overrides", () => {
-      const stack = create(
+      const { container } = render(
         <>
           {/* @ts-expect-error */}
           <Stack gap="1x">
@@ -88,11 +88,11 @@ describe("Stack", () => {
           </Stack>
         </>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders with theme overrides using 'space' as key", () => {
-      const stack = create(
+      const { container } = render(
         <>
           {/* @ts-expect-error */}
           <Stack gap="1x">
@@ -100,31 +100,31 @@ describe("Stack", () => {
           </Stack>
         </>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders 0px with theme overrides", () => {
-      const stack = create(
+      const { container } = render(
         <>
           <Stack gap="size3">
             <Lorem />
           </Stack>
         </>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default with wrong gap value", () => {
-      const errorStack = create(
+      const { container } = render(
         //@ts-expect-error
         <Stack gap={{ value: "incorrect" }}>
           <Lorem />
         </Stack>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });

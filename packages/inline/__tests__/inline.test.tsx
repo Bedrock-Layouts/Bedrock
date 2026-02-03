@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Inline } from "../src";
@@ -31,12 +31,12 @@ describe("Inline", () => {
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const inline = create(
+        const { container } = render(
           <Inline gap={gap}>
             <Lorem />
           </Inline>,
         );
-        expect(inline.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
@@ -49,85 +49,85 @@ describe("Inline", () => {
         "space-between",
       ] as const;
       justifications.forEach((justify) => {
-        const inlineCluster = create(
+        const { container } = render(
           <Inline gap="size3" justify={justify}>
             <Lorem />
           </Inline>,
         );
-        expect(inlineCluster.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders all the align options", () => {
       const alignments = ["start", "center", "end", "stretch"] as const;
       alignments.forEach((align) => {
-        const inlineCluster = create(
+        const { container } = render(
           <Inline gap="size3" align={align}>
             <Lorem />
           </Inline>,
         );
-        expect(inlineCluster.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders all the stretch options", () => {
       const stretchOptions = ["all", "start", "end", 0, 3] as const;
       stretchOptions.forEach((stretch) => {
-        const inline = create(
+        const { container } = render(
           <Inline gap="size3" stretch={stretch}>
             <Lorem />
           </Inline>,
         );
-        expect(inline.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders with switchAt", () => {
       const switchAtOptions = [42, "42rem", "sizeContent2"] as const;
       switchAtOptions.forEach((switchAt) => {
-        const inline = create(
+        const { container } = render(
           <Inline gap="size3" switchAt={switchAt}>
             <Lorem />
           </Inline>,
         );
-        expect(inline.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     it("renders with minItemWidth", () => {
       const minItemWidthOptions = [42, "42rem"] as const;
       minItemWidthOptions.forEach((minItemWidth) => {
-        const inline = create(
+        const { container } = render(
           <Inline gap="size3" minItemWidth={minItemWidth}>
             <Lorem />
           </Inline>,
         );
-        expect(inline.toJSON()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default with console error with wrong stretch input", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Inline gap="size3" stretch="incorrect">
           <Lorem />
         </Inline>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders default with console error with wrong minItemWidth input", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Inline gap="size3" minItemWidth="incorrect">
           <Lorem />
         </Inline>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });
