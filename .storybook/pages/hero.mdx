@@ -31,12 +31,12 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter='size3'>
+    <Stack gap="size3">
       <Menu />
-      <Stack as="header" gutter='size3'>
+      <Stack as="header" gap="size3">
         <h1>Coco Le Belle</h1>
         <p>Elegant Feminine Fashion</p>
-        <Inline gutter='size3'>
+        <Inline gap="size3">
           <button>New Arrivals</button>
         </Inline>
       </Stack>
@@ -50,7 +50,7 @@ export default App;
 
 Your browser should now show something like this:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={heroPageInitial}
@@ -58,7 +58,7 @@ Your browser should now show something like this:
   />
 </Center>
 
-The Cover component is a wrapper component that will vertically center it's content. It also let's you optionally render an item on above and/or below the content.
+The Cover component is a wrapper component that will vertically center its content. The centered child is marked by the `CoverCentered` component, while any other children will render above or below it based on document order.
 
 So let's start by downloading the Cover component:
 
@@ -71,22 +71,25 @@ And then we'll update our `App.js` file to look like this:
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
 import { Inline } from "@bedrock-layout/inline";
-import { Cover } from "@bedrock-layout/cover";
+import { Cover, CoverCentered } from "@bedrock-layout/cover";
 
 import { Subscribe } from "./Subscribe";
 import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter='size3'>
-      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
-        <Stack as="header" gutter='size3'>
-          <h1>Coco Le Belle</h1>
-          <p>Elegant Feminine Fashion</p>
-          <Inline gutter='size3'>
-            <button>New Arrivals</button>
-          </Inline>
-        </Stack>
+    <Stack gap="size3">
+      <Cover minHeight="50vh" gap="size3">
+        <Menu />
+        <CoverCentered>
+          <Stack as="header" gap="size3">
+            <h1>Coco Le Belle</h1>
+            <p>Elegant Feminine Fashion</p>
+            <Inline gap="size3">
+              <button>New Arrivals</button>
+            </Inline>
+          </Stack>
+        </CoverCentered>
       </Cover>
       <Subscribe />
     </Stack>
@@ -98,7 +101,7 @@ export default App;
 
 Your browser should now show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={heroPageWithCover}
@@ -119,7 +122,7 @@ Then we can add it to our `App.js` file:
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
 import { Inline } from "@bedrock-layout/inline";
-import { Cover } from "@bedrock-layout/cover";
+import { Cover, CoverCentered } from "@bedrock-layout/cover";
 import { Center } from "@bedrock-layout/center";
 
 import { Subscribe } from "./Subscribe";
@@ -127,19 +130,22 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter='size3'>
-      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
-        <Center maxWidth="40rem">
-          <Stack as="header" gutter='size3'>
-            <h1>Coco Le Belle</h1>
-            <p>Elegant Feminine Fashion</p>
-            <Inline gutter='size3'>
-              <button>New Arrivals</button>
-            </Inline>
-          </Stack>
-        </Center>
+    <Stack gap="size3">
+      <Cover minHeight="50vh" gap="size3">
+        <Menu />
+        <CoverCentered>
+          <Center maxWidth="40rem">
+            <Stack as="header" gap="size3">
+              <h1>Coco Le Belle</h1>
+              <p>Elegant Feminine Fashion</p>
+              <Inline gap="size3">
+                <button>New Arrivals</button>
+              </Inline>
+            </Stack>
+          </Center>
+        </CoverCentered>
       </Cover>
-      <Center centerText>
+      <Center style={{ textAlign: "center" }}>
         <Subscribe />
       </Center>
     </Stack>
@@ -151,7 +157,7 @@ export default App;
 
 Your browser should now show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={heroPageWithCenter}
@@ -159,43 +165,9 @@ Your browser should now show the following:
   />
 </Center>
 
-## AppBoundary
-
-When we think of responsive design, we typically think of phones and tablets. However, screen resolutions are getting larger and larger. Allowing our page to grow to the same width as a 4K monitor is irresponsible. A website typically will want to clamp at an outer limit and stay centered on the screen.
-
-The `AppBoundary` is built on the `Center` component and is designed to wrap your entire app. By default, it will clamp the width at the `1920px`, which is the `xxlarge` size option. This can also be set via the `boundarySize` prop to any of the valid size options.
-
-Let's start by installing the `AppBoundary` primitive:
-
-```bash
-yarn add @bedrock-layout/appboundary
-```
-
-Then we can update our `index.js` file to use the `AppBoundary` primitive:
-
-```jsx
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { AppBoundary } from "@bedrock-layout/appboundary";
-import reportWebVitals from "./reportWebVitals";
-
-ReactDOM.render(
-  <React.StrictMode>
-    <AppBoundary boundarySize="xlarge">
-      <App />
-    </AppBoundary>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-```
-
-Now the `AppBoundary` will clamp the width of your app to the `xlarge` size option, or `1439px`.
-
 Our landing page is coming along. In the next section, we'll be building cards and add them to a responsive grid layout.
 
-<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gap="size3" minItemWidth="fit-content">
   <Button
     as="a"
     href="/?path=/docs/getting-started-lesson-4-the-menu-component--docs"

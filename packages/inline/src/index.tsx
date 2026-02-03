@@ -2,9 +2,11 @@ import {
   CSSLength,
   Gutter,
   SizesOptions,
+  createAttributeString,
   getSafeGutter,
   getSizeValue,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -42,24 +44,14 @@ export type InlineProps = {
    */
   align?: "start" | "end" | "center" | "stretch";
   /**
-   * Sets space between each element.
-   * @deprecated Use `gap` instead.
+   * Sets padding on the component using design system spacing scale.
    */
-  gutter?: Gutter;
+  padding?: PaddingConfig;
   /**
    * Sets space between each element.
    */
   gap?: Gutter;
 };
-
-function createAttributeString(
-  prefix: string,
-  value: string | number | undefined,
-) {
-  if (value === undefined) return undefined;
-
-  return `${prefix}:${value}`;
-}
 
 /**
  * The `Inline` component is designed to create consistent spacing between elements of variable width
@@ -77,25 +69,24 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
     justify,
     align,
     gap,
-    gutter,
     stretch,
     style = {},
     switchAt,
     minItemWidth,
+    padding,
     ...props
   },
   ref,
 ) {
-  const theme = useTheme();
-
   const justifyValue = createAttributeString("justify", justify);
-  const alignValue = createAttributeString("align", align);
+  const alignValue = createAttributeString("align", align ?? "center");
   const stretchValue = createAttributeString("stretch", stretch);
+  const paddingAttrs = getPaddingAttributes(padding);
 
-  const maybeMinItemWidth = getSizeValue(theme, minItemWidth) ?? minItemWidth;
-  const switchAtValue = getSizeValue(theme, switchAt);
+  const maybeMinItemWidth = getSizeValue(minItemWidth) ?? minItemWidth;
+  const switchAtValue = getSizeValue(switchAt);
 
-  const attributes = [justifyValue, alignValue, stretchValue]
+  const attributes = [justifyValue, alignValue, stretchValue, ...paddingAttrs]
     .filter(Boolean)
     .join(" ");
 
@@ -105,9 +96,9 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
       data-br-inline={attributes}
       style={
         {
-          "--gutter": getSafeGutter(theme, gap ?? gutter),
-          "--switchAt": switchAtValue,
-          "--minItemWidth": maybeMinItemWidth,
+          "--gap": getSafeGutter(gap),
+          "--switch-at": switchAtValue,
+          "--min-item-width": maybeMinItemWidth,
           ...style,
         } as CSSProperties
       }

@@ -1,13 +1,9 @@
-import {
-  ThemeProvider,
-  sizes,
-  spacing,
-} from "@bedrock-layout/spacing-constants";
+import { sizes, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
 
-import { Cover } from "../src";
+import { Cover, CoverCentered } from "../src";
 
 const Lorem = () => (
   <p>
@@ -30,7 +26,7 @@ describe("Cover", () => {
 
     it("renders default", () => {
       const cover = create(
-        <Cover gutter="size3">
+        <Cover gap="size3">
           <Lorem />
         </Cover>,
       );
@@ -39,7 +35,7 @@ describe("Cover", () => {
 
     it("renders custom height", () => {
       const cover = create(
-        <Cover gutter="size3" minHeight="500px">
+        <Cover gap="size3" minHeight="500px">
           <Lorem />
         </Cover>,
       );
@@ -47,7 +43,7 @@ describe("Cover", () => {
     });
     it("renders with top", () => {
       const cover = create(
-        <Cover gutter="size3" top={<Lorem />}>
+        <Cover gap="size3" top={<Lorem />}>
           <Lorem />
         </Cover>,
       );
@@ -56,7 +52,7 @@ describe("Cover", () => {
 
     it("renders with bottom", () => {
       const cover = create(
-        <Cover gutter="size3" bottom={<Lorem />}>
+        <Cover gap="size3" bottom={<Lorem />}>
           <Lorem />
         </Cover>,
       );
@@ -65,14 +61,14 @@ describe("Cover", () => {
 
     it("renders with top and bottom", () => {
       const cover = create(
-        <Cover gutter="size3" top={<Lorem />} bottom={<Lorem />}>
+        <Cover gap="size3" top={<Lorem />} bottom={<Lorem />}>
           <Lorem />
         </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default gutter when none provided", () => {
+    it("renders default gap when none provided", () => {
       const cover = create(
         <Cover>
           <Lorem />
@@ -81,11 +77,11 @@ describe("Cover", () => {
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const cover = create(
-          <Cover gutter={gutter}>
+          <Cover gap={gap}>
             <Lorem />
           </Cover>,
         );
@@ -93,18 +89,18 @@ describe("Cover", () => {
       });
     });
 
-    it("renders with custom gutter as number", () => {
+    it("renders with custom gap as number", () => {
       const cover = create(
-        <Cover gutter={20}>
+        <Cover gap={20}>
           <Lorem />
         </Cover>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
 
-    it("renders with custom gutter as string", () => {
+    it("renders with custom gap as string", () => {
       const cover = create(
-        <Cover gutter="3ch">
+        <Cover gap="3ch">
           <Lorem />
         </Cover>,
       );
@@ -113,7 +109,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as string", () => {
       const cover = create(
-        <Cover gutter="size3" minHeight="50vh">
+        <Cover gap="size3" minHeight="50vh">
           <Lorem />
         </Cover>,
       );
@@ -122,7 +118,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as custom property", () => {
       const cover = create(
-        <Cover gutter="size3" minHeight="var(--size-xl)">
+        <Cover gap="size3" minHeight="var(--size-xl)">
           <Lorem />
         </Cover>,
       );
@@ -131,7 +127,7 @@ describe("Cover", () => {
 
     it("renders with custom minHeight as number", () => {
       const cover = create(
-        <Cover gutter="size3" minHeight={300}>
+        <Cover gap="size3" minHeight={300}>
           <Lorem />
         </Cover>,
       );
@@ -142,7 +138,7 @@ describe("Cover", () => {
       const sizeKeys = Object.keys(sizes) as Array<keyof typeof sizes>;
       sizeKeys.forEach((size) => {
         const cover = create(
-          <Cover gutter="size3" minHeight={size}>
+          <Cover gap="size3" minHeight={size}>
             <p>{size}</p>
           </Cover>,
         );
@@ -152,7 +148,7 @@ describe("Cover", () => {
 
     it("renders with stretched content", () => {
       const cover = create(
-        <Cover gutter="size3" stretchContent>
+        <Cover gap="size3" stretchContent>
           <Lorem />
         </Cover>,
       );
@@ -161,22 +157,22 @@ describe("Cover", () => {
 
     it("renders with theme overrides", () => {
       const cover = create(
-        <ThemeProvider theme={{ spacing: { "1x": 200 } }}>
+        <>
           {/* @ts-expect-error */}
-          <Cover gutter="1x">
+          <Cover gap="1x">
             <Lorem />
           </Cover>
-        </ThemeProvider>,
+        </>,
       );
       expect(cover.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter", () => {
+    it("renders default with wrong gap", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Cover gutter={{ value: "incorrect" }}>
+        <Cover gap={{ value: "incorrect" }}>
           <Lorem />
         </Cover>,
       );
@@ -187,7 +183,7 @@ describe("Cover", () => {
     it("renders with min-height incorrect with invalid minHeight", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Cover gutter="size3" minHeight="incorrect">
+        <Cover gap="size3" minHeight="incorrect">
           <Lorem />
         </Cover>,
       );
@@ -198,12 +194,51 @@ describe("Cover", () => {
     it("renders without stretched conent with invalid stretchContent prop", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Cover gutter="size3" stretchContent="incorrect">
+        <Cover gap="size3" stretchContent="incorrect">
           <Lorem />
         </Cover>,
       );
 
       expect(errorStack.toJSON()).toMatchSnapshot();
+    });
+  });
+});
+
+describe("CoverCentered", () => {
+  describe("correct usage", () => {
+    test("CoverCentered is not null", () => {
+      expect(CoverCentered).toBeTruthy();
+    });
+
+    it("renders default", () => {
+      const coverCentered = create(
+        <CoverCentered>
+          <Lorem />
+        </CoverCentered>,
+      );
+      expect(coverCentered.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders with custom element", () => {
+      const coverCentered = create(
+        <CoverCentered as="section">
+          <Lorem />
+        </CoverCentered>,
+      );
+      expect(coverCentered.toJSON()).toMatchSnapshot();
+    });
+
+    it("renders within Cover", () => {
+      const cover = create(
+        <Cover gap="size3">
+          <Lorem />
+          <CoverCentered>
+            <Lorem />
+          </CoverCentered>
+          <Lorem />
+        </Cover>,
+      );
+      expect(cover.toJSON()).toMatchSnapshot();
     });
   });
 });

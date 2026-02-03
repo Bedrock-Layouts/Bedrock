@@ -1,5 +1,5 @@
 /* eslint-disable react/style-prop-object */
-import { PadBox, Stack, createContainerQuery } from "@bedrock-layout/solid";
+import { Stack } from "@bedrock-layout/solid";
 import { For, JSX, JSXElement, Match, Switch } from "solid-js";
 import { styled } from "solid-styled-components";
 import { ArgType } from "src/types/argType";
@@ -79,16 +79,16 @@ const BodyRow = styled("tr")`
 function HeadingCell(
   props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>,
 ) {
-  return <PadBox as="th" padding="size7" {...props} />;
+  return <th style="padding: var(--spacing-size-7)" {...props} />;
 }
 
 function BodyCell(props: Readonly<JSX.HTMLAttributes<HTMLTableCellElement>>) {
   return (
-    <PadBox as="td" padding={["size5", "size7"]} {...props}>
-      <Stack gutter="size2" style="align-items:start">
+    <td style="padding: var(--spacing-size-5) var(--spacing-size-7)" {...props}>
+      <Stack gap="size2" style="align-items:start">
         {props.children}
       </Stack>
-    </PadBox>
+    </td>
   );
 }
 
@@ -139,13 +139,10 @@ export function ArgsTable(
     ) => unknown;
   }>,
 ): JSXElement {
-  const [shouldSwitch, ref] = createContainerQuery(655);
-
   return (
     <Switch>
-      <Match when={shouldSwitch() === true}>
+      <Match when={true}>
         <Stack
-          ref={ref}
           as="dl"
           gutter="size2"
           style="border:1px solid var(--gray-3); padding:1rem;"
@@ -208,8 +205,8 @@ export function ArgsTable(
           </For>
         </Stack>
       </Match>
-      <Match when={shouldSwitch() === false}>
-        <table ref={ref}>
+      <Match when={false}>
+        <table>
           <thead>
             <HeaderRow>
               <HeadingCell>Name</HeadingCell>

@@ -10,41 +10,40 @@ import { LocaleFab } from "../ui-components/LocaleFab";
 
 # Roadmap
 
-This is the roadmap for the next version of the library. It is subject to change as we get feedback from the community. If you have any suggestions or feedback, please open an issue on the GitHub repository.
+This is the roadmap for Bedrock Layout. It is subject to change as we get feedback from the community. If you have any suggestions or feedback, please open an issue on the GitHub repository.
+
+If you're updating an existing app, start with the [Migration Guide](/?path=/docs/overview-migration-guide--docs).
+
+## Completed Breaking Changes
+
+These breaking changes are already reflected in the current API:
+
+- [x] Remove deprecated components and hooks in React and Solid
+  - [x] `MasonryGrid`
+  - [x] `PadBox`
+  - [x] `AppBoundary`
+  - [x] `useForwardedRef`(moved to another repo)
+  - [x] `useResizeObserver`(moved to another repo)
+  - [x] `useContainerQuery`(moved to another repo)
+  - [x] `useStatefulRef`(moved to another repo)
+  - [x] `register-resize-callback`(moved to another repo)
+- [x] Remove the `center-children` prop from the `Center` component
+- [x] Remove the `columns` prop from `Columns` in favor of `colCount`
+- [x] Remove the `gutter` prop in favor of `gap`
+- [x] Replace `noStretchColumns` with `variant="centered"` on `ColumnDrop`
+- [x] Replace `stretchContent` with `variant="stretch-content"` on `Cover`
+- [x] Use `CoverCentered` instead of `top` and `bottom` props for `Cover`
+- [x] Switch all public API custom properties to kebab-case (e.g. `--min-item-width`)
+- [x] Switch `Inline` and `InlineCluster` default alignment to `center`
+- [x] Replace `data-bedrock-*` with `data-br-*`
 
 ## Planned Breaking Changes
 
-There is a plan to make some breaking changes in the next version of the library. These changes are necessary to improve the library and make it more consistent.
+These items are under consideration for a future major release:
 
-The breaking changes are as follows:
-
-- [x] deprecate components and hooks in React and Solid
-  - [x] `MasonryGrid`
-  - [x] `Padbox`
-  - [x] `AppBoundry`
-  - [x] `useForwardedRef`
-  - [x] `useResizeObserver`
-  - [x] `useContainerQuery`
-  - [x] `useStatefulRef`
-  - [x] `register-resize-callback`
-- [x] deprecate the `center-children` prop from the center components and recommend that they use the Stack component instead
-- [x] document deprecation of original Solid repo and do PR at Solid Docs to point to monorepo where the solid components are now located
-- [x] deprecate the `columns` prop from the columns components and recommend that they use the `colCount` prop instead
-- [x] deprecate the `gutter` prop from applicable components and recommend that they use the `gap` prop instead
-- [x] deprecate the `noStretchColumns` prop from the `ColumnDrop` component and recommend that they use the `variant:centered` prop instead
-- [x] deprecate the stretchContent prop from the Cover component and recommend that they use the variant:stretch-content prop instead
-- [ ] remove above deprecated components and hooks
-- [ ] remove the `center-children` prop from the center components
-- [ ] remove the `columns` prop from the columns components
-- [ ] remove the `gutter` prop from applicable components
-- [ ] remove the camelCase custom properties in favor of kebab-case custom properties, e.g. `--min-item-width` instead of `--minItemWidth`
-- [ ] change the default alignment for the `Inline` and `InlineCluster` components to `center` instead of `start`
-- [ ] change default widths for components to be `100%` instead of specific widths/heights
-- [ ] remove the `noStretchColumns` prop from the `ColumnDrop` component
-- [ ] remove the `data-bedrock-` css selectors in favor of `data-br-` css selectors
-- [ ] remove the ThemeProvider component and related theme hooks
-- [ ] make spacing constants able to be used by both react and solid. Also make a note that the spacing constants will no longer follow semver and will be updated as needed
-- [ ] React and Solid will no longer use `top` and `bottom` props for slots and will instead export a component for the content that needs to be vertically centered
+- [x] Change default widths for components to be `100%` instead of specific widths/heights
+- [x] Removed the `ThemeProvider` component and related theme hooks
+- [x] Allow spacing constants to be shared between React and Solid with a non-semver release cadence
 
 **Note:** The breaking changes will be released in a major version bump, so you will need to update your code to use the new version of the library. Also those items marked with a checkmark (deprecation items) have already been implemented and are available in the latest version of the library.
 
@@ -66,5 +65,6 @@ The following are some of the non-breaking changes that are planned for the next
 ## Documentation Improvements
 
 - [ ] Add more examples
-- [ ] Update lessons to use React + Vite instead of create-react-app (probably in conjuction with breaking changes)
+- [ ] Update lessons to use React + Vite instead of create-react-app (probably in conjunction with breaking changes)
 - [ ] Add more use cases
+- [x] Add a migration guide to Storybook

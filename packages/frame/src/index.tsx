@@ -1,3 +1,7 @@
+import {
+  PaddingConfig,
+  getPaddingAttributes,
+} from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
 
@@ -26,12 +30,16 @@ export type FrameProps = {
    * The `position` prop is used to specify the position of the content within the frame.
    */
   position?: string;
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 };
 
 type ValidRatioString = `${number}/${number}`;
 
 function getRatioString(ratio: Ratio): ValidRatioString {
-  const ratioArray = typeof ratio === "string" ? ratio.split(/\/|:/) : ratio;
+  const ratioArray = typeof ratio === "string" ? ratio.split(/[/:]/) : ratio;
   return ratioArray.map((x) => String(x).trim()).join("/") as ValidRatioString;
 }
 
@@ -43,7 +51,7 @@ function getSafeRatio(ratio: unknown): Maybe<ValidRatioString> {
     return getRatioString(ratio as unknown as Ratio);
   }
 
-  const ratioStringRegex = /^\d{1,1000} {0,1}(\/|:) {0,1}\d{1,1000}$/;
+  const ratioStringRegex = /^\d{1,1000} ?[/:] ?\d{1,1000}$/;
 
   if (typeof ratio === "string" && ratioStringRegex.test(ratio)) {
     return getRatioString(ratio as Ratio);
@@ -56,14 +64,16 @@ function getSafeRatio(ratio: unknown): Maybe<ValidRatioString> {
  * The `Frame` component is useful for cropping content, typically media, to a desired aspect ratio.
  */
 export const Frame = forwardRefWithAs<"div", FrameProps>(function Frame(
-  { as: Component = "div", ratio, style = {}, position, ...props },
+  { as: Component = "div", ratio, style = {}, position, padding, ...props },
   ref,
 ) {
   const maybeRatio = getSafeRatio(ratio);
+  const paddingAttrs = getPaddingAttributes(padding);
+  const attrString = paddingAttrs.join(" ");
 
   return (
     <Component
-      data-br-frame
+      data-br-frame={attrString}
       ref={ref}
       style={
         {

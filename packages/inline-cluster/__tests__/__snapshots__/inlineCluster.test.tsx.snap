@@ -3,10 +3,10 @@
 exports[`InlineCluster > correct usage > accepts className prop 1`] = `
 <div
   className="CLASSNAME"
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -30,7 +30,7 @@ exports[`InlineCluster > correct usage > renders all the align options 1`] = `
   data-br-inline-cluster="align:start"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -54,7 +54,7 @@ exports[`InlineCluster > correct usage > renders all the align options 2`] = `
   data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -78,7 +78,7 @@ exports[`InlineCluster > correct usage > renders all the align options 3`] = `
   data-br-inline-cluster="align:end"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -102,7 +102,7 @@ exports[`InlineCluster > correct usage > renders all the align options 4`] = `
   data-br-inline-cluster="align:stretch"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -121,12 +121,12 @@ exports[`InlineCluster > correct usage > renders all the align options 4`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 1`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "-.5rem",
+      "--gap": "-.5rem",
     }
   }
 >
@@ -145,12 +145,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 1`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 2`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 2`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "-.25rem",
+      "--gap": "-.25rem",
     }
   }
 >
@@ -169,12 +169,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 2`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 3`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 3`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": ".25rem",
+      "--gap": ".25rem",
     }
   }
 >
@@ -193,12 +193,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 3`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 4`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 4`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": ".5rem",
+      "--gap": ".5rem",
     }
   }
 >
@@ -217,12 +217,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 4`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 5`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 5`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -241,12 +241,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 6`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 6`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1.25rem",
+      "--gap": "1.25rem",
     }
   }
 >
@@ -265,12 +265,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 7`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 7`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1.5rem",
+      "--gap": "1.5rem",
     }
   }
 >
@@ -289,12 +289,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 8`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 8`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "1.75rem",
+      "--gap": "1.75rem",
     }
   }
 >
@@ -313,12 +313,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 8`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 9`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 9`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "2rem",
+      "--gap": "2rem",
     }
   }
 >
@@ -337,12 +337,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 9`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 10`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 10`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "3rem",
+      "--gap": "3rem",
     }
   }
 >
@@ -361,12 +361,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 10`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 11`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 11`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "4rem",
+      "--gap": "4rem",
     }
   }
 >
@@ -385,12 +385,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 11`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 12`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 12`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "5rem",
+      "--gap": "5rem",
     }
   }
 >
@@ -409,12 +409,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 12`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 13`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 13`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "7.5rem",
+      "--gap": "7.5rem",
     }
   }
 >
@@ -433,12 +433,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 13`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 14`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 14`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "10rem",
+      "--gap": "10rem",
     }
   }
 >
@@ -457,12 +457,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 14`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 15`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 15`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "15rem",
+      "--gap": "15rem",
     }
   }
 >
@@ -481,12 +481,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 15`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 16`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 16`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "20rem",
+      "--gap": "20rem",
     }
   }
 >
@@ -505,12 +505,12 @@ exports[`InlineCluster > correct usage > renders all the gutter options 16`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders all the gutter options 17`] = `
+exports[`InlineCluster > correct usage > renders all the gap options 17`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "30rem",
+      "--gap": "30rem",
     }
   }
 >
@@ -531,10 +531,10 @@ exports[`InlineCluster > correct usage > renders all the gutter options 17`] = `
 
 exports[`InlineCluster > correct usage > renders all the justify options 1`] = `
 <div
-  data-br-inline-cluster="justify:start"
+  data-br-inline-cluster="justify:start align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -555,10 +555,10 @@ exports[`InlineCluster > correct usage > renders all the justify options 1`] = `
 
 exports[`InlineCluster > correct usage > renders all the justify options 2`] = `
 <div
-  data-br-inline-cluster="justify:center"
+  data-br-inline-cluster="justify:center align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -579,10 +579,10 @@ exports[`InlineCluster > correct usage > renders all the justify options 2`] = `
 
 exports[`InlineCluster > correct usage > renders all the justify options 3`] = `
 <div
-  data-br-inline-cluster="justify:end"
+  data-br-inline-cluster="justify:end align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -603,10 +603,10 @@ exports[`InlineCluster > correct usage > renders all the justify options 3`] = `
 
 exports[`InlineCluster > correct usage > renders all the justify options 4`] = `
 <div
-  data-br-inline-cluster="justify:space-around"
+  data-br-inline-cluster="justify:space-around align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -627,10 +627,10 @@ exports[`InlineCluster > correct usage > renders all the justify options 4`] = `
 
 exports[`InlineCluster > correct usage > renders all the justify options 5`] = `
 <div
-  data-br-inline-cluster="justify:space-between"
+  data-br-inline-cluster="justify:space-between align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -649,12 +649,12 @@ exports[`InlineCluster > correct usage > renders all the justify options 5`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders custom gutter as number 1`] = `
+exports[`InlineCluster > correct usage > renders custom gap as number 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "20px",
+      "--gap": "20px",
     }
   }
 >
@@ -673,12 +673,12 @@ exports[`InlineCluster > correct usage > renders custom gutter as number 1`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders custom gutter as string 1`] = `
+exports[`InlineCluster > correct usage > renders custom gap as string 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "3ch",
+      "--gap": "3ch",
     }
   }
 >
@@ -697,12 +697,12 @@ exports[`InlineCluster > correct usage > renders custom gutter as string 1`] = `
 </div>
 `;
 
-exports[`InlineCluster > correct usage > renders default gutter when none provided 1`] = `
+exports[`InlineCluster > correct usage > renders default gap when none provided 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": undefined,
+      "--gap": undefined,
     }
   }
 >
@@ -723,10 +723,10 @@ exports[`InlineCluster > correct usage > renders default gutter when none provid
 
 exports[`InlineCluster > correct usage > renders with theme overrides 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "200px",
+      "--gap": undefined,
     }
   }
 >
@@ -747,10 +747,10 @@ exports[`InlineCluster > correct usage > renders with theme overrides 1`] = `
 
 exports[`InlineCluster > correct usage > renders with theme overrides using numbers 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": "3px",
+      "--gap": undefined,
     }
   }
 >
@@ -774,7 +774,7 @@ exports[`InlineCluster > incorrect usage > renders default with console error wi
   data-br-inline-cluster="align:incorrect"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -795,10 +795,10 @@ exports[`InlineCluster > incorrect usage > renders default with console error wi
 
 exports[`InlineCluster > incorrect usage > renders default with console error with incorrect justify 1`] = `
 <div
-  data-br-inline-cluster="justify:incorrect"
+  data-br-inline-cluster="justify:incorrect align:center"
   style={
     {
-      "--gutter": "1rem",
+      "--gap": "1rem",
     }
   }
 >
@@ -817,12 +817,12 @@ exports[`InlineCluster > incorrect usage > renders default with console error wi
 </div>
 `;
 
-exports[`InlineCluster > incorrect usage > renders default with wrong gutter input 1`] = `
+exports[`InlineCluster > incorrect usage > renders default with wrong gap input 1`] = `
 <div
-  data-br-inline-cluster=""
+  data-br-inline-cluster="align:center"
   style={
     {
-      "--gutter": undefined,
+      "--gap": undefined,
     }
   }
 >

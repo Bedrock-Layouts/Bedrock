@@ -10,7 +10,7 @@ export const argTypes: ArgType = {
     control: "select",
     options: Object.keys(spacing),
   },
-  stretchContent: {
+  "variant:stretch-content": {
     description: "Stretch the content of the children to fill the container",
     defaultValue: "false",
     initialValue: false,
@@ -19,23 +19,9 @@ export const argTypes: ArgType = {
   },
   minHeight: {
     description: "Sets the minimum block size of the component",
-    summary: "CSSLength",
+    summary: "CSSLength | number | SizesOptions",
     initialValue: "25vh",
-    defaultValue: "100vh",
-    control: "text",
-  },
-  top: {
-    description: "renders an Node before the children",
-    summary: "JSXElement",
-    initialValue: "I am on top",
-    defaultValue: "-",
-    control: "text",
-  },
-  bottom: {
-    description: "renders an Node after the children",
-    summary: "JSXElement",
-    initialValue: "I am on bottom",
-    defaultValue: "-",
+    defaultValue: "100%",
     control: "text",
   },
 };

@@ -356,3 +356,33 @@ export const SwitchAt: Story = {
     );
   },
 };
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * <Columns padding="size3">
+ *  <Component />
+ * </Columns>
+ * ```
+ */
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+  },
+  render: (args) => {
+    return (
+      <Columns {...args}>
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+      </Columns>
+    );
+  },
+};

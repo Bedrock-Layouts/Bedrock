@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -51,35 +50,6 @@ describe("Center", () => {
         <Center maxWidth="320px">
           <Lorem />
         </Center>,
-      );
-      expect(center.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with centered text", () => {
-      const center = create(
-        <Center centerText>
-          <Lorem />
-        </Center>,
-      );
-      expect(center.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with centered children", () => {
-      const center = create(
-        <Center centerChildren>
-          <Lorem />
-        </Center>,
-      );
-      expect(center.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides", () => {
-      const center = create(
-        <ThemeProvider theme={{ breakPoints: { medium: 1600 } }}>
-          <Center>
-            <Lorem />
-          </Center>
-        </ThemeProvider>,
       );
       expect(center.toJSON()).toMatchSnapshot();
     });

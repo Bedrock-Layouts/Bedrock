@@ -1,4 +1,4 @@
-import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test, vi } from "vitest";
@@ -28,9 +28,9 @@ describe("Column", () => {
       expect(Column).toBeTruthy();
     });
 
-    it("renders default gutters", () => {
+    it("renders default gap", () => {
       const columns = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           <Column>
             <Lorem />
           </Column>
@@ -41,7 +41,7 @@ describe("Column", () => {
 
     it("renders as main", () => {
       const columns = create(
-        <Columns gutter="size3" as="main">
+        <Columns gap="size3" as="main">
           <Column>
             <Lorem />
           </Column>
@@ -52,7 +52,7 @@ describe("Column", () => {
 
     it("renders custom span", () => {
       const columns = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           <Column span={2}>
             <Lorem />
           </Column>
@@ -63,7 +63,7 @@ describe("Column", () => {
 
     it("renders offsetStart span", () => {
       const columns = create(
-        <Columns gutter="size3" columns={4}>
+        <Columns gap="size3" colCount={4}>
           <Column span={2} offsetStart={2}>
             <Lorem />
           </Column>
@@ -74,7 +74,7 @@ describe("Column", () => {
 
     it("renders offsetEnd span", () => {
       const columns = create(
-        <Columns gutter="size3" columns={4}>
+        <Columns gap="size3" colCount={4}>
           <Column span={2} offsetEnd={2}>
             <Lorem />
           </Column>
@@ -87,7 +87,7 @@ describe("Column", () => {
   describe("incorrect usage", () => {
     it("renders default with console error with wrong span input", () => {
       const errorStack = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           {/* @ts-expect-error */}
           <Column span="incorrect">
             <Lorem />
@@ -100,7 +100,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given 0", () => {
       const columns = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           <Column span={0}>
             <Lorem />
           </Column>
@@ -111,7 +111,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given negative number", () => {
       const columns = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           <Column span={-1}>
             <Lorem />
           </Column>
@@ -122,7 +122,7 @@ describe("Column", () => {
 
     it("renders a span of 1 if given null", () => {
       const columns = create(
-        <Columns gutter="size3">
+        <Columns gap="size3">
           {/* @ts-expect-error */}
           <Column span={null}>
             <Lorem />
@@ -139,7 +139,7 @@ describe("Columns", () => {
     test("Columns is not null", () => {
       expect(Columns).toBeTruthy();
     });
-    it("renders default gutter when none provided", () => {
+    it("renders default gap when none provided", () => {
       const columns = create(
         <Columns>
           <Lorem />
@@ -147,28 +147,28 @@ describe("Columns", () => {
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const columns = create(
-          <Columns gutter={gutter}>
+          <Columns gap={gap}>
             <Lorem />
           </Columns>,
         );
         expect(columns.toJSON()).toMatchSnapshot();
       });
     });
-    it("renders custom gutter with number", () => {
+    it("renders custom gap with number", () => {
       const columns = create(
-        <Columns gutter={20}>
+        <Columns gap={20}>
           <Lorem />
         </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
-    it("renders custom gutter with string", () => {
+    it("renders custom gap with string", () => {
       const columns = create(
-        <Columns gutter="3ch">
+        <Columns gap="3ch">
           <Lorem />
         </Columns>,
       );
@@ -177,16 +177,7 @@ describe("Columns", () => {
 
     it("renders custom colCount", () => {
       const columns = create(
-        <Columns gutter="size3" colCount={5}>
-          <Lorem />
-        </Columns>,
-      );
-      expect(columns.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders custom columns", () => {
-      const columns = create(
-        <Columns gutter="size3" columns={5}>
+        <Columns gap="size3" colCount={5}>
           <Lorem />
         </Columns>,
       );
@@ -195,7 +186,7 @@ describe("Columns", () => {
 
     it("renders switchAt as number", () => {
       const columns = create(
-        <Columns gutter="size3" switchAt={500}>
+        <Columns gap="size3" switchAt={500}>
           <Lorem />
         </Columns>,
       );
@@ -204,30 +195,30 @@ describe("Columns", () => {
 
     it("renders switchAt as string", () => {
       const columns = create(
-        <Columns gutter="size3" switchAt="500px">
+        <Columns gap="size3" switchAt="500px">
           <Lorem />
         </Columns>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
 
-    it("renders with theme overrides", () => {
+    it("renders with invalid gap (no theme provider)", () => {
       const columns = create(
-        <ThemeProvider theme={{ spacing: { "1x": "200px" } }}>
+        <>
           {/* @ts-expect-error */}
-          <Columns gutter="1x">
+          <Columns gap="1x">
             <Lorem />
           </Columns>
-        </ThemeProvider>,
+        </>,
       );
       expect(columns.toJSON()).toMatchSnapshot();
     });
   });
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter input", () => {
+    it("renders default with wrong gap input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Columns gutter={{ value: "incorrect" }}>
+        <Columns gap={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,
       );
@@ -235,7 +226,7 @@ describe("Columns", () => {
     });
     it("renders 1 columns if given 0", () => {
       const columns = create(
-        <Columns columns={0}>
+        <Columns colCount={0}>
           <Lorem />
         </Columns>,
       );
@@ -243,7 +234,7 @@ describe("Columns", () => {
     });
     it("renders 1 columns if given negative number", () => {
       const columns = create(
-        <Columns columns={-1}>
+        <Columns colCount={-1}>
           <Lorem />
         </Columns>,
       );
@@ -252,7 +243,7 @@ describe("Columns", () => {
     it("renders default with console error with incorrect column type", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Columns columns="incorrect">
+        <Columns colCount="incorrect">
           <Lorem />
         </Columns>,
       );
@@ -263,7 +254,7 @@ describe("Columns", () => {
     it("renders default with console error with wrong switchAt input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Columns gutter="size3" switchAt={{ value: "incorrect" }}>
+        <Columns gap="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,
       );

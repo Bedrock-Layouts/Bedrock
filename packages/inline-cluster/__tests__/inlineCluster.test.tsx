@@ -1,4 +1,4 @@
-import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -28,7 +28,7 @@ describe("InlineCluster", () => {
       expect(InlineCluster).toBeTruthy();
     });
 
-    it("renders default gutter when none provided", () => {
+    it("renders default gap when none provided", () => {
       const inlineCluster = create(
         <InlineCluster>
           <Lorem />
@@ -37,11 +37,11 @@ describe("InlineCluster", () => {
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const inlineCluster = create(
-          <InlineCluster gutter={gutter}>
+          <InlineCluster gap={gap}>
             <Lorem />
           </InlineCluster>,
         );
@@ -49,18 +49,18 @@ describe("InlineCluster", () => {
       });
     });
 
-    it("renders custom gutter as number", () => {
+    it("renders custom gap as number", () => {
       const inlineCluster = create(
-        <InlineCluster gutter={20}>
+        <InlineCluster gap={20}>
           <Lorem />
         </InlineCluster>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom gutter as string", () => {
+    it("renders custom gap as string", () => {
       const inlineCluster = create(
-        <InlineCluster gutter="3ch">
+        <InlineCluster gap="3ch">
           <Lorem />
         </InlineCluster>,
       );
@@ -77,7 +77,7 @@ describe("InlineCluster", () => {
       ] as const;
       justifications.forEach((justify) => {
         const inlineCluster = create(
-          <InlineCluster gutter="size3" justify={justify}>
+          <InlineCluster gap="size3" justify={justify}>
             <Lorem />
           </InlineCluster>,
         );
@@ -89,7 +89,7 @@ describe("InlineCluster", () => {
       const justifications = ["start", "center", "end", "stretch"] as const;
       justifications.forEach((align) => {
         const inlineCluster = create(
-          <InlineCluster gutter="size3" align={align}>
+          <InlineCluster gap="size3" align={align}>
             <Lorem />
           </InlineCluster>,
         );
@@ -99,31 +99,31 @@ describe("InlineCluster", () => {
 
     it("renders with theme overrides", () => {
       const inlineCluster = create(
-        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+        <>
           {/* @ts-expect-error */}
-          <InlineCluster gutter="1x">
+          <InlineCluster gap="1x">
             <Lorem />
           </InlineCluster>
-        </ThemeProvider>,
+        </>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
     it("renders with theme overrides using numbers", () => {
       const inlineCluster = create(
-        <ThemeProvider theme={{ space: { sizeNone: 3 } }}>
+        <>
           {/* @ts-expect-error */}
-          <InlineCluster gutter="sizeNone">
+          <InlineCluster gap="sizeNone">
             <Lorem />
           </InlineCluster>
-        </ThemeProvider>,
+        </>,
       );
       expect(inlineCluster.toJSON()).toMatchSnapshot();
     });
 
     it("accepts className prop", () => {
       const inlineCluster = create(
-        <InlineCluster gutter="size3" className="CLASSNAME">
+        <InlineCluster gap="size3" className="CLASSNAME">
           <Lorem />
         </InlineCluster>,
       );
@@ -132,10 +132,10 @@ describe("InlineCluster", () => {
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter input", () => {
+    it("renders default with wrong gap input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <InlineCluster gutter={{ value: "incorrect" }}>
+        <InlineCluster gap={{ value: "incorrect" }}>
           <Lorem />
         </InlineCluster>,
       );
@@ -146,7 +146,7 @@ describe("InlineCluster", () => {
     it("renders default with console error with incorrect justify", () => {
       const errorStack = create(
         // @ts-expect-error
-        <InlineCluster gutter="size3" justify="incorrect">
+        <InlineCluster gap="size3" justify="incorrect">
           <Lorem />
         </InlineCluster>,
       );
@@ -156,7 +156,7 @@ describe("InlineCluster", () => {
     it("renders default with console error with incorrect align", () => {
       const errorStack = create(
         // @ts-expect-error
-        <InlineCluster gutter="size3" align="incorrect">
+        <InlineCluster gap="size3" align="incorrect">
           <Lorem />
         </InlineCluster>,
       );

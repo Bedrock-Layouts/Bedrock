@@ -13,6 +13,7 @@ export const stories = [
   "./pages/menu.mdx",
   "./pages/hero.mdx",
   "./pages/new-arrivals.mdx",
+  "./pages/migration-guide.mdx",
   "../stories/**/*.@(mdx|stories.@(js|ts|tsx))",
   "./pages/contributing.mdx",
   "./pages/roadmap.mdx",

@@ -1,13 +1,6 @@
 /* eslint-disable react/style-prop-object */
-import {
-  Center,
-  Inline,
-  PadBox,
-  Split,
-  Stack,
-  createContainerQuery,
-} from "@bedrock-layout/solid";
-import { Route, Routes } from "@solidjs/router";
+import { Center, Inline, Split, Stack } from "@bedrock-layout/solid";
+import { Route } from "@solidjs/router";
 import { Component, For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import { styled } from "solid-styled-components";
@@ -22,8 +15,6 @@ import { GridPage } from "./pages/GridPage";
 import { InlineClusterPage } from "./pages/InlineClusterPage";
 import { InlinePage } from "./pages/InlinePage";
 import { LandingPage } from "./pages/LandingPage";
-import { MasonaryGridPage } from "./pages/MasonryGridPage";
-import { PadBoxPage } from "./pages/PadBoxPage";
 import { ReelPage } from "./pages/ReelPage";
 import { SplitPage } from "./pages/SplitPage";
 import { StackPage } from "./pages/StackPage";
@@ -37,14 +28,13 @@ function SideNavGroup(
   }>,
 ) {
   return (
-    <Stack gutter="size2">
+    <Stack gap="size2">
       <strong>{props.title}</strong>
 
       <Inline
-        as={PadBox}
-        padding={["lg", "sm"]}
-        gutter="size2"
+        gap="size2"
         switchAt="sizeSm"
+        style="padding: var(--spacing-lg) var(--spacing-sm)"
       >
         <For each={props.links}>
           {(link) => <A href={link.href}>{link.name}</A>}
@@ -60,7 +50,6 @@ const spacerComponents = [
   { href: "/grid", name: "Grid" },
   { href: "/inline-cluster", name: "InlineCluster" },
   { href: "/inline", name: "Inline" },
-  { href: "/masonry-grid", name: "MasonryGrid" },
   { href: "/reel", name: "Reel" },
   { href: "/split", name: "Split" },
   { href: "/stack", name: "Stack" },
@@ -70,7 +59,6 @@ const wrapperComponents = [
   { href: "/center", name: "Center" },
   { href: "/cover", name: "Cover" },
   { href: "/frame", name: "Frame" },
-  { href: "/padbox", name: "PadBox" },
 ];
 
 const LogoLink = styled(A)`
@@ -83,22 +71,17 @@ const LogoTitle = styled("strong")`
 `;
 
 const App: Component = () => {
-  const [shouldSwitch, ref] = createContainerQuery(WIDTH_BREAKPOINT);
-
   return (
-    <Split
-      ref={ref}
-      fraction="auto-start"
-      gutter="size3"
-      switchAt={WIDTH_BREAKPOINT}
-    >
-      <PadBox padding="size7" style={`background: var(--stone-1);`}>
-        <Stack gutter="size7">
+    <Split fraction="auto-start" gap="size3" switchAt={WIDTH_BREAKPOINT}>
+      <div
+        style={`background: var(--stone-1); padding: var(--spacing-size-7);`}
+      >
+        <Stack gap="size7">
           <LogoLink href="/">
-            <Inline align="center" gutter="size7">
+            <Inline align="center" gap="size7">
               <LogoOnly style="max-width:8rem;" />
 
-              <Show when={shouldSwitch() === true}>
+              <Show when={true}>
                 <LogoTitle>Solid-Bedrock</LogoTitle>
               </Show>
             </Inline>
@@ -106,36 +89,34 @@ const App: Component = () => {
           <SideNavGroup title="Spacer Components" links={spacerComponents} />
           <SideNavGroup title="Wrapper Components" links={wrapperComponents} />
         </Stack>
-      </PadBox>
+      </div>
 
-      <Center as={PadBox} padding="size7" maxWidth="90%">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/column-drop" element={<ColumnDropPage />} />
-          <Route path="/columns" element={<ColumnsPage />} />
-          <Route path="/grid" element={<GridPage />} />
-          <Route path="/inline" element={<InlinePage />} />
-          <Route path="/inline-cluster" element={<InlineClusterPage />} />
-          <Route path="/masonry-grid" element={<MasonaryGridPage />} />
-          <Route path="/reel" element={<ReelPage />} />
-          <Route path="/split" element={<SplitPage />} />
-          <Route path="/stack" element={<StackPage />} />
-          <Route path="/center" element={<CenterPage />} />
-          <Route path="/frame" element={<FramePage />} />
-          <Route path="/padbox" element={<PadBoxPage />} />
-          <Route path="/cover" element={<CoverPage />} />
+      <Center maxWidth="90%" style="padding: var(--spacing-size-7)">
+        <>
+          <Route path="/" component={LandingPage} />
+          <Route path="/column-drop" component={ColumnDropPage} />
+          <Route path="/columns" component={ColumnsPage} />
+          <Route path="/grid" component={GridPage} />
+          <Route path="/inline" component={InlinePage} />
+          <Route path="/inline-cluster" component={InlineClusterPage} />
+          <Route path="/reel" component={ReelPage} />
+          <Route path="/split" component={SplitPage} />
+          <Route path="/stack" component={StackPage} />
+          <Route path="/center" component={CenterPage} />
+          <Route path="/frame" component={FramePage} />
+          <Route path="/cover" component={CoverPage} />
           <Route
             path="/*all"
-            element={
-              <PadBox as={Stack} gutter="size7" padding="size7">
+            component={() => (
+              <Stack gap="size7" style="padding: var(--spacing-size-7)">
                 <h1>Page Not Found</h1>
                 <p>
                   Click <A href="/">Home</A> to go back to the site
                 </p>
-              </PadBox>
-            }
+              </Stack>
+            )}
           />
-        </Routes>
+        </>
       </Center>
     </Split>
   );

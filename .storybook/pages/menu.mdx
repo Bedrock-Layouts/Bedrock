@@ -16,7 +16,7 @@ import menuInline from "../assets/menu-just-inline.png";
 
 After the stack layout, the next most common layout pattern on the web is putting one thing next to another in the inline direction. Putting two or more things has never been that simple. In the past, this was partially due to the lack of layout options in CSS. Currently, it mostly comes down to the fact that laying out items inline is only one of the variables we need to consider.
 
-Do we want the items to grow or shrink? What about responsiveness? Should the items wrap or switch to a stack layout? There are so many questions that need to be answered about inline layouts. Bedrock Layout has solutions for many of these problems, but for now, we are going to focus on two of them: [`Inline`](/docs/spacer-components-inline--api) and [`InlineCluster`](/docs/spacer-components-inlinecluster--api).
+Do we want the items to grow or shrink? What about responsiveness? Should the items wrap or switch to a stack layout? There are so many questions that need to be answered about inline layouts. Bedrock Layout has solutions for many of these problems, but for now, we are going to focus on two of them: [`Inline`](/?path=/docs/spacer-components-inline--api) and [`InlineCluster`](/?path=/docs/spacer-components-inlinecluster--api).
 
 ## Let's Get Started
 
@@ -54,7 +54,7 @@ import { Menu } from "./Menu";
 
 function App() {
   return (
-    <Stack gutter='size3'>
+    <Stack gap="size3">
       <Menu />
       <Subscribe />
     </Stack>
@@ -66,7 +66,7 @@ export default App;
 
 Your browser should now show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={menuStart}
@@ -89,15 +89,15 @@ import { Inline } from "@bedrock-layout/inline";
 
 export function Menu() {
   return (
-    <Inline stretch={1} gutter='size3'>
+    <Inline stretch={1} gap="size3">
       <p>CLB</p>
-      <Inline gutter='size3' justify="center">
+      <Inline gap="size3" justify="center">
         <a href="/#">Product</a>
         <a href="/#">Features</a>
         <a href="/#">Marketplace</a>
         <a href="/#">Company</a>
       </Inline>
-      <Inline gutter='size3'>
+      <Inline gap="size3">
         <a href="/#">Search</a>
         <a href="/#">Cart</a>
       </Inline>
@@ -108,7 +108,7 @@ export function Menu() {
 
 Now we can restart the app and your browser should show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={menuInline}
@@ -116,7 +116,7 @@ Now we can restart the app and your browser should show the following:
   />
 </Center>
 
-In the above `Menu` component, we are taking advantage Inline's `gutter` prop to set the spacing. We are also using it's `stretch` prop to set the 2nd child to stetch itself so it takes up all remaining space. We are also using the `justify` prop to center middle `nav` element.
+In the above `Menu` component, we are taking advantage of Inline's `gap` prop to set the spacing. We are also using its `stretch` prop to set the 2nd child to stretch itself so it takes up all remaining space. We are also using the `justify` prop to center the middle `nav` element.
 
 ## Responsive Layouts
 
@@ -132,15 +132,15 @@ import { InlineCluster } from "@bedrock-layout/inline-cluster";
 
 export function Menu() {
   return (
-    <Inline stretch={1} gutter='size3' switchAt="40rem">
+    <Inline stretch={1} gap="size3" switchAt="40rem">
       <p>CLB</p>
-      <InlineCluster gutter='size3' justify="center">
+      <InlineCluster gap="size3" justify="center">
         <a href="/#">Product</a>
         <a href="/#">Features</a>
         <a href="/#">Marketplace</a>
         <a href="/#">Company</a>
       </InlineCluster>
-      <Inline gutter='size3' justify="end">
+      <Inline gap="size3" justify="end">
         <a href="/#">Search</a>
         <a href="/#">Cart</a>
       </Inline>
@@ -151,7 +151,7 @@ export function Menu() {
 
 Now if we resize to a small mobile screen size, it will look something like this:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={menuMobile}
@@ -161,7 +161,7 @@ Now if we resize to a small mobile screen size, it will look something like this
 
 In the next section we will start to fill out our landing page by adding a Hero section using the `Cover` component. I'll see you there.
 
-<Inline switchAt="25rem" stretch={1} gutter="size3" minItemWidth="fit-content">
+<Inline switchAt="25rem" stretch={1} gap="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-3-spacing--docs">
     <Intl>Spacing</Intl>
   </Button>

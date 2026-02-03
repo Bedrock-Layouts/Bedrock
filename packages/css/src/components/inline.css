@@ -2,308 +2,13 @@
   inline.css
 */
 
-[data-bedrock-inline] {
-  --gap: initial;
-  --gutter: initial;
-  --switchAt: initial;
-  --switch-at: initial;
-  --minItemWidth: initial;
-  --min-item-width: initial;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: var(--gap, var(--gutter, 0px));
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-[data-bedrock-inline] > * {
-  margin: 0;
-}
-
-:is(
-    [data-bedrock-inline][style*="--switchAt"],
-    [data-bedrock-inline][style*="--switch-at"],
-    [data-bedrock-inline*="--switchAt"]
-  ) {
-  flex-wrap: wrap;
-}
-
-[data-bedrock-inline]:is(
-    [style*="--switchAt"],
-    [style*="--switch-at"],
-    [data-bedrock-inline*="--switchAt"]
-  )
-  > * {
-  flex-basis: calc(
-    (var(--switchAt) - (100% - var(--gap, var(--gutter, 0px)))) * 999
-  );
-}
-
-[data-bedrock-inline][style*="--minItemWidth"] > * {
-  min-inline-size: var(--minItemWidth, 0);
-}
-
-[data-bedrock-inline][style*="--min-item-width"] > * {
-  min-inline-size: var(--min-item-width, 0);
-}
-
-[data-bedrock-inline~="justify:start"] {
-  justify-content: flex-start;
-}
-[data-bedrock-inline~="justify:center"] {
-  justify-content: center;
-}
-[data-bedrock-inline~="justify:end"] {
-  justify-content: flex-end;
-}
-[data-bedrock-inline~="justify:space-between"] {
-  justify-content: space-between;
-}
-[data-bedrock-inline~="justify:space-around"] {
-  justify-content: space-around;
-}
-
-[data-bedrock-inline~="align:start"] {
-  align-items: flex-start;
-}
-[data-bedrock-inline~="align:center"] {
-  align-items: center;
-}
-[data-bedrock-inline~="align:end"] {
-  align-items: flex-end;
-}
-[data-bedrock-inline~="align:stretch"] {
-  align-items: stretch;
-}
-
-[data-bedrock-inline~="stretch:all"] > * {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:start"] > :first-child {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:end"] > :last-child {
-  flex: 1;
-}
-
-[data-bedrock-inline~="stretch:0"] > :nth-child(1) {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:1"] > :nth-child(2) {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:2"] > :nth-child(3) {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:3"] > :nth-child(4) {
-  flex: 1;
-}
-[data-bedrock-inline~="stretch:4"] > :nth-child(5) {
-  flex: 1;
-}
-
-/* Gutter Sizes */
-[data-bedrock-inline~="gutter:size000"] {
-  --gutter: -0.5rem;
-}
-[data-bedrock-inline~="gutter:size00"] {
-  --gutter: -0.25rem;
-}
-[data-bedrock-inline~="gutter:size1"] {
-  --gutter: 0.25rem;
-}
-[data-bedrock-inline~="gutter:size2"] {
-  --gutter: 0.5rem;
-}
-[data-bedrock-inline~="gutter:size3"] {
-  --gutter: 1rem;
-}
-[data-bedrock-inline~="gutter:size4"] {
-  --gutter: 1.25rem;
-}
-[data-bedrock-inline~="gutter:size5"] {
-  --gutter: 1.5rem;
-}
-[data-bedrock-inline~="gutter:size6"] {
-  --gutter: 1.75rem;
-}
-[data-bedrock-inline~="gutter:size7"] {
-  --gutter: 2rem;
-}
-[data-bedrock-inline~="gutter:size8"] {
-  --gutter: 3rem;
-}
-[data-bedrock-inline~="gutter:size9"] {
-  --gutter: 4rem;
-}
-[data-bedrock-inline~="gutter:size10"] {
-  --gutter: 5rem;
-}
-[data-bedrock-inline~="gutter:size11"] {
-  --gutter: 7.5rem;
-}
-[data-bedrock-inline~="gutter:size12"] {
-  --gutter: 10rem;
-}
-[data-bedrock-inline~="gutter:size13"] {
-  --gutter: 15rem;
-}
-[data-bedrock-inline~="gutter:size14"] {
-  --gutter: 20rem;
-}
-[data-bedrock-inline~="gutter:size15"] {
-  --gutter: 30rem;
-}
-
-/* gap sizes */
-[data-bedrock-inline~="gap:size000"] {
-  --gap: -0.5rem;
-}
-[data-bedrock-inline~="gap:size00"] {
-  --gap: -0.25rem;
-}
-[data-bedrock-inline~="gap:size1"] {
-  --gap: 0.25rem;
-}
-[data-bedrock-inline~="gap:size2"] {
-  --gap: 0.5rem;
-}
-[data-bedrock-inline~="gap:size3"] {
-  --gap: 1rem;
-}
-[data-bedrock-inline~="gap:size4"] {
-  --gap: 1.25rem;
-}
-[data-bedrock-inline~="gap:size5"] {
-  --gap: 1.5rem;
-}
-[data-bedrock-inline~="gap:size6"] {
-  --gap: 1.75rem;
-}
-[data-bedrock-inline~="gap:size7"] {
-  --gap: 2rem;
-}
-[data-bedrock-inline~="gap:size8"] {
-  --gap: 3rem;
-}
-[data-bedrock-inline~="gap:size9"] {
-  --gap: 4rem;
-}
-[data-bedrock-inline~="gap:size10"] {
-  --gap: 5rem;
-}
-[data-bedrock-inline~="gap:size11"] {
-  --gap: 7.5rem;
-}
-[data-bedrock-inline~="gap:size12"] {
-  --gap: 10rem;
-}
-[data-bedrock-inline~="gap:size13"] {
-  --gap: 15rem;
-}
-[data-bedrock-inline~="gap:size14"] {
-  --gap: 20rem;
-}
-[data-bedrock-inline~="gap:size15"] {
-  --gap: 30rem;
-}
-
-/* Min Item Widths */
-[data-bedrock-inline~="minItemWidth:sizeContent1"] {
-  --min-item-width: 20ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeContent2"] {
-  --min-item-width: 45ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeContent3"] {
-  --min-item-width: 60ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeHeader1"] {
-  --min-item-width: 20ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeHeader2"] {
-  --min-item-width: 25ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeHeader3"] {
-  --min-item-width: 35ch;
-}
-[data-bedrock-inline~="minItemWidth:sizeXxs"] {
-  --min-item-width: 240px;
-}
-[data-bedrock-inline~="minItemWidth:sizeXs"] {
-  --min-item-width: 360px;
-}
-[data-bedrock-inline~="minItemWidth:sizeSm"] {
-  --min-item-width: 480px;
-}
-[data-bedrock-inline~="minItemWidth:sizeMd"] {
-  --min-item-width: 768px;
-}
-[data-bedrock-inline~="minItemWidth:sizeLg"] {
-  --min-item-width: 1024px;
-}
-[data-bedrock-inline~="minItemWidth:sizeXl"] {
-  --min-item-width: 1440px;
-}
-[data-bedrock-inline~="minItemWidth:sizeXxl"] {
-  --min-item-width: 1920px;
-}
-
-/* Switch at Widths */
-[data-bedrock-inline~="switchAt:sizeContent1"] {
-  --switch-at: 20ch;
-}
-[data-bedrock-inline~="switchAt:sizeContent2"] {
-  --switch-at: 45ch;
-}
-[data-bedrock-inline~="switchAt:sizeContent3"] {
-  --switch-at: 60ch;
-}
-[data-bedrock-inline~="switchAt:sizeHeader1"] {
-  --switch-at: 20ch;
-}
-[data-bedrock-inline~="switchAt:sizeHeader2"] {
-  --switch-at: 25ch;
-}
-[data-bedrock-inline~="switchAt:sizeHeader3"] {
-  --switch-at: 35ch;
-}
-[data-bedrock-inline~="switchAt:sizeXxs"] {
-  --switch-at: 240px;
-}
-[data-bedrock-inline~="switchAt:sizeXs"] {
-  --switch-at: 360px;
-}
-[data-bedrock-inline~="switchAt:sizeSm"] {
-  --switch-at: 480px;
-}
-[data-bedrock-inline~="switchAt:sizeMd"] {
-  --switch-at: 768px;
-}
-[data-bedrock-inline~="switchAt:sizeLg"] {
-  --switch-at: 1024px;
-}
-[data-bedrock-inline~="switchAt:sizeXl"] {
-  --switch-at: 1440px;
-}
-[data-bedrock-inline~="switchAt:sizeXxl"] {
-  --switch-at: 1920px;
-}
-
-/*
-  inline.css
-*/
-
 [data-br-inline] {
   --gap: initial;
-  --gutter: initial;
-  --switchAt: initial;
   --switch-at: initial;
-  --minItemWidth: initial;
   --min-item-width: initial;
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--gap, var(--gutter, 0px));
+  gap: var(--gap, 0px);
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -313,10 +18,10 @@
 }
 
 :is(
-    [data-br-inline][style*="--switchAt"],
-    [data-br-inline][style*="--switch-at"],
-    [data-br-inline*="--switchAt"]
-  ) {
+  [data-br-inline][style*="--switchAt"],
+  [data-br-inline][style*="--switch-at"],
+  [data-br-inline*="--switchAt"]
+) {
   flex-wrap: wrap;
 }
 
@@ -326,13 +31,7 @@
     [data-br-inline*="--switchAt"]
   )
   > * {
-  flex-basis: calc(
-    (var(--switchAt) - (100% - var(--gap, var(--gutter, 0px)))) * 999
-  );
-}
-
-[data-br-inline][style*="--minItemWidth"] > * {
-  min-inline-size: var(--minItemWidth, 0);
+  flex-basis: calc((var(--switch-at) - (100% - var(--gap, 0px))) * 999);
 }
 
 [data-br-inline][style*="--min-item-width"] > * {
@@ -395,57 +94,6 @@
 }
 
 /* Gutter Sizes */
-[data-br-inline~="gutter:size000"] {
-  --gutter: -0.5rem;
-}
-[data-br-inline~="gutter:size00"] {
-  --gutter: -0.25rem;
-}
-[data-br-inline~="gutter:size1"] {
-  --gutter: 0.25rem;
-}
-[data-br-inline~="gutter:size2"] {
-  --gutter: 0.5rem;
-}
-[data-br-inline~="gutter:size3"] {
-  --gutter: 1rem;
-}
-[data-br-inline~="gutter:size4"] {
-  --gutter: 1.25rem;
-}
-[data-br-inline~="gutter:size5"] {
-  --gutter: 1.5rem;
-}
-[data-br-inline~="gutter:size6"] {
-  --gutter: 1.75rem;
-}
-[data-br-inline~="gutter:size7"] {
-  --gutter: 2rem;
-}
-[data-br-inline~="gutter:size8"] {
-  --gutter: 3rem;
-}
-[data-br-inline~="gutter:size9"] {
-  --gutter: 4rem;
-}
-[data-br-inline~="gutter:size10"] {
-  --gutter: 5rem;
-}
-[data-br-inline~="gutter:size11"] {
-  --gutter: 7.5rem;
-}
-[data-br-inline~="gutter:size12"] {
-  --gutter: 10rem;
-}
-[data-br-inline~="gutter:size13"] {
-  --gutter: 15rem;
-}
-[data-br-inline~="gutter:size14"] {
-  --gutter: 20rem;
-}
-[data-br-inline~="gutter:size15"] {
-  --gutter: 30rem;
-}
 
 /* gap sizes */
 [data-br-inline~="gap:size000"] {
@@ -583,1193 +231,360 @@
 }
 
 /* Padding styles from padbox.css */
-:is(
-  [data-bedrock-inline~="padding:size000"]
-) {
+[data-br-inline~="padding:size000"] {
   padding: 0;
 }
-:is(
-  [data-bedrock-inline~="padding:size00"]
-) {
+[data-br-inline~="padding:size00"] {
   padding: 0;
 }
-:is(
-  [data-bedrock-inline~="padding:size1"]
-) {
+[data-br-inline~="padding:size1"] {
   padding: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size2"]
-) {
+[data-br-inline~="padding:size2"] {
   padding: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size3"]
-) {
+[data-br-inline~="padding:size3"] {
   padding: 1rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size4"]
-) {
+[data-br-inline~="padding:size4"] {
   padding: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size5"]
-) {
+[data-br-inline~="padding:size5"] {
   padding: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size6"]
-) {
+[data-br-inline~="padding:size6"] {
   padding: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size7"]
-) {
+[data-br-inline~="padding:size7"] {
   padding: 2rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size8"]
-) {
+[data-br-inline~="padding:size8"] {
   padding: 3rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size9"]
-) {
+[data-br-inline~="padding:size9"] {
   padding: 4rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size10"]
-) {
+[data-br-inline~="padding:size10"] {
   padding: 5rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size11"]
-) {
+[data-br-inline~="padding:size11"] {
   padding: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size12"]
-) {
+[data-br-inline~="padding:size12"] {
   padding: 10rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size13"]
-) {
+[data-br-inline~="padding:size13"] {
   padding: 15rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size14"]
-) {
+[data-br-inline~="padding:size14"] {
   padding: 20rem;
 }
-:is(
-  [data-bedrock-inline~="padding:size15"]
-) {
+[data-br-inline~="padding:size15"] {
   padding: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size000"]
-) {
+[data-br-inline~="paddingInline:size000"] {
   padding-inline: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size00"]
-) {
+[data-br-inline~="paddingInline:size00"] {
   padding-inline: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size1"]
-) {
+[data-br-inline~="paddingInline:size1"] {
   padding-inline: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size2"]
-) {
+[data-br-inline~="paddingInline:size2"] {
   padding-inline: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size3"]
-) {
+[data-br-inline~="paddingInline:size3"] {
   padding-inline: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size4"]
-) {
+[data-br-inline~="paddingInline:size4"] {
   padding-inline: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size5"]
-) {
+[data-br-inline~="paddingInline:size5"] {
   padding-inline: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size6"]
-) {
+[data-br-inline~="paddingInline:size6"] {
   padding-inline: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size7"]
-) {
+[data-br-inline~="paddingInline:size7"] {
   padding-inline: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size8"]
-) {
+[data-br-inline~="paddingInline:size8"] {
   padding-inline: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size9"]
-) {
+[data-br-inline~="paddingInline:size9"] {
   padding-inline: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size10"]
-) {
+[data-br-inline~="paddingInline:size10"] {
   padding-inline: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size11"]
-) {
+[data-br-inline~="paddingInline:size11"] {
   padding-inline: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size12"]
-) {
+[data-br-inline~="paddingInline:size12"] {
   padding-inline: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size13"]
-) {
+[data-br-inline~="paddingInline:size13"] {
   padding-inline: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size14"]
-) {
+[data-br-inline~="paddingInline:size14"] {
   padding-inline: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInline:size15"]
-) {
+[data-br-inline~="paddingInline:size15"] {
   padding-inline: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size000"]
-) {
+[data-br-inline~="paddingInlineStart:size000"] {
   padding-inline-start: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size00"]
-) {
+[data-br-inline~="paddingInlineStart:size00"] {
   padding-inline-start: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size1"]
-) {
+[data-br-inline~="paddingInlineStart:size1"] {
   padding-inline-start: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size2"]
-) {
+[data-br-inline~="paddingInlineStart:size2"] {
   padding-inline-start: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size3"]
-) {
+[data-br-inline~="paddingInlineStart:size3"] {
   padding-inline-start: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size4"]
-) {
+[data-br-inline~="paddingInlineStart:size4"] {
   padding-inline-start: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size5"]
-) {
+[data-br-inline~="paddingInlineStart:size5"] {
   padding-inline-start: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size6"]
-) {
+[data-br-inline~="paddingInlineStart:size6"] {
   padding-inline-start: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size7"]
-) {
+[data-br-inline~="paddingInlineStart:size7"] {
   padding-inline-start: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size8"]
-) {
+[data-br-inline~="paddingInlineStart:size8"] {
   padding-inline-start: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size9"]
-) {
+[data-br-inline~="paddingInlineStart:size9"] {
   padding-inline-start: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size10"]
-) {
+[data-br-inline~="paddingInlineStart:size10"] {
   padding-inline-start: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size11"]
-) {
+[data-br-inline~="paddingInlineStart:size11"] {
   padding-inline-start: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size12"]
-) {
+[data-br-inline~="paddingInlineStart:size12"] {
   padding-inline-start: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size13"]
-) {
+[data-br-inline~="paddingInlineStart:size13"] {
   padding-inline-start: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size14"]
-) {
+[data-br-inline~="paddingInlineStart:size14"] {
   padding-inline-start: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineStart:size15"]
-) {
+[data-br-inline~="paddingInlineStart:size15"] {
   padding-inline-start: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size000"]
-) {
+[data-br-inline~="paddingInlineEnd:size000"] {
   padding-inline-end: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size00"]
-) {
+[data-br-inline~="paddingInlineEnd:size00"] {
   padding-inline-end: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size1"]
-) {
+[data-br-inline~="paddingInlineEnd:size1"] {
   padding-inline-end: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size2"]
-) {
+[data-br-inline~="paddingInlineEnd:size2"] {
   padding-inline-end: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size3"]
-) {
+[data-br-inline~="paddingInlineEnd:size3"] {
   padding-inline-end: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size4"]
-) {
+[data-br-inline~="paddingInlineEnd:size4"] {
   padding-inline-end: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size5"]
-) {
+[data-br-inline~="paddingInlineEnd:size5"] {
   padding-inline-end: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size6"]
-) {
+[data-br-inline~="paddingInlineEnd:size6"] {
   padding-inline-end: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size7"]
-) {
+[data-br-inline~="paddingInlineEnd:size7"] {
   padding-inline-end: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size8"]
-) {
+[data-br-inline~="paddingInlineEnd:size8"] {
   padding-inline-end: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size9"]
-) {
+[data-br-inline~="paddingInlineEnd:size9"] {
   padding-inline-end: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size10"]
-) {
+[data-br-inline~="paddingInlineEnd:size10"] {
   padding-inline-end: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size11"]
-) {
+[data-br-inline~="paddingInlineEnd:size11"] {
   padding-inline-end: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size12"]
-) {
+[data-br-inline~="paddingInlineEnd:size12"] {
   padding-inline-end: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size13"]
-) {
+[data-br-inline~="paddingInlineEnd:size13"] {
   padding-inline-end: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size14"]
-) {
+[data-br-inline~="paddingInlineEnd:size14"] {
   padding-inline-end: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingInlineEnd:size15"]
-) {
+[data-br-inline~="paddingInlineEnd:size15"] {
   padding-inline-end: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size000"]
-) {
+[data-br-inline~="paddingBlock:size000"] {
   padding-block: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size00"]
-) {
+[data-br-inline~="paddingBlock:size00"] {
   padding-block: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size1"]
-) {
+[data-br-inline~="paddingBlock:size1"] {
   padding-block: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size2"]
-) {
+[data-br-inline~="paddingBlock:size2"] {
   padding-block: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size3"]
-) {
+[data-br-inline~="paddingBlock:size3"] {
   padding-block: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size4"]
-) {
+[data-br-inline~="paddingBlock:size4"] {
   padding-block: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size5"]
-) {
+[data-br-inline~="paddingBlock:size5"] {
   padding-block: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size6"]
-) {
+[data-br-inline~="paddingBlock:size6"] {
   padding-block: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size7"]
-) {
+[data-br-inline~="paddingBlock:size7"] {
   padding-block: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size8"]
-) {
+[data-br-inline~="paddingBlock:size8"] {
   padding-block: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size9"]
-) {
+[data-br-inline~="paddingBlock:size9"] {
   padding-block: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size10"]
-) {
+[data-br-inline~="paddingBlock:size10"] {
   padding-block: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size11"]
-) {
+[data-br-inline~="paddingBlock:size11"] {
   padding-block: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size12"]
-) {
+[data-br-inline~="paddingBlock:size12"] {
   padding-block: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size13"]
-) {
+[data-br-inline~="paddingBlock:size13"] {
   padding-block: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size14"]
-) {
+[data-br-inline~="paddingBlock:size14"] {
   padding-block: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlock:size15"]
-) {
+[data-br-inline~="paddingBlock:size15"] {
   padding-block: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size000"]
-) {
+[data-br-inline~="paddingBlockStart:size000"] {
   padding-block-start: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size00"]
-) {
+[data-br-inline~="paddingBlockStart:size00"] {
   padding-block-start: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size1"]
-) {
+[data-br-inline~="paddingBlockStart:size1"] {
   padding-block-start: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size2"]
-) {
+[data-br-inline~="paddingBlockStart:size2"] {
   padding-block-start: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size3"]
-) {
+[data-br-inline~="paddingBlockStart:size3"] {
   padding-block-start: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size4"]
-) {
+[data-br-inline~="paddingBlockStart:size4"] {
   padding-block-start: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size5"]
-) {
+[data-br-inline~="paddingBlockStart:size5"] {
   padding-block-start: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size6"]
-) {
+[data-br-inline~="paddingBlockStart:size6"] {
   padding-block-start: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size7"]
-) {
+[data-br-inline~="paddingBlockStart:size7"] {
   padding-block-start: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size8"]
-) {
+[data-br-inline~="paddingBlockStart:size8"] {
   padding-block-start: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size9"]
-) {
+[data-br-inline~="paddingBlockStart:size9"] {
   padding-block-start: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size10"]
-) {
+[data-br-inline~="paddingBlockStart:size10"] {
   padding-block-start: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size11"]
-) {
+[data-br-inline~="paddingBlockStart:size11"] {
   padding-block-start: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size12"]
-) {
+[data-br-inline~="paddingBlockStart:size12"] {
   padding-block-start: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size13"]
-) {
+[data-br-inline~="paddingBlockStart:size13"] {
   padding-block-start: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size14"]
-) {
+[data-br-inline~="paddingBlockStart:size14"] {
   padding-block-start: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockStart:size15"]
-) {
+[data-br-inline~="paddingBlockStart:size15"] {
   padding-block-start: 30rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size000"]
-) {
+[data-br-inline~="paddingBlockEnd:size000"] {
   padding-block-end: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size00"]
-) {
+[data-br-inline~="paddingBlockEnd:size00"] {
   padding-block-end: 0;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size1"]
-) {
+[data-br-inline~="paddingBlockEnd:size1"] {
   padding-block-end: 0.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size2"]
-) {
+[data-br-inline~="paddingBlockEnd:size2"] {
   padding-block-end: 0.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size3"]
-) {
+[data-br-inline~="paddingBlockEnd:size3"] {
   padding-block-end: 1rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size4"]
-) {
+[data-br-inline~="paddingBlockEnd:size4"] {
   padding-block-end: 1.25rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size5"]
-) {
+[data-br-inline~="paddingBlockEnd:size5"] {
   padding-block-end: 1.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size6"]
-) {
+[data-br-inline~="paddingBlockEnd:size6"] {
   padding-block-end: 1.75rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size7"]
-) {
+[data-br-inline~="paddingBlockEnd:size7"] {
   padding-block-end: 2rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size8"]
-) {
+[data-br-inline~="paddingBlockEnd:size8"] {
   padding-block-end: 3rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size9"]
-) {
+[data-br-inline~="paddingBlockEnd:size9"] {
   padding-block-end: 4rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size10"]
-) {
+[data-br-inline~="paddingBlockEnd:size10"] {
   padding-block-end: 5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size11"]
-) {
+[data-br-inline~="paddingBlockEnd:size11"] {
   padding-block-end: 7.5rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size12"]
-) {
+[data-br-inline~="paddingBlockEnd:size12"] {
   padding-block-end: 10rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size13"]
-) {
+[data-br-inline~="paddingBlockEnd:size13"] {
   padding-block-end: 15rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size14"]
-) {
+[data-br-inline~="paddingBlockEnd:size14"] {
   padding-block-end: 20rem;
 }
-:is(
-  [data-bedrock-inline~="paddingBlockEnd:size15"]
-) {
-  padding-block-end: 30rem;
-}
-:is(
-  [data-br-inline~="padding:size000"]
-) {
-  padding: 0;
-}
-:is(
-  [data-br-inline~="padding:size00"]
-) {
-  padding: 0;
-}
-:is(
-  [data-br-inline~="padding:size1"]
-) {
-  padding: 0.25rem;
-}
-:is(
-  [data-br-inline~="padding:size2"]
-) {
-  padding: 0.5rem;
-}
-:is(
-  [data-br-inline~="padding:size3"]
-) {
-  padding: 1rem;
-}
-:is(
-  [data-br-inline~="padding:size4"]
-) {
-  padding: 1.25rem;
-}
-:is(
-  [data-br-inline~="padding:size5"]
-) {
-  padding: 1.5rem;
-}
-:is(
-  [data-br-inline~="padding:size6"]
-) {
-  padding: 1.75rem;
-}
-:is(
-  [data-br-inline~="padding:size7"]
-) {
-  padding: 2rem;
-}
-:is(
-  [data-br-inline~="padding:size8"]
-) {
-  padding: 3rem;
-}
-:is(
-  [data-br-inline~="padding:size9"]
-) {
-  padding: 4rem;
-}
-:is(
-  [data-br-inline~="padding:size10"]
-) {
-  padding: 5rem;
-}
-:is(
-  [data-br-inline~="padding:size11"]
-) {
-  padding: 7.5rem;
-}
-:is(
-  [data-br-inline~="padding:size12"]
-) {
-  padding: 10rem;
-}
-:is(
-  [data-br-inline~="padding:size13"]
-) {
-  padding: 15rem;
-}
-:is(
-  [data-br-inline~="padding:size14"]
-) {
-  padding: 20rem;
-}
-:is(
-  [data-br-inline~="padding:size15"]
-) {
-  padding: 30rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size000"]
-) {
-  padding-inline: 0;
-}
-:is(
-  [data-br-inline~="paddingInline:size00"]
-) {
-  padding-inline: 0;
-}
-:is(
-  [data-br-inline~="paddingInline:size1"]
-) {
-  padding-inline: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size2"]
-) {
-  padding-inline: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size3"]
-) {
-  padding-inline: 1rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size4"]
-) {
-  padding-inline: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size5"]
-) {
-  padding-inline: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size6"]
-) {
-  padding-inline: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size7"]
-) {
-  padding-inline: 2rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size8"]
-) {
-  padding-inline: 3rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size9"]
-) {
-  padding-inline: 4rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size10"]
-) {
-  padding-inline: 5rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size11"]
-) {
-  padding-inline: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size12"]
-) {
-  padding-inline: 10rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size13"]
-) {
-  padding-inline: 15rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size14"]
-) {
-  padding-inline: 20rem;
-}
-:is(
-  [data-br-inline~="paddingInline:size15"]
-) {
-  padding-inline: 30rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size000"]
-) {
-  padding-inline-start: 0;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size00"]
-) {
-  padding-inline-start: 0;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size1"]
-) {
-  padding-inline-start: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size2"]
-) {
-  padding-inline-start: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size3"]
-) {
-  padding-inline-start: 1rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size4"]
-) {
-  padding-inline-start: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size5"]
-) {
-  padding-inline-start: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size6"]
-) {
-  padding-inline-start: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size7"]
-) {
-  padding-inline-start: 2rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size8"]
-) {
-  padding-inline-start: 3rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size9"]
-) {
-  padding-inline-start: 4rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size10"]
-) {
-  padding-inline-start: 5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size11"]
-) {
-  padding-inline-start: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size12"]
-) {
-  padding-inline-start: 10rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size13"]
-) {
-  padding-inline-start: 15rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size14"]
-) {
-  padding-inline-start: 20rem;
-}
-:is(
-  [data-br-inline~="paddingInlineStart:size15"]
-) {
-  padding-inline-start: 30rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size000"]
-) {
-  padding-inline-end: 0;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size00"]
-) {
-  padding-inline-end: 0;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size1"]
-) {
-  padding-inline-end: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size2"]
-) {
-  padding-inline-end: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size3"]
-) {
-  padding-inline-end: 1rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size4"]
-) {
-  padding-inline-end: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size5"]
-) {
-  padding-inline-end: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size6"]
-) {
-  padding-inline-end: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size7"]
-) {
-  padding-inline-end: 2rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size8"]
-) {
-  padding-inline-end: 3rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size9"]
-) {
-  padding-inline-end: 4rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size10"]
-) {
-  padding-inline-end: 5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size11"]
-) {
-  padding-inline-end: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size12"]
-) {
-  padding-inline-end: 10rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size13"]
-) {
-  padding-inline-end: 15rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size14"]
-) {
-  padding-inline-end: 20rem;
-}
-:is(
-  [data-br-inline~="paddingInlineEnd:size15"]
-) {
-  padding-inline-end: 30rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size000"]
-) {
-  padding-block: 0;
-}
-:is(
-  [data-br-inline~="paddingBlock:size00"]
-) {
-  padding-block: 0;
-}
-:is(
-  [data-br-inline~="paddingBlock:size1"]
-) {
-  padding-block: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size2"]
-) {
-  padding-block: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size3"]
-) {
-  padding-block: 1rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size4"]
-) {
-  padding-block: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size5"]
-) {
-  padding-block: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size6"]
-) {
-  padding-block: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size7"]
-) {
-  padding-block: 2rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size8"]
-) {
-  padding-block: 3rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size9"]
-) {
-  padding-block: 4rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size10"]
-) {
-  padding-block: 5rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size11"]
-) {
-  padding-block: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size12"]
-) {
-  padding-block: 10rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size13"]
-) {
-  padding-block: 15rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size14"]
-) {
-  padding-block: 20rem;
-}
-:is(
-  [data-br-inline~="paddingBlock:size15"]
-) {
-  padding-block: 30rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size000"]
-) {
-  padding-block-start: 0;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size00"]
-) {
-  padding-block-start: 0;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size1"]
-) {
-  padding-block-start: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size2"]
-) {
-  padding-block-start: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size3"]
-) {
-  padding-block-start: 1rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size4"]
-) {
-  padding-block-start: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size5"]
-) {
-  padding-block-start: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size6"]
-) {
-  padding-block-start: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size7"]
-) {
-  padding-block-start: 2rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size8"]
-) {
-  padding-block-start: 3rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size9"]
-) {
-  padding-block-start: 4rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size10"]
-) {
-  padding-block-start: 5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size11"]
-) {
-  padding-block-start: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size12"]
-) {
-  padding-block-start: 10rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size13"]
-) {
-  padding-block-start: 15rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size14"]
-) {
-  padding-block-start: 20rem;
-}
-:is(
-  [data-br-inline~="paddingBlockStart:size15"]
-) {
-  padding-block-start: 30rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size000"]
-) {
-  padding-block-end: 0;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size00"]
-) {
-  padding-block-end: 0;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size1"]
-) {
-  padding-block-end: 0.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size2"]
-) {
-  padding-block-end: 0.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size3"]
-) {
-  padding-block-end: 1rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size4"]
-) {
-  padding-block-end: 1.25rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size5"]
-) {
-  padding-block-end: 1.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size6"]
-) {
-  padding-block-end: 1.75rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size7"]
-) {
-  padding-block-end: 2rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size8"]
-) {
-  padding-block-end: 3rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size9"]
-) {
-  padding-block-end: 4rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size10"]
-) {
-  padding-block-end: 5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size11"]
-) {
-  padding-block-end: 7.5rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size12"]
-) {
-  padding-block-end: 10rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size13"]
-) {
-  padding-block-end: 15rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size14"]
-) {
-  padding-block-end: 20rem;
-}
-:is(
-  [data-br-inline~="paddingBlockEnd:size15"]
-) {
+[data-br-inline~="paddingBlockEnd:size15"] {
   padding-block-end: 30rem;
 }

@@ -5,7 +5,7 @@ import { Box } from "../../components/Box";
 
 export function Span(): JSXElement {
   return (
-    <Columns gutter="size3" colCount={4}>
+    <Columns gap="size3" colCount={4}>
       <Box />
       <Box />
       <Column span={3}>

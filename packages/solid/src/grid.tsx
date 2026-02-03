@@ -5,8 +5,7 @@ import {
   SizesOptions,
   SpacingOptions,
   getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -25,10 +24,6 @@ type MinItemWidth =
   | "auto";
 
 export type GridBaseProps = {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
   variant?: "grid" | "masonry";
@@ -40,8 +35,6 @@ export type GridProps<T extends ValidConstructor = "div"> =
 export function Grid<T extends ValidConstructor = "div">(
   props: Readonly<GridProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -51,12 +44,10 @@ export function Grid<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
 
   const minItemWidth = () =>
-    `--minItemWidth: ${
+    `--min-item-width: ${
       typeof props.minItemWidth === "string"
         ? props.minItemWidth
         : `${props.minItemWidth ?? 0}px`
@@ -67,7 +58,7 @@ export function Grid<T extends ValidConstructor = "div">(
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter", "minItemWidth"]),
+      omitProps(props, ["as", "minItemWidth"]),
       createPropsFromAccessors({
         style,
         "data-br-grid": () =>

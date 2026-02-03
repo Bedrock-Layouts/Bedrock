@@ -6,8 +6,7 @@ import {
   SpacingOptions,
   getSizeValue,
   getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -26,23 +25,13 @@ type MinItemWidth =
   | "auto";
 
 export interface ColumnDropBaseProps {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
-  noStretchedColumns?: boolean;
+  variant?: "default" | "centered";
 }
 
-function getSafeMinItemWidth(
-  theme: Readonly<{
-    space?: { [key: string]: string };
-    sizes?: { [key: string]: string };
-  }>,
-  minItemWidth?: MinItemWidth,
-) {
-  return getSizeValue(theme, minItemWidth);
+function getSafeMinItemWidth(minItemWidth?: MinItemWidth) {
+  return getSizeValue(minItemWidth);
 }
 
 export type ColumnDropProps<T extends ValidConstructor = "div"> =
@@ -51,8 +40,6 @@ export type ColumnDropProps<T extends ValidConstructor = "div"> =
 export function ColumnDrop<T extends ValidConstructor = "div">(
   props: Readonly<ColumnDropProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -62,22 +49,20 @@ export function ColumnDrop<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
 
   const minItemWidth = () =>
-    `--minItemWidth: ${getSafeMinItemWidth(theme, props.minItemWidth)}`;
+    `--min-item-width: ${getSafeMinItemWidth(props.minItemWidth)}`;
 
   const noStretchedColumns = () =>
-    props.noStretchedColumns === true ? "no-stretched-columns" : "";
+    props.variant === "centered" ? "variant:centered" : "";
 
   const style = () => [propsStyle(), gutter(), minItemWidth()].join("; ");
 
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter", "minItemWidth", "noStretchedColumns"]),
+      omitProps(props, ["as", "minItemWidth", "variant"]),
       createPropsFromAccessors({
         style,
         "data-br-column-drop": noStretchedColumns,

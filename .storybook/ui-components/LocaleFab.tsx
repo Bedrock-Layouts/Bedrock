@@ -2,7 +2,6 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
-import { PadBox } from "../../packages/padbox/src";
 import { Stack } from "../../packages/stack/src";
 import i18n from "../i18n";
 import { Button } from "./Button";
@@ -52,9 +51,9 @@ const LanguageItem = styled.div
   .attrs(({ children }) => ({
     as: DropdownMenu.Item,
     children: (
-      <PadBox padding={["size2", "size3"]} tabIndex={0}>
+      <div style={{ padding: "0.5rem 1rem" }} tabIndex={0}>
         {children}
-      </PadBox>
+      </div>
     ),
   }))`
   :hover,
@@ -112,7 +111,7 @@ export const LocaleFab = () => {
     >
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button ref={menuButtonRef} icon>
+          <Button ref={menuButtonRef}>
             <GlobeIcon />
             <VisuallyHidden>Locale</VisuallyHidden>
           </Button>

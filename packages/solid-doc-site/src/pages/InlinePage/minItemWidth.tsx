@@ -5,7 +5,7 @@ import { Box } from "../../components/Box";
 
 export function MinItemWidth(): JSXElement {
   return (
-    <Inline gutter="size3" minItemWidth={150}>
+    <Inline gap="size3" minItemWidth={150}>
       <Box />
       <Box />
       <Box />

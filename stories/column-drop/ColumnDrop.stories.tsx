@@ -232,3 +232,32 @@ export const NoStretchedColumns: Story = {
     );
   },
 };
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * <ColumnDrop padding="size3">
+ *  <Component />
+ * </ColumnDrop>
+ * ```
+ */
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+  },
+  render: (args) => {
+    return (
+      <ColumnDrop {...args}>
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+        <Component />
+      </ColumnDrop>
+    );
+  },
+};

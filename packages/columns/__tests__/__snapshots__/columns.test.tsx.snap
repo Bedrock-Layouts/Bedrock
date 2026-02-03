@@ -5,9 +5,9 @@ exports[`Column > correct usage > renders as main 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -15,9 +15,9 @@ exports[`Column > correct usage > renders as main 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -42,9 +42,9 @@ exports[`Column > correct usage > renders custom span 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -52,9 +52,9 @@ exports[`Column > correct usage > renders custom span 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 2,
+        "--col-span": 2,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -74,14 +74,14 @@ exports[`Column > correct usage > renders custom span 1`] = `
 </div>
 `;
 
-exports[`Column > correct usage > renders default gutters 1`] = `
+exports[`Column > correct usage > renders default gap 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -89,9 +89,9 @@ exports[`Column > correct usage > renders default gutters 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -116,9 +116,9 @@ exports[`Column > correct usage > renders offsetEnd span 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 4,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 4,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -126,9 +126,9 @@ exports[`Column > correct usage > renders offsetEnd span 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": 2,
-        "--offsetStart": undefined,
-        "--span": 2,
+        "--col-span": 2,
+        "--offset-end": 2,
+        "--offset-start": undefined,
       }
     }
   >
@@ -153,9 +153,9 @@ exports[`Column > correct usage > renders offsetStart span 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 4,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 4,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -163,9 +163,9 @@ exports[`Column > correct usage > renders offsetStart span 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": 2,
-        "--span": 2,
+        "--col-span": 2,
+        "--offset-end": undefined,
+        "--offset-start": 2,
       }
     }
   >
@@ -190,9 +190,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -200,9 +200,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given 0 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -227,9 +227,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given negative number
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -237,9 +237,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given negative number
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -264,9 +264,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given null 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -274,9 +274,9 @@ exports[`Column > incorrect usage > renders a span of 1 if given null 1`] = `
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -301,9 +301,9 @@ exports[`Column > incorrect usage > renders default with console error with wron
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -311,9 +311,9 @@ exports[`Column > incorrect usage > renders default with console error with wron
     data-br-column=""
     style={
       {
-        "--offsetEnd": undefined,
-        "--offsetStart": undefined,
-        "--span": 1,
+        "--col-span": 1,
+        "--offset-end": undefined,
+        "--offset-start": undefined,
       }
     }
   >
@@ -333,14 +333,14 @@ exports[`Column > incorrect usage > renders default with console error with wron
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 1`] = `
+exports[`Columns > correct usage > renders all the gap options 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "-.5rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "-.5rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -359,14 +359,14 @@ exports[`Columns > correct usage > renders all the gutter options 1`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 2`] = `
+exports[`Columns > correct usage > renders all the gap options 2`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "-.25rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "-.25rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -385,14 +385,14 @@ exports[`Columns > correct usage > renders all the gutter options 2`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 3`] = `
+exports[`Columns > correct usage > renders all the gap options 3`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": ".25rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": ".25rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -411,14 +411,14 @@ exports[`Columns > correct usage > renders all the gutter options 3`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 4`] = `
+exports[`Columns > correct usage > renders all the gap options 4`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": ".5rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": ".5rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -437,14 +437,14 @@ exports[`Columns > correct usage > renders all the gutter options 4`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 5`] = `
+exports[`Columns > correct usage > renders all the gap options 5`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -463,14 +463,14 @@ exports[`Columns > correct usage > renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 6`] = `
+exports[`Columns > correct usage > renders all the gap options 6`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1.25rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1.25rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -489,14 +489,14 @@ exports[`Columns > correct usage > renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 7`] = `
+exports[`Columns > correct usage > renders all the gap options 7`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1.5rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1.5rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -515,14 +515,14 @@ exports[`Columns > correct usage > renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 8`] = `
+exports[`Columns > correct usage > renders all the gap options 8`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1.75rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "1.75rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -541,14 +541,14 @@ exports[`Columns > correct usage > renders all the gutter options 8`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 9`] = `
+exports[`Columns > correct usage > renders all the gap options 9`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "2rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "2rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -567,14 +567,14 @@ exports[`Columns > correct usage > renders all the gutter options 9`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 10`] = `
+exports[`Columns > correct usage > renders all the gap options 10`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "3rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "3rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -593,14 +593,14 @@ exports[`Columns > correct usage > renders all the gutter options 10`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 11`] = `
+exports[`Columns > correct usage > renders all the gap options 11`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "4rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "4rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -619,14 +619,14 @@ exports[`Columns > correct usage > renders all the gutter options 11`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 12`] = `
+exports[`Columns > correct usage > renders all the gap options 12`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "5rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "5rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -645,14 +645,14 @@ exports[`Columns > correct usage > renders all the gutter options 12`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 13`] = `
+exports[`Columns > correct usage > renders all the gap options 13`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "7.5rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "7.5rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -671,14 +671,14 @@ exports[`Columns > correct usage > renders all the gutter options 13`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 14`] = `
+exports[`Columns > correct usage > renders all the gap options 14`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "10rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "10rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -697,14 +697,14 @@ exports[`Columns > correct usage > renders all the gutter options 14`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 15`] = `
+exports[`Columns > correct usage > renders all the gap options 15`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "15rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "15rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -723,14 +723,14 @@ exports[`Columns > correct usage > renders all the gutter options 15`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 16`] = `
+exports[`Columns > correct usage > renders all the gap options 16`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "20rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "20rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -749,14 +749,14 @@ exports[`Columns > correct usage > renders all the gutter options 16`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders all the gutter options 17`] = `
+exports[`Columns > correct usage > renders all the gap options 17`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "30rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "30rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -780,9 +780,9 @@ exports[`Columns > correct usage > renders custom colCount 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 5,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 5,
+      "--gap": "1rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -801,14 +801,14 @@ exports[`Columns > correct usage > renders custom colCount 1`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders custom columns 1`] = `
+exports[`Columns > correct usage > renders custom gap with number 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 5,
-      "--gutter": "1rem",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "20px",
+      "--switch-at": undefined,
     }
   }
 >
@@ -827,14 +827,14 @@ exports[`Columns > correct usage > renders custom columns 1`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders custom gutter with number 1`] = `
+exports[`Columns > correct usage > renders custom gap with string 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "20px",
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": "3ch",
+      "--switch-at": undefined,
     }
   }
 >
@@ -853,40 +853,14 @@ exports[`Columns > correct usage > renders custom gutter with number 1`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders custom gutter with string 1`] = `
+exports[`Columns > correct usage > renders default gap when none provided 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "3ch",
-      "--switchAt": undefined,
-    }
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ultrices, quam nec scelerisque malesuada, lectus elit semper diam, ac placerat purus tortor et enim.
-  </p>
-</div>
-`;
-
-exports[`Columns > correct usage > renders default gutter when none provided 1`] = `
-<div
-  data-br-columns=""
-  style={
-    {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -910,9 +884,9 @@ exports[`Columns > correct usage > renders switchAt as number 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": "500px",
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": "500px",
     }
   }
 >
@@ -936,9 +910,9 @@ exports[`Columns > correct usage > renders switchAt as string 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": "500px",
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": "500px",
     }
   }
 >
@@ -957,14 +931,14 @@ exports[`Columns > correct usage > renders switchAt as string 1`] = `
 </div>
 `;
 
-exports[`Columns > correct usage > renders with theme overrides 1`] = `
+exports[`Columns > correct usage > renders with invalid gap (no theme provider) 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -988,9 +962,9 @@ exports[`Columns > incorrect usage > renders 1 columns if given 0 1`] = `
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -1014,9 +988,9 @@ exports[`Columns > incorrect usage > renders 1 columns if given negative number 
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -1040,9 +1014,9 @@ exports[`Columns > incorrect usage > renders default with console error with inc
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -1066,9 +1040,9 @@ exports[`Columns > incorrect usage > renders default with console error with wro
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": "1rem",
-      "--switchAt": {
+      "--col-count": 1,
+      "--gap": "1rem",
+      "--switch-at": {
         "value": "incorrect",
       },
     }
@@ -1089,14 +1063,14 @@ exports[`Columns > incorrect usage > renders default with console error with wro
 </div>
 `;
 
-exports[`Columns > incorrect usage > renders default with wrong gutter input 1`] = `
+exports[`Columns > incorrect usage > renders default with wrong gap input 1`] = `
 <div
   data-br-columns=""
   style={
     {
-      "--columns": 1,
-      "--gutter": undefined,
-      "--switchAt": undefined,
+      "--col-count": 1,
+      "--gap": undefined,
+      "--switch-at": undefined,
     }
   }
 >

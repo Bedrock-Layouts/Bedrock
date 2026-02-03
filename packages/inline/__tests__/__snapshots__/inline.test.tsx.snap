@@ -5,9 +5,9 @@ exports[`Inline > correct usage > renders all the align options 1`] = `
   data-br-inline="align:start"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -31,9 +31,9 @@ exports[`Inline > correct usage > renders all the align options 2`] = `
   data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -57,9 +57,9 @@ exports[`Inline > correct usage > renders all the align options 3`] = `
   data-br-inline="align:end"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -83,9 +83,9 @@ exports[`Inline > correct usage > renders all the align options 4`] = `
   data-br-inline="align:stretch"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -104,14 +104,14 @@ exports[`Inline > correct usage > renders all the align options 4`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 1`] = `
+exports[`Inline > correct usage > renders all the gap options 1`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "-.5rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "-.5rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -130,14 +130,14 @@ exports[`Inline > correct usage > renders all the gutter options 1`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 2`] = `
+exports[`Inline > correct usage > renders all the gap options 2`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "-.25rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "-.25rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -156,14 +156,14 @@ exports[`Inline > correct usage > renders all the gutter options 2`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 3`] = `
+exports[`Inline > correct usage > renders all the gap options 3`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": ".25rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": ".25rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -182,14 +182,14 @@ exports[`Inline > correct usage > renders all the gutter options 3`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 4`] = `
+exports[`Inline > correct usage > renders all the gap options 4`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": ".5rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": ".5rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -208,14 +208,14 @@ exports[`Inline > correct usage > renders all the gutter options 4`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 5`] = `
+exports[`Inline > correct usage > renders all the gap options 5`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -234,14 +234,14 @@ exports[`Inline > correct usage > renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 6`] = `
+exports[`Inline > correct usage > renders all the gap options 6`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1.25rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1.25rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -260,14 +260,14 @@ exports[`Inline > correct usage > renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 7`] = `
+exports[`Inline > correct usage > renders all the gap options 7`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1.5rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1.5rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -286,14 +286,14 @@ exports[`Inline > correct usage > renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 8`] = `
+exports[`Inline > correct usage > renders all the gap options 8`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1.75rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1.75rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -312,14 +312,14 @@ exports[`Inline > correct usage > renders all the gutter options 8`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 9`] = `
+exports[`Inline > correct usage > renders all the gap options 9`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "2rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "2rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -338,14 +338,14 @@ exports[`Inline > correct usage > renders all the gutter options 9`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 10`] = `
+exports[`Inline > correct usage > renders all the gap options 10`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "3rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "3rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -364,14 +364,14 @@ exports[`Inline > correct usage > renders all the gutter options 10`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 11`] = `
+exports[`Inline > correct usage > renders all the gap options 11`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "4rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "4rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -390,14 +390,14 @@ exports[`Inline > correct usage > renders all the gutter options 11`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 12`] = `
+exports[`Inline > correct usage > renders all the gap options 12`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "5rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "5rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -416,14 +416,14 @@ exports[`Inline > correct usage > renders all the gutter options 12`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 13`] = `
+exports[`Inline > correct usage > renders all the gap options 13`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "7.5rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "7.5rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -442,14 +442,14 @@ exports[`Inline > correct usage > renders all the gutter options 13`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 14`] = `
+exports[`Inline > correct usage > renders all the gap options 14`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "10rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "10rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -468,14 +468,14 @@ exports[`Inline > correct usage > renders all the gutter options 14`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 15`] = `
+exports[`Inline > correct usage > renders all the gap options 15`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "15rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "15rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -494,14 +494,14 @@ exports[`Inline > correct usage > renders all the gutter options 15`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 16`] = `
+exports[`Inline > correct usage > renders all the gap options 16`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "20rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "20rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -520,14 +520,14 @@ exports[`Inline > correct usage > renders all the gutter options 16`] = `
 </div>
 `;
 
-exports[`Inline > correct usage > renders all the gutter options 17`] = `
+exports[`Inline > correct usage > renders all the gap options 17`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "30rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "30rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -548,12 +548,12 @@ exports[`Inline > correct usage > renders all the gutter options 17`] = `
 
 exports[`Inline > correct usage > renders all the justify options 1`] = `
 <div
-  data-br-inline="justify:start"
+  data-br-inline="justify:start align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -574,12 +574,12 @@ exports[`Inline > correct usage > renders all the justify options 1`] = `
 
 exports[`Inline > correct usage > renders all the justify options 2`] = `
 <div
-  data-br-inline="justify:center"
+  data-br-inline="justify:center align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -600,12 +600,12 @@ exports[`Inline > correct usage > renders all the justify options 2`] = `
 
 exports[`Inline > correct usage > renders all the justify options 3`] = `
 <div
-  data-br-inline="justify:end"
+  data-br-inline="justify:end align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -626,12 +626,12 @@ exports[`Inline > correct usage > renders all the justify options 3`] = `
 
 exports[`Inline > correct usage > renders all the justify options 4`] = `
 <div
-  data-br-inline="justify:space-around"
+  data-br-inline="justify:space-around align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -652,12 +652,12 @@ exports[`Inline > correct usage > renders all the justify options 4`] = `
 
 exports[`Inline > correct usage > renders all the justify options 5`] = `
 <div
-  data-br-inline="justify:space-between"
+  data-br-inline="justify:space-between align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -678,12 +678,12 @@ exports[`Inline > correct usage > renders all the justify options 5`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 1`] = `
 <div
-  data-br-inline="stretch:all"
+  data-br-inline="align:center stretch:all"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -704,12 +704,12 @@ exports[`Inline > correct usage > renders all the stretch options 1`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 2`] = `
 <div
-  data-br-inline="stretch:start"
+  data-br-inline="align:center stretch:start"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -730,12 +730,12 @@ exports[`Inline > correct usage > renders all the stretch options 2`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 3`] = `
 <div
-  data-br-inline="stretch:end"
+  data-br-inline="align:center stretch:end"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -756,12 +756,12 @@ exports[`Inline > correct usage > renders all the stretch options 3`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 4`] = `
 <div
-  data-br-inline="stretch:0"
+  data-br-inline="align:center stretch:0"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -782,12 +782,12 @@ exports[`Inline > correct usage > renders all the stretch options 4`] = `
 
 exports[`Inline > correct usage > renders all the stretch options 5`] = `
 <div
-  data-br-inline="stretch:3"
+  data-br-inline="align:center stretch:3"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >
@@ -808,12 +808,12 @@ exports[`Inline > correct usage > renders all the stretch options 5`] = `
 
 exports[`Inline > correct usage > renders with minItemWidth 1`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "42px",
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": "42px",
+      "--switch-at": undefined,
     }
   }
 >
@@ -834,12 +834,12 @@ exports[`Inline > correct usage > renders with minItemWidth 1`] = `
 
 exports[`Inline > correct usage > renders with minItemWidth 2`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "42rem",
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": "42rem",
+      "--switch-at": undefined,
     }
   }
 >
@@ -860,12 +860,12 @@ exports[`Inline > correct usage > renders with minItemWidth 2`] = `
 
 exports[`Inline > correct usage > renders with switchAt 1`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": "42px",
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": "42px",
     }
   }
 >
@@ -886,12 +886,12 @@ exports[`Inline > correct usage > renders with switchAt 1`] = `
 
 exports[`Inline > correct usage > renders with switchAt 2`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": "42rem",
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": "42rem",
     }
   }
 >
@@ -912,12 +912,12 @@ exports[`Inline > correct usage > renders with switchAt 2`] = `
 
 exports[`Inline > correct usage > renders with switchAt 3`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": "45ch",
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": "45ch",
     }
   }
 >
@@ -938,12 +938,12 @@ exports[`Inline > correct usage > renders with switchAt 3`] = `
 
 exports[`Inline > incorrect usage > renders default with console error with wrong minItemWidth input 1`] = `
 <div
-  data-br-inline=""
+  data-br-inline="align:center"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "incorrect",
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": "incorrect",
+      "--switch-at": undefined,
     }
   }
 >
@@ -964,12 +964,12 @@ exports[`Inline > incorrect usage > renders default with console error with wron
 
 exports[`Inline > incorrect usage > renders default with console error with wrong stretch input 1`] = `
 <div
-  data-br-inline="stretch:incorrect"
+  data-br-inline="align:center stretch:incorrect"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
-      "--switchAt": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
+      "--switch-at": undefined,
     }
   }
 >

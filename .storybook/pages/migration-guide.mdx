@@ -1,0 +1,159 @@
+import { Meta } from "@storybook/addon-docs";
+import { NameSpace } from "../ui-components/Intl";
+import { LocaleFab } from "../ui-components/LocaleFab";
+
+<LocaleFab />
+
+<NameSpace ns="migration-guide" />
+
+<Meta title="Overview/Migration Guide" parameters={{ viewMode: "docs" }} />
+
+# Migration Guide
+
+This guide summarizes the current Bedrock Layout API and the steps to migrate older implementations. It applies to both React and Solid packages unless noted.
+
+## Component Inventory (Current)
+
+**Core layout primitives**
+
+- `@bedrock-layout/stack`
+- `@bedrock-layout/inline`
+- `@bedrock-layout/inline-cluster`
+- `@bedrock-layout/center`
+- `@bedrock-layout/cover` (`Cover` + `CoverCentered`)
+- `@bedrock-layout/frame`
+- `@bedrock-layout/grid` (includes `variant="masonry"`)
+- `@bedrock-layout/column-drop`
+- `@bedrock-layout/columns` (`Columns` + `Column`)
+- `@bedrock-layout/reel`
+- `@bedrock-layout/split`
+
+**Support packages**
+
+- `@bedrock-layout/css`
+- `@bedrock-layout/spacing-constants`
+- `@bedrock-layout/primitives` (barrel export of the React primitives)
+- `@bedrock-layout/solid` (Solid versions of the primitives)
+
+## Required API Changes
+
+### 1) Replace `gutter` with `gap`
+
+All layout primitives now use `gap`. Update props and styles accordingly.
+
+```tsx
+// Before
+<Stack gutter="size3" />
+
+// After
+<Stack gap="size3" />
+```
+
+### 2) Columns: `columns` -> `colCount`
+
+```tsx
+// Before
+<Columns columns={3} />
+
+// After
+<Columns colCount={3} />
+```
+
+### 3) ColumnDrop: `noStretchColumns` -> `variant="centered"`
+
+```tsx
+// Before
+<ColumnDrop noStretchColumns />
+
+// After
+<ColumnDrop variant="centered" />
+```
+
+### 4) Cover: replace `top`/`bottom` with `CoverCentered`
+
+The centered child must be wrapped in `CoverCentered`. Items before it render above, and items after it render below.
+
+```tsx
+// Before
+<Cover top={<Menu />} bottom={<Footer />}>
+  <Hero />
+</Cover>
+
+// After
+<Cover>
+  <Menu />
+  <CoverCentered>
+    <Hero />
+  </CoverCentered>
+  <Footer />
+</Cover>
+```
+
+### 5) Cover: `stretchContent` -> `variant="stretch-content"`
+
+```tsx
+// Before
+<Cover stretchContent />
+
+// After
+<Cover variant="stretch-content" />
+```
+
+### 6) Grid: `MasonryGrid` -> `Grid variant="masonry"`
+
+```tsx
+// Before
+<MasonryGrid />
+
+// After
+<Grid variant="masonry" />
+```
+
+### 7) AppBoundary and PadBox removals
+
+- **AppBoundary**: use `Center` at the app root to clamp width.
+- **PadBox**: use `style`/CSS padding or a wrapper element.
+
+```tsx
+// AppBoundary replacement
+<Center maxWidth="sizeXxl">
+  <App />
+</Center>
+```
+
+## CSS and Attribute Changes
+
+### 8) Data attributes
+
+`data-bedrock-*` attributes have been replaced by `data-br-*`.
+
+```html
+<!-- Before -->
+<div data-bedrock-stack></div>
+
+<!-- After -->
+<div data-br-stack></div>
+```
+
+### 9) Custom properties use kebab-case
+
+```css
+/* Before */
+--minItemWidth: 20rem;
+
+/* After */
+--min-item-width: 20rem;
+```
+
+## Recommended Upgrade Path
+
+1. Replace deprecated components (`MasonryGrid`, `Padbox`, `AppBoundary`).
+2. Update prop names (`gutter` → `gap`, `columns` → `colCount`).
+3. Update `Cover` to use `CoverCentered`.
+4. Update `ColumnDrop` and `Cover` variants.
+5. Update any CSS or data attributes to the `data-br-*` and kebab-case property names.
+
+## Where to Learn More
+
+- [Roadmap](/?path=/docs/overview-roadmap--docs)
+- [Getting Started](/?path=/docs/getting-started-introduction--docs)

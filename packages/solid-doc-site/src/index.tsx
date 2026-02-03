@@ -21,7 +21,7 @@ render(
         style="background-color: white; min-inline-size:min(min-content, 100%);"
         maxWidth={1680}
       >
-        <Cover stretchContent>
+        <Cover variant="stretch-content">
           <App />
         </Cover>
       </Center>

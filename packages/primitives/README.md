@@ -10,14 +10,14 @@ Full docs at: [bedrock-layout.dev](https://bedrock-layout.dev/)
 
 or
 
-`yarn add @bedrock-laylock/primitives`
+`yarn add @bedrock-layout/primitives`
 
 ---
 
 ## Usage
 
 ```javascript
-import { Stack, Inline, Split, Cover, Frame } from '@bedrock-layout/primitives';
+import { Stack, Inline, Split, Cover, Frame } from "@bedrock-layout/primitives";
 
 export function Hero() {
   return (

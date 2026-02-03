@@ -8,19 +8,4 @@ export const argTypes: ArgType = {
     initialValue: "100%",
     control: "text",
   },
-  centerText: {
-    description: "Sets the text alignment of the component to be centered",
-    defaultValue: "false",
-    initialValue: false,
-    summary: "boolean",
-    control: "boolean",
-  },
-  centerChildren: {
-    description:
-      "Sets the alignment of the component's children to be centered",
-    defaultValue: "false",
-    initialValue: false,
-    summary: "boolean",
-    control: "boolean",
-  },
 };

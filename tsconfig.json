@@ -4,7 +4,6 @@
     "types": ["vitest/globals"],
     "baseUrl": ".",
     "paths": {
-      "@bedrock-layout/appboundary": ["packages/appboundary/src"],
       "@bedrock-layout/center": ["packages/center/src"],
       "@bedrock-layout/column-drop": ["packages/column-drop/src"],
       "@bedrock-layout/columns": ["packages/columns/src"],
@@ -14,8 +13,6 @@
       "@bedrock-layout/grid": ["packages/grid/src"],
       "@bedrock-layout/inline": ["packages/inline/src"],
       "@bedrock-layout/inline-cluster": ["packages/inline-cluster/src"],
-      "@bedrock-layout/masonry-grid": ["packages/masonry-grid/src"],
-      "@bedrock-layout/padbox": ["packages/padbox/src"],
       "@bedrock-layout/reel": ["packages/reel/src"],
       "@bedrock-layout/register-resize-callback": [
         "packages/register-resize-callback/src"

@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Grid > correct usage > renders all the gutter options 1`] = `
+exports[`Grid > correct usage > renders all the gap options 1`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "-.5rem",
-      "--minItemWidth": undefined,
+      "--gap": "-.5rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -25,13 +25,13 @@ exports[`Grid > correct usage > renders all the gutter options 1`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 2`] = `
+exports[`Grid > correct usage > renders all the gap options 2`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "-.25rem",
-      "--minItemWidth": undefined,
+      "--gap": "-.25rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -50,13 +50,13 @@ exports[`Grid > correct usage > renders all the gutter options 2`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 3`] = `
+exports[`Grid > correct usage > renders all the gap options 3`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": ".25rem",
-      "--minItemWidth": undefined,
+      "--gap": ".25rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -75,13 +75,13 @@ exports[`Grid > correct usage > renders all the gutter options 3`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 4`] = `
+exports[`Grid > correct usage > renders all the gap options 4`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": ".5rem",
-      "--minItemWidth": undefined,
+      "--gap": ".5rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -100,13 +100,13 @@ exports[`Grid > correct usage > renders all the gutter options 4`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 5`] = `
+exports[`Grid > correct usage > renders all the gap options 5`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -125,13 +125,13 @@ exports[`Grid > correct usage > renders all the gutter options 5`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 6`] = `
+exports[`Grid > correct usage > renders all the gap options 6`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "1.25rem",
-      "--minItemWidth": undefined,
+      "--gap": "1.25rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -150,13 +150,13 @@ exports[`Grid > correct usage > renders all the gutter options 6`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 7`] = `
+exports[`Grid > correct usage > renders all the gap options 7`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "1.5rem",
-      "--minItemWidth": undefined,
+      "--gap": "1.5rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -175,13 +175,13 @@ exports[`Grid > correct usage > renders all the gutter options 7`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 8`] = `
+exports[`Grid > correct usage > renders all the gap options 8`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "1.75rem",
-      "--minItemWidth": undefined,
+      "--gap": "1.75rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -200,13 +200,13 @@ exports[`Grid > correct usage > renders all the gutter options 8`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 9`] = `
+exports[`Grid > correct usage > renders all the gap options 9`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "2rem",
-      "--minItemWidth": undefined,
+      "--gap": "2rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -225,13 +225,13 @@ exports[`Grid > correct usage > renders all the gutter options 9`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 10`] = `
+exports[`Grid > correct usage > renders all the gap options 10`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "3rem",
-      "--minItemWidth": undefined,
+      "--gap": "3rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -250,13 +250,13 @@ exports[`Grid > correct usage > renders all the gutter options 10`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 11`] = `
+exports[`Grid > correct usage > renders all the gap options 11`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "4rem",
-      "--minItemWidth": undefined,
+      "--gap": "4rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -275,13 +275,13 @@ exports[`Grid > correct usage > renders all the gutter options 11`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 12`] = `
+exports[`Grid > correct usage > renders all the gap options 12`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "5rem",
-      "--minItemWidth": undefined,
+      "--gap": "5rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -300,13 +300,13 @@ exports[`Grid > correct usage > renders all the gutter options 12`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 13`] = `
+exports[`Grid > correct usage > renders all the gap options 13`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "7.5rem",
-      "--minItemWidth": undefined,
+      "--gap": "7.5rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -325,13 +325,13 @@ exports[`Grid > correct usage > renders all the gutter options 13`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 14`] = `
+exports[`Grid > correct usage > renders all the gap options 14`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "10rem",
-      "--minItemWidth": undefined,
+      "--gap": "10rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -350,13 +350,13 @@ exports[`Grid > correct usage > renders all the gutter options 14`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 15`] = `
+exports[`Grid > correct usage > renders all the gap options 15`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "15rem",
-      "--minItemWidth": undefined,
+      "--gap": "15rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -375,13 +375,13 @@ exports[`Grid > correct usage > renders all the gutter options 15`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 16`] = `
+exports[`Grid > correct usage > renders all the gap options 16`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "20rem",
-      "--minItemWidth": undefined,
+      "--gap": "20rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -400,13 +400,13 @@ exports[`Grid > correct usage > renders all the gutter options 16`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders all the gutter options 17`] = `
+exports[`Grid > correct usage > renders all the gap options 17`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "30rem",
-      "--minItemWidth": undefined,
+      "--gap": "30rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -425,13 +425,13 @@ exports[`Grid > correct usage > renders all the gutter options 17`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders custom gutter with number 1`] = `
+exports[`Grid > correct usage > renders custom gap with number 1`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "20px",
-      "--minItemWidth": undefined,
+      "--gap": "20px",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -450,13 +450,13 @@ exports[`Grid > correct usage > renders custom gutter with number 1`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders custom gutter with string 1`] = `
+exports[`Grid > correct usage > renders custom gap with string 1`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": "3ch",
-      "--minItemWidth": undefined,
+      "--gap": "3ch",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -480,8 +480,8 @@ exports[`Grid > correct usage > renders custom minItemWidth 1`] = `
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "320px",
+      "--gap": "1rem",
+      "--min-item-width": "320px",
     }
   }
 >
@@ -505,8 +505,8 @@ exports[`Grid > correct usage > renders custom minItemWidth as string 1`] = `
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "32rem",
+      "--gap": "1rem",
+      "--min-item-width": "32rem",
     }
   }
 >
@@ -525,13 +525,13 @@ exports[`Grid > correct usage > renders custom minItemWidth as string 1`] = `
 </div>
 `;
 
-exports[`Grid > correct usage > renders default with no gutter 1`] = `
+exports[`Grid > correct usage > renders default with no gap 1`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": undefined,
-      "--minItemWidth": undefined,
+      "--gap": undefined,
+      "--min-item-width": undefined,
     }
   }
 >
@@ -555,8 +555,8 @@ exports[`Grid > correct usage > renders masonry variant 1`] = `
   data-br-grid="variant:masonry"
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "32rem",
+      "--gap": "1rem",
+      "--min-item-width": "32rem",
     }
   }
 >
@@ -580,8 +580,8 @@ exports[`Grid > correct usage > renders with theme overrides 1`] = `
   data-br-grid={true}
   style={
     {
-      "--gutter": undefined,
-      "--minItemWidth": undefined,
+      "--gap": undefined,
+      "--min-item-width": undefined,
     }
   }
 >
@@ -605,8 +605,8 @@ exports[`Grid > incorrect usage > renders default with console error when minIte
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -630,8 +630,8 @@ exports[`Grid > incorrect usage > renders default with console error with minIte
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": undefined,
+      "--gap": "1rem",
+      "--min-item-width": undefined,
     }
   }
 >
@@ -650,13 +650,13 @@ exports[`Grid > incorrect usage > renders default with console error with minIte
 </div>
 `;
 
-exports[`Grid > incorrect usage > renders default with wrong gutter input 1`] = `
+exports[`Grid > incorrect usage > renders default with wrong gap input 1`] = `
 <div
   data-br-grid={true}
   style={
     {
-      "--gutter": undefined,
-      "--minItemWidth": undefined,
+      "--gap": undefined,
+      "--min-item-width": undefined,
     }
   }
 >
@@ -680,8 +680,8 @@ exports[`Grid > incorrect usage > renders grid if anything used as variant other
   data-br-grid={true}
   style={
     {
-      "--gutter": "1rem",
-      "--minItemWidth": "32rem",
+      "--gap": "1rem",
+      "--min-item-width": "32rem",
     }
   }
 >

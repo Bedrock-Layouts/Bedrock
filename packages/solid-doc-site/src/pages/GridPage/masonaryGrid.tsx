@@ -3,7 +3,7 @@ import { JSXElement } from "solid-js";
 
 export function MasonaryGrid(): JSXElement {
   return (
-    <Grid variant="masonry" gutter="size3" minItemWidth="15rem">
+    <Grid variant="masonry" gap="size3" minItemWidth="15rem">
       <div>
         1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
         consequuntur corrupti beatae commodi vitae, perspiciatis totam provident

@@ -1,29 +1,7 @@
-import React, { createContext, useContext } from "react";
-
 type Maybe<T> = NonNullable<T> | undefined;
 
 function convertToMaybe<T>(value: T): Maybe<T> {
   return value ?? undefined;
-}
-
-// eslint-disable-next-line @typescript-eslint/ban-types, @typescript-eslint/no-empty-interface
-export interface DefaultTheme {}
-
-export const ThemeContext = createContext<DefaultTheme>({});
-
-/* c8 ignore next */
-export function useTheme(): DefaultTheme {
-  return useContext(ThemeContext) ?? {};
-}
-
-/* c8 ignore next */
-export function ThemeProvider({
-  theme,
-  children,
-}: Readonly<{ theme: DefaultTheme; children: React.ReactNode }>): JSX.Element {
-  return (
-    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
-  );
 }
 
 type LowercaseCharacter =
@@ -95,7 +73,7 @@ export type CSSLength =
   | CSSCustomProperty
   | CSSSizeKeyword;
 
-const spaceMap = {
+export const spacing = {
   size000: "-.5rem",
   size00: "-.25rem",
   size1: ".25rem",
@@ -115,7 +93,7 @@ const spaceMap = {
   size15: "30rem",
 } as const;
 
-const sizeMap = {
+export const sizes = {
   sizeContent1: "20ch",
   sizeContent2: "45ch",
   sizeContent3: "60ch",
@@ -131,12 +109,7 @@ const sizeMap = {
   sizeXxl: "1920px",
 } as const;
 
-//TODO export above instead of below in next version
-export const spacing = spaceMap as Record<keyof typeof spaceMap, CSSLength>;
-
-export const sizes = sizeMap as Record<keyof typeof sizeMap, CSSLength>;
-
-const customPropertyRegex = /^--\D{1}.{0,100}$/;
+const customPropertyRegex = /^--\D.{0,100}$/;
 
 type PropertyResult<TvalidProp, TinvalidProp> =
   | {
@@ -167,17 +140,18 @@ function checkPropertyBy<T, K>(
   };
 }
 
-const checkIsCSSCustomProperty = checkPropertyBy<CSSCustomProperty, string>(
-  (str) => customPropertyRegex.test(str),
-);
+export const checkIsCSSCustomProperty = checkPropertyBy<
+  CSSCustomProperty,
+  string
+>((str) => customPropertyRegex.test(str));
 
-const checkIsCSSLength = checkPropertyBy<CSSLength, unknown>((str) => {
+export const checkIsCSSLength = checkPropertyBy<CSSLength, unknown>((str) => {
   if (typeof str !== "string") return false;
 
   return (
     [
-      /^[0-9]{0,10000}\.?[0-9]{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
-      /^var\(--\D{1}.{0,100}\)$/,
+      /^\d{0,10000}\.?\d{1,10000}(vmin|vmax|vh|vw|%|ch|ex|em|rem|in|cm|mm|pt|pc|px)$/,
+      /^var\(--\D.{0,100}\)$/,
       customPropertyRegex,
     ].some((regex) => regex.test(str)) ||
     [
@@ -191,48 +165,24 @@ const checkIsCSSLength = checkPropertyBy<CSSLength, unknown>((str) => {
   );
 });
 
-export type BaseTheme = Record<string, CSSLength | string | number>;
+export type SpacingOptions = keyof typeof spacing;
+export type SizesOptions = keyof typeof sizes;
 
-type ThemeOrDefaultSpace<T> = T extends {
-  space: BaseTheme;
+export function createAttributeString(
+  prefix: string,
+  value: string | number | undefined,
+): string | undefined {
+  if (value === undefined) return undefined;
+  return `${prefix}:${value}`;
 }
-  ? T["space"]
-  : keyof typeof spacing;
 
-type ThemeOrDefaultSizes<T> = T extends {
-  sizes: BaseTheme;
-}
-  ? T["sizes"]
-  : keyof typeof sizes;
-
-export type SpacingOptions = ThemeOrDefaultSpace<DefaultTheme>;
-export type SizesOptions = ThemeOrDefaultSizes<DefaultTheme>;
-
-//TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme and probably shouldn't be exported.
-export function getSpacingValue<T extends DefaultTheme>(
-  theme: Readonly<T & { space?: BaseTheme }>,
-  spacingKey: SpacingOptions,
-): Maybe<CSSLength> {
-  const spaceMapFromThemeOrDefault = theme.space ?? spacing;
-
-  const spaceMap = Object.fromEntries(
-    Object.entries(spaceMapFromThemeOrDefault).map(([spaceKey, value]) => [
-      spaceKey as SpacingOptions,
-      (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ]),
-  );
-
-  return convertToMaybe(spaceMap[spacingKey]);
+export function getSpacingValue(spacingKey: SpacingOptions): Maybe<CSSLength> {
+  return convertToMaybe(spacing[spacingKey]);
 }
 
 export type Gutter = CSSLength | number | SpacingOptions;
 
-//TODO - change to getSpaceFromTheme in next version
-//TODO - shouldn't take the whole theme.  Should take the spaceMap from the theme.
-export function getSafeGutter<T extends DefaultTheme>(
-  theme: T,
-  gutter?: Gutter,
-): Maybe<CSSLength> {
+export function getSafeGutter(gutter?: Gutter): Maybe<CSSLength> {
   if (gutter === undefined) return undefined;
   if (typeof gutter === "number" && gutter >= 0) return `${gutter}px`;
 
@@ -248,14 +198,10 @@ export function getSafeGutter<T extends DefaultTheme>(
       : cssLengthProperty;
   }
 
-  return convertToMaybe(getSpacingValue(theme, gutter as SpacingOptions));
+  return convertToMaybe(getSpacingValue(gutter as SpacingOptions));
 }
 
-//TODO - shouldn't take the whole theme.  Should take the sizeMap from the theme.
-export function getSizeValue(
-  theme: Readonly<{ sizes?: BaseTheme }>,
-  sizeKey?: string | number,
-): Maybe<CSSLength> {
+export function getSizeValue(sizeKey?: string | number): Maybe<CSSLength> {
   if (sizeKey === undefined) return undefined;
   if (typeof sizeKey === "number" && sizeKey >= 0) return `${sizeKey}px`;
 
@@ -271,14 +217,102 @@ export function getSizeValue(
       : sizeLengthProperty;
   }
 
-  const sizeMapFromThemeOrDefault = theme.sizes ?? sizes;
+  return convertToMaybe(sizes[sizeKey as SizesOptions]);
+}
 
-  const sizeMap = Object.fromEntries(
-    Object.entries(sizeMapFromThemeOrDefault).map(([sizeKey, value]) => [
-      sizeKey as SizesOptions,
-      (typeof value === "number" ? `${value}px` : value) as CSSLength,
-    ]),
-  );
+/**
+ * Type for padding configuration. Can be a single value or an object with specific padding sides.
+ */
+export type PaddingConfig =
+  | SpacingOptions
+  | CSSLength
+  | number
+  | {
+      all?: SpacingOptions | CSSLength | number;
+      inline?: SpacingOptions | CSSLength | number;
+      inlineStart?: SpacingOptions | CSSLength | number;
+      inlineEnd?: SpacingOptions | CSSLength | number;
+      block?: SpacingOptions | CSSLength | number;
+      blockStart?: SpacingOptions | CSSLength | number;
+      blockEnd?: SpacingOptions | CSSLength | number;
+    };
 
-  return convertToMaybe(sizeMap[sizeKey as SizesOptions]);
+/**
+ * Helper function to convert PaddingConfig to data attribute strings
+ */
+export function getPaddingAttributes(
+  padding?: Readonly<PaddingConfig>,
+): readonly string[] {
+  if (padding === undefined) return [];
+
+  if (typeof padding === "string" || typeof padding === "number") {
+    // Simple padding value
+    const value = typeof padding === "number" ? `${padding}px` : padding;
+    return [`padding:${value}`] as const;
+  }
+
+  if (typeof padding === "object") {
+    // Object with specific padding sides
+    // eslint-disable-next-line functional/prefer-immutable-types, functional/immutable-data
+    const attrs: Array<string> = [];
+
+    if (padding.all !== undefined) {
+      const value =
+        typeof padding.all === "number" ? `${padding.all}px` : padding.all;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`padding:${value}`);
+    }
+    if (padding.inline !== undefined) {
+      const value =
+        typeof padding.inline === "number"
+          ? `${padding.inline}px`
+          : padding.inline;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingInline:${value}`);
+    }
+    if (padding.inlineStart !== undefined) {
+      const value =
+        typeof padding.inlineStart === "number"
+          ? `${padding.inlineStart}px`
+          : padding.inlineStart;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingInlineStart:${value}`);
+    }
+    if (padding.inlineEnd !== undefined) {
+      const value =
+        typeof padding.inlineEnd === "number"
+          ? `${padding.inlineEnd}px`
+          : padding.inlineEnd;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingInlineEnd:${value}`);
+    }
+    if (padding.block !== undefined) {
+      const value =
+        typeof padding.block === "number"
+          ? `${padding.block}px`
+          : padding.block;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingBlock:${value}`);
+    }
+    if (padding.blockStart !== undefined) {
+      const value =
+        typeof padding.blockStart === "number"
+          ? `${padding.blockStart}px`
+          : padding.blockStart;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingBlockStart:${value}`);
+    }
+    if (padding.blockEnd !== undefined) {
+      const value =
+        typeof padding.blockEnd === "number"
+          ? `${padding.blockEnd}px`
+          : padding.blockEnd;
+      // eslint-disable-next-line functional/immutable-data
+      attrs.push(`paddingBlockEnd:${value}`);
+    }
+
+    return attrs;
+  }
+
+  return [];
 }

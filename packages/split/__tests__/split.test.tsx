@@ -1,4 +1,4 @@
-import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import { spacing } from "@bedrock-layout/spacing-constants";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
 import { create } from "react-test-renderer";
@@ -31,7 +31,7 @@ describe("Split", () => {
       expect(Split).toBeTruthy();
     });
 
-    it("renders default gutter when none provided", () => {
+    it("renders default gap when none provided", () => {
       const split = create(
         <Split>
           <Lorem />
@@ -40,11 +40,11 @@ describe("Split", () => {
       expect(split.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const split = create(
-          <Split gutter={gutter}>
+          <Split gap={gap}>
             <Lorem />
           </Split>,
         );
@@ -52,18 +52,18 @@ describe("Split", () => {
       });
     });
 
-    it("renders custom gutter with number", () => {
+    it("renders custom gap with number", () => {
       const split = create(
-        <Split gutter={1}>
+        <Split gap={1}>
           <Lorem />
         </Split>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom gutter with string", () => {
+    it("renders custom gap with string", () => {
       const split = create(
-        <Split gutter="3ch">
+        <Split gap="3ch">
           <Lorem />
         </Split>,
       );
@@ -74,7 +74,7 @@ describe("Split", () => {
       ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"].forEach(
         (fraction) => {
           const split = create(
-            <Split gutter="size3" fraction={fraction}>
+            <Split gap="size3" fraction={fraction}>
               <Lorem />
             </Split>,
           );
@@ -85,12 +85,12 @@ describe("Split", () => {
 
     it("renders with theme overrides", () => {
       const split = create(
-        <ThemeProvider theme={{ space: { "1x": "200px" } }}>
+        <>
           {/* @ts-expect-error */}
-          <Split gutter="1x">
+          <Split gap="1x">
             <Lorem />
           </Split>
-        </ThemeProvider>,
+        </>,
       );
       expect(split.toJSON()).toMatchSnapshot();
     });
@@ -103,7 +103,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="size3" switchAt={widthToSwitchAt}>
+        <Split gap="size3" switchAt={widthToSwitchAt}>
           <Lorem />
         </Split>,
       );
@@ -115,7 +115,7 @@ describe("Split", () => {
 
     it("should render as a main", () => {
       const stack = create(
-        <Split gutter="size3" as="main">
+        <Split gap="size3" as="main">
           <Lorem />
         </Split>,
       );
@@ -131,7 +131,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="size3" switchAt={widthToSwitchAt + 1}>
+        <Split gap="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
         </Split>,
       );
@@ -151,7 +151,7 @@ describe("Split", () => {
       });
 
       const stack = create(
-        <Split gutter="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
+        <Split gap="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
           <Lorem />
         </Split>,
       );
@@ -164,10 +164,10 @@ describe("Split", () => {
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter input", async () => {
+    it("renders default with wrong gap input", async () => {
       const errorStack = create(
         // @ts-expect-error
-        <Split gutter={{ value: "incorrect" }}>
+        <Split gap={{ value: "incorrect" }}>
           <Lorem />
         </Split>,
       );
@@ -175,9 +175,9 @@ describe("Split", () => {
       expect(errorStack.toJSON()).toMatchSnapshot();
     });
 
-    it("renders default with negative number for gutter", () => {
+    it("renders default with negative number for gap", () => {
       const errorStack = create(
-        <Split gutter={-1}>
+        <Split gap={-1}>
           <Lorem />
         </Split>,
       );
@@ -198,7 +198,7 @@ describe("Split", () => {
     it("renders default with console error with wrong switchAt input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Split gutter="size3" switchAt={{ value: "incorrect" }}>
+        <Split gap="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Split>,
       );

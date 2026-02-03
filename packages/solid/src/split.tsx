@@ -6,8 +6,7 @@ import {
   SpacingOptions,
   getSizeValue,
   getSpacingValue,
-} from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -49,10 +48,6 @@ type MinItemWidth =
   | "auto";
 
 interface SplitBase {
-  /**
-   * @deprecated Use `gap` instead
-   */
-  gutter?: SpacingOptions;
   gap?: SpacingOptions;
   minItemWidth?: MinItemWidth;
   fraction?: FractionTypes;
@@ -65,8 +60,6 @@ export type SplitProps<T extends ValidConstructor = "div"> =
 export function Split<T extends ValidConstructor = "div">(
   props: Readonly<SplitProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
-
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -77,24 +70,24 @@ export function Split<T extends ValidConstructor = "div">(
 
   const switchAt = () =>
     props.switchAt
-      ? `--switchAt: ${getSizeValue(theme, props.switchAt) ?? "0px"};`
+      ? `--switch-at: ${getSizeValue(props.switchAt) ?? "0px"};`
       : "";
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? "size00") ?? "0px"}`;
 
   const fraction = () => fractions[props.fraction ?? "1/2"] ?? fractions["1/2"];
 
-  const minItemWidth = () =>
-    props.minItemWidth
-      ? `--minItemWidth: ${
-          typeof props.minItemWidth === "string"
-            ? props.minItemWidth
-            : `${props.minItemWidth}px`
-        };`
-      : undefined;
+  const minItemWidth = () => {
+    if (!props.minItemWidth) return undefined;
+
+    const value =
+      typeof props.minItemWidth === "string"
+        ? props.minItemWidth
+        : `${props.minItemWidth}px`;
+
+    return `--min-item-width: ${value};`;
+  };
 
   const style = () =>
     [propsStyle(), gutter(), switchAt(), minItemWidth()].join("; ");
@@ -102,7 +95,7 @@ export function Split<T extends ValidConstructor = "div">(
   return createDynamic(
     () => props.as ?? ("div" as T),
     mergeProps(
-      omitProps(props, ["as", "gutter", "fraction"]),
+      omitProps(props, ["as", "fraction"]),
       createPropsFromAccessors({
         style,
         "data-br-split": fraction,

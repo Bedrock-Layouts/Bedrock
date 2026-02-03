@@ -1,7 +1,9 @@
 import {
   Gutter,
+  createAttributeString,
   getSafeGutter,
-  useTheme,
+  PaddingConfig,
+  getPaddingAttributes,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -16,23 +18,13 @@ export type ReelProps = {
   snapType?: "none" | "proximity" | "mandatory";
   /**
    * Sets space between each element.
-   * @deprecated Use `gap` instead.
-   */
-  gutter?: Gutter;
-  /**
-   * Sets space between each element.
    */
   gap?: Gutter;
+  /**
+   * Sets padding on the component using design system spacing scale.
+   */
+  padding?: PaddingConfig;
 };
-
-function createAttributeString(
-  prefix: string,
-  value: string | number | undefined,
-) {
-  if (value === undefined) return undefined;
-
-  return `${prefix}:${value}`;
-}
 
 /**
  * Scrolling is a popular and natural way to interact with
@@ -41,13 +33,17 @@ function createAttributeString(
  * snap points.
  */
 export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
-  { as: Component = "div", snapType, gutter, gap, style = {}, ...props },
+  { as: Component = "div", snapType, gap, style = {}, padding, ...props },
   ref,
 ) {
-  const theme = useTheme();
-  const maybeGutter = getSafeGutter(theme, gap ?? gutter);
+  const maybeGutter = getSafeGutter(gap);
 
-  const attributeString = [createAttributeString("snapType", snapType)]
+  const paddingAttrs = getPaddingAttributes(padding);
+
+  const attributeString = [
+    createAttributeString("snapType", snapType),
+    ...paddingAttrs,
+  ]
     .filter(Boolean)
     .join(" ");
 
@@ -55,7 +51,7 @@ export const Reel = forwardRefWithAs<"div", ReelProps>(function Reel(
     <Component
       ref={ref}
       data-br-reel={attributeString}
-      style={{ "--gutter": maybeGutter, ...style } as CSSProperties}
+      style={{ "--gap": maybeGutter, ...style } as CSSProperties}
       {...props}
     />
   );

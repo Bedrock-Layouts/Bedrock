@@ -1,7 +1,9 @@
 import { JSX, mergeProps } from "solid-js";
 
-import { SpacingOptions, getSpacingValue } from "./spacing-constants";
-import { useTheme } from "./theme-provider";
+import {
+  SpacingOptions,
+  getSpacingValue,
+} from "@bedrock-layout/spacing-constants";
 import createDynamic, {
   DynamicProps,
   HeadlessPropsWithRef,
@@ -25,7 +27,6 @@ export type ReelProps<T extends ValidConstructor = "div"> =
 export function Reel<T extends ValidConstructor = "div">(
   props: Readonly<ReelProps<T>>,
 ): JSX.Element {
-  const theme = useTheme();
   const propsStyle = () =>
     typeof props.style === "string"
       ? props.style
@@ -35,9 +36,7 @@ export function Reel<T extends ValidConstructor = "div">(
         );
 
   const gutter = () =>
-    `--gutter: ${
-      getSpacingValue(theme, props.gap ?? props.gutter ?? "size00") ?? "0px"
-    }`;
+    `--gap: ${getSpacingValue(props.gap ?? props.gutter ?? "size00") ?? "0px"}`;
 
   const snapType = () => {
     switch (props.snapType) {

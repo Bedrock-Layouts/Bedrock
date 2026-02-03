@@ -29,7 +29,6 @@ export const parameters = {
         "Primitives",
         "Bedrock Layout CSS",
         ["A CSS Only Version", "reset.css", "spacing-properties.css"],
-        "Hooks",
       ],
     },
   },

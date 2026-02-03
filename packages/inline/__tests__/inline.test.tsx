@@ -28,11 +28,11 @@ describe("Inline", () => {
       expect(Inline).toBeTruthy();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const inline = create(
-          <Inline gutter={gutter}>
+          <Inline gap={gap}>
             <Lorem />
           </Inline>,
         );
@@ -50,7 +50,7 @@ describe("Inline", () => {
       ] as const;
       justifications.forEach((justify) => {
         const inlineCluster = create(
-          <Inline gutter="size3" justify={justify}>
+          <Inline gap="size3" justify={justify}>
             <Lorem />
           </Inline>,
         );
@@ -62,7 +62,7 @@ describe("Inline", () => {
       const alignments = ["start", "center", "end", "stretch"] as const;
       alignments.forEach((align) => {
         const inlineCluster = create(
-          <Inline gutter="size3" align={align}>
+          <Inline gap="size3" align={align}>
             <Lorem />
           </Inline>,
         );
@@ -74,7 +74,7 @@ describe("Inline", () => {
       const stretchOptions = ["all", "start", "end", 0, 3] as const;
       stretchOptions.forEach((stretch) => {
         const inline = create(
-          <Inline gutter="size3" stretch={stretch}>
+          <Inline gap="size3" stretch={stretch}>
             <Lorem />
           </Inline>,
         );
@@ -86,7 +86,7 @@ describe("Inline", () => {
       const switchAtOptions = [42, "42rem", "sizeContent2"] as const;
       switchAtOptions.forEach((switchAt) => {
         const inline = create(
-          <Inline gutter="size3" switchAt={switchAt}>
+          <Inline gap="size3" switchAt={switchAt}>
             <Lorem />
           </Inline>,
         );
@@ -98,7 +98,7 @@ describe("Inline", () => {
       const minItemWidthOptions = [42, "42rem"] as const;
       minItemWidthOptions.forEach((minItemWidth) => {
         const inline = create(
-          <Inline gutter="size3" minItemWidth={minItemWidth}>
+          <Inline gap="size3" minItemWidth={minItemWidth}>
             <Lorem />
           </Inline>,
         );
@@ -111,7 +111,7 @@ describe("Inline", () => {
     it("renders default with console error with wrong stretch input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Inline gutter="size3" stretch="incorrect">
+        <Inline gap="size3" stretch="incorrect">
           <Lorem />
         </Inline>,
       );
@@ -122,7 +122,7 @@ describe("Inline", () => {
     it("renders default with console error with wrong minItemWidth input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Inline gutter="size3" minItemWidth="incorrect">
+        <Inline gap="size3" minItemWidth="incorrect">
           <Lorem />
         </Inline>,
       );

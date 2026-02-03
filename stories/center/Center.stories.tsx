@@ -28,10 +28,7 @@ import { Center } from '@bedrock-layout/solid'
 const meta = {
   title: "Wrapper Components/Center",
   component: Center,
-  args: {
-    centerChildren: false,
-    centerText: false,
-  },
+  args: {},
   argTypes,
 
   render: (args) => {
@@ -97,50 +94,37 @@ export const MaxWidth: Story = {
 };
 
 /**
- * You can also center the children by adding a `centerChildren` prop.
- *
- * **Note,** This is deprecated and should be used with the stack component set to
- * `align="center"` instead.
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
  *
  * #### Usage examples
  * ```jsx
- * // CSS
- * <div data-br-center='centerChildren'>
- *  <Component />
- * </div>
- *
  * // React.js and Solid.js
- * <Center centerChildren>
+ * // Using predefined spacing constants
+ * <Center padding="size3">
+ *  <Component />
+ * </Center>
+ *
+ * // Using CSS length
+ * <Center padding="2rem">
+ *  <Component />
+ * </Center>
+ *
+ * // Using object syntax for specific sides
+ * <Center padding={{ inline: "size3", block: "size2" }}>
  *  <Component />
  * </Center>
  * ```
- *
- * In the example shown below, the max width of the children is
- * set to 75%.
  */
-export const CenterChildren: Story = {
-  args: { centerChildren: true },
-};
-
-/**
- * You can also center the text by adding a `centerText` prop.
- *
- * #### Usage examples
- * ```jsx
- * // CSS
- * <div data-br-center='centerText'>
- *  <Component />
- * </div>
- *
- * // React.js and Solid.js
- * <Center centerText>
- *  <Component />
- * </Center>
- * ```
- *
- * In the example shown below, the max width of the children is
- * set to 75% and the centerChildren prop is set to true.
- */
-export const CenterText: Story = {
-  args: { centerText: true, centerChildren: true },
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+    maxWidth: "60ch",
+  },
+  render: (args) => {
+    return (
+      <Center {...args} style={{ border: "1px solid black" }}>
+        <Component />
+      </Center>
+    );
+  },
 };

@@ -17,12 +17,13 @@ export const argTypes: ArgType = {
     initialValue: "15rem",
     control: "text",
   },
-  noStretchedColumns: {
+  variant: {
     description:
-      "If true, the columns will not be stretched to fill the container",
-    summary: "boolean",
-    defaultValue: "false",
-    initialValue: false,
-    control: "boolean",
+      "If 'centered', the columns will not be stretched to fill the container",
+    summary: "'default' | 'centered'",
+    defaultValue: "default",
+    initialValue: "default",
+    control: "select",
+    options: ["default", "centered"],
   },
 };

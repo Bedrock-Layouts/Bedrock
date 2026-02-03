@@ -7,7 +7,6 @@ import cardInitial from "../assets/card-initial.png";
 import cardStyled from "../assets/card-styled.png";
 import columnDrop from "../assets/column-drop.png";
 import grid from "../assets/grid.png";
-import masonryGrid from "../assets/masonry-grid.png";
 
 <Meta
   title="Getting Started/Lesson 6: The New Arrivals"
@@ -45,7 +44,7 @@ Now we can bring in this component into our `App.js` file. In our `App.js` file,
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
 import { Inline } from "@bedrock-layout/inline";
-import { Cover } from "@bedrock-layout/cover";
+import { Cover, CoverCentered } from "@bedrock-layout/cover";
 import { Center } from "@bedrock-layout/center";
 
 import { Subscribe } from "./Subscribe";
@@ -54,23 +53,26 @@ import { Card } from "./Card";
 
 function App() {
   return (
-    <Stack gutter='size3'>
-      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
-        <Center maxWidth="40rem">
-          <Stack as="header" gutter='size3'>
-            <h1>Coco Le Belle</h1>
-            <p>Elegant Feminine Fashion</p>
-            <Inline gutter='size3'>
-              <button>New Arrivals</button>
-            </Inline>
-          </Stack>
-        </Center>
+    <Stack gap="size3">
+      <Cover minHeight="50vh" gap="size3">
+        <Menu />
+        <CoverCentered>
+          <Center maxWidth="40rem">
+            <Stack as="header" gap="size3">
+              <h1>Coco Le Belle</h1>
+              <p>Elegant Feminine Fashion</p>
+              <Inline gap="size3">
+                <button>New Arrivals</button>
+              </Inline>
+            </Stack>
+          </Center>
+        </CoverCentered>
       </Cover>
-      <Stack gutter='size7'>
+      <Stack gap="size7">
         <h2>New Arrivals</h2>
         <Card />
       </Stack>
-      <Center centerText>
+      <Center style={{ textAlign: "center" }}>
         <Subscribe />
       </Center>
     </Stack>
@@ -82,7 +84,7 @@ export default App;
 
 Your browser should now show something like this:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={cardInitial}
@@ -90,19 +92,18 @@ Your browser should now show something like this:
   />
 </Center>
 
-Typically in a card we want to do two things. One, we often want to set the image's aspect-ratio to fit the design, croping the image so that it fits in the desired aspect ratio. The other thing we typically want to do is add padding around the either the text or the whole card itself. To accomplish these two goals, we can use the `Frame` and the `PadBox` primitives.
+Typically in a card we want to do two things. First, we often want to set the image's aspect ratio to fit the design, cropping the image as needed. Second, we typically want to add padding around either the text or the whole card itself. To accomplish these goals, we can use the `Frame` primitive and apply padding via inline styles.
 
-So let's start by downloading the the `Frame` and the `PadBox` primitives:
+So let's start by downloading the `Frame` primitive:
 
 ```bash
-yarn add @bedrock-layout/frame @bedrock-layout/padbox
+yarn add @bedrock-layout/frame
 ```
 
 And then let's update our `Card.js` file to look like this:
 
 ```jsx
 import { Frame } from "@bedrock-layout/frame";
-import { PadBox } from "@bedrock-layout/padbox";
 import { Stack } from "@bedrock-layout/stack";
 
 //simulate text of various lengths
@@ -112,23 +113,23 @@ function randomLoremIpsum() {
 
   return Array.from(
     { length: Math.floor(Math.random() * 6 + 1) },
-    () => string
+    () => string,
   ).join(" ");
 }
 
 export function Card({ title }) {
   return (
-    <Stack as="article" gutter='size3'>
+    <Stack as="article" gap="size3">
       <Frame ratio={[16, 9]}>
         <img
           src={`https://source.unsplash.com/random/900×700/?${title}`}
           alt="A random fruit from unsplash.com"
         />
       </Frame>
-      <PadBox padding="size5">
+      <div style={{ padding: "var(--spacing-size-5)" }}>
         <h3>{title}</h3>
         <p>{randomLoremIpsum()}</p>
-      </PadBox>
+      </div>
     </Stack>
   );
 }
@@ -138,7 +139,7 @@ Now are Card takes a `title` prop and displays a `title` and a random image base
 
 now we can update our `App.js` file to add a `Fruit` to the `title` prop of the `Card` component and see what happens:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={cardStyled}
@@ -148,12 +149,12 @@ now we can update our `App.js` file to add a `Fruit` to the `title` prop of the 
 
 ## A Grid of Cards
 
-We have a `Card` component that we can use to display a card. Now we want to display them in a grid. There are a few options for this using Bedrock Layout Primitives. The correct one depends upon the type of layout you want to use. Let's try all 3 options and you can decide which option you like the best.
+We have a `Card` component that we can use to display a card. Now we want to display them in a grid. There are a few options for this using Bedrock Layout Primitives. The correct one depends upon the type of layout you want to use. Let's try both options and you can decide which one you like the best.
 
-First, we will need to install the `ColumnDrop`, the `Grid`, and the `MasonryGrid` components:
+First, we will need to install the `ColumnDrop` and the `Grid` components:
 
 ```bash
-yarn add @bedrock-layout/column-drop @bedrock-layout/grid @bedrock-layout/masonry-grid
+yarn add @bedrock-layout/column-drop @bedrock-layout/grid
 ```
 
 Let's start by adding the `ColumnDrop` component to our `App.js` file:
@@ -161,7 +162,7 @@ Let's start by adding the `ColumnDrop` component to our `App.js` file:
 ```jsx
 import { Stack } from "@bedrock-layout/stack";
 import { Inline } from "@bedrock-layout/inline";
-import { Cover } from "@bedrock-layout/cover";
+import { Cover, CoverCentered } from "@bedrock-layout/cover";
 import { Center } from "@bedrock-layout/center";
 import { ColumnDrop } from "@bedrock-layout/column-drop";
 
@@ -173,29 +174,32 @@ const cards = ["Fruit", "Bikes", "Clothes", "Shoes", "Computers"];
 
 function App() {
   return (
-    <Stack gutter='size3'>
-      <Cover minHeight="50vh" gutter='size3' top={<Menu />}>
-        <Center maxWidth="40rem">
-          <Stack as="header" gutter='size3'>
-            <h1>Coco Le Belle</h1>
-            <p>Elegant Feminine Fashion</p>
-            <Inline gutter='size3'>
-              <button>New Arrivals</button>
-            </Inline>
-          </Stack>
-        </Center>
+    <Stack gap="size3">
+      <Cover minHeight="50vh" gap="size3">
+        <Menu />
+        <CoverCentered>
+          <Center maxWidth="40rem">
+            <Stack as="header" gap="size3">
+              <h1>Coco Le Belle</h1>
+              <p>Elegant Feminine Fashion</p>
+              <Inline gap="size3">
+                <button>New Arrivals</button>
+              </Inline>
+            </Stack>
+          </Center>
+        </CoverCentered>
       </Cover>
       <Center>
-        <Stack gutter='size7'>
+        <Stack gap="size7">
           <h2>New Arrivals</h2>
-          <ColumnDrop gutter='size3' minItemWidth="20rem">
+          <ColumnDrop gap="size3" minItemWidth="20rem">
             {cards.map((title) => (
               <Card key={title} title={title} />
             ))}
           </ColumnDrop>
         </Stack>
       </Center>
-      <Center centerText>
+      <Center style={{ textAlign: "center" }}>
         <Subscribe />
       </Center>
     </Stack>
@@ -207,7 +211,7 @@ export default App;
 
 Your browser should now show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={columnDrop}
@@ -215,7 +219,7 @@ Your browser should now show the following:
   />
 </Center>
 
-The above picture show the cards being optimized to the number of columns that fit the container, based on the `minItemWidth` set on the `ColumnDrop` component. When a column drops down to a new row, the precious row's column count does not impact the new row's column count. By default, it will stretch each card, but you can also set the `ColumnDrop` to have `noStretchedColumns` set to `true` to prevent this.
+The above picture shows the cards being optimized to the number of columns that fit the container based on the `minItemWidth` prop on the `ColumnDrop` component. When a column drops down to a new row, the previous row's column count does not affect the new row's layout. By default, each card will stretch, but you can pass `variant="centered"` to prevent stretching.
 
 The next option is to use the `Grid` component. So let's update our `App.js` file to use the `Grid` component. We will also need to import the `Grid` component
 
@@ -226,7 +230,7 @@ import { Grid } from "@bedrock-layout/grid";
 Then we can update replace the `ColumnDrop` component with the `Grid` component:
 
 ```jsx
-<Grid gutter='size3' minItemWidth="20rem">
+<Grid gap="size3" minItemWidth="20rem">
   {cards.map((title) => (
     <Card key={title} title={title} />
   ))}
@@ -235,7 +239,7 @@ Then we can update replace the `ColumnDrop` component with the `Grid` component:
 
 Your browser should now show the following:
 
-<Center centerChildren>
+<Center style={{ display: "flex", justifyContent: "center" }}>
   <img
     style={{ maxWidth: 800 }}
     src={grid}
@@ -245,35 +249,9 @@ Your browser should now show the following:
 
 Unlike the `ColumnDrop` the Grid will keep a consistent column count across rows. The column count is based on the `minItemWidth` set on the `Grid` component.
 
-The final option is to use the `MasonryGrid` component. So let's update our `App.js` file to use the `MasonryGrid` component. We will also need to import the `MasonryGrid` component,
+The `Grid` component provides a consistent column count across rows, making it ideal for displaying cards in a regular grid pattern.
 
-```jsx
-import { MasonryGrid } from "@bedrock-layout/masonry-grid";
-```
-
-Then we can update replace the `Grid` component with the `MasonryGrid` component:
-
-```jsx
-<MasonryGrid gutter='size3' minItemWidth="20rem">
-  {cards.map((title) => (
-    <Card key={title} title={title} />
-  ))}
-</MasonryGrid>
-```
-
-Your browser should now show the following:
-
-<Center centerChildren>
-  <img
-    style={{ maxWidth: 800 }}
-    src={masonryGrid}
-    alt="The landing page with cards in a masonry grid layout."
-  />
-</Center>
-
-The `MasonryGrid` component will keep a consistent column count across rows. But instead of vertically stretching each card, to fit the tallest card in the row, it will keep the cards height the same. Then each card is placed as densly as possible. This layout pattern is often called the `Pintrest` layout since it is made popular by Pinterest.
-
-It's important to note that all three grid layouts will optimize based on it's container, eventually creating a stacking layout when the container is too small. The difference between the three layouts is how the columns and rows are distributed.
+It's important to note that both grid layouts will optimize based on their container, eventually creating a stacking layout when the container is too small. The difference between the two layouts is how the columns and rows are distributed.
 
 ## What Next?
 
@@ -283,7 +261,7 @@ If you are interested in contributing you can learn more about [contributing cod
 
 Thank you again for taking the time to learn more about Bedrock Layout Primitives. I hope you enjoyed it.
 
-<Inline gutter="size3" minItemWidth="fit-content">
+<Inline gap="size3" minItemWidth="fit-content">
   <Button as="a" href="/?path=/docs/getting-started-lesson-5-the-hero--docs">
     <Intl>The Hero</Intl>
   </Button>

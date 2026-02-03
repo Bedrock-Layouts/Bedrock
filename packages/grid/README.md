@@ -27,7 +27,7 @@ or
 ```javascript
 import { Grid } from "@bedrock-layout/grid";
 
-<Grid minItemWidth={300}>
+<Grid gap="size3" minItemWidth={300}>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -49,9 +49,9 @@ For styling purposes, you can select `data-br-grid`.
 
 \* required
 
-|   Property   |                  Description                  |                  Type                  |    Default    |
-| :----------: | :-------------------------------------------: | :------------------------------------: | :-----------: |
-|   gutter\*   |   sets the space between each child element   |          One of `Spacing`\*\*          |       -       |
-| minItemWidth | sets the min width size of each child element | number or valid CSS length as a string | small (639px) |
-
-\*\* By default, `Spacing` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`
+|   Property   |                  Description                  |                   Type                    |    Default    |
+| :----------: | :-------------------------------------------: | :---------------------------------------: | :-----------: |
+|   gap\\\*    |   Sets the space between each child element   |             One of `Spacing`              |       -       |
+| minItemWidth | Sets the min width size of each child element | `CSSLength` \| `number` \| `SizesOptions` | small (639px) |
+|   variant    |    Sets the layout to `grid` or `masonry`     |            `grid` \| `masonry`            |    `grid`     |
+|   padding    |         Adds padding inside the Grid          |              `PaddingConfig`              |       -       |

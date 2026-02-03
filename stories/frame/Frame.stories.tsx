@@ -137,3 +137,21 @@ export const WithoutAnAspectRatio: Story = {
     style: { height: "50vh", width: "50%" },
   },
 };
+
+/**
+ * The `padding` prop allows you to add padding to the component using the design system spacing scale.
+ *
+ * #### Usage examples
+ * ```jsx
+ * // React.js and Solid.js
+ * <Frame padding="size3">
+ *  <Component />
+ * </Frame>
+ * ```
+ */
+export const Padding: Story = {
+  args: {
+    padding: "size3",
+    ratio: "16/9",
+  },
+};

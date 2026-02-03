@@ -31,7 +31,7 @@ The following example creates a simple columned layout containing `5` columns of
 ```javascript
 import { Columns } from "@bedrock-layout/columns";
 
-<Columns gutter="size3" columns={5}>
+<Columns gap="size3" colCount={5}>
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -50,7 +50,7 @@ import { Columns } from "@bedrock-layout/columns";
 ```javascript
 import { Columns, Column } from "@bedrock-layout/columns";
 
-<Columns gutter="size3" columns={3} dense>
+<Columns gap="size3" colCount={3}>
   <Column span={2}>
     <div>1</div>
   </Column>
@@ -86,14 +86,12 @@ For styling purposes, you can select `data-br-columns` and `data-br-column` for 
 
 \* required
 
-| Property |                              Description                               |             Type             | Default |
-| :------: | :--------------------------------------------------------------------: | :--------------------------: | :-----: |
-| gutter\* |                  sets the space between the elements                   |     One of `Spacing`\*\*     |    -    |
-| columns  |                      number of columns to create                       |            number            |    1    |
-|  dense   |               used with `Column` to have a dense layout                |           boolean            |  false  |
-| switchAt | The width threshold at which the container will switch to stack layout | One of: `CSS length, number` |    -    |
-
-\*\* By default, `Spacings` is one of [spacing-constants](https://github.com/Bedrock-Layouts/Bedrock/tree/main/packages/spacing-constants) values, but this can be overwritten using the `ThemeProvider` from `@bedrock-layout/spacing-constants`
+| Property |                              Description                               |              Type              | Default |
+| :------: | :--------------------------------------------------------------------: | :----------------------------: | :-----: |
+|   gap    |                  Sets the space between the elements                   |      One of `Spacing`\*\*      |    -    |
+| colCount |                      Number of columns to create                       |             number             |    1    |
+| switchAt | The width threshold at which the container will switch to stack layout | One of: `CSS length`, `number` |    -    |
+| padding  |                      Adds padding inside Columns                       |        `PaddingConfig`         |    -    |
 
 ### Column
 

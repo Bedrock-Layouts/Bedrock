@@ -1,4 +1,4 @@
-import { ThemeProvider, spacing } from "@bedrock-layout/spacing-constants";
+import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { create } from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
@@ -28,7 +28,7 @@ describe("Grid", () => {
       expect(Grid).toBeTruthy();
     });
 
-    it("renders default with no gutter", () => {
+    it("renders default with no gap", () => {
       const grid = create(
         <Grid>
           <Lorem />
@@ -37,11 +37,11 @@ describe("Grid", () => {
       expect(grid.toJSON()).toMatchSnapshot();
     });
 
-    it("renders all the gutter options", () => {
+    it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
-      spacingKeys.forEach((gutter) => {
+      spacingKeys.forEach((gap) => {
         const grid = create(
-          <Grid gutter={gutter}>
+          <Grid gap={gap}>
             <Lorem />
           </Grid>,
         );
@@ -49,18 +49,18 @@ describe("Grid", () => {
       });
     });
 
-    it("renders custom gutter with number", () => {
+    it("renders custom gap with number", () => {
       const grid = create(
-        <Grid gutter={20}>
+        <Grid gap={20}>
           <Lorem />
         </Grid>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
 
-    it("renders custom gutter with string", () => {
+    it("renders custom gap with string", () => {
       const grid = create(
-        <Grid gutter="3ch">
+        <Grid gap="3ch">
           <Lorem />
         </Grid>,
       );
@@ -69,7 +69,7 @@ describe("Grid", () => {
 
     it("renders custom minItemWidth", () => {
       const grid = create(
-        <Grid gutter="size3" minItemWidth={320}>
+        <Grid gap="size3" minItemWidth={320}>
           <Lorem />
         </Grid>,
       );
@@ -78,7 +78,7 @@ describe("Grid", () => {
 
     it("renders custom minItemWidth as string", () => {
       const grid = create(
-        <Grid gutter="size3" minItemWidth="32rem">
+        <Grid gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );
@@ -87,7 +87,7 @@ describe("Grid", () => {
 
     it("renders masonry variant", () => {
       const grid = create(
-        <Grid variant="masonry" gutter="size3" minItemWidth="32rem">
+        <Grid variant="masonry" gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );
@@ -96,27 +96,22 @@ describe("Grid", () => {
 
     it("renders with theme overrides", () => {
       const grid = create(
-        <ThemeProvider
-          theme={{
-            breakPoints: { smallOnly: 320 },
-            spacing: { "1x": "200px" },
-          }}
-        >
+        <>
           {/** @ts-ignore */}
-          <Grid gutter="1x">
+          <Grid gap="1x">
             <Lorem />
           </Grid>
-        </ThemeProvider>,
+        </>,
       );
       expect(grid.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gutter input", () => {
+    it("renders default with wrong gap input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Grid gutter={{ value: "incorrect" }}>
+        <Grid gap={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
       );
@@ -127,7 +122,7 @@ describe("Grid", () => {
     it("renders default with console error with minItemWidth input", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Grid gutter="size3" minItemWidth={{ value: "incorrect" }}>
+        <Grid gap="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
       );
@@ -138,7 +133,7 @@ describe("Grid", () => {
     it("renders default with console error when minItemWidth is not valid CSSLength", () => {
       const errorStack = create(
         // @ts-expect-error
-        <Grid gutter="size3" minItemWidth="garbage">
+        <Grid gap="size3" minItemWidth="garbage">
           <Lorem />
         </Grid>,
       );
@@ -149,7 +144,7 @@ describe("Grid", () => {
     it("renders grid if anything used as variant other than `masonry`", () => {
       const grid = create(
         // @ts-expect-error
-        <Grid variant="incorrect" gutter="size3" minItemWidth="32rem">
+        <Grid variant="incorrect" gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );

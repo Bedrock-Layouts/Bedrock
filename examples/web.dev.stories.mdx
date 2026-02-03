@@ -1,16 +1,15 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { Stack } from '../packages/stack/src/';
-import { Split } from '../packages/split/src/';
-import { Grid } from '../packages/grid/src/';
-import { Columns, Column } from '../packages/columns/src/';
-import { Inline } from '../packages/inline/src/';
-import { PadBox } from '../packages/padbox/src/';
-import { Frame } from '../packages/frame/src/';
-import { Cover } from '../packages/cover/src/';
-import { Center } from '../packages/center/src/';
-import { ColumnDrop } from '../packages/column-drop/src/';
-import jacketPic from '../.storybook/assets/jacket-pic.jpg'
-import { Component } from './Component'
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Stack } from "../packages/stack/src/";
+import { Split } from "../packages/split/src/";
+import { Grid } from "../packages/grid/src/";
+import { Columns, Column } from "../packages/columns/src/";
+import { Inline } from "../packages/inline/src/";
+import { Frame } from "../packages/frame/src/";
+import { Cover, CoverCentered } from "../packages/cover/src/";
+import { Center } from "../packages/center/src/";
+import { ColumnDrop } from "../packages/column-drop/src/";
+import jacketPic from "../.storybook/assets/jacket-pic.jpg";
+import { Component } from "./Component";
 
 <Meta title="Examples/web.dev" parameters={{ viewMode: "docs" }} />
 
@@ -31,7 +30,7 @@ Uses the [Columns](/docs/spacer-components-columns--docs) and [Column](/docs/spa
 
 <Canvas>
   <Story name="12-span grid">
-    <Columns gutter="size3" columns={12}>
+    <Columns gap="size3" colCount={12}>
       <Column span={12}>
         <Component>Span 12</Component>
       </Column>
@@ -49,7 +48,7 @@ Uses the [Columns](/docs/spacer-components-columns--docs) and [Column](/docs/spa
 </Canvas>
 
 ```jsx
-<Columns gutter="size3" columns={12}>
+<Columns gap="size3" colCount={12}>
   <Column span={12}>
     <Component>Span 12</Component>
   </Column>
@@ -72,43 +71,37 @@ Uses the [Columns](/docs/spacer-components-columns--docs) and [Column](/docs/spa
   card.
 </p>
 
-Uses the [Frame](/docs/wrapper-components-frame--docs), the [Stack](/docs/spacer-components-stack--docs), and the [PadBox](/docs/wrapper-components-padbox--docs) components.
-
-(The [Center](/docs/wrapper-components-center--docs) component is used to center and clamp the width of the card in the example.)
+Uses the [Frame](/docs/wrapper-components-frame--docs), the [Stack](/docs/spacer-components-stack--docs), and the [Center](/docs/wrapper-components-center--docs) components.
 
 <Canvas>
   <Story name="Aspect ratio image card">
     <Center maxWidth="25rem">
-      <PadBox
-        as={Stack}
-        gutter="size3"
-        padding="size7"
-        style={{ border: "1px solid black" }}
+      <Stack
+        gap="size3"
+        style={{ padding: "var(--space-size-7)", border: "1px solid black" }}
       >
         <h1>Video Title</h1>
         <Frame ratio={[16, 9]}>
           <img src={jacketPic} alt="Computer" />
         </Frame>
         <p>Descriptive Text goes here</p>
-      </PadBox>
+      </Stack>
     </Center>
   </Story>
 </Canvas>
 
 ```jsx
 <Center maxWidth="25rem">
-  <PadBox
-    as={Stack}
-    gutter="size3"
-    padding="size7"
-    style={{ border: "1px solid black" }}
+  <Stack
+    gap="size3"
+    style={{ padding: "var(--space-size-7)", border: "1px solid black" }}
   >
     <h1>Video Title</h1>
     <Frame ratio={[16, 9]}>
       <img src={jacketPic} alt="Computer" />
     </Frame>
     <p>Descriptive Text goes here</p>
-  </PadBox>
+  </Stack>
 </Center>
 ```
 
@@ -126,7 +119,7 @@ Uses the [ColumnDrop](/docs/spacer-components-columndrop--docs) component.
 <Canvas>
   <Story name="Deconstructed pancake">
     <Center maxWidth="25rem">
-      <ColumnDrop gutter="size2" minItemWidth="150px">
+      <ColumnDrop gap="size2" minItemWidth="150px">
         <Component>1</Component>
         <Component>2</Component>
         <Component>3</Component>
@@ -137,7 +130,7 @@ Uses the [ColumnDrop](/docs/spacer-components-columndrop--docs) component.
 
 ```jsx
 <Center maxWidth="25rem">
-  <ColumnDrop gutter="size2" minItemWidth="150px">
+  <ColumnDrop gap="size2" minItemWidth="150px">
     <Component>1</Component>
     <Component>2</Component>
     <Component>3</Component>
@@ -152,13 +145,13 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
 <Canvas withSource="open">
   <Story name="Holy grail layout">
     <Cover
-      gutter="size2"
+      gap="size2"
       stretchContent
       minHeight="50vh"
       top={<Component as="header">Header</Component>}
       bottom={<Component as="footer">Footer</Component>}
     >
-      <Inline align="stretch" gutter="size2" stretch={1}>
+      <Inline align="stretch" gap="size2" stretch={1}>
         <Component>Left Sidebar</Component>
         <Component as="main">Main Content</Component>
         <Component>Right Sidebar</Component>
@@ -169,13 +162,13 @@ Classic layout with a header, footer, and two sidebars flanking a main content a
 
 ```jsx
 <Cover
-  gutter="size2"
+  gap="size2"
   stretchContent
   minHeight="50vh"
   top={<Component as="header">Header</Component>}
   bottom={<Component as="footer">Footer</Component>}
 >
-  <Inline align="stretch" gutter="size2" stretch={1}>
+  <Inline align="stretch" gap="size2" stretch={1}>
     <Component>Left Sidebar</Component>
     <Component as="main">Main Content</Component>
     <Component>Right Sidebar</Component>
@@ -191,11 +184,11 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 <Canvas withSource="open">
   <Story name="Line up">
-    <Columns columns={3} gutter="size9" switchAt="sizeContent2">
+    <Columns colCount={3} gap="size9" switchAt="sizeContent2">
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="size3"
+        gap="size3"
         top={<h3>Title - Card 1</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -210,7 +203,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="size3"
+        gap="size3"
         top={<h3>Title - Card 2</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -226,7 +219,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
       <Cover
         as={Component}
         minHeight="100%"
-        gutter="size3"
+        gap="size3"
         top={<h3>Title - Card 3</h3>}
         bottom={
           <Frame ratio={[16, 9]}>
@@ -241,11 +234,11 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 </Canvas>
 
 ```jsx
-<Columns columns={3} gutter="size9" switchAt="sizeContent2">
+<Columns colCount={3} gap="size9" switchAt="sizeContent2">
   <Cover
     as={Component}
     minHeight="100%"
-    gutter="size3"
+    gap="size3"
     top={<h3>Title - Card 1</h3>}
     bottom={
       <Frame ratio={[16, 9]}>
@@ -253,14 +246,12 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
       </Frame>
     }
   >
-    <p contenteditable>
-      Medium length description with a few more words here.
-    </p>
+    <p contenteditable>Medium length description with a few more words here.</p>
   </Cover>
   <Cover
     as={Component}
     minHeight="100%"
-    gutter="size3"
+    gap="size3"
     top={<h3>Title - Card 2</h3>}
     bottom={
       <Frame ratio={[16, 9]}>
@@ -276,7 +267,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
   <Cover
     as={Component}
     minHeight="100%"
-    gutter="size3"
+    gap="size3"
     top={<h3>Title - Card 3</h3>}
     bottom={
       <Frame ratio={[16, 9]}>
@@ -298,7 +289,7 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
     <Cover
       minHeight="25vh"
       stretchContent
-      gutter="size3"
+      gap="size3"
       top={<Component as="header">Header</Component>}
       bottom={<Component as="footer">Footer Content</Component>}
     >
@@ -313,7 +304,7 @@ Commonly referred to as a sticky footer, this layout is often used for both webs
 <Cover
   minHeight="25vh"
   stretchContent
-  gutter="size3"
+  gap="size3"
   top={<Component as="header">Header</Component>}
   bottom={<Component as="footer">Footer Content</Component>}
 >
@@ -332,7 +323,7 @@ A responsive layout with automatically-placed and flexible children. Uses the [G
 <Canvas withSource="open">
   <Story name="RAM (Repeat, Auto, Minmax)">
     <Center maxWidth="25rem">
-      <Grid gutter="size3" minItemWidth="150px">
+      <Grid gap="size3" minItemWidth="150px">
         <Component>1</Component>
         <Component>2</Component>
         <Component>3</Component>
@@ -343,7 +334,7 @@ A responsive layout with automatically-placed and flexible children. Uses the [G
 </Canvas>
 
 ```jsx
-<Grid gutter="size3" minItemWidth="150px">
+<Grid gap="size3" minItemWidth="150px">
   <Component>1</Component>
   <Component>2</Component>
   <Component>3</Component>
@@ -357,7 +348,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 
 <Canvas withSource="open">
   <Story name="Sidbar says">
-    <Split gutter="size3" fraction="1/4" minItemWidth="100px">
+    <Split gap="size3" fraction="1/4" minItemWidth="100px">
       <Component>Min: 100px / Max: 25%</Component>
       <Component>
         {
@@ -369,7 +360,7 @@ A layout where the sidebar is given a minimum and maximum safe area size, and th
 </Canvas>
 
 ```jsx
-<Split gutter="size3" fraction="1/4" minItemWidth="100px">
+<Split gap="size3" fraction="1/4" minItemWidth="100px">
   <Component>Min: 100px / Max: 25%</Component>
   <Component>
     {
@@ -386,7 +377,13 @@ Centering a child div vertically and horizontally. Uses the [Center](/docs/wrapp
 <Canvas withSource="open">
   <Story name="Super centered">
     <Cover minHeight="25vh">
-      <Center centerChildren>
+      <Center
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Component>:)</Component>
       </Center>
     </Cover>
@@ -395,7 +392,13 @@ Centering a child div vertically and horizontally. Uses the [Center](/docs/wrapp
 
 ```jsx
 <Cover minHeight="25vh">
-  <Center centerChildren>
+  <Center
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
     <Component>:)</Component>
   </Center>
 </Cover>
