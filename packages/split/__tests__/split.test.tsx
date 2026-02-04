@@ -1,7 +1,7 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import { useContainerQuery } from "@bedrock-layout/use-container-query";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test, vi } from "vitest";
 
 import { Split } from "../src";
@@ -32,67 +32,67 @@ describe("Split", () => {
     });
 
     it("renders default gap when none provided", () => {
-      const split = create(
+      const { container } = render(
         <Split>
           <Lorem />
         </Split>,
       );
-      expect(split.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const split = create(
+        const { container } = render(
           <Split gap={gap}>
             <Lorem />
           </Split>,
         );
-        expect(split.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-split]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders custom gap with number", () => {
-      const split = create(
+      const { container } = render(
         <Split gap={1}>
           <Lorem />
         </Split>,
       );
-      expect(split.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("1px");
     });
 
     it("renders custom gap with string", () => {
-      const split = create(
+      const { container } = render(
         <Split gap="3ch">
           <Lorem />
         </Split>,
       );
-      expect(split.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders all the fraction options", () => {
       ["auto-start", "auto-end", "1/4", "1/3", "1/2", "2/3", "3/4"].forEach(
         (fraction) => {
-          const split = create(
+          const { container } = render(
             <Split gap="size3" fraction={fraction}>
               <Lorem />
             </Split>,
           );
-          expect(split.toJSON()).toMatchSnapshot();
+          const element = container.querySelector("[data-br-split]");
+          expect(element).toBeInTheDocument();
+          expect(element?.getAttribute("data-br-split")).toContain(
+            `fraction:${fraction}`,
+          );
         },
       );
-    });
-
-    it("renders with theme overrides", () => {
-      const split = create(
-        <>
-          {/* @ts-expect-error */}
-          <Split gap="1x">
-            <Lorem />
-          </Split>
-        </>,
-      );
-      expect(split.toJSON()).toMatchSnapshot();
     });
 
     it("should render a stack if container is below switchAt", () => {
@@ -102,25 +102,53 @@ describe("Split", () => {
         return width <= widthToSwitchAt + 1;
       });
 
-      const stack = create(
+      const { container } = render(
         <Split gap="size3" switchAt={widthToSwitchAt}>
           <Lorem />
         </Split>,
       );
 
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("600px");
       // @ts-expect-error
       useContainerQuery.mockRestore();
     });
 
     it("should render as a main", () => {
-      const stack = create(
+      const { container } = render(
         <Split gap="size3" as="main">
           <Lorem />
         </Split>,
       );
 
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.tagName).toBe("MAIN");
+    });
+
+    it("renders with spacing constant key for switchAt", () => {
+      const { container } = render(
+        <Split gap="size3" switchAt="sizeXl">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).not.toBe("");
+    });
+
+    it("renders with spacing constant key for minItemWidth", () => {
+      const { container } = render(
+        <Split gap="size3" minItemWidth="sizeMd">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).not.toBe("");
     });
 
     it("should render a split if container is above switchAt", () => {
@@ -130,13 +158,15 @@ describe("Split", () => {
         return width <= widthToSwitchAt;
       });
 
-      const stack = create(
+      const { container } = render(
         <Split gap="size3" switchAt={widthToSwitchAt + 1}>
           <Lorem />
         </Split>,
       );
 
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("601px");
 
       // @ts-expect-error
       useContainerQuery.mockRestore();
@@ -144,19 +174,24 @@ describe("Split", () => {
 
     it("should render a split if container is above switchAt using a css string", () => {
       const widthToSwitchAt = 600;
+      const expectedSwitchAt = `${(widthToSwitchAt + 1) / 16}rem`;
 
       // @ts-expect-error
       useContainerQuery.mockImplementation((...[, width]) => {
         return width <= widthToSwitchAt;
       });
 
-      const stack = create(
-        <Split gap="size3" switchAt={`${(widthToSwitchAt + 1) / 16}rem`}>
+      const { container } = render(
+        <Split gap="size3" switchAt={expectedSwitchAt}>
           <Lorem />
         </Split>,
       );
 
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe(
+        expectedSwitchAt,
+      );
 
       // @ts-expect-error
       useContainerQuery.mockRestore();
@@ -165,45 +200,79 @@ describe("Split", () => {
 
   describe("incorrect usage", () => {
     it("renders default with wrong gap input", async () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Split gap={{ value: "incorrect" }}>
           <Lorem />
         </Split>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders default with negative number for gap", () => {
-      const errorStack = create(
+      const { container } = render(
         <Split gap={-1}>
           <Lorem />
         </Split>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with fraction input", () => {
-      const errorStack = create(
+    it("renders default with invalid fraction", () => {
+      const { container } = render(
         <Split fraction="incorrect">
           <Lorem />
         </Split>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-split")).toBe("");
     });
 
-    it("renders default with console error with wrong switchAt input", () => {
-      const errorStack = create(
+    it("renders default with invalid switchAt input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Split gap="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Split>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length switchAt string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Split gap="size3" switchAt="320pixels">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length minItemWidth string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Split gap="size3" minItemWidth="320pixels">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
   });
 });

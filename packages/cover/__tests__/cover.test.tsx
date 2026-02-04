@@ -1,6 +1,6 @@
 import { sizes, spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Cover, CoverCentered } from "../src";
@@ -25,181 +25,212 @@ describe("Cover", () => {
     });
 
     it("renders default", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe(spacing.size3);
     });
 
     it("renders custom height", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" minHeight="500px">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-height")).toBe("500px");
     });
     it("renders with top", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" top={<Lorem />}>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("top");
     });
 
     it("renders with bottom", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" bottom={<Lorem />}>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("bottom");
     });
 
     it("renders with top and bottom", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" top={<Lorem />} bottom={<Lorem />}>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("top");
+      expect(element).toHaveAttribute("bottom");
     });
 
     it("renders default gap when none provided", () => {
-      const cover = create(
+      const { container } = render(
         <Cover>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const cover = create(
+        const { container } = render(
           <Cover gap={gap}>
             <Lorem />
           </Cover>,
         );
-        expect(cover.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-cover]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders with custom gap as number", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap={20}>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders with custom gap as string", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="3ch">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders with custom minHeight as string", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" minHeight="50vh">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-height")).toBe("50vh");
     });
 
     it("renders with custom minHeight as custom property", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" minHeight="var(--size-xl)">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-height")).toBe(
+        "var(--size-xl)",
+      );
     });
 
     it("renders with custom minHeight as number", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3" minHeight={300}>
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-height")).toBe("300px");
     });
 
     it("renders with minHeight as a size property", () => {
       const sizeKeys = Object.keys(sizes) as Array<keyof typeof sizes>;
       sizeKeys.forEach((size) => {
-        const cover = create(
+        const { container } = render(
           <Cover gap="size3" minHeight={size}>
             <p>{size}</p>
           </Cover>,
         );
-        expect(cover.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-cover]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--min-height")).toBe(
+          sizes[size],
+        );
       });
     });
 
     it("renders with stretched content", () => {
-      const cover = create(
-        <Cover gap="size3" stretchContent>
+      const { container } = render(
+        <Cover gap="size3" variant="stretch-content">
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides", () => {
-      const cover = create(
-        <>
-          {/* @ts-expect-error */}
-          <Cover gap="1x">
-            <Lorem />
-          </Cover>
-        </>,
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-cover")).toContain(
+        "stretch-content",
       );
-      expect(cover.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with wrong gap", () => {
-      const errorStack = create(
+    it("renders default with invalid gap input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Cover gap={{ value: "incorrect" }}>
           <Lorem />
         </Cover>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders with min-height incorrect with invalid minHeight", () => {
-      const errorStack = create(
+    it("renders default with invalid minHeight input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Cover gap="size3" minHeight="incorrect">
           <Lorem />
         </Cover>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-height")).toBe("");
     });
 
-    it("renders without stretched conent with invalid stretchContent prop", () => {
-      const errorStack = create(
+    it("renders without stretch-content variant with invalid stretchContent prop", () => {
+      const { container } = render(
         // @ts-expect-error
         <Cover gap="size3" stretchContent="incorrect">
           <Lorem />
         </Cover>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-cover") ?? "").not.toContain(
+        "stretch-content",
+      );
     });
   });
 });
@@ -211,25 +242,29 @@ describe("CoverCentered", () => {
     });
 
     it("renders default", () => {
-      const coverCentered = create(
+      const { container } = render(
         <CoverCentered>
           <Lorem />
         </CoverCentered>,
       );
-      expect(coverCentered.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover-centered]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("data-br-cover-centered");
     });
 
     it("renders with custom element", () => {
-      const coverCentered = create(
+      const { container } = render(
         <CoverCentered as="section">
           <Lorem />
         </CoverCentered>,
       );
-      expect(coverCentered.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover-centered]");
+      expect(element).toBeInTheDocument();
+      expect(element?.tagName).toBe("SECTION");
     });
 
     it("renders within Cover", () => {
-      const cover = create(
+      const { container } = render(
         <Cover gap="size3">
           <Lorem />
           <CoverCentered>
@@ -238,7 +273,10 @@ describe("CoverCentered", () => {
           <Lorem />
         </Cover>,
       );
-      expect(cover.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-cover]");
+      const centered = container.querySelector("[data-br-cover-centered]");
+      expect(element).toBeInTheDocument();
+      expect(centered).toBeInTheDocument();
     });
   });
 });

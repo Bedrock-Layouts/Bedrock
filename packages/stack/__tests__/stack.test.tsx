@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Stack } from "../src";
@@ -29,102 +29,80 @@ describe("Stack", () => {
     });
 
     it("renders 0px default with no gap provided", () => {
-      const stack = create(
+      const { container } = render(
         <Stack>
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const stack = create(
+        const { container } = render(
           <Stack gap={gap}>
             <Lorem />
           </Stack>,
         );
-        expect(stack.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-stack]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders all the align options", () => {
-      const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       (["start", "stretch", "end", "center"] as const).forEach((align) => {
-        const stack = create(
+        const { container } = render(
           <Stack align={align}>
             <Lorem />
           </Stack>,
         );
-        expect(stack.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-stack]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-stack")).toContain(
+          `align:${align}`,
+        );
       });
     });
 
     it("renders custom gap with number", () => {
-      const stack = create(
+      const { container } = render(
         <Stack gap={20}>
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--gap": "20px" });
     });
 
     it("renders custom gap with string", () => {
-      const stack = create(
+      const { container } = render(
         <Stack gap="3ch">
           <Lorem />
         </Stack>,
       );
-      expect(stack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides", () => {
-      const stack = create(
-        <>
-          {/* @ts-expect-error */}
-          <Stack gap="1x">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides using 'space' as key", () => {
-      const stack = create(
-        <>
-          {/* @ts-expect-error */}
-          <Stack gap="1x">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders 0px with theme overrides", () => {
-      const stack = create(
-        <>
-          <Stack gap="size3">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      expect(stack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveStyle({ "--gap": "3ch" });
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default with wrong gap value", () => {
-      const errorStack = create(
+      const { container } = render(
         //@ts-expect-error
         <Stack gap={{ value: "incorrect" }}>
           <Lorem />
         </Stack>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-stack]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 });

@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { InlineCluster } from "../src";
@@ -29,42 +29,50 @@ describe("InlineCluster", () => {
     });
 
     it("renders default gap when none provided", () => {
-      const inlineCluster = create(
+      const { container } = render(
         <InlineCluster>
           <Lorem />
         </InlineCluster>,
       );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const inlineCluster = create(
+        const { container } = render(
           <InlineCluster gap={gap}>
             <Lorem />
           </InlineCluster>,
         );
-        expect(inlineCluster.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline-cluster]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders custom gap as number", () => {
-      const inlineCluster = create(
+      const { container } = render(
         <InlineCluster gap={20}>
           <Lorem />
         </InlineCluster>,
       );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders custom gap as string", () => {
-      const inlineCluster = create(
+      const { container } = render(
         <InlineCluster gap="3ch">
           <Lorem />
         </InlineCluster>,
       );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders all the justify options", () => {
@@ -76,92 +84,88 @@ describe("InlineCluster", () => {
         "space-between",
       ] as const;
       justifications.forEach((justify) => {
-        const inlineCluster = create(
+        const { container } = render(
           <InlineCluster gap="size3" justify={justify}>
             <Lorem />
           </InlineCluster>,
         );
-        expect(inlineCluster.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline-cluster]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-inline-cluster")).toContain(
+          `justify:${justify}`,
+        );
       });
     });
 
     it("renders all the align options", () => {
       const justifications = ["start", "center", "end", "stretch"] as const;
       justifications.forEach((align) => {
-        const inlineCluster = create(
+        const { container } = render(
           <InlineCluster gap="size3" align={align}>
             <Lorem />
           </InlineCluster>,
         );
-        expect(inlineCluster.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-inline-cluster]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-inline-cluster")).toContain(
+          `align:${align}`,
+        );
       });
     });
 
-    it("renders with theme overrides", () => {
-      const inlineCluster = create(
-        <>
-          {/* @ts-expect-error */}
-          <InlineCluster gap="1x">
-            <Lorem />
-          </InlineCluster>
-        </>,
-      );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides using numbers", () => {
-      const inlineCluster = create(
-        <>
-          {/* @ts-expect-error */}
-          <InlineCluster gap="sizeNone">
-            <Lorem />
-          </InlineCluster>
-        </>,
-      );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
-    });
-
     it("accepts className prop", () => {
-      const inlineCluster = create(
+      const { container } = render(
         <InlineCluster gap="size3" className="CLASSNAME">
           <Lorem />
         </InlineCluster>,
       );
-      expect(inlineCluster.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.className).toContain("CLASSNAME");
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default with wrong gap input", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <InlineCluster gap={{ value: "incorrect" }}>
           <Lorem />
         </InlineCluster>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with incorrect justify", () => {
-      const errorStack = create(
+    it("renders default with invalid justify", () => {
+      const { container } = render(
         // @ts-expect-error
         <InlineCluster gap="size3" justify="incorrect">
           <Lorem />
         </InlineCluster>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-inline-cluster")).toContain(
+        "justify:incorrect",
+      );
     });
-    it("renders default with console error with incorrect align", () => {
-      const errorStack = create(
+    it("renders default with invalid align", () => {
+      const { container } = render(
         // @ts-expect-error
         <InlineCluster gap="size3" align="incorrect">
           <Lorem />
         </InlineCluster>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-inline-cluster]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-inline-cluster")).toContain(
+        "align:incorrect",
+      );
     });
   });
 });

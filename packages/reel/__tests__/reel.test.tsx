@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Reel } from "../src";
@@ -29,76 +29,94 @@ describe("Reel", () => {
     it("renders snapTypes", () => {
       const snapTypeOptions = ["none", "mandatory", "proximity"] as const;
       snapTypeOptions.forEach((snapType) => {
-        const reel = create(
+        const { container } = render(
           <Reel gap="size3" snapType={snapType}>
             <Lorem />
           </Reel>,
         );
-        expect(reel.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-reel]");
+        expect(element).toBeInTheDocument();
+        expect(element?.getAttribute("data-br-reel")).toContain(
+          `snapType:${snapType}`,
+        );
       });
     });
 
     it("renders default gap when none supplied", () => {
-      const reel = create(
+      const { container } = render(
         <Reel>
           <Lorem />
         </Reel>,
       );
-      expect(reel.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const reel = create(
+        const { container } = render(
           <Reel gap={gap}>
             <Lorem />
           </Reel>,
         );
-        expect(reel.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-reel]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders custom gap as number", () => {
-      const reel = create(
+      const { container } = render(
         <Reel gap={20}>
           <Lorem />
         </Reel>,
       );
-      expect(reel.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders custom gap as string", () => {
-      const reel = create(
+      const { container } = render(
         <Reel gap="3ch">
           <Lorem />
         </Reel>,
       );
-      expect(reel.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders with console error with incorrect snapType", () => {
-      const errorStack = create(
+    it("renders with invalid snapType", () => {
+      const { container } = render(
         // @ts-expect-error
         <Reel gap="size3" snapType="incorrect">
           <Lorem />
         </Reel>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.getAttribute("data-br-reel")).toContain(
+        "snapType:incorrect",
+      );
     });
 
-    it("renders with console error with incorrect gap", () => {
-      const errorStack = create(
+    it("renders with invalid gap input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Reel gap={{ value: "incorrect" }}>
           <Lorem />
         </Reel>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-reel]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
 });

@@ -1,7 +1,7 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
-import { describe, expect, it, test, vi } from "vitest";
+import { render } from "@testing-library/react";
+import { describe, expect, it, test } from "vitest";
 
 import { Column, Columns } from "../src";
 
@@ -29,64 +29,80 @@ describe("Column", () => {
     });
 
     it("renders default gap", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3">
           <Column>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe(spacing.size3);
     });
 
     it("renders as main", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" as="main">
           <Column>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.tagName).toBe("MAIN");
     });
 
     it("renders custom span", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3">
           <Column span={2}>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--col-span")).toBe("2");
     });
 
     it("renders offsetStart span", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" colCount={4}>
           <Column span={2} offsetStart={2}>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--offset-start")).toBe("2");
     });
 
     it("renders offsetEnd span", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" colCount={4}>
           <Column span={2} offsetEnd={2}>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--offset-end")).toBe("2");
     });
   });
 
   describe("incorrect usage", () => {
-    it("renders default with console error with wrong span input", () => {
-      const errorStack = create(
+    it("renders default with invalid span input", () => {
+      const { container } = render(
         <Columns gap="size3">
           {/* @ts-expect-error */}
           <Column span="incorrect">
@@ -95,33 +111,45 @@ describe("Column", () => {
         </Columns>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--col-span")).toBe("1");
     });
 
     it("renders a span of 1 if given 0", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3">
           <Column span={0}>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--col-span")).toBe("1");
     });
 
     it("renders a span of 1 if given negative number", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3">
           <Column span={-1}>
             <Lorem />
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--col-span")).toBe("1");
     });
 
     it("renders a span of 1 if given null", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3">
           {/* @ts-expect-error */}
           <Column span={null}>
@@ -129,7 +157,11 @@ describe("Column", () => {
           </Column>
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      const column = container.querySelector("[data-br-column]");
+      expect(element).toBeInTheDocument();
+      expect(column).toBeInTheDocument();
+      expect(column?.style.getPropertyValue("--col-span")).toBe("1");
     });
   });
 });
@@ -140,70 +172,84 @@ describe("Columns", () => {
       expect(Columns).toBeTruthy();
     });
     it("renders default gap when none provided", () => {
-      const columns = create(
+      const { container } = render(
         <Columns>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const columns = create(
+        const { container } = render(
           <Columns gap={gap}>
             <Lorem />
           </Columns>,
         );
-        expect(columns.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-columns]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
     it("renders custom gap with number", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap={20}>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
     it("renders custom gap with string", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="3ch">
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders custom colCount", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" colCount={5}>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--col-count")).toBe("5");
     });
 
     it("renders switchAt as number", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" switchAt={500}>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("500px");
     });
 
     it("renders switchAt as string", () => {
-      const columns = create(
+      const { container } = render(
         <Columns gap="size3" switchAt="500px">
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("500px");
     });
 
     it("renders with invalid gap (no theme provider)", () => {
-      const columns = create(
+      const { container } = render(
         <>
           {/* @ts-expect-error */}
           <Columns gap="1x">
@@ -211,55 +257,93 @@ describe("Columns", () => {
           </Columns>
         </>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
   });
   describe("incorrect usage", () => {
     it("renders default with wrong gap input", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Columns gap={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,
       );
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
     it("renders 1 columns if given 0", () => {
-      const columns = create(
+      const { container } = render(
         <Columns colCount={0}>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--col-count")).toBe("1");
     });
     it("renders 1 columns if given negative number", () => {
-      const columns = create(
+      const { container } = render(
         <Columns colCount={-1}>
           <Lorem />
         </Columns>,
       );
-      expect(columns.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--col-count")).toBe("1");
     });
-    it("renders default with console error with incorrect column type", () => {
-      const errorStack = create(
+    it("renders default with invalid colCount type", () => {
+      const { container } = render(
         // @ts-expect-error
         <Columns colCount="incorrect">
           <Lorem />
         </Columns>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--col-count")).toBe("1");
     });
 
-    it("renders default with console error with wrong switchAt input", () => {
-      const errorStack = create(
+    it("renders default with invalid switchAt input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Columns gap="size3" switchAt={{ value: "incorrect" }}>
           <Lorem />
         </Columns>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length switchAt string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Columns gap="size3" switchAt="320pixels">
+          <Lorem />
+        </Columns>,
+      );
+
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders with spacing constant key for switchAt", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Columns gap="size3" switchAt="sizeXl">
+          <Lorem />
+        </Columns>,
+      );
+
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).not.toBe("");
     });
   });
 });

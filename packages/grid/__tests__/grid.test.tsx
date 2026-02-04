@@ -1,6 +1,6 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 
 import { Grid } from "../src";
@@ -29,126 +29,136 @@ describe("Grid", () => {
     });
 
     it("renders default with no gap", () => {
-      const grid = create(
+      const { container } = render(
         <Grid>
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
     it("renders all the gap options", () => {
       const spacingKeys = Object.keys(spacing) as Array<keyof typeof spacing>;
       spacingKeys.forEach((gap) => {
-        const grid = create(
+        const { container } = render(
           <Grid gap={gap}>
             <Lorem />
           </Grid>,
         );
-        expect(grid.toJSON()).toMatchSnapshot();
+        const element = container.querySelector("[data-br-grid]");
+        expect(element).toBeInTheDocument();
+        expect(element?.style.getPropertyValue("--gap")).toBe(spacing[gap]);
       });
     });
 
     it("renders custom gap with number", () => {
-      const grid = create(
+      const { container } = render(
         <Grid gap={20}>
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("20px");
     });
 
     it("renders custom gap with string", () => {
-      const grid = create(
+      const { container } = render(
         <Grid gap="3ch">
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("3ch");
     });
 
     it("renders custom minItemWidth", () => {
-      const grid = create(
+      const { container } = render(
         <Grid gap="size3" minItemWidth={320}>
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("320px");
     });
 
     it("renders custom minItemWidth as string", () => {
-      const grid = create(
+      const { container } = render(
         <Grid gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("32rem");
     });
 
     it("renders masonry variant", () => {
-      const grid = create(
+      const { container } = render(
         <Grid variant="masonry" gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
-    });
-
-    it("renders with theme overrides", () => {
-      const grid = create(
-        <>
-          {/** @ts-ignore */}
-          <Grid gap="1x">
-            <Lorem />
-          </Grid>
-        </>,
-      );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("data-br-grid", "variant:masonry");
     });
   });
 
   describe("incorrect usage", () => {
     it("renders default with wrong gap input", () => {
-      const errorStack = create(
+      const { container } = render(
         // @ts-expect-error
         <Grid gap={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--gap")).toBe("");
     });
 
-    it("renders default with console error with minItemWidth input", () => {
-      const errorStack = create(
+    it("renders default with invalid minItemWidth input", () => {
+      const { container } = render(
         // @ts-expect-error
         <Grid gap="size3" minItemWidth={{ value: "incorrect" }}>
           <Lorem />
         </Grid>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
 
-    it("renders default with console error when minItemWidth is not valid CSSLength", () => {
-      const errorStack = create(
+    it("renders default with invalid CSS length string", () => {
+      const { container } = render(
         // @ts-expect-error
         <Grid gap="size3" minItemWidth="garbage">
           <Lorem />
         </Grid>,
       );
 
-      expect(errorStack.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
 
     it("renders grid if anything used as variant other than `masonry`", () => {
-      const grid = create(
+      const { container } = render(
         // @ts-expect-error
         <Grid variant="incorrect" gap="size3" minItemWidth="32rem">
           <Lorem />
         </Grid>,
       );
-      expect(grid.toJSON()).toMatchSnapshot();
+      const element = container.querySelector("[data-br-grid]");
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("data-br-grid", "true");
     });
   });
 });

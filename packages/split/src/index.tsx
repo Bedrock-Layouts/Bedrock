@@ -6,6 +6,7 @@ import {
   getSizeValue,
   PaddingConfig,
   getPaddingAttributes,
+  checkIsCSSLength,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
@@ -23,6 +24,22 @@ const fractionTypes = [
 type FractionType = (typeof fractionTypes)[number];
 
 type MinItemWidth = number | CSSLength | SizesOptions;
+
+/**
+ * Validates and returns a CSS length value, or undefined if invalid
+ */
+function validateCSSLengthOrNumber(value: unknown): CSSLength | undefined {
+  const sizeValue = getSizeValue(value as string | number | undefined);
+  if (sizeValue !== undefined) return sizeValue;
+
+  if (typeof value === "string") {
+    return checkIsCSSLength(value).result === "valid"
+      ? (value as CSSLength)
+      : undefined;
+  }
+
+  return undefined;
+}
 
 /**
  * Props for the Split component.
@@ -78,27 +95,24 @@ export const Split = forwardRefWithAs<"div", SplitProps>(function Split(
 
   const maybeGutter = getSafeGutter(gap);
 
-  const maybeMinItemWidth = getSizeValue(minItemWidth) ?? minItemWidth;
+  const maybeMinItemWidth = validateCSSLengthOrNumber(minItemWidth);
 
-  const maybeSwitchAt = getSizeValue(switchAt) ?? switchAt;
+  const maybeSwitchAt = validateCSSLengthOrNumber(switchAt);
 
   const paddingAttrs = getPaddingAttributes(padding);
 
   const attrString = [fractionAttr, ...paddingAttrs].filter(Boolean).join(" ");
 
+  const styles = {
+    "--gap": maybeGutter,
+    ...(maybeMinItemWidth !== undefined && {
+      "--min-item-width": maybeMinItemWidth,
+    }),
+    ...(maybeSwitchAt !== undefined && { "--switch-at": maybeSwitchAt }),
+    ...style,
+  } as CSSProperties;
+
   return (
-    <Component
-      ref={ref}
-      data-br-split={attrString}
-      style={
-        {
-          "--gap": maybeGutter,
-          "--min-item-width": maybeMinItemWidth,
-          "--switch-at": maybeSwitchAt,
-          ...style,
-        } as CSSProperties
-      }
-      {...props}
-    />
+    <Component ref={ref} data-br-split={attrString} style={styles} {...props} />
   );
 });

@@ -7,9 +7,26 @@ import {
   getSizeValue,
   PaddingConfig,
   getPaddingAttributes,
+  checkIsCSSLength,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
+
+/**
+ * Validates and returns a CSS length value, or undefined if invalid
+ */
+function validateCSSLengthOrNumber(value: unknown): CSSLength | undefined {
+  const sizeValue = getSizeValue(value as string | number | undefined);
+  if (sizeValue !== undefined) return sizeValue;
+
+  if (typeof value === "string") {
+    return checkIsCSSLength(value).result === "valid"
+      ? (value as CSSLength)
+      : undefined;
+  }
+
+  return undefined;
+}
 
 type MinItemWidth = number | CSSLength | SizesOptions;
 type SwitchAt = number | CSSLength | SizesOptions;
@@ -18,6 +35,17 @@ type SwitchAt = number | CSSLength | SizesOptions;
  * The `Stretch` type is used to specify which child should stretch to fill the excess space.
  */
 export type Stretch = "all" | "start" | "end" | 0 | 1 | 2 | 3 | 4;
+
+/**
+ * Validates a stretch value and returns it if valid, undefined otherwise
+ */
+function validateStretch(value: unknown): Stretch | undefined {
+  const validStretchValues: Stretch[] = ["all", "start", "end", 0, 1, 2, 3, 4];
+  if (validStretchValues.includes(value as Stretch)) {
+    return value as Stretch;
+  }
+  return undefined;
+}
 
 /**
  * Props for the Inline component.
@@ -80,28 +108,33 @@ export const Inline = forwardRefWithAs<"div", InlineProps>(function Inline(
 ) {
   const justifyValue = createAttributeString("justify", justify);
   const alignValue = createAttributeString("align", align ?? "center");
-  const stretchValue = createAttributeString("stretch", stretch);
+  const stretchValue = createAttributeString(
+    "stretch",
+    validateStretch(stretch),
+  );
   const paddingAttrs = getPaddingAttributes(padding);
 
-  const maybeMinItemWidth = getSizeValue(minItemWidth) ?? minItemWidth;
-  const switchAtValue = getSizeValue(switchAt);
+  const maybeMinItemWidth = validateCSSLengthOrNumber(minItemWidth);
+  const switchAtValue = validateCSSLengthOrNumber(switchAt);
 
   const attributes = [justifyValue, alignValue, stretchValue, ...paddingAttrs]
     .filter(Boolean)
     .join(" ");
 
+  const styles = {
+    "--gap": getSafeGutter(gap),
+    ...(switchAtValue !== undefined && { "--switch-at": switchAtValue }),
+    ...(maybeMinItemWidth !== undefined && {
+      "--min-item-width": maybeMinItemWidth,
+    }),
+    ...style,
+  } as CSSProperties;
+
   return (
     <Component
       ref={ref}
       data-br-inline={attributes}
-      style={
-        {
-          "--gap": getSafeGutter(gap),
-          "--switch-at": switchAtValue,
-          "--min-item-width": maybeMinItemWidth,
-          ...style,
-        } as CSSProperties
-      }
+      style={styles}
       {...props}
     />
   );
