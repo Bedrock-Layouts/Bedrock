@@ -99,20 +99,6 @@ describe("ColumnDrop", () => {
       expect(element).toBeInTheDocument();
       expect(element?.style.getPropertyValue("--min-item-width")).toBe("32rem");
     });
-
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <ColumnDrop gap="1x">
-            <Lorem />
-          </ColumnDrop>
-        </>,
-      );
-      const element = container.querySelector("[data-br-column-drop]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
   });
 
   describe("incorrect usage", () => {

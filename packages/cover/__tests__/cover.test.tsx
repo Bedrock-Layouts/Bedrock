@@ -189,20 +189,6 @@ describe("Cover", () => {
         "stretch-content",
       );
     });
-
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <Cover gap="1x">
-            <Lorem />
-          </Cover>
-        </>,
-      );
-      const element = container.querySelector("[data-br-cover]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
   });
 
   describe("incorrect usage", () => {

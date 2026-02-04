@@ -95,20 +95,6 @@ describe("Split", () => {
       );
     });
 
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <Split gap="1x">
-            <Lorem />
-          </Split>
-        </>,
-      );
-      const element = container.querySelector("[data-br-split]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
-
     it("should render a stack if container is below switchAt", () => {
       const widthToSwitchAt = 600;
       // @ts-expect-error

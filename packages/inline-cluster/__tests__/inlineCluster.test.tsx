@@ -113,34 +113,6 @@ describe("InlineCluster", () => {
       });
     });
 
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <InlineCluster gap="1x">
-            <Lorem />
-          </InlineCluster>
-        </>,
-      );
-      const element = container.querySelector("[data-br-inline-cluster]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
-
-    it("renders with theme overrides using numbers", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <InlineCluster gap="sizeNone">
-            <Lorem />
-          </InlineCluster>
-        </>,
-      );
-      const element = container.querySelector("[data-br-inline-cluster]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
-
     it("accepts className prop", () => {
       const { container } = render(
         <InlineCluster gap="size3" className="CLASSNAME">

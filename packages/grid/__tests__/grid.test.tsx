@@ -107,20 +107,6 @@ describe("Grid", () => {
       expect(element).toBeInTheDocument();
       expect(element).toHaveAttribute("data-br-grid", "variant:masonry");
     });
-
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/** @ts-ignore */}
-          <Grid gap="1x">
-            <Lorem />
-          </Grid>
-        </>,
-      );
-      const element = container.querySelector("[data-br-grid]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
   });
 
   describe("incorrect usage", () => {

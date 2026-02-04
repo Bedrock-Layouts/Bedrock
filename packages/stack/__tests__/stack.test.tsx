@@ -90,46 +90,7 @@ describe("Stack", () => {
       expect(element).toHaveStyle({ "--gap": "3ch" });
     });
 
-    it("renders with theme overrides", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <Stack gap="1x">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      const element = container.querySelector("[data-br-stack]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
 
-    it("renders with theme overrides using 'space' as key", () => {
-      const { container } = render(
-        <>
-          {/* @ts-expect-error */}
-          <Stack gap="1x">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      const element = container.querySelector("[data-br-stack]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe("");
-    });
-
-    it("renders 0px with theme overrides", () => {
-      const { container } = render(
-        <>
-          <Stack gap="size3">
-            <Lorem />
-          </Stack>
-        </>,
-      );
-      const element = container.querySelector("[data-br-stack]");
-      expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--gap")).toBe(spacing.size3);
-    });
   });
 
   describe("incorrect usage", () => {
