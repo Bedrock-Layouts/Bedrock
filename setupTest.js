@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/vitest";
 import { vi } from "vitest";
 
 global.IS_REACT_ACT_ENVIRONMENT = true;

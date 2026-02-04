@@ -89,8 +89,6 @@ describe("Stack", () => {
       expect(element).toBeInTheDocument();
       expect(element).toHaveStyle({ "--gap": "3ch" });
     });
-
-
   });
 
   describe("incorrect usage", () => {

@@ -59,6 +59,18 @@ describe("Center", () => {
       expect(element).toBeInTheDocument();
       expect(element).toHaveStyle({ "--max-width": "320px" });
     });
+
+    it("renders with spacing constant key for maxWidth", () => {
+      const { container } = render(
+        <Center maxWidth="sizeXl">
+          <Lorem />
+        </Center>,
+      );
+
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--max-width")).not.toBe("");
+    });
   });
 
   describe("incorrect usage", () => {
@@ -71,7 +83,7 @@ describe("Center", () => {
       );
       const element = container.querySelector("[data-br-center]");
       expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--max-width")).toBe("320pixels");
+      expect(element?.style.getPropertyValue("--max-width")).toBe("");
     });
 
     it("renders default with invalid maxWidth input", () => {
@@ -84,7 +96,20 @@ describe("Center", () => {
 
       const element = container.querySelector("[data-br-center]");
       expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--max-width")).toBe("incorrect");
+      expect(element?.style.getPropertyValue("--max-width")).toBe("");
+    });
+
+    it("renders with spacing constant key for maxWidth", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Center maxWidth="sizeXl">
+          <Lorem />
+        </Center>,
+      );
+
+      const element = container.querySelector("[data-br-center]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--max-width")).not.toBe("");
     });
   });
 });

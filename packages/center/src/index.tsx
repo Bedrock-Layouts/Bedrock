@@ -4,9 +4,26 @@ import {
   getSizeValue,
   PaddingConfig,
   getPaddingAttributes,
+  checkIsCSSLength,
 } from "@bedrock-layout/spacing-constants";
 import { forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
+
+/**
+ * Validates and returns a CSS length value, or undefined if invalid
+ */
+function validateCSSLengthOrNumber(value: unknown): CSSLength | undefined {
+  const sizeValue = getSizeValue(value as string | number | undefined);
+  if (sizeValue !== undefined) return sizeValue;
+
+  if (typeof value === "string") {
+    return checkIsCSSLength(value).result === "valid"
+      ? (value as CSSLength)
+      : undefined;
+  }
+
+  return undefined;
+}
 
 /**
  * The `maxWidth` prop can be a CSSLength, a number, or a key of the theme's sizes options.
@@ -38,16 +55,18 @@ export const Center = forwardRefWithAs<"div", CenterProps>(function Center(
   const paddingAttrs = getPaddingAttributes(padding);
   const attrString = paddingAttrs.join(" ");
 
+  const maybeMaxWidth = validateCSSLengthOrNumber(maxWidth);
+
+  const styles = {
+    ...(maybeMaxWidth !== undefined && { "--max-width": maybeMaxWidth }),
+    ...style,
+  } as CSSProperties;
+
   return (
     <Component
       data-br-center={attrString}
       ref={ref}
-      style={
-        {
-          "--max-width": getSizeValue(maxWidth) ?? maxWidth,
-          ...style,
-        } as CSSProperties
-      }
+      style={styles}
       {...props}
     />
   );

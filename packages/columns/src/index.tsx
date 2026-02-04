@@ -6,9 +6,26 @@ import {
   getSizeValue,
   PaddingConfig,
   getPaddingAttributes,
+  checkIsCSSLength,
 } from "@bedrock-layout/spacing-constants";
 import { convertToMaybe, forwardRefWithAs } from "@bedrock-layout/type-utils";
 import React, { CSSProperties } from "react";
+
+/**
+ * Validates and returns a CSS length value, or undefined if invalid
+ */
+function validateCSSLengthOrNumber(value: unknown): CSSLength | undefined {
+  const sizeValue = getSizeValue(value as string | number | undefined);
+  if (sizeValue !== undefined) return sizeValue;
+
+  if (typeof value === "string") {
+    return checkIsCSSLength(value).result === "valid"
+      ? (value as CSSLength)
+      : undefined;
+  }
+
+  return undefined;
+}
 
 /**
  * Props for the `Columns` component.
@@ -51,23 +68,23 @@ export const Columns = forwardRefWithAs<"div", ColumnsProps>(function Columns(
   ref,
 ) {
   const maybeGutter = getSafeGutter(gap);
-  const maybeSwitchAt = getSizeValue(switchAt) ?? switchAt;
+  const maybeSwitchAt = validateCSSLengthOrNumber(switchAt);
   const safeColumns = convertToMaybe(Math.max(colCount ?? 1, 1)) ?? 1;
   const paddingAttrs = getPaddingAttributes(padding);
   const attrString = paddingAttrs.join(" ");
+
+  const styles = {
+    "--gap": maybeGutter,
+    "--col-count": safeColumns,
+    ...(maybeSwitchAt !== undefined && { "--switch-at": maybeSwitchAt }),
+    ...style,
+  } as CSSProperties;
 
   return (
     <Component
       ref={ref}
       data-br-columns={attrString}
-      style={
-        {
-          "--gap": maybeGutter,
-          "--col-count": safeColumns,
-          "--switch-at": maybeSwitchAt,
-          ...style,
-        } as CSSProperties
-      }
+      style={styles}
       {...props}
     />
   );

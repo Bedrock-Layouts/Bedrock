@@ -127,6 +127,30 @@ describe("Split", () => {
       expect(element?.tagName).toBe("MAIN");
     });
 
+    it("renders with spacing constant key for switchAt", () => {
+      const { container } = render(
+        <Split gap="size3" switchAt="sizeXl">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).not.toBe("");
+    });
+
+    it("renders with spacing constant key for minItemWidth", () => {
+      const { container } = render(
+        <Split gap="size3" minItemWidth="sizeMd">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).not.toBe("");
+    });
+
     it("should render a split if container is above switchAt", () => {
       const widthToSwitchAt = 600;
       // @ts-expect-error
@@ -222,9 +246,33 @@ describe("Split", () => {
 
       const element = container.querySelector("[data-br-split]");
       expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--switch-at")).toBe(
-        "[object Object]",
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length switchAt string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Split gap="size3" switchAt="320pixels">
+          <Lorem />
+        </Split>,
       );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length minItemWidth string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Split gap="size3" minItemWidth="320pixels">
+          <Lorem />
+        </Split>,
+      );
+
+      const element = container.querySelector("[data-br-split]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
   });
 });

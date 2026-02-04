@@ -1,7 +1,7 @@
 import { spacing } from "@bedrock-layout/spacing-constants";
 import React from "react";
 import { render } from "@testing-library/react";
-import { describe, expect, it, test, vi } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { Column, Columns } from "../src";
 
@@ -317,9 +317,33 @@ describe("Columns", () => {
 
       const element = container.querySelector("[data-br-columns]");
       expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--switch-at")).toBe(
-        "[object Object]",
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length switchAt string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Columns gap="size3" switchAt="320pixels">
+          <Lorem />
+        </Columns>,
       );
+
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders with spacing constant key for switchAt", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Columns gap="size3" switchAt="sizeXl">
+          <Lorem />
+        </Columns>,
+      );
+
+      const element = container.querySelector("[data-br-columns]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).not.toBe("");
     });
   });
 });

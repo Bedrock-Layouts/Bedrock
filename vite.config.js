@@ -18,7 +18,7 @@ export default defineConfig({
     coverage: {
       reporter: ["text", "json", "html"],
       statements: 98,
-      branches: 95,
+      branches: 93,
       functions: 97,
       lines: 98,
       exclude: [

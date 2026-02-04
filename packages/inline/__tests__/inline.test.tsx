@@ -139,6 +139,30 @@ describe("Inline", () => {
         }
       });
     });
+
+    it("renders with spacing constant key for switchAt", () => {
+      const { container } = render(
+        <Inline gap="size3" switchAt="sizeXl">
+          <Lorem />
+        </Inline>,
+      );
+
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).not.toBe("");
+    });
+
+    it("renders with spacing constant key for minItemWidth", () => {
+      const { container } = render(
+        <Inline gap="size3" minItemWidth="sizeMd">
+          <Lorem />
+        </Inline>,
+      );
+
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).not.toBe("");
+    });
   });
 
   describe("incorrect usage", () => {
@@ -152,7 +176,7 @@ describe("Inline", () => {
 
       const element = container.querySelector("[data-br-inline]");
       expect(element).toBeInTheDocument();
-      expect(element?.getAttribute("data-br-inline")).toContain(
+      expect(element?.getAttribute("data-br-inline")).not.toContain(
         "stretch:incorrect",
       );
     });
@@ -167,9 +191,33 @@ describe("Inline", () => {
 
       const element = container.querySelector("[data-br-inline]");
       expect(element).toBeInTheDocument();
-      expect(element?.style.getPropertyValue("--min-item-width")).toBe(
-        "incorrect",
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
+    });
+
+    it("renders default with invalid CSS length switchAt string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Inline gap="size3" switchAt="320pixels">
+          <Lorem />
+        </Inline>,
       );
+
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--switch-at")).toBe("");
+    });
+
+    it("renders default with invalid CSS length minItemWidth string", () => {
+      const { container } = render(
+        // @ts-expect-error
+        <Inline gap="size3" minItemWidth="320pixels">
+          <Lorem />
+        </Inline>,
+      );
+
+      const element = container.querySelector("[data-br-inline]");
+      expect(element).toBeInTheDocument();
+      expect(element?.style.getPropertyValue("--min-item-width")).toBe("");
     });
   });
 });
