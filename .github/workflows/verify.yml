@@ -18,13 +18,17 @@ jobs:
       GH_TOKEN: ${{secrets.GH_TOKEN}}
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [25.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: "0"
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn config set registry https://registry.npmjs.org
       - run: yarn

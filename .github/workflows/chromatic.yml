@@ -14,6 +14,10 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
+      - name: Use Node.js 25.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 25.x
       - name: Install dependencies
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow

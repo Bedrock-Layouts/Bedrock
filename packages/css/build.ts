@@ -10,14 +10,16 @@ const libComponentPath = path.join(libPath, "components");
 const srcPath = path.join(__dirname, "src");
 const srcComponentPath = path.join(srcPath, "components");
 
-const removeDir = promisify(fs.rmdir);
+const removeDir = promisify(fs.rm);
 const writeFile = promisify(fs.writeFile);
 const makeDir = promisify(fs.mkdir);
 const copyFile = promisify(fs.copyFile);
 const readDir = promisify(fs.readdir);
 
 (async () => {
-  await removeDir(libPath, { recursive: true }).catch(() => void 0);
+  await removeDir(libPath, { recursive: true, force: true }).catch(
+    () => void 0,
+  );
   await makeDir(libPath);
   await makeDir(libComponentPath);
 
