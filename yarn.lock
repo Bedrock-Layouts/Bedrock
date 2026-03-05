@@ -1292,7 +1292,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-4.0.0.tgz#798a33950d11226a0ebb6acafa60f5594424967f"
   integrity sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==
 
-"@emnapi/core@^1.1.0":
+"@emnapi/core@^1.1.0", "@emnapi/core@^1.7.1":
   version "1.8.1"
   resolved "https://registry.npmjs.org/@emnapi/core/-/core-1.8.1.tgz#fd9efe721a616288345ffee17a1f26ac5dd01349"
   integrity sha512-AvT9QFpxK0Zd8J0jopedNm+w/2fIzvtPKPjqyw9jwvBaReTTqPBk9Hixaz7KbjimP+QNz605/XnjFcDAL2pqBg==
@@ -1300,7 +1300,7 @@
     "@emnapi/wasi-threads" "1.1.0"
     tslib "^2.4.0"
 
-"@emnapi/runtime@^1.1.0":
+"@emnapi/runtime@^1.1.0", "@emnapi/runtime@^1.7.1":
   version "1.8.1"
   resolved "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.8.1.tgz#550fa7e3c0d49c5fb175a116e8cd70614f9a22a5"
   integrity sha512-mehfKSMWjjNol8659Z8KxEMrdSJDDot5SXMq00dM8BN4o+CLNXQ0xH2V7EchNHV4RmbZLmmPdEaXZc5H2FXmDg==
@@ -2175,6 +2175,15 @@
     "@emnapi/runtime" "^1.1.0"
     "@tybys/wasm-util" "^0.9.0"
 
+"@napi-rs/wasm-runtime@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.1.tgz#c3705ab549d176b8dc5172723d6156c3dc426af2"
+  integrity sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==
+  dependencies:
+    "@emnapi/core" "^1.7.1"
+    "@emnapi/runtime" "^1.7.1"
+    "@tybys/wasm-util" "^0.10.1"
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.npmjs.org/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz#dbf733a965ca47b1973177dc0bb6c889edcfb129"
@@ -2583,6 +2592,108 @@
   integrity sha512-ifLaO34EbbPj0Xgro4G5lP5asESjwHracYJvVaPIyXMuiuXLlhic3S47cBdTb+jfODkTE5YtGCLt3Ay3+J97sA==
   dependencies:
     "@octokit/openapi-types" "^24.2.0"
+
+"@oxc-minify/binding-android-arm-eabi@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-android-arm-eabi/-/binding-android-arm-eabi-0.116.0.tgz#b13ed27980bfb186815d29068e8f8636d402c268"
+  integrity sha512-xJRj6ygJ9PYIqp7RBWylb0U5OdSHFFbETkXKMic9EVfFuMm7PpOsvs+5n6Dhp9XjAlHswcyBVoh2N/zzg/1lNw==
+
+"@oxc-minify/binding-android-arm64@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-android-arm64/-/binding-android-arm64-0.116.0.tgz#472d6bd2f429a70916dce5d9d7b0a9d6fefefed2"
+  integrity sha512-4cMIwsMG+ie62tGKUbmqSWkqHXTb6vjAB0l6XHQRec5BFatn+x6btPbu1tZ0e4khxYHXusd3vRyLdfYpya8Qrg==
+
+"@oxc-minify/binding-darwin-arm64@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-darwin-arm64/-/binding-darwin-arm64-0.116.0.tgz#8ce17975985e2815ea52385159c20c7eb8f784b1"
+  integrity sha512-03+i13fHa7SPuTfHaQ2eDnqxfv0XPzMAw7TpN4FpblGH+m+e6IvfDfpj/xT/zzvgRdFV8cBtLZ49bX50ZDmHAA==
+
+"@oxc-minify/binding-darwin-x64@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-darwin-x64/-/binding-darwin-x64-0.116.0.tgz#6a954f48bbe3b3eb8172faec406255cf17426685"
+  integrity sha512-ICNEKYEgJw4UX1MQEshQLJNz5tIDImQMgoA7HHzLO2Z0Y2M6oQlsyFfoSMuc3lO4EPK6PrNRxuFBtt3wc8dd9g==
+
+"@oxc-minify/binding-freebsd-x64@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-freebsd-x64/-/binding-freebsd-x64-0.116.0.tgz#50d6f1f50fa9cc4f6fa11fae2aea619fdaa57a7b"
+  integrity sha512-J5y2cTphLSiTD8IAidxYDjdrklweXZh5FdAGCDnL9fh02cAc8g2ZXa53TNRdPsjnYXIEH5w4SvMzf63hDd+ezw==
+
+"@oxc-minify/binding-linux-arm-gnueabihf@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-0.116.0.tgz#703ae03d7ad03fdd14d087f2e30faa65932b72b1"
+  integrity sha512-thcu4qGtNHt3/SRB2xcJEMG9xxJIuflbWAzXJPLAhZugNmJS0ttcmIvDfvJQ2MJ+PSssZOtX7Gxu/5blTiaBEg==
+
+"@oxc-minify/binding-linux-arm-musleabihf@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-0.116.0.tgz#ef0aba661b6223f01fd6457b732fa241f301153e"
+  integrity sha512-mru7IDG/VDty51FBTnqAgjgeXM2x+1NadU1y26gq1U46WqO+ISrcdESlmHGp8tnMpj7rFGGk3kbmEoCDR8UQBg==
+
+"@oxc-minify/binding-linux-arm64-gnu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-0.116.0.tgz#1f1b4321138e13501f61cca1cdad8610dd3265c8"
+  integrity sha512-1CIngrhxBd+tZ30JSpTc7R2b2YvMx3UMJZUjGQfXfZJQHya8s2nxfZXQszmQZFbtUzD789JZkcYrW8wl+xg//Q==
+
+"@oxc-minify/binding-linux-arm64-musl@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-arm64-musl/-/binding-linux-arm64-musl-0.116.0.tgz#78738196f95a213735454ac2c161fe796bf07082"
+  integrity sha512-Xz/yCEAlJ/eT1DAmOIiJLSh0OwJE+8XkKMwTwL4hxL+pcJMpIXMBg1t1VIgHc561DmWxw//s5RPXqON+DRAkig==
+
+"@oxc-minify/binding-linux-ppc64-gnu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-0.116.0.tgz#a63ede4e83ffc6dd6bc0851fd33e8c1e6de15f8b"
+  integrity sha512-Qk88V65XjhyrYcRZv/k6fHI7/c2lpYSOYeWgrRnqXNDryZ1oU3eZbJP7bgcZf+YCXHWg0SwJ3rZJuFmi+/Ml0Q==
+
+"@oxc-minify/binding-linux-riscv64-gnu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-0.116.0.tgz#b36b9de1573dbd9396fdfe9d28d71a7d1ed8cebe"
+  integrity sha512-1NlzrKgKgsvJg+8dtXGHZLdKLXmr6JSt6/7S6KCjG/FW2MZfjfiEnHbwW9U6iVpkmKlD73UDJsoyMQWGOZO6fQ==
+
+"@oxc-minify/binding-linux-riscv64-musl@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-riscv64-musl/-/binding-linux-riscv64-musl-0.116.0.tgz#b57215a090119cf51d3be8b2589fafcc327e12d1"
+  integrity sha512-7sesJpftUQAFyMhnrdC2EoKWnsXeqC87A3spco5knPNfm90yzFYvpGGzBquJnWWwXHI5gplfDPYkiVrOP3AcRw==
+
+"@oxc-minify/binding-linux-s390x-gnu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-0.116.0.tgz#3e280b215d8174352d717ab5fb4cfce3b6d710d9"
+  integrity sha512-Npe3A85+TLU1wK0BanMoJJhCAGIqM8SzKmteABxaBwjyfzQr4HtbOU/Boem6MoPegALIRNo0XHbR04Vby6wxSQ==
+
+"@oxc-minify/binding-linux-x64-gnu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-x64-gnu/-/binding-linux-x64-gnu-0.116.0.tgz#9ecd6ddd5111d403a9498aff0263990649a75f39"
+  integrity sha512-1Ed/oZXVmgMSccgi6nBYC7ezqYjPhDRWHbdVJGNoXFcC6I138KHp/tTUWaqQNxtvwE1NrkYViaxnl7Gvq9Cjdg==
+
+"@oxc-minify/binding-linux-x64-musl@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-linux-x64-musl/-/binding-linux-x64-musl-0.116.0.tgz#34e644fe7e39fdd016ab0e180147420d20714eda"
+  integrity sha512-QlXCrfdh3NFdKcBFUCgQvXc3Wp6xSonlZh0h8oZGBardy9d3IiIwDS7geXZkpFrpaU63kMmbt/vEB9elDCag4A==
+
+"@oxc-minify/binding-openharmony-arm64@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-openharmony-arm64/-/binding-openharmony-arm64-0.116.0.tgz#23d0897bd0d133c28bb12f73bd7a53a88d8d8a62"
+  integrity sha512-b+IcvnKIfy44E35Oo+x5cbzp41odP2uoXLC+jNgkZCn3kwa/rlGc/mmT6l9INdNIGA+pK7MyZjZWSOYZZNk/3g==
+
+"@oxc-minify/binding-wasm32-wasi@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-wasm32-wasi/-/binding-wasm32-wasi-0.116.0.tgz#96097ae466787c2998fef831f1dcaf14e81ef6d0"
+  integrity sha512-WM4olmljUhhXwAZP/4UPOHxmQTczWBCFKv0IoPXhIWdoowJWhdiPOAn8Yq9PvZ7yupdVsJdyt2Jaf3zCNuwVrA==
+  dependencies:
+    "@napi-rs/wasm-runtime" "^1.1.1"
+
+"@oxc-minify/binding-win32-arm64-msvc@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-0.116.0.tgz#2317151dd8bd1c7a8c4ac481211347a370be7124"
+  integrity sha512-wNARwIEz1iBSwn6PitToCGQRfM/7KcutxeL/POXtA9pGxtniw2bksq1Fiov+ESGBjtOk8GGAN02yftC6WhzGSw==
+
+"@oxc-minify/binding-win32-ia32-msvc@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-0.116.0.tgz#73114cebd59dc96e1e45620b7cd04d198b08fcd0"
+  integrity sha512-H9yR4/P+lZfqTsGPiKTnnZnXInzeiBCGyUi6Tv3nvQhMsiM1liLKgJ1konR0YaOMYxpObG5Qu0TKQ/8uufldZA==
+
+"@oxc-minify/binding-win32-x64-msvc@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@oxc-minify/binding-win32-x64-msvc/-/binding-win32-x64-msvc-0.116.0.tgz#dedd27021913674978387b69781fb61b950a124d"
+  integrity sha512-mGRIhi37Eh/YjvImseaNqCo0sv8aUBR69BKb65Oh4qAuk+hWzY5GyfEFUCQ1Dt6tmdLmi2R+4aaFWIzDJIzSVA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -3502,6 +3613,13 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^10.1.1"
 
+"@tybys/wasm-util@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.10.1.tgz#ecddd3205cf1e2d5274649ff0eedd2991ed7f414"
+  integrity sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==
+  dependencies:
+    tslib "^2.4.0"
+
 "@tybys/wasm-util@^0.9.0":
   version "0.9.0"
   resolved "https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.9.0.tgz#3e75eb00604c8d6db470bf18c37b7d984a0e3355"
@@ -3770,11 +3888,6 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.2.2"
-
-"@types/relateurl@^0.2.33":
-  version "0.2.33"
-  resolved "https://registry.yarnpkg.com/@types/relateurl/-/relateurl-0.2.33.tgz#fa174c30100d91e88d7b0ba60cefd7e8c532516f"
-  integrity sha512-bTQCKsVbIdzLqZhLkF5fcJQreE4y1ro4DIyVrlDNSCJRRwHhB8Z+4zXXa8jN6eDvc2HbRsEYgbvrnGvi54EpSw==
 
 "@types/resolve@^1.20.2":
   version "1.20.6"
@@ -4902,14 +5015,6 @@ callsites@^3.0.0:
   resolved "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-camel-case@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/camel-case/-/camel-case-4.1.2.tgz#9728072a954f805228225a6deea6b38461e1bd5a"
-  integrity sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==
-  dependencies:
-    pascal-case "^3.1.2"
-    tslib "^2.0.3"
-
 camelcase-keys@^6.2.2:
   version "6.2.2"
   resolved "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-6.2.2.tgz#5e755d6ba51aa223ec7d3d52f25778210f9dc3c0"
@@ -4943,15 +5048,6 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001759:
   version "1.0.30001765"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001765.tgz#4a78d8a797fd4124ebaab2043df942eb091648ee"
   integrity sha512-LWcNtSyZrakjECqmpP4qdg0MMGdN368D7X8XvvAqOcqMv0RxnlqVKZl2V6/mBR68oYMxOZPLw/gO7DuisMHUvQ==
-
-capital-case@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/capital-case/-/capital-case-1.0.4.tgz#9d130292353c9249f6b00fa5852bee38a717e669"
-  integrity sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==
-  dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
-    upper-case-first "^2.0.2"
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -5000,24 +5096,6 @@ chalk@^5.3.0:
   version "5.6.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-5.6.2.tgz#b1238b6e23ea337af71c7f8a295db5af0c158aea"
   integrity sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==
-
-change-case@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/change-case/-/change-case-4.1.2.tgz#fedfc5f136045e2398c0410ee441f95704641e12"
-  integrity sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==
-  dependencies:
-    camel-case "^4.1.2"
-    capital-case "^1.0.4"
-    constant-case "^3.0.4"
-    dot-case "^3.0.4"
-    header-case "^2.0.4"
-    no-case "^3.0.4"
-    param-case "^3.0.4"
-    pascal-case "^3.1.2"
-    path-case "^3.0.4"
-    sentence-case "^3.0.4"
-    snake-case "^3.0.4"
-    tslib "^2.0.3"
 
 character-entities@^2.0.0:
   version "2.0.2"
@@ -5306,15 +5384,6 @@ console-control-strings@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
-
-constant-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/constant-case/-/constant-case-3.0.4.tgz#3b84a9aeaf4cf31ec45e6bf5de91bdfb0589faf1"
-  integrity sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==
-  dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
-    upper-case "^2.0.2"
 
 conventional-changelog-angular@7.0.0:
   version "7.0.0"
@@ -5926,14 +5995,6 @@ domutils@^3.0.1:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
-dot-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/dot-case/-/dot-case-3.0.4.tgz#9b2b670d00a431667a8a75ba29cd1b98809ce751"
-  integrity sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==
-  dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
-
 dot-prop@^5.1.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/dot-prop/-/dot-prop-5.3.0.tgz#90ccce708cd9cd82cc4dc8c3ddd9abdd55b20e88"
@@ -6030,7 +6091,7 @@ entities@^6.0.0:
   resolved "https://registry.npmjs.org/entities/-/entities-6.0.1.tgz#c28c34a43379ca7f61d074130b2f5f7020a30694"
   integrity sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==
 
-entities@^7.0.0:
+entities@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-7.0.1.tgz#26e8a88889db63417dcb9a1e79a3f1bc92b5976b"
   integrity sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==
@@ -7292,14 +7353,6 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-header-case@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/header-case/-/header-case-2.0.4.tgz#5a42e63b55177349cf405beb8d775acabb92c063"
-  integrity sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==
-  dependencies:
-    capital-case "^1.0.4"
-    tslib "^2.0.3"
-
 hermes-estree@0.25.1:
   version "0.25.1"
   resolved "https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.25.1.tgz#6aeec17d1983b4eabf69721f3aa3eb705b17f480"
@@ -7374,17 +7427,15 @@ html-escaper@^2.0.0:
   resolved "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html-minifier-next@^4.16.4:
-  version "4.19.1"
-  resolved "https://registry.yarnpkg.com/html-minifier-next/-/html-minifier-next-4.19.1.tgz#6c7fd6b9865e4ea714c24d0dd8a74e66a759fff7"
-  integrity sha512-2TdfFp9L4nKVCc4/sglWJGBh8DnILl/HEsEdKGhk+19OCUXHb1p4Qf9uDEO/EDlKuioLqR0OqBCjL9yOlv0zeA==
+html-minifier-next@^5.1.5:
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/html-minifier-next/-/html-minifier-next-5.1.5.tgz#5e4bc385a466c549f66f0f180c4a0c22a08770cd"
+  integrity sha512-+XNT8wWP2QcaiAFh8/pGouzJp4gqtTAbNwCaf4KKlq49FzlZQLO1dEqaORvExESWbsE5mTxkAmjieGR3YSCE6A==
   dependencies:
-    "@types/relateurl" "^0.2.33"
-    change-case "^4.1.2"
     commander "^14.0.2"
-    entities "^7.0.0"
-    lightningcss "^1.28.2"
-    relateurl "^0.2.7"
+    entities "^7.0.1"
+    lightningcss "^1.31.1"
+    svgo "^4.0.0"
     terser "^5.46.0"
 
 html-parse-stringify@^3.0.1:
@@ -8473,7 +8524,7 @@ lightningcss-win32-x64-msvc@1.31.1:
   resolved "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz#7f025274c81c7d659829731e09c8b6f442209837"
   integrity sha512-I9aiFrbd7oYHwlnQDqr1Roz+fTz61oDDJX7n9tYF9FJymH1cIN1DtKw3iYt6b8WZgEjoNwVSncwF4wx/ZedMhw==
 
-lightningcss@^1.28.1, lightningcss@^1.28.2:
+lightningcss@^1.28.1, lightningcss@^1.31.1:
   version "1.31.1"
   resolved "https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz#1a19dd327b547a7eda1d5c296ebe1e72df5a184b"
   integrity sha512-l51N2r93WmGUye3WuFoN5k10zyvrVs0qfKBhyC5ogUQ6Ew6JUSswh78mbSO+IU3nTWsyOArqPCcShdQSadghBQ==
@@ -8677,13 +8728,6 @@ loupe@^2.3.6:
   integrity sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==
   dependencies:
     get-func-name "^2.0.1"
-
-lower-case@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/lower-case/-/lower-case-2.0.2.tgz#6fa237c63dbdc4a82ca0fd882e4722dc5e634e28"
-  integrity sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==
-  dependencies:
-    tslib "^2.0.3"
 
 lru-cache@^10.0.1, lru-cache@^10.2.0:
   version "10.4.3"
@@ -9305,9 +9349,9 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minify@^15.0.1:
-  version "15.0.1"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-15.0.1.tgz#7eaa4aedf5d6ed715e35bac15561eebe1a5644d4"
-  integrity sha512-OT21ZzfjJcQm7ijCpZekdlSJt+eTwo/hLrfOxh405tvq4H6U3vPePU4tIWTPDj9HhpbywK1GXEf43g+OmPuMEQ==
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-15.2.0.tgz#c65512c07d23684521aef6ab7b787634ae427fb1"
+  integrity sha512-8syAQ9x4vGx4YgmsqaN2kefkxWzR7ET4IxYRC6iLWLImINsxwYMYXzx1jj/uOtbs0eVEI578H5KDgl+bPl3s+w==
   dependencies:
     "@putout/minify" "^6.0.0"
     "@swc/core" "^1.6.7"
@@ -9316,9 +9360,10 @@ minify@^15.0.1:
     debug "^4.1.0"
     esbuild "^0.27.2"
     find-up "^8.0.0"
-    html-minifier-next "^4.16.4"
+    html-minifier-next "^5.1.5"
     lightningcss "^1.28.1"
     montag "^1.2.1"
+    oxc-minify "^0.116.0"
     readjson "^2.2.2"
     terser "^5.28.1"
     try-catch "^4.0.7"
@@ -9531,14 +9576,6 @@ neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
-
-no-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/no-case/-/no-case-3.0.4.tgz#d361fd5c9800f558551a8369fc0dcd4662b6124d"
-  integrity sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==
-  dependencies:
-    lower-case "^2.0.2"
-    tslib "^2.0.3"
 
 node-fetch@^2.6.12:
   version "2.7.0"
@@ -9967,6 +10004,32 @@ own-keys@^1.0.1:
     object-keys "^1.1.1"
     safe-push-apply "^1.0.0"
 
+oxc-minify@^0.116.0:
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/oxc-minify/-/oxc-minify-0.116.0.tgz#a0ce63af99a49246323c5abd87b4a93aaa170040"
+  integrity sha512-QgwBX/I81xEsKaD0/M5OsLbuKUx48F2nnJnQrpAgCDOpqjfm8AdF/bbtmrGM9YmsSUsAxGTh+Va10ImlwUVwww==
+  optionalDependencies:
+    "@oxc-minify/binding-android-arm-eabi" "0.116.0"
+    "@oxc-minify/binding-android-arm64" "0.116.0"
+    "@oxc-minify/binding-darwin-arm64" "0.116.0"
+    "@oxc-minify/binding-darwin-x64" "0.116.0"
+    "@oxc-minify/binding-freebsd-x64" "0.116.0"
+    "@oxc-minify/binding-linux-arm-gnueabihf" "0.116.0"
+    "@oxc-minify/binding-linux-arm-musleabihf" "0.116.0"
+    "@oxc-minify/binding-linux-arm64-gnu" "0.116.0"
+    "@oxc-minify/binding-linux-arm64-musl" "0.116.0"
+    "@oxc-minify/binding-linux-ppc64-gnu" "0.116.0"
+    "@oxc-minify/binding-linux-riscv64-gnu" "0.116.0"
+    "@oxc-minify/binding-linux-riscv64-musl" "0.116.0"
+    "@oxc-minify/binding-linux-s390x-gnu" "0.116.0"
+    "@oxc-minify/binding-linux-x64-gnu" "0.116.0"
+    "@oxc-minify/binding-linux-x64-musl" "0.116.0"
+    "@oxc-minify/binding-openharmony-arm64" "0.116.0"
+    "@oxc-minify/binding-wasm32-wasi" "0.116.0"
+    "@oxc-minify/binding-win32-arm64-msvc" "0.116.0"
+    "@oxc-minify/binding-win32-ia32-msvc" "0.116.0"
+    "@oxc-minify/binding-win32-x64-msvc" "0.116.0"
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
@@ -10138,14 +10201,6 @@ pacote@^21.0.0, pacote@^21.0.2:
     ssri "^13.0.0"
     tar "^7.4.3"
 
-param-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/param-case/-/param-case-3.0.4.tgz#7d17fe4aa12bde34d4a77d91acfb6219caad01c5"
-  integrity sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==
-  dependencies:
-    dot-case "^3.0.4"
-    tslib "^2.0.3"
-
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -10212,22 +10267,6 @@ parse5@^8.0.0:
   integrity sha512-9m4m5GSgXjL4AjumKzq1Fgfp3Z8rsvjRNbnkVwfu2ImRqE5D0LnY2QfDen18FSY9C573YU5XxSapdHZTZ2WolA==
   dependencies:
     entities "^6.0.0"
-
-pascal-case@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.npmjs.org/pascal-case/-/pascal-case-3.1.2.tgz#b48e0ef2b98e205e7c1dae747d0b1508237660eb"
-  integrity sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==
-  dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
-
-path-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/path-case/-/path-case-3.0.4.tgz#9168645334eb942658375c56f80b4c0cb5f82c6f"
-  integrity sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==
-  dependencies:
-    dot-case "^3.0.4"
-    tslib "^2.0.3"
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -11130,11 +11169,6 @@ regjsparser@^0.13.0:
   dependencies:
     jsesc "~3.1.0"
 
-relateurl@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.npmjs.org/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
-  integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
-
 remark-gfm@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/remark-gfm/-/remark-gfm-4.0.1.tgz#33227b2a74397670d357bf05c098eaf8513f0d6b"
@@ -11420,15 +11454,6 @@ semver@^7.0.0, semver@^7.1.1, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semve
   resolved "https://registry.npmjs.org/semver/-/semver-7.7.4.tgz#28464e36060e991fa7a11d0279d2d3f3b57a7e8a"
   integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
 
-sentence-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/sentence-case/-/sentence-case-3.0.4.tgz#3645a7b8c117c787fde8702056225bb62a45131f"
-  integrity sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==
-  dependencies:
-    no-case "^3.0.4"
-    tslib "^2.0.3"
-    upper-case-first "^2.0.2"
-
 seroval-plugins@~1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.5.0.tgz#c02ba5f41d50b8105d4d9d4c553a4d01cec4226a"
@@ -11581,14 +11606,6 @@ smart-buffer@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
-
-snake-case@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/snake-case/-/snake-case-3.0.4.tgz#4f2bbd568e9935abdfd593f34c691dadb49c452c"
-  integrity sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==
-  dependencies:
-    dot-case "^3.0.4"
-    tslib "^2.0.3"
 
 socks-proxy-agent@^8.0.3:
   version "8.0.5"
@@ -12282,7 +12299,7 @@ tsconfig-paths@^4.1.2, tsconfig-paths@^4.2.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.8.1, tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0:
+tslib@2.8.1, tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0:
   version "2.8.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
@@ -12576,20 +12593,6 @@ update-browserslist-db@^1.2.0:
   dependencies:
     escalade "^3.2.0"
     picocolors "^1.1.1"
-
-upper-case-first@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/upper-case-first/-/upper-case-first-2.0.2.tgz#992c3273f882abd19d1e02894cc147117f844324"
-  integrity sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==
-  dependencies:
-    tslib "^2.0.3"
-
-upper-case@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/upper-case/-/upper-case-2.0.2.tgz#d89810823faab1df1549b7d97a76f8662bae6f7a"
-  integrity sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==
-  dependencies:
-    tslib "^2.0.3"
 
 uri-js@^4.2.2:
   version "4.4.1"
