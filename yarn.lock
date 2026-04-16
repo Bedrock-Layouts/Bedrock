@@ -9222,9 +9222,9 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minify@^15.0.1:
-  version "15.2.1"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-15.2.1.tgz#7edd6e5c3e3ba0934279fba421a5085b6672b5ab"
-  integrity sha512-qe3LJyK7juYvwrzGJE+LlFrOKf1/aOd+B6bh6lM3uHM8b8LfysfYK6+OuuG/2QpI6aDW+igP8nkZcudGLkv9/Q==
+  version "15.3.1"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-15.3.1.tgz#859d16b0543a14c058f31444b2624dd3a01a657f"
+  integrity sha512-2Y8GurrLPo0OKwbA+O7oAsolVsxPDxMLd3VNzp9anVGr8tkQq03pwWOCNeXf6SircWrX54jWa+nrBG66AwBDxQ==
   dependencies:
     "@putout/minify" "^6.0.0"
     "@swc/core" "^1.6.7"
@@ -9238,6 +9238,7 @@ minify@^15.0.1:
     montag "^1.2.1"
     oxc-minify "^0.125.0"
     readjson "^2.2.2"
+    redstd "^1.0.1"
     terser "^5.28.1"
     try-catch "^4.0.7"
     try-to-catch "^4.0.3"
@@ -10942,6 +10943,11 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+redstd@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/redstd/-/redstd-1.0.2.tgz#ff86e5394dcc54a29470f819e8567c38d6485b9f"
+  integrity sha512-s5Fh78Jh+g+UARkb972bsJzuYjgBUoEs/51ebXV8eensXzsF8kDzBdCDBX8psGBuC5+BNcqQtxXFJMbqc8zZgg==
 
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
