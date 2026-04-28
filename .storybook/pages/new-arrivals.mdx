@@ -27,7 +27,7 @@ export function Card() {
     <article>
       <img
         src="https://picsum.photos/seed/fruit/900/700"
-        alt="A random fruit from unsplash.com"
+        alt="A placeholder image of fruit from picsum.photos"
       />
       <h3>Fruit</h3>
       <p>
@@ -123,7 +123,7 @@ export function Card({ title }) {
       <Frame ratio={[16, 9]}>
         <img
           src={`https://picsum.photos/seed/${title}/900/700`}
-          alt="A random fruit from unsplash.com"
+          alt={`A placeholder image for ${title} from picsum.photos`}
         />
       </Frame>
       <div style={{ padding: "var(--spacing-size-5)" }}>
