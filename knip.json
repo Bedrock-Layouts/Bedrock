@@ -4,11 +4,10 @@
     "packages/**/__tests__/**",
     "examples/**",
     "stories/**",
-    "packages/css/postcss.config.js",
     "packages/solid-doc-site/babel.config.js",
     "packages/solid/babel.config.js"
   ],
-  "ignoreBinaries": ["knip", "yarn-deduplicate"],
+  "ignoreBinaries": ["yarn-deduplicate"],
   "ignoreDependencies": [
     "tslib",
     "@typescript-eslint/eslint-plugin",
