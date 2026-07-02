@@ -5166,10 +5166,12 @@ chromatic@^10.6.0:
   resolved "https://registry.npmjs.org/chromatic/-/chromatic-10.9.6.tgz#0dd9c82fbbf1f5a7aa73b96b5b7e066fe5408be3"
   integrity sha512-1MoT+/U+vQwEiq2GuehPyStbqhxqHmM1B9pdpVU1dKh26userQg1FyOFYifkTgy+9reo2w2p7sAbc0JRd2kzlA==
 
-chromatic@^15.1.0:
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-15.3.0.tgz#865b8c4deb4ea0d38cca6b57b39afe440fcf68af"
-  integrity sha512-ficw/Pz9OpBnPoWDRmuwFDwzLPSN0o90x6X+0+rbnMFYtDTPWXddW6R14jQ56SgYSByJ67OyHZg2gW6U6HF2Qw==
+chromatic@^16.9.0:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-16.9.0.tgz#fe52455d0e00ab1bdb23985b370e694698a9f949"
+  integrity sha512-KJ1qvHMMP3jYZksxA229dREL81TeS+XxerRgd83klJIgtuQdY8kYg5TClNaF+K9HAzHmF19VIDHF6d0XwsRqzQ==
+  dependencies:
+    semver "^7.3.5"
 
 ci-info@4.3.1, ci-info@^4.0.0:
   version "4.3.1"
