@@ -1,0 +1,72 @@
+name: Dependabot Failed Build Cleanup
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types: [completed]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  cleanup-failed-dependabot-pr:
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close failed Dependabot pull requests
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { workflow_run } = context.payload;
+            const pullRequests = workflow_run.pull_requests || [];
+
+            if (pullRequests.length === 0) {
+              core.info('No pull requests were associated with this failed workflow run.');
+              return;
+            }
+
+            for (const pullRequestRef of pullRequests) {
+              const { data: pullRequest } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pullRequestRef.number,
+              });
+
+              if (pullRequest.user?.login !== 'dependabot[bot]') {
+                core.info(`Skipping PR #${pullRequest.number}; author is ${pullRequest.user?.login}.`);
+                continue;
+              }
+
+              if (pullRequest.state !== 'open') {
+                core.info(`Skipping PR #${pullRequest.number}; PR is already ${pullRequest.state}.`);
+                continue;
+              }
+
+              const body = [
+                '⚠️ This Dependabot PR was automatically closed because the **Build** workflow failed.',
+                '',
+                `Failed run: ${workflow_run.html_url}`,
+                '',
+                'If this dependency update should be retried, reopen this PR or wait for Dependabot to create a fresh update.',
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pullRequest.number,
+                body,
+              });
+
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pullRequest.number,
+                state: 'closed',
+              });
+
+              core.info(`Closed Dependabot PR #${pullRequest.number} after a failed Build run.`);
+            }
