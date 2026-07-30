@@ -30,6 +30,6 @@ Bedrock Layout Primitives uses Dependabot to automatically keep dependencies up 
 
 - **Patch and minor version updates** are automatically approved and merged after CI checks pass
 - **Major version updates** are flagged for manual review to check for breaking changes
-- **Dependabot PRs with failed build checks** are automatically closed so broken updates are cleaned up quickly
+- **Dependabot PRs with failed build checks** automatically request an AI fix so the PR can be repaired and merged
 
 For more information about the Dependabot automation, see the [agents documentation](.github/agents/README.md).
