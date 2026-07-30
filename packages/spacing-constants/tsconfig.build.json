@@ -4,6 +4,7 @@
   "compilerOptions": {
     "outDir": "./lib",
     "declaration": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "rootDir": "./src"
   }
 }

@@ -3,6 +3,7 @@
   "include": ["src", "types", "../../types"],
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "jsxImportSource": "solid-js",
+    "rootDir": "./src"
   }
 }
