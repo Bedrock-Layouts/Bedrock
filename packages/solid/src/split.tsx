@@ -16,13 +16,7 @@ import createDynamic, {
 } from "./typeUtils";
 
 type FractionTypes =
-  | "auto-start"
-  | "auto-end"
-  | "1/4"
-  | "1/3"
-  | "1/2"
-  | "2/3"
-  | "3/4";
+  "auto-start" | "auto-end" | "1/4" | "1/3" | "1/2" | "2/3" | "3/4";
 
 type Fractions = {
   [key in FractionTypes]: string;
