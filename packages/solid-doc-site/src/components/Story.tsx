@@ -9,8 +9,7 @@ export function Story(
   props: Readonly<{
     children: JSX.Element;
     code:
-      | string
-      | ((props: { dedent: (literals: string) => string }) => string);
+      string | ((props: { dedent: (literals: string) => string }) => string);
   }>,
 ): JSX.Element {
   const finalCode =

@@ -60,18 +60,10 @@ type LengthUnit =
   | "px";
 
 type CSSSizeKeyword =
-  | "auto"
-  | "inherit"
-  | "none"
-  | "min-content"
-  | "max-content"
-  | "fit-content";
+  "auto" | "inherit" | "none" | "min-content" | "max-content" | "fit-content";
 
 export type CSSLength =
-  | CSSLengthUnit
-  | CSSCustomPropertyWithVar
-  | CSSCustomProperty
-  | CSSSizeKeyword;
+  CSSLengthUnit | CSSCustomPropertyWithVar | CSSCustomProperty | CSSSizeKeyword;
 
 export const spacing = {
   size000: "-.5rem",
