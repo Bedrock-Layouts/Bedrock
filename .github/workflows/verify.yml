@@ -18,7 +18,7 @@ jobs:
       GH_TOKEN: ${{secrets.GH_TOKEN}}
     strategy:
       matrix:
-        node-version: [24.x]
+        node-version: [">=24.15.0 <25"]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
