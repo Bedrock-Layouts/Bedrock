@@ -2483,100 +2483,50 @@
     tslib "^2.3.0"
     yargs-parser "21.1.1"
 
-"@nx/nx-darwin-arm64@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-arm64/-/nx-darwin-arm64-22.7.12.tgz#ccf61d5423f2c4484db3639282e4249d022285dd"
-  integrity sha512-sodVNqp+7IB4dq1npKEV1VtKUR3nu0qoUPrhZoxlce6SrFTPiNCLEbk9kN7egul5eYJvKn6vV8yFJIudfTmWLA==
-
 "@nx/nx-darwin-arm64@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-darwin-arm64/-/nx-darwin-arm64-23.2.1.tgz#852d655f0404559e4d5c5ec2bab2837b5a03c492"
   integrity sha512-majzvZlhlWL8MSDEKbQoGv3qM1u7v8Pk7X86srWsySbGDnCJ5BpMFyqMeroQ3AY4lxRjLYWACX5YXVPy2ttRtQ==
-
-"@nx/nx-darwin-x64@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-darwin-x64/-/nx-darwin-x64-22.7.12.tgz#bd00aeedee58b0d10e6cf7665fda6fec7badc6a0"
-  integrity sha512-IPYRcpQ4WCeqtjz/ny8pFrXdgt9eytgk2Gt/NXxFHzMQt/YUR0C3UXXruzdyhKVmWFKyhQ4Hbd+a8fq+dpYDlQ==
 
 "@nx/nx-darwin-x64@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-darwin-x64/-/nx-darwin-x64-23.2.1.tgz#03cab5700fbc74be1975774c6143a55579de7304"
   integrity sha512-C+KkJwGOZ3h2RjEoQk2SWBdMlKq4BdMfTtxCJ9YgCxjPKqT8V/57tn1Dzz9fnw76P8+PocsfRdjIS0cj9r7isA==
 
-"@nx/nx-freebsd-x64@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-freebsd-x64/-/nx-freebsd-x64-22.7.12.tgz#4e7b4725a4d5124afe0e17f86ac14fe8ccb27b53"
-  integrity sha512-0jTk0r1WMQtRuzQtsJVd6AdLrw4XLrWrjuDudTQmD5TdSvxW+JU3JeryOCfQXLvhodqbtLpAd3OLRFrrkvx3yQ==
-
 "@nx/nx-freebsd-x64@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-freebsd-x64/-/nx-freebsd-x64-23.2.1.tgz#d2c7d4263dc36dff328d4780103fd537a5f2ff88"
   integrity sha512-GxxMtUlZWy74b15iyHVw+c4a0V2pSHR6RKbvmaSJQ3BXJrJarIqaWys/JrvcV2I/AjtrN7Tq7cFxCEaxkwCsEA==
-
-"@nx/nx-linux-arm-gnueabihf@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-22.7.12.tgz#853f75a4429ab7f4ae971701a049d3cfdd4f2fed"
-  integrity sha512-75hPe55220D83oDEgF6OL/X700IA7Rv99O+p0pI1ysyTwwAUDQLX8kXQkRtDCDU7gulrZ2O8kDt4QbxDj/QfGQ==
 
 "@nx/nx-linux-arm-gnueabihf@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-23.2.1.tgz#ebf4917d15e61b4ffa576b757bddf29c05bdb442"
   integrity sha512-Wr/VLZkPhEsDN7GGx0wOmvZ6v7yMrMf9WpLfrcTVe10NPUB/y6xYaoTDo8teKOBNLsPJ73C40bj2ZBmWtGPg7Q==
 
-"@nx/nx-linux-arm64-gnu@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-22.7.12.tgz#983147a9daf10f5e22c1d75196fcef8314bd7b1a"
-  integrity sha512-HuGaEhTPm+Jsx6JtBTabmNFe5vTdtEmVarGKdWIMa7X5XKe848eZz8E6YUzYNz2Wgm1d3Xcy7oiwWB6ktxBBOQ==
-
 "@nx/nx-linux-arm64-gnu@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-23.2.1.tgz#b1fb6573b6dbb86654931fd9e956c107004fd7ff"
   integrity sha512-lGPhJYkJbIlTWj38FrHZ3qnaGkAfafPrK+6KjGdt+ubDOt9fp0lyUbEhfdg9JuIL++hOgcTHvz0FOA6S+7k3nA==
-
-"@nx/nx-linux-arm64-musl@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-22.7.12.tgz#f7af750653b0755fb48df0166d8df47625ccdb58"
-  integrity sha512-6uI3xiLuDONNuYwnzaNfz+t/oxNrnVCpnWvPjNY2XDA2wCYIfk8YG9cgUQa5vzfPRnJKj74nPmhJ2oI2XyVx5Q==
 
 "@nx/nx-linux-arm64-musl@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-23.2.1.tgz#0eb10d1708f46c93692d682cdf2937489f379eb3"
   integrity sha512-HrHBmBjh++NBE1p0DBjnc53Ech86/4gy4V1bAUJRViG1/FSJAopKE8qQqanYfShOUsHXk6ohPIhf6nlC8LsFFQ==
 
-"@nx/nx-linux-x64-gnu@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-22.7.12.tgz#943d401eabdc9db978516e87a68cdfc7c105b766"
-  integrity sha512-dPrQbmvAYfTcSvP1tWC1+ulF8TMMtLTdngP4KeMjsm5JMGCNK2fMPOB4/Pk1ayQ9L352mYUhbohBdififRvnfA==
-
 "@nx/nx-linux-x64-gnu@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-23.2.1.tgz#e1f72d24ae7f7a44ef29bc2201350bab9a0c3990"
   integrity sha512-D1mSU/kdC1N8aeo7RpmuXWOl77GR4QIbam4dpUmezAwdNkIHlIq7hwqec+4HDWum9nlNmQX/dZn0nZaBem0rRA==
-
-"@nx/nx-linux-x64-musl@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-22.7.12.tgz#e06328e9cc45cdb8be7ffbc525de0c19d24bd779"
-  integrity sha512-j+BJLz72JYprTKJUJukVdDhX4BIw3sARah4pRs4lLs8KPAEIbISFY70lT4MWwyMJWQuQ2vaaOih1PpFvVQphsQ==
 
 "@nx/nx-linux-x64-musl@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-23.2.1.tgz#c9079df99eca1992a05b5cdecf31fe0f02872eed"
   integrity sha512-p8Lc4RLu7cj4iP7NCnivLv4Qw+RorrLRO6s2J0LNIMH4nI1PAu5p5IztsCb3lsRo0f/ERCQ8DGwBn2BM1J8Blg==
 
-"@nx/nx-win32-arm64-msvc@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-22.7.12.tgz#a67a6fc75d441092c591a3912e996d4631f35945"
-  integrity sha512-waZPnYVIR0MGvBu3lWsn2YU+wxEdZP0SUe+sbqJhgKQdlGUb1Omqruw3F9JWnEXGiST7WXXJ6q2sk4OL77TOaA==
-
 "@nx/nx-win32-arm64-msvc@23.2.1":
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-23.2.1.tgz#bc07f4ead474cdcb62b36e5393d2226f682ddc27"
   integrity sha512-XWYG+6P368xOZXU1z3QH4jXlaajQDxlXVGzYXogp+i09twEAhE7LV6fmv8gQptBta67EZy610KcKu38IVn6x7Q==
-
-"@nx/nx-win32-x64-msvc@22.7.12":
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-22.7.12.tgz#d27c65c2635748fd32dbf5e1be33a9b6f3dedf69"
-  integrity sha512-zDC8Myy0FUX/rI1JbrgpAGLQV6UQuZXE2yL9nTUO7FmXOmebkr7vz80LAPaHhnKO4kebifsynHIxh53l3phA/Q==
 
 "@nx/nx-win32-x64-msvc@23.2.1":
   version "23.2.1"
@@ -4499,11 +4449,6 @@ ajv@^8.11.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
 
-ansi-colors@4.1.3, ansi-colors@^4.1.1:
-  version "4.1.3"
-  resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.3.tgz#37611340eb2243e70cc604cad35d63270d48781b"
-  integrity sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==
-
 ansi-escapes@^4.2.1:
   version "4.3.2"
   resolved "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
@@ -4913,13 +4858,6 @@ boolbase@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
-
-brace-expansion@5.0.8:
-  version "5.0.8"
-  resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.8.tgz#135ad0d8d808eb18eb5e0ec9a21f3a0b92ef18cf"
-  integrity sha512-JZyDyq3D4AUifKTPOB7DELf6XsB3WdPuNxCtob1vFXPsSXhdAiHBWJ/tJ8HAc9aH84BK+5JFZLNkJKx3G9kzQg==
-  dependencies:
-    balanced-match "^4.0.2"
 
 brace-expansion@5.0.9, brace-expansion@^5.0.5:
   version "5.0.9"
@@ -5881,15 +5819,15 @@ define-data-property@^1.0.1, define-data-property@^1.1.4:
     es-errors "^1.3.0"
     gopd "^1.0.1"
 
-define-lazy-prop@2.0.0, define-lazy-prop@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz#3f7ae421129bcaaac9bc74905c98a0009ec9ee7f"
-  integrity sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==
-
 define-lazy-prop@3.0.0, define-lazy-prop@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/define-lazy-prop/-/define-lazy-prop-3.0.0.tgz#dbb19adfb746d7fc6d734a06b72f4a00d021255f"
   integrity sha512-N+MeXYoqr3pOgn8xfyRPREN7gHakLYjhsHhWGT3fWAiL4IkAt0iDw14QiiEm2bE30c5XX5q0FtAA3CK5f9/BUg==
+
+define-lazy-prop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz#3f7ae421129bcaaac9bc74905c98a0009ec9ee7f"
+  integrity sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==
 
 define-properties@^1.1.3, define-properties@^1.2.1:
   version "1.2.1"
@@ -6097,13 +6035,6 @@ end-of-stream@1.4.5, end-of-stream@^1.4.1:
   integrity sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==
   dependencies:
     once "^1.4.0"
-
-enquirer@2.3.6:
-  version "2.3.6"
-  resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
-  integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
-  dependencies:
-    ansi-colors "^4.1.1"
 
 entities@^4.2.0:
   version "4.5.0"
@@ -7815,15 +7746,15 @@ is-directory@^0.3.1:
   resolved "https://registry.npmjs.org/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
   integrity sha512-yVChGzahRFvbkscn2MlwGismPO12i9+znNruC5gVEntG3qu0xQMzsGg/JFbrsqDOHtHFPci+V5aP5T9I+yeKqw==
 
-is-docker@2.2.1, is-docker@^2.0.0, is-docker@^2.1.1:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/is-docker/-/is-docker-2.2.1.tgz#33eeabe23cfe86f14bde4408a02c0cfb853acdaa"
-  integrity sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==
-
 is-docker@3.0.0, is-docker@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-3.0.0.tgz#90093aa3106277d8a77a5910dbae71747e15a200"
   integrity sha512-eljcgEDlEns/7AXFosB5K/2nCM4P7FQPkGc/DWLy5rmFEWvZayGrik1d9/QIY5nJ4f9YsVvBkA6kJpHn9rISdQ==
+
+is-docker@^2.0.0, is-docker@^2.1.1:
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/is-docker/-/is-docker-2.2.1.tgz#33eeabe23cfe86f14bde4408a02c0cfb853acdaa"
+  integrity sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==
 
 is-extglob@^2.1.1:
   version "2.1.1"
@@ -8024,19 +7955,19 @@ is-windows@^1.0.1:
   resolved "https://registry.npmjs.org/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
   integrity sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==
 
-is-wsl@2.2.0, is-wsl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/is-wsl/-/is-wsl-2.2.0.tgz#74a4c76e77ca9fd3f932f290c17ea326cd157271"
-  integrity sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==
-  dependencies:
-    is-docker "^2.0.0"
-
 is-wsl@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-3.1.0.tgz#e1c657e39c10090afcbedec61720f6b924c3cbd2"
   integrity sha512-UcVfVfaK4Sc4m7X3dUSoHoozQGBEFeDC+zVo06t98xe8CzHSZZBekNXH+tu0NalHolcJ/QAGqS46Hef7QXBIMw==
   dependencies:
     is-inside-container "^1.0.0"
+
+is-wsl@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/is-wsl/-/is-wsl-2.2.0.tgz#74a4c76e77ca9fd3f932f290c17ea326cd157271"
+  integrity sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==
+  dependencies:
+    is-docker "^2.0.0"
 
 is-wsl@^3.1.0:
   version "3.1.1"
@@ -8247,11 +8178,6 @@ json5@^1.0.2:
   integrity sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==
   dependencies:
     minimist "^1.2.0"
-
-jsonc-parser@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.2.0.tgz#31ff3f4c2b9793f89c67212627c51c6394f88e76"
-  integrity sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==
 
 jsonc-parser@3.3.1:
   version "3.3.1"
@@ -8590,7 +8516,7 @@ lodash@^4.17.21:
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.23.tgz#f113b0378386103be4f6893388c73d0bde7f2c5a"
   integrity sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==
 
-log-symbols@4.1.0, log-symbols@^4.0.0, log-symbols@^4.1.0:
+log-symbols@4.1.0, log-symbols@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/log-symbols/-/log-symbols-4.1.0.tgz#3fbdbb95b4683ac9fc785111e792e558d4abd503"
   integrity sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==
@@ -9573,7 +9499,7 @@ nth-check@^2.1.1:
   dependencies:
     boolbase "^1.0.0"
 
-"nx@>=23.1.0 < 24.0.0":
+"nx@>=23.1.0 < 24.0.0", nx@^23.2.1:
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/nx/-/nx-23.2.1.tgz#c1dce8c88a1ed53c2bdb39061ef6cc57b7992a00"
   integrity sha512-QOgM7EcJ6gvLKZ3Azno7wdoXXhRhZHbRDN79gCmGXsBxH9WBXCeSy3DyGdee/d5Fa6GnxVOgwKTCx8l0eA+vHw==
@@ -9714,137 +9640,6 @@ nth-check@^2.1.1:
     "@nx/nx-win32-arm64-msvc" "23.2.1"
     "@nx/nx-win32-x64-msvc" "23.2.1"
 
-nx@^22.7.12:
-  version "22.7.12"
-  resolved "https://registry.npmjs.org/nx/-/nx-22.7.12.tgz#2e44fc556afd7662b1445380434d408269be595e"
-  integrity sha512-EzocYkUf6CkbBOjuZ0rupvDVhSTR2ltK/cVj9pf+R0EfyOcWb48l6C7GU4Lp/BZtNwxTyydjZgrPzsAAFsNw8Q==
-  dependencies:
-    "@emnapi/core" "1.4.5"
-    "@emnapi/runtime" "1.4.5"
-    "@emnapi/wasi-threads" "1.0.4"
-    "@jest/diff-sequences" "30.0.1"
-    "@napi-rs/wasm-runtime" "0.2.4"
-    "@tybys/wasm-util" "0.9.0"
-    "@yarnpkg/lockfile" "1.1.0"
-    "@zkochan/js-yaml" "0.0.7"
-    agent-base "6.0.2"
-    ansi-colors "4.1.3"
-    ansi-regex "5.0.1"
-    ansi-styles "4.3.0"
-    argparse "2.0.1"
-    asynckit "0.4.0"
-    axios "1.18.1"
-    balanced-match "4.0.3"
-    base64-js "1.5.1"
-    bl "4.1.0"
-    brace-expansion "5.0.8"
-    buffer "5.7.1"
-    call-bind-apply-helpers "1.0.2"
-    chalk "4.1.2"
-    cli-cursor "3.1.0"
-    cli-spinners "2.6.1"
-    cliui "8.0.1"
-    clone "1.0.4"
-    color-convert "2.0.1"
-    color-name "1.1.4"
-    combined-stream "1.0.8"
-    debug "4.4.3"
-    defaults "1.0.4"
-    define-lazy-prop "2.0.0"
-    delayed-stream "1.0.0"
-    dotenv "16.4.7"
-    dotenv-expand "12.0.3"
-    dunder-proto "1.0.1"
-    ejs "5.0.1"
-    emoji-regex "8.0.0"
-    end-of-stream "1.4.5"
-    enquirer "2.3.6"
-    es-define-property "1.0.1"
-    es-errors "1.3.0"
-    es-object-atoms "1.1.1"
-    es-set-tostringtag "2.1.0"
-    escalade "3.2.0"
-    escape-string-regexp "1.0.5"
-    figures "3.2.0"
-    flat "5.0.2"
-    follow-redirects "1.16.0"
-    form-data "4.0.6"
-    fs-constants "1.0.0"
-    function-bind "1.1.2"
-    get-caller-file "2.0.5"
-    get-intrinsic "1.3.0"
-    get-proto "1.0.1"
-    gopd "1.2.0"
-    has-flag "4.0.0"
-    has-symbols "1.1.0"
-    has-tostringtag "1.0.2"
-    hasown "2.0.4"
-    https-proxy-agent "5.0.1"
-    ieee754 "1.2.1"
-    ignore "7.0.5"
-    inherits "2.0.4"
-    is-docker "2.2.1"
-    is-fullwidth-code-point "3.0.0"
-    is-interactive "1.0.0"
-    is-unicode-supported "0.1.0"
-    is-wsl "2.2.0"
-    json5 "2.2.3"
-    jsonc-parser "3.2.0"
-    lines-and-columns "2.0.3"
-    log-symbols "4.1.0"
-    math-intrinsics "1.1.0"
-    mime-db "1.52.0"
-    mime-types "2.1.35"
-    mimic-fn "2.1.0"
-    minimatch "10.2.5"
-    minimist "1.2.8"
-    ms "2.1.3"
-    npm-run-path "4.0.1"
-    once "1.4.0"
-    onetime "5.1.2"
-    open "8.4.2"
-    ora "5.3.0"
-    path-key "3.1.1"
-    picocolors "1.1.1"
-    proxy-from-env "2.1.0"
-    readable-stream "3.6.2"
-    require-directory "2.1.1"
-    resolve.exports "2.0.3"
-    restore-cursor "3.1.0"
-    safe-buffer "5.2.1"
-    semver "7.7.4"
-    signal-exit "3.0.7"
-    smol-toml "1.6.1"
-    string-width "4.2.3"
-    string_decoder "1.3.0"
-    strip-ansi "6.0.1"
-    strip-bom "3.0.0"
-    supports-color "7.2.0"
-    tar-stream "2.2.0"
-    tmp "0.2.7"
-    tree-kill "1.2.2"
-    tsconfig-paths "4.2.0"
-    tslib "2.8.1"
-    util-deprecate "1.0.2"
-    wcwidth "1.0.1"
-    wrap-ansi "7.0.0"
-    wrappy "1.0.2"
-    y18n "5.0.8"
-    yaml "2.9.0"
-    yargs "17.7.2"
-    yargs-parser "21.1.1"
-  optionalDependencies:
-    "@nx/nx-darwin-arm64" "22.7.12"
-    "@nx/nx-darwin-x64" "22.7.12"
-    "@nx/nx-freebsd-x64" "22.7.12"
-    "@nx/nx-linux-arm-gnueabihf" "22.7.12"
-    "@nx/nx-linux-arm64-gnu" "22.7.12"
-    "@nx/nx-linux-arm64-musl" "22.7.12"
-    "@nx/nx-linux-x64-gnu" "22.7.12"
-    "@nx/nx-linux-x64-musl" "22.7.12"
-    "@nx/nx-win32-arm64-msvc" "22.7.12"
-    "@nx/nx-win32-x64-msvc" "22.7.12"
-
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -9955,7 +9750,7 @@ open@10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-open@8.4.2, open@^8.0.4:
+open@^8.0.4:
   version "8.4.2"
   resolved "https://registry.npmjs.org/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"
   integrity sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==
@@ -9975,20 +9770,6 @@ optionator@^0.9.3:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.5"
-
-ora@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npmjs.org/ora/-/ora-5.3.0.tgz#fb832899d3a1372fe71c8b2c534bbfe74961bb6f"
-  integrity sha512-zAKMgGXUim0Jyd6CXK9lraBnD3H5yPGBPPOkC23a2BG6hsm4Zu6OQSjQuEtV0BHDf4aKHcUFvJiGRrFuW3MG8g==
-  dependencies:
-    bl "^4.0.3"
-    chalk "^4.1.0"
-    cli-cursor "^3.1.0"
-    cli-spinners "^2.5.0"
-    is-interactive "^1.0.0"
-    log-symbols "^4.0.0"
-    strip-ansi "^6.0.0"
-    wcwidth "^1.0.1"
 
 ora@5.4.1, ora@^5.4.1:
   version "5.4.1"
@@ -11340,11 +11121,6 @@ semver@7.7.2:
   resolved "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
 
-semver@7.7.4:
-  version "7.7.4"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.7.4.tgz#28464e36060e991fa7a11d0279d2d3f3b57a7e8a"
-  integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
-
 semver@7.8.4:
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.8.4.tgz#c73eceebae0616934be8dff28a7fd70757c8e696"
@@ -12053,11 +11829,6 @@ tr46@^6.0.0:
   integrity sha512-bLVMLPtstlZ4iMQHpFHTR7GAGj2jxi8Dg0s2h2MafAE4uSWF98FC/3MomU51iQAMf8/qDUbKWf5GxuvvVcXEhw==
   dependencies:
     punycode "^2.3.1"
-
-tree-kill@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
-  integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
 treeverse@^3.0.0:
   version "3.0.0"
