@@ -12,9 +12,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      # contents: write lets lerna push the version commit and tags
+      contents: write
+      # id-token: write enables npm OIDC trusted publishing (no npm token needed)
+      id-token: write
     env:
       HUSKY: 0
-      NPM_AUTH: ${{secrets.NPM_AUTH}}
       GH_TOKEN: ${{secrets.GH_TOKEN}}
     strategy:
       matrix:
@@ -36,9 +40,8 @@ jobs:
       - run: git checkout main
       - run: git config --global user.email  'travis.mair@gmail.com'
       - run: git config --global user.name  'Jarvis1010'
+      # npm >= 11.5.1 is required for OIDC trusted publishing
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH}}" > ~/.npmrc
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        run: npm whoami
+        run: npm install -g npm@latest
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npx lerna publish --conventional-commits --yes
